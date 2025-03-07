@@ -5,7 +5,7 @@ import Home from "./pages/Home.tsx";
 function App() {
 
     return (
-        <Router>
+        <Router basename="/askksa-web">
             <Routes>
                 <Route path="/" element={<Home />}  />
             </Routes>
