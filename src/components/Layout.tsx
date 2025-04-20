@@ -15,7 +15,7 @@ export default function Layout() {
         <>
             <Background />
             <Navbar />
-            <div className={`transition-all ease-in duration-800 overflow-hidden ${isVisible ? 'mt-[100vh]' : 'mt-0'} z-0`}>
+            <div className={`transition-all justify-self-center duration-1000 container overflow-hidden ${isVisible ? 'opacity-0 blur-lg' : 'opacity-100 blur-none'}`}>
                 <Outlet />
             </div>
         </>

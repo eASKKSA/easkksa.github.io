@@ -3,6 +3,7 @@ import jorgeFreitas from '@/assets/senseis/jorge_freitas.png';
 import titoVelosa from '@/assets/senseis/tito_velosa.png';
 import marisaGomes from '@/assets/senseis/marisa_gomes.png';
 import rafaelJardim from '@/assets/senseis/rafael_jardim.png';
+import {Box} from "@mui/material";
 
 export default function WhoWeAre() {
 
@@ -54,13 +55,11 @@ export default function WhoWeAre() {
     }
 
     return (
-        <>
-            <div
+            <Box
                 className="overflow-hidden p-6 bg-[#200000] gap-3 container rounded-2xl shadow-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
                 {Object.entries(senseis).map(([name, sensei]) => {
                     return <SenseiDisplay key={name} name={name} sensei={sensei}/>;
                 })}
-            </div>
-        </>
+            </Box>
     );
 }
