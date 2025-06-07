@@ -18,9 +18,30 @@ export const Seo: React.FC<SEOProps> = ({
                                             image,
                                             children,
                                         }) => {
-    const { t } = useLocale();
+    const { t, lang } = useLocale();
     const defaultImage = 'icons/favicon-512x512.png';
     const siteUrl = 'https://easkksa.github.io/askksa-web/';
+
+    // ✅ Dynamic locale mapping
+    const getOgLocale = (currentLocale: string) => {
+        const localeMap: Record<string, string> = {
+            'pt': 'pt_PT',
+            'en': 'en_US'
+        };
+        return localeMap[currentLocale] || 'pt_PT';
+    };
+
+    const getLanguageName = (currentLocale: string) => {
+        const languageMap: Record<string, string> = {
+            'pt': 'Portuguese',
+            'en': 'English'
+        };
+        return languageMap[currentLocale] || 'Portuguese';
+    };
+
+    const getAlternateLocale = (currentLocale: string) => {
+        return currentLocale === 'pt' ? 'en_US' : 'pt_PT';
+    };
 
     // ✅ Don't mutate translation object
     const seoData = {
@@ -93,8 +114,8 @@ export const Seo: React.FC<SEOProps> = ({
             <meta property="og:url" content={canonicalUrl}/>
             <meta property="og:type" content="website"/>
             <meta property="og:site_name" content="ASKKSA - Associação Shotokan Kokusai Karate Santo António | Respeito e Disciplina"/>
-            <meta property="og:locale" content="pt_PT"/>
-            <meta property="og:locale:alternate" content="en_US"/>
+            <meta property="og:locale" content={getOgLocale(lang)}/>
+            <meta property="og:locale:alternate" content={getAlternateLocale(lang)}/>
 
             {/* ✅ Enhanced Twitter Card */}
             <meta name="twitter:card" content="summary_large_image"/>
@@ -106,7 +127,7 @@ export const Seo: React.FC<SEOProps> = ({
             <meta name="twitter:site" content="@askksa"/>
 
             {/* ✅ Additional Meta Tags */}
-            <meta name="language" content="Portuguese"/>
+            <meta name="language" content={getLanguageName(lang)}/>
             <meta name="author" content="ASKKSA"/>
             <meta name="publisher" content="ASKKSA"/>
             <meta name="copyright" content="ASKKSA"/>
