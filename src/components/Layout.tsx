@@ -1,13 +1,14 @@
+// src/components/Layout.tsx
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar.tsx";
-import Background from "@/components/Background.tsx";
+import { Navbar } from "./Navbar";
+import Background from "@/components/Background";
 import { useState, useEffect } from "react";
 
 export default function Layout() {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(false), 1000);
+        const timer = setTimeout(() => setIsLoaded(true), 500);
         return () => clearTimeout(timer);
     }, []);
 
@@ -15,9 +16,14 @@ export default function Layout() {
         <>
             <Background />
             <Navbar />
-            <div className={`transition-all justify-self-center duration-1000 container overflow-hidden ${isVisible ? 'opacity-0 blur-lg' : 'opacity-100 blur-none'}`}>
+            <main
+                className={`container mx-auto px-4 pt-40 pb-8 transition-all duration-1000 ${
+                    isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                } dark:text-white text-slate-900`}
+                role="main"
+            >
                 <Outlet />
-            </div>
+            </main>
         </>
     );
 }

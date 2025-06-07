@@ -1,85 +1,235 @@
+/* src/index.css */
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    /* Light theme variables with your colors */
+    --color-primary-50: #fef2f2;
+    --color-primary-500: #a4262c;
+    --color-primary-600: #8b1e23;
+    --color-primary-900: #4a0f12;
+
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f8fafc;
+    --color-background-tertiary: #f1f5f9;
+
+    --color-text-primary: #222;
+    --color-text-secondary: #525252;
+    --color-text-tertiary: #737373;
+    --color-text-inverse: #ffffff;
+
+    --color-border-primary: #e2e8f0;
+    --color-border-secondary: #cbd5e1;
+
+    font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
     font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
+    scroll-behavior: smooth;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    --primary: #A4262C;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
-body, #root {
+/* Dark theme variables with your colors */
+.dark {
+    --color-primary-500: #dc2626;
+    --color-primary-600: #b91c1c;
+
+    --color-background-primary: #222;
+    --color-background-secondary: #2a2a2a;
+    --color-background-tertiary: #363636;
+
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-tertiary: #94a3b8;
+    --color-text-inverse: #222;
+
+    --color-border-primary: #404040;
+    --color-border-secondary: #525252;
+}
+
+/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary-500: #FF0000;
+    }
+
+    .dark {
+        --color-primary-500: #FF4444;
+    }
+}
+
+/* Focus management with your primary color */
+*:focus-visible {
+    outline: 2px solid #a4262c;
+    outline-offset: 2px;
+}
+
+/* Theme-aware selection with your colors */
+::selection {
+    background-color: #a4262c;
+    color: white;
+}
+
+/* Custom scrollbar with your color scheme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a4262c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b1e23;
+}
+
+/* Body styling with your black tone */
+body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
 }
 
-#root {
-    margin-top: 300px;
-    display: grid;
+/* Utility classes for your color scheme */
+.bg-background-primary {
+    background-color: var(--color-background-primary);
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
+.bg-background-secondary {
+    background-color: var(--color-background-secondary);
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
+.bg-background-tertiary {
+    background-color: var(--color-background-tertiary);
 }
 
-button:hover {
-    border-color: #646cff;
+.text-text-primary {
+    color: var(--color-text-primary);
 }
 
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+.text-text-secondary {
+    color: var(--color-text-secondary);
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
+.text-text-tertiary {
+    color: var(--color-text-tertiary);
+}
+
+.border-border-primary {
+    border-color: var(--color-border-primary);
+}
+
+.border-border-secondary {
+    border-color: var(--color-border-secondary);
+}
+
+/* Primary color utilities */
+.bg-primary {
+    background-color: #a4262c;
+}
+
+.text-primary {
+    color: #a4262c;
+}
+
+.border-primary {
+    border-color: #a4262c;
+}
+
+.hover\:bg-primary:hover {
+    background-color: #8b1e23;
+}
+
+.hover\:text-primary:hover {
+    color: #a4262c;
+}
+
+/* Black tone utilities */
+.bg-black-tone {
+    background-color: #222;
+}
+
+.text-black-tone {
+    color: #222;
+}
+
+.border-black-tone {
+    border-color: #222;
+}
+
+/* Skip link styles */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    pointer-events: none;
+}
+
+.sr-only:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: hidden;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: #222 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
+    .no-print {
+        display: none !important;
     }
 }
 
-li::marker {
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0 !important;
-    text-align: start !important;
-    text-align-last: auto !important;
+/* Enhanced shadow effects with your color scheme */
+.shadow-primary {
+    box-shadow: 0 4px 6px -1px rgba(164, 38, 44, 0.1), 0 2px 4px -1px rgba(164, 38, 44, 0.06);
 }
 
-ul {
-    list-style-type: hiragana;
-    padding-left: 2em;
-    font-size: 1.4em;
-    line-height: 1.4;
+.shadow-primary-lg {
+    box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
 }
