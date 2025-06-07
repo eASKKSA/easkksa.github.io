@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
             isScrolled
                 ? 'dark:bg-[#222]/95 dark:border-gray-700/50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm'
                 : ''
@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
             <div className="container mx-auto px-4">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center justify-between py-4">
-                    <div className="flex items-center gap-8">
+                    <nav className="flex items-center gap-8">
                         {navigationItems.slice(0, middleIndex).map((item) => (
                             <NavLink
                                 key={item.id}
@@ -132,7 +132,7 @@ export const Navbar: React.FC = () => {
                                 currentPath={location.pathname}
                             />
                         ))}
-                    </div>
+                    </nav>
 
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
@@ -158,7 +158,7 @@ export const Navbar: React.FC = () => {
                         />
                         <button
                             onClick={toggleMenu}
-                            className={`p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#a4262c] dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10 text-[#222] hover:bg-gray-100 focus:bg-gray-100`}
+                            className={`p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10 text-[#222] hover:bg-gray-100 focus:bg-gray-100`}
                             aria-expanded={isMenuOpen}
                             aria-controls="mobile-menu"
                             aria-label="Toggle navigation menu"
@@ -175,25 +175,25 @@ export const Navbar: React.FC = () => {
                         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                 >
-                    <div className={`rounded-lg mb-4 p-4 backdrop-blur-md border dark:bg-[#222]/95 dark:border-gray-700 bg-white/95 border-gray-200`}>
+                    <nav className={`rounded-lg mb-4 p-4 backdrop-blur-md border dark:bg-[#222]/95 dark:border-gray-700 bg-white/95 border-gray-200`}>
                         {navigationItems.map((item) => (
                             <Link
                                 key={item.id}
                                 to={routeMap[item.routeKey][currentLocale]}
                                 className={`block py-3 px-4 rounded-md transition-colors ${
                                     location.pathname === routeMap[item.routeKey][currentLocale]
-                                        ? 'bg-[#a4262c]/20 text-[#a4262c]'
-                                        : 'dark:text-white dark:hover:text-[#a4262c] dark:hover:bg-gray-700/50 text-[#222] hover:text-[#a4262c] hover:bg-gray-100'
+                                        ? 'bg-primary/20 text-primary'
+                                        : 'dark:text-white dark:hover:text-primary dark:hover:bg-gray-700/50 text-[#222] hover:text-primary hover:bg-gray-100'
                                 }`}
                                 onClick={() => toggleMenu()}
                             >
                                 {item.label[currentLocale]}
                             </Link>
                         ))}
-                    </div>
+                    </nav>
                 </div>
             </div>
-        </nav>
+        </header>
     );
 };
 
@@ -210,8 +210,8 @@ const NavLink: React.FC<{
             to={href}
             className={`font-semibold px-4 py-2 rounded-md transition-all duration-200 ${
                 isActive
-                    ? 'text-[#a4262c] bg-[#a4262c]/10 ring-2 ring-[#a4262c]/20'
-                    : 'dark:text-white dark:hover:text-[#a4262c] dark:hover:bg-white/5 text-[#222] hover:text-[#a4262c] hover:bg-gray-100'
+                    ? 'text-primary bg-primary/10 ring-2 ring-primary/20'
+                    : 'dark:text-white dark:hover:text-primary dark:hover:bg-white/5 text-[#222] hover:text-primary hover:bg-gray-100'
             }`}
             aria-current={isActive ? 'page' : undefined}
         >
@@ -230,7 +230,7 @@ const LanguageToggle: React.FC<{
             onClick={() => onChange('pt')}
             className={`px-3 py-1 rounded transition-colors ${
                 currentLocale === 'pt'
-                    ? 'bg-[#a4262c] text-white'
+                    ? 'bg-primary text-white'
                     : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
             aria-label="Switch to Portuguese"
@@ -241,7 +241,7 @@ const LanguageToggle: React.FC<{
             onClick={() => onChange('en')}
             className={`px-3 py-1 rounded transition-colors ${
                 currentLocale === 'en'
-                    ? 'bg-[#a4262c] text-white'
+                    ? 'bg-primary text-white'
                     : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
             aria-label="Switch to English"

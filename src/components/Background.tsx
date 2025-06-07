@@ -6,25 +6,25 @@ import { useAppStore } from '@/store/appStore';
 import desktopBg from '@/assets/askksa-background-tiger.svg';
 import whiteDesktopBg from '@/assets/askksa-background-tiger-white.svg';
 import mobileBg from '@/assets/askksa-background-tiger-mobile.svg';
+import whiteMobileBg from '@/assets/askksa-background-tiger-mobile-white.svg';
 
 const backgroundImages = {
     desktop: desktopBg,
-    tablet: desktopBg,
     mobile: mobileBg,
-    whiteDesktop: whiteDesktopBg
+    whiteDesktop: whiteDesktopBg,
+    whiteMobile: whiteMobileBg // Assuming you want a separate mobile image for light theme
 };
 
 const Background: React.FC = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
     const reducedMotion = useAppStore(state => state.reducedMotion);
-    const { theme } = useAppStore();
+    const { effectiveTheme } = useAppStore();
 
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
-    const imageSrc = theme === 'light'
-        ? backgroundImages.whiteDesktop
-        : backgroundImages.desktop;
-
+    const imageToUse = isMobile
+        ? (effectiveTheme === 'dark' ? backgroundImages.mobile : backgroundImages.whiteMobile)
+        : (effectiveTheme === 'dark' ? backgroundImages.desktop : backgroundImages.whiteDesktop);
 
 
     return (
@@ -35,11 +35,11 @@ const Background: React.FC = () => {
             {/* Tiger image overlay */}
             {!imageError && (
                 <img
-                    src={imageSrc}
+                    src={imageToUse}
                     alt="Tiger artwork representing martial arts strength"
                     className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
                         imageLoaded ? 'opacity-100' : 'opacity-0'
-                    } opacity-80`}
+                    } `}
                     onLoad={() => setImageLoaded(true)}
                     onError={() => setImageError(true)}
                 />

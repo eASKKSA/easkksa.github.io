@@ -17,10 +17,9 @@ export default function Layout() {
             <Background />
             <Navbar />
             <main
-                className={`container mx-auto px-4 pt-40 pb-8 transition-all duration-1000 ${
+                className={`container mx-auto px-4 pt-44 pb-12 transition-all space-y-24 duration-1000 ${
                     isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 } dark:text-white text-slate-900`}
-                role="main"
             >
                 <Outlet />
             </main>

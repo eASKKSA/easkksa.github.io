@@ -30,22 +30,24 @@ const getSystemTheme = (): 'light' | 'dark' => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
+
 const applyThemeToDOM = (theme: ThemeMode) => {
     const root = document.documentElement;
 
     if (theme === 'dark') {
-        root.classList.add('dark');
-        localStorage.theme = 'dark';
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
     } else if (theme === 'light') {
-        root.classList.remove('dark');
-        localStorage.theme = 'light';
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
     } else {
         // System theme
         const systemTheme = getSystemTheme();
-        root.classList.toggle('dark', systemTheme === 'dark');
+        root.setAttribute('data-theme', systemTheme);
         localStorage.removeItem('theme');
     }
 };
+
 
 export const useAppStore = create<AppState>()(
     devtools(
@@ -94,7 +96,7 @@ export const useAppStore = create<AppState>()(
                         const currentTheme = get().theme;
                         if (currentTheme === 'system') {
                             const newSystemTheme = getSystemTheme();
-                            document.documentElement.classList.toggle('dark', newSystemTheme === 'dark');
+                            document.documentElement.setAttribute('data-theme', newSystemTheme);
                             set({ effectiveTheme: newSystemTheme });
                         }
                     };

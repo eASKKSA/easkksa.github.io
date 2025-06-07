@@ -1,53 +1,28 @@
 /* src/index.css */
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-:root {
-    /* Light theme variables with your colors */
-    --color-primary-50: #fef2f2;
-    --color-primary-500: #a4262c;
-    --color-primary-600: #8b1e23;
-    --color-primary-900: #4a0f12;
-
-    --color-background-primary: #ffffff;
-    --color-background-secondary: #f8fafc;
-    --color-background-tertiary: #f1f5f9;
-
-    --color-text-primary: #222;
-    --color-text-secondary: #525252;
-    --color-text-tertiary: #737373;
-    --color-text-inverse: #ffffff;
-
-    --color-border-primary: #e2e8f0;
-    --color-border-secondary: #cbd5e1;
-
-    font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    font-weight: 400;
-    scroll-behavior: smooth;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+@theme {
+    /* Define your custom theme colors */
+    --color-primary: #a4262c;
 }
 
-/* Dark theme variables with your colors */
-.dark {
-    --color-primary-500: #dc2626;
-    --color-primary-600: #b91c1c;
+@layer base {
+    :root {
+        font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        font-weight: 400;
+        scroll-behavior: smooth;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
-    --color-background-primary: #222;
-    --color-background-secondary: #2a2a2a;
-    --color-background-tertiary: #363636;
+    }
 
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #cbd5e1;
-    --color-text-tertiary: #94a3b8;
-    --color-text-inverse: #222;
-
-    --color-border-primary: #404040;
-    --color-border-secondary: #525252;
+    [data-theme="dark"] {
+        --color-background-primary: #222;
+    }
 }
 
 /* Respect user preferences */
@@ -114,73 +89,6 @@ body {
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
     overflow-x: hidden;
-}
-
-/* Utility classes for your color scheme */
-.bg-background-primary {
-    background-color: var(--color-background-primary);
-}
-
-.bg-background-secondary {
-    background-color: var(--color-background-secondary);
-}
-
-.bg-background-tertiary {
-    background-color: var(--color-background-tertiary);
-}
-
-.text-text-primary {
-    color: var(--color-text-primary);
-}
-
-.text-text-secondary {
-    color: var(--color-text-secondary);
-}
-
-.text-text-tertiary {
-    color: var(--color-text-tertiary);
-}
-
-.border-border-primary {
-    border-color: var(--color-border-primary);
-}
-
-.border-border-secondary {
-    border-color: var(--color-border-secondary);
-}
-
-/* Primary color utilities */
-.bg-primary {
-    background-color: #a4262c;
-}
-
-.text-primary {
-    color: #a4262c;
-}
-
-.border-primary {
-    border-color: #a4262c;
-}
-
-.hover\:bg-primary:hover {
-    background-color: #8b1e23;
-}
-
-.hover\:text-primary:hover {
-    color: #a4262c;
-}
-
-/* Black tone utilities */
-.bg-black-tone {
-    background-color: #222;
-}
-
-.text-black-tone {
-    color: #222;
-}
-
-.border-black-tone {
-    border-color: #222;
 }
 
 /* Skip link styles */
