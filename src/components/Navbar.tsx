@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
 
                         <Link to={`/${currentLocale}`} className="flex-shrink-0 mx-8" aria-label="Home">
                             <img
-                                src="askksa_logo.svg"
+                                src="/askksa-web/askksa_logo.svg"
                                 alt="ASKKSA Karate Club"
                                 className="h-28 w-auto transition-transform hover:scale-105"
                             />
@@ -146,7 +146,7 @@ export const Navbar: React.FC = () => {
                 {/* Mobile Navigation */}
                 <div className="lg:hidden flex items-center justify-between py-4">
                     <Link to={`/${currentLocale}`} aria-label="Home">
-                        <img src="askksa_logo.svg" alt="ASKKSA" className="h-20 w-auto" />
+                        <img src="/askksa-web/askksa_logo.svg" alt="ASKKSA" className="h-20 w-auto" />
                     </Link>
 
                     <div className="flex items-center gap-4">

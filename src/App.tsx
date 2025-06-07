@@ -15,21 +15,21 @@ function App() {
     }, [initializeTheme]);
     return (
         <ErrorBoundary>
-                <Router basename="/askksa-web">
-                    <Routes>
-                        <Route path="/" element={<Layout />}>
-                            <Route index element={<Navigate to="/pt" replace />} />
-                            {/* Portuguese routes */}
-                            <Route path="/pt" element={<Home />} />
-                            {/* ...other pt routes */}
-                            {/* English routes */}
-                            <Route path="/en" element={<Home />} />
-                            {/* ...other en routes */}
-                            {/* 404 fallback */}
-                            <Route path="*" element={<Navigate to="/pt" replace />} />
-                        </Route>
-                    </Routes>
-                </Router>
+            <Router basename="/askksa-web">
+                <Routes>
+                    <Route path="/" element={<Layout/>}>
+                        <Route index element={<Navigate to="/pt" replace/>}/>
+                        {/* Portuguese routes */}
+                        <Route path="/pt" element={<Home/>}/>
+                        {/* ...other pt routes */}
+                        {/* English routes */}
+                        <Route path="/en" element={<Home/>}/>
+                        {/* ...other en routes */}
+                        {/* 404 fallback */}
+                        <Route path="*" element={<Navigate to="/pt" replace/>}/>
+                    </Route>
+                </Routes>
+            </Router>
         </ErrorBoundary>
     );
 }

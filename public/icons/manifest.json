@@ -52,8 +52,8 @@
       "purpose": "any maskable"
     }
   ],
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/askksa-web/",
+  "start_url": "/askksa-web/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
