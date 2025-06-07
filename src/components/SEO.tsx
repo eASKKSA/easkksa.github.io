@@ -67,44 +67,6 @@ export const Seo: React.FC<SEOProps> = ({
                 <meta name="keywords" content={seoData.keywords.join(', ')}/>
             )}
 
-            {/* ✅ Essential Meta Tags */}
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
-            <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-            <meta name="googlebot" content="index, follow"/>
-
-            {/* ✅ Performance & Security */}
-            <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-            <meta name="referrer" content="no-referrer-when-downgrade"/>
-
-            {/* ✅ Preconnect for performance */}
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-
-            {/* Favicon and Icons */}
-            <link rel="icon" type="image/svg+xml" href="/askksa-web/icons/favicon.svg"/>
-            <link rel="icon" href="/askksa-web/icons/favicon.ico" type="image/x-icon"/>
-            <link rel="shortcut icon" href="/askksa-web/icons/favicon.ico" type="image/x-icon"/>
-            <link rel="apple-touch-icon" sizes="57x57" href="/askksa-web/icons/favicon-57x57.png"/>
-            <link rel="apple-touch-icon" sizes="60x60" href="/askksa-web/icons/favicon-60x60.png"/>
-            <link rel="apple-touch-icon" sizes="72x72" href="/askksa-web/icons/favicon-72x72.png"/>
-            <link rel="apple-touch-icon" sizes="76x76" href="/askksa-web/icons/favicon-76x76.png"/>
-            <link rel="apple-touch-icon" sizes="114x114" href="/askksa-web/icons/favicon-114x114.png"/>
-            <link rel="apple-touch-icon" sizes="120x120" href="/askksa-web/icons/favicon-120x120.png"/>
-            <link rel="apple-touch-icon" sizes="144x144" href="/askksa-web/icons/favicon-144x144.png"/>
-            <link rel="apple-touch-icon" sizes="152x152" href="/askksa-web/icons/favicon-152x152.png"/>
-            <link rel="apple-touch-icon" sizes="180x180" href="/askksa-web/icons/favicon-180x180.png"/>
-            <link rel="icon" type="image/png" sizes="16x16" href="/askksa-web/icons/favicon-16x16.png"/>
-            <link rel="icon" type="image/png" sizes="32x32" href="/askksa-web/icons/favicon-32x32.png"/>
-            <link rel="icon" type="image/png" sizes="96x96" href="/askksa-web/icons/favicon-96x96.png"/>
-            <link rel="icon" type="image/png" sizes="192x192" href="/askksa-web/icons/favicon-192x192.png"/>
-            <link rel="mask-icon" href="/askksa-web/icons/favicon.svg" />
-            <meta name="msapplication-TileColor" content="#ffffff"/>
-            <meta name="msapplication-TileImage" content="/askksa-web/icons/favicon-144x144.png"/>
-            <meta name="msapplication-config" content="/askksa-web/icons/browserconfig.xml"/>
-            <link rel="manifest" href="/askksa-web/icons/manifest.json"/>
-            <meta name="theme-color" content="#ffffff"/>
-
             {/* ✅ Enhanced Open Graph */}
             <meta property="og:title" content={seoData.title}/>
             <meta property="og:description" content={seoData.description}/>
@@ -119,22 +81,8 @@ export const Seo: React.FC<SEOProps> = ({
             <meta property="og:locale" content={getOgLocale(lang)}/>
             <meta property="og:locale:alternate" content={getAlternateLocale(lang)}/>
 
-            {/* ✅ Enhanced Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image"/>
-            <meta name="twitter:title" content={seoData.title}/>
-            <meta name="twitter:description" content={seoData.description}/>
-            <meta name="twitter:image" content={ogImage}/>
-            <meta name="twitter:image:alt" content={seoData.title}/>
-            <meta name="twitter:creator" content="@askksa"/>
-            <meta name="twitter:site" content="@askksa"/>
-
             {/* ✅ Additional Meta Tags */}
             <meta name="language" content={getLanguageName(lang)}/>
-            <meta name="author" content="ASKKSA"/>
-            <meta name="publisher" content="ASKKSA"/>
-            <meta name="copyright" content="ASKKSA"/>
-            <meta name="distribution" content="global"/>
-            <meta name="rating" content="general"/>
 
             {/* ✅ Dynamic Canonical */}
             <link rel="canonical" href={canonicalUrl}/>
@@ -142,31 +90,66 @@ export const Seo: React.FC<SEOProps> = ({
             <link rel="alternate" hrefLang="en" href={`${siteUrl}en`}/>
             <link rel="alternate" hrefLang="x-default" href={`${siteUrl}en`}/>
 
-            <meta name="apple-mobile-web-app-capable" content="yes"/>
-            <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
-            <meta name="apple-mobile-web-app-title" content="ASKKSA"/>
-
             {/* ✅ Enhanced Structured Data */}
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": "SportsActivityLocation",
-                    "name": "ASKKSA - Academia de Karate Shotokan",
+                    "@type": ["SportsActivityLocation", "LocalBusiness", "SportsOrganization"],
+                    "name": "ASKKSA - Associação Shotokan Kokusai Karate Santo António",
+                    "alternateName": "Associação Shotokan Kokusai Karate Santo António",
                     "description": seoData.description,
                     "url": siteUrl,
                     "image": ogImage,
+                    "logo": ogImage,
                     "sport": "Karate",
+                    "telephone": "+351-960-384-090", // Add your phone
+                    "email": "direcao@askksa.pt", // Add your email
+                    "foundingDate": "2000-04",
+                    "memberOf": [
+                        {
+                            "@type": "Organization",
+                            "name": "FNK-P - Federação Nacional de Karate Portugal"
+                        },
+                        {
+                            "@type": "Organization",
+                            "name": "AKRAM - Associação de Karate da Região Autónoma da Madeira"
+                        }
+                    ],
                     "address": {
                         "@type": "PostalAddress",
+                        "streetAddress": "Escola Horácio Bento Gouveia",
+                        "addressLocality": "Funchal",
+                        "addressRegion": "Madeira",
+                        "postalCode": "9004-524",
                         "addressCountry": "PT"
                     },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "32.64960322122704",
+                        "longitude": "-16.925423720138244"
+                    },
+                    "openingHours": ["Mo-Fr 19:30-21:30"], // Add your actual schedule
                     "sameAs": [
-                        // Add your social media URLs
-                        "https://facebook.com/askksa",
-                        "https://instagram.com/askksa"
-                    ]
+                        "https://www.facebook.com/ASKKSA.MADEIRA",
+                        "https://www.instagram.com/askksa_madeira/"
+                    ],
+                    "knowsAbout": ["Karate", "Shotokan", "Martial Arts", "Sports Training"],
+                    "areaServed": {
+                        "@type": "Place",
+                        "name": "Madeira, Portugal"
+                    }
                 })}
             </script>
+            {/* Additional SEO Meta Tags */}
+            <meta name="format-detection" content="telephone=no" />
+            <meta property="article:author" content="ASKKSA" />
+            <meta property="article:publisher" content="ASKKSA" />
+            <meta name="dc.title" content={seoData.title} />
+            <meta name="dc.description" content={seoData.description} />
+            <meta name="geo.region" content="PT-30" />
+            <meta name="geo.placename" content="Funchal, Madeira" />
+            <meta name="geo.position" content="32.64960322122704;-16.925423720138244" />
+            <meta name="ICBM" content="32.64960322122704, -16.925423720138244" />
 
             {children}
         </>
