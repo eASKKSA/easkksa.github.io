@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Define your custom theme colors */
+  --color-primary: #a4262c;
+}
+
+@layer base {
+  :root {
+    font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --color-primary: #a4262c;
+
+  }
+
+  [data-theme="dark"] {
+    --color-background-primary: #222;
+  }
+}
+
+/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary-500: #FF0000;
+  }
+
+  .dark {
+    --color-primary-500: #FF4444;
+  }
+}
+
+/* Focus management with your primary color */
+*:focus-visible {
+  outline: 2px solid #a4262c;
+  outline-offset: 2px;
+}
+
+/* Theme-aware selection with your colors */
+::selection {
+  background-color: #a4262c;
+  color: white;
+}
+
+/* Custom scrollbar with your color scheme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a4262c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b1e23;
+}
+
+/* Body styling with your black tone */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* Skip link styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+
+.sr-only:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: hidden;
+  clip: auto;
+  white-space: normal;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: #222 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Enhanced shadow effects with your color scheme */
+.shadow-primary {
+  box-shadow: 0 4px 6px -1px rgba(164, 38, 44, 0.1), 0 2px 4px -1px rgba(164, 38, 44, 0.06);
+}
+
+.shadow-primary-lg {
+  box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
+}
