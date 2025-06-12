@@ -35,5 +35,11 @@ export const routing = defineRouting({
   locales: ["pt-PT", "en"],
   defaultLocale: "pt-PT",
   localePrefix: "as-needed",
-  pathnames: mainPagePathnames,
+  pathnames: {
+    ...mainPagePathnames,
+    "/privacy-policy": {
+      "pt-PT": "/politica-de-privacidade",
+      en: "/privacy-policy",
+    },
+  },
 });

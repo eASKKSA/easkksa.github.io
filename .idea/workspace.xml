@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="feat: implement internationalization with locale support, update routing, and enhance metadata">
+    <list default="true" id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="feat: enhance background and navbar components with improved styling and animations, update instructor details, and refine layout structure">
+      <change afterPath="$PROJECT_DIR$/src/components/cookie-warning.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/icons/browserconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749731646339</updated>
-      <workItem from="1749731648008" duration="14066000" />
+      <workItem from="1749731648008" duration="19619000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implement internationalization with locale support, update routing, and enhance metadata">
       <option name="closed" value="true" />
@@ -111,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749744001088</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: enhance background and navbar components with improved styling and animations, update instructor details, and refine layout structure">
+      <option name="closed" value="true" />
+      <created>1749748528396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749748528396</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +130,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: implement internationalization with locale support, update routing, and enhance metadata" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement internationalization with locale support, update routing, and enhance metadata" />
+    <MESSAGE value="feat: enhance background and navbar components with improved styling and animations, update instructor details, and refine layout structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance background and navbar components with improved styling and animations, update instructor details, and refine layout structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

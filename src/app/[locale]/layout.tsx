@@ -8,6 +8,10 @@ import { notFound } from "next/navigation";
 import { SportsOrganization, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import CookieWarning from "@/components/cookie-warning";
+import { getCookie } from "cookies-next";
+import { cookies } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -162,6 +166,11 @@ export default async function Layout({
       },
     ],
   };
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+  if (!gaId) {
+    throw new Error("NEXT_PUBLIC_GOOGLE_ANALYTICS_ID is not defined");
+  }
+  const hasConsent = getCookie("cookie_consent", { cookies }) === "true";
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -177,6 +186,10 @@ export default async function Layout({
             <Navbar />
             {children}
             <Background />
+            <CookieWarning />
+            {hasConsent && (
+              <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+            )}
           </Providers>
         </NextIntlClientProvider>
       </body>

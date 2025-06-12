@@ -7,6 +7,24 @@
   }
 }
 
+.cookieWarning.cookieVisible {
+  display: block;
+  position: fixed;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  background-color: #f0f0f0;
+  color: #003063;
+  font-size: 0.875em;
+  z-index: 99;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  opacity: 0.9;
+}
+.cookieWarning.cookieHidden {
+  display: none;
+}
+
 @theme {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
