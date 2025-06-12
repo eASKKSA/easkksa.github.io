@@ -1,9 +1,16 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@keyframes logo-pulse-grow {
+  to {
+    transform: scale(1.075);
+  }
+}
+
 @theme {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
+  --animate-logo-pulse-grow: logo-pulse-grow 1s linear infinite alternate;
 }
 
 @layer base {

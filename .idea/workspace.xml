@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/navigation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="feat: implement internationalization with locale support, update routing, and enhance metadata">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/pt-PT.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme-toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/navigation.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +55,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "nof-dev-next-migration",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -115,12 +101,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749731646339</updated>
-      <workItem from="1749731648008" duration="9621000" />
+      <workItem from="1749731648008" duration="14066000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: implement internationalization with locale support, update routing, and enhance metadata">
+      <option name="closed" value="true" />
+      <created>1749744001088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749744001088</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implement internationalization with locale support, update routing, and enhance metadata" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement internationalization with locale support, update routing, and enhance metadata" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

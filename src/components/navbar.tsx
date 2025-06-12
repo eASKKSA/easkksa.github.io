@@ -136,11 +136,7 @@ const Navbar: React.FC = () => {
               <nav className="grid w-full grid-cols-7 items-center justify-items-center">
                 {/* Left Items: Each link is a grid item */}
                 {leftItems.map((item) => {
-                  const localizedPath =
-                    mainPagePathnames[item.href][
-                      currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
-                    ];
-                  const isActive = pathname === localizedPath;
+                  const isActive = pathname === item.href;
                   return (
                     <Link
                       key={item.href}
@@ -164,7 +160,7 @@ const Navbar: React.FC = () => {
                       alt="ASKKSA Karate Club Logo"
                       width={100}
                       height={100}
-                      className="h-32 w-auto transition-transform hover:scale-105" // Slightly smaller to fit h-32 container
+                      className="h-32 w-auto transition-transform hover:scale-105 hover:animate-logo-pulse-grow" // Slightly smaller to fit h-32 container
                       priority
                     />
                   </Link>
@@ -172,11 +168,7 @@ const Navbar: React.FC = () => {
 
                 {/* Right Items: Each link is a grid item */}
                 {rightItems.map((item) => {
-                  const localizedPath =
-                    mainPagePathnames[item.href][
-                      currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
-                    ];
-                  const isActive = pathname === localizedPath;
+                  const isActive = pathname === item.href;
                   return (
                     <Link
                       key={item.href}
@@ -228,11 +220,7 @@ const Navbar: React.FC = () => {
       >
         <nav className="flex flex-col gap-1 border-t  p-4">
           {navigationItems.map((item) => {
-            const localizedPath =
-              mainPagePathnames[item.href][
-                currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
-              ];
-            const isActive = pathname === localizedPath;
+            const isActive = pathname === item.href;
             return (
               <Link
                 key={item.href}
