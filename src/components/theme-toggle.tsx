@@ -9,7 +9,6 @@ const themeOptions = [
 
 const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
   const selectedIdx = themeOptions.findIndex((opt) => opt.key === theme);
 
   if (selectedIdx === -1) {

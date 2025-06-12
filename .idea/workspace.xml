@@ -4,72 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cea4ad48-ed67-431a-9a7c-72eb9ed02b7c" name="Changes" comment="# Conventional Commit Message Template&#10;# ------------------------------------&#10;# &lt;type&gt;[optional scope][!]: &lt;short description&gt;&#10;#&#10;# [optional body: explain the what and why of the change]&#10;#&#10;# [optional footer: e.g. BREAKING CHANGE: ..., Closes #123]&#10;&#10;# Commit Types:&#10;# feat:     A new feature&#10;# fix:      A bug fix&#10;# docs:     Documentation only changes&#10;# style:    Code style changes (formatting, missing semi-colons, etc.)&#10;# refactor: Code changes that neither fix a bug nor add a feature&#10;# perf:     Code changes that improve performance&#10;# test:     Adding or updating tests&#10;# build:    Changes to build system or dependencies&#10;# ci:       Changes to CI/CD configuration&#10;# chore:    Routine tasks or maintenance&#10;# revert:   Reverts a previous commit&#10;&#10;# Rules &amp; Tips:&#10;# - Keep the header (first line) under 100 characters&#10;# - Use present tense (&quot;add&quot;, not &quot;added&quot; or &quot;adds&quot;)&#10;# - Do not end the subject line with a period&#10;# - Scope is optional, e.g. feat(auth): or fix: ...&#10;# - Use ! after type/scope for BREAKING CHANGES, or add a BREAKING CHANGE footer&#10;# - Leave one blank line between the subject, body, and footers&#10;&#10;# Examples:&#10;# feat: add user login functionality&#10;# fix(auth): handle expired tokens properly&#10;# chore(deps): update spring-boot to v3.2.0&#10;# refactor(api)!: restructure user endpoints for better performance&#10;#&#10;# BREAKING CHANGE: The authentication strategy has changed to JWT.&#10;&#10;# Start writing below this line:">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/file.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/globe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/window.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[lang]/dictionaries.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[lang]/dictionaries/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[lang]/dictionaries/pt.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/feature-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/page-animation-wrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/providers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/navigation.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/dependabot.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+    <list default="true" id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n/navigation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n/request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/askksa-background-tiger-mobile-white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/askksa-background-tiger-white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ErrorBoundary.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OptimizedImage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SEO.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SenseiDisplay.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme-toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useIntersectionObserver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useIntersectionObserver.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useLocalStorage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useLocale.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useResponsiveImage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locales/en.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locales/pt.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locales/routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/WhoWeAre.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/appStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/pt-PT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme-toggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/navigation.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,58 +37,42 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;NOF03&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NOF03"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:eASKKSA/askksa-web.git&quot;,
-    &quot;accountId&quot;: &quot;3efa6b7f-c67c-4866-b9a3-dedc2267189f&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:eASKKSA/askksa-web.git",
+    "accountId": "3efa6b7f-c67c-4866-b9a3-dedc2267189f"
   }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2vxQ2l2hRZSuK5fxKZ5oN4gcVOm" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2yPMEkAiHtaF672CUm4DsFKvVhn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/nof/Documents/Nuno/eASKKSA/askksa-web/src/assets",
+    "git-widget-placeholder": "nof-dev-next-migration",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -147,17 +86,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/app" />
-    </key>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -168,171 +110,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cea4ad48-ed67-431a-9a7c-72eb9ed02b7c" name="Changes" comment="" />
-      <created>1745084039995</created>
+      <changelist id="46fe4589-0967-4633-b010-744acc2a9dbc" name="Changes" comment="" />
+      <created>1749731646339</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1745084039995</updated>
-      <workItem from="1745084041918" duration="13261000" />
-      <workItem from="1745273203737" duration="590000" />
-      <workItem from="1745396590665" duration="570000" />
-      <workItem from="1745431018795" duration="598000" />
-      <workItem from="1745454559085" duration="142000" />
-      <workItem from="1745454800504" duration="567000" />
-      <workItem from="1745496212095" duration="598000" />
-      <workItem from="1745577113542" duration="598000" />
-      <workItem from="1745885428268" duration="598000" />
-      <workItem from="1745933519708" duration="598000" />
-      <workItem from="1745970585717" duration="597000" />
-      <workItem from="1745999932669" duration="590000" />
-      <workItem from="1746005604673" duration="1815000" />
-      <workItem from="1746057728815" duration="598000" />
-      <workItem from="1746104833174" duration="599000" />
-      <workItem from="1746352865096" duration="598000" />
-      <workItem from="1746634257483" duration="598000" />
-      <workItem from="1746805865969" duration="594000" />
-      <workItem from="1746980221996" duration="596000" />
-      <workItem from="1747273998434" duration="6000" />
-      <workItem from="1747308951341" duration="593000" />
-      <workItem from="1747488813871" duration="593000" />
-      <workItem from="1747532349920" duration="264000" />
-      <workItem from="1747532670878" duration="590000" />
-      <workItem from="1747818416919" duration="594000" />
-      <workItem from="1748013209041" duration="592000" />
-      <workItem from="1749081201514" duration="74524000" />
-      <workItem from="1749385797079" duration="44229000" />
+      <updated>1749731646339</updated>
+      <workItem from="1749731648008" duration="9621000" />
     </task>
-    <task id="LOCAL-00001" summary="refactor: refactor layout and styling; update dependencies and improve component structure">
-      <option name="closed" value="true" />
-      <created>1745109646028</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1745109646028</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: add internationalization support with locale hooks and routing; implement theme toggle and SEO components">
-      <option name="closed" value="true" />
-      <created>1749261729589</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1749261729589</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: add browser configuration, manifest, and SEO enhancements; update theme handling and layout components">
-      <option name="closed" value="true" />
-      <created>1749314922088</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1749314922088</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: enhance SEO component with dynamic locale handling and language metadata">
-      <option name="closed" value="true" />
-      <created>1749315955127</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1749315955127</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: add 404 page and update asset paths for improved routing and SEO">
-      <option name="closed" value="true" />
-      <created>1749324826693</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1749324826693</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat: integrate react-helmet-async for improved SEO management and add essential meta tags">
-      <option name="closed" value="true" />
-      <created>1749326926094</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1749326926094</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix: update npm install command to use --legacy-peer-deps for compatibility">
-      <option name="closed" value="true" />
-      <created>1749327012513</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1749327012513</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix: update deployment script to use npm ci for consistent dependency installation">
-      <option name="closed" value="true" />
-      <created>1749327322928</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1749327322928</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix: streamline meta tags in index.html for improved clarity and performance">
-      <option name="closed" value="true" />
-      <created>1749327572421</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1749327572421</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: enhance SEO with comprehensive meta tags, update site description, and improve structured data">
-      <option name="closed" value="true" />
-      <created>1749329675163</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1749329675163</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: update content security policy for enhanced security and performance">
-      <option name="closed" value="true" />
-      <created>1749330103991</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1749330103991</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: refactor layout and styling; update dependencies and improve component structure" />
-    <MESSAGE value="feat: add internationalization support with locale hooks and routing; implement theme toggle and SEO components" />
-    <MESSAGE value="feat: add browser configuration, manifest, and SEO enhancements; update theme handling and layout components" />
-    <MESSAGE value="feat: enhance SEO component with dynamic locale handling and language metadata" />
-    <MESSAGE value="feat: add 404 page and update asset paths for improved routing and SEO" />
-    <MESSAGE value="feat: integrate react-helmet-async for improved SEO management and add essential meta tags" />
-    <MESSAGE value="fix: update npm install command to use --legacy-peer-deps for compatibility" />
-    <MESSAGE value="fix: update deployment script to use npm ci for consistent dependency installation" />
-    <MESSAGE value="fix: streamline meta tags in index.html for improved clarity and performance" />
-    <MESSAGE value="feat: enhance SEO with comprehensive meta tags, update site description, and improve structured data" />
-    <MESSAGE value="feat: update content security policy for enhanced security and performance" />
-    <MESSAGE value="# Conventional Commit Message Template&#10;# ------------------------------------&#10;# &lt;type&gt;[optional scope][!]: &lt;short description&gt;&#10;#&#10;# [optional body: explain the what and why of the change]&#10;#&#10;# [optional footer: e.g. BREAKING CHANGE: ..., Closes #123]&#10;&#10;# Commit Types:&#10;# feat:     A new feature&#10;# fix:      A bug fix&#10;# docs:     Documentation only changes&#10;# style:    Code style changes (formatting, missing semi-colons, etc.)&#10;# refactor: Code changes that neither fix a bug nor add a feature&#10;# perf:     Code changes that improve performance&#10;# test:     Adding or updating tests&#10;# build:    Changes to build system or dependencies&#10;# ci:       Changes to CI/CD configuration&#10;# chore:    Routine tasks or maintenance&#10;# revert:   Reverts a previous commit&#10;&#10;# Rules &amp; Tips:&#10;# - Keep the header (first line) under 100 characters&#10;# - Use present tense (&quot;add&quot;, not &quot;added&quot; or &quot;adds&quot;)&#10;# - Do not end the subject line with a period&#10;# - Scope is optional, e.g. feat(auth): or fix: ...&#10;# - Use ! after type/scope for BREAKING CHANGES, or add a BREAKING CHANGE footer&#10;# - Leave one blank line between the subject, body, and footers&#10;&#10;# Examples:&#10;# feat: add user login functionality&#10;# fix(auth): handle expired tokens properly&#10;# chore(deps): update spring-boot to v3.2.0&#10;# refactor(api)!: restructure user endpoints for better performance&#10;#&#10;# BREAKING CHANGE: The authentication strategy has changed to JWT.&#10;&#10;# Start writing below this line:" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Conventional Commit Message Template&#10;# ------------------------------------&#10;# &lt;type&gt;[optional scope][!]: &lt;short description&gt;&#10;#&#10;# [optional body: explain the what and why of the change]&#10;#&#10;# [optional footer: e.g. BREAKING CHANGE: ..., Closes #123]&#10;&#10;# Commit Types:&#10;# feat:     A new feature&#10;# fix:      A bug fix&#10;# docs:     Documentation only changes&#10;# style:    Code style changes (formatting, missing semi-colons, etc.)&#10;# refactor: Code changes that neither fix a bug nor add a feature&#10;# perf:     Code changes that improve performance&#10;# test:     Adding or updating tests&#10;# build:    Changes to build system or dependencies&#10;# ci:       Changes to CI/CD configuration&#10;# chore:    Routine tasks or maintenance&#10;# revert:   Reverts a previous commit&#10;&#10;# Rules &amp; Tips:&#10;# - Keep the header (first line) under 100 characters&#10;# - Use present tense (&quot;add&quot;, not &quot;added&quot; or &quot;adds&quot;)&#10;# - Do not end the subject line with a period&#10;# - Scope is optional, e.g. feat(auth): or fix: ...&#10;# - Use ! after type/scope for BREAKING CHANGES, or add a BREAKING CHANGE footer&#10;# - Leave one blank line between the subject, body, and footers&#10;&#10;# Examples:&#10;# feat: add user login functionality&#10;# fix(auth): handle expired tokens properly&#10;# chore(deps): update spring-boot to v3.2.0&#10;# refactor(api)!: restructure user endpoints for better performance&#10;#&#10;# BREAKING CHANGE: The authentication strategy has changed to JWT.&#10;&#10;# Start writing below this line:" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

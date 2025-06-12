@@ -1,16 +1,12 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import {
-  navigationItems,
-  routeMap,
-  type Locale,
-} from "@/lib/navigation.config";
 import { Settings, Menu, X, Globe } from "lucide-react"; // Simple, clean icons
 import dynamic from "next/dynamic";
+import { useLocale, type Locale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { mainPagePathnames } from "@/i18n/routing";
 
 const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
   ssr: false,
@@ -19,10 +15,10 @@ const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
 // --- A Simple, Self-Contained Settings Menu Component ---
 const SettingsMenu: React.FC<{
   currentLocale: Locale;
-  onLanguageChange: (locale: Locale) => void;
-}> = ({ currentLocale, onLanguageChange }) => {
+}> = ({ currentLocale }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   // Close the dropdown if clicking outside of it
   useEffect(() => {
@@ -63,18 +59,19 @@ const SettingsMenu: React.FC<{
             <Globe size={16} /> Language
           </span>
           <div className="flex justify-around pt-1">
-            {(["pt", "en"] as Locale[]).map((locale) => (
-              <button
+            {(["pt-PT", "en"] as Locale[]).map((locale) => (
+              <Link
                 key={locale}
-                onClick={() => onLanguageChange(locale)}
-                className={`w-full py-1.5 rounded-md text-sm font-medium transition-colors ${
+                href={pathname} // Use the home route for language change
+                locale={locale}
+                className={`w-full py-1.5 rounded-md text-center text-sm font-medium transition-colors ${
                   currentLocale === locale
                     ? "bg-primary text-white"
                     : "hover:bg-gray-100 dark:hover:bg-white/10"
                 }`}
               >
                 {locale.toUpperCase()}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -83,26 +80,29 @@ const SettingsMenu: React.FC<{
   );
 };
 
+const navigationItems = Object.keys(mainPagePathnames)
+  // We filter out the root path "/", as it's usually handled by a logo link
+  .filter((canonicalPath) => canonicalPath !== "/")
+  .map((canonicalPath) => ({
+    // The href is the canonical path, e.g., "/about"
+    href: canonicalPath as keyof typeof mainPagePathnames,
+    // The labelKey is for fetching the translation, e.g., "about"
+    labelKey: canonicalPath.substring(1),
+  }));
+
 // --- Main Navbar Component ---
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const pathname = usePathname();
-  const router = useRouter();
-  const currentLocale = pathname.startsWith("/en") ? "en" : "pt";
+  const currentLocale = useLocale();
+  const t = useTranslations("Navbar");
 
   // Split navigation items for the desktop layout
   const middleIndex = Math.ceil(navigationItems.length / 2);
   const leftItems = navigationItems.slice(0, middleIndex);
   const rightItems = navigationItems.slice(middleIndex);
-
-  const handleLanguageChange = (targetLocale: Locale) => {
-    if (currentLocale === targetLocale) return;
-    const newPath = pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
-    router.push(newPath);
-    setIsMenuOpen(false);
-  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -135,23 +135,30 @@ const Navbar: React.FC = () => {
               {/* The main grid container for all 7 items */}
               <nav className="grid w-full grid-cols-7 items-center justify-items-center">
                 {/* Left Items: Each link is a grid item */}
-                {leftItems.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={routeMap[item.id][currentLocale]}
-                    className={`rounded-md px-3 py-2 text-xl font-bold transition-colors ${
-                      pathname === routeMap[item.id][currentLocale]
-                        ? "text-primary"
-                        : "text-gray-900 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                    }`}
-                  >
-                    {item.label[currentLocale]}
-                  </Link>
-                ))}
+                {leftItems.map((item) => {
+                  const localizedPath =
+                    mainPagePathnames[item.href][
+                      currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
+                    ];
+                  const isActive = pathname === localizedPath;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`rounded-md px-3 py-2 text-xl font-bold transition-colors ${
+                        isActive
+                          ? "text-primary"
+                          : "text-gray-900 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                      }`}
+                    >
+                      {t(item.labelKey)}
+                    </Link>
+                  );
+                })}
 
                 {/* Logo: Takes the center (4th) grid column */}
                 <div className="flex-shrink-0">
-                  <Link href={routeMap.home[currentLocale]} aria-label="Home">
+                  <Link href="/" locale={currentLocale} aria-label="Home">
                     <Image
                       src="/askksa_logo.svg"
                       alt="ASKKSA Karate Club Logo"
@@ -164,45 +171,45 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Right Items: Each link is a grid item */}
-                {rightItems.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={routeMap[item.id][currentLocale]}
-                    className={`text-nowrap rounded-md px-3 py-2 text-xl font-bold transition-colors ${
-                      pathname === routeMap[item.id][currentLocale]
-                        ? "text-primary"
-                        : "text-gray-900 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                    }`}
-                  >
-                    {item.label[currentLocale]}
-                  </Link>
-                ))}
+                {rightItems.map((item) => {
+                  const localizedPath =
+                    mainPagePathnames[item.href][
+                      currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
+                    ];
+                  const isActive = pathname === localizedPath;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`text-nowrap rounded-md px-3 py-2 text-xl font-bold transition-colors ${
+                        isActive
+                          ? "text-primary"
+                          : "text-gray-900 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                      }`}
+                    >
+                      {t(item.labelKey)}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
             {/* Position settings absolutely to not interfere with the grid layout */}
             <div className="absolute top-1/2 right-10 -translate-y-1/2">
-              <SettingsMenu
-                currentLocale={currentLocale}
-                onLanguageChange={handleLanguageChange}
-              />
+              <SettingsMenu currentLocale={currentLocale} />
             </div>
           </div>
         </div>
 
         {/* --- Mobile Navigation --- */}
-        <div className="lg:hidden flex h-20 items-center justify-between">
-          <SettingsMenu
-            currentLocale={currentLocale}
-            onLanguageChange={handleLanguageChange}
-          />
-          <Link href={routeMap.home[currentLocale]} aria-label="Home">
+        <div className="lg:hidden flex h-24 items-center justify-between">
+          <Link href="/" locale={currentLocale} aria-label="Home">
             <Image
               priority
               src="/askksa_logo.svg"
               alt="ASKKSA Logo"
               width={10}
               height={10}
-              className="h-20 py-1 w-auto"
+              className="h-24 py-1 w-auto"
             />
           </Link>
           <button
@@ -217,24 +224,56 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Panel (Simple Dropdown) */}
       <div
-        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"}`}
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"} border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-[#1a1a1a]/90`}
       >
-        <nav className="flex flex-col gap-1 border-t border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-[#1a1a1a]/90 p-4">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.id}
-              href={routeMap[item.id][currentLocale]}
-              onClick={() => setIsMenuOpen(false)}
-              className={`px-4 py-3 rounded-lg text-lg font-semibold transition-colors ${
-                pathname === routeMap[item.id][currentLocale]
-                  ? "bg-primary/10 text-primary"
-                  : "hover:bg-gray-100 dark:hover:bg-white/5"
-              }`}
-            >
-              {item.label[currentLocale]}
-            </Link>
-          ))}
+        <nav className="flex flex-col gap-1 border-t  p-4">
+          {navigationItems.map((item) => {
+            const localizedPath =
+              mainPagePathnames[item.href][
+                currentLocale as keyof (typeof mainPagePathnames)[keyof typeof mainPagePathnames]
+              ];
+            const isActive = pathname === localizedPath;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-4 py-3 rounded-lg text-lg font-semibold transition-colors ${
+                  isActive
+                    ? "bg-primary/10 text-primary"
+                    : "hover:bg-gray-100 dark:hover:bg-white/5"
+                }`}
+              >
+                {t(item.labelKey)}
+              </Link>
+            );
+          })}
         </nav>
+        <hr />
+        <div className="flex items-center justify-between p-4">
+          <ThemeToggle />
+          <div className="flex flex-col gap-1 p-2">
+            <span className="flex items-center gap-2 px-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
+              <Globe size={16} /> Language
+            </span>
+            <div className="flex justify-around pt-1">
+              {(["pt-PT", "en"] as Locale[]).map((locale) => (
+                <Link
+                  key={locale}
+                  href={pathname} // Use the home route for language change
+                  locale={locale}
+                  className={`w-full py-1.5 rounded-md text-sm text-center font-medium transition-colors ${
+                    currentLocale === locale
+                      ? "bg-primary text-white"
+                      : "hover:bg-gray-100 dark:hover:bg-white/10"
+                  }`}
+                >
+                  {locale.toUpperCase()}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );

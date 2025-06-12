@@ -1,7 +1,7 @@
-import { getDictionary } from "./dictionaries";
 import Section from "@/components/section";
 import FeatureCard from "@/components/feature-card";
 import { PageAnimationWrapper } from "@/components/page-animation-wrapper";
+import { Metadata } from "next";
 
 const features = [
   {
@@ -30,23 +30,34 @@ const features = [
 const schedules = [
   {
     day: "Segunda a Sexta",
-    time: "20h30 - 21h30",
-    level: "Adultos (+12 anos)",
-  },
-  {
-    day: "Segunda a Sexta",
     time: "19h30 - 20h30",
     level: "Crianças (-12 anos)",
   },
+  {
+    day: "Segunda a Sexta",
+    time: "20h30 - 21h30",
+    level: "Adultos (+12 anos)",
+  },
 ];
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>;
-}) {
-  const { lang } = await params;
-  const dict = await getDictionary(lang); // en
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    // --- Basic Metadata ---
+    keywords: [
+      "Karate",
+      "Shotokan",
+      "ASKKSA",
+      "Artes Marciais",
+      "Dojo",
+      "Funchal",
+      "Madeira",
+      "Karate para Crianças",
+      "Karate para Adultos",
+    ],
+  };
+}
+
+export default async function Page() {
   return (
     <PageAnimationWrapper>
       <Section>

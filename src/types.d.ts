@@ -1,4 +1,4 @@
-type Locale = "en" | "pt";
+type Locale = "en" | "pt-PT";
 
 interface Feature {
   id: string;
