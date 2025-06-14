@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Settings, Menu, X, Globe } from "lucide-react"; // Simple, clean icons
+import { FaCog, FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import { useLocale, type Locale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -38,7 +38,7 @@ const SettingsMenu: React.FC<{
         className="p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         aria-label="Open settings menu"
       >
-        <Settings
+        <FaCog
           size={20}
           className={`transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
         />
@@ -56,7 +56,7 @@ const SettingsMenu: React.FC<{
         <div className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
         <div className="flex flex-col gap-1 p-2">
           <span className="flex items-center gap-2 px-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-            <Globe size={16} /> Language
+            <FaGlobe size={16} /> Language
           </span>
           <div className="flex justify-around pt-1">
             {(["pt-PT", "en"] as Locale[]).map((locale) => (
@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
             className="p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-white/10"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </div>
@@ -242,7 +242,7 @@ const Navbar: React.FC = () => {
           <ThemeToggle />
           <div className="flex flex-col gap-1 p-2">
             <span className="flex items-center gap-2 px-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-              <Globe size={16} /> Language
+              <FaGlobe size={16} /> Language
             </span>
             <div className="flex justify-around pt-1">
               {(["pt-PT", "en"] as Locale[]).map((locale) => (

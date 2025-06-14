@@ -1,19 +1,23 @@
+// Import NextRequest to get type safety for the request object
+import { NextRequest } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+// Create the i18n middleware instance
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  const response = intlMiddleware(request);
+  response.headers.set("x-next-pathname", request.nextUrl.pathname);
+
+  return response;
+}
 
 export const config = {
   matcher: [
-    // Enable a redirect to a matching locale at the root
+    // Your existing matcher config remains the same
     "/",
-
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
     "/(pt-PT|en)/:path*",
-
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
     "/((?!_next|_vercel|.*\\..*).*)",
   ],
 };

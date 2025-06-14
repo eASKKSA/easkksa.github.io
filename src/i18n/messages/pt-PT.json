@@ -2,7 +2,7 @@
   "Navbar": {
     "about": "Sobre",
     "news": "Notícias",
-    "dojo": "O Dojo",
+    "dojo": "Dojo",
     "history": "História",
     "philosophy": "Filosofia",
     "shotokan-ski": "Shotokan SKI"
@@ -33,5 +33,13 @@
         "addressCountry": "Portugal"
       }
     }
+  },
+  "Footer": {
+    "mission": "Tradição, disciplina e excelência no Karate Shotokan. Descubra a sua força interior através da arte marcial.",
+    "quickLinks": "Navegação Rápida",
+    "ourDojos": "Os Nossos Dojos",
+    "contact": "Contacto",
+    "followUs": "Siga-nos",
+    "copyright": "Todos os direitos reservados"
   }
 }

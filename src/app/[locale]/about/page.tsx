@@ -95,26 +95,24 @@ export default async function QuemSomosPage() {
   return (
     <PageAnimationWrapper>
       {/* Hero Section */}
-      <Section>
-        <div className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
-          <div className="relative z-10">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-display dark:text-white text-[#222]">
-              Sobre a ASKKSA
-            </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
-              Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA,
-              Associação Shotokan Kokusai Karate de Santo António. O objectivo
-              desta constituição era, além de relançar a modalidade a novos
-              níveis, enquadrá-la no panorama legal e desportivo da Região
-              Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P
-              (Federação Nacional de Karate – Portugal) e na AKRAM (Associação
-              de Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD
-              ( Direcção Regional da Juventude e Desporto ).
-            </p>
-          </div>
-          <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
-          <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
+      <Section className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-display dark:text-white text-[#222]">
+            Sobre a ASKKSA
+          </h1>
+          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
+            Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA,
+            Associação Shotokan Kokusai Karate de Santo António. O objectivo
+            desta constituição era, além de relançar a modalidade a novos
+            níveis, enquadrá-la no panorama legal e desportivo da Região
+            Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P
+            (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de
+            Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD (
+            Direcção Regional da Juventude e Desporto ).
+          </p>
         </div>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
+        <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
       </Section>
 
       {/* Instructors Section */}

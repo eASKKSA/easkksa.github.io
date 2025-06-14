@@ -33,5 +33,13 @@
         "addressCountry": "Portugal"
       }
     }
+  },
+  "Footer": {
+    "mission": "Tradition, discipline, and excellence in Shotokan Karate. Discover your inner strength through martial arts.",
+    "quickLinks": "Quick Links",
+    "ourDojos": "Our Dojos",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved"
   }
 }
