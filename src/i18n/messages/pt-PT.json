@@ -1,0 +1,45 @@
+{
+  "Navbar": {
+    "about": "Sobre",
+    "news": "Notícias",
+    "dojo": "Dojo",
+    "history": "História",
+    "philosophy": "Filosofia",
+    "style-ski": "Estilo SKI"
+  },
+  "Organization": {
+    "name": "ASKKSA Karaté Shotokan Madeira",
+    "sport": "Karaté",
+    "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
+    "addressLocality": "Funchal",
+    "addressRegion": "Madeira",
+    "addressCountry": "Portugal",
+    "contactType": "Informações Gerais",
+    "dojo1": {
+      "name": "Dojo Principal - Escola Horácio Bento de Gouveia",
+      "address": {
+        "name": "Escola Horácio Bento de Gouveia",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "Portugal"
+      }
+    },
+    "dojo2": {
+      "name": "Dojo Junta de Freguesia de Santo António",
+      "address": {
+        "name": "Junta de Freguesia de Santo António",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "Portugal"
+      }
+    }
+  },
+  "Footer": {
+    "mission": "Tradição, disciplina e excelência no Karate Shotokan. Descubra a sua força interior através da arte marcial.",
+    "quickLinks": "Navegação Rápida",
+    "ourDojos": "Os Nossos Dojos",
+    "contact": "Contacto",
+    "followUs": "Siga-nos",
+    "copyright": "Todos os direitos reservados"
+  }
+}
