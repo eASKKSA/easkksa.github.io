@@ -34,6 +34,38 @@
       }
     }
   },
+  "History": {
+    "title": "History of Karate-do",
+    "introduction": {
+      "text": "<b>Karate</b> or <b>karate-do</b> is a form of budo (the way of the warrior). A Japanese martial art that originated in Okinawa and was introduced to the main islands of the Japanese archipelago in 1922. Karate emphasizes striking techniques (such as punches and kicks) over grappling techniques."
+    },
+    "threePillars": {
+      "title": "The Three Pillars of Practice",
+      "subtitle": "Karate practice can be divided into three main parts:",
+      "kihon": {
+        "title": "<b>Kihon (基本):</b>",
+        "description": "The study and repetition of basic movements, the foundation of all technique."
+      },
+      "kumite": {
+        "title": "<b>Kumite (組手):</b>",
+        "description": "Means \"fighting\" and is the practical application of techniques with a partner, which can be performed in a defined or free form (randori)."
+      },
+      "kata": {
+        "title": "<b>Kata (型):</b>",
+        "description": "Means \"form\" and is a sequence of movements that simulates a fight against imaginary enemies, essential for the development of technique and spirit."
+      }
+    },
+    "origins": {
+      "title": "Origins and Evolution",
+      "content": "Originally, the word \"karate\" was written with ideograms meaning \"Chinese hand\" (唐手), reflecting the influence of the Tang dynasty. Today, the most common meaning is \"empty hand\" (空手), and <b>Karate-do</b> translates as \"the way of the empty hand\". It is believed that the art is a fusion of Chinese fighting techniques, brought to Okinawa by merchants, with the native fighting art of Okinawa, known as <b>Te</b> (hand).",
+      "matsumura": "In 1820, master <b>Sokon Matsumura</b> merged the local styles (Shuri-te, Naha-te and Tomari-te), but it was his own students who, by adding and subtracting techniques, created new variants. It was <b>Gichin Funakoshi</b>, a student of one of Matsumura's disciples, who introduced and popularized Karate in the main islands of Japan."
+    },
+    "modernization": {
+      "title": "Modernization in Japan",
+      "funakoshi": "Funakoshi was responsible for changing the writing of the name to \"empty hand\", a way to integrate the art into Japanese budo culture and distance it from its foreign origins during a period of strong nationalism. Karate was popularized and introduced in high schools before World War II.",
+      "transition": "Like many Japanese martial arts, Karate made its transition to <b>Karate-do</b> in the early 20th century. The \"do\" (way) imbues the practice with elements of Zen Buddhism, sometimes called \"Zen in motion\". Modernization also included the adoption of the white uniform (<b>keikogi</b>) and colored belts to indicate rank, both popularized by Jigoro Kano, the founder of Judo."
+    }
+  },
   "Footer": {
     "mission": "Tradition, discipline, and excellence in Shotokan Karate. Discover your inner strength through martial arts.",
     "quickLinks": "Quick Links",

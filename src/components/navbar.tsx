@@ -154,7 +154,7 @@ const Navbar: React.FC = () => {
 
                 {/* Logo: Takes the center (4th) grid column */}
                 <div className="flex-shrink-0">
-                  <Link href="/" locale={currentLocale} aria-label="Home">
+                  <Link href="/" aria-label="Home">
                     <Image
                       src="/askksa_logo.svg"
                       alt="ASKKSA Karate Club Logo"
@@ -194,7 +194,7 @@ const Navbar: React.FC = () => {
 
         {/* --- Mobile Navigation --- */}
         <div className="lg:hidden flex h-24 items-center justify-between">
-          <Link href="/" locale={currentLocale} aria-label="Home">
+          <Link href="/" aria-label="Home">
             <Image
               priority
               src="/askksa_logo.svg"
