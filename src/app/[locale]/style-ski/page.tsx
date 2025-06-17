@@ -84,6 +84,7 @@ const dojos = [
   },
   {
     name: "Dojo ASKKSA - Junta de Freguesia de Santo António",
+    image: "/images/dojo-santo-antonio.png", // Recommended: store images locally
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt",
   },
@@ -105,7 +106,7 @@ export default async function QuemSomosPage() {
             Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P
             (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de
             Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD (
-            Direção Regional da Juventude e Desporto ).
+            Direcção Regional da Juventude e Desporto ).
           </p>
         </div>
         <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
@@ -142,7 +143,7 @@ export default async function QuemSomosPage() {
             </h2>
             <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
               Atualmente contamos com dois espaços de treino no Funchal e damos
-              apoio técnico ao Clube Desportivo de Câmara de Lobos.
+              apoio técnico ao Clube Horários do Funchal.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -202,7 +203,7 @@ const DojoCard = ({ dojo }: { dojo: (typeof dojos)[0] }) => {
         <div className="relative w-full h-56">
           <iframe
             src={dojo.mapUrl}
-            className="rounded-xl h-80 w-full shadow-lg border-0 "
+            className="rounded-xl h-80 w-full shadow-lg border-0 dark:invert-75"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

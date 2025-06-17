@@ -1,33 +1,23 @@
 import { defineRouting } from "next-intl/routing";
 
 export const mainPagePathnames = {
-  "/": {
-    "pt-PT": "/",
-    en: "/",
-  },
   "/about": {
     "pt-PT": "/sobre",
-    en: "/about",
   },
   "/news": {
     "pt-PT": "/noticias",
-    en: "/news",
   },
   "/dojo": {
     "pt-PT": "/dojo",
-    en: "/dojo",
   },
   "/history": {
     "pt-PT": "/historia",
-    en: "/history",
   },
   "/philosophy": {
     "pt-PT": "/filosofia",
-    en: "/philosophy",
   },
-  "/shotokan-ski": {
-    "pt-PT": "/shotokan-ski",
-    en: "/shotokan-ski",
+  "/style-ski": {
+    "pt-PT": "/estilo-ski",
   },
 };
 
@@ -39,7 +29,6 @@ export const routing = defineRouting({
     ...mainPagePathnames,
     "/privacy-policy": {
       "pt-PT": "/politica-de-privacidade",
-      en: "/privacy-policy",
     },
   },
 });

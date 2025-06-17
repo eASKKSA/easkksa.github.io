@@ -25,15 +25,13 @@ export const metadata: Metadata = {
 
 // --- MAIN PAGE COMPONENT ---
 
-export default function HistoryPage() {
+export default async function HistoryPage() {
   return (
     <PageAnimationWrapper>
-      <Article className="relative rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
+      <Article className="relative text-justify rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl mb-8 text-center">
-            História do Karate-do | Budo Okinawa
-          </h1>
+          <h1 className="text-center">História do Karate-do | Budo Okinawa</h1>
 
           {/* Banner Image and Introduction - Side by Side */}
           <div className="mb-12 flex flex-col lg:flex-row lg:items-start lg:gap-8">
@@ -56,16 +54,15 @@ export default function HistoryPage() {
                   src={historyBannerUrl}
                   alt="Mestres Fundadores do Karate"
                   layout="fill"
-                  objectFit="cover"
                   className="rounded-xl object-cover shadow-lg"
-                  priority // Prioritize loading this image as it's the main visual content
+                  priority
                 />
               </div>
             </div>
           </div>
 
           {/* Core Pillars */}
-          <div className="mt-10 mb-12 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="mt-10 mb-12 p-6 bg-primary/20 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
               Os Três Pilares da Prática
             </h2>
@@ -138,6 +135,9 @@ export default function HistoryPage() {
             </p>
           </div>
         </div>
+
+        <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
+        <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
       </Article>
     </PageAnimationWrapper>
   );

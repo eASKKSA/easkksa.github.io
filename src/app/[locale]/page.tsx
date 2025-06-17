@@ -60,43 +60,35 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   return (
     <PageAnimationWrapper>
-      <Section>
-        <div
-          className={`relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50`}
+      <Section className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
+        <h1>
+          ASKKSA{" "}
+          <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
+            Associação Shotokan Kokusai Karaté Santo António
+          </span>
+        </h1>
+
+        <p
+          className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700`}
         >
-          <div className="relative z-10">
-            <h1
-              className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-display dark:text-white text-[#222]`}
-            >
-              ASKKSA{" "}
-              <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
-                Associação Shotokan Kokusai Karaté Santo António
-              </span>
-            </h1>
+          Tradição, disciplina e excelência no Karate Shotokan. Descubra a força
+          interior através da arte marcial milenar.
+        </p>
 
-            <p
-              className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700`}
-            >
-              Tradição, disciplina e excelência no Karate Shotokan. Descubra a
-              força interior através da arte marcial milenar.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-[#a4262c] hover:bg-[#8b1e23] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-[#a4262c]/50 shadow-lg">
-                Aula Experimental Gratuita
-              </button>
-              <button
-                className={`border-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 focus:ring-4 shadow-lg dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#222] dark:focus:ring-white/50 border-[#222] text-[#222] hover:bg-[#222] hover:text-white focus:ring-[#222]/50`}
-              >
-                Saiba Mais
-              </button>
-            </div>
-          </div>
-
-          {/* Decorative elements with your colors */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
-          <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button className="bg-[#a4262c] hover:bg-[#8b1e23] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-[#a4262c]/50 shadow-lg">
+            Aula Experimental Gratuita
+          </button>
+          <button
+            className={`border-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 focus:ring-4 shadow-lg dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#222] dark:focus:ring-white/50 border-[#222] text-[#222] hover:bg-[#222] hover:text-white focus:ring-[#222]/50`}
+          >
+            Saiba Mais
+          </button>
         </div>
+
+        {/* Decorative elements with your colors */}
+        <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
+        <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
       </Section>
 
       <Section>
@@ -209,9 +201,9 @@ const ContactItem: React.FC<{
     <div className="flex items-center gap-4">
       <span className="text-3xl">{icon}</span>
       <div>
-        <h4 className={`font-bold text-lg dark:text-white text-[#222]`}>
+        <h3 className={`font-bold text-lg dark:text-white text-[#222]`}>
           {title}
-        </h4>
+        </h3>
         <p className={`dark:text-gray-300 text-gray-600`}>{content}</p>
       </div>
     </div>

@@ -31,6 +31,10 @@
   --animate-logo-pulse-grow: logo-pulse-grow 1s linear infinite alternate;
 }
 
+h1 {
+  @apply text-4xl md:text-6xl lg:text-7xl font-bold mb-6 dark:text-white text-[#222];
+}
+
 @layer base {
   :root {
     font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
