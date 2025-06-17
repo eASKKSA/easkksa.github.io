@@ -13,6 +13,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/footer";
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: Readonly<{
