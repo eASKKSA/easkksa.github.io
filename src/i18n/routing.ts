@@ -31,5 +31,8 @@ export const routing = defineRouting({
     "/privacy-policy": {
       "pt-PT": "/politica-de-privacidade",
     },
+    "/not-found": {
+      "pt-PT": "/nao-encontrado",
+    },
   },
 });

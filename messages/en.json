@@ -73,5 +73,21 @@
     "contact": "Contact",
     "followUs": "Follow Us",
     "copyright": "All rights reserved"
+  },
+  "NotFound": {
+    "meta": {
+      "title": "Page Not Found | Your App Name",
+      "description": "The page you're looking for doesn't exist."
+    },
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.",
+    "actions": {
+      "returnHome": "Return Home",
+      "goBack": "Go Back"
+    },
+    "help": {
+      "text": "Need help? Try searching or",
+      "contactLink": "contact us"
+    }
   }
 }

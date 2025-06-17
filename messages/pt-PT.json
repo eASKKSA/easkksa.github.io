@@ -73,5 +73,21 @@
     "contact": "Contacto",
     "followUs": "Siga-nos",
     "copyright": "Todos os direitos reservados"
+  },
+  "NotFound": {
+    "meta": {
+      "title": "Página Não Encontrada | Your App Name",
+      "description": "A página que procura não existe."
+    },
+    "title": "Página Não Encontrada",
+    "description": "Desculpe, não conseguimos encontrar a página que procura. Pode ter sido movida, eliminada, ou inseriu um URL incorreto.",
+    "actions": {
+      "returnHome": "Voltar ao Início",
+      "goBack": "Voltar"
+    },
+    "help": {
+      "text": "Precisa de ajuda? Tente pesquisar ou",
+      "contactLink": "contacte-nos"
+    }
   }
 }
