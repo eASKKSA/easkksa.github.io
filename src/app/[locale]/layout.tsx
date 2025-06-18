@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import Background from "@/components/background";
 import Providers from "@/components/providers";
 import Navbar from "@/components/navbar";
