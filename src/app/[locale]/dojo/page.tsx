@@ -1,4 +1,3 @@
-import { PageAnimationWrapper } from "@/components/page-animation-wrapper";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -19,9 +18,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  return (
-    <PageAnimationWrapper>
-      <p>Ola</p>
-    </PageAnimationWrapper>
-  );
+  return <p>Ola</p>;
 }

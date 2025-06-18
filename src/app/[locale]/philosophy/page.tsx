@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { PageAnimationWrapper } from "@/components/page-animation-wrapper";
 import Section from "@/components/section";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
@@ -93,7 +92,7 @@ const dojos = [
 // --- MAIN PAGE COMPONENT ---
 export default async function QuemSomosPage() {
   return (
-    <PageAnimationWrapper>
+    <>
       {/* Hero Section */}
       <Section className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
         <div className="relative z-10">
@@ -153,7 +152,7 @@ export default async function QuemSomosPage() {
           </div>
         </div>
       </Section>
-    </PageAnimationWrapper>
+    </>
   );
 }
 

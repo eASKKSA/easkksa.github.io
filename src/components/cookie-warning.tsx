@@ -31,10 +31,7 @@ const CookieWarning = () => {
   }
 
   return (
-    <div
-      id="cookieWarning"
-      className="fixed bottom-0 w-full bg-[#f0f0f0] text-[#003063] text-sm text-center py-4 px-4 shadow-lg z-[99]"
-    >
+    <aside className="cookie-container">
       <div className="max-w-4xl mx-auto">
         <span>
           Este sítio utiliza cookies para facilitar a navegação e obter
@@ -48,24 +45,24 @@ const CookieWarning = () => {
         >
           aqui.
         </Link>
-        <div className="gap-4 flex justify-center mt-3">
+        <div className="cookie-button-container">
           <button
             type="button"
             onClick={handleAcceptAll}
-            className="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
+            className="bg-primary hover:bg-opacity-90 cookie-button"
           >
             Aceitar todos os Cookies
           </button>
           <button
             type="button"
             onClick={handleAcceptEssential}
-            className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
+            className="bg-gray-600 hover:bg-gray-500 cookie-button"
           >
             Aceitar apenas os cookies essenciais
           </button>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

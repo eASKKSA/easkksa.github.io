@@ -37,8 +37,8 @@ const Footer = () => {
   const tOrg = useTranslations("Organization");
 
   return (
-    <footer className="bg-gray-50/90 dark:bg-black/20 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <footer>
+      <div className="footer-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Column 1: Brand & Mission */}
           <div className="space-y-4 col-span-2">

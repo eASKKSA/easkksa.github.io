@@ -7,24 +7,6 @@
   }
 }
 
-.cookieWarning.cookieVisible {
-  display: block;
-  position: fixed;
-  height: auto;
-  width: 100%;
-  bottom: 0;
-  background-color: #f0f0f0;
-  color: #003063;
-  font-size: 0.875em;
-  z-index: 99;
-  text-align: center;
-  padding: 1em 0 1em 0;
-  opacity: 0.9;
-}
-.cookieWarning.cookieHidden {
-  display: none;
-}
-
 @theme {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
@@ -69,17 +51,6 @@ h1 {
   }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  :root {
-    --color-primary-500: #FF0000;
-  }
-
-  .dark {
-    --color-primary-500: #FF4444;
-  }
-}
-
 /* Focus management with your primary color */
 *:focus-visible {
   outline: 2px solid #a4262c;
@@ -97,10 +68,6 @@ h1 {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-background-secondary);
-}
-
 ::-webkit-scrollbar-thumb {
   background: #a4262c;
   border-radius: 4px;
@@ -115,8 +82,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
   overflow-x: hidden;
 }
 
@@ -169,4 +134,72 @@ body {
 
 .shadow-primary-lg {
   box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
+}
+
+header {
+  @apply fixed top-0 left-0 w-full z-50 transition-all duration-300;
+}
+
+main {
+  @apply container mx-auto px-4 pt-44 pb-12 space-y-24 transition-all duration-1000 ease-out dark:text-white text-slate-900;
+}
+
+section, article {
+  @apply transition-all duration-700 transform;
+}
+
+.section-blur {
+  @apply relative rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50;
+}
+
+.section-top-bubble {
+  @apply absolute top-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 -translate-y-16;
+}
+
+.section-bottom-bubble {
+  @apply absolute bottom-0 right-0 w-48 h-48 bg-primary/10 rounded-full translate-x-24 translate-y-24;
+}
+
+.header-scrolled {
+  @apply bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm;
+}
+
+.background-container {
+  @apply fixed inset-0 -z-20
+}
+
+.background-overlay {
+  @apply absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100  dark:bg-gradient-to-br dark:from-[#222] dark:via-[#2a2a2a] dark:to-[#a4262c]/20;
+}
+
+.background-image {
+  @apply absolute inset-0 h-screen w-screen placeholder-transparent object-cover;
+}
+
+.background-overlay-text {
+  @apply absolute inset-0 dark:bg-gradient-to-b dark:from-black/40 dark:via-transparent dark:to-black/60 bg-gradient-to-b from-white/80 via-black/40 to-white/40;
+}
+
+.cookie-container {
+  @apply fixed bottom-0 w-full bg-[#f0f0f0] text-black/90 text-sm text-center py-4 px-4 shadow-lg z-[99];
+}
+
+.cookie-button-container {
+  @apply gap-4 flex justify-center mt-3;
+}
+
+.cookie-button {
+  @apply text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer;
+}
+
+footer {
+ @apply bg-gray-50/90 dark:bg-black/20 border-t border-gray-200 dark:border-gray-800;
+}
+
+.footer-container {
+  @apply max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.not-found-button-container {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800;
 }

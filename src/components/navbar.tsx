@@ -119,10 +119,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm"
-          : "border-b border-transparent"
+      className={`${
+        isScrolled ? "header-scrolled" : "border-b border-transparent"
       }`}
     >
       <div className="container mx-auto px-4">

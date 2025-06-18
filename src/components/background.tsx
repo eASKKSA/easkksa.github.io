@@ -5,34 +5,30 @@ import mobileBg from "@/assets/askksa-background-tiger-mobile.svg";
 
 const Background: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-20">
+    <div className="background-container">
       {/* Layer 1: Themed Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100  dark:bg-gradient-to-br dark:from-[#222] dark:via-[#2a2a2a] dark:to-[#a4262c]/20" />
+      <div className="background-overlay" />
 
       {/* Desktop Dark Image */}
       <Image
         priority
         src={desktopBg}
-        alt="Tiger artwork for dark theme on desktop"
         fill
-        sizes="100vw"
-        className="object-cover hidden md:block"
+        alt="Tiger artwork for dark theme on desktop"
+        className="hidden md:block object-cover"
       />
 
       {/* Mobile Dark Image */}
       <Image
         priority
         src={mobileBg}
-        alt="Tiger artwork for dark theme on mobile"
         fill
-        sizes="100vw"
-        className="object-cover block md:hidden"
+        alt="Tiger artwork for dark theme on mobile"
+        className="block md:hidden object-cover"
       />
 
       {/* Theme-aware overlay for text readability */}
-      <div
-        className={`absolute inset-0 dark:bg-gradient-to-b dark:from-black/40 dark:via-transparent dark:to-black/60 bg-gradient-to-b from-white/80 via-black/40 to-white/40`}
-      />
+      <div className="background-overlay-text" />
     </div>
   );
 };
