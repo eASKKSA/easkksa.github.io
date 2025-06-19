@@ -89,7 +89,11 @@
       "email": "Email",
       "address": "Horácio Bento Gouveia School, 9004-524 Funchal",
       "phoneNumber": "(+351) 960 384 090",
-      "emailAddress": "ZGlyZWNhb0Bhc2trc2EucHQ="
+      "emailParts": {
+        "user": "direcao",
+        "domain": "askksa",
+        "tld": "pt"
+      }
     }
   },
 

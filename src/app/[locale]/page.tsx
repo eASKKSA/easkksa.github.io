@@ -161,7 +161,9 @@ export default async function Page() {
               title={t("contact.email")}
               content={
                 <ProtectedEmail
-                  encoded={t("contact.emailAddress")}
+                  user={t("contact.emailParts.user")}
+                  domain={t("contact.emailParts.domain")}
+                  tld={t("contact.emailParts.tld")}
                   className="text-gray-600 dark:text-gray-200 hover:text-primary transition-colors"
                 />
               }

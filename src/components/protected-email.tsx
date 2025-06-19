@@ -1,23 +1,37 @@
+// components/protected-email.tsx
 "use client";
 
 interface ProtectedEmailProps {
-  encoded: string;
+  user: string;
+  domain: string;
+  tld: string;
   className?: string;
 }
 
 export default function ProtectedEmail({
-  encoded,
+  user,
+  domain,
+  tld,
   className,
 }: Readonly<ProtectedEmailProps>) {
-  const decodeEmail = (encoded: string): string => {
-    return atob(encoded); // Base64 decode
+  const handleClick = () => {
+    const email = `${user}@${domain}.${tld}`;
+    window.location.href = `mailto:${email}`;
   };
 
-  const email = decodeEmail(encoded);
-
   return (
-    <a href={`mailto:${email}`} className={className}>
-      {email}
-    </a>
+    <span
+      onClick={handleClick}
+      className={`cursor-pointer ${className}`}
+      style={{ userSelect: "none" }}
+    >
+      <span>{user}</span>
+      <span style={{ display: "none" }}>nospam</span>
+      <span>@</span>
+      <span style={{ display: "none" }}>remove</span>
+      <span>{domain}</span>
+      <span>.</span>
+      <span>{tld}</span>
+    </span>
   );
 }
