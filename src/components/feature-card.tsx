@@ -18,7 +18,7 @@ const FeatureCard: React.FC<{
       } dark:bg-[#2a2a2a]/60 dark:backdrop-blur-sm dark:hover:bg-[#363636]/60 dark:border-gray-700/50 bg-white/60 backdrop-blur-sm hover:bg-white/80 border-gray-200/50`}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
-      <div className="text-6xl mb-6 justify-items-center">{feature.icon}</div>
+      <div className="text-6xl mb-6 flex justify-center">{feature.icon}</div>
       <h3 className="text-2xl font-bold text-[#a4262c] mb-4">
         {feature.title}
       </h3>
