@@ -7,6 +7,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
+import ProtectedEmail from "@/components/protected-email";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Home");
@@ -145,21 +146,25 @@ export default async function Page() {
           <div className="space-y-6">
             <ContactItem
               icon={<IoLocationSharp className="text-primary text-3xl" />}
-              title="Localização"
-              content="Escola Horácio Bento Gouveia, 9004-524 Funchal"
+              title={t("contact.location")}
+              content={t("contact.address")}
               href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <ContactItem
               icon={<FaPhoneAlt className="text-primary text-3xl" />}
-              title="Telefone"
-              content="(+351) 960 384 090"
-              href="tel:+351960384090"
+              title={t("contact.phone")}
+              content={t("contact.phoneNumber")}
+              href={`tel:${t("contact.phoneNumber").replace(/[^+\d]/g, "")}`}
             />
             <ContactItem
               icon={<IoMail className="text-primary text-3xl" />}
-              title="Email"
-              content="direcao@askksa.pt"
-              href="mailto:direcao@askksa.pt"
+              title={t("contact.email")}
+              content={
+                <ProtectedEmail
+                  encoded={t("contact.emailAddress")}
+                  className="text-gray-600 dark:text-gray-200 hover:text-primary transition-colors"
+                />
+              }
             />
           </div>
         </div>
@@ -183,26 +188,33 @@ export default async function Page() {
 const ContactItem: React.FC<{
   icon: ReactNode;
   title: string;
-  content: string;
+  content: string | ReactNode; // Allow ReactNode for protected email
   href?: string; // Optional link
 }> = ({ icon, title, content, href }) => {
-  const ContentWrapper = href ? "a" : "div";
+  // If content is string and href exists, wrap in anchor
+  const ContentWrapper = typeof content === "string" && href ? "a" : "div";
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-start space-x-3 p-4 transition-shadow">
       {icon}
-      <div>
-        <h3 className={`font-bold text-lg dark:text-white text-[#222]`}>
+      <div className="flex-1">
+        <h4 className="font-bold text-lg dark:text-white text-[#222]">
           {title}
-        </h3>
-        <ContentWrapper
-          {...(href && {
-            href,
-            className: "hover:text-primary transition-colors cursor-pointer",
-          })}
-        >
-          {content}
-        </ContentWrapper>
+        </h4>
+        {typeof content === "string" ? (
+          <ContentWrapper
+            {...(href && typeof content === "string" ? { href } : {})}
+            className={
+              href
+                ? "text-gray-600 dark:text-gray-200 hover:text-primary transition-colors"
+                : "text-gray-600 dark:text-gray-200"
+            }
+          >
+            {content}
+          </ContentWrapper>
+        ) : (
+          content
+        )}
       </div>
     </div>
   );
