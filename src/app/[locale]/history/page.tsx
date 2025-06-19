@@ -3,30 +3,19 @@ import Image from "next/image";
 
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
 import Article from "@/components/article";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "História do Karate | ASKKSA",
-  description:
-    "Descubra a rica história do Karate-do, desde as suas origens em Okinawa até à sua modernização e popularização como uma arte marcial japonesa de renome mundial.",
-  keywords: [
-    "História do Karate",
-    "Karate-do",
-    "Budo",
-    "Gichin Funakoshi",
-    "Shotokan",
-    "Kihon",
-    "Kumite",
-    "Kata",
-    "Okinawa",
-    "ASKKSA",
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("History");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    keywords: t("meta.keywords"),
+  };
+}
 
-// --- MAIN PAGE COMPONENT ---
-
-export default function HistoryPage() {
-  const t = useTranslations("History");
+export default async function HistoryPage() {
+  const t = await getTranslations("History");
   return (
     <Article sectionBlur withBubbles>
       <div className="max-w-4xl mx-auto">

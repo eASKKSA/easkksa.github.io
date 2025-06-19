@@ -1,87 +1,82 @@
 import Section from "@/components/section";
 import FeatureCard from "@/components/feature-card";
 import { Metadata } from "next";
-
-const features = [
-  {
-    id: "tradition",
-    title: "Tradição Milenar",
-    description:
-      "Karate Shotokan autêntico com linhagem direta do Japão e técnicas tradicionais preservadas.",
-    icon: "🥋",
-  },
-  {
-    id: "instructors",
-    title: "Mestres Qualificados",
-    description:
-      "Instrutores com certificação internacional SKI e décadas de experiência.",
-    icon: "👨‍🏫",
-  },
-  {
-    id: "community",
-    title: "Todas as Idades",
-    description:
-      "Turmas especializadas para crianças, jovens e adultos com metodologia adaptada.",
-    icon: "👥",
-  },
-];
-
-const schedules = [
-  {
-    day: "Segunda a Sexta",
-    time: "19h30 - 20h30",
-    level: "Crianças (-12 anos)",
-  },
-  {
-    day: "Segunda a Sexta",
-    time: "20h30 - 21h30",
-    level: "Adultos (+12 anos)",
-  },
-];
+import { GiKimono } from "react-icons/gi";
+import { IoPeople, IoLocationSharp, IoMail } from "react-icons/io5";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Home");
   return {
+    title: t("meta.title"),
+    description: t("meta.description"),
     // --- Basic Metadata ---
-    keywords: [
-      "Karate",
-      "Shotokan",
-      "ASKKSA",
-      "Artes Marciais",
-      "Dojo",
-      "Funchal",
-      "Madeira",
-      "Karate para Crianças",
-      "Karate para Adultos",
-    ],
+    keywords: t("meta.keywords"),
   };
 }
 
 export default async function Page() {
+  const t = await getTranslations("Home");
+  const features = [
+    {
+      id: "tradition",
+      title: t("features.tradition.title"),
+      description: t("features.tradition.description"),
+      icon: <GiKimono className="w-12 h-12" />,
+    },
+    {
+      id: "instructors",
+      title: t("features.instructors.title"),
+      description: t("features.instructors.description"),
+      icon: <FaPeopleGroup className="w-12 h-12" />,
+    },
+    {
+      id: "community",
+      title: t("features.community.title"),
+      description: t("features.community.description"),
+      icon: <IoPeople className="w-12 h-12" />,
+    },
+  ];
+
+  const schedules = [
+    {
+      day: t("schedule.weekdays"),
+      time: t("schedule.time1"),
+      level: t("schedule.children"),
+    },
+    {
+      day: t("schedule.weekdays"),
+      time: t("schedule.time2"),
+      level: t("schedule.adults"),
+    },
+  ];
   return (
     <>
       <Section sectionBlur withBubbles className="text-center">
         <h1>
           ASKKSA{" "}
           <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
-            Associação Shotokan Kokusai Karaté Santo António
+            {t("title")}
           </span>
         </h1>
 
         <p
           className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700`}
         >
-          Tradição, disciplina e excelência no Karate Shotokan. Descubra a força
-          interior através da arte marcial milenar.
+          {t("hero.title")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="bg-primary hover:bg-[#8b1e23] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-primary/50 shadow-lg">
-            Aula Experimental Gratuita
+            {t("buttons.trialClass")}
           </button>
           <button
             className={`border-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 focus:ring-4 shadow-lg dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#222] dark:focus:ring-white/50 border-[#222] text-[#222] hover:bg-[#222] hover:text-white focus:ring-[#222]/50`}
           >
-            Saiba Mais
+            {t("buttons.learnMore")}
           </button>
         </div>
       </Section>
@@ -91,13 +86,12 @@ export default async function Page() {
           <h2
             className={`text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-[0_1.5px_1.5px_rgba(164,38,44,0.8)]`}
           >
-            Por que escolher a ASKKSA?
+            {t("sections.whyChoose")}
           </h2>
           <p
             className={`text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.8)]`}
           >
-            Mais de 30 anos formando karatekas com os mais altos padrões de
-            qualidade
+            {t("hero.experience")}
           </p>
         </div>
 
@@ -111,11 +105,9 @@ export default async function Page() {
         <div className="bg-gradient-to-br from-primary to-[#741b1f] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-              Horários de Treino
+              {t("sections.schedule")}
             </h2>
-            <p className="text-xl opacity-90">
-              Encontre o horário perfeito para sua jornada no Karate
-            </p>
+            <p className="text-xl opacity-90">{t("hero.schedule.title")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -142,25 +134,33 @@ export default async function Page() {
           <h2
             className={`text-3xl md:text-4xl font-bold mb-6 font-display dark:text-white text-[#222]`}
           >
-            Visite nosso Dojo
+            {t("sections.visitDojo")}
           </h2>
           <p className={`text-xl mb-8 dark:text-gray-300 text-gray-600`}>
-            Venha conhecer nossa estrutura e metodologia.
-            <br />A primeira aula é sempre <b>gratuita</b>!
+            {t("hero.cta.text")}
+            <br />
+            {t("hero.cta.trial")} <b>{t("hero.cta.free")}</b>
           </p>
 
           <div className="space-y-6">
             <ContactItem
-              icon="📍"
+              icon={<IoLocationSharp className="text-primary text-3xl" />}
               title="Localização"
               content="Escola Horácio Bento Gouveia, 9004-524 Funchal"
+              href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <ContactItem
-              icon="📞"
+              icon={<FaPhoneAlt className="text-primary text-3xl" />}
               title="Telefone"
               content="(+351) 960 384 090"
+              href="tel:+351960384090"
             />
-            <ContactItem icon="✉️" title="Email" content="direcao@askksa.pt" />
+            <ContactItem
+              icon={<IoMail className="text-primary text-3xl" />}
+              title="Email"
+              content="direcao@askksa.pt"
+              href="mailto:direcao@askksa.pt"
+            />
           </div>
         </div>
 
@@ -181,18 +181,28 @@ export default async function Page() {
 }
 
 const ContactItem: React.FC<{
-  icon: string;
+  icon: ReactNode;
   title: string;
   content: string;
-}> = ({ icon, title, content }) => {
+  href?: string; // Optional link
+}> = ({ icon, title, content, href }) => {
+  const ContentWrapper = href ? "a" : "div";
+
   return (
     <div className="flex items-center gap-4">
-      <span className="text-3xl">{icon}</span>
+      {icon}
       <div>
         <h3 className={`font-bold text-lg dark:text-white text-[#222]`}>
           {title}
         </h3>
-        <p className={`dark:text-gray-300 text-gray-600`}>{content}</p>
+        <ContentWrapper
+          {...(href && {
+            href,
+            className: "hover:text-primary transition-colors cursor-pointer",
+          })}
+        >
+          {content}
+        </ContentWrapper>
       </div>
     </div>
   );

@@ -62,9 +62,12 @@ const Footer = () => {
                 <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
                 {/* CHANGED */}
                 <div>
-                  <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <a
+                    className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
+                    href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
+                  >
                     {tOrg("dojo1.name")}
-                  </p>
+                  </a>
                   <p>{tOrg("dojo1.address.name")}</p>
                   <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
                 </div>
@@ -73,9 +76,12 @@ const Footer = () => {
                 <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
                 {/* CHANGED */}
                 <div>
-                  <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <a
+                    className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
+                    href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt"
+                  >
                     {tOrg("dojo2.name")}
-                  </p>
+                  </a>
                   <p>{tOrg("dojo2.address.name")}</p>
                   <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
                 </div>

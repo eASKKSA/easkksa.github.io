@@ -8,7 +8,7 @@
     "style-ski": "Estilo SKI"
   },
   "Organization": {
-    "name": "ASKKSA Karaté Shotokan Madeira",
+    "name": "ASKKSA | Karaté Shotokan Santo António | Funchal, Madeira",
     "sport": "Karaté",
     "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
     "addressLocality": "Funchal",
@@ -34,8 +34,72 @@
       }
     }
   },
+  "Home": {
+    "meta": {
+      "title": "ASKKSA | Karaté Shotokan Santo António | Funchal, Madeira",
+      "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
+      "keywords": "ASKKSA, Funchal, Madeira, Santo António, Dojo, Horácio Bento, Sensei"
+    },
+    "title": "Associação Shotokan Kokusai Karaté Santo António",
+    "hero": {
+      "title": "Tradição, disciplina e excelência no Karate Shotokan. Descubra a força interior através da arte marcial milenar.",
+      "experience": "Mais de 30 anos formando karatekas com os mais altos padrões de qualidade",
+      "schedule": {
+        "title": "Encontre o horário perfeito para sua jornada no Karate"
+      },
+      "cta": {
+        "text": "Venha conhecer nossa estrutura e metodologia.",
+        "trial": "A primeira aula é sempre",
+        "free": "gratuita!"
+      }
+    },
+    "buttons": {
+      "trialClass": "Aula Experimental Gratuita",
+      "learnMore": "Saiba Mais"
+    },
+    "sections": {
+      "whyChoose": "Por que escolher a ASKKSA?",
+      "schedule": "Horários de Treino",
+      "visitDojo": "Visite nosso Dojo"
+    },
+    "features": {
+      "tradition": {
+        "title": "Tradição Milenar",
+        "description": "Karate Shotokan autêntico com linhagem direta do Japão e técnicas tradicionais preservadas."
+      },
+      "instructors": {
+        "title": "Senseis Qualificados",
+        "description": "Instrutores graduados pela SKIF Canada e certificados até Grau III pela FNKP."
+      },
+      "community": {
+        "title": "Todas as Idades",
+        "description": "Turmas especializadas para crianças, jovens e adultos com metodologia adaptada."
+      }
+    },
+    "schedule": {
+      "weekdays": "Segunda a Sexta",
+      "children": "Crianças (-12 anos)",
+      "adults": "Adultos (+12 anos)",
+      "time1": "19h30 - 20h30",
+      "time2": "20h30 - 21h30"
+    },
+    "contact": {
+      "location": "Localização",
+      "phone": "Telefone",
+      "email": "Email",
+      "address": "Escola Horácio Bento Gouveia, 9004-524 Funchal",
+      "phoneNumber": "(+351) 960 384 090",
+      "emailAddress": "direcao@askksa.pt"
+    }
+  },
+
   "History": {
-    "title": "História do Karate-do",
+    "meta": {
+      "title": "História do Karate | ASKKSA Karaté Shotokan Madeira",
+      "description": "Descubra a rica história do Karate-do, desde as suas origens em Okinawa até à sua modernização e popularização como uma arte marcial japonesa de renome mundial.",
+      "keywords": "História do Karate, Karate-do, Budo, Gichin Funakoshi, Shotokan, Kihon, Kumite, Kata, Okinawa, ASKKSA"
+    },
+    "title": "História do Karaté",
     "introduction": {
       "text": "<b>Karate</b> ou <b>karate-do</b> é uma forma de budo (caminho do guerreiro). Uma arte marcial japonesa que tem a sua origem em Okinawa e foi introduzida nas principais ilhas do arquipélago japonês em 1922. O Karate enfatiza as técnicas de ataque (como socos e pontapés) em detrimento das técnicas de luta corpo-a-corpo."
     },
