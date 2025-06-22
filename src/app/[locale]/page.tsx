@@ -1,6 +1,5 @@
 import Section from "@/components/section";
 import FeatureCard from "@/components/feature-card";
-import { Metadata } from "next";
 import { GiKimono } from "react-icons/gi";
 import { IoPeople, IoLocationSharp, IoMail } from "react-icons/io5";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -8,16 +7,10 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import ProtectedEmail from "@/components/protected-email";
+import { jsonLd, metadata } from "./metadata";
+import { MetadataLDJSON } from "@/app/metadata";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Home");
-  return {
-    title: t("meta.title"),
-    description: t("meta.description"),
-    // --- Basic Metadata ---
-    keywords: t("meta.keywords"),
-  };
-}
+export const generateMetadata = metadata;
 
 export default async function Page() {
   const t = await getTranslations("Home");
@@ -183,6 +176,7 @@ export default async function Page() {
           />
         </div>
       </Section>
+      <MetadataLDJSON jsonLd={await jsonLd()} />
     </>
   );
 }

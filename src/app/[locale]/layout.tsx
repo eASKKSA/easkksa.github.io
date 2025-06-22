@@ -7,11 +7,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import CookieWarning from "@/components/cookie-warning";
 import { getCookie } from "cookies-next";
 import { cookies } from "next/headers";
-import { globalMetadata, MetadataLDJSON } from "@/app/metadata";
+import { globalMetadata } from "@/app/metadata";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/footer";
 import PageAnimationWrapper from "@/components/page-animation-wrapper";
+import MetaPixelTracker from "@/components/meta-pixel-tracker";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -40,9 +41,6 @@ export default async function Layout({
   const hasConsent = getCookie("cookie_consent", { cookies }) === "true";
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
-        <MetadataLDJSON />
-      </head>
       <body>
         <NextIntlClientProvider>
           <Providers>
@@ -54,7 +52,12 @@ export default async function Layout({
           </Providers>
         </NextIntlClientProvider>
       </body>
-      {hasConsent && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />}
+      {hasConsent && (
+        <>
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+          <MetaPixelTracker pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID!} />
+        </>
+      )}
     </html>
   );
 }

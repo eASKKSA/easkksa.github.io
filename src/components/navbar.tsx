@@ -46,7 +46,7 @@ const SettingsMenu: React.FC<{
 
       {/* Dropdown Panel */}
       <div
-        className={`absolute top-full right-0 mt-2 w-48 origin-top-right rounded-xl border bg-white shadow-lg transition-all duration-200 ease-out dark:bg-[#222] dark:border-gray-700
+        className={`absolute justify-items-center top-full right-0 mt-2 origin-top-right rounded-xl border bg-white shadow-lg transition-all duration-200 ease-out dark:bg-[#222] dark:border-gray-700
           ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
       >
         {/* We can put the ThemeToggle directly here */}

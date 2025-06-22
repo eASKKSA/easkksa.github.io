@@ -8,26 +8,26 @@
     "style-ski": "Style SKI"
   },
   "Organization": {
-    "name": "ASKKSA | Shotokan Karate Santo António | Funchal, Madeira",
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "sport": "Karate",
-    "description": "A karate association in Funchal, Madeira, with dojos at Horácio Bento de Gouveia School and Santo António Parish Council.",
+    "description": "A karate association in Funchal, Madeira, with dojos at Horacio Bento de Gouveia School and Santo Antonio Parish Council.",
     "addressLocality": "Funchal",
     "addressRegion": "Madeira",
     "addressCountry": "Portugal",
     "contactType": "General Inquiries",
     "dojo1": {
-      "name": "Main Dojo - Horácio Bento de Gouveia School",
+      "name": "Main Dojo - Horacio Bento de Gouveia School",
       "address": {
-        "name": "Horácio Bento de Gouveia School",
+        "name": "Horacio Bento de Gouveia School",
         "addressLocality": "Funchal",
         "addressRegion": "Madeira",
         "addressCountry": "Portugal"
       }
     },
     "dojo2": {
-      "name": "Dojo Santo António Parish Council",
+      "name": "Dojo Santo Antonio Parish Council",
       "address": {
-        "name": "Santo António Parish Council",
+        "name": "Santo Antonio Parish Council",
         "addressLocality": "Funchal",
         "addressRegion": "Madeira",
         "addressCountry": "Portugal"
@@ -37,7 +37,7 @@
   "Home": {
     "meta": {
       "title": "ASKKSA | Shotokan Karate Santo Antonio | Funchal, Madeira",
-      "description": "A karate association in Funchal, Madeira, with dojos at Horácio Bento de Gouveia School and Santo Antonio Parish Council.",
+      "description": "A karate association in Funchal, Madeira, with dojos at Horacio Bento de Gouveia School and Santo Antonio Parish Council.",
       "keywords": "ASKKSA, Funchal, Madeira, Santo Antonio, Dojo, Horacio Bento, Sensei"
     },
     "title": "Shotokan Kokusai Karate Santo Antonio Association",
@@ -87,7 +87,7 @@
       "location": "Location",
       "phone": "Phone",
       "email": "Email",
-      "address": "Horácio Bento Gouveia School, 9004-524 Funchal",
+      "address": "Horacio Bento Gouveia School, 9004-524 Funchal",
       "phoneNumber": "(+351) 960 384 090",
       "emailParts": {
         "user": "direcao",

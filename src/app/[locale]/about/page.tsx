@@ -188,30 +188,33 @@ const InstructorCard = ({
 };
 
 const DojoCard = ({ dojo }: { dojo: (typeof dojos)[0] }) => {
+  const cardClasses = [
+    "flex flex-col overflow-hidden rounded-2xl border backdrop-blur-sm shadow-lg",
+    "transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl",
+    "border-gray-200/50 bg-white/60 hover:border-[#a4262c]",
+    "dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-[#a4262c]",
+  ].join(" ");
+
+  const iframeClasses = "rounded-xl h-80 w-full shadow-lg border-0";
+
+  const titleClasses =
+    "text-xl font-bold text-center text-[#222] dark:text-white";
+
   return (
-    <a
-      href={dojo.mapUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block group "
-    >
-      <div className="flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-[#a4262c] border-gray-200/50 bg-white/60 hover:border-[#a4262c] backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
-        <div className="relative w-full h-56">
-          <iframe
-            src={dojo.mapUrl}
-            className="rounded-xl h-80 w-full shadow-lg border-0 "
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={dojo.name}
-          />
-        </div>
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-center dark:text-white text-[#222]">
-            {dojo.name}
-          </h3>
-        </div>
+    <div className={cardClasses}>
+      <div className="relative w-full">
+        <iframe
+          src={dojo.mapUrl}
+          className={iframeClasses}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title={dojo.name}
+        />
       </div>
-    </a>
+      <div className="p-6">
+        <h3 className={titleClasses}>{dojo.name}</h3>
+      </div>
+    </div>
   );
 };

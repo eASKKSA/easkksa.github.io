@@ -12,6 +12,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Link from "next/link";
+import ProtectedEmail from "@/components/protected-email";
 
 // Social links now use react-icons
 const socialLinks = [
@@ -112,7 +113,7 @@ const Footer = () => {
                   href={`mailto:direcao@askksa.pt}`}
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                 >
-                  direcao@askksa.pt
+                  <ProtectedEmail user="direcao" domain="askksa" tld="pt" />
                 </a>
               </li>
             </ul>

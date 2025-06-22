@@ -1,10 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
+import { CiLight, CiDark, CiMonitor } from "react-icons/ci";
 
 const themeOptions = [
-  { key: "light" as const, icon: "☀️", aria: "Light mode" },
-  { key: "system" as const, icon: "💻", aria: "System default" },
-  { key: "dark" as const, icon: "🌙", aria: "Dark mode" },
+  { key: "light" as const, icon: <CiLight />, aria: "Light mode" },
+  { key: "system" as const, icon: <CiMonitor />, aria: "System default" },
+  { key: "dark" as const, icon: <CiDark />, aria: "Dark mode" },
 ];
 
 const ThemeToggle: React.FC = () => {
