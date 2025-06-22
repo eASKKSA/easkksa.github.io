@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import desktopBg from "@/assets/askksa-background-tiger.svg";
-import mobileBg from "@/assets/askksa-background-tiger-mobile.svg";
+import mobileBg from "@/assets/askksa-background-tiger-mobile.png";
 
 const Background: React.FC = () => {
   return (

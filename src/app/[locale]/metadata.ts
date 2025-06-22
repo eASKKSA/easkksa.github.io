@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { SportsOrganization, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
@@ -92,8 +92,11 @@ export async function metadata(): Promise<Metadata> {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
+    applicationName: "ASKKSA",
     openGraph: {
       title: t("meta.title"),
+      siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
+      locale: await getLocale(),
       description: t("meta.description"),
       url: fullPathname,
       images: [
