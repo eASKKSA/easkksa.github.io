@@ -14,7 +14,7 @@ const Background: React.FC = () => {
         priority
         src={desktopBg}
         fill
-        alt="Tiger artwork for dark theme on desktop"
+        alt=""
         className="hidden md:block object-cover"
       />
 
@@ -23,7 +23,7 @@ const Background: React.FC = () => {
         priority
         src={mobileBg}
         fill
-        alt="Tiger artwork for dark theme on mobile"
+        alt=""
         className="block md:hidden object-cover"
       />
 

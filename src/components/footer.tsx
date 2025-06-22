@@ -44,9 +44,9 @@ const Footer = () => {
           {/* Column 1: Brand & Mission */}
           <div className="space-y-4 col-span-2">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 {tOrg("name")}
-              </span>
+              </h2>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               {t("mission")}
@@ -69,8 +69,10 @@ const Footer = () => {
                   >
                     {tOrg("dojo1.name")}
                   </a>
-                  <p>{tOrg("dojo1.address.name")}</p>
-                  <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
+                  <address>
+                    <p>{tOrg("dojo1.address.name")}</p>
+                    <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
+                  </address>
                 </div>
               </div>
               <div className="flex items-start">
@@ -83,8 +85,10 @@ const Footer = () => {
                   >
                     {tOrg("dojo2.name")}
                   </a>
-                  <p>{tOrg("dojo2.address.name")}</p>
-                  <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
+                  <address>
+                    <p>{tOrg("dojo2.address.name")}</p>
+                    <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
+                  </address>
                 </div>
               </div>
             </div>
@@ -110,7 +114,7 @@ const Footer = () => {
                 <FaEnvelope className="h-4 w-4 text-primary mr-3" />{" "}
                 {/* CHANGED */}
                 <a
-                  href={`mailto:direcao@askksa.pt}`}
+                  href="mailto:direcao@askksa.pt"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                 >
                   <ProtectedEmail user="direcao" domain="askksa" tld="pt" />
@@ -140,11 +144,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}.
-          </p>
-        </div>
+        <small className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+          &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}.
+        </small>
       </div>
     </footer>
   );

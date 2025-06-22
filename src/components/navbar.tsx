@@ -119,6 +119,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header
+      role="banner"
       className={`${
         isScrolled ? "header-scrolled" : "border-b border-transparent"
       }`}
@@ -131,7 +132,11 @@ const Navbar: React.FC = () => {
           <div className="mx-auto max-w-7xl px-4">
             <div className="relative flex h-36 items-center">
               {/* The main grid container for all 7 items */}
-              <nav className="grid w-full grid-cols-7 items-center justify-items-center">
+              <nav
+                role="navigation"
+                aria-label="Main Navigation"
+                className="grid w-full grid-cols-7 items-center justify-items-center"
+              >
                 {/* Left Items: Each link is a grid item */}
                 {leftItems.map((item) => {
                   const isActive = pathname === item.href;
@@ -197,9 +202,9 @@ const Navbar: React.FC = () => {
               priority
               src="/askksa_logo.svg"
               alt="ASKKSA Logo"
-              width={10}
-              height={10}
-              className="h-24 py-1 w-auto"
+              width={96}
+              height={96}
+              className="h-24 w-auto py-1"
             />
           </Link>
           <button
@@ -216,7 +221,11 @@ const Navbar: React.FC = () => {
       <div
         className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"} border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-[#1a1a1a]/90`}
       >
-        <nav className="flex flex-col gap-1 border-t  p-4">
+        <nav
+          role="navigation"
+          aria-label="Main Mobile Navigation"
+          className="flex flex-col gap-1 border-t  p-4"
+        >
           {navigationItems.map((item) => {
             const isActive = pathname === item.href;
             return (
