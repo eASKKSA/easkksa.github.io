@@ -2,15 +2,13 @@ import { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { mainPagePathnames, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
-import { SportsOrganization, Thing, WithContext } from "schema-dts";
+import { Thing, WithContext } from "schema-dts";
 import { headers } from "next/headers";
 
 export async function globalMetadata(locale: Locale): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  const t = await getTranslations("Organization");
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   if (!siteUrl) {
     throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
