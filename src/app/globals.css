@@ -10,6 +10,10 @@
 @theme {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
+  --color-gray-900: #222;
+  --color-gray-800: #2a2a2a;
+  --color-gray-700: #333;
+  --color-gray-600: #444;
   --animate-logo-pulse-grow: logo-pulse-grow 1s linear infinite alternate;
 }
 

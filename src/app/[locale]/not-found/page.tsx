@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
-import Section from "@/components/section";
+import Section from "@/components/container";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,7 +23,7 @@ export default function NotFound() {
 
   return (
     <Section
-      sectionBlur
+      blur
       withBubbles
       className=" max-w-4xl mx-auto text-center space-y-8"
     >

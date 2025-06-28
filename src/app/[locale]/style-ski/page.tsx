@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Section from "@/components/section";
+import Section from "@/components/container";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
 import titoVelosa from "@/assets/senseis/tito_velosa.png";

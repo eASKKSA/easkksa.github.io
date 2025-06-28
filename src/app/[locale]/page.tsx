@@ -1,4 +1,4 @@
-import Section from "@/components/section";
+import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
 import { GiKimono } from "react-icons/gi";
 import { IoPeople, IoLocationSharp, IoMail } from "react-icons/io5";
@@ -9,6 +9,7 @@ import { getTranslations } from "next-intl/server";
 import ProtectedEmail from "@/components/protected-email";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import clsx from "clsx";
 
 export const generateMetadata = metadata;
 
@@ -49,7 +50,7 @@ export default async function Page() {
   ];
   return (
     <>
-      <Section sectionBlur withBubbles className="text-center">
+      <Container blur withBubbles className="text-center">
         <h1>
           ASKKSA{" "}
           <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -57,9 +58,7 @@ export default async function Page() {
           </span>
         </h1>
 
-        <p
-          className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700`}
-        >
+        <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
           {t("hero.title")}
         </p>
 
@@ -67,70 +66,54 @@ export default async function Page() {
           <button className="bg-primary hover:bg-[#8b1e23] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-primary/50 shadow-lg">
             {t("buttons.trialClass")}
           </button>
-          <button
-            className={`border-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 focus:ring-4 shadow-lg dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#222] dark:focus:ring-white/50 border-[#222] text-[#222] hover:bg-[#222] hover:text-white focus:ring-[#222]/50`}
-          >
+          <button className="border-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 focus:ring-4 shadow-lg dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-[#222] dark:focus:ring-white/50 border-[#222] text-[#222] hover:bg-[#222] hover:text-white focus:ring-[#222]/50">
             {t("buttons.learnMore")}
           </button>
         </div>
-      </Section>
+      </Container>
 
-      <Section>
-        <div className="text-center mb-16">
-          <h2
-            className={`text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-[0_1.5px_1.5px_rgba(164,38,44,0.8)]`}
-          >
-            {t("sections.whyChoose")}
-          </h2>
-          <p
-            className={`text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.8)]`}
-          >
-            {t("hero.experience")}
-          </p>
-        </div>
+      <Container className="text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-[0_1.5px_1.5px_rgba(164,38,44,0.8)]">
+          {t("sections.whyChoose")}
+        </h2>
+        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.8)]">
+          {t("hero.experience")}
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
           {features.map((feature, index) => (
             <FeatureCard key={feature.id} feature={feature} index={index} />
           ))}
         </div>
-      </Section>
-      <Section>
-        <div className="bg-gradient-to-br from-primary to-[#741b1f] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-              {t("sections.schedule")}
-            </h2>
-            <p className="text-xl opacity-90">{t("hero.schedule.title")}</p>
-          </div>
+      </Container>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {schedules.map((schedule, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 border border-white/10"
-              >
-                <h3 className="text-xl font-bold mb-2">{schedule.level}</h3>
-                <p className="text-lg mb-1">{schedule.day}</p>
-                <p className="text-2xl font-bold text-yellow-300">
-                  {schedule.time}
-                </p>
-              </div>
-            ))}
-          </div>
+      <Container className="bg-gradient-to-br from-primary to-[#741b1f] rounded-3xl p-8 md:p-12 text-white shadow-2xl text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
+          {t("sections.schedule")}
+        </h2>
+        <p className="text-xl opacity-90">{t("hero.schedule.title")}</p>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
+          {schedules.map((schedule) => (
+            <div
+              key={schedule.level}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 border border-white/10"
+            >
+              <h3 className="text-xl font-bold mb-2">{schedule.level}</h3>
+              <p className="text-lg mb-1">{schedule.day}</p>
+              <p className="text-2xl font-bold text-yellow-400">
+                {schedule.time}
+              </p>
+            </div>
+          ))}
         </div>
-      </Section>
-      <Section
-        sectionBlur
-        className="grid lg:grid-cols-2 gap-12 items-center text-justify"
-      >
+      </Container>
+      <Container blur className="grid lg:grid-cols-2 gap-12 items-center ">
         <div>
-          <h2
-            className={`text-3xl md:text-4xl font-bold mb-6 font-display dark:text-white text-[#222]`}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display dark:text-white text-[#222]">
             {t("sections.visitDojo")}
           </h2>
-          <p className={`text-xl mb-8 dark:text-gray-300 text-gray-600`}>
+          <p className="text-xl mb-8 dark:text-gray-300 text-gray-600">
             {t("hero.cta.text")}
             <br />
             {t("hero.cta.trial")} <b>{t("hero.cta.free")}</b>
@@ -175,37 +158,45 @@ export default async function Page() {
             title="Localização da ASKKSA - Escola Horácio Bento Gouveia"
           />
         </div>
-      </Section>
+      </Container>
       <MetadataLDJSON jsonLd={await jsonLd()} />
     </>
   );
 }
 
-const ContactItem: React.FC<{
+type ContactItemProps = {
   icon: ReactNode;
   title: string;
-  content: string | ReactNode; // Allow ReactNode for protected email
-  href?: string; // Optional link
-}> = ({ icon, title, content, href }) => {
-  // If content is string and href exists, wrap in anchor
-  const ContentWrapper = typeof content === "string" && href ? "a" : "div";
+  content: string | ReactNode;
+  href?: string;
+};
+
+const ContactItem: React.FC<ContactItemProps> = ({
+  icon,
+  title,
+  content,
+  href,
+}) => {
+  const isStringContent = typeof content === "string";
+  const isLink = isStringContent && !!href;
+  const ContentWrapper = isLink ? "a" : "div";
+
+  const contentClass = clsx(
+    "text-gray-600 dark:text-gray-200",
+    href && "hover:text-primary transition-colors",
+  );
+
+  const contentProps = isLink ? { href } : {};
 
   return (
     <div className="flex items-start space-x-3 p-4 transition-shadow">
       {icon}
       <div className="flex-1">
-        <h4 className="font-bold text-lg dark:text-white text-[#222]">
+        <h4 className="font-bold text-lg text-[#222] dark:text-white">
           {title}
         </h4>
-        {typeof content === "string" ? (
-          <ContentWrapper
-            {...(href && typeof content === "string" ? { href } : {})}
-            className={
-              href
-                ? "text-gray-600 dark:text-gray-200 hover:text-primary transition-colors"
-                : "text-gray-600 dark:text-gray-200"
-            }
-          >
+        {isStringContent ? (
+          <ContentWrapper {...contentProps} className={contentClass}>
             {content}
           </ContentWrapper>
         ) : (

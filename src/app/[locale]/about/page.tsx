@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Section from "@/components/section";
+import Container from "@/components/container";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
 import titoVelosa from "@/assets/senseis/tito_velosa.png";
@@ -93,62 +93,52 @@ export default async function QuemSomosPage() {
   return (
     <>
       {/* Hero Section */}
-      <Section sectionBlur withBubbles className="text-center">
-        <div className="relative z-10">
-          <h1>Sobre a ASKKSA</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
-            Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA,
-            Associação Shotokan Kokusai Karate de Santo António. O objectivo
-            desta constituição era, além de relançar a modalidade a novos
-            níveis, enquadrá-la no panorama legal e desportivo da Região
-            Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P
-            (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de
-            Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD (
-            Direção Regional da Juventude e Desporto ).
-          </p>
-        </div>
-      </Section>
+      <Container blur withBubbles className="text-center">
+        <h1>Sobre a ASKKSA</h1>
+        <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
+          Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA,
+          Associação Shotokan Kokusai Karate de Santo António. O objectivo desta
+          constituição era, além de relançar a modalidade a novos níveis,
+          enquadrá-la no panorama legal e desportivo da Região Autónoma da
+          Madeira. A Associação ASKKSA está filiada na FNK-P (Federação Nacional
+          de Karate – Portugal) e na AKRAM (Associação de Karate da Região
+          Autónoma da Madeira) e é reconhecida pela DRJD ( Direção Regional da
+          Juventude e Desporto ).
+        </p>
+      </Container>
 
       {/* Instructors Section */}
-      <div className="relative z-10">
-        <Section>
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
-              Uma Equipa de Elite
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md">
-              A ASKKSA orgulha-se de ter uma equipa de instrutores altamente
-              qualificada, com provas dadas e inúmeras formações nacionais e
-              internacionais.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {instructors.map((instructor) => (
-              <InstructorCard key={instructor.name} instructor={instructor} />
-            ))}
-          </div>
-        </Section>
-      </div>
+      <Container className="text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
+          Uma Equipa de Elite
+        </h2>
+        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
+          A ASKKSA orgulha-se de ter uma equipa de instrutores altamente
+          qualificada, com provas dadas e inúmeras formações nacionais e
+          internacionais.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {instructors.map((instructor) => (
+            <InstructorCard key={instructor.name} instructor={instructor} />
+          ))}
+        </div>
+      </Container>
 
       {/* Dojos Section */}
-      <Section>
-        <div className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white ">
-              Os Nossos Dojos
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
-              Atualmente contamos com dois espaços de treino no Funchal e damos
-              apoio técnico ao Clube Desportivo de Câmara de Lobos.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dojos.map((dojo) => (
-              <DojoCard key={dojo.name} dojo={dojo} />
-            ))}
-          </div>
+      <Container blur className="text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white ">
+          Os Nossos Dojos
+        </h2>
+        <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
+          Atualmente contamos com dois espaços de treino no Funchal e damos
+          apoio técnico ao Clube Desportivo de Câmara de Lobos.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
+          {dojos.map((dojo) => (
+            <DojoCard key={dojo.name} dojo={dojo} />
+          ))}
         </div>
-      </Section>
+      </Container>
     </>
   );
 }
@@ -191,30 +181,26 @@ const DojoCard = ({ dojo }: { dojo: (typeof dojos)[0] }) => {
   const cardClasses = [
     "flex flex-col overflow-hidden rounded-2xl border backdrop-blur-sm shadow-lg",
     "transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl",
-    "border-gray-200/50 bg-white/60 hover:border-[#a4262c]",
-    "dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-[#a4262c]",
+    "border-gray-200/50 bg-white/60 hover:border-primary",
+    "dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-primary",
   ].join(" ");
 
   const iframeClasses = "rounded-xl h-80 w-full shadow-lg border-0";
 
   const titleClasses =
-    "text-xl font-bold text-center text-[#222] dark:text-white";
+    "text-xl font-bold text-center text-[#222] dark:text-white p-6";
 
   return (
     <div className={cardClasses}>
-      <div className="relative w-full">
-        <iframe
-          src={dojo.mapUrl}
-          className={iframeClasses}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title={dojo.name}
-        />
-      </div>
-      <div className="p-6">
-        <h3 className={titleClasses}>{dojo.name}</h3>
-      </div>
+      <iframe
+        src={dojo.mapUrl}
+        className={iframeClasses}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title={dojo.name}
+      />
+      <h3 className={titleClasses}>{dojo.name}</h3>
     </div>
   );
 };

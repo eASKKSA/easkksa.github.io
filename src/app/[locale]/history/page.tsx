@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
-import Article from "@/components/article";
+import Container from "@/components/container";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HistoryPage() {
   const t = await getTranslations("History");
   return (
-    <Article sectionBlur withBubbles>
+    <Container as="article" blur withBubbles>
       <div className="max-w-4xl mx-auto">
         {/* Main Title */}
         <h1 className="text-center">{t("title")}</h1>
@@ -33,17 +33,15 @@ export default async function HistoryPage() {
           </div>
 
           {/* Banner Image - Right Side */}
-          <div className="flex-shrink-0 mt-6 lg:mt-0">
-            <div className="h-52 w-96 relative mx-auto lg:mx-0">
-              <Image
-                src={historyBannerUrl}
-                alt="Mestres Fundadores do Karate"
-                fill
-                sizes="(max-width: 768px) 100vw, 128px"
-                className="rounded-xl object-cover shadow-lg"
-                priority
-              />
-            </div>
+          <div className="h-52 w-96 relative mx-auto lg:m-0 mt-6">
+            <Image
+              src={historyBannerUrl}
+              alt="Mestres Fundadores do Karate"
+              fill
+              sizes="(max-width: 768px) 100vw, 128px"
+              className="rounded-xl object-cover shadow-lg"
+              priority
+            />
           </div>
         </div>
 
@@ -96,6 +94,6 @@ export default async function HistoryPage() {
           />
         </div>
       </div>
-    </Article>
+    </Container>
   );
 }

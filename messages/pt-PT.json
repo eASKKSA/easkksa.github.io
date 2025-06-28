@@ -135,6 +135,135 @@
       "transition": "Como muitas artes marciais japonesas, o Karaté fez a sua transição para o <b>Karate-do</b> no início do século XX. O \"do\" (caminho) imbui a prática com elementos do Zen Budismo, sendo por vezes chamado de \"Zen em movimento\". A modernização também incluiu a adoção do uniforme branco (<b>keikogi</b>) e das faixas coloridas para indicar a graduação, ambos popularizados por Jigoro Kano, o fundador do Judo."
     }
   },
+  "Philosophy": {
+    "meta": {
+      "title": "Filosofia | ASKKSA Karaté Shotokan Madeira",
+      "description": "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrole.",
+      "keywords": "Filosofia Karaté, Bushido, Niju Kun, Dojo Kun, Sensei Funakoshi, Princípios Karaté, ASKKSA, Shotokan"
+    },
+    "title": "Filosofia do Karaté",
+    "introduction": "A filosofia do Karaté é baseada em princípios milenares de disciplina, respeito e autocontrole, transmitidos através de três pilares fundamentais da sabedoria oriental.",
+    "navigation": {
+      "bushido": "Bushido",
+      "nijuKun": "Niju Kun",
+      "dojoKun": "Dojo Kun"
+    }
+  },
+  "Bushido": {
+    "title": "Código de Ética - Bushido",
+    "introduction": "O Karaté é fundamentalmente BUDO e assim sendo, o seu código ético é inspirado pelo do BUSHIDO, criado pelos Samurais. Neste código, a honra e a lealdade são dois dos seus princípios mais importantes.",
+    "description": "Mas, não menos significativo, temos também: justiça, coragem, bondade e benevolência, modéstia e humildade, sinceridade, respeito e autocontrolo. Estas nove qualidades constituem a base de comportamento exemplar e contagiando todos os que lhes são próximos.",
+    "principles": {
+      "title": "Código de Ética do Karaté",
+      "honor": {
+        "name": "HONRA",
+        "japanese": "(Meiyo)",
+        "description": "A dignidade pessoal e integridade moral"
+      },
+      "loyalty": {
+        "name": "LEALDADE",
+        "japanese": "(Chuujitsu)",
+        "description": "Fidelidade aos princípios e às pessoas"
+      },
+      "sincerity": {
+        "name": "SINCERIDADE",
+        "japanese": "(Seijitsu)",
+        "description": "Honestidade em palavras e ações"
+      },
+      "courage": {
+        "name": "CORAGEM",
+        "japanese": "(Yuuki)",
+        "description": "Bravura física e moral"
+      },
+      "kindness": {
+        "name": "BONDADE e BENEVOLÊNCIA",
+        "japanese": "(Shinsetsu)",
+        "description": "Compaixão e generosidade para com outros"
+      },
+      "modesty": {
+        "name": "MODÉSTIA e HUMILDADE",
+        "japanese": "(Ken)",
+        "description": "Ausência de arrogância e vaidade"
+      },
+      "justice": {
+        "name": "JUSTIÇA",
+        "japanese": "(Tadashi)",
+        "description": "Equidade e retidão moral"
+      },
+      "respect": {
+        "name": "RESPEITO",
+        "japanese": "(Sonchoo)",
+        "description": "Consideração pelos outros e por si mesmo"
+      },
+      "selfControl": {
+        "name": "AUTOCONTROLO",
+        "japanese": "(Seigyo)",
+        "description": "Domínio sobre as próprias emoções e impulsos"
+      }
+    }
+  },
+  "NijuKun": {
+    "title": "Niju Kun - Princípios - Sensei Gichin Funakoshi",
+    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou vinte princípios que deveriam ser a base filosófica de todos os praticantes de Karaté. Chamou a esses ensinamentos de Niju Kun.",
+    "searchPlaceholder": "Pesquisar princípios...",
+    "expandAll": "Expandir Todos",
+    "collapseAll": "Recolher Todos",
+    "principles": {
+      "title": "Os 20 Princípios"
+    },
+    "principle1": "O Karaté deve iniciar-se com uma saudação e terminar com saudação.",
+    "principle2": "No Karaté não existe atitude ofensiva.",
+    "principle3": "Quem pratica Karaté tem de seguir o caminho da justiça.",
+    "principle4": "Primeiro conhece-te a ti mesmo, depois conhece os outros.",
+    "principle5": "O espírito é mais importante que a técnica.",
+    "principle6": "O coração deve estar livre para que a mente fique aberta.",
+    "principle7": "O infortúnio surge da negligência.",
+    "principle8": "O Karaté não se limita apenas ao Dojo.",
+    "principle9": "O Karaté é uma busca para toda a vida.",
+    "principle10": "Aplica o Karaté em todas as coisas, é aí que reside a sua beleza.",
+    "principle11": "O Karaté é como a água a ferver, sem calor volta ao estado morno.",
+    "principle12": "Não penses em vencer, pensa em não perder.",
+    "principle13": "Adapta-te de acordo com o teu adversário.",
+    "principle14": "A luta depende de como manipulas os pontos fracos e fortes.",
+    "principle15": "Pensa nas mãos e pés do adversário como se fossem espadas.",
+    "principle16": "Assim que sais de casa, enfrentas um milhão de inimigos.",
+    "principle17": "As posições são para os principiantes, depois move-te naturalmente.",
+    "principle18": "Executa o kata exactamente, a luta real é outra coisa.",
+    "principle19": "Nunca esqueças: a aplicação da força, a contração e extensão do corpo, a aplicação lenta e rápida das técnicas.",
+    "principle20": "Pensa sempre criativamente."
+  },
+  "DojoKun": {
+    "title": "Dojo Kun - As 5 Máximas - Sensei Gichin Funakoshi",
+    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou cinco máximas que achava importantes para todos aqueles que entravam num local de treino, o Dojo. Chamou a esses mandamentos de Dojo Kun.",
+    "maxims": {
+      "title": "As 5 Máximas"
+    },
+    "maxim1": {
+      "japanese": "HITOTSU! JINKAKU KANSEI NI TSUTOMURU KOTO",
+      "title": "Carácter",
+      "description": "Esforçar-se para a formação do carácter"
+    },
+    "maxim2": {
+      "japanese": "HITOTSU! MAKOTO NO MICHI O MAMORU KOTO",
+      "title": "Sinceridade",
+      "description": "Fidelidade ao verdadeiro caminho da razão"
+    },
+    "maxim3": {
+      "japanese": "HITOTSU! DORYOKU NO SEISHIN O YASHINAU KOTO",
+      "title": "Esforço",
+      "description": "Cultivar o espírito de esforço"
+    },
+    "maxim4": {
+      "japanese": "HITOTSU! REIGI O OMONZURU KOTO",
+      "title": "Respeito",
+      "description": "Respeitar acima de tudo"
+    },
+    "maxim5": {
+      "japanese": "HITOTSU! KEKI NO YU O IMASHIMURU KOTO",
+      "title": "Autocontrole",
+      "description": "Reprimir o ímpeto de agressão"
+    }
+  },
   "Footer": {
     "mission": "Tradição, disciplina e excelência no Karaté Shotokan. Descubra a sua força interior através da arte marcial.",
     "quickLinks": "Navegação Rápida",

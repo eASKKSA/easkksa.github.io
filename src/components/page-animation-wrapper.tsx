@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import clsx from "clsx";
 
 export default function PageAnimationWrapper({
   children,
@@ -18,9 +19,7 @@ export default function PageAnimationWrapper({
   }, []);
 
   return (
-    <main
-      className={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-    >
+    <main className={clsx(!isMounted && "opacity-0 translate-y-8")}>
       {children}
     </main>
   );

@@ -21,6 +21,18 @@ export const mainPagePathnames = {
   },
 };
 
+export const philosophyPagePathnames = {
+  "/philosophy/bushido": {
+    "pt-PT": "/filosofia/bushido",
+  },
+  "/philosophy/dojo-kun": {
+    "pt-PT": "/filosofia/dojo-kun",
+  },
+  "/philosophy/tenets": {
+    "pt-PT": "/filosofia/principios",
+  },
+};
+
 export const routing = defineRouting({
   locales: ["pt-PT", "en"],
   defaultLocale: "pt-PT",
@@ -28,6 +40,7 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
     ...mainPagePathnames,
+    ...philosophyPagePathnames,
     "/privacy-policy": {
       "pt-PT": "/politica-de-privacidade",
     },

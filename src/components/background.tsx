@@ -14,6 +14,7 @@ const Background: React.FC = () => {
         priority
         src={desktopBg}
         fill
+        sizes="(min-width: 768px) 100vw"
         alt=""
         className="hidden md:block object-cover"
       />
@@ -23,6 +24,7 @@ const Background: React.FC = () => {
         priority
         src={mobileBg}
         fill
+        sizes="(max-width: 767px) 100vw"
         alt=""
         className="block md:hidden object-cover"
       />
