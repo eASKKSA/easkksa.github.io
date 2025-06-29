@@ -18,7 +18,7 @@
 }
 
 h1 {
-  @apply text-4xl md:text-6xl lg:text-7xl font-bold mb-6 dark:text-white text-[#222];
+  @apply text-4xl md:text-6xl xl:text-7xl font-bold mb-6 dark:text-white text-[#222];
 }
 
 @layer base {

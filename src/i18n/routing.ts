@@ -28,8 +28,8 @@ export const philosophyPagePathnames = {
   "/philosophy/dojo-kun": {
     "pt-PT": "/filosofia/dojo-kun",
   },
-  "/philosophy/tenets": {
-    "pt-PT": "/filosofia/principios",
+  "/philosophy/niju-kun": {
+    "pt-PT": "/filosofia/niju-kun",
   },
 };
 
