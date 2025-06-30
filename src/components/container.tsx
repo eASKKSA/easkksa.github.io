@@ -18,10 +18,10 @@ const Container: React.FC<FadeInContainerProps> = ({
   className,
   blur = false,
   withBubbles = false,
-  as: Component = "section", // default to <section>
+  as: Component = "section",
 }) => {
   const { ref, hasIntersected } = useIntersectionObserver({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true,
   });
 

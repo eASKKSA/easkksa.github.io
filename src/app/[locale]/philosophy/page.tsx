@@ -71,53 +71,49 @@ export default async function PhilosophyPage() {
           {t("introduction")}
         </p>
       </Section>
-
-      {/* Philosophy Sections */}
       <Section>
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {philosophySections.map((section, index) => (
-              <Link key={index} href={section.href} className="group">
-                <article className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700">
-                  <div className="relative h-48">
-                    <Image
-                      src={section.image}
-                      alt={section.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {section.principlesCount}
-                    </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {philosophySections.map((section, index) => (
+            <Link key={index} href={section.href} className="group">
+              <article className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700">
+                <div className="relative h-48">
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {section.principlesCount}
                   </div>
-                  <div className="p-6">
-                    <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-gray-900 dark:text-white">
-                      {section.title}
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
-                      {section.description}
-                    </p>
-                    <span className="text-primary font-medium text-sm group-hover:underline">
-                      Explorar →
-                    </span>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-gray-900 dark:text-white">
+                    {section.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
+                    {section.description}
+                  </p>
+                  <span className="text-primary font-medium text-sm group-hover:underline">
+                    Explorar →
+                  </span>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
 
-          {/* Additional Context */}
-          <div className="mt-16 max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-              A Importância da Filosofia no Karaté
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              A filosofia do Karaté não se limita apenas às técnicas físicas,
-              mas engloba um código moral e ético que orienta o praticante tanto
-              dentro como fora do dojo. Estes ensinamentos milenares formam a
-              base do desenvolvimento pessoal e espiritual de cada karateka.
-            </p>
-          </div>
+        {/* Additional Context */}
+        <div className="mt-16 max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+            A Importância da Filosofia no Karaté
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            A filosofia do Karaté não se limita apenas às técnicas físicas, mas
+            engloba um código moral e ético que orienta o praticante tanto
+            dentro como fora do dojo. Estes ensinamentos milenares formam a base
+            do desenvolvimento pessoal e espiritual de cada karateka.
+          </p>
         </div>
       </Section>
     </>

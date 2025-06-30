@@ -29,7 +29,7 @@ export default function PhilosophyNavigation() {
   ];
 
   return (
-    <nav className="sticky top-[120px] lg:top-[150px] z-40 header-scrolled flex justify-center space-x-2 md:space-x-8 py-4 overflow-x-auto">
+    <nav className="sticky top-[120px] lg:top-[150px] z-40 header-scrolled flex justify-center space-x-2 md:space-x-8 py-2 lg:py-4 rounded-full mb-3! mt-0! md:mb-10!">
       {sections.map((section) => (
         <Link
           key={section.id}
