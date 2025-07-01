@@ -3,70 +3,60 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
-
 import {
-  FaCrown,
-  FaHandshake,
-  FaGem,
+  FaUserShield,
   FaHeart,
-  FaBalanceScale,
-  FaPray,
+  FaFistRaised,
+  FaPeopleArrows,
+  FaBrain,
 } from "react-icons/fa";
-import { GiLion, GiSelfLove, GiPrayer } from "react-icons/gi";
 
 // --- ASSETS ---
+import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 
 // --- METADATA ---
 export const metadata: Metadata = {
-  title: "Código de Ética Bushido | Filosofia Karaté | ASKKSA Shotokan Madeira",
+  title: "Dojo Kun - 5 Máximas | Gichin Funakoshi | ASKKSA Shotokan Madeira",
   description:
-    "Descubra o código de ética Bushido no Karaté Shotokan. Os 9 princípios samurai: honra, lealdade, coragem, justiça, respeito. ASKKSA Funchal, Madeira.",
+    "Conheça as 5 máximas fundamentais do Dojo Kun desenvolvidas pelo Sensei Gichin Funakoshi para todos os praticantes de Karaté. Princípios essenciais para o dojo. ASKKSA Funchal, Madeira.",
   keywords: [
-    "Bushido",
-    "Código Ética Karaté",
-    "Princípios Samurai",
-    "Filosofia Karaté",
+    "Dojo Kun",
+    "5 Máximas Karaté",
+    "Gichin Funakoshi",
+    "Filosofia Dojo",
     "ASKKSA",
     "Shotokan",
-    "Honra",
-    "Lealdade",
-    "Coragem",
-    "Justiça",
-    "Respeito",
+    "Mandamentos Dojo",
+    "Princípios Dojo",
+    "Karaté Tradicional",
     "Funchal",
     "Madeira",
   ],
 };
 
 // --- DATA ---
-const principlesData = [
-  { key: "honor", icon: <FaCrown className="text-3xl" /> },
-  { key: "loyalty", icon: <FaHandshake className="text-3xl" /> },
-  { key: "sincerity", icon: <FaGem className="text-3xl" /> },
-  { key: "courage", icon: <GiLion className="text-3xl" /> },
-  { key: "kindness", icon: <FaHeart className="text-3xl" /> },
-  { key: "modesty", icon: <FaPray className="text-3xl" /> },
-  { key: "justice", icon: <FaBalanceScale className="text-3xl" /> },
-  { key: "respect", icon: <GiPrayer className="text-3xl" /> },
-  { key: "selfControl", icon: <GiSelfLove className="text-3xl" /> },
+const dojoKunMaxims = [
+  { key: "character", icon: <FaUserShield /> },
+  { key: "sincerity", icon: <FaHeart /> },
+  { key: "effort", icon: <FaFistRaised /> },
+  { key: "etiquette", icon: <FaPeopleArrows /> },
+  { key: "selfControl", icon: <FaBrain /> },
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function BushidoPage() {
-  const t = await getTranslations("Bushido");
+export default async function DojoKunPage() {
+  const t = await getTranslations("DojoKun");
 
   return (
-    <Container blur withBubbles>
+    <Container withBubbles blur as="article">
       <h1 className="text-center">{t("title")}</h1>
-
       <div className="grid md:grid-cols-2 gap-8 items-center py-6">
         <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
           <Image
-            src={ethicalCodeImage}
-            alt="Código de Ética Bushido"
+            src={dojoKunImage}
+            alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
             fill
-            sizes="20-vw"
             className="object-contain"
             priority
           />
@@ -81,19 +71,28 @@ export default async function BushidoPage() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {principlesData.map((principle, index) => (
+      {/* Maxims Grid */}
+      <h2 className="hidden">Máximas</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {dojoKunMaxims.map((maxim) => (
           <FeatureCard
-            key={principle.key}
+            key={maxim.key}
             feature={{
-              id: principle.key,
-              title: t(`principles.${principle.key}.name`),
-              description: `${t(`principles.${principle.key}.japanese`)} - ${t(`principles.${principle.key}.description`)}`,
-              icon: <span className="text-3xl">{principle.icon}</span>,
+              id: maxim.key,
+              title: t(`maxims.${maxim.key}.title`),
+              description: t(`maxims.${maxim.key}.description`),
+              icon: maxim.icon,
             }}
-            index={index}
           />
         ))}
+      </div>
+
+      {/* Footer Section */}
+      <div className="mt-16 text-center">
+        <div className="rounded-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4">{t("footer.title")}</h2>
+          <p className="leading-relaxed">{t("footer.message")}</p>
+        </div>
       </div>
     </Container>
   );

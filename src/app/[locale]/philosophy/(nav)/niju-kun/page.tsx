@@ -3,97 +3,118 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
-
 import {
-  FaCrown,
   FaHandshake,
-  FaGem,
-  FaHeart,
+  FaShieldAlt,
   FaBalanceScale,
-  FaPray,
+  FaHeart,
+  FaBrain,
+  FaExclamationTriangle,
+  FaInfinity,
+  FaHandPaper,
+  FaThinkPeaks,
+  FaEye,
+  FaRunning,
+  FaUsers,
+  FaSeedling,
+  FaLightbulb,
+  FaFistRaised,
+  FaGraduationCap,
+  FaUserCheck,
 } from "react-icons/fa";
-import { GiLion, GiSelfLove, GiPrayer } from "react-icons/gi";
+import { GiWaterDrop, GiMirrorMirror, GiCrossedSwords } from "react-icons/gi";
 
 // --- ASSETS ---
-import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
+import nijuKunImage from "@/assets/philosofy/principios.gif";
 
 // --- METADATA ---
 export const metadata: Metadata = {
-  title: "Código de Ética Bushido | Filosofia Karaté | ASKKSA Shotokan Madeira",
+  title:
+    "Niju Kun - 20 Princípios | Gichin Funakoshi | ASKKSA Shotokan Madeira",
   description:
-    "Descubra o código de ética Bushido no Karaté Shotokan. Os 9 princípios samurai: honra, lealdade, coragem, justiça, respeito. ASKKSA Funchal, Madeira.",
+    "Conheça os 20 princípios fundamentais do Karaté Shotokan (Niju Kun) desenvolvidos pelo Sensei Gichin Funakoshi. Filosofia e ensinamentos para a vida. ASKKSA Funchal, Madeira.",
   keywords: [
-    "Bushido",
-    "Código Ética Karaté",
-    "Princípios Samurai",
+    "Niju Kun",
+    "20 Princípios Karaté",
+    "Gichin Funakoshi",
     "Filosofia Karaté",
     "ASKKSA",
     "Shotokan",
-    "Honra",
-    "Lealdade",
-    "Coragem",
-    "Justiça",
-    "Respeito",
+    "Ensinamentos",
+    "Princípios Fundamentais",
+    "Karaté Tradicional",
     "Funchal",
     "Madeira",
   ],
 };
 
 // --- DATA ---
-const principlesData = [
-  { key: "honor", icon: <FaCrown className="text-3xl" /> },
-  { key: "loyalty", icon: <FaHandshake className="text-3xl" /> },
-  { key: "sincerity", icon: <FaGem className="text-3xl" /> },
-  { key: "courage", icon: <GiLion className="text-3xl" /> },
-  { key: "kindness", icon: <FaHeart className="text-3xl" /> },
-  { key: "modesty", icon: <FaPray className="text-3xl" /> },
-  { key: "justice", icon: <FaBalanceScale className="text-3xl" /> },
-  { key: "respect", icon: <GiPrayer className="text-3xl" /> },
-  { key: "selfControl", icon: <GiSelfLove className="text-3xl" /> },
+const nijuKunPrinciples = [
+  { key: "greeting", icon: <FaHandshake /> },
+  { key: "noOffense", icon: <FaShieldAlt /> },
+  { key: "justice", icon: <FaBalanceScale /> },
+  { key: "selfKnowledge", icon: <GiMirrorMirror /> },
+  { key: "spiritDevelopment", icon: <FaHeart /> },
+  { key: "mentalControl", icon: <FaBrain /> },
+  { key: "negligence", icon: <FaExclamationTriangle /> },
+  { key: "lifeLongTraining", icon: <FaInfinity /> },
+  { key: "applyKarate", icon: <FaHandPaper /> },
+  { key: "hotWater", icon: <GiWaterDrop /> },
+  { key: "notBeDefeated", icon: <FaThinkPeaks /> },
+  { key: "strengthWeakness", icon: <FaEye /> },
+  { key: "moveWithOpponent", icon: <FaRunning /> },
+  { key: "sharpSwords", icon: <GiCrossedSwords /> },
+  { key: "millionOpponents", icon: <FaUsers /> },
+  { key: "artificialToNatural", icon: <FaSeedling /> },
+  { key: "correctPractice", icon: <FaLightbulb /> },
+  { key: "forceControl", icon: <FaFistRaised /> },
+  { key: "studyPractice", icon: <FaGraduationCap /> },
+  { key: "thinkCarefully", icon: <FaUserCheck /> },
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function BushidoPage() {
-  const t = await getTranslations("Bushido");
+export default async function NijuKunPage() {
+  const t = await getTranslations("NijuKun");
 
   return (
-    <Container blur withBubbles>
+    <Container withBubbles blur as="article">
+      {/* Header Section */}
       <h1 className="text-center">{t("title")}</h1>
-
-      <div className="grid md:grid-cols-2 gap-8 items-center py-6">
-        <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
-          <Image
-            src={ethicalCodeImage}
-            alt="Código de Ética Bushido"
-            fill
-            sizes="20-vw"
-            className="object-contain"
-            priority
-          />
-        </div>
-        <div className="text-left space-y-4">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            {t("introduction")}
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            {t("description")}
-          </p>
-        </div>
+      <div className="max-w-3xl mx-auto my-8">
+        <Image
+          src={nijuKunImage}
+          alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
+          className="rounded-lg shadow-lg mx-auto"
+          width={600}
+          height={400}
+          priority
+        />
       </div>
+      <p className="text-xl my-6">{t("introduction")}</p>
+      <p className="text-lg my-6">{t("description")}</p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {principlesData.map((principle, index) => (
+      {/* Principles Grid */}
+      <h2 className="hidden">Princípios</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+        {nijuKunPrinciples.map((principle) => (
           <FeatureCard
             key={principle.key}
             feature={{
               id: principle.key,
-              title: t(`principles.${principle.key}.name`),
-              description: `${t(`principles.${principle.key}.japanese`)} - ${t(`principles.${principle.key}.description`)}`,
-              icon: <span className="text-3xl">{principle.icon}</span>,
+              title: t(`principles.${principle.key}.title`),
+              description: t(`principles.${principle.key}.description`),
+              icon: principle.icon,
             }}
-            index={index}
           />
         ))}
+      </div>
+
+      {/* Footer Section */}
+      <div className="mt-16 text-center">
+        <div className="rounded-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4">{t("footer.title")}</h2>
+          <p>{t("footer.message")}</p>
+        </div>
       </div>
     </Container>
   );

@@ -2,7 +2,7 @@
   "Navbar": {
     "about": "Sobre",
     "news": "Notícias",
-    "dojo": "Dojo",
+    "in-dojo": "No Dojo",
     "history": "História",
     "philosophy": "Filosofia",
     "style-ski": "Estilo SKI"
@@ -262,6 +262,137 @@
       "japanese": "HITOTSU! KEKI NO YU O IMASHIMURU KOTO",
       "title": "Autocontrole",
       "description": "Reprimir o ímpeto de agressão"
+    }
+  },
+  "NijuKun": {
+    "title": "Niju Kun - Os 20 Princípios",
+    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou vinte princípios que deveriam ser a base filosófica de todos os praticantes de Karaté. Chamou a esses ensinamentos de Niju Kun.",
+    "description": "Estes princípios fundamentais guiam não apenas a prática do Karaté, mas também a forma como devemos viver nossas vidas com honor, respeito e disciplina.",
+    "principles": {
+      "greeting": {
+        "title": "1. Saudação",
+        "description": "O Karaté deve iniciar-se com uma saudação e terminar com saudação."
+      },
+      "noOffense": {
+        "title": "2. Não Ofensivo",
+        "description": "No Karaté não existe atitude ofensiva."
+      },
+      "justice": {
+        "title": "3. Caminho da Justiça",
+        "description": "Quem pratica Karaté tem de seguir o caminho da justiça."
+      },
+      "selfKnowledge": {
+        "title": "4. Autoconhecimento",
+        "description": "Conheça a si próprio antes de julgar os outros."
+      },
+      "spiritDevelopment": {
+        "title": "5. Desenvolvimento do Espírito",
+        "description": "O desenvolvimento do espírito é o mais importante; habilidade técnica é só um meio para atingir este fim."
+      },
+      "mentalControl": {
+        "title": "6. Controle Mental",
+        "description": "Evitar o descontrole do equilíbrio mental, controle a mente."
+      },
+      "negligence": {
+        "title": "7. Negligência",
+        "description": "Os infortúnios são causados pela negligência."
+      },
+      "lifeLongTraining": {
+        "title": "8. Treino Vitalício",
+        "description": "O Treino de Karaté dura a vida toda, não se limita apenas à iniciação."
+      },
+      "applyKarate": {
+        "title": "9. Aplicar Karaté",
+        "description": "Utiliza o Karaté em tudo o que fazes."
+      },
+      "hotWater": {
+        "title": "10. Água Quente",
+        "description": "O Karaté é como água quente. Se não receber calor constantemente tornar-se-á água fria."
+      },
+      "notBeDefeated": {
+        "title": "11. Não Ser Vencido",
+        "description": "Não pense em vencer, pense em não ser vencido."
+      },
+      "strengthWeakness": {
+        "title": "12. Pontos Fortes e Fracos",
+        "description": "A vitória depende da capacidade de distinguir os pontos fortes (JITSU) dos fracos (KYO)."
+      },
+      "moveWithOpponent": {
+        "title": "13. Movimento com Adversário",
+        "description": "Movimente-se de acordo com o seu adversário."
+      },
+      "sharpSwords": {
+        "title": "14. Espadas Afiadas",
+        "description": "Imagine que os membros dos seus adversários são como espadas afiadas."
+      },
+      "millionOpponents": {
+        "title": "15. Milhões de Adversários",
+        "description": "Para cada homem que sai de casa, existem milhões de adversários à espera."
+      },
+      "artificialToNatural": {
+        "title": "16. Artificial para Natural",
+        "description": "No início os movimentos são artificiais, mas com a evolução tornar-se-ão naturais."
+      },
+      "correctPractice": {
+        "title": "17. Prática Correta",
+        "description": "A prática do que lhe é ensinado deve ser correta, tenha consciência que na aplicação ela torna-se diferente."
+      },
+      "forceControl": {
+        "title": "18. Controle de Força",
+        "description": "Não se esqueça de aplicar corretamente: 1) Força e Fraqueza no controle da sua força; 2) Expansão e contração corporal; 3) Controle das técnicas na lentidão e na rapidez."
+      },
+      "studyPractice": {
+        "title": "19. Estudar e Praticar",
+        "description": "Estudar, praticar e aperfeiçoar-se sempre."
+      },
+      "thinkCarefully": {
+        "title": "20. Pensar Cautelosamente",
+        "description": "Pense sempre cautelosamente."
+      }
+    },
+    "footer": {
+      "title": "Viva os Princípios",
+      "message": "Estes 20 princípios do Niju Kun são mais do que regras para o dojo - são um guia para uma vida de integridade, respeito e crescimento contínuo."
+    }
+  },
+  "DojoKun": {
+    "title": "Dojo Kun - As 5 Máximas",
+    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou cinco máximas que achava importantes para todos aqueles que entravam num local de treino, o Dojo. Chamou esses mandamentos de Dojo Kun.",
+    "description": "Estas cinco máximas fundamentais estabelecem os princípios morais e éticos que devem guiar todos os praticantes dentro do dojo, criando um ambiente de respeito, disciplina e crescimento pessoal.",
+    "maxims": {
+      "character": {
+        "title": "HITOTSU JINKAKU KANSEI NI TSUTOMURU KOTO",
+        "description": "Carácter (Esforçar-se para a formação do carácter)"
+      },
+      "sincerity": {
+        "title": "HITOTSU MAKOTO NO MICHI O MAMORU KOTO",
+        "description": "Sinceridade (Fidelidade ao verdadeiro caminho da razão)"
+      },
+      "effort": {
+        "title": "HITOTSU DORYOKU NO SEISHIN O YASHINAU KOTO",
+        "description": "Esforço (Criar o intuito de esforço)"
+      },
+      "etiquette": {
+        "title": "HITOTSU REIGI O OMONZURU KOTO",
+        "description": "Etiqueta (Respeitar acima de tudo)"
+      },
+      "selfControl": {
+        "title": "HITOTSU KEKKI NO YU O IMASHIMURU KOTO",
+        "description": "Auto-Controlo (Reprimir o espírito de agressão)"
+      }
+    },
+    "footer": {
+      "title": "O Espírito do Dojo",
+      "message": "Estas cinco máximas do Dojo Kun são recitadas no início e fim de cada treino, lembrando-nos dos valores fundamentais que devem guiar nossa prática e nossa vida."
+    }
+  },
+  "ShotokanKatas": {
+    "title": "Shotokan Katas - 26 Katas",
+    "introduction": "O estilo Shotokan, fundado por Sensei Funakoshi, possui atualmente 26 katas que são estudadas ao longo de uma vida de treino.",
+    "description": "Cada kata representa uma forma única de combate imaginário, preservando técnicas ancestrais e filosofias do Karaté tradicional. Os katas são a essência do Karaté, combinando movimento, respiração e espírito.",
+    "footer": {
+      "title": "Uma Vida de Estudo",
+      "message": "Os 26 katas do Shotokan representam um universo completo de conhecimento marcial. Cada kata tem sua própria personalidade, história e lições a ensinar, proporcionando um caminho de aprendizado que dura toda a vida."
     }
   },
   "Footer": {

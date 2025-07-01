@@ -1,220 +1,251 @@
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Section from "@/components/container";
+import Container from "@/components/container";
+import FeatureCard from "@/components/feature-card";
 
-import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
-import titoVelosa from "@/assets/senseis/tito_velosa.png";
-import marisaGomes from "@/assets/senseis/marisa_gomes.png";
-import rafaelJardim from "@/assets/senseis/rafael_jardim.png";
+// --- ASSETS ---
+import shotokanTopImage from "@/assets/style-ski/top.jpg";
+import dachisImage from "@/assets/style-ski/dachis.gif";
+import tecnicasPernasImage from "@/assets/style-ski/TecnicasPernas2.jpg";
+import maosPesImage from "@/assets/style-ski/maospes.gif";
 
 // --- METADATA ---
-// Generates SEO-friendly metadata for the page.
 export const metadata: Metadata = {
-  title: "Quem Somos | ASKKSA",
+  title:
+    "Shotokan Katas - 26 Katas | Gichin Funakoshi | ASKKSA Shotokan Madeira",
   description:
-    "Conheça a história da ASKKSA, os nossos instrutores qualificados e os dojos onde praticamos Karate Shotokan no Funchal, Madeira.",
+    "Conheça os 26 katas do estilo Shotokan desenvolvidos pelo Sensei Gichin Funakoshi. Estudo e prática ao longo de uma vida de treino. ASKKSA Funchal, Madeira.",
   keywords: [
-    "Quem Somos",
-    "História ASKKSA",
-    "Instrutores Karate",
-    "Dojos Funchal",
+    "Shotokan Katas",
+    "26 Katas",
+    "Gichin Funakoshi",
+    "Karaté Shotokan",
     "ASKKSA",
-    "Karate",
-    "Shotokan",
-    "Artes Marciais",
+    "Heian",
+    "Tekki",
+    "Bassai",
+    "Kanku",
+    "Kata Tradicional",
+    "Funchal",
     "Madeira",
   ],
 };
 
 // --- DATA ---
-// Data extracted from your original website content.
-const instructors = [
+const shotokanKatas = [
   {
-    name: "Shihan Jorge Freitas",
-    image: jorgeFreitas,
-    graduation: "6º DAN",
-    credentials: [
-      "Iniciou a prática em 1987",
-      "Graduado pela SKIF Canada & SKIF",
-      "Treinador de Karate Grau III (FNK-P)",
-      "Árbitro B (FNK-P)",
-    ],
+    key: "heian_shodan",
+    name: "HEIAN SHODAN (平安初段)",
+    meaning: "PAZ(hei) e TRANQUILIDADE(an) - Primeiro",
   },
   {
-    name: "Sensei Rafael Jardim",
-    image: rafaelJardim,
-    graduation: "5º DAN",
-    credentials: [
-      "Iniciou a prática em 1992",
-      "Graduado pela SKIF Canada & ASKKM",
-      "Treinador de Karate Grau I (FNK-P)",
-      "Árbitro B (FNK-P)",
-    ],
+    key: "heian_nidan",
+    name: "HEIAN NIDAN (平安二段)",
+    meaning: "PAZ e TRANQUILIDADE - Segundo",
   },
   {
-    name: "Sensei Marisa Gomes",
-    image: marisaGomes,
-    graduation: "5º DAN",
-    credentials: [
-      "15 anos de prática",
-      "Graduado pela SKIF Canada & SKIF",
-      "Treinador de Karate Grau II (FNK-P)",
-      "Juiz de Karate (FNK-P)",
-    ],
+    key: "heian_sandan",
+    name: "HEIAN SANDAN (平安三段)",
+    meaning: "PAZ e TRANQUILIDADE - Terceiro",
   },
   {
-    name: "Sensei Tito Velosa",
-    image: titoVelosa,
-    graduation: "4º DAN",
-    credentials: [
-      "Iniciou a prática em 1995",
-      "Graduado pela SKIF Canada & SKIF",
-      "Treinador de Karate Grau II (FNK-P)",
-      "Árbitro B (FNK-P)",
-    ],
-  },
-];
-
-const dojos = [
-  {
-    name: "Dojo ASKKSA - Escola Horácio Bento Gouveia",
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt",
+    key: "heian_yondan",
+    name: "HEIAN YONDAN (平安四段)",
+    meaning: "PAZ e TRANQUILIDADE - Quarto",
   },
   {
-    name: "Dojo ASKKSA - Junta de Freguesia de Santo António",
-    image: "/images/dojo-santo-antonio.png", // Recommended: store images locally
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt",
+    key: "heian_godan",
+    name: "HEIAN GODAN (平安五段)",
+    meaning: "PAZ e TRANQUILIDADE - Quinto",
+  },
+  {
+    key: "tekki_shodan",
+    name: "TEKKI SHODAN (鉄騎初段)",
+    meaning: "CAVALEIRO de FERRO (tetsu=ferro, Ki=cavaleiro) - Primeiro",
+  },
+  {
+    key: "tekki_nidan",
+    name: "TEKKI NIDAN (鉄騎二段)",
+    meaning: "CAVALEIRO de FERRO - Segundo",
+  },
+  {
+    key: "tekki_sandan",
+    name: "TEKKI SANDAN (鉄騎三段)",
+    meaning: "CAVALEIRO de FERRO - Terceiro",
+  },
+  {
+    key: "bassai_dai",
+    name: "BASSAI DAÌ (披塞大)",
+    meaning: "ROMPER a FORTALEZA - Longo",
+  },
+  {
+    key: "kanku_dai",
+    name: "KANKU DAÍ (観空大)",
+    meaning: "CONTEMPLAR o CÉU (kan=olhar,ku=nada,vazio, céu) - Longo",
+  },
+  {
+    key: "jitte",
+    name: "jutte/JITTE (十手)",
+    meaning: "DEZ MÃOS (ju-dez,te=mão)",
+  },
+  {
+    key: "hangetsu",
+    name: "HANGETSU (半月)",
+    meaning: "MEIA LUA (han=metade, meio, guetsu=lua)",
+  },
+  {
+    key: "enpi",
+    name: "ENPI (燕飛)",
+    meaning: "VÔO da ANDORINHA (en=pássaro, pi=vôo)",
+  },
+  {
+    key: "gankaku",
+    name: "GANKAKU (岩鶴)",
+    meaning: "GROU SOBRE a ROCHA (gan=rocha, kaku=a garça sobre)",
+  },
+  {
+    key: "jion",
+    name: "JION (慈恩)",
+    meaning:
+      "AMOR e GRATIDÃO (ji=amor universal, delicado, gentil; on=amor, benevolência, bondade)",
+  },
+  {
+    key: "bassai_sho",
+    name: "BASSAI SHO (披塞小)",
+    meaning: "ROMPER A FORTALEZA - Curto",
+  },
+  {
+    key: "kanku_sho",
+    name: "KANKU SHO (観空小)",
+    meaning: "CONTEMPLAR o CÉU - Curto",
+  },
+  {
+    key: "chinte",
+    name: "CHINTE (珍手)",
+    meaning: "MÃOS ESTRANHAS (chin=estranho, esquisito, te=mão)",
+  },
+  {
+    key: "unsu",
+    name: "UNSU (雲手)",
+    meaning: "MÃOS DE NUVENS (un=nuvem, su=mão)",
+  },
+  {
+    key: "sochin",
+    name: "SOCHIN (壯鎭)",
+    meaning:
+      "PAZ INABALÁVEL (so=robusto, vigor, enérgico, chin=suprimir, ficar calmo)",
+  },
+  {
+    key: "nijushiho",
+    name: "NIJUSHIHO (二十四步)",
+    meaning: "24 PASSOS/MOVIMENTOS",
+  },
+  {
+    key: "gojushiho_dai",
+    name: "GOJUSHIHO DAÍ (五十四歩大)",
+    meaning: "54 PASSOS - Longo",
+  },
+  {
+    key: "gojushiho_sho",
+    name: "GOJUSHIHO SHO (五十四歩小)",
+    meaning: "54 PASSOS - Curto",
+  },
+  {
+    key: "meikyo",
+    name: "MEIKYO (明鏡)",
+    meaning: "ESPELHO LIMPO (mei=claro,kyo=espelho)",
+  },
+  {
+    key: "jiin",
+    name: "JIIN (慈陰)",
+    meaning: "AMOR PROTECÇÃO (ji=amor universal, delicado, gentil, in=sombra)",
+  },
+  {
+    key: "wankan",
+    name: "WANKAN (王冠)",
+    meaning: "COROAÇÃO DO REI (wan=rei, Kan=corvo)",
   },
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function QuemSomosPage() {
+export default async function ShotokanKatasPage() {
+  const t = await getTranslations("ShotokanKatas");
+
   return (
-    <>
-      {/* Hero Section */}
-      <Section className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
-        <div className="relative z-10">
-          <h1>Sobre a ASKKSA</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
-            Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA,
-            Associação Shotokan Kokusai Karate de Santo António. O objectivo
-            desta constituição era, além de relançar a modalidade a novos
-            níveis, enquadrá-la no panorama legal e desportivo da Região
-            Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P
-            (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de
-            Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD (
-            Direcção Regional da Juventude e Desporto ).
-          </p>
-        </div>
-        <div className="absolute top-0 left-0 w-32 h-32 bg-[#a4262c]/20 rounded-full -translate-x-16 -translate-y-16" />
-        <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#a4262c]/10 rounded-full translate-x-24 translate-y-24" />
-      </Section>
-
-      {/* Instructors Section */}
-      <div className="relative z-10">
-        <Section>
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
-              Uma Equipa de Elite
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md">
-              A ASKKSA orgulha-se de ter uma equipa de instrutores altamente
-              qualificada, com provas dadas e inúmeras formações nacionais e
-              internacionais.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {instructors.map((instructor) => (
-              <InstructorCard key={instructor.name} instructor={instructor} />
-            ))}
-          </div>
-        </Section>
-      </div>
-
-      {/* Dojos Section */}
-      <Section>
-        <div className="relative text-center rounded-3xl p-12 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white ">
-              Os Nossos Dojos
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
-              Atualmente contamos com dois espaços de treino no Funchal e damos
-              apoio técnico ao Clube Horários do Funchal.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dojos.map((dojo) => (
-              <DojoCard key={dojo.name} dojo={dojo} />
-            ))}
-          </div>
-        </div>
-      </Section>
-    </>
-  );
-}
-
-// --- CHILD COMPONENTS ---
-// These components help structure the page and can be moved to their own files.
-
-const InstructorCard = ({
-  instructor,
-}: {
-  instructor: (typeof instructors)[0];
-}) => {
-  return (
-    <div className="flex flex-col items-center text-center p-6 rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-[#a4262c] hover:dark:bg-[#222]/80 border-gray-200/50 bg-white/60 hover:border-[#a4262c] hover:bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
-      <div className="relative w-32 h-32 mb-4">
+    <Container withBubbles blur as="article">
+      <h1 className="text-center">{t("title")}</h1>
+      <div className="max-w-3xl mx-auto mb-8">
         <Image
-          src={instructor.image}
-          alt={`Foto de ${instructor.name}`}
-          fill
-          className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300"
-          sizes="(max-width: 768px) 100vw, 128px"
+          src={shotokanTopImage}
+          alt="Shotokan Karate-Do International Federation"
+          className="rounded-lg shadow-lg mx-auto mb-6"
+          width={600}
+          height={200}
+          priority
         />
       </div>
-      <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
-        {instructor.name}
-      </h3>
-      <p className="text-sm text-primary font-extrabold mb-2">
-        {instructor.graduation}
-      </p>
-      <ul className="space-y-1 text-sm dark:text-gray-300 text-gray-600">
-        {instructor.credentials.map((cred) => (
-          <li key={cred}>✓ {cred}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+      <p className="text-xl mb-6">{t("introduction")}</p>
+      <p className="text-lg mb-6">{t("description")}</p>
 
-const DojoCard = ({ dojo }: { dojo: (typeof dojos)[0] }) => {
-  return (
-    <a
-      href={dojo.mapUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block group "
-    >
-      <div className="flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-[#a4262c] border-gray-200/50 bg-white/60 hover:border-[#a4262c] backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
-        <div className="relative w-full h-56">
-          <iframe
-            src={dojo.mapUrl}
-            className="rounded-xl h-80 w-full shadow-lg border-0 dark:invert-75"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={dojo.name}
+      {/* Katas Grid */}
+      <h2 className="text-3xl font-bold text-center mb-8">Katas</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {shotokanKatas.map((kata) => (
+          <FeatureCard
+            key={kata.key}
+            feature={{
+              id: kata.key,
+              title: kata.name,
+              description: kata.meaning,
+              icon: <span className="text-3xl"></span>,
+            }}
           />
+        ))}
+      </div>
+
+      {/* Technical Images Section */}
+      <h2 className="text-3xl font-bold text-center mb-8">
+        Técnicas Fundamentais
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center">
+          <Image
+            src={dachisImage}
+            alt="Posições (Dachi) do Karaté Shotokan"
+            className="rounded-lg shadow-lg mx-auto mb-4"
+            width={400}
+            height={500}
+            priority
+          />
+          <h3 className="text-xl font-semibold">Posições (Dachi)</h3>
+          <p>Fundamentos das posições do Karaté Shotokan</p>
         </div>
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-center dark:text-white text-[#222]">
-            {dojo.name}
-          </h3>
+        <div className="text-center">
+          <Image
+            src={tecnicasPernasImage}
+            alt="Técnicas de Pernas do Karaté Shotokan"
+            className="rounded-lg shadow-lg mx-auto mb-4"
+            width={400}
+            height={500}
+            priority
+          />
+          <h3 className="text-xl font-semibold">Técnicas de Pernas</h3>
+          <p>Chutes e técnicas de pernas fundamentais</p>
+        </div>
+        <div className="text-center md:col-span-2 lg:col-span-1">
+          <Image
+            src={maosPesImage}
+            alt="Técnicas de Mãos e Pés do Karaté Shotokan"
+            className="rounded-lg shadow-lg mx-auto mb-4"
+            width={400}
+            height={500}
+            priority
+          />
+          <h3 className="text-xl font-semibold">Mãos e Pés</h3>
+          <p>Formas de mãos e técnicas de pés</p>
         </div>
       </div>
-    </a>
+    </Container>
   );
-};
+}

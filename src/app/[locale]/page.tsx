@@ -81,8 +81,8 @@ export default async function Page() {
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {features.map((feature, index) => (
-            <FeatureCard key={feature.id} feature={feature} index={index} />
+          {features.map((feature) => (
+            <FeatureCard key={feature.id} feature={feature} />
           ))}
         </div>
       </Container>
@@ -192,9 +192,9 @@ const ContactItem: React.FC<ContactItemProps> = ({
     <div className="flex items-start space-x-3 p-4 transition-shadow">
       {icon}
       <div className="flex-1">
-        <h4 className="font-bold text-lg text-[#222] dark:text-white">
+        <h3 className="font-bold text-lg text-[#222] dark:text-white">
           {title}
-        </h4>
+        </h3>
         {isStringContent ? (
           <ContentWrapper {...contentProps} className={contentClass}>
             {content}

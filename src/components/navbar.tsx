@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       role="banner"
-      className={`px-4 py-3 ${
+      className={`${
         isScrolled ? "header-scrolled" : "border-b border-transparent"
       }`}
     >

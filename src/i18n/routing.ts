@@ -7,8 +7,8 @@ export const mainPagePathnames = {
   "/news": {
     "pt-PT": "/noticias",
   },
-  "/dojo": {
-    "pt-PT": "/dojo",
+  "/in-dojo": {
+    "pt-PT": "/no-dojo",
   },
   "/history": {
     "pt-PT": "/historia",

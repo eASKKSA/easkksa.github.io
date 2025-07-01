@@ -141,7 +141,7 @@ body {
 }
 
 header {
-  @apply fixed top-0 left-0 w-full z-50 transition-all duration-300;
+  @apply fixed top-0 left-0 w-full z-50 transition-all duration-300 md:px-4 py-3;
 }
 
 main {

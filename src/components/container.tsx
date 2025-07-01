@@ -10,7 +10,7 @@ type FadeInContainerProps = {
   className?: string;
   blur?: boolean;
   withBubbles?: boolean;
-  as?: "section" | "article" | "div"; // HTML element type
+  as?: "section" | "article" | "div";
 };
 
 const Container: React.FC<FadeInContainerProps> = ({

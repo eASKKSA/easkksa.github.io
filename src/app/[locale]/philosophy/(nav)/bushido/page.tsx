@@ -57,7 +57,7 @@ export default async function BushidoPage() {
   const t = await getTranslations("Bushido");
 
   return (
-    <Container blur withBubbles>
+    <Container blur withBubbles as="article">
       <h1 className="text-center">{t("title")}</h1>
 
       <div className="grid md:grid-cols-2 gap-8 items-center py-6">
@@ -91,7 +91,6 @@ export default async function BushidoPage() {
               description: `${t(`principles.${principle.key}.japanese`)} - ${t(`principles.${principle.key}.description`)}`,
               icon: <span className="text-3xl">{principle.icon}</span>,
             }}
-            index={index}
           />
         ))}
       </div>
