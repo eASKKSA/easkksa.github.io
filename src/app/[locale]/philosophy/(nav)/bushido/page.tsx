@@ -59,7 +59,6 @@ export default async function BushidoPage() {
   return (
     <Container blur withBubbles as="article">
       <h1 className="text-center">{t("title")}</h1>
-
       <div className="grid md:grid-cols-2 gap-8 items-center py-6">
         <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
           <Image
@@ -82,7 +81,7 @@ export default async function BushidoPage() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {principlesData.map((principle, index) => (
+        {principlesData.map((principle) => (
           <FeatureCard
             key={principle.key}
             feature={{

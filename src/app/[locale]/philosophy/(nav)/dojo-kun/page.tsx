@@ -13,7 +13,6 @@ import {
 
 // --- ASSETS ---
 import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
-import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 
 // --- METADATA ---
 export const metadata: Metadata = {

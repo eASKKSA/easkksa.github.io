@@ -11,6 +11,7 @@ type FadeInContainerProps = {
   blur?: boolean;
   withBubbles?: boolean;
   as?: "section" | "article" | "div";
+  treshold?: number;
 };
 
 const Container: React.FC<FadeInContainerProps> = ({
@@ -19,9 +20,10 @@ const Container: React.FC<FadeInContainerProps> = ({
   blur = false,
   withBubbles = false,
   as: Component = "section",
+  treshold = 0,
 }) => {
   const { ref, hasIntersected } = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: treshold,
     triggerOnce: true,
   });
 
