@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Container from "@/components/container";
 
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
-
 export const metadata: Metadata = {
   title: "Regras do Dojo | Etiqueta e Conduta | ASKKSA Shotokan Madeira",
   description:
@@ -33,7 +31,7 @@ export default async function DojoRulesPage() {
       <div className="grid md:grid-cols-2 gap-8 items-center py-6">
         <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
           <Image
-            src={senseiSeizaImage}
+            src="/askksa_logo.svg"
             alt="Regras do Dojo"
             fill
             sizes="20-vw"

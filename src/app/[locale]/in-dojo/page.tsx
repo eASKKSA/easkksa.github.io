@@ -6,7 +6,6 @@ import Section from "@/components/container";
 // --- ASSETS ---
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
 import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
-import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 import { Link } from "@/i18n/navigation";
 
 // --- METADATA ---
@@ -41,7 +40,7 @@ const inDojoSections = [
     title: "Regras",
     description:
       "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam.",
-    image: gradesImage,
+    image: "/askksa_logo.svg",
     href: "/in-dojo/rules" as const,
     principlesCount: "20 Princípios",
   },
@@ -49,7 +48,7 @@ const inDojoSections = [
     title: "Vocabulário",
     description:
       "Visto que o Karaté é uma arte marcial de origem japonesa é natural que muitos dos termos utilizados no Dojo, sejam japoneses.",
-    image: dojoKunImage,
+    image: "/askksa_logo.svg",
     href: "/in-dojo/vocabulary" as const,
   },
   {
