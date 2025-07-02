@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Section from "@/components/container";
 
 // --- ASSETS ---
@@ -35,7 +35,7 @@ const philosophySections = [
     description:
       "Os nove princípios éticos inspirados no código dos Samurais: honra, lealdade, sinceridade, coragem, bondade, modéstia, justiça, respeito e autocontrolo.",
     image: ethicalCodeImage,
-    href: "/filosofia/bushido",
+    href: "/philosophy/bushido" as const,
     principlesCount: "9 Princípios",
   },
   {
@@ -43,7 +43,7 @@ const philosophySections = [
     description:
       "Os vinte princípios desenvolvidos por Sensei Gichin Funakoshi que constituem a base filosófica de todos os praticantes de Karaté.",
     image: principlesImage,
-    href: "/filosofia/niju-kun",
+    href: "/philosophy/niju-kun" as const,
     principlesCount: "20 Princípios",
   },
   {
@@ -51,7 +51,7 @@ const philosophySections = [
     description:
       "As cinco máximas fundamentais de Sensei Funakoshi para todos aqueles que entram num local de treino, o Dojo.",
     image: dojoKunImage,
-    href: "/filosofia/dojo-kun",
+    href: "/philosophy/dojo-kun" as const,
     principlesCount: "5 Máximas",
   },
 ];

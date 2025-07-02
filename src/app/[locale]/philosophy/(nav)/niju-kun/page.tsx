@@ -50,26 +50,26 @@ export const metadata: Metadata = {
 
 // --- DATA ---
 const nijuKunPrinciples = [
-  { key: "greeting", icon: <FaHandshake /> },
-  { key: "noOffense", icon: <FaShieldAlt /> },
-  { key: "justice", icon: <FaBalanceScale /> },
-  { key: "selfKnowledge", icon: <GiMirrorMirror /> },
-  { key: "spiritDevelopment", icon: <FaHeart /> },
-  { key: "mentalControl", icon: <FaBrain /> },
-  { key: "negligence", icon: <FaExclamationTriangle /> },
-  { key: "lifeLongTraining", icon: <FaInfinity /> },
-  { key: "applyKarate", icon: <FaHandPaper /> },
-  { key: "hotWater", icon: <GiWaterDrop /> },
-  { key: "notBeDefeated", icon: <FaThinkPeaks /> },
-  { key: "strengthWeakness", icon: <FaEye /> },
-  { key: "moveWithOpponent", icon: <FaRunning /> },
-  { key: "sharpSwords", icon: <GiCrossedSwords /> },
-  { key: "millionOpponents", icon: <FaUsers /> },
-  { key: "artificialToNatural", icon: <FaSeedling /> },
-  { key: "correctPractice", icon: <FaLightbulb /> },
-  { key: "forceControl", icon: <FaFistRaised /> },
-  { key: "studyPractice", icon: <FaGraduationCap /> },
-  { key: "thinkCarefully", icon: <FaUserCheck /> },
+  { key: "greeting", icon: <FaHandshake className="text-4xl" /> },
+  { key: "noOffense", icon: <FaShieldAlt className="text-4xl" /> },
+  { key: "justice", icon: <FaBalanceScale className="text-4xl" /> },
+  { key: "selfKnowledge", icon: <GiMirrorMirror className="text-4xl" /> },
+  { key: "spiritDevelopment", icon: <FaHeart className="text-4xl" /> },
+  { key: "mentalControl", icon: <FaBrain className="text-4xl" /> },
+  { key: "negligence", icon: <FaExclamationTriangle className="text-4xl" /> },
+  { key: "lifeLongTraining", icon: <FaInfinity className="text-4xl" /> },
+  { key: "applyKarate", icon: <FaHandPaper className="text-4xl" /> },
+  { key: "hotWater", icon: <GiWaterDrop className="text-4xl" /> },
+  { key: "notBeDefeated", icon: <FaThinkPeaks className="text-4xl" /> },
+  { key: "strengthWeakness", icon: <FaEye className="text-4xl" /> },
+  { key: "moveWithOpponent", icon: <FaRunning className="text-4xl" /> },
+  { key: "sharpSwords", icon: <GiCrossedSwords className="text-4xl" /> },
+  { key: "millionOpponents", icon: <FaUsers className="text-4xl" /> },
+  { key: "artificialToNatural", icon: <FaSeedling className="text-4xl" /> },
+  { key: "correctPractice", icon: <FaLightbulb className="text-4xl" /> },
+  { key: "forceControl", icon: <FaFistRaised className="text-4xl" /> },
+  { key: "studyPractice", icon: <FaGraduationCap className="text-4xl" /> },
+  { key: "thinkCarefully", icon: <FaUserCheck className="text-4xl" /> },
 ];
 
 // --- MAIN PAGE COMPONENT ---
@@ -105,6 +105,7 @@ export default async function NijuKunPage() {
               description: t(`principles.${principle.key}.description`),
               icon: principle.icon,
             }}
+            className="p-2!"
           />
         ))}
       </div>

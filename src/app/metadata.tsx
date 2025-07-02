@@ -73,6 +73,7 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
       googleBot: {
         index: true,
         follow: true,
+        "max-image-preview": "large",
       },
     },
     // --- Icons & Manifest ---

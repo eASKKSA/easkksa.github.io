@@ -36,11 +36,11 @@ export const metadata: Metadata = {
 
 // --- DATA ---
 const dojoKunMaxims = [
-  { key: "character", icon: <FaUserShield /> },
-  { key: "sincerity", icon: <FaHeart /> },
-  { key: "effort", icon: <FaFistRaised /> },
-  { key: "etiquette", icon: <FaPeopleArrows /> },
-  { key: "selfControl", icon: <FaBrain /> },
+  { key: "character", icon: <FaUserShield className="text-4xl" /> },
+  { key: "sincerity", icon: <FaHeart className="text-4xl" /> },
+  { key: "effort", icon: <FaFistRaised className="text-4xl" /> },
+  { key: "etiquette", icon: <FaPeopleArrows className="text-4xl" /> },
+  { key: "selfControl", icon: <FaBrain className="text-4xl" /> },
 ];
 
 // --- MAIN PAGE COMPONENT ---
@@ -82,6 +82,7 @@ export default async function DojoKunPage() {
               description: t(`maxims.${maxim.key}.description`),
               icon: maxim.icon,
             }}
+            className="p-2!"
           />
         ))}
       </div>

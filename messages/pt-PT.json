@@ -97,7 +97,63 @@
       }
     }
   },
-
+  "About": {
+    "meta": {
+      "title": "Quem Somos | Instrutores e Dojos | ASKKSA Shotokan Madeira",
+      "description": "Conheça a história da ASKKSA desde 2000, a nossa equipa de instrutores qualificados e os dojos onde praticamos Karaté Shotokan no Funchal, Madeira.",
+      "keywords": "Quem Somos, História ASKKSA, Instrutores Karaté, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Dojos Funchal, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
+    },
+    "title": "Sobre a ASKKSA",
+    "description": "Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA, Associação Shotokan Kokusai Karate de Santo António. O objectivo desta constituição era, além de relançar a modalidade a novos níveis, enquadrá-la no panorama legal e desportivo da Região Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD ( Direção Regional da Juventude e Desporto ).",
+    "instructors": {
+      "title": "Uma Equipa de Elite",
+      "subtitle": "A ASKKSA orgulha-se de ter uma equipa de instrutores altamente qualificada, com provas dadas e inúmeras formações nacionais e internacionais.",
+      "jorgeFreitas": {
+        "name": "Shihan Jorge Freitas",
+        "graduation": "6º DAN",
+        "credential1": "Iniciou a prática em 1987",
+        "credential2": "Graduado pela SKIF Canada & SKIF",
+        "credential3": "Treinador de Karate Grau III (FNK-P)",
+        "credential4": "Árbitro B (FNK-P)"
+      },
+      "rafaelJardim": {
+        "name": "Sensei Rafael Jardim",
+        "graduation": "5º DAN",
+        "credential1": "Iniciou a prática em 1992",
+        "credential2": "Graduado pela SKIF Canada & ASKKM",
+        "credential3": "Treinador de Karate Grau I (FNK-P)",
+        "credential4": "Árbitro B (FNK-P)"
+      },
+      "marisaGomes": {
+        "name": "Sensei Marisa Gomes",
+        "graduation": "5º DAN",
+        "credential1": "15 anos de prática",
+        "credential2": "Graduado pela SKIF Canada & SKIF",
+        "credential3": "Treinador de Karate Grau II (FNK-P)",
+        "credential4": "Juiz de Karate (FNK-P)"
+      },
+      "titoVelosa": {
+        "name": "Sensei Tito Velosa",
+        "graduation": "4º DAN",
+        "credential1": "Iniciou a prática em 1995",
+        "credential2": "Graduado pela SKIF Canada & SKIF",
+        "credential3": "Treinador de Karate Grau II (FNK-P)",
+        "credential4": "Árbitro B (FNK-P)"
+      }
+    },
+    "dojos": {
+      "title": "Os Nossos Dojos",
+      "subtitle": "Atualmente contamos com dois espaços de treino no Funchal e damos apoio técnico ao Clube Desportivo de Câmara de Lobos.",
+      "dojo1": {
+        "name": "Dojo ASKKSA - Escola Horácio Bento Gouveia",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
+      },
+      "dojo2": {
+        "name": "Dojo ASKKSA - Junta de Freguesia de Santo António",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt"
+      }
+    }
+  },
   "History": {
     "meta": {
       "title": "História do Karaté | ASKKSA Karaté Shotokan Madeira",
@@ -200,68 +256,6 @@
         "japanese": "(Seigyo)",
         "description": "Domínio sobre as próprias emoções e impulsos"
       }
-    }
-  },
-  "NijuKun": {
-    "title": "Niju Kun - Princípios - Sensei Gichin Funakoshi",
-    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou vinte princípios que deveriam ser a base filosófica de todos os praticantes de Karaté. Chamou a esses ensinamentos de Niju Kun.",
-    "searchPlaceholder": "Pesquisar princípios...",
-    "expandAll": "Expandir Todos",
-    "collapseAll": "Recolher Todos",
-    "principles": {
-      "title": "Os 20 Princípios"
-    },
-    "principle1": "O Karaté deve iniciar-se com uma saudação e terminar com saudação.",
-    "principle2": "No Karaté não existe atitude ofensiva.",
-    "principle3": "Quem pratica Karaté tem de seguir o caminho da justiça.",
-    "principle4": "Primeiro conhece-te a ti mesmo, depois conhece os outros.",
-    "principle5": "O espírito é mais importante que a técnica.",
-    "principle6": "O coração deve estar livre para que a mente fique aberta.",
-    "principle7": "O infortúnio surge da negligência.",
-    "principle8": "O Karaté não se limita apenas ao Dojo.",
-    "principle9": "O Karaté é uma busca para toda a vida.",
-    "principle10": "Aplica o Karaté em todas as coisas, é aí que reside a sua beleza.",
-    "principle11": "O Karaté é como a água a ferver, sem calor volta ao estado morno.",
-    "principle12": "Não penses em vencer, pensa em não perder.",
-    "principle13": "Adapta-te de acordo com o teu adversário.",
-    "principle14": "A luta depende de como manipulas os pontos fracos e fortes.",
-    "principle15": "Pensa nas mãos e pés do adversário como se fossem espadas.",
-    "principle16": "Assim que sais de casa, enfrentas um milhão de inimigos.",
-    "principle17": "As posições são para os principiantes, depois move-te naturalmente.",
-    "principle18": "Executa o kata exactamente, a luta real é outra coisa.",
-    "principle19": "Nunca esqueças: a aplicação da força, a contração e extensão do corpo, a aplicação lenta e rápida das técnicas.",
-    "principle20": "Pensa sempre criativamente."
-  },
-  "DojoKun": {
-    "title": "Dojo Kun - As 5 Máximas - Sensei Gichin Funakoshi",
-    "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou cinco máximas que achava importantes para todos aqueles que entravam num local de treino, o Dojo. Chamou a esses mandamentos de Dojo Kun.",
-    "maxims": {
-      "title": "As 5 Máximas"
-    },
-    "maxim1": {
-      "japanese": "HITOTSU! JINKAKU KANSEI NI TSUTOMURU KOTO",
-      "title": "Carácter",
-      "description": "Esforçar-se para a formação do carácter"
-    },
-    "maxim2": {
-      "japanese": "HITOTSU! MAKOTO NO MICHI O MAMORU KOTO",
-      "title": "Sinceridade",
-      "description": "Fidelidade ao verdadeiro caminho da razão"
-    },
-    "maxim3": {
-      "japanese": "HITOTSU! DORYOKU NO SEISHIN O YASHINAU KOTO",
-      "title": "Esforço",
-      "description": "Cultivar o espírito de esforço"
-    },
-    "maxim4": {
-      "japanese": "HITOTSU! REIGI O OMONZURU KOTO",
-      "title": "Respeito",
-      "description": "Respeitar acima de tudo"
-    },
-    "maxim5": {
-      "japanese": "HITOTSU! KEKI NO YU O IMASHIMURU KOTO",
-      "title": "Autocontrole",
-      "description": "Reprimir o ímpeto de agressão"
     }
   },
   "NijuKun": {
@@ -417,6 +411,464 @@
     "help": {
       "text": "Precisa de ajuda? Tente pesquisar ou",
       "contactLink": "contacte-nos"
+    }
+  },
+  "InDojo": {
+    "meta": {
+      "title": "No Dojo | ASKKSA Karaté Shotokan Madeira",
+      "description": "",
+      "keywords": ""
+    },
+    "title": "No Dojo",
+    "introduction": "No Dojo, o coração do Karaté, praticamos e vivemos os princípios que nos guiam. Aqui, a tradição encontra a disciplina, e cada treino é uma oportunidade de crescimento pessoal.",
+    "navigation": {
+      "salutation": "Saudação",
+      "rules": "Regras",
+      "vocabulary": "Vocabulário",
+      "grades": "Graduações"
+    }
+  },
+  "Salutation": {
+    "title": "Saudação",
+    "introduction": "A saudação no Karaté é uma expressão da sinceridade (SEIJITSU) que faz parte do código ético da arte marcial. Ela é um sinal dum karateca que não oculta os seus ideais e sentimentos e consegue ser ele próprio. A saudação nas aulas, seja   o simples OSS , a saudação ao parceiro de treino ou mesmo o ritual de início ou de fim do treino, reveste-se de grande importância para todos aqueles que querem viver o Karaté na sua forma mais profunda e pura.",
+    "description": "Ao entrar no dojo, cumprimentamos o Sensei e os colegas, reconhecendo a importância do respeito mútuo e da disciplina.",
+    "oss": {
+      "title": "A palavra \"OSS\"",
+      "origin": "Deriva da palavra japonesa Ossishinobu, equivalente ao nosso bom dia ou boa tarde, é uma saudação repleta de paciência, respeito e apreciação, podendo atingir diferentes significados de acordo com a sua entoação.",
+      "creation": "A expressão OSS foi criada na Escola Naval Japonesa, e é usada universalmente para expressões do dia-a-dia como \"sim\", \"por favor\", \"obrigado\", \"entendi\", \"desculpe-me\", para cumprimentar alguém, etc., bem como no mundo do Karate para quase qualquer situação onde uma resposta seja requerida.",
+      "importance": "Para um karateka, OSS é a palavra mais importante. O OSS implica em pressionar a si mesmo ao limite de sua capacidade e suportar.",
+      "meaning": "OSS significa, de uma maneira mais simples, \"perseverança sob pressão\". É uma palavra que por si só resume a filosofia do Karate.",
+      "spirit": "Um bom praticante de Karate é aquele que cultiva o \"espírito de OSS\"."
+    },
+    "rituals": {
+      "title": "Rituais de Saudação",
+      "start": {
+        "title": "Ritual de Início",
+        "steps": [
+          {
+            "number": 1,
+            "command": "SEIZA",
+            "meaning": "Sentar"
+          },
+          {
+            "number": 2,
+            "command": "MOKUSO",
+            "meaning": "Meditar"
+          },
+          {
+            "number": 3,
+            "command": "MOKUSO YAME",
+            "meaning": "Parar de meditar"
+          },
+          {
+            "number": 4,
+            "command": "SHOMEN NI REI",
+            "meaning": "Saudar a essência infinita"
+          },
+          {
+            "number": 5,
+            "command": "SENSEI NI REI",
+            "meaning": "Saudar o Sensei (Professor)"
+          },
+          {
+            "number": 6,
+            "command": "KIRITSU",
+            "meaning": "Levantar"
+          }
+        ]
+      },
+      "end": {
+        "title": "Ritual de Fim",
+        "steps": [
+          {
+            "number": 1,
+            "command": "SEIZA",
+            "meaning": "Sentar"
+          },
+          {
+            "number": 2,
+            "command": "MOKUSO",
+            "meaning": "Meditar"
+          },
+          {
+            "number": 3,
+            "command": "MOKUSO YAME",
+            "meaning": "Parar de meditar"
+          },
+          {
+            "number": 4,
+            "command": "HEIJOSHIN KORE KARATE DO NARI",
+            "meaning": "Empenhemo-nos espiritualmente nesta forma de karaté"
+          },
+          {
+            "number": 5,
+            "command": "NICHI NICHI NO KOKORO",
+            "meaning": "Todos os dias de coração"
+          },
+          {
+            "number": 6,
+            "command": "OKOTARU BEKARAZU",
+            "meaning": "Aprendamos disciplinadamente"
+          },
+          {
+            "number": 7,
+            "command": "SHOMEN NI REI",
+            "meaning": "Saudar a essência infinita"
+          },
+          {
+            "number": 8,
+            "command": "SENSEI NI REI",
+            "meaning": "Saudar o Professor"
+          },
+          {
+            "number": 9,
+            "command": "DÔMÔ ARIGATO GOZAIMASU SENSEI",
+            "meaning": "Muito obrigado pelo treino, Sensei."
+          },
+          {
+            "number": 10,
+            "command": "KIRITSU",
+            "meaning": "Levantar"
+          }
+        ]
+      }
+    },
+    "salutation": {
+      "title": "Saudação Formal",
+      "text": "Os praticantes devem saudar o Sensei e os colegas ao entrar e sair do dojo."
+    }
+  },
+  "DojoRules": {
+    "title": "Regras do Dojo",
+    "introduction": "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam. Nos dojos ASKKSA, seguem-se as regras tradicionais de boa conduta, características dos dojos japoneses, pontos de origem do Karaté.",
+    "description": "Portanto, é importante que cada karateca tenha noção que, dentro do local de treino (e preferencialmente em todas as outras situações do dia a dia), deverá comportar-se de acordo com a herança moral desta arte marcial. As regras abaixo devem ser compreendidas e respeitadas por todos os praticantes dos nossos dojos.",
+    "responsibility": {
+      "title": "Responsabilidade e Cuidado do Espaço",
+      "rule1": "O DOJO é de responsabilidade de todos que usam seu espaço. Sinta-se em casa para dar informações a visitantes, arrumar o que estiver desarrumado, limpar o que estiver sujo.",
+      "rule2": "Colabore no que puder para a melhoria do espaço do Clube."
+    },
+    "hygiene": {
+      "title": "Higiene e Apresentação Pessoal",
+      "rule1": "Mantenha a higiene pessoal e do seu Karate-Gi (Kimono).",
+      "rule2": "Entre sempre no local de treino com pés e mãos limpos e unhas bem aparadas.",
+      "rule3": "Não use jóias (anéis, brincos, pulseiras, relógios), perfumes muito fortes ou qualquer acessório que prejudique o seu treino ou dos seus parceiros.",
+      "rule4": "Não ande pelo Dojo sem estar completamente vestido."
+    },
+    "entrance": {
+      "title": "Entrada e Saída do Dojo",
+      "rule1": "Ao entrar e sair da área de treino faça sempre a saudação em pé ao local.",
+      "rule2": "Se chegar com a aula já iniciada, entre no recinto discretamente, coloque-se em SEIZA, pedindo licença ao instrutor mais graduado para iniciar o treino. Após autorização deste, faça a saudação e junte-se ao grupo.",
+      "rule3": "Caso precise realmente sair antes do fim do treino peça sempre licença ao instrutor/monitor. NUNCA saia durante um treino sem autorização deste."
+    },
+    "behavior": {
+      "title": "Comportamento Durante as Aulas",
+      "rule1": "Fale o mínimo possível durante os treinos.",
+      "rule2": "Quando o instrutor/monitor estiver demonstrando uma técnica, fique sentado, em silêncio e atento. Caso não tenha compreendido bem, observe os outros, execute o pouco que percebeu e espere ser corrigido pelo instrutor.",
+      "rule3": "Se for absolutamente necessário perguntar algo ao instrutor/monitor, chame-o discretamente, levantando o braço direito. Nunca grite para chamar a atenção dele.",
+      "rule4": "Sente-se sempre em SEIZA ou com as pernas cruzadas. Não sente encostado na parede ou em outra posição. Mantenha sempre uma boa postura em todas as situações.",
+      "rule5": "Nunca use o telemóvel dentro da dojo durante os horários de treino.",
+      "rule6": "Mesmo estando fora do recinto da aula, mantenha silêncio durante os treinos e não converse com quem está dentro da aula/treino."
+    },
+    "instructors": {
+      "title": "Relacionamento com Instrutores",
+      "rule1": "Dentro do dojo, NUNCA trate os instrutores pelo nome próprio, mesmo que tenha relação próxima com eles. O mais apropriado é tratá-los por Sensei (Professor).",
+      "rule2": "Treine exactamente como orientado pelo instrutor/monitor. Se quisesse fazê-lo apenas à sua maneira não necessitaria vir ao dojo.",
+      "rule3": "Nunca argumente com o instrutor/monitor, mesmo que outro instrutor tenha dito algo diferente. Existem várias formas de se executar as técnicas e os diferentes instrutores podem ter tido diferentes experiências de treino, o que não significa que algum deles está errado. Apenas deve seguir cada instrutor, em cada aula, no melhor de sua capacidade."
+    },
+    "training": {
+      "title": "Treino e Relacionamento com Parceiros",
+      "rule1": "Não recuse treinar com nenhum parceiro quando indicado pelo instrutor.",
+      "rule2": "Ajude a quem precisa, mas jamais corrija o seu parceiro, a não ser que você seja o instrutor/monitor da aula e/ou cinto negro.",
+      "rule3": "Nunca pense que estará atrapalhando alguém por não saber executar alguma técnica. Estamos todos a aprender, ajudando-nos uns aos outros.",
+      "rule4": "Respeite os alunos mais graduados (especialmente os cintos negros) e jamais discuta se as técnicas estão certas ou erradas. Lembre-se que estes não chegaram a essa graduação por mero acaso.",
+      "rule5": "Treine com afinco e energia mas sempre respeitando a integridade física do colega. Durante as aulas há sempre pessoas de diferentes sexos, idades e capacidade física. Enquanto o ideal é sempre treinar tão vigorosamente quanto possível, as capacidades físicas e as metas de treino de cada parceiro devem ser levadas em consideração. Cada pessoa tem condições e razões diferentes para treinar. Devemos respeitar suas expectativas.",
+      "rule6": "Esteja consciente do que ocorre ao seu redor. Doseie a intensidade dos movimentos à sua condição física. Tenha responsabilidade sobre você mesmo.",
+      "rule7": "Não deixe de fazer nenhuma técnica (a não ser que esteja magoado)."
+    },
+    "practical": {
+      "title": "Aspectos Práticos e de Saúde",
+      "rule1": "Se estiver com alguma lesão ou incapacidade física comunique-a obrigatoriamente ao instrutor, antes de iniciar o treino.",
+      "rule2": "Evite frequentar as aulas se estiver com alguma doença transmissível por ar ou contacto.",
+      "rule3": "Não atrase nem deixe de pagar as mensalidades, se precisar ausentar-se por algum tempo dos treinos por viagens ou doença avise o instrutor. Lembre-se que a sua contribuição é necessária para suportar as despesas de funcionamento de um dojo de karaté."
+    }
+  },
+  "Vocabulary": {
+    "title": "Vocabulário Japonês",
+    "introduction": "Visto que o Karaté é uma arte marcial de origem japonesa é natural que muitos dos termos utilizados no Dojo, sejam japoneses. Apesar de inicialmente poderem fazer confusão aos praticantes, com o acumular de treinos são palavras que acabam por fazer parte do quotidiano de todos os karatecas.",
+    "description": "Saliente-se que os japoneses utilizam três sistemas de alfabetos (Hiragana, Katakana e Kanji) no seu dia a dia. Para facilitar os novos praticantes segue abaixo o vocabulário mais utilizado nos dojos de karaté de todo o mundo.",
+    "numbers": {
+      "title": "Números",
+      "1": "ichi",
+      "2": "ni",
+      "3": "san",
+      "4": "yon ou shi",
+      "5": "go",
+      "6": "roku",
+      "7": "nana ou shichi",
+      "8": "hachi",
+      "9": "kyu ou ku",
+      "10": "ju",
+      "20": "niju",
+      "30": "sanju",
+      "100": "hyaku"
+    },
+    "counters": {
+      "title": "Contadores (em abstrato, \"coisas\")",
+      "1": "Hitotsu",
+      "2": "Futatsu",
+      "3": "Mittsu",
+      "4": "Yottsu",
+      "5": "Itsutsu"
+    },
+    "otherCounters": {
+      "title": "Outros Contadores",
+      "subtitle": "hon (variados tipos de objectos, sobretudo redondos e finos, mas também técnicas ou grupos de técnicas, sessões de prática, etc.)",
+      "1": "Ippon",
+      "2": "Nihon",
+      "3": "Sanbon",
+      "4": "Yohon",
+      "5": "Gohon",
+      "6": "Roppon",
+      "7": "Nanahon",
+      "8": "Happon",
+      "9": "Kyuhon",
+      "10": "Juppon"
+    },
+    "vocabulary": {
+      "title": "Palavras Mais Utilizadas",
+      "age": "Acção de erguer, levantar",
+      "aihanmi": "Posição relativa de dois praticantes, com a mesma perna à frente",
+      "aikido": "Literalmente: via da harmonização da energia",
+      "ashi": "Perna, pé",
+      "ashibarai": "Varrimento com o pé",
+      "atama": "Cabeça",
+      "atemi": "Batimento",
+      "awase": "Combinação, junção, harmonização",
+      "ayumi": "Andamento",
+      "barai": "Varrimento",
+      "bo": "Pau longo",
+      "bojutsu": "Técnicas de bastão",
+      "bokken": "Sabre de madeira",
+      "bu": "Guerreiro",
+      "bushi": "Guerreiro",
+      "budo": "Via do guerreiro, artes marciais",
+      "chi": "Palavra chinesa para energia vital, o mesmo que \"Ki\"",
+      "chudan": "Nível médio (do pescoço até à cintura)",
+      "dachi": "Posição",
+      "dai": "Grande",
+      "dan": "Nível, grau (cinto negro)",
+      "do": "Via, caminho",
+      "dojo": "Local de treino de Budo",
+      "embusen": "Diagrama de uma kata",
+      "empi": "Cotovelo, o mesmo que \"hiji\"",
+      "fumi": "Esmagar",
+      "gasho": "Juntar as mãos à frente da cara para fazer saudação (Zen, Mokuzo, etc.)",
+      "gedan": "Nível baixo (da cintura para baixo)",
+      "geri": "Pontapé",
+      "gi": "Fato para a prática de Budo composto de Uwagi (casaco), Zubon (calça) e Obi (cinto)",
+      "gonosen": "Táctica de deixar o oponente atacar primeiro para contra-atacar",
+      "gyaku": "Contrário, inverso",
+      "hajime": "Iniciar, começar",
+      "hakama": "Calça larga usada sobre o gi nas artes marciais tradicionais (Kyudo, Kendo, Iaido, Aikido, etc.)",
+      "happo": "Oito direcções",
+      "hara": "Abdómen",
+      "heiko": "Paralelo",
+      "henka": "Mudança (de posição)",
+      "hidari": "Esquerda",
+      "hiji": "Cotovelo",
+      "hikite": "Recuo do punho até à anca",
+      "hiza": "Joelho",
+      "ho": "Direcção, sentido, método",
+      "horanokamae": "Posição de início de alguns katas em que a mão cobre o punho fechado",
+      "ippon": "Um (ponto, passo, ataque, etc.)",
+      "ipponkumite": "Exercícios com parceiro com 1 ataque 1 defesa",
+      "irimi": "Movimento de entrada (no círculo do adversário)",
+      "jitsu": "Técnica",
+      "jiyu": "Livre",
+      "jiyuipponkumite": "Combate livre (controlado) com um só ataque",
+      "jiyukumite": "Exercícios controlados com parceiro em que as formas de combate são livres",
+      "jo": "Alto",
+      "jodan": "Nível alto (do pescoço para cima)",
+      "joseki": "Lado superior, lugar de honra (no dojo, a parede sul, à direita da parede principal)",
+      "ju": "Suavidade, suave",
+      "judo": "Via da suavidade",
+      "jukumite": "Combate em suavidade",
+      "kagi": "Gancho, enganchar",
+      "kake": "Gancho, enganchar",
+      "kaishowaza": "Técnicas com mão aberta",
+      "kakato": "Calcanhar",
+      "kamae": "Posição de defesa",
+      "kamaete": "Ordem para tomar a posição",
+      "kamiza": "Parede principal do dojo, do lado este, onde se encontra o Tokonoma",
+      "kara": "Vazio",
+      "karada": "Corpo, o mesmo que \"tai\"",
+      "karatedo": "A Via das mãos vazias",
+      "kata": "Forma de treino, com ou sem parceiro, com sequências de técnicas predeterminadas",
+      "katana": "Espada",
+      "keage": "Movimento ascendente rápido",
+      "keiko": "Treino",
+      "kekomi": "Movimento penetrante",
+      "ken": "Sabre, espada",
+      "kendo": "Arte da esgrima japonesa",
+      "keri": "Pontapé",
+      "ki": "Energia, força vital, espírito",
+      "kiai": "Exteriorização da energia através de grito",
+      "kihon": "Técnicas de base",
+      "kime": "Concentração de energia física e mental, decisão",
+      "kiritsu": "Levantar",
+      "ko": "Pequeno, posterior",
+      "kohai": "Praticante mais novo, o contrário de Sempai",
+      "kokoro": "Espírito, coração",
+      "kokyu": "Força respiratória",
+      "koshi": "Anca",
+      "kote": "Pulso",
+      "kumite": "Combate",
+      "kuzushi": "Desequilíbrio",
+      "kyu": "Grau de aluno",
+      "kyusho": "Pontos vitais",
+      "maai": "Distância correcta",
+      "mae": "Frente",
+      "maki": "Enrolar",
+      "makikomi": "Técnica de Judo que consiste em projectar o adversário por meio de enrolamento",
+      "makiwara": "Alvo tradicionalmente de palha enrolada para treino de Karate-do ou Kyudo",
+      "mawashi": "Movimento circular",
+      "midale": "Método de treino de Karate-do que consiste em ataques e esquivas contínuas",
+      "migi": "Direita",
+      "mokuso": "Literalmente: não pensar. Atitude de concentração executada durante o cerimonial de início e final da prática de Budo",
+      "morote": "Ambas as mãos",
+      "nagewaza": "Técnicas de projecção",
+      "neko": "Gato",
+      "nobashi": "Extensão, acção de esticar",
+      "nukite": "Ataque com os dedos juntos e esticados",
+      "o": "Grande",
+      "okuri": "Deslizar",
+      "osae": "Imobilização",
+      "otagai": "Saudação mútua",
+      "otoshi": "Movimento de cima para baixo",
+      "randori": "Combate livre",
+      "rei": "Saudação",
+      "reigi": "Etiqueta, regras de conduta",
+      "ritsurei": "Saudação de pé",
+      "ryo": "Ambos",
+      "ryu": "Estilo, escola",
+      "sabaki": "Esquiva",
+      "sai": "Arma em forma de tridente originária de Okinawa",
+      "samurai": "Guerreiro japonês",
+      "sanbonkumite": "Combate com três ataques",
+      "sasae": "Sustentar, suportar",
+      "seiza": "Sentar na posição de joelhos",
+      "sempai": "Aluno mais graduado, mais antigo",
+      "sennosen": "Antecipação",
+      "sensei": "Professor",
+      "senseirei": "Saudação ao professor",
+      "senseitaishi": "Saudação em direcção ao professor",
+      "shihan": "Professor de grau elevado",
+      "shiho": "Quatro direcções",
+      "shikko": "Andar na posição de joelhos",
+      "shimoza": "Parede oeste do dojo, oposta ao Kamiza, onde se sentam os alunos",
+      "shimoseki": "Parede norte do dojo, onde podem ficar os assistentes não praticantes",
+      "shin": "Espírito",
+      "shinai": "Espada de bambu usada na prática de Kendo",
+      "shisei": "Posição, postura",
+      "shizentai": "Posição natural do corpo, de pé",
+      "sho": "Pequeno",
+      "shomen": "De frente",
+      "shomenrei": "Saudação para a parede principal do dojo",
+      "shomentaishi": "Saudação em direcção à parede principal do dojo",
+      "shuto": "Sabre da mão (lado do dedo mínimo)",
+      "sokuto": "Sabre do pé, lado do dedo mínimo",
+      "soto": "Exterior",
+      "sumo": "Luta tradicional japonesa",
+      "sutemi": "Abandono do corpo; técnicas em que o executante se deixa cair para projectar o adversário",
+      "tai": "Corpo, o mesmo que \"karada\"",
+      "taisabaki": "Esquiva do corpo",
+      "tanto": "Punhal",
+      "tatami": "Tapete japonês que cobre o chão, e onde se pratica Judo e Aikido",
+      "tate": "Vertical",
+      "te": "Mão",
+      "tettsui": "Parte lateral exterior do punho",
+      "to": "Distante, longe",
+      "tobi": "Saltar",
+      "tokui": "Mais forte",
+      "tokuiwaza": "Técnica mais forte, favorita",
+      "tomarite": "Técnicas de combate originárias de Tomari - Okinawa",
+      "tomoe": "Circular",
+      "tonfa": "Instrumento agrário usado em técnicas de combate populares",
+      "tori": "O que ataca, o que executa",
+      "tsuki": "Soco, murro",
+      "tsukuri": "Contacto, segunda fase de execução de uma técnica de Judo",
+      "uchi": "Interior",
+      "ude": "Braço, antebraço",
+      "uke": "O atacante, na prática a dois; o que executa a queda",
+      "ukemi": "Queda, enrolamento",
+      "ura": "Movimento realizado rodando; as costas do adversário",
+      "uraken": "Costas da mão",
+      "uramawashi": "Pontapé circular para trás",
+      "ushiro": "Atrás, para trás",
+      "wakizashi": "Espada mais curta",
+      "waza": "Técnica",
+      "yakosoku": "Combinado, sem resistência",
+      "yame": "Parar",
+      "yasume": "Ordem de descontrair",
+      "yoi": "Ordem de atenção",
+      "yoko": "De lado, lateral",
+      "zanshin": "Atitude de concentração",
+      "zarei": "Saudação em seiza",
+      "zempo": "Em direcção frontal",
+      "zen1": "Frente",
+      "zen2": "Disciplina japonesa, uma das correntes do Budismo"
+    }
+  },
+  "Graduations": {
+    "title": "Graduações",
+    "introduction": "As artes marciais provenientes do Japão e Okinawa, apresentam uma variedade de títulos e classes de graduações. O sistema atual de graduação de cintos coloridos é o mais aceite. Antes disso, muitos métodos distintos eram usados para marcar os vários níveis dos praticantes.",
+    "description": "O sistema atual que rege o Karaté usando o Kyu (classe) e Dan (grau), foi fundado por Jigoro Kano, fundador do Judo Kodokan. Kano era um educador e conhecia as pessoas, sabendo que são muitos os que necessitam de estímulos imediatamente após terem começado a praticar uma arte marcial. A ansiedade desse tipo de praticante não podia ser saciada por objetivos a longo prazo.",
+    "system": {
+      "title": "Sistema de Graduação Kyu e Dan",
+      "founder": "Sistema fundado por Jigoro Kano, fundador do Judo Kodokan",
+      "purpose": "Criado para dar estímulos imediatos aos praticantes que começam a praticar artes marciais",
+      "motivation": "A ansiedade dos praticantes não podia ser saciada apenas por objetivos a longo prazo"
+    },
+    "symbolism": {
+      "title": "Simbolismo das Cores",
+      "description": "Nessa classificação por cores e em um plano simbólico:",
+      "white": "O branco significa a pureza do principiante",
+      "black": "O negro refere-se aos conhecimentos apurados durante anos de treino"
+    },
+    "kyu": {
+      "title": "Graduações Kyu (Classe)",
+      "description": "As graduações Kyu representam os níveis de aluno, normalmente identificadas por cintos coloridos",
+      "order": "Contagem decrescente até ao cinto negro"
+    },
+    "dan": {
+      "title": "Graduações Dan (Grau)",
+      "description": "Na classificação de cintos negros, o primeiro chama-se de 1º Dan, o segundo de 2º Dan e assim por diante em ordem crescente até ao 10º Dan, alcançável apenas pelos mestres exemplares que dedicaram toda a sua vida ao Karaté.",
+      "1": "1º Dan - Primeiro grau de cinto negro",
+      "2": "2º Dan - Segundo grau de cinto negro",
+      "3": "3º Dan - Terceiro grau de cinto negro",
+      "4": "4º Dan - Quarto grau de cinto negro",
+      "5": "5º Dan - Quinto grau de cinto negro",
+      "6": "6º Dan - Sexto grau de cinto negro",
+      "7": "7º Dan - Sétimo grau de cinto negro",
+      "8": "8º Dan - Oitavo grau de cinto negro",
+      "9": "9º Dan - Nono grau de cinto negro",
+      "10": "10º Dan - Décimo grau - Alcançável apenas pelos mestres exemplares"
+    },
+    "colors": {
+      "title": "Cores dos Cintos por Graduação",
+      "white": "Branco - Principiante",
+      "yellow": "Amarelo - Primeiros conhecimentos",
+      "orange": "Laranja - Desenvolvimento básico",
+      "green": "Verde - Crescimento técnico",
+      "blue": "Azul - Aprofundamento",
+      "brown": "Castanho - Preparação para cinto negro",
+      "black": "Negro - Conhecimento apurado"
+    },
+    "timeline": {
+      "title": "Tempo de Dedicação",
+      "description": "O sistema de graduações reconhece o tempo e dedicação necessários para o domínio do Karaté",
+      "journey": "Cada graduação representa uma etapa na jornada do karateka",
+      "mastery": "Os graus mais elevados são alcançáveis apenas por mestres que dedicaram toda a sua vida ao Karaté"
     }
   }
 }

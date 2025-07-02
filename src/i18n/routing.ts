@@ -33,6 +33,21 @@ export const philosophyPagePathnames = {
   },
 };
 
+export const inDojoPagePathnames = {
+  "/in-dojo/salutation": {
+    "pt-PT": "/no-dojo/saudacao",
+  },
+  "/in-dojo/rules": {
+    "pt-PT": "/no-dojo/regras",
+  },
+  "/in-dojo/vocabulary": {
+    "pt-PT": "/no-dojo/vocabulario",
+  },
+  "/in-dojo/grades": {
+    "pt-PT": "/no-dojo/graduacoes",
+  },
+};
+
 export const routing = defineRouting({
   locales: ["pt-PT", "en"],
   defaultLocale: "pt-PT",
@@ -41,6 +56,7 @@ export const routing = defineRouting({
     "/": "/",
     ...mainPagePathnames,
     ...philosophyPagePathnames,
+    ...inDojoPagePathnames,
     "/privacy-policy": {
       "pt-PT": "/politica-de-privacidade",
     },

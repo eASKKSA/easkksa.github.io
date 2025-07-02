@@ -21,11 +21,13 @@ const FeatureCard: React.FC<{
       } dark:bg-[#2a2a2a]/60 dark:backdrop-blur-sm dark:hover:bg-[#363636]/60 dark:border-gray-700/50 bg-white/60 backdrop-blur-sm hover:bg-white/80 border-gray-200/50 ${className}`}
       style={{ transitionDelay: "200ms" }}
     >
-      <div className="text-6xl mb-6 flex justify-center">{feature.icon}</div>
-      <HeadingTag className="text-2xl font-bold text-[#a4262c] mb-4">
+      <div className="mb-6 flex justify-center">{feature.icon}</div>
+      <HeadingTag className="text-xl md:text-2xl font-bold text-[#a4262c] mb-4">
         {feature.title}
       </HeadingTag>
-      <p className={`leading-relaxed dark:text-gray-300 text-gray-600`}>
+      <p
+        className={`leading-relaxed dark:text-gray-300 text-gray-600 text-sm md:text-base`}
+      >
         {feature.description}
       </p>
     </div>
