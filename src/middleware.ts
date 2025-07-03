@@ -18,6 +18,6 @@ export const config = {
     // Your existing matcher config remains the same
     "/",
     "/(pt-PT|en)/:path*",
-    "/((?!_next|_vercel|.*\\..*).*)",
+    "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 };

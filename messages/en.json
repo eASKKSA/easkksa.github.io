@@ -1009,27 +1009,74 @@
   },
   "News": {
     "meta": {
-      "title": "News | Under Maintenance | ASKKSA Shotokan Madeira",
-      "description": "ASKKSA news page under maintenance. Soon we will have updates about events, competitions, and activities of Shotokan Karate. ASKKSA Funchal, Madeira.",
-      "keywords": "ASKKSA News, Karate Events, Competitions, Activities, Maintenance, ASKKSA, Shotokan, Funchal, Madeira"
+      "title": "News & Events | ASKKSA Shotokan Madeira",
+      "description": "Follow the latest news, events and achievements from ASKKSA. Instagram, Facebook and updates from the Shotokan Karate world. ASKKSA Funchal, Madeira.",
+      "keywords": "ASKKSA News, Karate Events, Competitions, Instagram, Facebook, Updates, ASKKSA, Shotokan, Funchal, Madeira"
     },
-    "title": "News",
-    "maintenance": {
-      "title": "Page Under Maintenance",
-      "subtitle": "We are working to serve you better",
-      "description": "Our news page is temporarily under maintenance. We are developing a new experience to share with you the latest news, events, and achievements of our association.",
-      "contact": {
-        "title": "Stay Informed",
-        "description": "While we work on the new page, you can follow our news through social media or contact us directly.",
-        "social": "Follow us on social media",
-        "direct": "Contact us directly"
+    "title": "News & Events",
+    "subtitle": "Stay updated with the latest news",
+    "lastUpdate": "Last updated",
+    "readMore": "Read more",
+    "viewPost": "View post",
+    "loading": "Loading...",
+    "error": "Error loading content",
+
+    "sections": {
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Official ASKKSA page",
+        "viewMore": "View more on Facebook",
+        "description": "Follow our latest posts, events and news",
+        "cta": {
+          "title": "ASKKSA Karate Shotokan",
+          "subtitle": "Follow our training, achievements and dojo behind the scenes!",
+          "button": "Follow Page",
+          "link": "View recent posts"
+        }
       },
-      "return": {
-        "title": "We’ll Be Back Soon",
-        "message": "We appreciate your patience and understanding. The new news page will be available very soon with an improved experience."
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Follow us @askksa_madeira",
+        "viewMore": "View more on Instagram",
+        "cta": {
+          "username": "@askksa_madeira",
+          "description": "Follow our training, achievements and dojo behind the scenes!",
+          "button": "Follow on Instagram"
+        }
+      },
+      "youtube": {
+        "title": "YouTube",
+        "subtitle": "Videos and demonstrations",
+        "viewMore": "View more on YouTube",
+        "cta": {
+          "title": "ASKKSA Channel",
+          "description": "Videos of katas, techniques and recent events",
+          "button": "Watch on YouTube"
+        }
+      },
+      "askksa": {
+        "title": "ASKKSA News",
+        "subtitle": "Mentions of our association in the press",
+        "searchTerm": "Search: \"ASKKSA\"",
+        "sortLabel": "Most recent",
+        "mostRecent": "Most recent",
+        "noNews": {
+          "title": "No news found",
+          "message": "No recent news about ASKKSA was found",
+          "button": "Search on Google News"
+        },
+        "seeMore": "See more ASKKSA news",
+        "sortInfo": "Sorted by publication date (most recent first)"
       }
     },
-    "oss": "OSS!"
+
+    "timeLabels": {
+      "fewMinutes": "A few minutes ago",
+      "oneHour": "1 hour ago",
+      "hours": "{count} hours ago",
+      "yesterday": "Yesterday",
+      "daysAgo": "{count} days ago"
+    }
   },
   "Footer": {
     "mission": "Tradition, discipline, and excellence in Shotokan Karate. Discover your inner strength through martial arts.",

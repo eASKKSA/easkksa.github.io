@@ -20,7 +20,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     image: {
       "@type": "ImageObject",
       url: process.env.NEXT_PUBLIC_SITE_URL + "/askksa_logo.svg",
-      caption: "ASKKSA - Notícias em Manutenção",
+      caption: "ASKKSA - Notícias e Eventos",
     },
     author: {
       "@type": "Organization",
@@ -73,7 +73,7 @@ export async function metadata(): Promise<Metadata> {
           url: "/askksa_logo.svg",
           width: 400,
           height: 400,
-          alt: "ASKKSA - Notícias em Manutenção",
+          alt: "ASKKSA - Notícias e Eventos",
         },
         {
           url: "/icons/favicon-512x512.png",
