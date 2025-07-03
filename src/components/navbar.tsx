@@ -58,7 +58,7 @@ const SettingsMenu: React.FC<{
           <span className="flex items-center gap-2 px-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
             <FaGlobe size={16} /> Language
           </span>
-          <div className="flex justify-around pt-1">
+          <div className="flex gap-2 justify-around pt-1">
             {(["pt-PT", "en"] as Locale[]).map((locale) => (
               <Link
                 key={locale}
@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
             <nav
               role="navigation"
               aria-label="Main Mobile Navigation"
-              className="flex flex-col gap-1 border-t  p-4"
+              className="flex flex-col gap-1 border-t p-4"
             >
               {navigationItems.map((item) => {
                 const isActive = pathname === item.href;
@@ -257,7 +257,7 @@ const Navbar: React.FC = () => {
                 <span className="flex items-center gap-2 px-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                   <FaGlobe size={16} /> Language
                 </span>
-                <div className="flex justify-around pt-1">
+                <div className="flex gap-2 justify-around pt-1">
                   {(["pt-PT", "en"] as Locale[]).map((locale) => (
                     <Link
                       key={locale}

@@ -1,64 +1,48 @@
-import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import Section from "@/components/container";
+import { jsonLd, metadata } from "./metadata";
+import { MetadataLDJSON } from "@/app/metadata";
 
 // --- ASSETS ---
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 import principlesImage from "@/assets/philosofy/principios.gif";
 import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 
-// --- METADATA ---
-export const metadata: Metadata = {
-  title: "Filosofia do Karaté | ASKKSA Shotokan Madeira",
-  description:
-    "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrole.",
-  keywords: [
-    "Filosofia Karaté",
-    "Bushido",
-    "Niju Kun",
-    "Dojo Kun",
-    "Sensei Funakoshi",
-    "Princípios Karaté",
-    "ASKKSA",
-    "Shotokan",
-    "Funchal",
-    "Madeira",
-  ],
-};
-
-// --- DATA ---
-const philosophySections = [
-  {
-    title: "Código de Ética - Bushido",
-    description:
-      "Os nove princípios éticos inspirados no código dos Samurais: honra, lealdade, sinceridade, coragem, bondade, modéstia, justiça, respeito e autocontrolo.",
-    image: ethicalCodeImage,
-    href: "/philosophy/bushido" as const,
-    principlesCount: "9 Princípios",
-  },
-  {
-    title: "Niju Kun - 20 Princípios",
-    description:
-      "Os vinte princípios desenvolvidos por Sensei Gichin Funakoshi que constituem a base filosófica de todos os praticantes de Karaté.",
-    image: principlesImage,
-    href: "/philosophy/niju-kun" as const,
-    principlesCount: "20 Princípios",
-  },
-  {
-    title: "Dojo Kun - 5 Máximas",
-    description:
-      "As cinco máximas fundamentais de Sensei Funakoshi para todos aqueles que entram num local de treino, o Dojo.",
-    image: dojoKunImage,
-    href: "/philosophy/dojo-kun" as const,
-    principlesCount: "5 Máximas",
-  },
-];
+export const generateMetadata = metadata;
 
 // --- MAIN PAGE COMPONENT ---
 export default async function PhilosophyPage() {
   const t = await getTranslations("Philosophy");
+
+  // Data usando traduções
+  const philosophySections = [
+    {
+      id: "bushido",
+      title: t("sections.bushido.title"),
+      description: t("sections.bushido.description"),
+      image: ethicalCodeImage,
+      href: "/philosophy/bushido" as const,
+      principlesCount: t("sections.bushido.principlesCount"),
+    },
+    {
+      id: "nijuKun",
+      title: t("sections.nijuKun.title"),
+      description: t("sections.nijuKun.description"),
+      image: principlesImage,
+      href: "/philosophy/niju-kun" as const,
+      principlesCount: t("sections.nijuKun.principlesCount"),
+    },
+    {
+      id: "dojoKun",
+      title: t("sections.dojoKun.title"),
+      description: t("sections.dojoKun.description"),
+      image: dojoKunImage,
+      href: "/philosophy/dojo-kun" as const,
+      principlesCount: t("sections.dojoKun.principlesCount"),
+    },
+  ];
 
   return (
     <>
@@ -71,10 +55,11 @@ export default async function PhilosophyPage() {
           {t("introduction")}
         </p>
       </Section>
+
       <Section>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {philosophySections.map((section, index) => (
-            <Link key={index} href={section.href} className="group">
+          {philosophySections.map((section) => (
+            <Link key={section.id} href={section.href} className="group">
               <article className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700">
                 <div className="relative h-48">
                   <Image
@@ -82,6 +67,7 @@ export default async function PhilosophyPage() {
                     alt={section.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                     {section.principlesCount}
@@ -95,7 +81,7 @@ export default async function PhilosophyPage() {
                     {section.description}
                   </p>
                   <span className="text-primary font-medium text-sm group-hover:underline">
-                    Explorar →
+                    {t("explore")}
                   </span>
                 </div>
               </article>
@@ -105,17 +91,15 @@ export default async function PhilosophyPage() {
 
         {/* Additional Context */}
         <div className="mt-16 max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-            A Importância da Filosofia no Karaté
+          <h2 className="text-2xl font-bold mb-6 text-white">
+            {t("importance.title")}
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            A filosofia do Karaté não se limita apenas às técnicas físicas, mas
-            engloba um código moral e ético que orienta o praticante tanto
-            dentro como fora do dojo. Estes ensinamentos milenares formam a base
-            do desenvolvimento pessoal e espiritual de cada karateka.
+          <p className="text-gray-300 leading-relaxed">
+            {t("importance.description")}
           </p>
         </div>
       </Section>
+      <MetadataLDJSON jsonLd={await jsonLd()} />
     </>
   );
 }

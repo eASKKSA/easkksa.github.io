@@ -14,6 +14,7 @@
     "addressLocality": "Funchal",
     "addressRegion": "Madeira",
     "addressCountry": "Portugal",
+    "streetAddress": "Escola Horácio Bento de Gouveia",
     "contactType": "General Inquiries",
     "dojo1": {
       "name": "Main Dojo - Horacio Bento de Gouveia School",
@@ -96,7 +97,63 @@
       }
     }
   },
-
+  "About": {
+    "meta": {
+      "title": "Who We Are | Instructors and Dojos | ASKKSA Shotokan Madeira",
+      "description": "Discover the history of ASKKSA since 2000, our team of qualified instructors, and the dojos where we practice Shotokan Karate in Funchal, Madeira.",
+      "keywords": "Who We Are, ASKKSA History, Karate Instructors, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Funchal Dojos, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
+    },
+    "title": "About ASKKSA",
+    "description": "It was in April of the year 2000 that ASKKSA, Associação Shotokan Kokusai Karate de Santo António, was established in Funchal. The goal of this formation was not only to relaunch the discipline to new levels but also to integrate it within the legal and sporting framework of the Autonomous Region of Madeira. The ASKKSA Association is affiliated with FNK-P (National Karate Federation – Portugal) and AKRAM (Karate Association of the Autonomous Region of Madeira) and is recognized by the DRJD (Regional Directorate of Youth and Sports).",
+    "instructors": {
+      "title": "An Elite Team",
+      "subtitle": "ASKKSA is proud to have a highly qualified team of instructors, proven and with numerous national and international certifications.",
+      "jorgeFreitas": {
+        "name": "Shihan Jorge Freitas",
+        "graduation": "6th DAN",
+        "credential1": "Started practicing in 1987",
+        "credential2": "Graduated by SKIF Canada & SKIF",
+        "credential3": "Karate Coach Level III (FNK-P)",
+        "credential4": "Referee B (FNK-P)"
+      },
+      "rafaelJardim": {
+        "name": "Sensei Rafael Jardim",
+        "graduation": "5th DAN",
+        "credential1": "Started practicing in 1992",
+        "credential2": "Graduated by SKIF Canada & ASKKM",
+        "credential3": "Karate Coach Level I (FNK-P)",
+        "credential4": "Referee B (FNK-P)"
+      },
+      "marisaGomes": {
+        "name": "Sensei Marisa Gomes",
+        "graduation": "5th DAN",
+        "credential1": "15 years of practice",
+        "credential2": "Graduated by SKIF Canada & SKIF",
+        "credential3": "Karate Coach Level II (FNK-P)",
+        "credential4": "Karate Judge (FNK-P)"
+      },
+      "titoVelosa": {
+        "name": "Sensei Tito Velosa",
+        "graduation": "4th DAN",
+        "credential1": "Started practicing in 1995",
+        "credential2": "Graduated by SKIF Canada & SKIF",
+        "credential3": "Karate Coach Level II (FNK-P)",
+        "credential4": "Referee B (FNK-P)"
+      }
+    },
+    "dojos": {
+      "title": "Our Dojos",
+      "subtitle": "We currently have two training spaces in Funchal and provide technical support to the Câmara de Lobos Sports Club.",
+      "dojo1": {
+        "name": "ASKKSA Dojo - Horacio Bento Gouveia School",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
+      },
+      "dojo2": {
+        "name": "ASKKSA Dojo - Santo Antonio Parish Council",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt"
+      }
+    }
+  },
   "History": {
     "meta": {
       "title": "History of Karate-do | ASKKSA Shotokan Karate Madeira",
@@ -133,6 +190,846 @@
       "funakoshi": "Funakoshi was responsible for changing the writing of the name to \"empty hand\", a way to integrate the art into Japanese budo culture and distance it from its foreign origins during a period of strong nationalism. Karate was popularized and introduced in high schools before World War II.",
       "transition": "Like many Japanese martial arts, Karate made its transition to <b>Karate-do</b> in the early 20th century. The \"do\" (way) imbues the practice with elements of Zen Buddhism, sometimes called \"Zen in motion\". Modernization also included the adoption of the white uniform (<b>keikogi</b>) and colored belts to indicate rank, both popularized by Jigoro Kano, the founder of Judo."
     }
+  },
+  "Philosophy": {
+    "meta": {
+      "title": "Karate Philosophy | Bushido, Niju Kun, Dojo Kun | ASKKSA Shotokan Madeira",
+      "description": "Discover the philosophy of Shotokan Karate through Bushido, Niju Kun, and Dojo Kun. Ancient principles of discipline, respect, and self-control. ASKKSA Funchal, Madeira.",
+      "keywords": "Karate Philosophy, Bushido, Niju Kun, Dojo Kun, Sensei Funakoshi, Karate Principles, Samurai, Code of Ethics, ASKKSA, Shotokan, Funchal, Madeira, Discipline, Respect"
+    },
+    "title": "Karate Philosophy",
+    "introduction": "The philosophy of Shotokan Karate is based on ancient principles that shape not only the technique but also the character of the practitioner. Discover the ethical and moral foundations that guide every karateka.",
+    "sections": {
+      "bushido": {
+        "title": "Code of Ethics – Bushido",
+        "description": "The nine ethical principles inspired by the Samurai code: honor, loyalty, sincerity, courage, kindness, humility, justice, respect, and self-control.",
+        "principlesCount": "9 Principles"
+      },
+      "nijuKun": {
+        "title": "Niju Kun – 20 Principles",
+        "description": "The twenty principles developed by Sensei Gichin Funakoshi that form the philosophical foundation of all Karate practitioners.",
+        "principlesCount": "20 Principles"
+      },
+      "dojoKun": {
+        "title": "Dojo Kun – 5 Maxims",
+        "description": "The five fundamental maxims of Sensei Funakoshi for everyone who steps into a training space, the Dojo.",
+        "principlesCount": "5 Maxims"
+      }
+    },
+    "importance": {
+      "title": "The Importance of Philosophy in Karate",
+      "description": "The philosophy of Karate goes beyond physical techniques; it encompasses a moral and ethical code that guides practitioners both inside and outside the dojo. These ancient teachings form the foundation of each karateka’s personal and spiritual development."
+    },
+    "explore": "Explore →",
+    "navigation": {
+      "bushido": "Bushido",
+      "nijuKun": "Niju Kun",
+      "dojoKun": "Dojo Kun"
+    }
+  },
+  "Bushido": {
+    "meta": {
+      "title": "Bushido Code of Ethics | 9 Samurai Principles | ASKKSA Shotokan Madeira",
+      "description": "Discover the Bushido code of ethics in Shotokan Karate. The 9 samurai principles: honor, loyalty, sincerity, courage, kindness, modesty, justice, respect, and self-control. ASKKSA Funchal, Madeira.",
+      "keywords": "Bushido, Karate Code of Ethics, Samurai Principles, Karate Philosophy, Honor, Loyalty, Sincerity, Courage, Kindness, Modesty, Justice, Respect, Self-Control, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Bushido Code of Ethics",
+    "introduction": "Bushido, or the \"Way of the Warrior,\" is the samurai moral code of conduct that has been adapted for Shotokan Karate. This code represents the fundamental values that every practitioner must cultivate.",
+    "description": "The nine principles of Bushido form the ethical foundation of our practice, guiding character development both inside and outside the dojo. Each principle represents an essential virtue for personal and spiritual growth.",
+    "principles": {
+      "honor": {
+        "name": "Honor",
+        "japanese": "Meiyo",
+        "description": "Personal dignity and moral integrity that guide all actions of the karateka"
+      },
+      "loyalty": {
+        "name": "Loyalty",
+        "japanese": "Chugi",
+        "description": "Faithfulness to principles, to the dojo, to instructors, and to training partners"
+      },
+      "sincerity": {
+        "name": "Sincerity",
+        "japanese": "Makoto",
+        "description": "Honesty with oneself and with others in all circumstances"
+      },
+      "courage": {
+        "name": "Courage",
+        "japanese": "Yu",
+        "description": "Bravery to face challenges and to stand up for what is right"
+      },
+      "kindness": {
+        "name": "Kindness",
+        "japanese": "Jin",
+        "description": "Compassion and benevolence in the treatment of all beings"
+      },
+      "modesty": {
+        "name": "Modesty",
+        "japanese": "Kenkyo",
+        "description": "Humility and simplicity, always recognizing there is much to learn"
+      },
+      "justice": {
+        "name": "Justice",
+        "japanese": "Gi",
+        "description": "Moral righteousness and fairness in all decisions and actions"
+      },
+      "respect": {
+        "name": "Respect",
+        "japanese": "Rei",
+        "description": "Consideration and reverence for oneself, for others, and for tradition"
+      },
+      "selfControl": {
+        "name": "Self-Control",
+        "japanese": "Jisei",
+        "description": "Mastery over one’s own emotions, impulses, and reactions"
+      }
+    }
+  },
+  "NijuKun": {
+    "meta": {
+      "title": "Niju Kun – 20 Principles | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Discover the 20 fundamental principles of Shotokan Karate (Niju Kun) developed by Sensei Gichin Funakoshi. Philosophy and teachings for life. ASKKSA Funchal, Madeira.",
+      "keywords": "Niju Kun, 20 Karate Principles, Gichin Funakoshi, Karate Philosophy, Teachings, Fundamental Principles, Traditional Karate, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Niju Kun – The 20 Principles",
+    "introduction": "Sensei Gichin Funakoshi developed and refined twenty principles that should form the philosophical foundation of every Karate practitioner. He called these teachings *Niju Kun*.",
+    "description": "These fundamental principles guide not only Karate practice but also how we should live our lives—with honor, respect, and discipline.",
+    "principles": {
+      "greeting": {
+        "title": "1. Greeting",
+        "description": "Karate begins with a bow and ends with a bow."
+      },
+      "noOffense": {
+        "title": "2. Non-Offensive",
+        "description": "There is no offensive attitude in Karate."
+      },
+      "justice": {
+        "title": "3. Path of Justice",
+        "description": "Those who practice Karate must follow the path of justice."
+      },
+      "selfKnowledge": {
+        "title": "4. Self-Knowledge",
+        "description": "Know yourself before judging others."
+      },
+      "spiritDevelopment": {
+        "title": "5. Spirit Development",
+        "description": "The development of spirit is the most important; technical skill is only a means to this end."
+      },
+      "mentalControl": {
+        "title": "6. Mental Control",
+        "description": "Avoid losing your mental balance—control your mind."
+      },
+      "negligence": {
+        "title": "7. Negligence",
+        "description": "Misfortune is caused by negligence."
+      },
+      "lifeLongTraining": {
+        "title": "8. Lifelong Training",
+        "description": "Karate training lasts a lifetime; it does not end with initiation."
+      },
+      "applyKarate": {
+        "title": "9. Apply Karate",
+        "description": "Apply Karate in everything you do."
+      },
+      "hotWater": {
+        "title": "10. Hot Water",
+        "description": "Karate is like hot water—if you don’t keep heating it, it will cool down."
+      },
+      "notBeDefeated": {
+        "title": "11. Do Not Be Defeated",
+        "description": "Do not think about winning—think about not being defeated."
+      },
+      "strengthWeakness": {
+        "title": "12. Strengths and Weaknesses",
+        "description": "Victory depends on the ability to distinguish between strengths (*JITSU*) and weaknesses (*KYO*)."
+      },
+      "moveWithOpponent": {
+        "title": "13. Move with the Opponent",
+        "description": "Move in harmony with your opponent."
+      },
+      "sharpSwords": {
+        "title": "14. Sharp Swords",
+        "description": "Imagine your opponent’s limbs are sharp swords."
+      },
+      "millionOpponents": {
+        "title": "15. Millions of Opponents",
+        "description": "For every man who leaves his house, there are a million opponents waiting."
+      },
+      "artificialToNatural": {
+        "title": "16. Artificial to Natural",
+        "description": "At first, movements are artificial, but over time they become natural."
+      },
+      "correctPractice": {
+        "title": "17. Correct Practice",
+        "description": "Practice what you’ve been taught correctly, knowing that application will always vary."
+      },
+      "forceControl": {
+        "title": "18. Control of Force",
+        "description": "Apply correctly: 1) Strength and weakness when using your power; 2) Expansion and contraction of the body; 3) Control of techniques in both slow and fast execution."
+      },
+      "studyPractice": {
+        "title": "19. Study and Practice",
+        "description": "Always study, practice, and strive for improvement."
+      },
+      "thinkCarefully": {
+        "title": "20. Think Carefully",
+        "description": "Always think carefully and cautiously."
+      }
+    },
+    "footer": {
+      "title": "Live the Principles",
+      "message": "These 20 principles of Niju Kun are more than rules for the dojo—they are a guide to living a life of integrity, respect, and continuous growth."
+    }
+  },
+  "DojoKun": {
+    "meta": {
+      "title": "Dojo Kun – 5 Maxims | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Discover the 5 fundamental maxims of the Dojo Kun developed by Sensei Gichin Funakoshi for all Karate practitioners. Essential principles for the dojo. ASKKSA Funchal, Madeira.",
+      "keywords": "Dojo Kun, 5 Karate Maxims, Gichin Funakoshi, Dojo Philosophy, Dojo Commandments, Dojo Principles, Traditional Karate, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Dojo Kun – The 5 Maxims",
+    "introduction": "Sensei Gichin Funakoshi developed and refined five maxims that he believed were essential for everyone who entered a training space—the Dojo. He called these commandments *Dojo Kun*.",
+    "description": "These five fundamental maxims establish the moral and ethical principles that should guide all practitioners within the dojo, fostering an environment of respect, discipline, and personal growth.",
+    "maxims": {
+      "character": {
+        "title": "HITOTSU JINKAKU KANSEI NI TSUTOMURU KOTO",
+        "description": "Character (Strive for the perfection of character)"
+      },
+      "sincerity": {
+        "title": "HITOTSU MAKOTO NO MICHI O MAMORU KOTO",
+        "description": "Sincerity (Be faithful to the path of truth)"
+      },
+      "effort": {
+        "title": "HITOTSU DORYOKU NO SEISHIN O YASHINAU KOTO",
+        "description": "Effort (Foster the spirit of effort)"
+      },
+      "etiquette": {
+        "title": "HITOTSU REIGI O OMONZURU KOTO",
+        "description": "Etiquette (Respect others above all)"
+      },
+      "selfControl": {
+        "title": "HITOTSU KEKKI NO YU O IMASHIMURU KOTO",
+        "description": "Self-Control (Refrain from violent behavior)"
+      }
+    },
+    "footer": {
+      "title": "The Spirit of the Dojo",
+      "message": "These five maxims of the Dojo Kun are recited at the beginning and end of each training session, reminding us of the core values that should guide both our practice and our lives."
+    }
+  },
+  "ShotokanKatas": {
+    "meta": {
+      "title": "Shotokan – 26 Katas | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Discover the 26 katas of the Shotokan style developed by Sensei Gichin Funakoshi. A lifetime of study and practice. Heian, Tekki, Bassai, Kanku. ASKKSA Funchal, Madeira.",
+      "keywords": "Shotokan Katas, 26 Katas, Gichin Funakoshi, Shotokan Karate, Heian, Tekki, Bassai, Kanku, Traditional Kata, ASKKSA, Funchal, Madeira"
+    },
+    "title": "Shotokan – 26 Katas",
+    "introduction": "The Shotokan style, founded by Sensei Funakoshi, currently includes 26 katas studied over a lifetime of training.",
+    "description": "Each kata represents a unique form of imaginary combat, preserving ancestral techniques and traditional Karate philosophy. Katas are the essence of Karate, combining movement, breath, and spirit.",
+    "katas": {
+      "heian_shodan": {
+        "name": "HEIAN SHODAN (平安初段)",
+        "meaning": "PEACE (hei) and TRANQUILITY (an) – First"
+      },
+      "heian_nidan": {
+        "name": "HEIAN NIDAN (平安二段)",
+        "meaning": "PEACE and TRANQUILITY – Second"
+      },
+      "heian_sandan": {
+        "name": "HEIAN SANDAN (平安三段)",
+        "meaning": "PEACE and TRANQUILITY – Third"
+      },
+      "heian_yondan": {
+        "name": "HEIAN YONDAN (平安四段)",
+        "meaning": "PEACE and TRANQUILITY – Fourth"
+      },
+      "heian_godan": {
+        "name": "HEIAN GODAN (平安五段)",
+        "meaning": "PEACE and TRANQUILITY – Fifth"
+      },
+      "tekki_shodan": {
+        "name": "TEKKI SHODAN (鉄騎初段)",
+        "meaning": "IRON HORSEMAN (tetsu=iron, ki=horseman) – First"
+      },
+      "tekki_nidan": {
+        "name": "TEKKI NIDAN (鉄騎二段)",
+        "meaning": "IRON HORSEMAN – Second"
+      },
+      "tekki_sandan": {
+        "name": "TEKKI SANDAN (鉄騎三段)",
+        "meaning": "IRON HORSEMAN – Third"
+      },
+      "bassai_dai": {
+        "name": "BASSAI DAI (披塞大)",
+        "meaning": "TO PENETRATE A FORTRESS – Long"
+      },
+      "kanku_dai": {
+        "name": "KANKU DAI (観空大)",
+        "meaning": "TO VIEW THE SKY (kan=look, ku=void/sky) – Long"
+      },
+      "jitte": {
+        "name": "JITTE (十手)",
+        "meaning": "TEN HANDS (ju=ten, te=hand)"
+      },
+      "hangetsu": {
+        "name": "HANGETSU (半月)",
+        "meaning": "HALF MOON (han=half, getsu=moon)"
+      },
+      "enpi": {
+        "name": "ENPI (燕飛)",
+        "meaning": "SWALLOW’S FLIGHT (en=swallow, pi=flight)"
+      },
+      "gankaku": {
+        "name": "GANKAKU (岩鶴)",
+        "meaning": "CRANE ON A ROCK (gan=rock, kaku=crane)"
+      },
+      "jion": {
+        "name": "JION (慈恩)",
+        "meaning": "LOVE AND GRATITUDE (ji=universal love, on=benevolence)"
+      },
+      "bassai_sho": {
+        "name": "BASSAI SHO (披塞小)",
+        "meaning": "TO PENETRATE A FORTRESS – Short"
+      },
+      "kanku_sho": {
+        "name": "KANKU SHO (観空小)",
+        "meaning": "TO VIEW THE SKY – Short"
+      },
+      "chinte": {
+        "name": "CHINTE (珍手)",
+        "meaning": "RARE/UNUSUAL HANDS (chin=strange, te=hand)"
+      },
+      "unsu": {
+        "name": "UNSU (雲手)",
+        "meaning": "CLOUD HANDS (un=cloud, su=hand)"
+      },
+      "sochin": {
+        "name": "SOCHIN (壯鎭)",
+        "meaning": "UNSHAKABLE PEACE (so=strong/vigorous, chin=calm/suppress)"
+      },
+      "nijushiho": {
+        "name": "NIJUSHIHO (二十四步)",
+        "meaning": "24 STEPS"
+      },
+      "gojushiho_dai": {
+        "name": "GOJUSHIHO DAI (五十四歩大)",
+        "meaning": "54 STEPS – Long"
+      },
+      "gojushiho_sho": {
+        "name": "GOJUSHIHO SHO (五十四歩小)",
+        "meaning": "54 STEPS – Short"
+      },
+      "meikyo": {
+        "name": "MEIKYO (明鏡)",
+        "meaning": "CLEAR MIRROR (mei=clear, kyo=mirror)"
+      },
+      "jiin": {
+        "name": "JIIN (慈陰)",
+        "meaning": "PROTECTIVE LOVE (ji=universal love, in=shadow)"
+      },
+      "wankan": {
+        "name": "WANKAN (王冠)",
+        "meaning": "KING’S CROWN (wan=king, kan=crown)"
+      }
+    },
+    "techniques": {
+      "title": "Fundamental Techniques",
+      "positions": {
+        "title": "Stances (Dachi)",
+        "description": "Foundations of Shotokan Karate stances"
+      },
+      "legs": {
+        "title": "Leg Techniques",
+        "description": "Fundamental kicks and leg techniques"
+      },
+      "handsFeet": {
+        "title": "Hands and Feet",
+        "description": "Hand forms and foot techniques"
+      }
+    },
+    "footer": {
+      "title": "A Lifetime of Study",
+      "message": "The 26 Shotokan katas represent a complete universe of martial knowledge. Each kata has its own personality, history, and lessons to teach—offering a lifelong journey of learning."
+    }
+  },
+  "InDojo": {
+    "meta": {
+      "title": "In the Dojo | Etiquette, Rules, and Traditions | ASKKSA Shotokan Karate Madeira",
+      "description": "Discover life inside the Shotokan Karate dojo. Salutation, rules, Japanese vocabulary, and the ranking system. Karate traditions and etiquette. ASKKSA Funchal, Madeira.",
+      "keywords": "Karate Dojo, Karate Etiquette, Dojo Rules, OSS Salutation, Japanese Vocabulary, Karate Ranks, Traditions, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "In the Dojo",
+    "introduction": "In the Dojo, the heart of Karate, we practice and live by the principles that guide us. Here, tradition meets discipline, and every training session is an opportunity for personal growth.",
+    "sections": {
+      "salutation": {
+        "title": "Salutation",
+        "description": "The salutation in Karate is an expression of sincerity (*SEIJITSU*), part of the ethical code of martial arts. It reflects a karateka who does not hide their ideals or feelings and who is true to themselves.",
+        "href": "/in-dojo/salutation"
+      },
+      "rules": {
+        "title": "Rules",
+        "description": "The dojo is the place where martial teachings are passed on to practitioners, and as such, it must be a place where seriousness and respect prevail.",
+        "href": "/in-dojo/rules"
+      },
+      "vocabulary": {
+        "title": "Vocabulary",
+        "description": "Since Karate is a martial art of Japanese origin, it is natural that many of the terms used in the dojo are in Japanese.",
+        "href": "/in-dojo/vocabulary"
+      },
+      "grades": {
+        "title": "Ranks",
+        "description": "Martial arts originating from Japan and Okinawa feature a variety of titles and ranking classes.",
+        "href": "/in-dojo/grades"
+      }
+    },
+    "philosophy": {
+      "title": "Life in the Dojo",
+      "description": "The dojo is not just a place for physical training but a sacred space where spirit is cultivated, discipline is learned, and character is forged. Every element—from the salutation to the rules of etiquette—helps create an atmosphere of mutual respect and personal development."
+    },
+    "navigation": {
+      "salutation": "Salutation",
+      "rules": "Rules",
+      "vocabulary": "Vocabulary",
+      "grades": "Ranks"
+    },
+    "explore": "Explore →"
+  },
+  "Salutation": {
+    "meta": {
+      "title": "Salutation in Karate | OSS and Rituals | ASKKSA Shotokan Madeira",
+      "description": "Discover the meaning of salutation in Shotokan Karate, the word OSS, and the rituals performed at the beginning and end of training. SEIJITSU, Mokuso, Seiza. ASKKSA Funchal, Madeira.",
+      "keywords": "Karate Salutation, OSS, Karate Rituals, SEIJITSU, Mokuso, Seiza, Shomen ni Rei, Sensei ni Rei, ASKKSA, Shotokan, Funchal, Madeira, Dojo, Karate Etiquette"
+    },
+    "title": "Salutation",
+    "introduction": "Salutation in Karate is an expression of sincerity (*SEIJITSU*) and a core part of the martial arts ethical code. It reflects a karateka who is honest about their ideals and emotions and is true to themselves. Whether it’s a simple OSS, a bow to a training partner, or the formal start/end of class ritual, salutation carries deep meaning for those who live Karate in its purest form.",
+    "description": "Upon entering the dojo, we greet the Sensei and fellow students, recognizing the importance of mutual respect and discipline.",
+    "oss": {
+      "title": "The Word \"OSS\"",
+      "origin": "Derived from the Japanese word *Ossu-shinobu*, it is similar to our 'good morning' or 'good afternoon,' carrying meanings of patience, respect, and appreciation. Its tone can alter its meaning.",
+      "creation": "OSS was coined in the Japanese Naval Academy and is widely used in daily life to mean 'yes,' 'please,' 'thank you,' 'understood,' 'excuse me,' and more. In the Karate world, it’s used in nearly every situation requiring a response.",
+      "importance": "For a karateka, OSS is the most important word. It implies pushing oneself to the limits and enduring.",
+      "meaning": "In simpler terms, OSS means 'perseverance under pressure.' It’s a single word that encapsulates the essence of Karate philosophy.",
+      "spirit": "A true Karate practitioner cultivates the 'spirit of OSS.'"
+    },
+    "rituals": {
+      "title": "Salutation Rituals",
+      "start": {
+        "title": "Opening Ritual",
+        "steps": [
+          { "number": 1, "command": "SEIZA", "meaning": "Sit" },
+          { "number": 2, "command": "MOKUSO", "meaning": "Meditate" },
+          { "number": 3, "command": "MOKUSO YAME", "meaning": "Stop meditating" },
+          { "number": 4, "command": "SHOMEN NI REI", "meaning": "Bow to the infinite essence" },
+          { "number": 5, "command": "SENSEI NI REI", "meaning": "Bow to the Sensei (Teacher)" },
+          { "number": 6, "command": "KIRITSU", "meaning": "Stand up" }
+        ]
+      },
+      "end": {
+        "title": "Closing Ritual",
+        "steps": [
+          { "number": 1, "command": "SEIZA", "meaning": "Sit" },
+          { "number": 2, "command": "MOKUSO", "meaning": "Meditate" },
+          { "number": 3, "command": "MOKUSO YAME", "meaning": "Stop meditating" },
+          { "number": 4, "command": "HEIJOSHIN KORE KARATE DO NARI", "meaning": "Let us dedicate ourselves spiritually to this way of Karate" },
+          { "number": 5, "command": "NICHI NICHI NO KOKORO", "meaning": "With heart, every single day" },
+          { "number": 6, "command": "OKOTARU BEKARAZU", "meaning": "Let us learn with discipline" },
+          { "number": 7, "command": "SHOMEN NI REI", "meaning": "Bow to the infinite essence" },
+          { "number": 8, "command": "SENSEI NI REI", "meaning": "Bow to the Sensei (Teacher)" },
+          { "number": 9, "command": "DÔMÔ ARIGATO GOZAIMASU SENSEI", "meaning": "Thank you very much for the training, Sensei." },
+          { "number": 10, "command": "KIRITSU", "meaning": "Stand up" }
+        ]
+      }
+    },
+    "salutation": {
+      "title": "Formal Salutation",
+      "text": "Practitioners should bow to the Sensei and their peers when entering and leaving the dojo."
+    }
+  },
+  "DojoRules": {
+    "meta": {
+      "title": "Dojo Rules | Etiquette and Conduct | ASKKSA Shotokan Madeira",
+      "description": "Learn the conduct and etiquette rules of the Shotokan Karate dojo. Behavior, respect, and Japanese traditions. ASKKSA Funchal, Madeira.",
+      "keywords": "Dojo Rules, Karate Etiquette, Dojo Conduct, Respect, Japanese Traditions, Sensei, Karate Behavior, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Dojo Rules",
+    "introduction": "The dojo is where martial arts teachings are passed on to practitioners, and as such, it must be a place where seriousness and respect prevail. At ASKKSA dojos, we follow traditional codes of conduct inspired by Japanese dojos—the birthplace of Karate.",
+    "description": "It’s important that every karateka understands that, inside the dojo (and ideally in daily life), they should behave in accordance with the moral heritage of this martial art. The rules below should be understood and respected by all practitioners in our dojos.",
+    "responsibility": {
+      "title": "Responsibility and Care for the Space",
+      "rule1": "The DOJO is the responsibility of everyone who uses it. Feel free to give information to visitors, tidy up, or clean what’s dirty.",
+      "rule2": "Help however you can to improve the dojo environment."
+    },
+    "hygiene": {
+      "title": "Personal Hygiene and Appearance",
+      "rule1": "Maintain personal hygiene and keep your Karate-Gi (uniform) clean.",
+      "rule2": "Always enter the training area with clean hands, feet, and trimmed nails.",
+      "rule3": "Do not wear jewelry (rings, earrings, bracelets, watches), strong perfumes, or any accessories that could interfere with your or others’ training.",
+      "rule4": "Do not walk around the dojo unless you are fully dressed."
+    },
+    "entrance": {
+      "title": "Entering and Leaving the Dojo",
+      "rule1": "Always bow while standing when entering or leaving the training area.",
+      "rule2": "If you arrive after class has started, enter quietly, sit in *SEIZA*, and request permission from the highest-ranking instructor to join. Upon approval, bow and join the group.",
+      "rule3": "If you must leave before the end of class, always ask the instructor or monitor for permission. NEVER leave during class without authorization."
+    },
+    "behavior": {
+      "title": "Behavior During Class",
+      "rule1": "Speak as little as possible during training.",
+      "rule2": "When the instructor/monitor is demonstrating a technique, sit quietly and pay attention. If you don’t fully understand, observe others, try what you can, and wait for corrections.",
+      "rule3": "If you must ask something, raise your right hand discreetly. Never shout for the instructor’s attention.",
+      "rule4": "Sit in *SEIZA* or with legs crossed. Do not lean against the wall or sit in improper positions. Maintain good posture at all times.",
+      "rule5": "Do not use your phone inside the dojo during class hours.",
+      "rule6": "Even if you're outside the class area, keep quiet during training and don’t talk to those who are inside the class."
+    },
+    "instructors": {
+      "title": "Relationship with Instructors",
+      "rule1": "Inside the dojo, NEVER refer to instructors by their first name, even if you are close to them. The proper way is to address them as *Sensei* (teacher).",
+      "rule2": "Train exactly as instructed. If you wanted to do things your own way, you wouldn’t need to come to the dojo.",
+      "rule3": "Never argue with the instructor/monitor, even if another instructor has taught you something different. There are many ways to execute techniques, shaped by different experiences—this doesn’t mean one is wrong. Follow each instructor in their class to the best of your ability."
+    },
+    "training": {
+      "title": "Training and Partner Interaction",
+      "rule1": "Never refuse to train with someone chosen by the instructor.",
+      "rule2": "Help those who need it, but never correct your partner unless you are the instructor/monitor or a black belt.",
+      "rule3": "Never think you're disturbing others by not knowing how to perform a technique. We’re all learning and helping one another.",
+      "rule4": "Respect senior students (especially black belts) and never argue about whether techniques are right or wrong. Remember, they did not earn their rank by accident.",
+      "rule5": "Train with intensity and energy, but always respect your partner’s physical safety. Classes include people of different genders, ages, and physical conditions. While effort is important, so is adapting to your partner’s needs and goals. Respect their reasons for training.",
+      "rule6": "Be aware of your surroundings. Adjust your intensity to your physical condition. Be responsible for yourself.",
+      "rule7": "Do not skip any techniques—unless you are injured."
+    },
+    "practical": {
+      "title": "Practical and Health Considerations",
+      "rule1": "If you have an injury or physical limitation, you must inform the instructor before class.",
+      "rule2": "Avoid attending classes if you have a contagious illness (airborne or contact-based).",
+      "rule3": "Do not delay or miss tuition payments. If you must miss class due to travel or illness, notify your instructor. Your financial contribution is essential to keep the dojo running."
+    }
+  },
+  "Vocabulary": {
+    "meta": {
+      "title": "Japanese Vocabulary | Karate Terms | ASKKSA Shotokan Madeira",
+      "description": "Learn the essential Japanese vocabulary of Shotokan Karate. Numbers, counters, and common dojo terms. Hiragana, Katakana, Kanji. ASKKSA Funchal, Madeira.",
+      "keywords": "Japanese Vocabulary, Karate Terms, Japanese Karate, Dojo, Japanese Numbers, Hiragana, Katakana, Kanji, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Japanese Vocabulary",
+    "introduction": "Since Karate is a martial art of Japanese origin, it’s natural that many of the terms used in the dojo are Japanese. Although initially they might confuse practitioners, with continued training these words become part of every karateka's daily routine.",
+    "description": "It should be noted that Japanese uses three writing systems (Hiragana, Katakana, and Kanji) in daily life. To help new practitioners, below is the vocabulary most commonly used in karate dojos worldwide.",
+    "numbers": {
+      "title": "Numbers",
+      "1": "ichi",
+      "2": "ni",
+      "3": "san",
+      "4": "yon or shi",
+      "5": "go",
+      "6": "roku",
+      "7": "nana or shichi",
+      "8": "hachi",
+      "9": "kyu or ku",
+      "10": "ju",
+      "20": "niju",
+      "30": "sanju",
+      "100": "hyaku"
+    },
+    "counters": {
+      "title": "Counters (abstract, 'things')",
+      "1": "Hitotsu",
+      "2": "Futatsu",
+      "3": "Mittsu",
+      "4": "Yottsu",
+      "5": "Itsutsu"
+    },
+    "otherCounters": {
+      "title": "Other Counters",
+      "subtitle": "hon (various types of objects, especially round and thin ones, but also techniques or groups of techniques, practice sessions, etc.)",
+      "1": "Ippon",
+      "2": "Nihon",
+      "3": "Sanbon",
+      "4": "Yohon",
+      "5": "Gohon",
+      "6": "Roppon",
+      "7": "Nanahon",
+      "8": "Happon",
+      "9": "Kyuhon",
+      "10": "Juppon"
+    },
+    "vocabulary": {
+      "title": "Most Used Words",
+      "age": "Action of raising, lifting",
+      "aihanmi": "Relative position of two practitioners with the same leg forward",
+      "aikido": "Literally: way of harmonizing energy",
+      "ashi": "Leg, foot",
+      "ashibarai": "Foot sweep",
+      "atama": "Head",
+      "atemi": "Strike",
+      "awase": "Combination, joining, harmonizing",
+      "ayumi": "Gait, walking",
+      "barai": "Sweep",
+      "bo": "Long staff",
+      "bojutsu": "Staff techniques",
+      "bokken": "Wooden sword",
+      "bu": "Warrior",
+      "bushi": "Warrior",
+      "budo": "Way of the warrior, martial arts",
+      "chi": "Chinese word for vital energy, same as 'Ki'",
+      "chudan": "Middle level (from neck to waist)",
+      "dachi": "Stance",
+      "dai": "Big",
+      "dan": "Level, rank (black belt)",
+      "do": "Way, path",
+      "dojo": "Training place for Budo",
+      "embusen": "Diagram of a kata",
+      "empi": "Elbow, same as 'hiji'",
+      "fumi": "To stomp",
+      "gasho": "Joining hands in front of the face to salute (Zen, Mokuzo, etc.)",
+      "gedan": "Lower level (from waist down)",
+      "geri": "Kick",
+      "gi": "Uniform for practicing Budo composed of Uwagi (jacket), Zubon (pants), and Obi (belt)",
+      "gonosen": "Tactic of letting the opponent attack first to counterattack",
+      "gyaku": "Opposite, reverse",
+      "hajime": "Start, begin",
+      "hakama": "Wide pants worn over the gi in traditional martial arts (Kyudo, Kendo, Iaido, Aikido, etc.)",
+      "happo": "Eight directions",
+      "hara": "Abdomen",
+      "heiko": "Parallel",
+      "henka": "Change (of position)",
+      "hidari": "Left",
+      "hiji": "Elbow",
+      "hikite": "Pullback of the fist to the hip",
+      "hiza": "Knee",
+      "ho": "Direction, method, sense",
+      "horanokamae": "Starting position of some katas where the hand covers the closed fist",
+      "ippon": "One (point, step, attack, etc.)",
+      "ipponkumite": "Exercises with partner with 1 attack 1 defense",
+      "irimi": "Entering movement (into the opponent's circle)",
+      "jitsu": "Technique",
+      "jiyu": "Free",
+      "jiyuipponkumite": "Free (controlled) sparring with one attack",
+      "jiyukumite": "Controlled partner exercises where combat forms are free",
+      "jo": "High",
+      "jodan": "High level (from neck upwards)",
+      "joseki": "Upper side, place of honor (in the dojo, the south wall, right of the main wall)",
+      "ju": "Softness, gentle",
+      "judo": "Way of softness",
+      "jukumite": "Softness combat",
+      "kagi": "Hook, to hook",
+      "kake": "Hook, to hook",
+      "kaishowaza": "Techniques with open hand",
+      "kakato": "Heel",
+      "kamae": "Defensive position",
+      "kamaete": "Command to take the position",
+      "kamiza": "Main wall of the dojo, east side, where the Tokonoma is located",
+      "kara": "Empty",
+      "karada": "Body, same as 'tai'",
+      "karatedo": "The Way of empty hands",
+      "kata": "Training form, with or without partner, with predetermined technique sequences",
+      "katana": "Sword",
+      "keage": "Fast upward movement",
+      "keiko": "Training",
+      "kekomi": "Penetrating movement",
+      "ken": "Sword",
+      "kendo": "Japanese fencing art",
+      "keri": "Kick",
+      "ki": "Energy, vital force, spirit",
+      "kiai": "Externalization of energy through a shout",
+      "kihon": "Basic techniques",
+      "kime": "Concentration of physical and mental energy, decision",
+      "kiritsu": "Stand up",
+      "ko": "Small, posterior",
+      "kohai": "Junior practitioner, opposite of Sempai",
+      "kokoro": "Spirit, heart",
+      "kokyu": "Breath power",
+      "koshi": "Hip",
+      "kote": "Wrist",
+      "kumite": "Sparring, combat",
+      "kuzushi": "Off-balancing",
+      "kyu": "Student rank",
+      "kyusho": "Vital points",
+      "maai": "Correct distance",
+      "mae": "Front",
+      "maki": "To roll",
+      "makikomi": "Judo technique consisting of throwing the opponent by rolling",
+      "makiwara": "Traditional straw target used for Karate-do or Kyudo training",
+      "mawashi": "Circular movement",
+      "midale": "Karate-do training method consisting of continuous attacks and evasions",
+      "migi": "Right",
+      "mokuso": "Literally: not thinking. Concentration attitude during the start and end ceremonial practice of Budo",
+      "morote": "Both hands",
+      "nagewaza": "Throwing techniques",
+      "neko": "Cat",
+      "nobashi": "Extension, action of stretching",
+      "nukite": "Attack with fingers together and extended",
+      "o": "Big",
+      "okuri": "Sliding",
+      "osae": "Pinning",
+      "otagai": "Mutual salute",
+      "otoshi": "Downward movement",
+      "randori": "Free sparring",
+      "rei": "Salutation",
+      "reigi": "Etiquette, rules of conduct",
+      "ritsurei": "Standing salute",
+      "ryo": "Both",
+      "ryu": "Style, school",
+      "sabaki": "Evasion",
+      "sai": "Trident-shaped weapon originating from Okinawa",
+      "samurai": "Japanese warrior",
+      "sanbonkumite": "Sparring with three attacks",
+      "sasae": "Support, sustain",
+      "seiza": "Sitting in the kneeling position",
+      "sempai": "More senior, more experienced student",
+      "sennosen": "Anticipation",
+      "sensei": "Teacher",
+      "senseirei": "Salute to the teacher",
+      "senseitaishi": "Salute directed to the teacher",
+      "shihan": "High-level teacher",
+      "shiho": "Four directions",
+      "shikko": "Walking in kneeling position",
+      "shimoza": "West wall of the dojo, opposite Kamiza, where the students sit",
+      "shimoseki": "North wall of the dojo, where non-practicing assistants may stay",
+      "shin": "Spirit",
+      "shinai": "Bamboo sword used in Kendo practice",
+      "shisei": "Position, posture",
+      "shizentai": "Natural body position, standing",
+      "sho": "Small",
+      "shomen": "Front",
+      "shomenrei": "Salute to the main wall of the dojo",
+      "shomentaishi": "Salute directed to the main wall of the dojo",
+      "shuto": "Knife hand (side of the little finger)",
+      "sokuto": "Knife foot, side of the little toe",
+      "soto": "Outside",
+      "sumo": "Traditional Japanese wrestling",
+      "sutemi": "Sacrifice of the body; techniques where the practitioner falls to throw the opponent",
+      "tai": "Body, same as 'karada'",
+      "taisabaki": "Body evasion",
+      "tanto": "Dagger",
+      "tatami": "Japanese mat that covers the floor where Judo and Aikido are practiced",
+      "tate": "Vertical",
+      "te": "Hand",
+      "tettsui": "Outer side of the fist",
+      "to": "Far, distant",
+      "tobi": "To jump",
+      "tokui": "Stronger",
+      "tokuiwaza": "Strongest, favorite technique",
+      "tomarite": "Combat techniques originating from Tomari - Okinawa",
+      "tomoe": "Circular",
+      "tonfa": "Agricultural instrument used in popular combat techniques",
+      "tori": "The one who attacks, the executor",
+      "tsuki": "Punch, strike",
+      "tsukuri": "Contact, second phase of executing a Judo technique",
+      "uchi": "Inside",
+      "ude": "Arm, forearm",
+      "uke": "Attacker in paired practice; the one who executes the fall",
+      "ukemi": "Fall, rolling",
+      "ura": "Movement performed by turning; the opponent's back",
+      "uraken": "Back of the hand",
+      "uramawashi": "Circular kick backwards",
+      "ushiro": "Back, behind",
+      "wakizashi": "Shorter sword",
+      "waza": "Technique",
+      "yakosoku": "Prearranged, without resistance",
+      "yame": "Stop",
+      "yasume": "Order to relax",
+      "yoi": "Order of attention",
+      "yoko": "Side, lateral",
+      "zanshin": "Attitude of concentration",
+      "zarei": "Salute in seiza",
+      "zempo": "Forward direction",
+      "zen1": "Front",
+      "zen2": "Japanese discipline, one of the branches of Buddhism"
+    },
+    "writingSystems": {
+      "title": "Japanese Writing Systems",
+      "hiragana": {
+        "title": "Hiragana (ひらがな)",
+        "description": "Syllabic system used for native Japanese words"
+      },
+      "katakana": {
+        "title": "Katakana (カタカナ)",
+        "description": "Syllabic system used for foreign words"
+      },
+      "kanji": {
+        "title": "Kanji (漢字)",
+        "description": "Chinese characters adapted for Japanese"
+      }
+    }
+  },
+  "Graduations": {
+    "meta": {
+      "title": "Karate Graduations | Kyu and Dan System | ASKKSA Shotokan Madeira",
+      "description": "Learn about the Shotokan Karate graduation system. Kyu, Dan, belt colors and symbolism. System founded by Jigoro Kano. ASKKSA Funchal, Madeira.",
+      "keywords": "Karate Graduations, Kyu Dan System, Karate Belts, Jigoro Kano, Belt Colors, Black Belt, Karate Ranking, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Graduations",
+    "introduction": "Martial arts originating from Japan and Okinawa present a variety of titles and ranking classes. The current colored belt ranking system is the most accepted. Before this, many different methods were used to mark the various practitioner levels.",
+    "description": "The current system governing Karate using Kyu (class) and Dan (grade) was founded by Jigoro Kano, founder of Judo Kodokan. Kano was an educator and understood that many practitioners need immediate incentives after starting a martial art. The anxiety of this type of practitioner could not be satisfied by long-term goals alone.",
+    "system": {
+      "title": "Kyu and Dan Graduation System",
+      "founder": "System founded by Jigoro Kano, founder of Judo Kodokan",
+      "purpose": "Created to provide immediate incentives to practitioners beginning martial arts",
+      "motivation": "Practitioners' anxiety could not be satisfied by long-term goals alone"
+    },
+    "symbolism": {
+      "title": "Color Symbolism",
+      "description": "In this color classification and on a symbolic level:",
+      "white": "White represents the purity of the beginner",
+      "black": "Black refers to the refined knowledge acquired over years of training"
+    },
+    "kyu": {
+      "title": "Kyu Graduations (Class)",
+      "description": "Kyu graduations represent student levels, usually identified by colored belts",
+      "order": "Descending count until the black belt"
+    },
+    "dan": {
+      "title": "Dan Graduations (Grade)",
+      "description": "In the black belt classification, the first is called 1st Dan, the second 2nd Dan, and so forth in ascending order up to 10th Dan, achievable only by exemplary masters who dedicated their entire lives to Karate.",
+      "1": "1st Dan - First black belt grade",
+      "2": "2nd Dan - Second black belt grade",
+      "3": "3rd Dan - Third black belt grade",
+      "4": "4th Dan - Fourth black belt grade",
+      "5": "5th Dan - Fifth black belt grade",
+      "6": "6th Dan - Sixth black belt grade",
+      "7": "7th Dan - Seventh black belt grade",
+      "8": "8th Dan - Eighth black belt grade",
+      "9": "9th Dan - Ninth black belt grade",
+      "10": "10th Dan - Tenth grade - Achievable only by exemplary masters"
+    },
+    "colors": {
+      "title": "Belt Colors by Graduation",
+      "white": "White - Beginner",
+      "yellow": "Yellow - First knowledge",
+      "orange": "Orange - Basic development",
+      "green": "Green - Technical growth",
+      "blue": "Blue - Deepening",
+      "brown": "Brown - Preparation for black belt",
+      "black": "Black - Refined knowledge"
+    },
+    "timeline": {
+      "title": "Time of Dedication",
+      "description": "The ranking system recognizes the time and dedication required for mastering Karate",
+      "journey": "Each graduation represents a stage in the karateka's journey",
+      "mastery": "The highest ranks are achievable only by masters who dedicated their entire lives to Karate"
+    }
+  },
+  "News": {
+    "meta": {
+      "title": "News | Under Maintenance | ASKKSA Shotokan Madeira",
+      "description": "ASKKSA news page under maintenance. Soon we will have updates about events, competitions, and activities of Shotokan Karate. ASKKSA Funchal, Madeira.",
+      "keywords": "ASKKSA News, Karate Events, Competitions, Activities, Maintenance, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "News",
+    "maintenance": {
+      "title": "Page Under Maintenance",
+      "subtitle": "We are working to serve you better",
+      "description": "Our news page is temporarily under maintenance. We are developing a new experience to share with you the latest news, events, and achievements of our association.",
+      "contact": {
+        "title": "Stay Informed",
+        "description": "While we work on the new page, you can follow our news through social media or contact us directly.",
+        "social": "Follow us on social media",
+        "direct": "Contact us directly"
+      },
+      "return": {
+        "title": "We’ll Be Back Soon",
+        "message": "We appreciate your patience and understanding. The new news page will be available very soon with an improved experience."
+      }
+    },
+    "oss": "OSS!"
   },
   "Footer": {
     "mission": "Tradition, discipline, and excellence in Shotokan Karate. Discover your inner strength through martial arts.",

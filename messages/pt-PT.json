@@ -193,12 +193,34 @@
   },
   "Philosophy": {
     "meta": {
-      "title": "Filosofia | ASKKSA Karaté Shotokan Madeira",
-      "description": "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrole.",
-      "keywords": "Filosofia Karaté, Bushido, Niju Kun, Dojo Kun, Sensei Funakoshi, Princípios Karaté, ASKKSA, Shotokan"
+      "title": "Filosofia do Karaté | Bushido, Niju Kun, Dojo Kun | ASKKSA Shotokan Madeira",
+      "description": "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrole. ASKKSA Funchal, Madeira.",
+      "keywords": "Filosofia Karaté, Bushido, Niju Kun, Dojo Kun, Sensei Funakoshi, Princípios Karaté, Samurai, Código Ética, ASKKSA, Shotokan, Funchal, Madeira, Disciplina, Respeito"
     },
     "title": "Filosofia do Karaté",
-    "introduction": "A filosofia do Karaté é baseada em princípios milenares de disciplina, respeito e autocontrole, transmitidos através de três pilares fundamentais da sabedoria oriental.",
+    "introduction": "A filosofia do Karaté Shotokan baseia-se em princípios milenares que moldam não apenas a técnica, mas o carácter do praticante. Descubra os fundamentos éticos e morais que guiam cada karateka.",
+    "sections": {
+      "bushido": {
+        "title": "Código de Ética - Bushido",
+        "description": "Os nove princípios éticos inspirados no código dos Samurais: honra, lealdade, sinceridade, coragem, bondade, modéstia, justiça, respeito e autocontrolo.",
+        "principlesCount": "9 Princípios"
+      },
+      "nijuKun": {
+        "title": "Niju Kun - 20 Princípios",
+        "description": "Os vinte princípios desenvolvidos por Sensei Gichin Funakoshi que constituem a base filosófica de todos os praticantes de Karaté.",
+        "principlesCount": "20 Princípios"
+      },
+      "dojoKun": {
+        "title": "Dojo Kun - 5 Máximas",
+        "description": "As cinco máximas fundamentais de Sensei Funakoshi para todos aqueles que entram num local de treino, o Dojo.",
+        "principlesCount": "5 Máximas"
+      }
+    },
+    "importance": {
+      "title": "A Importância da Filosofia no Karaté",
+      "description": "A filosofia do Karaté não se limita apenas às técnicas físicas, mas engloba um código moral e ético que orienta o praticante tanto dentro como fora do dojo. Estes ensinamentos milenares formam a base do desenvolvimento pessoal e espiritual de cada karateka."
+    },
+    "explore": "Explorar →",
     "navigation": {
       "bushido": "Bushido",
       "nijuKun": "Niju Kun",
@@ -206,59 +228,68 @@
     }
   },
   "Bushido": {
-    "title": "Código de Ética - Bushido",
-    "introduction": "O Karaté é fundamentalmente BUDO e assim sendo, o seu código ético é inspirado pelo do BUSHIDO, criado pelos Samurais. Neste código, a honra e a lealdade são dois dos seus princípios mais importantes.",
-    "description": "Mas, não menos significativo, temos também: justiça, coragem, bondade e benevolência, modéstia e humildade, sinceridade, respeito e autocontrolo. Estas nove qualidades constituem a base de comportamento exemplar e contagiando todos os que lhes são próximos.",
+    "meta": {
+      "title": "Código de Ética Bushido | 9 Princípios Samurai | ASKKSA Shotokan Madeira",
+      "description": "Descubra o código de ética Bushido no Karaté Shotokan. Os 9 princípios samurai: honra, lealdade, sinceridade, coragem, bondade, modéstia, justiça, respeito e autocontrole. ASKKSA Funchal, Madeira.",
+      "keywords": "Bushido, Código Ética Karaté, Princípios Samurai, Filosofia Karaté, Honra, Lealdade, Sinceridade, Coragem, Bondade, Modéstia, Justiça, Respeito, Autocontrole, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Código de Ética Bushido",
+    "introduction": "O Bushido, ou \"Caminho do Guerreiro\", é o código de conduta moral dos samurais que foi adaptado para o Karaté Shotokan. Este código representa os valores fundamentais que todo praticante deve cultivar.",
+    "description": "Os nove princípios do Bushido formam a base ética da nossa prática, orientando o desenvolvimento do carácter dentro e fora do dojo. Cada princípio representa uma virtude essencial para o crescimento pessoal e espiritual.",
     "principles": {
-      "title": "Código de Ética do Karaté",
       "honor": {
-        "name": "HONRA",
-        "japanese": "(Meiyo)",
-        "description": "A dignidade pessoal e integridade moral"
+        "name": "Honra",
+        "japanese": "Meiyo",
+        "description": "A dignidade pessoal e a integridade moral que guiam todas as ações do karateka"
       },
       "loyalty": {
-        "name": "LEALDADE",
-        "japanese": "(Chuujitsu)",
-        "description": "Fidelidade aos princípios e às pessoas"
+        "name": "Lealdade",
+        "japanese": "Chugi",
+        "description": "A fidelidade aos princípios, ao dojo, aos instrutores e aos companheiros de treino"
       },
       "sincerity": {
-        "name": "SINCERIDADE",
-        "japanese": "(Seijitsu)",
-        "description": "Honestidade em palavras e ações"
+        "name": "Sinceridade",
+        "japanese": "Makoto",
+        "description": "A honestidade consigo mesmo e com os outros em todas as circunstâncias"
       },
       "courage": {
-        "name": "CORAGEM",
-        "japanese": "(Yuuki)",
-        "description": "Bravura física e moral"
+        "name": "Coragem",
+        "japanese": "Yu",
+        "description": "A bravura para enfrentar desafios e defender os princípios corretos"
       },
       "kindness": {
-        "name": "BONDADE e BENEVOLÊNCIA",
-        "japanese": "(Shinsetsu)",
-        "description": "Compaixão e generosidade para com outros"
+        "name": "Bondade",
+        "japanese": "Jin",
+        "description": "A compaixão e benevolência no tratamento com todos os seres"
       },
       "modesty": {
-        "name": "MODÉSTIA e HUMILDADE",
-        "japanese": "(Ken)",
-        "description": "Ausência de arrogância e vaidade"
+        "name": "Modéstia",
+        "japanese": "Kenkyo",
+        "description": "A humildade e simplicidade, reconhecendo sempre que há muito a aprender"
       },
       "justice": {
-        "name": "JUSTIÇA",
-        "japanese": "(Tadashi)",
-        "description": "Equidade e retidão moral"
+        "name": "Justiça",
+        "japanese": "Gi",
+        "description": "A retidão moral e a equidade em todas as decisões e ações"
       },
       "respect": {
-        "name": "RESPEITO",
-        "japanese": "(Sonchoo)",
-        "description": "Consideração pelos outros e por si mesmo"
+        "name": "Respeito",
+        "japanese": "Rei",
+        "description": "A consideração e reverência por si mesmo, pelos outros e pelas tradições"
       },
       "selfControl": {
-        "name": "AUTOCONTROLO",
-        "japanese": "(Seigyo)",
-        "description": "Domínio sobre as próprias emoções e impulsos"
+        "name": "Autocontrole",
+        "japanese": "Jisei",
+        "description": "O domínio sobre as próprias emoções, impulsos e reações"
       }
     }
   },
   "NijuKun": {
+    "meta": {
+      "title": "Niju Kun - 20 Princípios | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Conheça os 20 princípios fundamentais do Karaté Shotokan (Niju Kun) desenvolvidos pelo Sensei Gichin Funakoshi. Filosofia e ensinamentos para a vida. ASKKSA Funchal, Madeira.",
+      "keywords": "Niju Kun, 20 Princípios Karaté, Gichin Funakoshi, Filosofia Karaté, Ensinamentos, Princípios Fundamentais, Karaté Tradicional, ASKKSA, Shotokan, Funchal, Madeira"
+    },
     "title": "Niju Kun - Os 20 Princípios",
     "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou vinte princípios que deveriam ser a base filosófica de todos os praticantes de Karaté. Chamou a esses ensinamentos de Niju Kun.",
     "description": "Estes princípios fundamentais guiam não apenas a prática do Karaté, mas também a forma como devemos viver nossas vidas com honor, respeito e disciplina.",
@@ -350,6 +381,11 @@
     }
   },
   "DojoKun": {
+    "meta": {
+      "title": "Dojo Kun - 5 Máximas | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Conheça as 5 máximas fundamentais do Dojo Kun desenvolvidas pelo Sensei Gichin Funakoshi para todos os praticantes de Karaté. Princípios essenciais para o dojo. ASKKSA Funchal, Madeira.",
+      "keywords": "Dojo Kun, 5 Máximas Karaté, Gichin Funakoshi, Filosofia Dojo, Mandamentos Dojo, Princípios Dojo, Karaté Tradicional, ASKKSA, Shotokan, Funchal, Madeira"
+    },
     "title": "Dojo Kun - As 5 Máximas",
     "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou cinco máximas que achava importantes para todos aqueles que entravam num local de treino, o Dojo. Chamou esses mandamentos de Dojo Kun.",
     "description": "Estas cinco máximas fundamentais estabelecem os princípios morais e éticos que devem guiar todos os praticantes dentro do dojo, criando um ambiente de respeito, disciplina e crescimento pessoal.",
@@ -381,9 +417,135 @@
     }
   },
   "ShotokanKatas": {
-    "title": "Shotokan Katas - 26 Katas",
+    "meta": {
+      "title": "Shotokan - 26 Katas | Gichin Funakoshi | ASKKSA Shotokan Madeira",
+      "description": "Conheça os 26 katas do estilo Shotokan desenvolvidos pelo Sensei Gichin Funakoshi. Estudo e prática ao longo de uma vida de treino. Heian, Tekki, Bassai, Kanku. ASKKSA Funchal, Madeira.",
+      "keywords": "Shotokan Katas, 26 Katas, Gichin Funakoshi, Karaté Shotokan, Heian, Tekki, Bassai, Kanku, Kata Tradicional, ASKKSA, Funchal, Madeira"
+    },
+    "title": "Shotokan - 26 Katas",
     "introduction": "O estilo Shotokan, fundado por Sensei Funakoshi, possui atualmente 26 katas que são estudadas ao longo de uma vida de treino.",
     "description": "Cada kata representa uma forma única de combate imaginário, preservando técnicas ancestrais e filosofias do Karaté tradicional. Os katas são a essência do Karaté, combinando movimento, respiração e espírito.",
+    "katas": {
+      "heian_shodan": {
+        "name": "HEIAN SHODAN (平安初段)",
+        "meaning": "PAZ(hei) e TRANQUILIDADE(an) - Primeiro"
+      },
+      "heian_nidan": {
+        "name": "HEIAN NIDAN (平安二段)",
+        "meaning": "PAZ e TRANQUILIDADE - Segundo"
+      },
+      "heian_sandan": {
+        "name": "HEIAN SANDAN (平安三段)",
+        "meaning": "PAZ e TRANQUILIDADE - Terceiro"
+      },
+      "heian_yondan": {
+        "name": "HEIAN YONDAN (平安四段)",
+        "meaning": "PAZ e TRANQUILIDADE - Quarto"
+      },
+      "heian_godan": {
+        "name": "HEIAN GODAN (平安五段)",
+        "meaning": "PAZ e TRANQUILIDADE - Quinto"
+      },
+      "tekki_shodan": {
+        "name": "TEKKI SHODAN (鉄騎初段)",
+        "meaning": "CAVALEIRO de FERRO (tetsu=ferro, Ki=cavaleiro) - Primeiro"
+      },
+      "tekki_nidan": {
+        "name": "TEKKI NIDAN (鉄騎二段)",
+        "meaning": "CAVALEIRO de FERRO - Segundo"
+      },
+      "tekki_sandan": {
+        "name": "TEKKI SANDAN (鉄騎三段)",
+        "meaning": "CAVALEIRO de FERRO - Terceiro"
+      },
+      "bassai_dai": {
+        "name": "BASSAI DAÌ (披塞大)",
+        "meaning": "ROMPER a FORTALEZA - Longo"
+      },
+      "kanku_dai": {
+        "name": "KANKU DAÍ (観空大)",
+        "meaning": "CONTEMPLAR o CÉU (kan=olhar,ku=nada,vazio, céu) - Longo"
+      },
+      "jitte": {
+        "name": "jutte/JITTE (十手)",
+        "meaning": "DEZ MÃOS (ju-dez,te=mão)"
+      },
+      "hangetsu": {
+        "name": "HANGETSU (半月)",
+        "meaning": "MEIA LUA (han=metade, meio, guetsu=lua)"
+      },
+      "enpi": {
+        "name": "ENPI (燕飛)",
+        "meaning": "VÔO da ANDORINHA (en=pássaro, pi=vôo)"
+      },
+      "gankaku": {
+        "name": "GANKAKU (岩鶴)",
+        "meaning": "GROU SOBRE a ROCHA (gan=rocha, kaku=a garça sobre)"
+      },
+      "jion": {
+        "name": "JION (慈恩)",
+        "meaning": "AMOR e GRATIDÃO (ji=amor universal, delicado, gentil; on=amor, benevolência, bondade)"
+      },
+      "bassai_sho": {
+        "name": "BASSAI SHO (披塞小)",
+        "meaning": "ROMPER A FORTALEZA - Curto"
+      },
+      "kanku_sho": {
+        "name": "KANKU SHO (観空小)",
+        "meaning": "CONTEMPLAR o CÉU - Curto"
+      },
+      "chinte": {
+        "name": "CHINTE (珍手)",
+        "meaning": "MÃOS ESTRANHAS (chin=estranho, esquisito, te=mão)"
+      },
+      "unsu": {
+        "name": "UNSU (雲手)",
+        "meaning": "MÃOS DE NUVENS (un=nuvem, su=mão)"
+      },
+      "sochin": {
+        "name": "SOCHIN (壯鎭)",
+        "meaning": "PAZ INABALÁVEL (so=robusto, vigor, enérgico, chin=suprimir, ficar calmo)"
+      },
+      "nijushiho": {
+        "name": "NIJUSHIHO (二十四步)",
+        "meaning": "24 PASSOS/MOVIMENTOS"
+      },
+      "gojushiho_dai": {
+        "name": "GOJUSHIHO DAÍ (五十四歩大)",
+        "meaning": "54 PASSOS - Longo"
+      },
+      "gojushiho_sho": {
+        "name": "GOJUSHIHO SHO (五十四歩小)",
+        "meaning": "54 PASSOS - Curto"
+      },
+      "meikyo": {
+        "name": "MEIKYO (明鏡)",
+        "meaning": "ESPELHO LIMPO (mei=claro,kyo=espelho)"
+      },
+      "jiin": {
+        "name": "JIIN (慈陰)",
+        "meaning": "AMOR PROTECÇÃO (ji=amor universal, delicado, gentil, in=sombra)"
+      },
+      "wankan": {
+        "name": "WANKAN (王冠)",
+        "meaning": "COROAÇÃO DO REI (wan=rei, Kan=corvo)"
+      }
+    },
+    "techniques": {
+      "title": "Técnicas Fundamentais",
+      "positions": {
+        "title": "Posições (Dachi)",
+        "description": "Fundamentos das posições do Karaté Shotokan"
+      },
+      "legs": {
+        "title": "Técnicas de Pernas",
+        "description": "Chutes e técnicas de pernas fundamentais"
+      },
+      "handsFeet": {
+        "title": "Mãos e Pés",
+        "description": "Formas de mãos e técnicas de pés"
+      }
+    },
     "footer": {
       "title": "Uma Vida de Estudo",
       "message": "Os 26 katas do Shotokan representam um universo completo de conhecimento marcial. Cada kata tem sua própria personalidade, história e lições a ensinar, proporcionando um caminho de aprendizado que dura toda a vida."
@@ -415,20 +577,52 @@
   },
   "InDojo": {
     "meta": {
-      "title": "No Dojo | ASKKSA Karaté Shotokan Madeira",
-      "description": "",
-      "keywords": ""
+      "title": "No Dojo | Etiqueta, Regras e Tradições | ASKKSA Karaté Shotokan Madeira",
+      "description": "Descubra a vida no dojo de Karaté Shotokan. Saudação, regras, vocabulário japonês e sistema de graduações. Tradições e etiqueta do Karaté. ASKKSA Funchal, Madeira.",
+      "keywords": "Dojo Karaté, Etiqueta Karaté, Regras Dojo, Saudação OSS, Vocabulário Japonês, Graduações Karaté, Tradições, ASKKSA, Shotokan, Funchal, Madeira"
     },
     "title": "No Dojo",
     "introduction": "No Dojo, o coração do Karaté, praticamos e vivemos os princípios que nos guiam. Aqui, a tradição encontra a disciplina, e cada treino é uma oportunidade de crescimento pessoal.",
+    "sections": {
+      "salutation": {
+        "title": "Saudação",
+        "description": "A saudação no Karaté é uma expressão da sinceridade (SEIJITSU) que faz parte do código ético da arte marcial. Ela é um sinal dum karateca que não oculta os seus ideais e sentimentos e consegue ser ele próprio.",
+        "href": "/in-dojo/salutation"
+      },
+      "rules": {
+        "title": "Regras",
+        "description": "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam.",
+        "href": "/in-dojo/rules"
+      },
+      "vocabulary": {
+        "title": "Vocabulário",
+        "description": "Visto que o Karaté é uma arte marcial de origem japonesa é natural que muitos dos termos utilizados no Dojo, sejam japoneses.",
+        "href": "/in-dojo/vocabulary"
+      },
+      "grades": {
+        "title": "Graduações",
+        "description": "As artes marciais provenientes do Japão e Okinawa, apresentam uma variedade de títulos e classes de graduações.",
+        "href": "/in-dojo/grades"
+      }
+    },
+    "philosophy": {
+      "title": "A Vida no Dojo",
+      "description": "O dojo não é apenas um local de treino físico, mas um espaço sagrado onde se cultiva o espírito, se aprende disciplina e se forja o carácter. Cada elemento - desde a saudação até às regras de etiqueta - contribui para criar um ambiente de respeito mútuo e crescimento pessoal."
+    },
     "navigation": {
       "salutation": "Saudação",
       "rules": "Regras",
       "vocabulary": "Vocabulário",
       "grades": "Graduações"
-    }
+    },
+    "explore": "Explorar →"
   },
   "Salutation": {
+    "meta": {
+      "title": "Saudação no Karaté | OSS e Rituais | ASKKSA Shotokan Madeira",
+      "description": "Descubra o significado da saudação no Karaté Shotokan, a palavra OSS e os rituais de início e fim de treino. SEIJITSU, Mokuso, Seiza. ASKKSA Funchal, Madeira.",
+      "keywords": "Saudação Karaté, OSS, Rituais Karaté, SEIJITSU, Mokuso, Seiza, Shomen ni Rei, Sensei ni Rei, ASKKSA, Shotokan, Funchal, Madeira, Dojo, Etiqueta Karaté"
+    },
     "title": "Saudação",
     "introduction": "A saudação no Karaté é uma expressão da sinceridade (SEIJITSU) que faz parte do código ético da arte marcial. Ela é um sinal dum karateca que não oculta os seus ideais e sentimentos e consegue ser ele próprio. A saudação nas aulas, seja   o simples OSS , a saudação ao parceiro de treino ou mesmo o ritual de início ou de fim do treino, reveste-se de grande importância para todos aqueles que querem viver o Karaté na sua forma mais profunda e pura.",
     "description": "Ao entrar no dojo, cumprimentamos o Sensei e os colegas, reconhecendo a importância do respeito mútuo e da disciplina.",
@@ -539,6 +733,11 @@
     }
   },
   "DojoRules": {
+    "meta": {
+      "title": "Regras do Dojo | Etiqueta e Conduta | ASKKSA Shotokan Madeira",
+      "description": "Conheça as regras de conduta e etiqueta do dojo de Karaté Shotokan. Comportamento, respeito e tradições japonesas. ASKKSA Funchal, Madeira.",
+      "keywords": "Regras Dojo, Etiqueta Karaté, Conduta Dojo, Respeito, Tradições Japonesas, Sensei, Comportamento Karaté, ASKKSA, Shotokan, Funchal, Madeira"
+    },
     "title": "Regras do Dojo",
     "introduction": "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam. Nos dojos ASKKSA, seguem-se as regras tradicionais de boa conduta, características dos dojos japoneses, pontos de origem do Karaté.",
     "description": "Portanto, é importante que cada karateca tenha noção que, dentro do local de treino (e preferencialmente em todas as outras situações do dia a dia), deverá comportar-se de acordo com a herança moral desta arte marcial. As regras abaixo devem ser compreendidas e respeitadas por todos os praticantes dos nossos dojos.",
@@ -593,6 +792,11 @@
     }
   },
   "Vocabulary": {
+    "meta": {
+      "title": "Vocabulário Japonês | Termos Karaté | ASKKSA Shotokan Madeira",
+      "description": "Aprenda o vocabulário japonês essencial do Karaté Shotokan. Números, contadores e termos mais utilizados no dojo. Hiragana, Katakana, Kanji. ASKKSA Funchal, Madeira.",
+      "keywords": "Vocabulário Japonês, Termos Karaté, Japonês Karaté, Dojo, Números Japonês, Hiragana, Katakana, Kanji, ASKKSA, Shotokan, Funchal, Madeira"
+    },
     "title": "Vocabulário Japonês",
     "introduction": "Visto que o Karaté é uma arte marcial de origem japonesa é natural que muitos dos termos utilizados no Dojo, sejam japoneses. Apesar de inicialmente poderem fazer confusão aos praticantes, com o acumular de treinos são palavras que acabam por fazer parte do quotidiano de todos os karatecas.",
     "description": "Saliente-se que os japoneses utilizam três sistemas de alfabetos (Hiragana, Katakana e Kanji) no seu dia a dia. Para facilitar os novos praticantes segue abaixo o vocabulário mais utilizado nos dojos de karaté de todo o mundo.",
@@ -817,9 +1021,29 @@
       "zempo": "Em direcção frontal",
       "zen1": "Frente",
       "zen2": "Disciplina japonesa, uma das correntes do Budismo"
+    },
+    "writingSystems": {
+      "title": "Sistema de Escrita Japonesa",
+      "hiragana": {
+        "title": "Hiragana (ひらがな)",
+        "description": "Sistema silábico usado para palavras japonesas nativas"
+      },
+      "katakana": {
+        "title": "Katakana (カタカナ)",
+        "description": "Sistema silábico usado para palavras estrangeiras"
+      },
+      "kanji": {
+        "title": "Kanji (漢字)",
+        "description": "Caracteres chineses adaptados para o japonês"
+      }
     }
   },
   "Graduations": {
+    "meta": {
+      "title": "Graduações Karaté | Sistema Kyu e Dan | ASKKSA Shotokan Madeira",
+      "description": "Conheça o sistema de graduações do Karaté Shotokan. Kyu, Dan, cores dos cintos e simbolismo. Sistema fundado por Jigoro Kano. ASKKSA Funchal, Madeira.",
+      "keywords": "Graduações Karaté, Sistema Kyu Dan, Cintos Karaté, Jigoro Kano, Cores Cintos, Cinto Negro, Graduação Karaté, ASKKSA, Shotokan, Funchal, Madeira"
+    },
     "title": "Graduações",
     "introduction": "As artes marciais provenientes do Japão e Okinawa, apresentam uma variedade de títulos e classes de graduações. O sistema atual de graduação de cintos coloridos é o mais aceite. Antes disso, muitos métodos distintos eram usados para marcar os vários níveis dos praticantes.",
     "description": "O sistema atual que rege o Karaté usando o Kyu (classe) e Dan (grau), foi fundado por Jigoro Kano, fundador do Judo Kodokan. Kano era um educador e conhecia as pessoas, sabendo que são muitos os que necessitam de estímulos imediatamente após terem começado a praticar uma arte marcial. A ansiedade desse tipo de praticante não podia ser saciada por objetivos a longo prazo.",
@@ -870,5 +1094,29 @@
       "journey": "Cada graduação representa uma etapa na jornada do karateka",
       "mastery": "Os graus mais elevados são alcançáveis apenas por mestres que dedicaram toda a sua vida ao Karaté"
     }
+  },
+  "News": {
+    "meta": {
+      "title": "Notícias | Em Manutenção | ASKKSA Shotokan Madeira",
+      "description": "Página de notícias da ASKKSA em manutenção. Em breve teremos novidades sobre eventos, competições e atividades do Karaté Shotokan. ASKKSA Funchal, Madeira.",
+      "keywords": "Notícias ASKKSA, Eventos Karaté, Competições, Atividades, Manutenção, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "title": "Notícias",
+    "maintenance": {
+      "title": "Página em Manutenção",
+      "subtitle": "Estamos a trabalhar para melhor vos servir",
+      "description": "A nossa página de notícias está temporariamente em manutenção. Estamos a desenvolver uma nova experiência para partilhar convosco as últimas novidades, eventos e conquistas da nossa associação.",
+      "contact": {
+        "title": "Mantenha-se Informado",
+        "description": "Enquanto trabalhamos na nova página, pode acompanhar as nossas novidades através das redes sociais ou contactar-nos diretamente.",
+        "social": "Siga-nos nas redes sociais",
+        "direct": "Contacte-nos diretamente"
+      },
+      "return": {
+        "title": "Voltamos em Breve",
+        "message": "Agradecemos a vossa paciência e compreensão. A nova página de notícias estará disponível muito em breve com uma experiência melhorada."
+      }
+    },
+    "oss": "OSS!"
   }
 }
