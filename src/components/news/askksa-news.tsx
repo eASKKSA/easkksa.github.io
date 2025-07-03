@@ -41,6 +41,7 @@ export default function ASKKSANews({
         const response = await fetch("/api/askksa-news");
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           setNews(data);
         }
       } catch (error) {
@@ -151,9 +152,6 @@ export default function ASKKSANews({
               {/* Header do artigo - responsivo */}
               <div className="space-y-3 mb-4">
                 {/* Título */}
-                <h4 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white line-clamp-2 leading-tight">
-                  {item.title}
-                </h4>
 
                 {/* Data e badge - layout responsivo */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -171,9 +169,9 @@ export default function ASKKSANews({
               </div>
 
               {/* Descrição */}
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
-                {item.description}
-              </p>
+              <h4 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white leading-tight pb-3">
+                {item.title}
+              </h4>
 
               {/* Footer do artigo */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
