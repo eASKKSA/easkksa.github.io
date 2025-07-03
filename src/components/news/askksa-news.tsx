@@ -102,7 +102,8 @@ export default function ASKKSANews({
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
           <FaSearch className="text-primary text-2xl" />
           <div>
@@ -112,10 +113,16 @@ export default function ASKKSANews({
             <p className="text-gray-600 dark:text-gray-400">{subtitle}</p>
           </div>
         </div>
+        <div className="flex items-center gap-2">
+          <FaSortAmountDown className="text-gray-400 text-sm" />
+          <span className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
+            {t("sortLabel")}
+          </span>
+        </div>
       </div>
 
       {news.length === 0 ? (
-        <div className="text-center p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg border border-primary/20">
+        <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg border border-primary/20">
           <FaNewspaper className="text-4xl text-primary/60 mx-auto mb-4" />
           <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
             {t("noNews.title")}
@@ -134,69 +141,79 @@ export default function ASKKSANews({
           </a>
         </div>
       ) : (
-        <div className="space-y-1!">
+        <div className="space-y-2!">
+          {/* Lista de notícias */}
           {news.map((item, index) => (
             <article
               key={index}
-              className="p-6 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
+              className="p-4 sm:p-6 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
             >
-              <div className="flex justify-between items-start mb-3">
-                <h4 className="text-lg font-bold text-gray-800 dark:text-white line-clamp-2 flex-1">
+              {/* Header do artigo - responsivo */}
+              <div className="space-y-3 mb-4">
+                {/* Título */}
+                <h4 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white line-clamp-2 leading-tight">
                   {item.title}
                 </h4>
-                <div className="flex flex-col space-y-1">
-                  <div className="flex items-center gap-1 text-xs text-gray-500 ml-4 bg-gray-50 dark:bg-gray-700 px-2 py-1 rounded-full">
-                    <FaCalendarAlt />
-                    {formatDate(item.pubDate)}
+
+                {/* Data e badge - layout responsivo */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div className="flex items-center gap-1 text-xs text-gray-500 bg-gray-50 dark:bg-gray-700 px-2 py-1 rounded-full w-fit">
+                    <FaCalendarAlt className="text-xs" />
+                    <span>{formatDate(item.pubDate)}</span>
                   </div>
+
                   {index === 0 && (
-                    <span className="text-xs flex self-end bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full font-medium">
+                    <span className="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full font-medium w-fit">
                       {t("mostRecent")}
                     </span>
                   )}
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
+              {/* Descrição */}
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
                 {item.description}
               </p>
 
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                    {item.source}
-                  </span>
-                </div>
+              {/* Footer do artigo */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <span className="text-xs sm:text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded w-fit">
+                  {item.source}
+                </span>
+
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm w-fit"
                 >
                   <span>{readMore}</span>
-                  <FaExternalLinkAlt className="text-sm" />
+                  <FaExternalLinkAlt className="text-xs" />
                 </a>
               </div>
             </article>
           ))}
 
-          {/* Link para mais notícias */}
-          <div className="text-center pt-4">
-            <a
-              href="https://news.google.com/search?q=ASKKSA&hl=pt-PT&gl=PT&ceid=PT%3Apt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all"
-            >
-              <FaSearch />
-              {t("seeMore")}
-            </a>
-          </div>
+          {/* Footer - Links e info */}
+          <div className="space-y-4 pt-2">
+            {/* Link para mais notícias */}
+            <div className="text-center">
+              <a
+                href="https://news.google.com/search?q=ASKKSA&hl=pt-PT&gl=PT&ceid=PT%3Apt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all text-sm sm:text-base"
+              >
+                <FaSearch />
+                {t("seeMore")}
+              </a>
+            </div>
 
-          {/* Indicador de ordenação */}
-          <div className="text-center text-sm text-gray-500 dark:text-gray-400 pt-2">
-            <FaSortAmountDown className="inline mr-2" />
-            {t("sortInfo")}
+            {/* Indicador de ordenação */}
+            <div className="text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              <FaSortAmountDown className="inline mr-2" />
+              {t("sortInfo")}
+            </div>
           </div>
         </div>
       )}
