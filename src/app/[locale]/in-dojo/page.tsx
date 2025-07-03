@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 // --- ASSETS ---
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
 import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
+import askksaThumb from "@/assets/askksa_thumb.svg";
 
 export const generateMetadata = metadata;
 
@@ -28,14 +29,14 @@ export default async function InDojoPage() {
       id: "rules",
       title: t("sections.rules.title"),
       description: t("sections.rules.description"),
-      image: "/askksa_logo.svg",
+      image: askksaThumb,
       href: "/in-dojo/rules" as const,
     },
     {
       id: "vocabulary",
       title: t("sections.vocabulary.title"),
       description: t("sections.vocabulary.description"),
-      image: "/askksa_logo.svg",
+      image: askksaThumb,
       href: "/in-dojo/vocabulary" as const,
     },
     {
