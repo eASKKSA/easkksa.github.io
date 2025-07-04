@@ -1,5 +1,5 @@
 {
-  "name": "ASKKSA - Academia de Karate Shotokan",
+  "name": "ASKKSA - Karaté Shotokan Madeira",
   "short_name": "ASKKSA",
   "description": "Associação Shotokan Kokusai Karate Santo António",
   "icons": [
@@ -52,8 +52,8 @@
       "purpose": "any maskable"
     }
   ],
-  "scope": "/askksa-web/",
-  "start_url": "/askksa-web/",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
