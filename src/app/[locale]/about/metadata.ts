@@ -3,6 +3,8 @@ import { AboutPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
+
 export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
   const t = await getTranslations("About");
   const orgT = await getTranslations("Organization");
@@ -111,7 +113,7 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/senseis/jorge_freitas.png",
+          url: jorgeFreitas.src,
           width: 400,
           height: 400,
           alt: "Equipa de Instrutores ASKKSA",
@@ -129,7 +131,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/senseis/jorge_freitas.png"],
+      images: [jorgeFreitas.src],
       site: "@askksa_madeira",
     },
   };

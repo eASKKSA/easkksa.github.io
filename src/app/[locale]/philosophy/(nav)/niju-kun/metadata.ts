@@ -3,6 +3,8 @@ import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import nijuKunImage from "@/assets/philosofy/principios.gif";
+
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("NijuKun");
   const orgT = await getTranslations("Organization");
@@ -21,8 +23,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url:
-        process.env.NEXT_PUBLIC_SITE_URL + "/assets/philosofy/principios.gif",
+      url: nijuKunImage.src,
       caption: "Niju Kun - 20 Princípios de Gichin Funakoshi",
     },
     author: {
@@ -86,10 +87,10 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/philosofy/principios.gif",
+          url: nijuKunImage.src,
           width: 600,
           height: 400,
-          alt: "Niju Kun - 20 Princípios de Gichin Funakoshi",
+          alt: t("meta.title"),
         },
         {
           url: "/icons/favicon-512x512.png",
@@ -106,7 +107,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/philosofy/principios.gif"],
+      images: [nijuKunImage.src],
       site: "@askksa_madeira",
     },
   };

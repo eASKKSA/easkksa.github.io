@@ -3,7 +3,7 @@ import { WebPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
-import senseiImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
+import askksaThumb from "@/assets/askksa_thumb.svg";
 
 export const jsonLd = async (): Promise<WithContext<WebPage>> => {
   const t = await getTranslations("InDojo");
@@ -21,7 +21,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url: senseiImage.src,
+      url: askksaThumb.src,
       caption: "Sensei no Dojo - Vida no Karaté",
     },
     author: {
@@ -94,7 +94,7 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: senseiImage.src,
+          url: askksaThumb.src,
           width: 800,
           height: 600,
           alt: "Sensei no Dojo - Vida no Karaté",
@@ -106,7 +106,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: [senseiImage.src],
+      images: [askksaThumb.src],
       site: "@askksa_madeira",
     },
   };

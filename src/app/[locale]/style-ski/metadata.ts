@@ -22,7 +22,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/assets/style-ski/top.jpg",
+      url: topImage.src,
       caption: "Shotokan Karate-Do International Federation",
     },
     author: {

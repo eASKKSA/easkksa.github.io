@@ -3,6 +3,8 @@ import { WebPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import principlesImage from "@/assets/philosofy/principios.gif";
+
 export const jsonLd = async (): Promise<WithContext<WebPage>> => {
   const t = await getTranslations("Philosophy");
   const orgT = await getTranslations("Organization");
@@ -19,9 +21,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url:
-        process.env.NEXT_PUBLIC_SITE_URL +
-        "/assets/philosofy/codigo-etica-karate.jpg",
+      url: principlesImage.src,
       caption: "Filosofia do Karaté - Bushido, Niju Kun e Dojo Kun",
     },
     author: {
@@ -111,10 +111,10 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/philosofy/codigo-etica-karate.jpg",
+          url: principlesImage.src,
           width: 800,
           height: 600,
-          alt: "Filosofia do Karaté - Bushido",
+          alt: "Gichin Funakoshi - Fundador do Karaté Shotokan",
         },
         {
           url: "/icons/favicon-512x512.png",
@@ -129,7 +129,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/philosofy/codigo-etica-karate.jpg"],
+      images: [principlesImage.src],
       site: "@askksa_madeira",
     },
   };

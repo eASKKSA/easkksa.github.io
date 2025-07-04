@@ -95,12 +95,6 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/askksa_logo.svg",
-          width: 400,
-          height: 400,
-          alt: "ASKKSA - Vocabulário Japonês do Karaté",
-        },
-        {
           url: "/icons/favicon-512x512.png",
           width: 512,
           height: 512,

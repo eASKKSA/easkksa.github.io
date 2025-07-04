@@ -3,6 +3,8 @@ import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
+
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("Bushido");
   const orgT = await getTranslations("Organization");
@@ -21,9 +23,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url:
-        process.env.NEXT_PUBLIC_SITE_URL +
-        "/assets/philosofy/codigo-etica-karate.jpg",
+      url: ethicalCodeImage.src,
       caption: "Código de Ética Bushido",
     },
     author: {
@@ -96,7 +96,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       },
       {
         "@type": "Thing",
-        name: "Autocontrole",
+        name: "Autocontrolo",
         description: "Nono princípio do Bushido",
       },
     ],
@@ -122,10 +122,10 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/philosofy/codigo-etica-karate.jpg",
+          url: ethicalCodeImage.src,
           width: 800,
           height: 600,
-          alt: "Código de Ética Bushido",
+          alt: t("meta.title"),
         },
         {
           url: "/icons/favicon-512x512.png",
@@ -142,7 +142,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/philosofy/codigo-etica-karate.jpg"],
+      images: [ethicalCodeImage.src],
       site: "@askksa_madeira",
     },
   };

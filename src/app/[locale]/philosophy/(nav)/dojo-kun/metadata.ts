@@ -3,6 +3,8 @@ import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
+
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("DojoKun");
   const orgT = await getTranslations("Organization");
@@ -21,7 +23,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/assets/philosofy/dojo-kun.jpg",
+      url: dojoKunImage.src,
       caption: "Dojo Kun - 5 Máximas de Gichin Funakoshi",
     },
     author: {
@@ -85,10 +87,10 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/philosofy/dojo-kun.jpg",
+          url: dojoKunImage.src,
           width: 800,
           height: 600,
-          alt: "Dojo Kun - 5 Máximas de Gichin Funakoshi",
+          alt: t("meta.title"),
         },
         {
           url: "/icons/favicon-512x512.png",
@@ -105,7 +107,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/philosofy/dojo-kun.jpg"],
+      images: [dojoKunImage.src],
       site: "@askksa_madeira",
     },
   };

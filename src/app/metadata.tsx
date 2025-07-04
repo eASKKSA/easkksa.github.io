@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { mainPagePathnames, routing } from "@/i18n/routing";
+import {
+  mainPagePathnames,
+  inDojoPagePathnames,
+  philosophyPagePathnames,
+  routing,
+} from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Thing, WithContext } from "schema-dts";
 import { headers } from "next/headers";
@@ -16,7 +21,7 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
   const appHeaders = await headers();
   const fullPathname = appHeaders.get("x-next-pathname") ?? "/";
 
-  // 2. Find the canonical key (e.g., "/about") for the current path (e.g., "/sobre")
+  // Remove locale prefix to get the pathname without locale
   const pathnameWithoutLocale = fullPathname.startsWith(`/${locale}`)
     ? fullPathname.substring(locale.length + 1) || "/"
     : fullPathname;
@@ -24,17 +29,31 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
   let canonicalKey: string | undefined;
   let pageLocalizations: { [key: string]: string } | undefined;
 
-  for (const [key, pathnames] of Object.entries(mainPagePathnames)) {
+  // Combine all pathname objects to search through them
+  const allPathnames = {
+    ...mainPagePathnames,
+    ...philosophyPagePathnames,
+    ...inDojoPagePathnames,
+    "/": { "pt-PT": "/", en: "/" }, // Add homepage
+    "/privacy-policy": {
+      "pt-PT": "/politica-de-privacidade",
+      en: "/privacy-policy",
+    },
+    "/not-found": { "pt-PT": "/nao-encontrado", en: "/not-found" },
+  };
+
+  // Find the canonical key for the current path
+  for (const [key, pathnames] of Object.entries(allPathnames)) {
     if (Object.values(pathnames).includes(pathnameWithoutLocale)) {
-      canonicalKey = key; // Found it! The key is "/about"
-      pageLocalizations = pathnames; // The object with { "pt-PT": "/sobre", "en": "/about" }
+      canonicalKey = key;
+      pageLocalizations = pathnames;
       break;
     }
   }
 
-  // 3. Dynamically build the 'alternates' object
+  // Build the alternates object
   let alternates: Metadata["alternates"] = {
-    canonical: fullPathname, // Default to self-referencing
+    canonical: `${siteUrl}${fullPathname}`, // Current page full URL
   };
 
   if (canonicalKey && pageLocalizations) {
@@ -51,9 +70,13 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
       languageAlternates[altLocale] = `${siteUrl}${prefix}${finalPath}`;
     });
 
+    // Add x-default pointing to the default locale version
+    const defaultLocalePath = pageLocalizations[routing.defaultLocale];
+    const defaultFinalPath = defaultLocalePath === "/" ? "" : defaultLocalePath;
+    languageAlternates["x-default"] = `${siteUrl}${defaultFinalPath}`;
+
     alternates = {
-      // Per your request, canonical points to the base path (the key)
-      canonical: canonicalKey,
+      canonical: `${siteUrl}${fullPathname}`, // Current page full URL
       languages: languageAlternates,
     };
   }
@@ -63,7 +86,7 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
     generator: "Next.js",
     applicationName: "ASKKSA",
     authors: [{ name: "ASKKSA", url: siteUrl }],
-    creator: "ASKKSA",
+    creator: "Nuno Fernandes & Lubélio Fernandes",
     category: "Artes Marciais",
 
     // --- Robots & Indexing ---

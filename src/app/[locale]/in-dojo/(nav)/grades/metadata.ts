@@ -3,6 +3,8 @@ import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import graduationsImage from "@/assets/in-dojo/graduacoes.jpg";
+
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("Graduations");
   const orgT = await getTranslations("Organization");
@@ -20,8 +22,8 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/assets/in-dojo/graduacoes.jpg",
-      caption: "Sistema de Graduações do Karaté - Kyu e Dan",
+      url: graduationsImage.src,
+      caption: t("meta.title"),
     },
     author: {
       "@type": "Organization",
@@ -93,10 +95,10 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/in-dojo/graduacoes.jpg",
+          url: graduationsImage.src,
           width: 800,
           height: 600,
-          alt: "Sistema de Graduações do Karaté - Kyu e Dan",
+          alt: t("meta.title"),
         },
         {
           url: "/icons/favicon-512x512.png",
@@ -113,7 +115,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/in-dojo/graduacoes.jpg"],
+      images: [graduationsImage.src],
       site: "@askksa_madeira",
     },
   };

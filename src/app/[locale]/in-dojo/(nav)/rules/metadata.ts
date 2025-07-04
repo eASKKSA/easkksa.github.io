@@ -21,7 +21,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     image: {
       "@type": "ImageObject",
       url: process.env.NEXT_PUBLIC_SITE_URL + "/askksa_logo.svg",
-      caption: "ASKKSA - Regras do Dojo",
+      caption: t("meta.title"),
     },
     author: {
       "@type": "Organization",
@@ -87,12 +87,6 @@ export async function metadata(): Promise<Metadata> {
       description: t("meta.description"),
       url: fullPathname,
       images: [
-        {
-          url: "/askksa_logo.svg",
-          width: 400,
-          height: 400,
-          alt: "ASKKSA - Regras do Dojo",
-        },
         {
           url: "/icons/favicon-512x512.png",
           width: 512,

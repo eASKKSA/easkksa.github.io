@@ -78,7 +78,7 @@ export default async function InDojoPage() {
                   <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-gray-900 dark:text-white">
                     {section.title}
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-4 leading-relaxed">
                     {section.description}
                   </p>
                   <span className="text-primary font-medium text-sm group-hover:underline">

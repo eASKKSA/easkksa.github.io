@@ -3,6 +3,8 @@ import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
+import historyBannerUrl from "@/assets/masters-of-karate.jpg";
+
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("History");
   const orgT = await getTranslations("Organization");
@@ -20,7 +22,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/assets/masters-of-karate.jpg",
+      url: historyBannerUrl.src,
       caption: "Mestres Fundadores do Karaté",
     },
     author: {
@@ -83,7 +85,7 @@ export async function metadata(): Promise<Metadata> {
       url: fullPathname,
       images: [
         {
-          url: "/assets/masters-of-karate.jpg",
+          url: historyBannerUrl.src,
           width: 1200,
           height: 600,
           alt: "Mestres Fundadores do Karaté",
@@ -103,7 +105,7 @@ export async function metadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["/assets/masters-of-karate.jpg"],
+      images: [historyBannerUrl.src],
       site: "@askksa_madeira",
     },
   };
