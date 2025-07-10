@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
 
 import desktopBg from "@/assets/askksa-background-tiger.svg";
-import mobileBg from "@/assets/askksa-background-tiger-mobile.png";
+import mobileBg from "@/assets/askksa-background-tiger-mobile.webp";
 
 const Background: React.FC = () => {
   return (
