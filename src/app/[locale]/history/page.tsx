@@ -22,7 +22,7 @@ export default async function HistoryPage() {
             {/* Introduction Text - Left Side */}
             <div className="flex-1 lg:pr-4">
               <p
-                className="text-lg leading-8 text-gray-600 dark:text-gray-300"
+                className="text-lg text-center! md:text-justify! leading-8 text-gray-600 dark:text-gray-300"
                 dangerouslySetInnerHTML={{ __html: t.raw("introduction.text") }}
               />
             </div>

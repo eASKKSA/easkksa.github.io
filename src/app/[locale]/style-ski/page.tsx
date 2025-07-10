@@ -61,7 +61,7 @@ export default async function ShotokanKatasPage() {
             priority
           />
         </div>
-        <p className="text-xl mb-6">{t("introduction")}</p>
+        <p className="text-xl mb-6 text-center!">{t("introduction")}</p>
         <p className="text-lg mb-6">{t("description")}</p>
 
         {/* Katas Grid */}

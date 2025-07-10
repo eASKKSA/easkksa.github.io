@@ -48,7 +48,7 @@ export default async function Layout({
             <CookieWarning />
           </Providers>
         </NextIntlClientProvider>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
       </body>
     </html>
   );
