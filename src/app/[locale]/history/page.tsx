@@ -28,7 +28,7 @@ export default async function HistoryPage() {
             </div>
 
             {/* Banner Image - Right Side */}
-            <div className="h-52 w-96 relative mx-auto lg:m-0 mt-6">
+            <div className="h-52 w-64 md:w-96 relative mx-auto lg:m-0 mt-6">
               <Image
                 src={historyBannerUrl}
                 alt="Mestres Fundadores do Karate"
