@@ -152,6 +152,14 @@ section, article {
   @apply transition-all duration-700 transform mb-12 md:mb-16 lg:mb-20;
 }
 
+section > p {
+  @apply text-center
+}
+
+p {
+  @apply text-justify md:text-left;
+}
+
 .section-blur {
   @apply relative rounded-3xl p-8 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50;
 }

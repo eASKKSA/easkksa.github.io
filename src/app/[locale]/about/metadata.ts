@@ -3,7 +3,7 @@ import { AboutPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
-import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
+import jorgeFreitas from "@/assets/senseis/jorge_freitas.jpg";
 
 export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
   const t = await getTranslations("About");

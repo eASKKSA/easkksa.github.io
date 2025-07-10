@@ -55,8 +55,7 @@
       }
     },
     "buttons": {
-      "trialClass": "Aula Experimental Gratuita",
-      "learnMore": "Saiba Mais"
+      "trialClass": "Aula Experimental Gratuita"
     },
     "sections": {
       "whyChoose": "Porquê escolher a ASKKSA?",
@@ -127,7 +126,7 @@
       "marisaGomes": {
         "name": "Sensei Marisa Gomes",
         "graduation": "5º DAN",
-        "credential1": "Mais de 24 anos de prática (desde 200)",
+        "credential1": "Mais de 24 anos de prática (desde 2000)",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau II (FNK-P)",
         "credential4": "Juiz Nacional de Karate (FNK-P)"

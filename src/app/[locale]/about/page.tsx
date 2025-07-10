@@ -4,10 +4,10 @@ import { getTranslations } from "next-intl/server";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 
-import jorgeFreitas from "@/assets/senseis/jorge_freitas.png";
-import titoVelosa from "@/assets/senseis/tito_velosa.png";
-import marisaGomes from "@/assets/senseis/marisa_gomes.png";
-import rafaelJardim from "@/assets/senseis/rafael_jardim.png";
+import jorgeFreitas from "@/assets/senseis/jorge_freitas.jpg";
+import titoVelosa from "@/assets/senseis/tito_velosa.jpg";
+import marisaGomes from "@/assets/senseis/marisa_gomes.jpg";
+import rafaelJardim from "@/assets/senseis/rafael_jardim.jpg";
 
 export const generateMetadata = metadata;
 
