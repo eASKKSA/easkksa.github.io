@@ -1,12 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@keyframes logo-pulse-grow {
-  to {
-    transform: scale(1.075);
-  }
-}
-
 @theme {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
@@ -15,10 +9,12 @@
   --color-gray-700: #333;
   --color-gray-600: #444;
   --animate-logo-pulse-grow: logo-pulse-grow 1s linear infinite alternate;
-}
 
-h1 {
-  @apply text-4xl md:text-6xl xl:text-7xl font-bold mb-6 dark:text-white text-[#222];
+  @keyframes logo-pulse-grow {
+    to {
+      transform: scale(1.075);
+    }
+  }
 }
 
 @layer base {
@@ -32,186 +28,185 @@ h1 {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --color-primary: #a4262c;
-
   }
 
-  [data-theme="dark"] {
-    --color-background-primary: #222;
-  }
-}
-
-/* Respect user preferences */
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    scroll-behavior: auto;
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Focus management with your primary color */
-*:focus-visible {
-  outline: 2px solid #a4262c;
-  outline-offset: 2px;
-}
-
-/* Theme-aware selection with your colors */
-::selection {
-  background-color: #a4262c;
-  color: white;
-}
-
-/* Custom scrollbar with your color scheme */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #a4262c;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8b1e23;
-}
-
-/* Body styling with your black tone */
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Skip link styles */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-  pointer-events: none;
-}
-
-.sr-only:focus {
-  position: absolute;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: hidden;
-  clip: auto;
-  white-space: normal;
-  border: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Print styles */
-@media print {
-  * {
-    background: transparent !important;
-    color: #222 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
+  header {
+    @apply fixed top-0 left-0 w-full z-50 transition-all duration-300 md:px-4 py-3;
   }
 
-  .no-print {
-    display: none !important;
+  main {
+    @apply container mx-auto px-4 pt-36 lg:pt-44 pb-12 space-y-24 transition-all duration-1000 ease-out dark:text-white text-slate-900;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl xl:text-7xl font-bold mb-6 dark:text-white text-[#222];
+  }
+
+  section, article {
+    @apply transition-all duration-700 transform mb-12 md:mb-16 lg:mb-20;
+  }
+
+  section > p {
+    @apply text-center
+  }
+
+  p {
+    @apply text-justify md:text-left;
+  }
+
+  footer {
+    @apply bg-gray-50/90 dark:bg-black/20 border-t border-gray-200 dark:border-gray-800;
+  }
+
+  /* Respect user preferences */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    * {
+      background: transparent !important;
+      color: #222 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* Focus management with your primary color */
+  *:focus-visible {
+    outline: 2px solid #a4262c;
+    outline-offset: 2px;
+  }
+
+  /* Theme-aware selection with your colors */
+  ::selection {
+    background-color: #a4262c;
+    color: white;
+  }
+
+  /* Custom scrollbar with your color scheme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #a4262c;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b1e23;
   }
 }
 
-/* Enhanced shadow effects with your color scheme */
-.shadow-primary {
-  box-shadow: 0 4px 6px -1px rgba(164, 38, 44, 0.1), 0 2px 4px -1px rgba(164, 38, 44, 0.06);
-}
+@layer components {
+  /* Skip link styles */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    pointer-events: none;
+  }
 
-.shadow-primary-lg {
-  box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
-}
+  .sr-only:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: hidden;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
 
-header {
-  @apply fixed top-0 left-0 w-full z-50 transition-all duration-300 md:px-4 py-3;
-}
+  .shadow-primary {
+    box-shadow: 0 4px 6px -1px rgba(164, 38, 44, 0.1), 0 2px 4px -1px rgba(164, 38, 44, 0.06);
+  }
 
-main {
-  @apply container mx-auto px-4 pt-36 lg:pt-44 pb-12 space-y-24 transition-all duration-1000 ease-out dark:text-white text-slate-900;
-}
+  .shadow-primary-lg {
+    box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
+  }
 
-section, article {
-  @apply transition-all duration-700 transform mb-12 md:mb-16 lg:mb-20;
-}
+  .header-scrolled {
+    @apply bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm;
+  }
 
-section > p {
-  @apply text-center
-}
+  .background-container {
+    @apply fixed inset-0 -z-20
+  }
 
-p {
-  @apply text-justify md:text-left;
-}
+  .background-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100  dark:bg-gradient-to-br dark:from-[#222] dark:via-[#2a2a2a] dark:to-[#a4262c]/20;
+  }
 
-.section-blur {
-  @apply relative rounded-3xl p-8 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50;
-}
+  .background-image {
+    @apply absolute inset-0 h-screen w-screen placeholder-transparent object-cover;
+  }
 
-.section-top-bubble {
-  @apply absolute top-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 -translate-y-16;
-}
+  .background-overlay-text {
+    @apply absolute inset-0 dark:bg-gradient-to-b dark:from-black/40 dark:via-transparent dark:to-black/60 bg-gradient-to-b from-white/80 via-black/40 to-white/40;
+  }
 
-.section-bottom-bubble {
-  @apply absolute bottom-0 right-0 w-48 h-48 bg-primary/10 rounded-full translate-x-24 translate-y-24;
-}
+  .section-blur {
+    @apply relative rounded-3xl p-8 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50;
+  }
 
-.header-scrolled {
-  @apply bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm;
-}
+  .section-top-bubble {
+    @apply absolute top-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 -translate-y-16;
+  }
 
-.background-container {
-  @apply fixed inset-0 -z-20
-}
+  .section-bottom-bubble {
+    @apply absolute bottom-0 right-0 w-48 h-48 bg-primary/10 rounded-full translate-x-24 translate-y-24;
+  }
 
-.background-overlay {
-  @apply absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100  dark:bg-gradient-to-br dark:from-[#222] dark:via-[#2a2a2a] dark:to-[#a4262c]/20;
-}
+  .cookie-container {
+    @apply fixed bottom-0 w-full bg-[#f0f0f0] text-black/90 text-sm text-center py-4 px-4 shadow-lg z-[99];
+  }
 
-.background-image {
-  @apply absolute inset-0 h-screen w-screen placeholder-transparent object-cover;
-}
+  .cookie-button-container {
+    @apply gap-4 flex justify-center mt-3;
+  }
 
-.background-overlay-text {
-  @apply absolute inset-0 dark:bg-gradient-to-b dark:from-black/40 dark:via-transparent dark:to-black/60 bg-gradient-to-b from-white/80 via-black/40 to-white/40;
-}
+  .cookie-button {
+    @apply text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer;
+  }
 
-.cookie-container {
-  @apply fixed bottom-0 w-full bg-[#f0f0f0] text-black/90 text-sm text-center py-4 px-4 shadow-lg z-[99];
-}
+  .footer-container {
+    @apply max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col;
+  }
 
-.cookie-button-container {
-  @apply gap-4 flex justify-center mt-3;
-}
-
-.cookie-button {
-  @apply text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer;
-}
-
-footer {
- @apply bg-gray-50/90 dark:bg-black/20 border-t border-gray-200 dark:border-gray-800;
-}
-
-.footer-container {
-  @apply max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col;
-}
-
-.not-found-button-container {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800;
+  .not-found-button-container {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800;
+  }
 }
