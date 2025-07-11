@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 
-import desktopBg from "@/assets/askksa-background-tiger.svg";
-import mobileBg from "@/assets/askksa-background-tiger-mobile.webp";
-
 const Background: React.FC = () => {
   return (
     <div className="background-container">
@@ -14,7 +11,7 @@ const Background: React.FC = () => {
       {/* Desktop Dark Image */}
       <Image
         priority
-        src={desktopBg}
+        src="/askksa-background-tiger.svg"
         fill
         sizes="(min-width: 768px) 100vw"
         alt=""
@@ -24,7 +21,7 @@ const Background: React.FC = () => {
       {/* Mobile Dark Image */}
       <Image
         priority
-        src={mobileBg}
+        src="/askksa-background-tiger-mobile.webp"
         fill
         sizes="(max-width: 767px) 100vw"
         alt=""

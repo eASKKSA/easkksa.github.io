@@ -1,66 +1,118 @@
-// components/CookieWarning.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { setCookie, hasCookie } from "cookies-next";
 import { Link } from "@/i18n/navigation";
 
 const CookieWarning = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
 
+  // Move cookie check to useEffect to avoid blocking renders
   useEffect(() => {
-    // Show the banner only if no consent cookie has been set
-    if (!hasCookie("cookie_consent")) {
-      setShowBanner(true);
+    const checkCookieConsent = () => {
+      try {
+        // Use requestAnimationFrame to ensure this runs after critical content
+        requestAnimationFrame(() => {
+          if (!hasCookie("cookie_consent")) {
+            setShowBanner(true);
+          }
+        });
+      } catch (error) {
+        console.error("Error checking cookie consent:", error);
+        // Show banner on error as fallback
+        setShowBanner(true);
+      }
+    };
+
+    // Only run after DOM is ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", checkCookieConsent);
+      return () =>
+        document.removeEventListener("DOMContentLoaded", checkCookieConsent);
+    } else {
+      checkCookieConsent();
     }
   }, []);
 
-  const handleAcceptAll = () => {
-    setCookie("cookie_consent", "true", { maxAge: 60 * 60 * 24 * 365 });
-    setShowBanner(false);
-    window.location.reload();
-  };
+  const handleCookieAction = useCallback(
+    async (acceptAll: boolean) => {
+      if (isProcessing) return; // Prevent double-clicks
 
-  const handleAcceptEssential = () => {
-    setCookie("cookie_consent", "false", { maxAge: 60 * 60 * 24 * 365 });
-    setShowBanner(false);
-  };
+      setIsProcessing(true);
 
-  if (!showBanner) {
-    return null;
-  }
+      try {
+        // Set cookie with optimized options
+        setCookie("cookie_consent", acceptAll ? "true" : "false", {
+          maxAge: 60 * 60 * 24 * 365, // 1 year
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "strict",
+          path: "/", // Ensure cookie is available site-wide
+        });
+
+        // Update Google Analytics consent (if available)
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag("consent", "update", {
+            analytics_storage: acceptAll ? "granted" : "denied",
+            ad_storage: acceptAll ? "granted" : "denied",
+          });
+        }
+
+        // Hide banner immediately for better UX
+        setShowBanner(false);
+      } catch (error) {
+        console.error("Error setting cookie consent:", error);
+        // Still hide banner even on error to prevent infinite showing
+        setShowBanner(false);
+      } finally {
+        setIsProcessing(false);
+      }
+    },
+    [isProcessing],
+  );
+
+  const handleAcceptAll = useCallback(() => {
+    handleCookieAction(true);
+  }, [handleCookieAction]);
+
+  const handleAcceptEssential = useCallback(() => {
+    handleCookieAction(false);
+  }, [handleCookieAction]);
+
+  // Don't render if banner shouldn't be shown
+  if (!showBanner) return null;
 
   return (
-    <aside className="cookie-container">
-      <div className="max-w-4xl mx-auto">
-        <span>
-          Este sítio utiliza cookies para facilitar a navegação e obter
-          estatísticas de utilização. Poderá consultar a nossa Política de
-          Privacidade{" "}
-        </span>
+    <aside className="cookie-container" aria-label="Cookie consent">
+      <p className="cookie-text text-center!">
+        Este sítio utiliza cookies para facilitar a navegação e obter
+        estatísticas de utilização. Poderá consultar a nossa Política de
+        Privacidade{" "}
         <Link
-          href="/privacy-policy" // Use Link for internal navigation
+          href="/privacy-policy"
           className="underline font-semibold hover:opacity-80"
           title="Política de Privacidade."
         >
           aqui.
         </Link>
-        <div className="cookie-button-container">
-          <button
-            type="button"
-            onClick={handleAcceptAll}
-            className="bg-primary hover:bg-opacity-90 cookie-button"
-          >
-            Aceitar todos os Cookies
-          </button>
-          <button
-            type="button"
-            onClick={handleAcceptEssential}
-            className="bg-gray-600 hover:bg-gray-500 cookie-button"
-          >
-            Aceitar apenas os cookies essenciais
-          </button>
-        </div>
+      </p>
+      <div className="cookie-button-container">
+        <button
+          type="button"
+          onClick={handleAcceptAll}
+          className="bg-primary hover:bg-opacity-90 cookie-button"
+          aria-label="Aceitar todos os cookies"
+        >
+          Aceitar todos os Cookies
+        </button>
+        <button
+          type="button"
+          onClick={handleAcceptEssential}
+          className="bg-gray-600 hover:bg-gray-500 cookie-button"
+          aria-label="Aceitar apenas cookies essenciais"
+        >
+          Aceitar apenas os cookies essenciais
+        </button>
       </div>
     </aside>
   );

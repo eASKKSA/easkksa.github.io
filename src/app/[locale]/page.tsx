@@ -50,7 +50,7 @@ export default async function Page() {
   ];
   return (
     <>
-      <Container blur withBubbles className="text-center">
+      <Container blur withBubbles className="text-center" skipAnimation>
         <h1>
           ASKKSA{" "}
           <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -69,11 +69,11 @@ export default async function Page() {
         </div>
       </Container>
 
-      <Container className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-[0_1.5px_1.5px_rgba(164,38,44,0.8)]">
+      <Container className="text-center" skipAnimation>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("sections.whyChoose")}
         </h2>
-        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.8)]">
+        <p className="text-xl max-w-3xl mx-auto text-gray-100">
           {t("hero.experience")}
         </p>
 

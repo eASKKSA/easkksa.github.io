@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@theme {
+@theme inline {
   /* Define your custom theme colors */
   --color-primary: #a4262c;
   --color-gray-900: #222;
@@ -27,7 +27,6 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    --color-primary: #a4262c;
   }
 
   body {
@@ -191,7 +190,11 @@
   }
 
   .cookie-container {
-    @apply fixed bottom-0 w-full bg-[#f0f0f0] text-black/90 text-sm text-center py-4 px-4 shadow-lg z-[99];
+    @apply fixed bottom-0 w-full bg-gray-50 p-4 z-[10];
+  }
+
+  .cookie-text {
+    @apply text-xs md:text-sm text-black/90
   }
 
   .cookie-button-container {

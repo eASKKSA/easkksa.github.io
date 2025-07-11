@@ -10,6 +10,14 @@ export default function middleware(request: NextRequest) {
   const response = intlMiddleware(request);
   response.headers.set("x-next-pathname", request.nextUrl.pathname);
 
+  response.headers.set(
+    "Cache-Control",
+    "public, max-age=3600, stale-while-revalidate=86400",
+  );
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+
   return response;
 }
 

@@ -1,4 +1,25 @@
 import createNextIntlPlugin from "next-intl/plugin";
+import { NextConfig } from "next";
 
 const withNextIntl = createNextIntlPlugin();
-export default withNextIntl();
+
+const nextConfig: NextConfig = {
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
+};
+
+export default withNextIntl(nextConfig);

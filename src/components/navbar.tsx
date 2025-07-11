@@ -212,7 +212,8 @@ const Navbar: React.FC = () => {
                 alt="ASKKSA Logo"
                 width={96}
                 height={96}
-                className="h-24 w-auto py-1"
+                className="py-1"
+                decoding="sync"
               />
             </Link>
             <button
