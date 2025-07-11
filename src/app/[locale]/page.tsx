@@ -10,6 +10,7 @@ import ProtectedEmail from "@/components/protected-email";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 import clsx from "clsx";
+import FormTrial from "@/components/form-trial";
 
 export const generateMetadata = metadata;
 
@@ -63,9 +64,7 @@ export default async function Page() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-primary hover:bg-[#8b1e23] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-primary/50 shadow-lg">
-            {t("buttons.trialClass")}
-          </button>
+          <FormTrial trial={t("buttons.trialClass")} />
         </div>
       </Container>
 
