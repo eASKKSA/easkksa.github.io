@@ -83,8 +83,11 @@ const CookieWarning = () => {
   if (!showBanner) return null;
 
   return (
-    <aside className="cookie-container" aria-label="Cookie consent">
-      <p className="cookie-text text-center!">
+    <aside
+      className="fixed bottom-0 w-full bg-gray-50 p-4 z-[10]"
+      aria-label="Cookie consent"
+    >
+      <p className="text-xs md:text-sm text-black/90 text-center!">
         Este sítio utiliza cookies para facilitar a navegação e obter
         estatísticas de utilização. Poderá consultar a nossa Política de
         Privacidade{" "}
@@ -96,11 +99,11 @@ const CookieWarning = () => {
           aqui.
         </Link>
       </p>
-      <div className="cookie-button-container">
+      <div className="gap-4 flex justify-center mt-3">
         <button
           type="button"
           onClick={handleAcceptAll}
-          className="bg-primary hover:bg-opacity-90 cookie-button"
+          className="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label="Aceitar todos os cookies"
         >
           Aceitar todos os Cookies
@@ -108,7 +111,7 @@ const CookieWarning = () => {
         <button
           type="button"
           onClick={handleAcceptEssential}
-          className="bg-gray-600 hover:bg-gray-500 cookie-button"
+          className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label="Aceitar apenas cookies essenciais"
         >
           Aceitar apenas os cookies essenciais

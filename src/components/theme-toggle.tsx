@@ -43,7 +43,7 @@ const ThemeToggle: React.FC = () => {
     ${
       theme === option.key
         ? "text-white"
-        : "dark:text-gray-300 dark:hover:text-white text-gray-500 hover:text-[#a4262c]"
+        : "dark:text-gray-300 dark:hover:text-white text-gray-500 hover:text-primary"
     }
   `}
         >
@@ -53,7 +53,7 @@ const ThemeToggle: React.FC = () => {
             value={option.key}
             checked={theme === option.key}
             onChange={() => setTheme(option.key)}
-            className="sr-only" // Screen reader only - visually hidden
+            className="sr-only"
             aria-label={option.aria}
           />
           {option.icon}

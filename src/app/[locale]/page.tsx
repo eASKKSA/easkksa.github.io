@@ -97,8 +97,8 @@ export default async function Page() {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 border border-white/10"
             >
               <h3 className="text-xl font-bold mb-2">{schedule.level}</h3>
-              <p className="text-lg mb-1">{schedule.day}</p>
-              <p className="text-2xl font-bold text-yellow-400">
+              <p className="text-lg text-center! mb-1">{schedule.day}</p>
+              <p className="text-2xl text-center! font-bold text-yellow-400">
                 {schedule.time}
               </p>
             </div>

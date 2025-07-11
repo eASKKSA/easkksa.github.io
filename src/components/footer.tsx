@@ -1,8 +1,6 @@
-// components/footer.tsx
 "use client";
 
 import { useTranslations } from "next-intl";
-// CHANGED: Import icons from 'react-icons/fa' instead of 'lucide-react'
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -39,7 +37,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer-container">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Column 1: Brand & Mission */}
           <div className="space-y-4 col-span-2">

@@ -136,7 +136,9 @@ const Navbar: React.FC = () => {
     <header
       role="banner"
       className={`${
-        isScrolled ? "header-scrolled" : "border-b border-transparent"
+        isScrolled
+          ? "bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm"
+          : "border-b border-transparent"
       }`}
     >
       {!isMobile ? (

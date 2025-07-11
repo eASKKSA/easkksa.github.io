@@ -47,7 +47,10 @@ export default function NotFound() {
 
       {/* Action Buttons */}
       <div className="space-y-4">
-        <Link href="/" className="not-found-button-container">
+        <Link
+          href="/"
+          className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+        >
           <svg
             className="w-4 h-4 mr-2"
             fill="none"

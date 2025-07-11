@@ -22,11 +22,11 @@ const FeatureCard: React.FC<{
       style={{ transitionDelay: "200ms" }}
     >
       <div className="mb-6 flex justify-center">{feature.icon}</div>
-      <HeadingTag className="text-xl md:text-2xl font-bold text-[#a4262c] mb-4">
+      <HeadingTag className="text-xl md:text-2xl font-bold text-primary mb-4">
         {feature.title}
       </HeadingTag>
       <p
-        className={`leading-relaxed dark:text-gray-300 text-gray-600 text-sm md:text-base`}
+        className={`leading-relaxed dark:text-gray-300 text-center text-gray-600 text-sm md:text-base`}
       >
         {feature.description}
       </p>

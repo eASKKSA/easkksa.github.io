@@ -3,11 +3,11 @@
 
 @theme inline {
   /* Define your custom theme colors */
-  --color-primary: #a4262c;
-  --color-gray-900: #222;
-  --color-gray-800: #2a2a2a;
-  --color-gray-700: #333;
-  --color-gray-600: #444;
+  --color-primary: oklch(0.4754 0.1619 23.66);
+  --color-gray-900: oklch(0.252 0 0);
+  --color-gray-800: oklch(0.285 0 0);
+  --color-gray-700: oklch(0.3211 0 0);
+  --color-gray-600: oklch(0.3867 0 0);
   --animate-logo-pulse-grow: logo-pulse-grow 1s linear infinite alternate;
 
   @keyframes logo-pulse-grow {
@@ -30,10 +30,7 @@
   }
 
   body {
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-    overflow-x: hidden;
+    @apply overflow-x-hidden m-0 min-w-xs min-h-screen;
   }
 
   header {
@@ -95,13 +92,13 @@
 
   /* Focus management with your primary color */
   *:focus-visible {
-    outline: 2px solid #a4262c;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
 
   /* Theme-aware selection with your colors */
   ::selection {
-    background-color: #a4262c;
+    background-color: var(--color-primary);
     color: white;
   }
 
@@ -111,7 +108,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #a4262c;
+    background: var(--color-primary);
     border-radius: 4px;
   }
 
@@ -123,93 +120,15 @@
 @layer components {
   /* Skip link styles */
   .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-    pointer-events: none;
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0 pointer-events-none;
+    clip-path: inset(50%);
   }
 
   .sr-only:focus {
-    position: absolute;
-    width: auto;
-    height: auto;
+    @apply absolute w-auto h-auto overflow-hidden border-0 opacity-0 pointer-events-none;
+    clip: auto;
     padding: inherit;
     margin: inherit;
-    overflow: hidden;
-    clip: auto;
     white-space: normal;
-    border: 0;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .shadow-primary {
-    box-shadow: 0 4px 6px -1px rgba(164, 38, 44, 0.1), 0 2px 4px -1px rgba(164, 38, 44, 0.06);
-  }
-
-  .shadow-primary-lg {
-    box-shadow: 0 10px 15px -3px rgba(164, 38, 44, 0.1), 0 4px 6px -2px rgba(164, 38, 44, 0.05);
-  }
-
-  .header-scrolled {
-    @apply bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm;
-  }
-
-  .background-container {
-    @apply fixed inset-0 -z-20
-  }
-
-  .background-overlay {
-    @apply absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100  dark:bg-gradient-to-br dark:from-[#222] dark:via-[#2a2a2a] dark:to-[#a4262c]/20;
-  }
-
-  .background-image {
-    @apply absolute inset-0 h-screen w-screen placeholder-transparent object-cover;
-  }
-
-  .background-overlay-text {
-    @apply absolute inset-0 dark:bg-gradient-to-b dark:from-black/40 dark:via-transparent dark:to-black/60 bg-gradient-to-b from-white/80 via-black/40 to-white/40;
-  }
-
-  .section-blur {
-    @apply relative rounded-3xl p-8 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50;
-  }
-
-  .section-top-bubble {
-    @apply absolute top-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 -translate-y-16;
-  }
-
-  .section-bottom-bubble {
-    @apply absolute bottom-0 right-0 w-48 h-48 bg-primary/10 rounded-full translate-x-24 translate-y-24;
-  }
-
-  .cookie-container {
-    @apply fixed bottom-0 w-full bg-gray-50 p-4 z-[10];
-  }
-
-  .cookie-text {
-    @apply text-xs md:text-sm text-black/90
-  }
-
-  .cookie-button-container {
-    @apply gap-4 flex justify-center mt-3;
-  }
-
-  .cookie-button {
-    @apply text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer;
-  }
-
-  .footer-container {
-    @apply max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col;
-  }
-
-  .not-found-button-container {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800;
   }
 }
