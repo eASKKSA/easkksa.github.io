@@ -54,10 +54,13 @@ export async function submitTrialForm(
       user: process.env.SMTP_USER!,
       pass: process.env.SMTP_PASS!,
     },
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
 
   const mailOptions = {
-    from: process.env.SMTP_FROM!,
+    from: `"${process.env.SMTP_FROM_NAME}" <${process.env.SMTP_FROM}>`,
     to: "direcao@askksa.pt",
     subject: `Nova Experiência Karaté de ${name}`,
     html: `
