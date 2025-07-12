@@ -55,7 +55,8 @@
       }
     },
     "buttons": {
-      "trialClass": "Aula Experimental Gratuita"
+      "trialClass": "Aula Experimental Gratuita",
+      "reviewUs": "Experimentou? Avalie-nos!"
     },
     "sections": {
       "whyChoose": "Porquê escolher a ASKKSA?",

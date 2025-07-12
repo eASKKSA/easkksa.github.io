@@ -65,6 +65,16 @@ export default async function Page() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <FormTrial trial={t("buttons.trialClass")} />
+          <a
+            href="https://search.google.com/local/writereview?placeid=ChIJt__ELtJfYAwRxph89pXRuYU"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-lg bg-white text-primary font-semibold shadow-md hover:bg-gray-100 transition"
+          >
+            {t("buttons.reviewUs", {
+              defaultValue: "Already tried? Review us!",
+            })}
+          </a>
         </div>
       </Container>
 

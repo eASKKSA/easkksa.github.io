@@ -55,7 +55,8 @@
       }
     },
     "buttons": {
-      "trialClass": "Free Trial Class"
+      "trialClass": "Free Trial Class",
+      "reviewUs": "Already tried? Review us!"
     },
     "sections": {
       "whyChoose": "Why choose ASKKSA?",
