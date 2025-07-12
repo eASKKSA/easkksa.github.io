@@ -43,7 +43,7 @@ export async function submitTrialForm(
 
   const { name, age, experience } = validatedFields.data;
   const experienceText =
-    experience === t("yes") ? "Tem experiência anterior" : "É um iniciante";
+    experience === "yes" ? "Tem experiência anterior" : "É um iniciante";
 
   // Configure SMTP transport using environment variables
   const transporter = nodemailer.createTransport({
