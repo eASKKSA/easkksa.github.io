@@ -130,19 +130,19 @@ export default function TrialFormModal({
                 {t("previousExperience")}
               </p>
               <div className="mt-2 flex flex-col sm:flex-row sm:gap-6 gap-2">
-                {[t("yes"), t("no")].map((option) => (
+                {["yes", "no"].map((value) => (
                   <label
-                    key={option}
+                    key={value}
                     className="flex items-center text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
                   >
                     <input
                       type="radio"
                       name="experience"
-                      value={option}
+                      value={value}
                       required
                       className="h-4 w-auto text-primary border-gray-300 focus:ring-primary"
                     />
-                    <span className="ml-2 capitalize">{option}</span>
+                    <span className="ml-2 capitalize">{t(value)}</span>
                   </label>
                 ))}
               </div>
