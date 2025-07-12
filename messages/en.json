@@ -1161,5 +1161,27 @@
     "contact": "Contact",
     "followUs": "Follow us",
     "copyright": "All rights reserved"
+  },
+  "CookieWarning": {
+    "description": "This site uses cookies to facilitate navigation and to gather usage statistics. You can consult our Privacy Policy",
+    "linkText": "here",
+    "acceptAll": "Accept All Cookies",
+    "acceptNecessary": "Accept Only Essential Cookies"
+  },
+  "TrialForm": {
+    "heading": "Request a Free Trial",
+    "description": "Let us know who's joining for a trial class.",
+    "fullName": "Full Name",
+    "age": "Age",
+    "previousExperience": "Previous Experience in Karate?",
+    "submit": {
+      "submitting": "Submitting...",
+      "button": "Request My Free Trial",
+      "success": "Request submitted successfully! We will be in touch.",
+      "error": "An error occurred while sending your request.",
+      "correctErrors": "Please correct the errors below and try again."
+    },
+    "yes": "yes",
+    "no": "no"
   }
 }

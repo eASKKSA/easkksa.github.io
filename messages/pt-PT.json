@@ -1161,5 +1161,27 @@
     "contact": "Contacto",
     "followUs": "Siga-nos",
     "copyright": "Todos os direitos reservados"
+  },
+  "CookieWarning": {
+    "description": "Este site utiliza cookies para facilitar a navegação e obter estatísticas de utilização. Poderá consultar a nossa Política de Privacidade",
+    "linkText": "aqui",
+    "acceptAll": "Aceitar Todos os Cookies",
+    "acceptNecessary": "Aceitar apenas os cookies essenciais"
+  },
+  "TrialForm": {
+    "heading": "Pedir Aula Experimental Gratuita",
+    "description": "Diga-nos quem vai participar numa aula experimental.",
+    "fullName": "Nome Completo",
+    "age": "Idade",
+    "previousExperience": "Experiência Anterior em Karaté?",
+    "submit": {
+      "submitting": "A enviar...",
+      "button": "Pedir Aula Experimental Gratuita",
+      "success": "Pedido enviado com sucesso! Entraremos em contacto brevemente.",
+      "error": "Ocorreu um erro ao enviar o seu pedido.",
+      "correctErrors": "Por favor, corrija os erros abaixo e tente novamente."
+    },
+    "yes": "sim",
+    "no": "não"
   }
 }

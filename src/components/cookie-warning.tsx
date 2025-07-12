@@ -3,8 +3,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { setCookie, hasCookie } from "cookies-next";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const CookieWarning = () => {
+  const t = useTranslations("CookieWarning");
   const [showBanner, setShowBanner] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -88,15 +90,13 @@ const CookieWarning = () => {
       aria-label="Cookie consent"
     >
       <p className="text-xs md:text-sm text-black/90 text-center!">
-        Este sítio utiliza cookies para facilitar a navegação e obter
-        estatísticas de utilização. Poderá consultar a nossa Política de
-        Privacidade{" "}
+        {t("description")}{" "}
         <Link
           href="/privacy-policy"
           className="underline font-semibold hover:opacity-80"
           title="Política de Privacidade."
         >
-          aqui.
+          {t("linkText")}.
         </Link>
       </p>
       <div className="gap-4 flex justify-center mt-3">
@@ -104,9 +104,9 @@ const CookieWarning = () => {
           type="button"
           onClick={handleAcceptAll}
           className="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
-          aria-label="Aceitar todos os cookies"
+          aria-label={t("acceptAll")}
         >
-          Aceitar todos os Cookies
+          {t("acceptAll")}
         </button>
         <button
           type="button"
@@ -114,7 +114,7 @@ const CookieWarning = () => {
           className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label="Aceitar apenas cookies essenciais"
         >
-          Aceitar apenas os cookies essenciais
+          {t("acceptNecessary")}
         </button>
       </div>
     </aside>

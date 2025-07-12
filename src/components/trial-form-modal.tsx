@@ -3,9 +3,11 @@ import { useFormStatus } from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { submitTrialForm, TrialFormState } from "@/app/actions";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
+  const t = useTranslations("TrialForm");
   return (
     <button
       type="submit"
@@ -16,7 +18,7 @@ function SubmitButton() {
         "disabled:bg-gray-400 disabled:cursor-not-allowed",
       )}
     >
-      {pending ? "Submitting..." : "Request My Free Trial"}
+      {pending ? t("submit.submitting") : t("submit.button")}
     </button>
   );
 }
@@ -35,6 +37,7 @@ export default function TrialFormModal({
   isOpen,
   onClose,
 }: Readonly<TrialFormModalProps>) {
+  const t = useTranslations("TrialForm");
   const [state, formAction] = useActionState(submitTrialForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -66,10 +69,10 @@ export default function TrialFormModal({
 
           {/* Heading */}
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            Request a Free Trial
+            {t("heading")}
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center! mb-6 text-sm sm:text-base">
-            Let us know who&#39;s joining for a trial class.
+            {t("description")}
           </p>
 
           {/* Form */}
@@ -83,7 +86,7 @@ export default function TrialFormModal({
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
-                Full Name
+                {t("fullName")}
               </label>
               <input
                 type="text"
@@ -105,7 +108,7 @@ export default function TrialFormModal({
                 htmlFor="age"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
-                Age
+                {t("age")}
               </label>
               <input
                 type="number"
@@ -124,10 +127,10 @@ export default function TrialFormModal({
             {/* Experience */}
             <div>
               <p className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                Previous Karate Experience?
+                {t("previousExperience")}
               </p>
               <div className="mt-2 flex flex-col sm:flex-row sm:gap-6 gap-2">
-                {["yes", "no"].map((option) => (
+                {[t("yes"), t("no")].map((option) => (
                   <label
                     key={option}
                     className="flex items-center text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
@@ -137,7 +140,7 @@ export default function TrialFormModal({
                       name="experience"
                       value={option}
                       required
-                      className="h-4 w-4 text-primary border-gray-300 focus:ring-primary"
+                      className="h-4 w-auto text-primary border-gray-300 focus:ring-primary"
                     />
                     <span className="ml-2 capitalize">{option}</span>
                   </label>

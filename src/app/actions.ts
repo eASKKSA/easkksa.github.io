@@ -2,6 +2,7 @@
 import "server-only";
 import { z } from "zod";
 import nodemailer from "nodemailer";
+import { getTranslations } from "next-intl/server";
 
 const trialFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -25,6 +26,7 @@ export async function submitTrialForm(
   prevState: TrialFormState,
   formData: FormData,
 ): Promise<TrialFormState> {
+  const t = await getTranslations("TrialForm");
   const validatedFields = trialFormSchema.safeParse({
     name: formData.get("name"),
     age: formData.get("age"),
@@ -33,7 +35,7 @@ export async function submitTrialForm(
 
   if (!validatedFields.success) {
     return {
-      message: "Please correct the errors below.",
+      message: t("submit.correctErrors"),
       errors: validatedFields.error.flatten().fieldErrors,
       success: false,
     };
@@ -41,7 +43,7 @@ export async function submitTrialForm(
 
   const { name, age, experience } = validatedFields.data;
   const experienceText =
-    experience === "yes" ? "Has previous experience" : "Is a beginner";
+    experience === t("yes") ? "Tem experiência anterior" : "É um iniciante";
 
   // Configure SMTP transport using environment variables
   const transporter = nodemailer.createTransport({
@@ -57,7 +59,7 @@ export async function submitTrialForm(
   const mailOptions = {
     from: process.env.SMTP_FROM!,
     to: "direcao@askksa.pt",
-    subject: `New Trial Request from ${name}`,
+    subject: `Nova Experiência Karaté de ${name}`,
     html: `
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Age:</strong> ${age}</p>
@@ -69,13 +71,13 @@ export async function submitTrialForm(
     await transporter.sendMail(mailOptions);
 
     return {
-      message: "Request submitted successfully! We will be in touch.",
+      message: t("submit.success"),
       success: true,
     };
   } catch (error) {
     console.error("Email send error:", error);
     return {
-      message: "An error occurred while sending your request.",
+      message: t("submit.error"),
       success: false,
     };
   }
