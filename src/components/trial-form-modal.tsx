@@ -34,7 +34,7 @@ const initialState: TrialFormState = {
 export default function TrialFormModal({
   isOpen,
   onClose,
-}: TrialFormModalProps) {
+}: Readonly<TrialFormModalProps>) {
   const [state, formAction] = useActionState(submitTrialForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -51,8 +51,8 @@ export default function TrialFormModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
-      <div className="relative w-full h-full max-h-screen sm:h-auto sm:max-w-md mx-auto sm:rounded-2xl bg-white dark:bg-gray-900 shadow-2xl overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-black/60">
+      <div className="fixed inset-0 bg-white dark:bg-gray-900 z-50 overflow-y-auto p-2 sm:p-2">
         {/* Content wrapper for scroll on small screens */}
         <div className="relative p-6 sm:p-8">
           {/* Close Button */}
@@ -68,13 +68,16 @@ export default function TrialFormModal({
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
             Request a Free Trial
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm sm:text-base">
+          <p className="text-gray-600 dark:text-gray-300 text-center! mb-6 text-sm sm:text-base">
             Let us know who&#39;s joining for a trial class.
           </p>
 
           {/* Form */}
-          <form ref={formRef} action={formAction} className="space-y-5 pb-4">
-            {/* Full Name */}
+          <form
+            ref={formRef}
+            action={formAction}
+            className="space-y-5 pb-4 max-w-2xl mx-auto"
+          >
             <div>
               <label
                 htmlFor="name"
