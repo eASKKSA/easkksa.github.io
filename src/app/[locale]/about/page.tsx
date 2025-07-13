@@ -37,6 +37,7 @@ export const generateMetadata = metadata;
 // --- MAIN PAGE COMPONENT ---
 export default async function QuemSomosPage() {
   const t = await getTranslations("About");
+  const currentYear = new Date().getFullYear();
 
   const instructors = [
     {
@@ -45,7 +46,10 @@ export default async function QuemSomosPage() {
       image: jorgeFreitas,
       graduation: t("instructors.jorgeFreitas.graduation"),
       credentials: [
-        t("instructors.jorgeFreitas.credential1"),
+        t("instructors.jorgeFreitas.credential1", {
+          startYear: 1987,
+          years: currentYear - 1987,
+        }),
         t("instructors.jorgeFreitas.credential2"),
         t("instructors.jorgeFreitas.credential3"),
         t("instructors.jorgeFreitas.credential4"),
@@ -57,7 +61,10 @@ export default async function QuemSomosPage() {
       image: rafaelJardim,
       graduation: t("instructors.rafaelJardim.graduation"),
       credentials: [
-        t("instructors.rafaelJardim.credential1"),
+        t("instructors.rafaelJardim.credential1", {
+          startYear: 1992,
+          years: currentYear - 1992,
+        }),
         t("instructors.rafaelJardim.credential2"),
         t("instructors.rafaelJardim.credential3"),
         t("instructors.rafaelJardim.credential4"),
@@ -69,7 +76,10 @@ export default async function QuemSomosPage() {
       image: marisaGomes,
       graduation: t("instructors.marisaGomes.graduation"),
       credentials: [
-        t("instructors.marisaGomes.credential1"),
+        t("instructors.marisaGomes.credential1", {
+          startYear: 2000,
+          years: currentYear - 2000,
+        }),
         t("instructors.marisaGomes.credential2"),
         t("instructors.marisaGomes.credential3"),
         t("instructors.marisaGomes.credential4"),
@@ -81,7 +91,10 @@ export default async function QuemSomosPage() {
       image: titoVelosa,
       graduation: t("instructors.titoVelosa.graduation"),
       credentials: [
-        t("instructors.titoVelosa.credential1"),
+        t("instructors.titoVelosa.credential1", {
+          startYear: 1995,
+          years: currentYear - 1995,
+        }),
         t("instructors.titoVelosa.credential2"),
         t("instructors.titoVelosa.credential3"),
         t("instructors.titoVelosa.credential4"),
@@ -113,6 +126,12 @@ export default async function QuemSomosPage() {
       id: "jessicaBaptista",
       name: "Jéssica Baptista",
       image: jessicaBaptista,
+      graduation: "2º Dan",
+    },
+    {
+      id: "marcioGouveia",
+      name: "Márcio Gouveia",
+      image: marcioGouveia,
       graduation: "2º Dan",
     },
     {
@@ -191,12 +210,6 @@ export default async function QuemSomosPage() {
       id: "leonorCoelho",
       name: "Leonor Coelho",
       image: leonorCoelho,
-      graduation: "1º Dan",
-    },
-    {
-      id: "marcioGouveia",
-      name: "Márcio Gouveia",
-      image: marcioGouveia,
       graduation: "1º Dan",
     },
     {

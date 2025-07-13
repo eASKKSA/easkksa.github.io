@@ -4,6 +4,9 @@ import { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  experimental: {
+    inlineCss: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
