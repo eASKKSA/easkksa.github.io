@@ -8,6 +8,7 @@ import jorgeFreitas from "@/assets/senseis/jorge_freitas.jpg";
 import titoVelosa from "@/assets/senseis/tito_velosa.jpg";
 import marisaGomes from "@/assets/senseis/marisa_gomes.jpg";
 import rafaelJardim from "@/assets/senseis/rafael_jardim.jpg";
+import askksaThumb from "@/assets/askksa_thumb.svg";
 
 export const generateMetadata = metadata;
 
@@ -79,6 +80,117 @@ export default async function QuemSomosPage() {
     },
   ];
 
+  const blackBelts = [
+    {
+      id: "luisBarros",
+      name: "Luís Barros",
+      image: askksaThumb,
+      graduation: "3º Dan",
+    },
+    {
+      id: "jessicaBaptista",
+      name: "Jéssica Baptista",
+      image: askksaThumb,
+      graduation: "2º Dan",
+    },
+    {
+      id: "marcoAnjo",
+      name: "Marco Anjo",
+      image: askksaThumb,
+      graduation: "2º Dan",
+    },
+    {
+      id: "soraiaOliveira",
+      name: "Soraia Oliveira",
+      image: askksaThumb,
+      graduation: "2º Dan",
+    },
+    {
+      id: "andrePestana",
+      name: "André Pestana",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "beatrizMartins",
+      name: "Beatriz Martins",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "bernardoLopes",
+      name: "Bernardo Lopes",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "fabioReis",
+      name: "Fábio Reis",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "franciscoOrnelas",
+      name: "Francisco Ornelas",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "goncaloPilco",
+      name: "Gonçalo Pilco",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "joaoCasimiro",
+      name: "João Casimiro",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "joaoPrioste",
+      name: "João Prioste",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "leonorCoelho",
+      name: "Leonor Coelho",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "nadjaPilco",
+      name: "Nadja Pilco",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "natachaSilva",
+      name: "Natacha Silva",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "nunoFernandes",
+      name: "Nuno Fernandes",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "pedroRoxo",
+      name: "Pedro Roxo",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+    {
+      id: "tiagoFreitas",
+      name: "Tiago Freitas",
+      image: askksaThumb,
+      graduation: "1º Dan",
+    },
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -115,6 +227,19 @@ export default async function QuemSomosPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
           {dojos.map((dojo) => (
             <DojoCard key={dojo.name} dojo={dojo} />
+          ))}
+        </div>
+      </Container>
+      <Container className="text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
+          {t("hallBlackBelts.title")}
+        </h2>
+        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
+          {t("hallBlackBelts.subtitle")}
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {blackBelts.map((instructor) => (
+            <BBCard key={instructor.name} blackBelt={instructor} />
           ))}
         </div>
       </Container>
@@ -193,6 +318,37 @@ const DojoCard = ({
         title={dojo.name}
       />
       <h3 className={titleClasses}>{dojo.name}</h3>
+    </div>
+  );
+};
+
+const BBCard = ({
+  blackBelt,
+}: {
+  blackBelt: {
+    id: string;
+    name: string;
+    image: StaticImageData;
+    graduation: string;
+  };
+}) => {
+  return (
+    <div className="flex flex-col items-center text-center p-6 rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-primary hover:dark:bg-[#222]/80 border-gray-200/50 bg-white/60 hover:border-primary hover:bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
+      <div className="relative w-24 h-24 mb-4">
+        <Image
+          src={blackBelt.image}
+          alt={`Foto de ${blackBelt.name}`}
+          fill
+          className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300"
+          sizes="(max-width: 768px) 100vw, 128px"
+        />
+      </div>
+      <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
+        {blackBelt.name}
+      </h3>
+      <p className="text-sm text-primary font-extrabold mb-2">
+        {blackBelt.graduation}
+      </p>
     </div>
   );
 };
