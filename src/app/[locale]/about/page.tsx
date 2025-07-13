@@ -17,6 +17,7 @@ import franciscoOrnelas from "@/assets/black-belts/francisco_ornelas.jpg";
 import goncaloPilco from "@/assets/black-belts/goncalo_pilco.jpg";
 import jessicaBaptista from "@/assets/black-belts/jessica_baptista.jpg";
 import joaoCasimiro from "@/assets/black-belts/joao_casimiro.jpg";
+import joaoPrioste from "@/assets/black-belts/joao_prioste.jpg";
 import joaoRodrigues from "@/assets/black-belts/joao_rodrigues.jpg";
 import julioHenriques from "@/assets/black-belts/julio_henriques.jpg";
 import leonorCoelho from "@/assets/black-belts/leonor_coelho.jpg";
@@ -26,6 +27,7 @@ import marcoAnjo from "@/assets/black-belts/marco_anjo.jpg";
 import nadjaPilco from "@/assets/black-belts/nadja_pilco.jpg";
 import natachaSilva from "@/assets/black-belts/natacha_silva.jpg";
 import nunoFernandes from "@/assets/black-belts/nuno_fernandes.jpg";
+import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.jpg";
 import tiagoFreitas from "@/assets/black-belts/tiago_freitas.jpg";
 
 import askksaThumb from "@/assets/askksa_thumb.svg";
@@ -122,7 +124,7 @@ export default async function QuemSomosPage() {
     {
       id: "soraiaOliveira",
       name: "Soraia Oliveira",
-      image: askksaThumb,
+      image: soraiaOliveira,
       graduation: "2º Dan",
     },
     {
@@ -176,7 +178,7 @@ export default async function QuemSomosPage() {
     {
       id: "joaoPrioste",
       name: "João Prioste",
-      image: askksaThumb,
+      image: joaoPrioste,
       graduation: "1º Dan",
     },
     {
