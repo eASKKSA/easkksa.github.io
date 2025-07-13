@@ -8,6 +8,26 @@ import jorgeFreitas from "@/assets/senseis/jorge_freitas.jpg";
 import titoVelosa from "@/assets/senseis/tito_velosa.jpg";
 import marisaGomes from "@/assets/senseis/marisa_gomes.jpg";
 import rafaelJardim from "@/assets/senseis/rafael_jardim.jpg";
+
+import andrePestana from "@/assets/black-belts/andre_pestana.jpg";
+import beatrizMartins from "@/assets/black-belts/beatriz_martins.jpg";
+import bernardoLopes from "@/assets/black-belts/bernardo_lopes.jpg";
+import fabioReis from "@/assets/black-belts/fabio_reis.jpg";
+import franciscoOrnelas from "@/assets/black-belts/francisco_ornelas.jpg";
+import goncaloPilco from "@/assets/black-belts/goncalo_pilco.jpg";
+import jessicaBaptista from "@/assets/black-belts/jessica_baptista.jpg";
+import joaoCasimiro from "@/assets/black-belts/joao_casimiro.jpg";
+import joaoRodrigues from "@/assets/black-belts/joao_rodrigues.jpg";
+import julioHenriques from "@/assets/black-belts/julio_henriques.jpg";
+import leonorCoelho from "@/assets/black-belts/leonor_coelho.jpg";
+import luisBarros from "@/assets/black-belts/luis_barros.jpg";
+import marcioGouveia from "@/assets/black-belts/marcio_gouveia.jpg";
+import marcoAnjo from "@/assets/black-belts/marco_anjo.jpg";
+import nadjaPilco from "@/assets/black-belts/nadja_pilco.jpg";
+import natachaSilva from "@/assets/black-belts/natacha_silva.jpg";
+import nunoFernandes from "@/assets/black-belts/nuno_fernandes.jpg";
+import tiagoFreitas from "@/assets/black-belts/tiago_freitas.jpg";
+
 import askksaThumb from "@/assets/askksa_thumb.svg";
 
 export const generateMetadata = metadata;
@@ -84,19 +104,19 @@ export default async function QuemSomosPage() {
     {
       id: "luisBarros",
       name: "Luís Barros",
-      image: askksaThumb,
+      image: luisBarros,
       graduation: "3º Dan",
     },
     {
       id: "jessicaBaptista",
       name: "Jéssica Baptista",
-      image: askksaThumb,
+      image: jessicaBaptista,
       graduation: "2º Dan",
     },
     {
       id: "marcoAnjo",
       name: "Marco Anjo",
-      image: askksaThumb,
+      image: marcoAnjo,
       graduation: "2º Dan",
     },
     {
@@ -108,43 +128,49 @@ export default async function QuemSomosPage() {
     {
       id: "andrePestana",
       name: "André Pestana",
-      image: askksaThumb,
+      image: andrePestana,
       graduation: "1º Dan",
     },
     {
       id: "beatrizMartins",
       name: "Beatriz Martins",
-      image: askksaThumb,
+      image: beatrizMartins,
       graduation: "1º Dan",
     },
     {
       id: "bernardoLopes",
       name: "Bernardo Lopes",
-      image: askksaThumb,
+      image: bernardoLopes,
       graduation: "1º Dan",
     },
     {
       id: "fabioReis",
       name: "Fábio Reis",
-      image: askksaThumb,
+      image: fabioReis,
       graduation: "1º Dan",
     },
     {
       id: "franciscoOrnelas",
       name: "Francisco Ornelas",
-      image: askksaThumb,
+      image: franciscoOrnelas,
       graduation: "1º Dan",
     },
     {
       id: "goncaloPilco",
       name: "Gonçalo Pilco",
-      image: askksaThumb,
+      image: goncaloPilco,
       graduation: "1º Dan",
     },
     {
       id: "joaoCasimiro",
       name: "João Casimiro",
-      image: askksaThumb,
+      image: joaoCasimiro,
+      graduation: "1º Dan",
+    },
+    {
+      id: "joaoRodrigues",
+      name: "João Rodrigues",
+      image: joaoRodrigues,
       graduation: "1º Dan",
     },
     {
@@ -154,27 +180,39 @@ export default async function QuemSomosPage() {
       graduation: "1º Dan",
     },
     {
+      id: "julioHenriques",
+      name: "Júlio Henriques",
+      image: julioHenriques,
+      graduation: "1º Dan",
+    },
+    {
       id: "leonorCoelho",
       name: "Leonor Coelho",
-      image: askksaThumb,
+      image: leonorCoelho,
+      graduation: "1º Dan",
+    },
+    {
+      id: "marcioGouveia",
+      name: "Márcio Gouveia",
+      image: marcioGouveia,
       graduation: "1º Dan",
     },
     {
       id: "nadjaPilco",
       name: "Nadja Pilco",
-      image: askksaThumb,
+      image: nadjaPilco,
       graduation: "1º Dan",
     },
     {
       id: "natachaSilva",
       name: "Natacha Silva",
-      image: askksaThumb,
+      image: natachaSilva,
       graduation: "1º Dan",
     },
     {
       id: "nunoFernandes",
       name: "Nuno Fernandes",
-      image: askksaThumb,
+      image: nunoFernandes,
       graduation: "1º Dan",
     },
     {
@@ -186,7 +224,7 @@ export default async function QuemSomosPage() {
     {
       id: "tiagoFreitas",
       name: "Tiago Freitas",
-      image: askksaThumb,
+      image: tiagoFreitas,
       graduation: "1º Dan",
     },
   ];
