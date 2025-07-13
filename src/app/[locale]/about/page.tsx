@@ -256,7 +256,7 @@ export default async function QuemSomosPage() {
 
       {/* Instructors Section */}
       <Container className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("instructors.title")}
         </h2>
         <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
@@ -271,7 +271,7 @@ export default async function QuemSomosPage() {
 
       {/* Dojos Section */}
       <Container blur className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white ">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
           {t("dojos.title")}
         </h2>
         <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
@@ -284,7 +284,7 @@ export default async function QuemSomosPage() {
         </div>
       </Container>
       <Container className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display text-white drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("hallBlackBelts.title")}
         </h2>
         <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">

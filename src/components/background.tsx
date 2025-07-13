@@ -16,6 +16,9 @@ const Background: React.FC = () => {
         sizes="(min-width: 768px) 100vw"
         alt=""
         className="hidden md:block object-cover"
+        loading="lazy"
+        decoding="async"
+        unoptimized
       />
 
       {/* Mobile Dark Image */}
@@ -26,6 +29,8 @@ const Background: React.FC = () => {
         sizes="(max-width: 767px) 100vw"
         alt=""
         className="block md:hidden object-cover"
+        loading="lazy"
+        decoding="async"
       />
 
       {/* Theme-aware overlay for text readability */}

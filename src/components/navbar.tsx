@@ -62,7 +62,7 @@ const SettingsMenu: React.FC<{
             {(["pt-PT", "en"] as Locale[]).map((locale) => (
               <Link
                 key={locale}
-                href={pathname} // Use the home route for language change
+                href={pathname}
                 locale={locale}
                 className={`w-full py-1.5 rounded-md text-center text-sm font-medium transition-colors ${
                   currentLocale === locale
@@ -177,6 +177,7 @@ const Navbar: React.FC = () => {
                   height={100}
                   className="h-32 w-auto transition-transform hover:scale-105 hover:animate-logo-pulse-grow" // Slightly smaller to fit h-32 container
                   priority
+                  unoptimized
                 />
               </Link>
 
@@ -215,7 +216,7 @@ const Navbar: React.FC = () => {
                 width={96}
                 height={96}
                 className="py-1"
-                decoding="sync"
+                unoptimized
               />
             </Link>
             <button

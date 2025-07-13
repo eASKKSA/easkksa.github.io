@@ -94,7 +94,7 @@ export default async function Page() {
       </Container>
 
       <Container className="bg-gradient-to-br from-primary to-[#741b1f] rounded-3xl p-8 md:p-12 text-white shadow-2xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           {t("sections.schedule")}
         </h2>
         <p className="text-xl opacity-90">{t("hero.schedule.title")}</p>
@@ -116,7 +116,7 @@ export default async function Page() {
       </Container>
       <Container blur className="grid lg:grid-cols-2 gap-12 items-center ">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display dark:text-white text-[#222]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white text-[#222]">
             {t("sections.visitDojo")}
           </h2>
           <p className="text-xl mb-8 dark:text-gray-300 text-gray-600">

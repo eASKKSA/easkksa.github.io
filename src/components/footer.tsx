@@ -9,8 +9,8 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-import Link from "next/link";
 import ProtectedEmail from "@/components/protected-email";
+import { Link } from "@/i18n/navigation";
 
 // Social links now use react-icons
 const socialLinks = [

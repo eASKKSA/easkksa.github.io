@@ -8,80 +8,39 @@ import { useTranslations } from "next-intl";
 const CookieWarning = () => {
   const t = useTranslations("CookieWarning");
   const [showBanner, setShowBanner] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
 
-  // Move cookie check to useEffect to avoid blocking renders
   useEffect(() => {
-    const checkCookieConsent = () => {
-      try {
-        // Use requestAnimationFrame to ensure this runs after critical content
-        requestAnimationFrame(() => {
-          if (!hasCookie("cookie_consent")) {
-            setShowBanner(true);
-          }
-        });
-      } catch (error) {
-        console.error("Error checking cookie consent:", error);
-        // Show banner on error as fallback
-        setShowBanner(true);
-      }
-    };
-
-    // Only run after DOM is ready
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", checkCookieConsent);
-      return () =>
-        document.removeEventListener("DOMContentLoaded", checkCookieConsent);
-    } else {
-      checkCookieConsent();
+    if (!hasCookie("cookie_consent")) {
+      setShowBanner(true);
     }
   }, []);
 
-  const handleCookieAction = useCallback(
-    async (acceptAll: boolean) => {
-      if (isProcessing) return; // Prevent double-clicks
+  const handleCookieAction = useCallback((consentGiven: boolean) => {
+    try {
+      setCookie("cookie_consent", consentGiven.toString(), {
+        maxAge: 60 * 60 * 24 * 365, // 1 year
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        path: "/",
+      });
 
-      setIsProcessing(true);
-
-      try {
-        // Set cookie with optimized options
-        setCookie("cookie_consent", acceptAll ? "true" : "false", {
-          maxAge: 60 * 60 * 24 * 365, // 1 year
-          secure: process.env.NODE_ENV === "production",
-          sameSite: "strict",
-          path: "/", // Ensure cookie is available site-wide
+      // Update Google Analytics consent if gtag is available
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", {
+          analytics_storage: consentGiven ? "granted" : "denied",
+          ad_storage: consentGiven ? "granted" : "denied",
         });
-
-        // Update Google Analytics consent (if available)
-        if (typeof window !== "undefined" && window.gtag) {
-          window.gtag("consent", "update", {
-            analytics_storage: acceptAll ? "granted" : "denied",
-            ad_storage: acceptAll ? "granted" : "denied",
-          });
-        }
-
-        // Hide banner immediately for better UX
-        setShowBanner(false);
-      } catch (error) {
-        console.error("Error setting cookie consent:", error);
-        // Still hide banner even on error to prevent infinite showing
-        setShowBanner(false);
-      } finally {
-        setIsProcessing(false);
       }
-    },
-    [isProcessing],
-  );
 
-  const handleAcceptAll = useCallback(() => {
-    handleCookieAction(true);
-  }, [handleCookieAction]);
+      // Hide banner immediately for a snappy user experience.
+      setShowBanner(false);
+    } catch (error) {
+      console.error("Error setting cookie consent:", error);
+      // Still hide the banner on error to prevent it from getting stuck.
+      setShowBanner(false);
+    }
+  }, []);
 
-  const handleAcceptEssential = useCallback(() => {
-    handleCookieAction(false);
-  }, [handleCookieAction]);
-
-  // Don't render if banner shouldn't be shown
   if (!showBanner) return null;
 
   return (
@@ -102,7 +61,7 @@ const CookieWarning = () => {
       <div className="gap-4 flex justify-center mt-3">
         <button
           type="button"
-          onClick={handleAcceptAll}
+          onClick={() => handleCookieAction(true)}
           className="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label={t("acceptAll")}
         >
@@ -110,7 +69,7 @@ const CookieWarning = () => {
         </button>
         <button
           type="button"
-          onClick={handleAcceptEssential}
+          onClick={() => handleCookieAction(false)}
           className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label="Aceitar apenas cookies essenciais"
         >
