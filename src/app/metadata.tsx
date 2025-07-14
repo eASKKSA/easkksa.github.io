@@ -31,13 +31,6 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
         "max-image-preview": "large",
       },
     },
-    // --- Icons & Manifest ---
-    icons: {
-      icon: "/icons/favicon-32x32.png", // Assumes standard icon paths
-      shortcut: "/favicon.ico",
-      apple: "/icons/favicon-144x144.png",
-    },
-    manifest: `/icons/manifest.json`, // Assumes a standard manifest location
 
     // --- App & Device Integration ---
     appleWebApp: {

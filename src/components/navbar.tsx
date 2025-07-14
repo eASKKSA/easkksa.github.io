@@ -8,6 +8,8 @@ import { useLocale, type Locale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { mainPagePathnames } from "@/i18n/routing";
 
+import mainLogo from "@/app/icon.svg";
+
 const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
   ssr: false,
 });
@@ -171,12 +173,11 @@ const Navbar: React.FC = () => {
               {/* Logo: Takes the center (4th) grid column */}
               <Link href="/" aria-label="Home">
                 <Image
-                  src="/askksa_logo.svg"
+                  src={mainLogo}
                   alt="ASKKSA Karate Club Logo"
                   width={100}
                   height={100}
-                  className="h-32 w-auto transition-transform hover:scale-105 hover:animate-logo-pulse-grow" // Slightly smaller to fit h-32 container
-                  priority
+                  className="h-32 w-auto transition-transform hover:scale-105 hover:animate-logo-pulse-grow"
                   unoptimized
                 />
               </Link>
@@ -210,8 +211,7 @@ const Navbar: React.FC = () => {
           <div className="flex h-24 p-4 items-center justify-between">
             <Link href="/" aria-label="Home">
               <Image
-                priority
-                src="/askksa_logo.svg"
+                src={mainLogo}
                 alt="ASKKSA Logo"
                 width={96}
                 height={96}

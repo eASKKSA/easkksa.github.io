@@ -4,6 +4,8 @@ import Container from "@/components/container";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 
+import mainLogo from "@/app/icon.svg";
+
 export const generateMetadata = metadata;
 
 export default async function DojoRulesPage() {
@@ -16,7 +18,7 @@ export default async function DojoRulesPage() {
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
           <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
             <Image
-              src="/askksa_logo.svg"
+              src={mainLogo}
               alt="ASKKSA - Regras do Dojo"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -4,6 +4,8 @@ import Container from "@/components/container";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 
+import askksaThumb from "@/assets/askksa_thumb.svg";
+
 export const generateMetadata = metadata;
 
 // --- MAIN PAGE COMPONENT ---
@@ -202,7 +204,7 @@ export default async function VocabularyPage() {
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
           <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
             <Image
-              src="/askksa_logo.svg"
+              src={askksaThumb}
               alt="ASKKSA - Vocabulário Japonês do Karaté"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

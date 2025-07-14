@@ -10,25 +10,22 @@ const Background: React.FC = () => {
 
       {/* Desktop Dark Image */}
       <Image
-        priority
         src="/askksa-background-tiger.svg"
         fill
-        sizes="(min-width: 768px) 100vw"
         alt=""
         className="hidden md:block object-cover"
-        decoding="async"
         unoptimized
       />
 
       {/* Mobile Dark Image */}
       <Image
-        priority
         src="/askksa-background-tiger-mobile.webp"
         fill
-        sizes="(max-width: 767px) 100vw"
+        sizes="100vw"
         alt=""
         className="block md:hidden object-cover"
-        decoding="async"
+        placeholder="blur"
+        blurDataURL="/askksa-background-tiger-mobile.webp"
       />
 
       {/* Theme-aware overlay for text readability */}

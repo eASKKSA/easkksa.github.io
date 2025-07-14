@@ -1,15 +1,15 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { WebPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 import principlesImage from "@/assets/philosofy/principios.gif";
+import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<WebPage>> => {
   const t = await getTranslations("Philosophy");
   const orgT = await getTranslations("Organization");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/philosophy";
+  const locale = await getLocale();
+  const pathname = getPathname({ href: "/philosophy", locale: locale });
 
   return {
     "@context": "https://schema.org",
@@ -18,7 +18,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     description: t("meta.description"),
     about: "Filosofia do Karaté Shotokan",
     keywords: t("meta.keywords"),
-    url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+    url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: principlesImage.src,
@@ -28,7 +28,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
       "@type": "Organization",
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
     },
     publisher: {
       "@type": "Organization",
@@ -36,16 +36,16 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+      "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
-    inLanguage: await getLocale(),
+    dateModified: "2025-07-10T10:00:00+00:00",
+    inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: orgT("name"),
@@ -86,7 +86,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
           "@type": "ListItem",
           position: 2,
           name: "Filosofia",
-          item: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
     },
@@ -95,20 +95,31 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
 
 export async function metadata(): Promise<Metadata> {
   const t = await getTranslations("Philosophy");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/philosophy";
   const locale = await getLocale();
+  const pathname = getPathname({ href: "/philosophy", locale: locale });
+  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
+  const otherPathname = getPathname({
+    href: "/philosophy",
+    locale: otherLocale,
+  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
+    alternates: {
+      canonical: pathname,
+      languages: {
+        [otherLocale]: otherPathname,
+        "x-default": getPathname({ href: "/philosophy", locale: "en" }),
+      },
+    },
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: fullPathname,
+      url: pathname,
       images: [
         {
           url: principlesImage.src,

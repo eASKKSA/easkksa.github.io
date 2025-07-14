@@ -43,7 +43,7 @@ export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
       "@type": "Organization",
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
     },
     publisher: {
       "@type": "Organization",

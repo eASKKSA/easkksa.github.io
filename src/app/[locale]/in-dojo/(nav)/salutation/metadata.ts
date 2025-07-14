@@ -1,16 +1,15 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
+import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<Article>> => {
   const t = await getTranslations("Salutation");
   const orgT = await getTranslations("Organization");
-  const appHeaders = await headers();
-  const fullPathname =
-    appHeaders.get("x-next-pathname") ?? "/in-dojo/salutation";
+  const locale = await getLocale();
+  const pathname = getPathname({ href: "/in-dojo/salutation", locale: locale });
 
   return {
     "@context": "https://schema.org",
@@ -20,7 +19,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     about: "Saudação e Rituais no Karaté Shotokan",
     articleSection: "Dojo",
     keywords: t("meta.keywords"),
-    url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+    url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: senseiSeizaImage.src,
@@ -30,7 +29,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       "@type": "Organization",
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
     },
     publisher: {
       "@type": "Organization",
@@ -38,16 +37,16 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+      "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
-    inLanguage: await getLocale(),
+    dateModified: "2025-07-10T10:00:00+00:00",
+    inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: orgT("name"),
@@ -81,21 +80,31 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
 
 export async function metadata(): Promise<Metadata> {
   const t = await getTranslations("Salutation");
-  const appHeaders = await headers();
-  const fullPathname =
-    appHeaders.get("x-next-pathname") ?? "/in-dojo/salutation";
   const locale = await getLocale();
+  const pathname = getPathname({ href: "/in-dojo/salutation", locale: locale });
+  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
+  const otherPathname = getPathname({
+    href: "/in-dojo/salutation",
+    locale: otherLocale,
+  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
+    alternates: {
+      canonical: pathname,
+      languages: {
+        [otherLocale]: otherPathname,
+        "x-default": getPathname({ href: "/in-dojo/salutation", locale: "en" }),
+      },
+    },
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: fullPathname,
+      url: pathname,
       images: [
         {
           url: senseiSeizaImage.src,
@@ -104,7 +113,7 @@ export async function metadata(): Promise<Metadata> {
           alt: t("meta.title"),
         },
         {
-          url: "/icons/favicon-512x512.png",
+          url: "/icons/icon-512x512.png",
           width: 512,
           height: 512,
           alt: t("meta.title"),
