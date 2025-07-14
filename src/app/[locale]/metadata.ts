@@ -1,12 +1,12 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { SportsOrganization, WithContext } from "schema-dts";
 import { Metadata } from "next";
-import { headers } from "next/headers";
+import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<SportsOrganization>> => {
   const t = await getTranslations("Organization");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/";
+  const locale = await getLocale();
+  const pathname = getPathname({ href: "/", locale: locale });
 
   return {
     "@context": "https://schema.org",
@@ -14,7 +14,7 @@ export const jsonLd = async (): Promise<WithContext<SportsOrganization>> => {
     name: t("name"),
     sport: t("sport"),
     description: t("description"),
-    url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+    url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     logo: "/icons/favicon-512x512.png",
     foundingDate: "2000-04-01",
     founder: "Rafael Jardim",
@@ -86,19 +86,28 @@ export const jsonLd = async (): Promise<WithContext<SportsOrganization>> => {
 
 export async function metadata(): Promise<Metadata> {
   const t = await getTranslations("Home");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/";
+  const locale = await getLocale();
+  const pathname = getPathname({ href: "/", locale: locale });
+  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
+  const otherPathname = getPathname({ href: "/", locale: otherLocale });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
     applicationName: "ASKKSA",
+    alternates: {
+      canonical: pathname,
+      languages: {
+        [otherLocale]: otherPathname,
+        "x-default": getPathname({ href: "/", locale: "en" }),
+      },
+    },
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: await getLocale(),
+      locale: locale,
       description: t("meta.description"),
-      url: fullPathname,
+      url: pathname,
       images: [
         {
           url: "/icons/favicon-512x512.png",

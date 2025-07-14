@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
 import { getPathname } from "@/i18n/navigation";
 
-export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
-  const t = await getTranslations("About");
+// @ts-expect-error there is not a type for this function in next-intl
+export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
   const orgT = await getTranslations("Organization");
   const locale = await getLocale();
   const pathname = getPathname({ href: "/about", locale: locale });
@@ -99,11 +99,21 @@ export async function metadata(): Promise<Metadata> {
   const t = await getTranslations("About");
   const locale = await getLocale();
   const pathname = getPathname({ href: "/about", locale: locale });
+  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
+  const otherPathname = getPathname({ href: "/about", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
+    applicationName: "ASKKSA",
+    alternates: {
+      canonical: pathname,
+      languages: {
+        [otherLocale]: otherPathname,
+        "x-default": getPathname({ href: "/about", locale: "en" }),
+      },
+    },
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",

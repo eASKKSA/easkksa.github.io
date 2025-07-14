@@ -51,7 +51,7 @@ export default async function Page() {
   ];
   return (
     <>
-      <Container blur withBubbles className="text-center" skipAnimation>
+      <Container blur withBubbles className="text-center">
         <h1>
           ASKKSA{" "}
           <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -78,7 +78,7 @@ export default async function Page() {
         </div>
       </Container>
 
-      <Container className="text-center" skipAnimation>
+      <Container className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("sections.whyChoose")}
         </h2>

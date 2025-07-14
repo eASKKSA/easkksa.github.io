@@ -37,7 +37,6 @@ export const generateMetadata = metadata;
 // --- MAIN PAGE COMPONENT ---
 export default async function QuemSomosPage() {
   const t = await getTranslations("About");
-  const currentYear = new Date().getFullYear();
 
   const instructors = [
     {
@@ -48,7 +47,7 @@ export default async function QuemSomosPage() {
       credentials: [
         t("instructors.jorgeFreitas.credential1", {
           startYear: 1987,
-          years: currentYear - 1987,
+          years: 38,
         }),
         t("instructors.jorgeFreitas.credential2"),
         t("instructors.jorgeFreitas.credential3"),
@@ -63,7 +62,7 @@ export default async function QuemSomosPage() {
       credentials: [
         t("instructors.rafaelJardim.credential1", {
           startYear: 1992,
-          years: currentYear - 1992,
+          years: 33,
         }),
         t("instructors.rafaelJardim.credential2"),
         t("instructors.rafaelJardim.credential3"),
@@ -78,7 +77,7 @@ export default async function QuemSomosPage() {
       credentials: [
         t("instructors.marisaGomes.credential1", {
           startYear: 2000,
-          years: currentYear - 2000,
+          years: 25,
         }),
         t("instructors.marisaGomes.credential2"),
         t("instructors.marisaGomes.credential3"),
@@ -93,7 +92,7 @@ export default async function QuemSomosPage() {
       credentials: [
         t("instructors.titoVelosa.credential1", {
           startYear: 1995,
-          years: currentYear - 1995,
+          years: 30,
         }),
         t("instructors.titoVelosa.credential2"),
         t("instructors.titoVelosa.credential3"),
@@ -247,7 +246,7 @@ export default async function QuemSomosPage() {
   return (
     <>
       {/* Hero Section */}
-      <Container blur withBubbles className="text-center" skipAnimation>
+      <Container blur withBubbles className="text-center">
         <h1>{t("title")}</h1>
         <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
           {t("description")}
@@ -255,7 +254,7 @@ export default async function QuemSomosPage() {
       </Container>
 
       {/* Instructors Section */}
-      <Container className="text-center" skipAnimation>
+      <Container className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("instructors.title")}
         </h2>
@@ -296,7 +295,12 @@ export default async function QuemSomosPage() {
           ))}
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t)} />
+      <link
+        rel="preconnect"
+        href="https://maps.googleapis.com"
+        crossOrigin="anonymous"
+      />
     </>
   );
 }
