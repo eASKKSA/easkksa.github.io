@@ -5,7 +5,7 @@ import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 
 // --- ASSETS ---
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
+import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 
 export const generateMetadata = metadata;
 

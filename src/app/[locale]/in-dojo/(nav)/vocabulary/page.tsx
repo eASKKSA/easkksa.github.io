@@ -208,7 +208,7 @@ export default async function VocabularyPage() {
               alt="ASKKSA - Vocabulário Japonês do Karaté"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
+              className="object-contain rounded-full"
               priority
             />
           </div>

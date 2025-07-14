@@ -6,7 +6,7 @@ import { MetadataLDJSON } from "@/app/metadata";
 import { Link } from "@/i18n/navigation";
 
 // --- ASSETS ---
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
+import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
 import askksaThumb from "@/assets/askksa_thumb.svg";
 

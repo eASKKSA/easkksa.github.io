@@ -2,7 +2,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Article, WithContext } from "schema-dts";
 import { Metadata } from "next";
 
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_by_VCRC.jpg";
+import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<Article>> => {
