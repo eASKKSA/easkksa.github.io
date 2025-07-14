@@ -247,7 +247,7 @@ export default async function QuemSomosPage() {
   return (
     <>
       {/* Hero Section */}
-      <Container blur withBubbles className="text-center">
+      <Container blur withBubbles className="text-center" skipAnimation>
         <h1>{t("title")}</h1>
         <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
           {t("description")}
@@ -255,7 +255,7 @@ export default async function QuemSomosPage() {
       </Container>
 
       {/* Instructors Section */}
-      <Container className="text-center">
+      <Container className="text-center" skipAnimation>
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           {t("instructors.title")}
         </h2>

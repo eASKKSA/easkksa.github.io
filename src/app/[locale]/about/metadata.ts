@@ -1,15 +1,15 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { AboutPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
+import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
   const t = await getTranslations("About");
   const orgT = await getTranslations("Organization");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/about";
+  const locale = await getLocale();
+  const pathname = getPathname({ href: "/about", locale: locale });
 
   return {
     "@context": "https://schema.org",
@@ -33,7 +33,7 @@ export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
         },
       ],
     },
-    url: process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+    url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
@@ -56,11 +56,11 @@ export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": process.env.NEXT_PUBLIC_SITE_URL + fullPathname,
+      "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2000-04-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
-    inLanguage: await getLocale(),
+    dateModified: "2025-07-10T10:00:00+00:00",
+    inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: orgT("name"),
@@ -97,9 +97,8 @@ export const jsonLd = async (): Promise<WithContext<AboutPage>> => {
 
 export async function metadata(): Promise<Metadata> {
   const t = await getTranslations("About");
-  const appHeaders = await headers();
-  const fullPathname = appHeaders.get("x-next-pathname") ?? "/about";
   const locale = await getLocale();
+  const pathname = getPathname({ href: "/about", locale: locale });
 
   return {
     title: t("meta.title"),
@@ -110,7 +109,7 @@ export async function metadata(): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: fullPathname,
+      url: pathname,
       images: [
         {
           url: jorgeFreitas.src,
