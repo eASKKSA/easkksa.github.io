@@ -4,31 +4,31 @@ import { getTranslations } from "next-intl/server";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 
-import jorgeFreitas from "@/assets/senseis/jorge_freitas.jpg";
-import titoVelosa from "@/assets/senseis/tito_velosa.jpg";
-import marisaGomes from "@/assets/senseis/marisa_gomes.jpg";
-import rafaelJardim from "@/assets/senseis/rafael_jardim.jpg";
+import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
+import titoVelosa from "@/assets/senseis/tito_velosa.webp";
+import marisaGomes from "@/assets/senseis/marisa_gomes.webp";
+import rafaelJardim from "@/assets/senseis/rafael_jardim.webp";
 
-import andrePestana from "@/assets/black-belts/andre_pestana.jpg";
-import beatrizMartins from "@/assets/black-belts/beatriz_martins.jpg";
-import bernardoLopes from "@/assets/black-belts/bernardo_lopes.jpg";
-import fabioReis from "@/assets/black-belts/fabio_reis.jpg";
-import franciscoOrnelas from "@/assets/black-belts/francisco_ornelas.jpg";
-import goncaloPilco from "@/assets/black-belts/goncalo_pilco.jpg";
-import jessicaBaptista from "@/assets/black-belts/jessica_baptista.jpg";
-import joaoCasimiro from "@/assets/black-belts/joao_casimiro.jpg";
-import joaoPrioste from "@/assets/black-belts/joao_prioste.jpg";
-import joaoRodrigues from "@/assets/black-belts/joao_rodrigues.jpg";
-import julioHenriques from "@/assets/black-belts/julio_henriques.jpg";
-import leonorCoelho from "@/assets/black-belts/leonor_coelho.jpg";
-import luisBarros from "@/assets/black-belts/luis_barros.jpg";
-import marcioGouveia from "@/assets/black-belts/marcio_gouveia.jpg";
-import marcoAnjo from "@/assets/black-belts/marco_anjo.jpg";
-import nadjaPilco from "@/assets/black-belts/nadja_pilco.jpg";
-import natachaSilva from "@/assets/black-belts/natacha_silva.jpg";
-import nunoFernandes from "@/assets/black-belts/nuno_fernandes.jpg";
-import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.jpg";
-import tiagoFreitas from "@/assets/black-belts/tiago_freitas.jpg";
+import andrePestana from "@/assets/black-belts/andre_pestana.webp";
+import beatrizMartins from "@/assets/black-belts/beatriz_martins.webp";
+import bernardoLopes from "@/assets/black-belts/bernardo_lopes.webp";
+import fabioReis from "@/assets/black-belts/fabio_reis.webp";
+import franciscoOrnelas from "@/assets/black-belts/francisco_ornelas.webp";
+import goncaloPilco from "@/assets/black-belts/goncalo_pilco.webp";
+import jessicaBaptista from "@/assets/black-belts/jessica_baptista.webp";
+import joaoCasimiro from "@/assets/black-belts/joao_casimiro.webp";
+import joaoPrioste from "@/assets/black-belts/joao_prioste.webp";
+import joaoRodrigues from "@/assets/black-belts/joao_rodrigues.webp";
+import julioHenriques from "@/assets/black-belts/julio_henriques.webp";
+import leonorCoelho from "@/assets/black-belts/leonor_coelho.webp";
+import luisBarros from "@/assets/black-belts/luis_barros.webp";
+import marcioGouveia from "@/assets/black-belts/marcio_gouveia.webp";
+import marcoAnjo from "@/assets/black-belts/marco_anjo.webp";
+import nadjaPilco from "@/assets/black-belts/nadja_pilco.webp";
+import natachaSilva from "@/assets/black-belts/natacha_silva.webp";
+import nunoFernandes from "@/assets/black-belts/nuno_fernandes.webp";
+import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.webp";
+import tiagoFreitas from "@/assets/black-belts/tiago_freitas.webp";
 
 import askksaThumb from "@/assets/askksa_thumb.svg";
 
@@ -315,15 +315,14 @@ const InstructorCard = ({
 }) => {
   return (
     <div className="flex flex-col items-center text-center p-6 rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-primary hover:dark:bg-[#222]/80 border-gray-200/50 bg-white/60 hover:border-[#a4262c] hover:bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
-      <div className="relative w-32 h-32 mb-4">
-        <Image
-          src={instructor.image}
-          alt={`Foto de ${instructor.name}`}
-          fill
-          className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300"
-          sizes="(max-width: 768px) 100vw, 128px"
-        />
-      </div>
+      <Image
+        src={instructor.image}
+        alt={`Foto de ${instructor.name}`}
+        width={128}
+        height={128}
+        className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300 mb-4"
+        sizes="(max-width: 768px) 100vw, 128px"
+      />
       <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
         {instructor.name}
       </h3>
@@ -387,15 +386,14 @@ const BBCard = ({
 }) => {
   return (
     <div className="flex flex-col items-center text-center p-6 rounded-2xl border transition-all duration-300 dark:border-gray-700/50 dark:bg-[#2a2a2a]/60 hover:dark:border-primary hover:dark:bg-[#222]/80 border-gray-200/50 bg-white/60 hover:border-primary hover:bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2">
-      <div className="relative w-24 h-24 mb-4">
-        <Image
-          src={blackBelt.image}
-          alt={`Foto de ${blackBelt.name}`}
-          fill
-          className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300"
-          sizes="(max-width: 768px) 100vw, 128px"
-        />
-      </div>
+      <Image
+        src={blackBelt.image}
+        alt={`Foto de ${blackBelt.name}`}
+        width={96}
+        height={96}
+        className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300 mb-4"
+        sizes="(max-width: 768px) 100vw, 128px"
+      />
       <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
         {blackBelt.name}
       </h3>
