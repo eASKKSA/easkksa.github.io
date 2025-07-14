@@ -11,6 +11,7 @@ import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 import clsx from "clsx";
 import FormTrial from "@/components/form-trial";
+import DojoMap from "@/components/dojo-map";
 
 export const generateMetadata = metadata;
 
@@ -154,13 +155,10 @@ export default async function Page() {
         </div>
 
         <div className="relative">
-          <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`}
+          <DojoMap
+            name="Localização da ASKKSA - Escola Horácio Bento Gouveia"
+            mapUrl={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`}
             className="rounded-xl h-80 w-full shadow-lg border-0"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localização da ASKKSA - Escola Horácio Bento Gouveia"
           />
         </div>
       </Container>

@@ -178,6 +178,7 @@ const Navbar: React.FC = () => {
                   width={100}
                   height={100}
                   className="h-32 w-auto transition-transform hover:scale-105 hover:animate-logo-pulse-grow"
+                  priority
                   unoptimized
                 />
               </Link>
@@ -216,6 +217,7 @@ const Navbar: React.FC = () => {
                 width={96}
                 height={96}
                 className="py-1"
+                priority
                 unoptimized
               />
             </Link>

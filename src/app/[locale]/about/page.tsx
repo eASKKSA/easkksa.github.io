@@ -3,6 +3,7 @@ import Container from "@/components/container";
 import { getTranslations } from "next-intl/server";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import DojoMap from "@/components/dojo-map";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
 import titoVelosa from "@/assets/senseis/tito_velosa.webp";
@@ -138,12 +139,14 @@ export default async function QuemSomosPage() {
     {
       id: "dojo1",
       name: t("dojos.dojo1.name"),
-      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`,
+      mapUrl:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt",
     },
     {
       id: "dojo2",
       name: t("dojos.dojo2.name"),
-      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJyV_BTiNfYAwRMudPc6rfl3w`,
+      mapUrl:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt",
     },
   ];
 
@@ -382,13 +385,10 @@ const DojoCard = ({
 
   return (
     <div className={cardClasses}>
-      <iframe
-        src={dojo.mapUrl}
+      <DojoMap
+        mapUrl={dojo.mapUrl}
         className={iframeClasses}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title={dojo.name}
+        name={dojo.name}
       />
       <h3 className={titleClasses}>{dojo.name}</h3>
     </div>
