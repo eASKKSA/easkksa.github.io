@@ -101,20 +101,7 @@ export default async function QuemSomosPage() {
     },
   ];
 
-  const dojos = [
-    {
-      id: "dojo1",
-      name: t("dojos.dojo1.name"),
-      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`,
-    },
-    {
-      id: "dojo2",
-      name: t("dojos.dojo2.name"),
-      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJyV_BTiNfYAwRMudPc6rfl3w`,
-    },
-  ];
-
-  const blackBelts = [
+  const auxiliaryInstructors = [
     {
       id: "luisBarros",
       name: "Luís Barros",
@@ -140,6 +127,28 @@ export default async function QuemSomosPage() {
       graduation: "2º Dan",
     },
     {
+      id: "fabioReis",
+      name: "Fábio Reis",
+      image: fabioReis,
+      graduation: "1º Dan",
+    },
+  ];
+
+  const dojos = [
+    {
+      id: "dojo1",
+      name: t("dojos.dojo1.name"),
+      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`,
+    },
+    {
+      id: "dojo2",
+      name: t("dojos.dojo2.name"),
+      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJyV_BTiNfYAwRMudPc6rfl3w`,
+    },
+  ];
+
+  const blackBelts = [
+    {
       id: "soraiaOliveira",
       name: "Soraia Oliveira",
       image: soraiaOliveira,
@@ -164,9 +173,9 @@ export default async function QuemSomosPage() {
       graduation: "1º Dan",
     },
     {
-      id: "fabioReis",
-      name: "Fábio Reis",
-      image: fabioReis,
+      id: "eltonCamacho",
+      name: "Elton Camacho",
+      image: askksaThumb,
       graduation: "1º Dan",
     },
     {
@@ -261,9 +270,17 @@ export default async function QuemSomosPage() {
         <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
           {t("instructors.subtitle")}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mb-8 lg:grid-cols-4 gap-8">
           {instructors.map((instructor) => (
             <InstructorCard key={instructor.name} instructor={instructor} />
+          ))}
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white">
+          {t("auxiliaryInstructors")}
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mt-4">
+          {auxiliaryInstructors.map((instructor) => (
+            <BBCard key={instructor.name} blackBelt={instructor} />
           ))}
         </div>
       </Container>
