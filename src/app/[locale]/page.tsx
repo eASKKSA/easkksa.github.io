@@ -154,9 +154,8 @@ export default async function Page() {
         </div>
 
         <div className="relative">
-          {/* ✅ Google Maps Embed */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1764.4362909833633!2d-16.926502062456784!3d32.64929211268456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749303665510!5m2!1spt-PT!2spt"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`}
             className="rounded-xl h-80 w-full shadow-lg border-0"
             allowFullScreen
             loading="lazy"

@@ -106,12 +106,12 @@ export default async function QuemSomosPage() {
     {
       id: "dojo1",
       name: t("dojos.dojo1.name"),
-      mapUrl: t("dojos.dojo1.mapUrl"),
+      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`,
     },
     {
       id: "dojo2",
       name: t("dojos.dojo2.name"),
-      mapUrl: t("dojos.dojo2.mapUrl"),
+      mapUrl: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJyV_BTiNfYAwRMudPc6rfl3w`,
     },
   ];
 
