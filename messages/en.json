@@ -95,6 +95,32 @@
         "domain": "askksa",
         "tld": "pt"
       }
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
+    "sport": "Karate",
+    "description": "A karate association in Funchal, Madeira, with dojos at Horacio Bento de Gouveia School and at the Santo Antonio Parish Council.",
+    "addressLocality": "Funchal",
+    "addressRegion": "Madeira",
+    "addressCountry": "PT",
+    "streetAddress": "Horacio Bento de Gouveia School",
+    "contactType": "General Information",
+    "dojo1": {
+      "name": "Main Dojo - Horacio Bento de Gouveia School",
+      "address": {
+        "name": "Horacio Bento de Gouveia School",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "PT"
+      }
+    },
+    "dojo2": {
+      "name": "Dojo Santo Antonio Parish Council",
+      "address": {
+        "name": "Santo Antonio Parish Council",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "PT"
+      }
     }
   },
   "About": {
@@ -103,6 +129,9 @@
       "description": "Discover the history of ASKKSA since 2000, our team of qualified instructors, and the dojos where we practise Shotokan Karate in Funchal, Madeira.",
       "keywords": "Who We Are, ASKKSA History, Karate Instructors, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Funchal Dojos, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
     },
+    "orgName": "ASKKSA - Shotokan Kokusai Karate Santo Antonio Association",
+    "orgDescription": "ASKKSA is a karate association in Funchal, Madeira, dedicated to the practice and promotion of Shotokan Karate. Founded in 2000, it offers classes for all ages and levels, with a focus on tradition, discipline and excellence.",
+    "orgSport": "Shotokan Karate",
     "title": "About ASKKSA",
     "description": "ASKKSA, Shotokan Kokusai Karate Association of Santo Antonio, was founded in Funchal in April 2000. The aim of this foundation was, in addition to relaunching the discipline at new levels, to place it within the legal and sporting framework of the Autonomous Region of Madeira. ASKKSA is affiliated with FNK-P (National Karate Federation – Portugal) and AKRAM (Karate Association of the Autonomous Region of Madeira) and is recognised by the DRJD (Regional Directorate of Youth and Sport).",
     "instructors": {
@@ -165,6 +194,7 @@
       "description": "Follow the latest news, events and achievements of ASKKSA. Instagram, Facebook and updates from the world of Shotokan Karate. ASKKSA Funchal, Madeira.",
       "keywords": "ASKKSA News, Karate Events, Competitions, Instagram, Facebook, Updates, ASKKSA, Shotokan, Funchal, Madeira"
     },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "title": "News and Events",
     "subtitle": "ASKKSA in the Media",
     "lastUpdate": "Last update",
@@ -233,6 +263,7 @@
       "description": "Discover life in the Shotokan Karate dojo. Salutation, rules, Japanese vocabulary and grades. Ancient traditions and etiquette. ASKKSA Funchal.",
       "keywords": "Karate Dojo, Karate Etiquette, Dojo Rules, Salutation OSS, Japanese Vocabulary, Karate Grades, Japanese Traditions, ASKKSA Madeira, Shotokan"
     },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "title": "In the Dojo",
     "introduction": "In the Dojo, the heart of Karate, we practise and live by the guiding principles. Here, tradition meets discipline, and each training session is an opportunity for personal growth.",
     "sections": {
@@ -753,6 +784,7 @@
       "description": "Discover the rich history of Karate, from its origins in Okinawa with Sokon Matsumura to Gichin Funakoshi. Kihon, Kumite and Kata explained.",
       "keywords": "Karate History, Gichin Funakoshi, Sokon Matsumura, Okinawa, Kihon Kumite Kata, Shotokan Karate, Budo, ASKKSA Madeira, Japanese Martial Art"
     },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "title": "History of Karate",
     "introduction": {
       "text": "<b>Karate</b> or <b>karate-do</b> is a form of budo (way of the warrior). It is a Japanese martial art that originated in Okinawa and was introduced to the main islands of the Japanese archipelago in 1922. Karate emphasises striking techniques (such as punches and kicks) over grappling techniques."
@@ -790,6 +822,7 @@
       "description": "Discover the philosophy of Shotokan Karate through Bushido, Niju Kun and Dojo Kun. Ancient principles of discipline, respect, and self-control.",
       "keywords": "Karate Philosophy, Bushido, Niju Kun, Dojo Kun, Gichin Funakoshi, Samurai Code, Karate Principles, Karate Ethics, ASKKSA Madeira, Discipline, Respect"
     },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "title": "Karate Philosophy",
     "introduction": "The philosophy of Shotokan Karate is rooted in ancient principles that shape not only technique but also the character and essence of the practitioner. Discover the ethical and moral foundations that guide every karateka on their journey of self-discovery.",
     "sections": {
@@ -1015,6 +1048,7 @@
       "description": "Discover the 26 Shotokan Karate katas of Gichin Funakoshi. Heian, Tekki, Bassai, Kanku – traditional forms preserved for generations.",
       "keywords": "Shotokan Katas, 26 Katas, Heian Shodan, Tekki Bassai, Kanku, Gichin Funakoshi, Karate Forms, ASKKSA Madeira, Traditional Kata"
     },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
     "title": "Shotokan – 26 Katas",
     "introduction": "The Shotokan style, founded by Sensei Funakoshi, currently has 26 katas that are studied over a lifetime of training.",
     "description": "Each kata represents a unique form of imaginary combat, preserving ancient techniques and the philosophies of traditional Karate. Katas are the essence of Karate, combining movement, breathing and spirit.",

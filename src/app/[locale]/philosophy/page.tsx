@@ -4,45 +4,26 @@ import { Link } from "@/i18n/navigation";
 import Section from "@/components/container";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import { Metadata } from "next";
+import { getPhilosophySections } from "@/app/[locale]/philosophy/data";
 
-// --- ASSETS ---
-import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
-import principlesImage from "@/assets/philosofy/principios.gif";
-import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
-export const generateMetadata = metadata;
-
-// --- MAIN PAGE COMPONENT ---
-export default async function PhilosophyPage() {
+export default async function PhilosophyPage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("Philosophy");
-
-  // Data usando traduções
-  const philosophySections = [
-    {
-      id: "bushido",
-      title: t("sections.bushido.title"),
-      description: t("sections.bushido.description"),
-      image: ethicalCodeImage,
-      href: "/philosophy/bushido" as const,
-      principlesCount: t("sections.bushido.principlesCount"),
-    },
-    {
-      id: "nijuKun",
-      title: t("sections.nijuKun.title"),
-      description: t("sections.nijuKun.description"),
-      image: principlesImage,
-      href: "/philosophy/niju-kun" as const,
-      principlesCount: t("sections.nijuKun.principlesCount"),
-    },
-    {
-      id: "dojoKun",
-      title: t("sections.dojoKun.title"),
-      description: t("sections.dojoKun.description"),
-      image: dojoKunImage,
-      href: "/philosophy/dojo-kun" as const,
-      principlesCount: t("sections.dojoKun.principlesCount"),
-    },
-  ];
+  const philosophySections = getPhilosophySections(t);
 
   return (
     <>
@@ -99,7 +80,7 @@ export default async function PhilosophyPage() {
           </p>
         </div>
       </Section>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

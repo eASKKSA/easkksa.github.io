@@ -5,10 +5,23 @@ import Container from "@/components/container";
 import { getTranslations } from "next-intl/server";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import { Metadata } from "next";
 
-export const generateMetadata = metadata;
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
-export default async function HistoryPage() {
+export default async function HistoryPage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("History");
   return (
     <>
@@ -92,7 +105,7 @@ export default async function HistoryPage() {
           </div>
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

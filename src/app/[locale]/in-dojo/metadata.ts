@@ -1,14 +1,14 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { WebPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { getPathname } from "@/i18n/navigation";
 
 import askksaThumb from "@/assets/askksa_thumb.svg";
 
-export const jsonLd = async (): Promise<WithContext<WebPage>> => {
-  const t = await getTranslations("InDojo");
-  const orgT = await getTranslations("Organization");
-  const locale = await getLocale();
+export const jsonLd = async (
+  t: TFunction,
+  locale: Locale,
+): Promise<WithContext<WebPage>> => {
   const pathname = getPathname({ href: "/in-dojo", locale: locale });
 
   return {
@@ -26,13 +26,13 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     },
     author: {
       "@type": "Organization",
-      name: orgT("name"),
+      name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
     },
     publisher: {
       "@type": "Organization",
-      name: orgT("name"),
+      name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -48,7 +48,7 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
-      name: orgT("name"),
+      name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     mentions: [
@@ -76,9 +76,8 @@ export const jsonLd = async (): Promise<WithContext<WebPage>> => {
   };
 };
 
-export async function metadata(): Promise<Metadata> {
+export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("InDojo");
-  const locale = await getLocale();
   const pathname = getPathname({ href: "/in-dojo", locale: locale });
   const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
   const otherPathname = getPathname({ href: "/in-dojo", locale: otherLocale });

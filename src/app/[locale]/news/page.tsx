@@ -6,10 +6,23 @@ import FacebookEmbed from "@/components/news/facebook-section";
 import InstagramLink from "@/components/news/instagram-section";
 import YouTubeLink from "@/components/news/youtube-section";
 import ASKKSANews from "@/components/news/askksa-news";
+import { Metadata } from "next";
 
-export const generateMetadata = metadata;
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
-export default async function NewsPage() {
+export default async function NewsPage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("News");
 
   return (
@@ -41,7 +54,7 @@ export default async function NewsPage() {
           <YouTubeLink />
         </Container>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

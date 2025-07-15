@@ -95,6 +95,32 @@
         "domain": "askksa",
         "tld": "pt"
       }
+    },
+    "name": "ASKKSA: Associação Shotokan Kokusai Karaté Santo António",
+    "sport": "Karaté",
+    "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
+    "addressLocality": "Funchal",
+    "addressRegion": "Madeira",
+    "addressCountry": "PT",
+    "streetAddress": "Escola Horácio Bento de Gouveia",
+    "contactType": "Informações Gerais",
+    "dojo1": {
+      "name": "Dojo Principal - Escola Horácio Bento de Gouveia",
+      "address": {
+        "name": "Escola Horácio Bento de Gouveia",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "PT"
+      }
+    },
+    "dojo2": {
+      "name": "Dojo Junta de Freguesia de Santo António",
+      "address": {
+        "name": "Junta de Freguesia de Santo António",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madeira",
+        "addressCountry": "PT"
+      }
     }
   },
   "About": {
@@ -103,6 +129,9 @@
       "description": "Conheça a história da ASKKSA desde 2000, a nossa equipa de instrutores qualificados e os dojos onde praticamos Karaté Shotokan no Funchal, Madeira.",
       "keywords": "Quem Somos, História ASKKSA, Instrutores Karaté, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Dojos Funchal, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
     },
+    "orgName": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
+    "orgDescription": "A ASKKSA é uma associação dedicada à prática e promoção do Karaté Shotokan, com foco na formação de karatekas de todas as idades. Desde a sua fundação em 2000, tem sido um pilar da comunidade de Karaté na Madeira.",
+    "orgSport": "Karaté Shotokan",
     "title": "Sobre a ASKKSA",
     "description": "Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA, Associação Shotokan Kokusai Karate de Santo António. O objectivo desta constituição era, além de relançar a modalidade a novos níveis, enquadrá-la no panorama legal e desportivo da Região Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD ( Direção Regional da Juventude e Desporto ).",
     "instructors": {
@@ -165,6 +194,7 @@
       "description": "Acompanhe as últimas notícias, eventos e conquistas da ASKKSA. Instagram, Facebook e atualizações do mundo do Karaté Shotokan. ASKKSA Funchal, Madeira.",
       "keywords": "Notícias ASKKSA, Eventos Karaté, Competições, Instagram, Facebook, Atualizações, ASKKSA, Shotokan, Funchal, Madeira"
     },
+    "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "Notícias e Eventos",
     "subtitle": "A ASKKSA na Comunicação Social",
     "lastUpdate": "Última atualização",
@@ -233,6 +263,7 @@
       "description": "Descubra a vida no dojo de Karaté Shotokan. Saudação, regras, vocabulário japonês e graduações. Tradições e etiqueta milenares. ASKKSA Funchal.",
       "keywords": "Dojo Karaté, Etiqueta Karaté, Regras Dojo, Saudação OSS, Vocabulário Japonês, Graduações Karaté, Tradições Japonesas, ASKKSA Madeira, Shotokan"
     },
+    "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "No Dojo",
     "introduction": "No Dojo, o coração do Karaté, praticamos e vivemos os princípios que nos guiam. Aqui, a tradição encontra a disciplina, e cada treino é uma oportunidade de crescimento pessoal.",
     "sections": {
@@ -753,6 +784,7 @@
       "description": "Descubra a rica história do Karaté, desde as origens em Okinawa com Sokon Matsumura até Gichin Funakoshi. Kihon, Kumite e Kata explicados.",
       "keywords": "História Karaté, Gichin Funakoshi, Sokon Matsumura, Okinawa, Kihon Kumite Kata, Karaté Shotokan, Budo, ASKKSA Madeira, Arte Marcial Japonesa"
     },
+    "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "História do Karaté",
     "introduction": {
       "text": "<b>Karaté</b> ou <b>karate-do</b> é uma forma de budo (caminho do guerreiro). Uma arte marcial japonesa que tem a sua origem em Okinawa e foi introduzida nas principais ilhas do arquipélago japonês em 1922. O Karaté enfatiza as técnicas de ataque (como socos e pontapés) em detrimento das técnicas de luta corpo-a-corpo."
@@ -790,6 +822,7 @@
       "description": "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrolo.",
       "keywords": "Filosofia Karaté, Bushido, Niju Kun, Dojo Kun, Gichin Funakoshi, Código Samurai, Princípios Karaté, Ética Karaté, ASKKSA Madeira, Disciplina, Respeito"
     },
+    "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "Filosofia do Karaté",
     "introduction": "A filosofia do Karaté Shotokan assenta em princípios milenares que moldam não apenas a técnica, mas o caráter e a essência do praticante. Descubra os fundamentos éticos e morais que orientam cada karateka na sua jornada de autodescoberta.",
     "sections": {
@@ -1015,6 +1048,7 @@
       "description": "Descubra os 26 katas do Karaté Shotokan de Gichin Funakoshi. Heian, Tekki, Bassai, Kanku - formas tradicionais preservadas há gerações.",
       "keywords": "Katas Shotokan, 26 Katas, Heian Shodan, Tekki Bassai, Kanku, Gichin Funakoshi, Formas Karaté, ASKKSA Madeira, Kata Tradicional"
     },
+    "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "Shotokan - 26 Katas",
     "introduction": "O estilo Shotokan, fundado por Sensei Funakoshi, possui atualmente 26 katas que são estudadas ao longo de uma vida de treino.",
     "description": "Cada kata representa uma forma única de combate imaginário, preservando técnicas ancestrais e filosofias do Karaté tradicional. Os katas são a essência do Karaté, combinando movimento, respiração e espírito.",

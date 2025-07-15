@@ -12,44 +12,34 @@ import { MetadataLDJSON } from "@/app/metadata";
 import clsx from "clsx";
 import FormTrial from "@/components/form-trial";
 import DojoMap from "@/components/dojo-map";
+import { getFeatures, getSchedules } from "./data";
+import { Metadata } from "next";
 
-export const generateMetadata = metadata;
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
-export default async function Page() {
+export default async function Page({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("Home");
-  const features = [
-    {
-      id: "tradition",
-      title: t("features.tradition.title"),
-      description: t("features.tradition.description"),
-      icon: <GiKimono className="w-12 h-12" />,
-    },
-    {
-      id: "instructors",
-      title: t("features.instructors.title"),
-      description: t("features.instructors.description"),
-      icon: <FaPeopleGroup className="w-12 h-12" />,
-    },
-    {
-      id: "community",
-      title: t("features.community.title"),
-      description: t("features.community.description"),
-      icon: <IoPeople className="w-12 h-12" />,
-    },
-  ];
 
-  const schedules = [
-    {
-      day: t("schedule.weekdays"),
-      time: t("schedule.time1"),
-      level: t("schedule.children"),
-    },
-    {
-      day: t("schedule.weekdays"),
-      time: t("schedule.time2"),
-      level: t("schedule.adults"),
-    },
-  ];
+  const icons = {
+    tradition: <GiKimono />,
+    instructors: <IoPeople />,
+    community: <FaPeopleGroup />,
+  };
+
+  const features = getFeatures(t, icons);
+  const schedules = getSchedules(t);
   return (
     <>
       <Container blur withBubbles className="text-center">
@@ -157,12 +147,12 @@ export default async function Page() {
         <div className="relative">
           <DojoMap
             name="Localização da ASKKSA - Escola Horácio Bento Gouveia"
-            mapUrl={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJt__ELtJfYAwRxph89pXRuYU`}
+            mapUrl="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
             className="rounded-xl h-80 w-full shadow-lg border-0"
           />
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

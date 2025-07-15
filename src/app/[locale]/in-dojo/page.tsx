@@ -4,49 +4,26 @@ import Section from "@/components/container";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 import { Link } from "@/i18n/navigation";
+import { getInDojoSections } from "./data";
+import { Metadata } from "next";
 
-// --- ASSETS ---
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
-import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
-import askksaThumb from "@/assets/askksa_thumb.svg";
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
-export const generateMetadata = metadata;
-
-// --- MAIN PAGE COMPONENT ---
-export default async function InDojoPage() {
+export default async function InDojoPage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("InDojo");
-
-  // Data usando traduções
-  const inDojoSections = [
-    {
-      id: "salutation",
-      title: t("sections.salutation.title"),
-      description: t("sections.salutation.description"),
-      image: senseiSeizaImage,
-      href: "/in-dojo/salutation" as const,
-    },
-    {
-      id: "rules",
-      title: t("sections.rules.title"),
-      description: t("sections.rules.description"),
-      image: askksaThumb,
-      href: "/in-dojo/rules" as const,
-    },
-    {
-      id: "vocabulary",
-      title: t("sections.vocabulary.title"),
-      description: t("sections.vocabulary.description"),
-      image: askksaThumb,
-      href: "/in-dojo/vocabulary" as const,
-    },
-    {
-      id: "grades",
-      title: t("sections.grades.title"),
-      description: t("sections.grades.description"),
-      image: gradesImage,
-      href: "/in-dojo/grades" as const,
-    },
-  ];
+  const inDojoSections = getInDojoSections(t);
 
   return (
     <>
@@ -101,7 +78,7 @@ export default async function InDojoPage() {
           </p>
         </div>
       </Section>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

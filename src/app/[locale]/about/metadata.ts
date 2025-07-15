@@ -1,14 +1,14 @@
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { AboutPage, WithContext } from "schema-dts";
 import { Metadata } from "next";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
 import { getPathname } from "@/i18n/navigation";
 
-// @ts-expect-error there is not a type for this function in next-intl
-export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
-  const orgT = await getTranslations("Organization");
-  const locale = await getLocale();
+export const jsonLd = async (
+  t: TFunction,
+  locale: Locale,
+): Promise<WithContext<AboutPage>> => {
   const pathname = getPathname({ href: "/about", locale: locale });
 
   return {
@@ -18,10 +18,10 @@ export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
     description: t("meta.description"),
     about: {
       "@type": "SportsOrganization",
-      name: orgT("name"),
+      name: t("orgName"),
       foundingDate: "2000-04-01",
-      description: "Associação Shotokan Kokusai Karate de Santo António",
-      sport: "Karaté Shotokan",
+      description: t("orgDescription"),
+      sport: t("orgSport"),
       memberOf: [
         {
           "@type": "Organization",
@@ -36,22 +36,22 @@ export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+      url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
       caption: "ASKKSA - Associação Shotokan Kokusai Karate Santo António",
     },
     author: {
       "@type": "Organization",
-      name: orgT("name"),
+      name: t("orgName"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
     },
     publisher: {
       "@type": "Organization",
-      name: orgT("name"),
+      name: t("orgName"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/favicon-512x512.png",
+        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
       },
     },
     mainEntityOfPage: {
@@ -63,7 +63,7 @@ export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
-      name: orgT("name"),
+      name: t("orgName"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     mentions: [
@@ -95,9 +95,8 @@ export const jsonLd = async (t): Promise<WithContext<AboutPage>> => {
   };
 };
 
-export async function metadata(): Promise<Metadata> {
+export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("About");
-  const locale = await getLocale();
   const pathname = getPathname({ href: "/about", locale: locale });
   const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
   const otherPathname = getPathname({ href: "/about", locale: otherLocale });
@@ -128,7 +127,7 @@ export async function metadata(): Promise<Metadata> {
           alt: "Equipa de Instrutores ASKKSA",
         },
         {
-          url: "/icons/favicon-512x512.png",
+          url: "/icons/icon-512x512.png",
           width: 512,
           height: 512,
           alt: t("meta.title"),

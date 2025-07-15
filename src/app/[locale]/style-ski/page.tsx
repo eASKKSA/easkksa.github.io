@@ -10,42 +10,27 @@ import shotokanTopImage from "@/assets/style-ski/top.jpg";
 import dachisImage from "@/assets/style-ski/dachis.gif";
 import tecnicasPernasImage from "@/assets/style-ski/TecnicasPernas2.jpg";
 import maosPesImage from "@/assets/style-ski/maospes.gif";
+import { Metadata } from "next";
+import { getShotokanKatas } from "./data";
 
-export const generateMetadata = metadata;
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>): Promise<Metadata> {
+  const { locale } = await params;
+  return await metadata(locale);
+}
 
 // --- MAIN PAGE COMPONENT ---
-export default async function ShotokanKatasPage() {
+export default async function ShotokanKatasPage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: Locale }>;
+}>) {
+  const { locale } = await params;
   const t = await getTranslations("ShotokanKatas");
-
-  // Lista de katas usando traduções
-  const shotokanKatas = [
-    "heian_shodan",
-    "heian_nidan",
-    "heian_sandan",
-    "heian_yondan",
-    "heian_godan",
-    "tekki_shodan",
-    "tekki_nidan",
-    "tekki_sandan",
-    "bassai_dai",
-    "kanku_dai",
-    "jitte",
-    "hangetsu",
-    "enpi",
-    "gankaku",
-    "jion",
-    "bassai_sho",
-    "kanku_sho",
-    "chinte",
-    "unsu",
-    "sochin",
-    "nijushiho",
-    "gojushiho_dai",
-    "gojushiho_sho",
-    "meikyo",
-    "jiin",
-    "wankan",
-  ];
+  const shotokanKatas = getShotokanKatas();
 
   return (
     <>
@@ -67,13 +52,13 @@ export default async function ShotokanKatasPage() {
         {/* Katas Grid */}
         <h2 className="text-3xl font-bold text-center mb-8">Katas</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {shotokanKatas.map((kataKey) => (
+          {shotokanKatas.map((kata) => (
             <FeatureCard
-              key={kataKey}
+              key={kata}
               feature={{
-                id: kataKey,
-                title: t(`katas.${kataKey}.name`),
-                description: t(`katas.${kataKey}.meaning`),
+                id: kata,
+                title: t(`katas.${kata}.name`),
+                description: t(`katas.${kata}.meaning`),
                 icon: <span className="text-3xl">🥋</span>,
               }}
             />
@@ -145,7 +130,7 @@ export default async function ShotokanKatasPage() {
           </div>
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
 }

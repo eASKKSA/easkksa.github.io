@@ -1,11 +1,12 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { SportsOrganization, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { getPathname } from "@/i18n/navigation";
 
-export const jsonLd = async (): Promise<WithContext<SportsOrganization>> => {
-  const t = await getTranslations("Organization");
-  const locale = await getLocale();
+export const jsonLd = async (
+  t: TFunction,
+  locale: Locale,
+): Promise<WithContext<SportsOrganization>> => {
   const pathname = getPathname({ href: "/", locale: locale });
 
   return {
@@ -84,9 +85,8 @@ export const jsonLd = async (): Promise<WithContext<SportsOrganization>> => {
   };
 };
 
-export async function metadata(): Promise<Metadata> {
+export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("Home");
-  const locale = await getLocale();
   const pathname = getPathname({ href: "/", locale: locale });
   const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
   const otherPathname = getPathname({ href: "/", locale: otherLocale });
@@ -110,7 +110,7 @@ export async function metadata(): Promise<Metadata> {
       url: pathname,
       images: [
         {
-          url: "/icons/favicon-512x512.png",
+          url: "/icons/icon-512x512.png",
           width: 512,
           height: 512,
           alt: t("meta.title"),
