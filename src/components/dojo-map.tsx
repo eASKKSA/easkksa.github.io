@@ -1,6 +1,8 @@
 "use client";
 
-const DojoMap = ({
+import dynamic from "next/dynamic";
+
+const DojoMapImp = ({
   name,
   mapUrl,
   className,
@@ -20,5 +22,9 @@ const DojoMap = ({
     />
   );
 };
+const DojoMap = dynamic(() => Promise.resolve(DojoMapImp), {
+  ssr: false,
+  loading: () => <div>Loading map…</div>,
+});
 
 export default DojoMap;
