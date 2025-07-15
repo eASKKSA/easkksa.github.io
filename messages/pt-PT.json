@@ -140,7 +140,7 @@
       "jorgeFreitas": {
         "name": "Shihan Jorge Freitas",
         "graduation": "6º DAN",
-        "credential1": "Iniciou a prática em {startYear} (mais de {years} anos)",
+        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau III (FNK-P)",
         "credential4": "Árbitro Nacional B (FNK-P)"
@@ -148,15 +148,15 @@
       "rafaelJardim": {
         "name": "Sensei Rafael Jardim",
         "graduation": "5º DAN",
-        "credential1": "Iniciou a prática em {startYear} (mais de {years} anos)",
+        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
         "credential2": "Graduado pela SKIF Canada & ASKKM",
         "credential3": "Treinador de Karate Grau I (FNK-P)",
-        "credential4": "Árbitro Nacional B (FNK-P)"
+        "credential4": "Árbitro Nacional A (FNK-P)"
       },
       "marisaGomes": {
         "name": "Sensei Marisa Gomes",
         "graduation": "5º DAN",
-        "credential1": "Iniciou a prática em {startYear} (mais de {years} anos)",
+        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau II (FNK-P)",
         "credential4": "Juiz Nacional de Karate (FNK-P)"
@@ -164,7 +164,7 @@
       "titoVelosa": {
         "name": "Sensei Tito Velosa",
         "graduation": "4º DAN",
-        "credential1": "Iniciou a prática em {startYear} (mais de {years} anos)",
+        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau II (FNK-P)",
         "credential4": "Árbitro Nacional B (FNK-P)"

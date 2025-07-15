@@ -10,7 +10,7 @@ interface NewsItem {
 
 export async function getASKKSANews(): Promise<NewsItem[]> {
   const url =
-    "https://news.google.com/rss/search?q=ASKKSA&hl=pt-PT&gl=PT&ceid=PT:pt";
+    "https://news.google.com/rss/search?q=ASKKSA%20karate&hl=pt-PT&gl=PT&ceid=PT:pt";
 
   /* 1.  Buscar RSS e converter para JSON */
   const xml = await fetch(url).then((r) => r.text());

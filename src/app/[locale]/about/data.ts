@@ -14,6 +14,7 @@ import jessicaBaptista from "@/assets/black-belts/jessica_baptista.webp";
 import joaoCasimiro from "@/assets/black-belts/joao_casimiro.webp";
 import joaoPrioste from "@/assets/black-belts/joao_prioste.webp";
 import joaoRodrigues from "@/assets/black-belts/joao_rodrigues.webp";
+import juanCamara from "@/assets/black-belts/juan_camara.webp";
 import julioHenriques from "@/assets/black-belts/julio_henriques.webp";
 import leonorCoelho from "@/assets/black-belts/leonor_coelho.webp";
 import luisBarros from "@/assets/black-belts/luis_barros.webp";
@@ -26,7 +27,7 @@ import pedroRoxo from "@/assets/black-belts/pedro_roxo.webp";
 import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.webp";
 import tiagoFreitas from "@/assets/black-belts/tiago_freitas.webp";
 
-import askksaThumb from "@/assets/askksa_thumb.svg";
+import askksaThumbSquare from "@/assets/askksa_thumb_square.jpeg";
 
 // --- Data Functions ---
 export const getInstructors = (t: TFunction): Instructor[] => [
@@ -41,6 +42,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
       t("instructors.jorgeFreitas.credential3"),
       t("instructors.jorgeFreitas.credential4"),
     ],
+    certifiedBy: ["skifCanada", "skif", "askkm"],
   },
   {
     id: "rafaelJardim",
@@ -53,6 +55,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
       t("instructors.rafaelJardim.credential3"),
       t("instructors.rafaelJardim.credential4"),
     ],
+    certifiedBy: ["skifCanada", "skif", "askkm"],
   },
   {
     id: "marisaGomes",
@@ -65,6 +68,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
       t("instructors.marisaGomes.credential3"),
       t("instructors.marisaGomes.credential4"),
     ],
+    certifiedBy: ["skifCanada", "skif", "askkm"],
   },
   {
     id: "titoVelosa",
@@ -77,6 +81,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
       t("instructors.titoVelosa.credential3"),
       t("instructors.titoVelosa.credential4"),
     ],
+    certifiedBy: ["skifCanada", "skif", "askkm"],
   },
 ];
 
@@ -130,6 +135,54 @@ export const getDojos = (t: TFunction): Dojo[] => [
 
 export const getBlackBelts = (): BlackBelt[] => [
   {
+    id: "jorgeFreitas",
+    name: "Jorge Freitas",
+    image: jorgeFreitas,
+    graduation: "6º Dan",
+  },
+  {
+    id: "rafaelJardim",
+    name: "Rafael Jardim",
+    image: rafaelJardim,
+    graduation: "5º Dan",
+  },
+  {
+    id: "marisaGomes",
+    name: "Marisa Gomes",
+    image: marisaGomes,
+    graduation: "5º Dan",
+  },
+  {
+    id: "titoVelosa",
+    name: "Tito Velosa",
+    image: titoVelosa,
+    graduation: "4º Dan",
+  },
+  {
+    id: "luisBarros",
+    name: "Luís Barros",
+    image: luisBarros,
+    graduation: "3º Dan",
+  },
+  {
+    id: "jessicaBaptista",
+    name: "Jéssica Baptista",
+    image: jessicaBaptista,
+    graduation: "2º Dan",
+  },
+  {
+    id: "marcioGouveia",
+    name: "Márcio Gouveia",
+    image: marcioGouveia,
+    graduation: "2º Dan",
+  },
+  {
+    id: "marcoAnjo",
+    name: "Marco Anjo",
+    image: marcoAnjo,
+    graduation: "2º Dan",
+  },
+  {
     id: "soraiaOliveira",
     name: "Soraia Oliveira",
     image: soraiaOliveira,
@@ -156,7 +209,14 @@ export const getBlackBelts = (): BlackBelt[] => [
   {
     id: "eltonCamacho",
     name: "Elton Camacho",
-    image: askksaThumb,
+    image: askksaThumbSquare,
+    graduation: "1º Dan",
+    certifiedBy: "askkm",
+  },
+  {
+    id: "fabioReis",
+    name: "Fábio Reis",
+    image: fabioReis,
     graduation: "1º Dan",
   },
   {
@@ -178,16 +238,23 @@ export const getBlackBelts = (): BlackBelt[] => [
     graduation: "1º Dan",
   },
   {
+    id: "joaoPrioste",
+    name: "João Prioste",
+    image: joaoPrioste,
+    graduation: "1º Dan",
+  },
+  {
     id: "joaoRodrigues",
     name: "João Rodrigues",
     image: joaoRodrigues,
     graduation: "1º Dan",
   },
   {
-    id: "joaoPrioste",
-    name: "João Prioste",
-    image: joaoPrioste,
+    id: "juanCamara",
+    name: "Juan Camara",
+    image: juanCamara,
     graduation: "1º Dan",
+    certifiedBy: "venezuela",
   },
   {
     id: "julioHenriques",

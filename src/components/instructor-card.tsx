@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CertifiedLogoCard from "@/components/certified-logo-card";
 
 const InstructorCard = ({ instructor }: { instructor: Instructor }) => {
   return (
@@ -22,6 +23,11 @@ const InstructorCard = ({ instructor }: { instructor: Instructor }) => {
           <li key={cred}>✓ {cred}</li>
         ))}
       </ul>
+      <div className="absolute right-0 top-0 flex flex-col items-center text-center p-2 space-y-2">
+        {instructor.certifiedBy?.map((certificate) => (
+          <CertifiedLogoCard certifiedBy={certificate} key={certificate} />
+        ))}
+      </div>
     </div>
   );
 };

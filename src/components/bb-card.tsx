@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CertifiedLogoCard from "@/components/certified-logo-card";
 
 const BBCard = ({ blackBelt }: { blackBelt: BlackBelt }) => {
   return (
@@ -11,12 +12,15 @@ const BBCard = ({ blackBelt }: { blackBelt: BlackBelt }) => {
         className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300 mb-4"
         sizes="(max-width: 768px) 100vw, 128px"
       />
-      <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
+      <h3 className="text-xl font-bold mb-2 dark:text-white text-gray-900">
         {blackBelt.name}
       </h3>
       <p className="text-sm text-primary font-extrabold mb-2">
         {blackBelt.graduation}
       </p>
+      <div className="absolute right-0 top-0 m-2">
+        <CertifiedLogoCard certifiedBy={blackBelt.certifiedBy} />
+      </div>
     </div>
   );
 };

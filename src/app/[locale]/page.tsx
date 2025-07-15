@@ -33,9 +33,9 @@ export default async function Page({
   const t = await getTranslations("Home");
 
   const icons = {
-    tradition: <GiKimono />,
-    instructors: <IoPeople />,
-    community: <FaPeopleGroup />,
+    tradition: <GiKimono className="text-5xl" />,
+    instructors: <IoPeople className="text-5xl" />,
+    community: <FaPeopleGroup className="text-5xl" />,
   };
 
   const features = getFeatures(t, icons);

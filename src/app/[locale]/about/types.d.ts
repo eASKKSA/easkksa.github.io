@@ -4,6 +4,7 @@ interface Instructor {
   image: StaticImageData;
   graduation: string;
   credentials: string[];
+  certifiedBy?: BlackBelt["certifiedBy"][];
 }
 
 interface BlackBelt {
@@ -11,6 +12,7 @@ interface BlackBelt {
   name: string;
   image: StaticImageData | string; // Allow for default thumb
   graduation: string;
+  certifiedBy?: "skifCanada" | "skif" | "askkm" | "venezuela";
 }
 
 interface Dojo {
