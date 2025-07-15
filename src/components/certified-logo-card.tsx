@@ -23,23 +23,30 @@ export default function CertifiedLogoCard({
     askkm: {
       src: askkmLogo,
       alt: "ASKKM Logo",
-      href: "#",
+      href: null,
     },
     venezuela: {
       src: venezuelaLogo,
       alt: "Venezuela Logo",
-      href: "#",
+      href: null,
     },
   };
 
   const logo = logos[certifiedBy ?? "skifCanada"];
-  return (
-    <a href={logo.href ?? "#"} rel="noopener noreferrer">
-      <Image
-        src={logo.src}
-        alt={logo.alt}
-        className="rounded-full w-8 h-8 object-cover"
-      />
+
+  const imageElement = (
+    <Image
+      src={logo.src}
+      alt={logo.alt}
+      className="rounded-full w-8 h-8 object-cover"
+    />
+  );
+
+  return logo.href ? (
+    <a href={logo.href} target="_blank" rel="noopener noreferrer">
+      {imageElement}
     </a>
+  ) : (
+    imageElement
   );
 }
