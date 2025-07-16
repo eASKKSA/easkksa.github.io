@@ -50,8 +50,8 @@
       },
       "cta": {
         "text": "Venha conhecer a nossa estrutura e metodologia.",
-        "trial": "A primeira aula é sempre",
-        "free": "gratuita!"
+        "trial": "As primeiras 3 aulas são ",
+        "free": "gratuitas!"
       }
     },
     "buttons": {
@@ -1212,6 +1212,8 @@
     "description": "Diga-nos quem vai participar numa aula experimental.",
     "fullName": "Nome Completo",
     "age": "Idade",
+    "email": "Email",
+    "phone": "Telefone",
     "previousExperience": "Experiência Anterior em Karaté?",
     "submit": {
       "submitting": "A enviar...",

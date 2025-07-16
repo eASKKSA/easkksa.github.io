@@ -122,6 +122,42 @@ export default function TrialFormModal({
                   {state.errors.age[0]}
                 </p>
               )}
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                {t("email")}
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              {state.errors?.email && (
+                <p className="text-sm text-red-500 mt-1">
+                  {state.errors.email[0]}
+                </p>
+              )}
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                {t("phone")}
+              </label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                required
+                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              {state.errors?.phone && (
+                <p className="text-sm text-red-500 mt-1">
+                  {state.errors.phone[0]}
+                </p>
+              )}
             </div>
 
             {/* Experience */}

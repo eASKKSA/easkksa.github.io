@@ -50,7 +50,7 @@
       },
       "cta": {
         "text": "Come and explore our facilities and methodology.",
-        "trial": "The first class is always",
+        "trial": "The first 3 classes are ",
         "free": "free!"
       }
     },
@@ -1212,6 +1212,8 @@
     "description": "Let us know who's joining for a trial class.",
     "fullName": "Full Name",
     "age": "Age",
+    "email": "Email",
+    "phone": "Phone",
     "previousExperience": "Previous Experience in Karate?",
     "submit": {
       "submitting": "Submitting...",
