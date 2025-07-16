@@ -81,84 +81,75 @@ export default function TrialFormModal({
             action={formAction}
             className="space-y-5 pb-4 max-w-2xl mx-auto"
           >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-              >
-                {t("fullName")}
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              {state.errors?.name && (
-                <p className="text-sm text-red-500 mt-1">
-                  {state.errors.name[0]}
-                </p>
-              )}
-            </div>
-
-            {/* Age */}
-            <div>
-              <label
-                htmlFor="age"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-              >
-                {t("age")}
-              </label>
-              <input
-                type="number"
-                name="age"
-                id="age"
-                required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              {state.errors?.age && (
-                <p className="text-sm text-red-500 mt-1">
-                  {state.errors.age[0]}
-                </p>
-              )}
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-              >
-                {t("email")}
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              {state.errors?.email && (
-                <p className="text-sm text-red-500 mt-1">
-                  {state.errors.email[0]}
-                </p>
-              )}
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-              >
-                {t("phone")}
-              </label>
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                required
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              {state.errors?.phone && (
-                <p className="text-sm text-red-500 mt-1">
-                  {state.errors.phone[0]}
-                </p>
-              )}
-            </div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
+              {t("fullName")}
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              className="w-full px-4 py-2 rounded-md border mb-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            {state.errors?.name && (
+              <p className="text-sm text-red-500 my-1">
+                {state.errors.name[0]}
+              </p>
+            )}
+            <label
+              htmlFor="age"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
+              {t("age")}
+            </label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              required
+              className="w-full px-4 py-2 rounded-md border mb-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            {state.errors?.age && (
+              <p className="text-sm text-red-500 mt-1">{state.errors.age[0]}</p>
+            )}
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
+              {t("email")}
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              className="w-full px-4 py-2 rounded-md border mb-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            {state.errors?.email && (
+              <p className="text-sm text-red-500 mt-1">
+                {state.errors.email[0]}
+              </p>
+            )}
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >
+              {t("phone")}
+            </label>
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            {state.errors?.phone && (
+              <p className="text-sm text-red-500 mt-1">
+                {state.errors.phone[0]}
+              </p>
+            )}
 
             {/* Experience */}
             <div>

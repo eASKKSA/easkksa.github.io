@@ -55,7 +55,7 @@
       }
     },
     "buttons": {
-      "trialClass": "Aula Experimental Gratuita",
+      "trialClass": "3 Aulas Experimentais Gratuitas",
       "reviewUs": "Experimentou? Avalie-nos!"
     },
     "sections": {
@@ -1208,8 +1208,8 @@
     "acceptNecessary": "Aceitar apenas os cookies essenciais"
   },
   "TrialForm": {
-    "heading": "Pedir Aula Experimental Gratuita",
-    "description": "Diga-nos quem vai participar numa aula experimental.",
+    "heading": "Pedir 3 Aulas Experimentais Gratuitas",
+    "description": "Diga-nos quem vai participar nestas aulas experimentais.",
     "fullName": "Nome Completo",
     "age": "Idade",
     "email": "Email",
@@ -1217,7 +1217,7 @@
     "previousExperience": "Experiência Anterior em Karaté?",
     "submit": {
       "submitting": "A enviar...",
-      "button": "Pedir Aula Experimental Gratuita",
+      "button": "Pedir Aulas Experimentais",
       "success": "Pedido enviado com sucesso! Entraremos em contacto brevemente.",
       "error": "Ocorreu um erro ao enviar o seu pedido.",
       "correctErrors": "Por favor, corrija os erros abaixo e tente novamente."

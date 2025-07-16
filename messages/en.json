@@ -55,7 +55,7 @@
       }
     },
     "buttons": {
-      "trialClass": "Free Trial Class",
+      "trialClass": "3 Free Trial Classes",
       "reviewUs": "Already tried? Review us!"
     },
     "sections": {
@@ -1208,8 +1208,8 @@
     "acceptNecessary": "Accept Only Essential Cookies"
   },
   "TrialForm": {
-    "heading": "Request a Free Trial",
-    "description": "Let us know who's joining for a trial class.",
+    "heading": "Request 3 Free Trial Classes",
+    "description": "Tell us who will be participating in these trial classes.",
     "fullName": "Full Name",
     "age": "Age",
     "email": "Email",
@@ -1217,8 +1217,8 @@
     "previousExperience": "Previous Experience in Karate?",
     "submit": {
       "submitting": "Submitting...",
-      "button": "Request My Free Trial",
-      "success": "Request submitted successfully! We will be in touch.",
+      "button": "Request Trial Classes",
+      "success": "Request sent successfully! We will contact you shortly.",
       "error": "An error occurred while sending your request.",
       "correctErrors": "Please correct the errors below and try again."
     },
