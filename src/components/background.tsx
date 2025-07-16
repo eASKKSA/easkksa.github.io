@@ -21,7 +21,7 @@ const Background: React.FC = () => {
       <Image
         src="/askksa-background-tiger-mobile.webp"
         fill
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw"
         alt=""
         className="block md:hidden object-cover"
         placeholder="blur"

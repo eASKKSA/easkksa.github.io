@@ -1,204 +1,140 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
+import { Locale } from "next-intl";
+import { getPathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
-export const dynamic = "force-static";
+const host = process.env.NEXT_PUBLIC_SITE_URL;
+if (!host) throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
-  }
-
-  const currentDate = new Date();
-
   return [
-    // Homepage
-    {
-      url: siteUrl,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 1.0,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl,
-          en: siteUrl + "/en",
-        },
-      },
-    },
-
-    // Main Pages
-    {
-      url: siteUrl + "/sobre",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/sobre",
-          en: siteUrl + "/en/about",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/noticias",
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/noticias",
-          en: siteUrl + "/en/news",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/historia",
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/historia",
-          en: siteUrl + "/en/history",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/estilo-ski",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/estilo-ski",
-          en: siteUrl + "/en/style-ski",
-        },
-      },
-    },
-
-    // Philosophy Section
-    {
-      url: siteUrl + "/filosofia",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/filosofia",
-          en: siteUrl + "/en/philosophy",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/filosofia/bushido",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/filosofia/bushido",
-          en: siteUrl + "/en/philosophy/bushido",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/filosofia/dojo-kun",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/filosofia/dojo-kun",
-          en: siteUrl + "/en/philosophy/dojo-kun",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/filosofia/niju-kun",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/filosofia/niju-kun",
-          en: siteUrl + "/en/philosophy/niju-kun",
-        },
-      },
-    },
-
-    // In-Dojo Section
-    {
-      url: siteUrl + "/no-dojo",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/no-dojo",
-          en: siteUrl + "/en/in-dojo",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/no-dojo/saudacao",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/no-dojo/saudacao",
-          en: siteUrl + "/en/in-dojo/salutation",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/no-dojo/regras",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/no-dojo/regras",
-          en: siteUrl + "/en/in-dojo/rules",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/no-dojo/vocabulario",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/no-dojo/vocabulario",
-          en: siteUrl + "/en/in-dojo/vocabulary",
-        },
-      },
-    },
-    {
-      url: siteUrl + "/no-dojo/graduacoes",
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/no-dojo/graduacoes",
-          en: siteUrl + "/en/in-dojo/grades",
-        },
-      },
-    },
-
-    // Legal Pages
-    {
-      url: siteUrl + "/politica-de-privacidade",
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-      alternates: {
-        languages: {
-          "pt-PT": siteUrl + "/politica-de-privacidade",
-          en: siteUrl + "/en/privacy-policy",
-        },
-      },
-    },
+    ...getEntries("/"),
+    ...getEntries("/about"),
+    ...getEntries("/news"),
+    ...getEntries("/in-dojo"),
+    ...getEntries("/in-dojo/salutation"),
+    ...getEntries("/in-dojo/rules"),
+    ...getEntries("/in-dojo/vocabulary"),
+    ...getEntries("/in-dojo/grades"),
+    ...getEntries("/history"),
+    ...getEntries("/philosophy"),
+    ...getEntries("/philosophy/bushido"),
+    ...getEntries("/philosophy/dojo-kun"),
+    ...getEntries("/philosophy/niju-kun"),
+    ...getEntries("/style-ski"),
+    ...getEntries("/privacy-policy"),
+    ...getEntries("/not-found"),
   ];
 }
+
+type Href = Extract<Parameters<typeof getPathname>[0]["href"], string>;
+
+function getEntries(href: Href) {
+  const metadata = routeMeta[href] ?? {
+    changeFrequency: "monthly",
+    priority: 0.5,
+    lastModified: now,
+  };
+
+  return routing.locales.map((locale) => ({
+    url: getUrl(href, locale),
+    ...metadata,
+    alternates: {
+      languages: Object.fromEntries(
+        routing.locales.map((cur) => [cur, getUrl(href, cur)]),
+      ),
+    },
+  }));
+}
+
+function getUrl(href: Href, locale: Locale) {
+  const pathname = getPathname({ locale, href });
+  return host + pathname;
+}
+
+const now = new Date();
+
+const routeMeta: Partial<
+  Record<Href, Omit<MetadataRoute.Sitemap[0], "url" | "alternates">>
+> = {
+  "/": {
+    priority: 1.0,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/about": {
+    priority: 0.9,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/news": {
+    priority: 0.8,
+    changeFrequency: "weekly",
+    lastModified: now,
+  },
+  "/history": {
+    priority: 0.7,
+    changeFrequency: "yearly",
+    lastModified: now,
+  },
+  "/style-ski": {
+    priority: 0.7,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/philosophy": {
+    priority: 0.8,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/philosophy/bushido": {
+    priority: 0.7,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/philosophy/dojo-kun": {
+    priority: 0.7,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/philosophy/niju-kun": {
+    priority: 0.7,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/in-dojo": {
+    priority: 0.8,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/in-dojo/salutation": {
+    priority: 0.6,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/in-dojo/rules": {
+    priority: 0.6,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/in-dojo/vocabulary": {
+    priority: 0.6,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/in-dojo/grades": {
+    priority: 0.6,
+    changeFrequency: "monthly",
+    lastModified: now,
+  },
+  "/privacy-policy": {
+    priority: 0.3,
+    changeFrequency: "yearly",
+    lastModified: now,
+  },
+  "/not-found": {
+    priority: 0.1,
+    changeFrequency: "yearly",
+    lastModified: now,
+  },
+};

@@ -41,7 +41,6 @@ export default function ASKKSANews({
         const response = await fetch("/api/askksa-news");
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
           setNews(data);
         }
       } catch (error) {

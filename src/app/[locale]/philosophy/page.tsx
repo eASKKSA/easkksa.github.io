@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import Section from "@/components/container";
+import Container from "@/components/container";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 import { Metadata } from "next";
@@ -28,20 +28,23 @@ export default async function PhilosophyPage({
   return (
     <>
       {/* Hero Section */}
-      <Section blur withBubbles>
+      <Container blur withBubbles>
         <h1 className="text-5xl font-bold mb-8 text-gray-900 dark:text-white text-center">
           {t("title")}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed text-center">
           {t("introduction")}
         </p>
-      </Section>
+      </Container>
 
-      <Section>
+      <Container>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {philosophySections.map((section) => (
             <Link key={section.id} href={section.href} className="group">
-              <article className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700">
+              <Container
+                as="article"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700"
+              >
                 <div className="relative h-48">
                   <Image
                     src={section.image}
@@ -65,7 +68,7 @@ export default async function PhilosophyPage({
                     {t("explore")}
                   </span>
                 </div>
-              </article>
+              </Container>
             </Link>
           ))}
         </div>
@@ -79,7 +82,7 @@ export default async function PhilosophyPage({
             {t("importance.description")}
           </p>
         </div>
-      </Section>
+      </Container>
       <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
     </>
   );
