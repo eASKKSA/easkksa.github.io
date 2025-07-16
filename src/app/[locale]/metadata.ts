@@ -3,22 +3,37 @@ import { SportsOrganization, WithContext } from "schema-dts";
 import { Metadata } from "next";
 import { getPathname } from "@/i18n/navigation";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<SportsOrganization>> => {
   const pathname = getPathname({ href: "/", locale: locale });
+  const aboutPath = getPathname({ href: "/about", locale });
 
   return {
     "@context": "https://schema.org",
+    "@id": siteUrl + aboutPath,
     "@type": "SportsOrganization",
     name: t("name"),
     sport: t("sport"),
     description: t("description"),
-    url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
-    logo: "/icons/icon-512x512.png",
+    url: siteUrl + pathname,
+    logo: {
+      "@type": "ImageObject",
+      url: siteUrl + "/icons/icon-512x512.png",
+    },
+    image: {
+      "@type": "ImageObject",
+      url: siteUrl + "/icons/icon-512x512.png",
+      caption: t("name"),
+    },
     foundingDate: "2000-04-01",
-    founder: "Rafael Jardim",
+    founder: {
+      "@type": "Person",
+      name: "Rafael Jardim",
+    },
     sameAs: [
       "https://www.facebook.com/ASKKSA.MADEIRA",
       "https://www.instagram.com/askksa_madeira/",
@@ -32,12 +47,14 @@ export const jsonLd = async (
       postalCode: "9004-524",
       streetAddress: t("streetAddress"),
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: t("contactType"),
-      telephone: "+351960384090",
-      email: "direcao@askksa.pt",
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: t("contactType"),
+        telephone: "+351960384090",
+        email: "direcao@askksa.pt",
+      },
+    ],
     location: [
       {
         "@type": "SportsActivityLocation",
@@ -94,7 +111,6 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     title: t("meta.title"),
     description: t("meta.description"),
     keywords: t("meta.keywords"),
-    applicationName: "ASKKSA",
     alternates: {
       canonical: pathname,
       languages: {
@@ -107,7 +123,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: siteUrl + pathname,
       images: [
         {
           url: "/icons/icon-512x512.png",
@@ -117,6 +133,12 @@ export async function metadata(locale: Locale): Promise<Metadata> {
         },
       ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: [siteUrl + "/icons/icon-512x512.png"],
     },
   };
 }
