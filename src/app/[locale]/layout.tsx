@@ -9,7 +9,6 @@ import { globalMetadata } from "@/app/metadata";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/footer";
-import PageAnimationWrapper from "@/components/page-animation-wrapper";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -45,7 +44,7 @@ export default async function Layout({
         <NextIntlClientProvider>
           <Providers>
             <Navbar />
-            <PageAnimationWrapper>{children}</PageAnimationWrapper>
+            <main>{children}</main>
             <Footer />
             <Background />
             <CookieWarning />

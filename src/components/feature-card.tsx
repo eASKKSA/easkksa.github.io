@@ -19,7 +19,7 @@ const FeatureCard: React.FC<{
         hidden: { opacity: 0, y: 32 },
         visible: { opacity: 1, y: 0 },
       }}
-      className={`rounded-xl p-8 text-center border shadow-lg transform dark:bg-[#2a2a2a]/60 dark:backdrop-blur-sm dark:hover:bg-[#363636]/60 dark:border-gray-700/50 bg-white/60 backdrop-blur-sm hover:bg-white/80 border-gray-200/50 transition-all duration-500 ${className}`}
+      className={`rounded-xl p-8 text-center border shadow-lg dark:bg-[#2a2a2a]/60 dark:backdrop-blur-sm dark:hover:bg-[#363636]/60 dark:border-gray-700/50 bg-white/60 backdrop-blur-sm hover:bg-white/80 border-gray-200/50 ${className}`}
     >
       <div className="mb-6 flex justify-center">{feature.icon}</div>
 

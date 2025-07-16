@@ -43,7 +43,7 @@ export default async function InDojoPage({
             <Link key={section.id} href={section.href} className="group">
               <Container
                 as="article"
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl h-full border border-gray-200 dark:border-gray-700"
               >
                 <div className="relative h-48">
                   <Image

@@ -37,7 +37,7 @@
   }
 
   main {
-    @apply container mx-auto px-4 pt-36 lg:pt-44 pb-12 space-y-24 transition-all duration-1000 ease-out dark:text-white text-slate-900;
+    @apply container mx-auto px-4 pt-36 lg:pt-44 pb-12 space-y-24 dark:text-white text-slate-900;
   }
 
   h1 {
@@ -45,7 +45,7 @@
   }
 
   section, article {
-    @apply transition-all duration-700 transform mb-12 md:mb-16 lg:mb-20;
+    @apply mb-12 md:mb-16 lg:mb-20;
   }
 
   section > p {
