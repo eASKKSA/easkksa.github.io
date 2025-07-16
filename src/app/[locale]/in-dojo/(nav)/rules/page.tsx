@@ -16,16 +16,13 @@ export default async function DojoRulesPage() {
       <Container blur withBubbles as="article">
         <h1 className="text-center">{t("title")}</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
-          <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
-            <Image
-              src={askksaThumb}
-              alt="ASKKSA - Regras do Dojo"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain rounded-full"
-              priority
-            />
-          </div>
+          <Image
+            src={askksaThumb}
+            alt="ASKKSA - Regras do Dojo"
+            height={500}
+            className="object-contain rounded-xl shadow-lg mx-auto"
+            priority
+          />
           <div className="space-y-4">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               {t("introduction")}

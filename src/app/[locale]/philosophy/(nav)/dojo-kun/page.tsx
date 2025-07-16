@@ -36,16 +36,13 @@ export default async function DojoKunPage() {
       <Container withBubbles blur as="article">
         <h1 className="text-center">{t("title")}</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
-          <div className="relative h-64 md:h-88 rounded-lg overflow-hidden">
-            <Image
-              src={dojoKunImage}
-              alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
-              priority
-            />
-          </div>
+          <Image
+            src={dojoKunImage}
+            alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
+            height={500}
+            className="object-contain rounded-xl shadow-lg mx-auto"
+            priority
+          />
           <div className="text-left space-y-4">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               {t("introduction")}

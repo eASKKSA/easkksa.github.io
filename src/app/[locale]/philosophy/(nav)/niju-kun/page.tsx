@@ -64,16 +64,13 @@ export default async function NijuKunPage() {
       <Container withBubbles blur as="article">
         {/* Header Section */}
         <h1 className="text-center">{t("title")}</h1>
-        <div className="max-w-3xl mx-auto my-8">
-          <Image
-            src={nijuKunImage}
-            alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
-            className="rounded-lg shadow-lg mx-auto"
-            width={600}
-            height={400}
-            priority
-          />
-        </div>
+        <Image
+          src={nijuKunImage}
+          alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
+          height={500}
+          className="object-contain rounded-xl shadow-lg mx-auto"
+          priority
+        />
         <p className="text-xl my-6">{t("introduction")}</p>
         <p className="text-lg my-6">{t("description")}</p>
 

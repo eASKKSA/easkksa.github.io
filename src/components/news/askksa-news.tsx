@@ -9,6 +9,7 @@ import {
   FaSortAmountDown,
 } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import Container from "@/components/container";
 
 interface NewsItem {
   title: string;
@@ -144,7 +145,8 @@ export default function ASKKSANews({
         <div className="space-y-2!">
           {/* Lista de notícias */}
           {news.map((item, index) => (
-            <article
+            <Container
+              as="article"
               key={index}
               className="p-4 sm:p-6 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
             >
@@ -188,7 +190,7 @@ export default function ASKKSANews({
                   <FaExternalLinkAlt className="text-xs" />
                 </a>
               </div>
-            </article>
+            </Container>
           ))}
 
           {/* Footer - Links e info */}
