@@ -131,6 +131,12 @@ export const getDojos = (t: TFunction): Dojo[] => [
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt",
   },
+  {
+    id: "dojo3",
+    name: t("dojos.dojo3.name"),
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.1844573620524!2d-16.9752042228837!3d32.65453259023289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f121f097781%3A0x7b5a00bb7ea01d2a!2sR.%20Frei%20Pedro%20da%20Guarda%2036%2C%209300-066%20C%C3%A2mara%20de%20Lobos!5e0!3m2!1spt-PT!2spt!4v1752768422262!5m2!1spt-PT!2spt",
+  },
 ];
 
 export const getBlackBelts = (): BlackBelt[] => [

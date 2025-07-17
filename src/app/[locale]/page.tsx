@@ -6,10 +6,8 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
-import ProtectedEmail from "@/components/protected-email";
 import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
-import clsx from "clsx";
 import FormTrial from "@/components/form-trial";
 import DojoMap from "@/components/dojo-map";
 import { getFeatures, getSchedules } from "./data";
@@ -132,14 +130,8 @@ export default async function Page({
             <ContactItem
               icon={<IoMail className="text-primary text-3xl" />}
               title={t("contact.email")}
-              content={
-                <ProtectedEmail
-                  user={t("contact.emailParts.user")}
-                  domain={t("contact.emailParts.domain")}
-                  tld={t("contact.emailParts.tld")}
-                  className="text-gray-600 dark:text-gray-200 hover:text-primary transition-colors"
-                />
-              }
+              content="direcao@askksa.pt"
+              href="mailto:direcao@askksa.pt"
             />
           </div>
         </div>
@@ -170,17 +162,6 @@ const ContactItem: React.FC<ContactItemProps> = ({
   content,
   href,
 }) => {
-  const isStringContent = typeof content === "string";
-  const isLink = isStringContent && !!href;
-  const ContentWrapper = isLink ? "a" : "div";
-
-  const contentClass = clsx(
-    "text-gray-600 dark:text-gray-200",
-    href && "hover:text-primary transition-colors",
-  );
-
-  const contentProps = isLink ? { href } : {};
-
   return (
     <div className="flex items-start space-x-3 p-4 transition-shadow">
       {icon}
@@ -188,13 +169,13 @@ const ContactItem: React.FC<ContactItemProps> = ({
         <h3 className="font-bold text-lg text-[#222] dark:text-white">
           {title}
         </h3>
-        {isStringContent ? (
-          <ContentWrapper {...contentProps} className={contentClass}>
-            {content}
-          </ContentWrapper>
-        ) : (
-          content
-        )}
+        <a
+          href={href}
+          target="_blank"
+          className="hover:text-primary cursor-pointer"
+        >
+          {content}
+        </a>
       </div>
     </div>
   );

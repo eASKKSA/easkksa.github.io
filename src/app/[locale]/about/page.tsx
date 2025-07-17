@@ -75,7 +75,7 @@ export default async function QuemSomosPage({
         <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
           {t("dojos.subtitle")}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 md:mt-16">
           {dojos.map((dojo) => (
             <DojoCard key={dojo.name} dojo={dojo} />
           ))}

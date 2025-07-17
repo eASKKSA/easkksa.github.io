@@ -48,6 +48,7 @@ export default async function HistoryPage({
                 fill
                 sizes="(max-width: 768px) 100vw, 128px"
                 className="rounded-xl object-cover shadow-lg"
+                fetchPriority="high"
                 priority
               />
             </div>
