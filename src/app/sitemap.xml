@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://www.askksa.pt/</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/sobre</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/sobre"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/about"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/about</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/sobre"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/about"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/noticias</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/noticias"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/news"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/news</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/noticias"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/news"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/no-dojo</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/in-dojo</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/no-dojo/saudacao</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/saudacao"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/salutation"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/in-dojo/salutation</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/saudacao"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/salutation"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/no-dojo/regras</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/regras"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/rules"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/in-dojo/rules</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/regras"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/rules"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/no-dojo/vocabulario</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/vocabulario"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/vocabulary"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/in-dojo/vocabulary</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/vocabulario"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/vocabulary"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/no-dojo/graduacoes</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/graduacoes"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/grades"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/in-dojo/grades</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/no-dojo/graduacoes"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/in-dojo/grades"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/historia</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/historia"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/history"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/history</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/historia"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/history"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/filosofia</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/philosophy</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/filosofia/bushido</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/bushido"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/bushido"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/philosophy/bushido</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/bushido"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/bushido"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/filosofia/dojo-kun</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/dojo-kun"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/dojo-kun"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/philosophy/dojo-kun</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/dojo-kun"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/dojo-kun"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/filosofia/niju-kun</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/niju-kun"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/niju-kun"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/philosophy/niju-kun</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/filosofia/niju-kun"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/philosophy/niju-kun"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/estilo-ski</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/estilo-ski"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/style-ski"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/style-ski</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/estilo-ski"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/style-ski"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/politica-de-privacidade</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/politica-de-privacidade"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/privacy-policy"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/privacy-policy</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/politica-de-privacidade"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/privacy-policy"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/nao-encontrado</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/nao-encontrado"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/not-found"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://www.askksa.pt/en/not-found</loc>
+        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/nao-encontrado"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/not-found"/>
+        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+</urlset>
