@@ -315,6 +315,7 @@
       "description": "O dojo não é apenas um local de treino físico, mas um espaço sagrado onde se cultiva o espírito, se aprende disciplina e se forja o carácter. Cada elemento - desde a saudação até às regras de etiqueta - contribui para criar um ambiente de respeito mútuo e crescimento pessoal."
     },
     "navigation": {
+      "title": "Navegação das páginas de No Dojo",
       "salutation": "Saudação",
       "rules": "Regras",
       "vocabulary": "Vocabulário",
@@ -870,6 +871,7 @@
     },
     "explore": "Explorar →",
     "navigation": {
+      "title": "Navegação de páginas de Filosofia",
       "bushido": "Bushido",
       "nijuKun": "Niju Kun",
       "dojoKun": "Dojo Kun"

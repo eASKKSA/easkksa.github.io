@@ -315,6 +315,7 @@
       "description": "The dojo is not just a place for physical training, but a sacred space where spirit is cultivated, discipline is learned and character is forged. Each element – from the salutation to the rules of etiquette – helps create an environment of mutual respect and personal growth."
     },
     "navigation": {
+      "title": "In Dojo pages navigation",
       "salutation": "Salutation",
       "rules": "Rules",
       "vocabulary": "Vocabulary",
@@ -870,6 +871,7 @@
     },
     "explore": "Explore →",
     "navigation": {
+      "title": "Philosophy pages navigation",
       "bushido": "Bushido",
       "nijuKun": "Niju Kun",
       "dojoKun": "Dojo Kun"
