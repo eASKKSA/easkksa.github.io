@@ -23,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getEntries("/philosophy/niju-kun"),
     ...getEntries("/style-ski"),
     ...getEntries("/privacy-policy"),
-    ...getEntries("/not-found"),
   ];
 }
 
@@ -129,11 +128,6 @@ const routeMeta: Partial<
   },
   "/privacy-policy": {
     priority: 0.3,
-    changeFrequency: "yearly",
-    lastModified: now,
-  },
-  "/not-found": {
-    priority: 0.1,
     changeFrequency: "yearly",
     lastModified: now,
   },

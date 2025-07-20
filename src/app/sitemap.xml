@@ -240,20 +240,4 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
-    <url>
-        <loc>https://www.askksa.pt/nao-encontrado</loc>
-        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/nao-encontrado"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/not-found"/>
-        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
-    </url>
-    <url>
-        <loc>https://www.askksa.pt/en/not-found</loc>
-        <xhtml:link rel="alternate" hreflang="pt-PT" href="https://www.askksa.pt/nao-encontrado"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.askksa.pt/en/not-found"/>
-        <lastmod>2025-07-18T11:50:42.617Z</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
-    </url>
 </urlset>
