@@ -5,11 +5,14 @@ export default function robots(): MetadataRoute.Robots {
   if (!siteUrl) {
     throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
   }
+
+  const isProduction = process.env.VERCEL_ENV === "production";
+
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
-      disallow: "/private/",
+      allow: isProduction ? "/" : "",
+      disallow: isProduction ? "/private/" : "/",
     },
     sitemap: siteUrl + "/sitemap.xml",
   };
