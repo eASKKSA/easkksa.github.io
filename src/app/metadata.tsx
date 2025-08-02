@@ -13,6 +13,8 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
     throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
   }
 
+  const isProduction = process.env.VERCEL_ENV === "production";
+
   return {
     metadataBase: new URL(siteUrl),
     generator: "Next.js",
@@ -23,11 +25,11 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
 
     // --- Robots & Indexing ---
     robots: {
-      index: true,
-      follow: true,
+      index: isProduction,
+      follow: isProduction,
       googleBot: {
-        index: true,
-        follow: true,
+        index: isProduction,
+        follow: isProduction,
         "max-image-preview": "large",
       },
     },
