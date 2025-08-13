@@ -3,7 +3,7 @@ import Providers from "@/components/providers";
 import Navbar from "@/components/navbar";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import CookieWarning from "@/components/cookie-warning";
 import { globalMetadata } from "@/app/metadata";
 import { notFound } from "next/navigation";
@@ -38,7 +38,9 @@ export default async function Layout({
   return (
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
+        />
       </head>
       <body>
         <NextIntlClientProvider>
