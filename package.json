@@ -1,6 +1,6 @@
 {
   "name": "askksa-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -13,24 +13,24 @@
   ],
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
-    "@next/third-parties": "^15.4.5",
+    "@next/third-parties": "^15.5.2",
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.0",
     "fast-xml-parser": "^5.2.5",
     "html-to-text": "^9.0.5",
     "motion": "^12.23.12",
     "negotiator": "^1.0.0",
-    "next": "^15.4.5",
-    "next-intl": "^4.3.4",
+    "next": "^15.5.2",
+    "next-intl": "^4.3.5",
     "next-themes": "^0.4.6",
-    "nodemailer": "^7.0.5",
+    "nodemailer": "^7.0.6",
     "postcss": "^8.5.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "schema-dts": "^1.1.5",
     "server-only": "^0.0.1",
-    "zod": "^4.0.14"
+    "zod": "^4.1.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -38,13 +38,13 @@
     "@types/html-to-text": "^9.0.4",
     "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
-    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer": "^7.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "^15.4.5",
+    "eslint-config-next": "^15.5.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-prettier": "^5.5.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
