@@ -17,10 +17,10 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
-  return await globalMetadata(locale);
+  return await globalMetadata(locale as Locale);
 }
 
 export default async function Layout({
@@ -28,15 +28,21 @@ export default async function Layout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
+  const typedLocale = locale as Locale;
+
+  if (!hasLocale(routing.locales, typedLocale)) {
     notFound();
   }
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang={typedLocale}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}

@@ -10,10 +10,10 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: Readonly<{
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
-  return await globalMetadata(locale);
+  return await globalMetadata(locale as Locale);
 }
 
 export default async function Layout({
