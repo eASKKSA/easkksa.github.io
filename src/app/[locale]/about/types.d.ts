@@ -19,4 +19,6 @@ interface Dojo {
   id: string;
   name: string;
   mapUrl: string;
+  responsible?: string;
+  phone?: string;
 }

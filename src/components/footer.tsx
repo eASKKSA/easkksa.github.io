@@ -58,7 +58,6 @@ const Footer = () => {
             <div className="mt-4 space-y-4 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-start">
                 <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                {/* CHANGED */}
                 <div>
                   <a
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
@@ -71,12 +70,25 @@ const Footer = () => {
                     <p>{tOrg("dojo1.address.name")}</p>
                     <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
                   </address>
+                  <div className="flex items-center justify-between mt-2 text-xs">
+                    <span className="text-gray-800 dark:text-gray-200">
+                      Rafael Jardim
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351960384090"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 960 384 090
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start">
                 <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                {/* CHANGED */}
-                <div>
+                <div className="w-full">
                   <a
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
                     target="_blank"
@@ -88,11 +100,24 @@ const Footer = () => {
                     <p>{tOrg("dojo2.address.name")}</p>
                     <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
                   </address>
+                  <div className="flex items-center justify-between mt-2 text-xs">
+                    <span className="text-gray-800 dark:text-gray-200">
+                      Marisa Gomes
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351965713358"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 965 713 358
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start">
                 <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                {/* CHANGED */}
                 <div>
                   <a
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
@@ -105,6 +130,20 @@ const Footer = () => {
                     <p>{tOrg("dojo3.address.name")}</p>
                     <p>{`${tOrg("dojo3.address.addressLocality")}, ${tOrg("dojo3.address.addressRegion")}`}</p>
                   </address>
+                  <div className="flex items-center justify-between mt-2 text-xs">
+                    <span className="text-gray-800 dark:text-gray-200">
+                      Jorge Freitas
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351965012299"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 965 012 299
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -118,7 +157,6 @@ const Footer = () => {
             <ul className="mt-4 space-y-2 text-sm">
               <li className="flex items-center">
                 <FaPhone className="h-4 w-4 text-primary mr-3" />{" "}
-                {/* CHANGED */}
                 <a
                   href={`tel:+351960384090`}
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"

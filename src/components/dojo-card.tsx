@@ -1,4 +1,5 @@
 import DojoMap from "@/components/dojo-map";
+import { FaPhone, FaUser } from "react-icons/fa";
 
 const DojoCard = ({
   dojo,
@@ -7,6 +8,8 @@ const DojoCard = ({
     id: string;
     name: string;
     mapUrl: string;
+    responsible?: string;
+    phone?: string;
   };
 }) => {
   const cardClasses = [
@@ -19,7 +22,10 @@ const DojoCard = ({
   const iframeClasses = "rounded-xl h-80 w-full shadow-lg border-0";
 
   const titleClasses =
-    "text-xl font-bold text-center text-[#222] dark:text-white p-6";
+    "text-xl font-bold text-center text-[#222] dark:text-white px-6 pt-6";
+
+  const contactClasses =
+    "text-sm text-gray-600 dark:text-gray-300 px-6 py-4 space-y-2";
 
   return (
     <div className={cardClasses}>
@@ -29,6 +35,45 @@ const DojoCard = ({
         name={dojo.name}
       />
       <h3 className={titleClasses}>{dojo.name}</h3>
+
+      {(dojo.responsible || dojo.phone) && (
+        <div className={contactClasses}>
+          {dojo.responsible && dojo.phone ? (
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center gap-2">
+                <FaUser className="text-primary flex-shrink-0" />
+                <span>{dojo.responsible}</span>
+              </div>
+              <a
+                href={`tel:${dojo.phone}`}
+                className="text-dark dark:text-white  hover:text-red-700 transition-colors font-medium"
+              >
+                {dojo.phone}
+              </a>
+            </div>
+          ) : (
+            <>
+              {dojo.responsible && (
+                <div className="flex items-center gap-2">
+                  <FaUser className="text-primary flex-shrink-0" />
+                  <span>{dojo.responsible}</span>
+                </div>
+              )}
+              {dojo.phone && (
+                <div className="flex items-center gap-2">
+                  <FaPhone className="text-primary flex-shrink-0" />
+                  <a
+                    href={`tel:${dojo.phone}`}
+                    className="text-dark dark:text-white hover:text-primary transition-colors"
+                  >
+                    {dojo.phone}
+                  </a>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 };
