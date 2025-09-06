@@ -71,15 +71,18 @@ const Footer = () => {
                     <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
                   </address>
                   <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-500 dark:text-gray-400">
+                    <span className="text-gray-800 dark:text-gray-200">
                       Rafael Jardim
                     </span>
-                    <a
-                      href="tel:+351960384090"
-                      className="text-primary hover:text-red-700 transition-colors font-medium"
-                    >
-                      +351 960 384 090
-                    </a>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351960384090"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 960 384 090
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -98,15 +101,18 @@ const Footer = () => {
                     <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
                   </address>
                   <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-500 dark:text-gray-400">
+                    <span className="text-gray-800 dark:text-gray-200">
                       Marisa Gomes
                     </span>
-                    <a
-                      href="tel:+351965713358"
-                      className="text-primary hover:text-red-700 transition-colors font-medium"
-                    >
-                      +351 965 713 358
-                    </a>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351965713358"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 965 713 358
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,15 +131,18 @@ const Footer = () => {
                     <p>{`${tOrg("dojo3.address.addressLocality")}, ${tOrg("dojo3.address.addressRegion")}`}</p>
                   </address>
                   <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-500 dark:text-gray-400">
+                    <span className="text-gray-800 dark:text-gray-200">
                       Jorge Freitas
                     </span>
-                    <a
-                      href="tel:+351965012299"
-                      className="text-primary hover:text-red-700 transition-colors font-medium"
-                    >
-                      +351 965 012 299
-                    </a>
+                    <div className="flex items-center gap-1">
+                      <FaPhone className="text-primary flex-shrink-0" />
+                      <a
+                        href="tel:+351965012299"
+                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                      >
+                        +351 965 012 299
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

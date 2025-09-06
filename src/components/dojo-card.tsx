@@ -39,14 +39,14 @@ const DojoCard = ({
       {(dojo.responsible || dojo.phone) && (
         <div className={contactClasses}>
           {dojo.responsible && dojo.phone ? (
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center justify-center gap-3">
               <div className="flex items-center gap-2">
                 <FaUser className="text-primary flex-shrink-0" />
                 <span>{dojo.responsible}</span>
               </div>
               <a
                 href={`tel:${dojo.phone}`}
-                className="text-primary hover:text-red-700 transition-colors font-medium"
+                className="text-dark dark:text-white  hover:text-red-700 transition-colors font-medium"
               >
                 {dojo.phone}
               </a>
@@ -64,7 +64,7 @@ const DojoCard = ({
                   <FaPhone className="text-primary flex-shrink-0" />
                   <a
                     href={`tel:${dojo.phone}`}
-                    className="hover:text-primary transition-colors"
+                    className="text-dark dark:text-white hover:text-primary transition-colors"
                   >
                     {dojo.phone}
                   </a>
