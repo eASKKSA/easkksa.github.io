@@ -37,7 +37,7 @@
     "@tailwindcss/postcss": "^4",
     "@types/html-to-text": "^9.0.4",
     "@types/negotiator": "^0.6.4",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/nodemailer": "^7.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
