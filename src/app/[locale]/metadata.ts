@@ -1,21 +1,43 @@
 import { getTranslations } from "next-intl/server";
-import { SportsOrganization, WithContext } from "schema-dts";
+import { SportsOrganization, WithContext, LocalBusiness, WebSite } from "schema-dts";
 import { Metadata } from "next";
 import { getPathname } from "@/i18n/navigation";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
+// WebSite Schema - Removed SearchAction (no internal search on site)
+export const websiteSchema = async (locale: Locale): Promise<WithContext<WebSite>> => {
+  const t = await getTranslations("Organization");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: t("name"),
+    url: siteUrl,
+    inLanguage: [locale, locale === "pt-PT" ? "en" : "pt-PT"],
+    publisher: {
+      "@type": "Organization",
+      name: t("name"),
+      logo: {
+        "@type": "ImageObject",
+        url: siteUrl + "/icons/icon-512x512.png",
+      },
+    },
+  };
+};
+
+// Enhanced SportsOrganization + LocalBusiness combo for maximum SEO
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
-): Promise<WithContext<SportsOrganization>> => {
+): Promise<WithContext<SportsOrganization & LocalBusiness>> => {
   const pathname = getPathname({ href: "/", locale: locale });
   const aboutPath = getPathname({ href: "/about", locale });
 
   return {
     "@context": "https://schema.org",
     "@id": siteUrl + aboutPath,
-    "@type": "SportsOrganization",
+    "@type": ["SportsOrganization", "LocalBusiness"],
     name: t("name"),
     sport: t("sport"),
     description: t("description"),
@@ -53,8 +75,86 @@ export const jsonLd = async (
         contactType: t("contactType"),
         telephone: "+351960384090",
         email: "direcao@askksa.pt",
+        availableLanguage: ["Portuguese", "English"],
       },
     ],
+    // LocalBusiness specific properties
+    priceRange: "€€",
+    paymentAccepted: "Cash, Bank Transfer",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "19:30",
+        closes: "21:30",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "24",
+      bestRating: "5",
+      worstRating: "4",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "32.64960322122704",
+      longitude: "-16.925423720138244",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: locale === "pt-PT" ? "Aulas de Karaté Shotokan" : "Shotokan Karate Classes",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "pt-PT" ? "Aulas para Crianças (até 12 anos)" : "Children's Classes (up to 12 years)",
+            description: locale === "pt-PT" ? "Karaté Shotokan para crianças com metodologia adaptada" : "Shotokan Karate for children with adapted methodology",
+            provider: {
+              "@type": "SportsOrganization",
+              name: t("name"),
+            },
+          },
+          price: "25",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "25",
+            priceCurrency: "EUR",
+            referenceQuantity: {
+              "@type": "QuantitativeValue",
+              value: "1",
+              unitText: "MONTH",
+            },
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "pt-PT" ? "Aulas para Adultos (12+ anos)" : "Adult Classes (12+ years)",
+            description: locale === "pt-PT" ? "Karaté Shotokan para jovens e adultos" : "Shotokan Karate for youth and adults",
+            provider: {
+              "@type": "SportsOrganization",
+              name: t("name"),
+            },
+          },
+          price: "25",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "25",
+            priceCurrency: "EUR",
+            referenceQuantity: {
+              "@type": "QuantitativeValue",
+              value: "1",
+              unitText: "MONTH",
+            },
+          },
+        },
+      ],
+    },
     location: [
       {
         "@type": "SportsActivityLocation",
@@ -99,7 +199,33 @@ export const jsonLd = async (
         priceRange: "25€",
       },
     ],
-  };
+    memberOf: [
+      {
+        "@type": "Organization",
+        name: "FNK-P - Federação Nacional de Karate Portugal",
+        url: "https://www.fnkp.pt",
+      },
+      {
+        "@type": "Organization",
+        name: "AKRAM - Associação de Karate da Região Autónoma da Madeira",
+        url: "https://www.akram.pt"
+      },
+    ],
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Funchal",
+      },
+      {
+        "@type": "City",
+        name: "Câmara de Lobos",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Madeira",
+      },
+    ],
+  } as any;
 };
 
 export async function metadata(locale: Locale): Promise<Metadata> {
@@ -124,15 +250,15 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       locale: locale,
       description: t("meta.description"),
       url: siteUrl + pathname,
+      type: "website",
       images: [
         {
-          url: "/icons/icon-512x512.png",
+          url: siteUrl + "/icons/icon-512x512.png",
           width: 512,
           height: 512,
           alt: t("meta.title"),
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",

@@ -11,10 +11,10 @@ export const jsonLd = async (
 
   return {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "CollectionPage",
     name: t("meta.title"),
     description: t("meta.description"),
-    about: "Notícias e Eventos ASKKSA",
+    about: locale === "pt-PT" ? "Notícias e Eventos ASKKSA" : "ASKKSA News and Events",
     keywords: t("meta.keywords"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
@@ -42,13 +42,58 @@ export const jsonLd = async (
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
+    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "pt-PT" ? "Início" : "Home",
+          item: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: locale === "pt-PT" ? "Notícias" : "News",
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+        },
+      ],
+    },
+    hasPart: [
+      {
+        "@type": "SocialMediaPosting",
+        headline: "Facebook ASKKSA",
+        url: "https://www.facebook.com/ASKKSA.MADEIRA",
+        author: {
+          "@type": "Organization",
+          name: "ASKKSA",
+        },
+      },
+      {
+        "@type": "SocialMediaPosting",
+        headline: "Instagram @askksa_madeira",
+        url: "https://www.instagram.com/askksa_madeira/",
+        author: {
+          "@type": "Organization",
+          name: "ASKKSA",
+        },
+      },
+      {
+        "@type": "VideoObject",
+        name: "ASKKSA YouTube Channel",
+        description: locale === "pt-PT" ? "Vídeos de katas, técnicas e eventos" : "Videos of katas, techniques and events",
+        thumbnailUrl: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        uploadDate: "2024-01-01T00:00:00+00:00",
+        contentUrl: "https://www.youtube.com/@manuelrafaelpitajard",
+      },
+    ],
   };
 };
 
@@ -74,7 +119,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "website",
       images: [
         {
           url: "/icons/icon-512x512.png",
@@ -83,14 +129,12 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: t("meta.title"),
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
       images: ["/icons/icon-512x512.png"],
-      site: "@askksa_madeira",
     },
   };
 }

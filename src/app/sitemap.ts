@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getEntries("/"),
     ...getEntries("/about"),
     ...getEntries("/news"),
+    ...getEntries("/faq"),
     ...getEntries("/in-dojo"),
     ...getEntries("/in-dojo/salutation"),
     ...getEntries("/in-dojo/rules"),
@@ -58,7 +59,7 @@ const routeMeta: Partial<
 > = {
   "/": {
     priority: 1.0,
-    changeFrequency: "monthly",
+    changeFrequency: "weekly",
     lastModified: now,
   },
   "/about": {
@@ -129,6 +130,11 @@ const routeMeta: Partial<
   "/privacy-policy": {
     priority: 0.3,
     changeFrequency: "yearly",
+    lastModified: now,
+  },
+  "/faq": {
+    priority: 0.4,
+    changeFrequency: "monthly",
     lastModified: now,
   },
 };

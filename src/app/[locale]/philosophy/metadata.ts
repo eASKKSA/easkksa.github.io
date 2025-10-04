@@ -79,13 +79,13 @@ export const jsonLd = async (
         {
           "@type": "ListItem",
           position: 1,
-          name: "Início",
+          name: locale === "pt-PT" ? "Início" : "Home",
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Filosofia",
+          name: locale === "pt-PT" ? "Filosofia" : "Philosophy",
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -118,7 +118,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "website",
       images: [
         {
           url: principlesImage.src,
@@ -133,14 +134,12 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: t("meta.title"),
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
       images: [principlesImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

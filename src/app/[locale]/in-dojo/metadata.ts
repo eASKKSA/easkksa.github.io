@@ -44,12 +44,29 @@ export const jsonLd = async (
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
+    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "pt-PT" ? "Início" : "Home",
+          item: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: locale === "pt-PT" ? "No Dojo" : "In Dojo",
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+        },
+      ],
     },
     mentions: [
       {
@@ -98,7 +115,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "website",
       images: [
         {
           url: askksaThumb.src,
@@ -107,14 +125,12 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: "Sensei no Dojo - Vida no Karaté",
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
       images: [askksaThumb.src],
-      site: "@askksa_madeira",
     },
   };
 }

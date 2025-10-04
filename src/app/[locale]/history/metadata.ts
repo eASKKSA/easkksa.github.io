@@ -46,7 +46,7 @@ export const jsonLd = async (
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
+    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -65,7 +65,24 @@ export const jsonLd = async (
         description: "Mestre histórico do Karaté de Okinawa",
       },
     ],
-  };
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "pt-PT" ? "Início" : "Home",
+          item: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: locale === "pt-PT" ? "História" : "History",
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+        },
+      ],
+    },
+  } as any;
 };
 
 export async function metadata(locale: Locale): Promise<Metadata> {
@@ -90,7 +107,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "article",
       images: [
         {
           url: historyBannerUrl.src,
@@ -105,7 +123,9 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: t("meta.title"),
         },
       ],
-      type: "article",
+      publishedTime: "2024-01-01T00:00:00+00:00",
+      modifiedTime: new Date().toISOString(),
+      authors: ["ASKKSA"],
       section: "História",
       tags: t("meta.keywords").split(", "),
     },
@@ -114,7 +134,6 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       images: [historyBannerUrl.src],
-      site: "@askksa_madeira",
     },
   };
 }

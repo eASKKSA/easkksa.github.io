@@ -484,7 +484,7 @@
       "title": "Treino e Relacionamento com Parceiros",
       "rule1": "Não recuse treinar com nenhum parceiro quando indicado pelo instrutor.",
       "rule2": "Ajude a quem precisa, mas jamais corrija o seu parceiro, a não ser que você seja o instrutor/monitor da aula e/ou cinto negro.",
-      "rule3": "Nunca pense que estará atrapalhando alguém por não saber executar alguma técnica. Estamos todos a aprender, ajudando-nos uns aos outros.",
+      "rule3": "Nunca pense que estará atrapalando alguém por não saber executar alguma técnica. Estamos todos a aprender, ajudando-nos uns aos outros.",
       "rule4": "Respeite os alunos mais graduados (especialmente os cintos negros) e jamais discuta se as técnicas estão certas ou erradas. Lembre-se que estes não chegaram a essa graduação por mero acaso.",
       "rule5": "Treine com afinco e energia mas sempre respeitando a integridade física do colega. Durante as aulas há sempre pessoas de diferentes sexos, idades e capacidade física. Enquanto o ideal é sempre treinar tão vigorosamente quanto possível, as capacidades físicas e as metas de treino de cada parceiro devem ser levadas em consideração. Cada pessoa tem condições e razões diferentes para treinar. Devemos respeitar suas expectativas.",
       "rule6": "Esteja consciente do que ocorre ao seu redor. Doseie a intensidade dos movimentos à sua condição física. Tenha responsabilidade sobre você mesmo.",
@@ -1220,6 +1220,8 @@
     "ourDojos": "Os Nossos Dojos",
     "contact": "Contacto",
     "followUs": "Siga-nos",
+    "faq": "Perguntas Frequentes",
+    "privacy": "Política de Privacidade",
     "copyright": "Todos os direitos reservados"
   },
   "CookieWarning": {
@@ -1245,5 +1247,64 @@
     },
     "yes": "sim",
     "no": "não"
+  },
+  "FAQ": {
+    "meta": {
+      "title": "Perguntas Frequentes | Aulas de Karaté Funchal | ASKKSA Madeira",
+      "description": "Respostas sobre aulas de karaté no Funchal. Aula grátis, preços, horários, turmas infantis e adultos. Aprenda Karaté Shotokan na ASKKSA, principal dojo da Madeira.",
+      "keywords": "aulas karaté Funchal, preços karaté Madeira, karaté infantil Funchal, aulas karaté adultos, aula experimental gratuita, custos Karaté Shotokan, artes marciais Funchal, ASKKSA FAQ"
+    },
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tudo o que precisa de saber para iniciar a sua jornada no Karaté Shotokan na ASKKSA, no Funchal, Madeira.",
+    "questions": {
+      "q1": {
+        "question": "Onde posso aprender karaté no Funchal, Madeira?",
+        "answer": "A ASKKSA tem dois dojos principais no Funchal: a nossa localização principal na Escola Horácio Bento de Gouveia (Santo António) e na Junta de Freguesia de Santo António. Também prestamos apoio técnico ao Clube Desportivo de Câmara de Lobos. Todas as nossas instalações são modernas, seguras e equipadas para o treino tradicional de Karaté Shotokan."
+      },
+      "q2": {
+        "question": "A primeira aula de karaté é mesmo gratuita?",
+        "answer": "Sim! Oferecemos 3 aulas experimentais GRATUITAS para que possa experimentar a nossa metodologia de ensino, conhecer os nossos instrutores qualificados e ver se o Karaté Shotokan é adequado para si ou para o seu filho. Sem qualquer compromisso. Basta contactar-nos pelo (+351) 960 384 090 ou direcao@askksa.pt para marcar a sua aula experimental gratuita."
+      },
+      "q3": {
+        "question": "Quanto custa o karaté por mês na Madeira?",
+        "answer": "A nossa mensalidade é de 25€, que inclui todas as sessões de treino ao longo da semana. Este é um valor excecional para aulas ministradas por instrutores certificados nacionalmente (até Grau III) com linhagem direta da SKIF Canada. Acreditamos que o treino de artes marciais de qualidade deve ser acessível a todos."
+      },
+      "q4": {
+        "question": "Quais são os horários das aulas de karaté no Funchal?",
+        "answer": "Treinamos de segunda a sexta-feira. As crianças (até aos 12 anos) treinam das 19h30 às 20h30, e os adultos (a partir dos 12 anos) treinam das 20h30 às 21h30. O nosso horário foi concebido para acomodar famílias, estudantes e profissionais que trabalham na área do Funchal."
+      },
+      "q5": {
+        "question": "O meu filho pode começar karaté? Qual é a melhor idade?",
+        "answer": "Com certeza! Aceitamos crianças a partir dos 5 anos de idade. O karaté é excelente para desenvolver disciplina, concentração, confiança e condição física nos jovens. As nossas turmas infantis especializadas utilizam métodos de ensino adequados à idade e focam-se em construir caráter juntamente com competências de artes marciais. Muitos pais no Funchal escolhem a ASKKSA especificamente pelo nosso historial comprovado no desenvolvimento de crianças."
+      },
+      "q6": {
+        "question": "Têm aulas de karaté para adultos e iniciantes?",
+        "answer": "Sim! Adultos de todos os níveis de condição física e experiência são bem-vindos, incluindo iniciantes completos. Quer esteja à procura de aprender auto-defesa, melhorar a forma física ou explorar as artes marciais tradicionais, as nossas aulas para adultos (20h30-21h30) proporcionam treino estruturado em Karaté Shotokan autêntico. Nunca é tarde demais para começar—temos alunos desde adolescentes a séniores."
+      },
+      "q7": {
+        "question": "O que é o Karaté Shotokan e como é diferente?",
+        "answer": "O Shotokan é um dos estilos de karaté mais tradicionais e praticados em todo o mundo. Enfatiza técnicas lineares poderosas, posições profundas e kata (padrões formais). A ASKKSA segue a linhagem SKIF (Shotokan Karate International Federation), garantindo que aprende técnicas autênticas diretamente da tradição japonesa. Os nossos instrutores são certificados internacionalmente pela SKIF Canada."
+      },
+      "q8": {
+        "question": "Os vossos instrutores de karaté são qualificados e certificados?",
+        "answer": "Absolutamente. Todos os instrutores da ASKKSA possuem certificações de treinadores nacionais da FNK-P (Federação Nacional de Karate – Portugal) que variam do Grau I ao Grau III. O nosso instrutor principal, Shihan Jorge Freitas, possui 6º DAN e tem mais de 40 anos de experiência. Também temos vários instrutores de 4º e 5º DAN. Todos são graduados pela SKIF Canada e SKIF, garantindo instrução de classe mundial."
+      },
+      "q9": {
+        "question": "O que preciso de trazer para a minha primeira aula de karaté?",
+        "answer": "Para as suas aulas experimentais gratuitas, basta usar roupa desportiva confortável (t-shirt e calças de fato de treino ou calções). Treinará descalço. Se decidir continuar, precisará de um karate-gi (uniforme), que podemos ajudar a obter. Também forneceremos orientação sobre os cuidados adequados e etiqueta."
+      },
+      "q10": {
+        "question": "A ASKKSA está afiliada com organizações oficiais de karaté?",
+        "answer": "Sim, a ASKKSA está oficialmente filiada na FNK-P (Federação Nacional de Karate Portugal), AKRAM (Associação de Karate da Região Autónoma da Madeira), e é reconhecida pela DRJD (Direção Regional da Juventude e Desporto). Também somos membros da SKIF (Shotokan Karate International Federation), conectando-o a uma rede global de praticantes de karaté tradicional."
+      },
+      "q11": {
+        "question": "Posso visitar o dojo antes de me inscrever?",
+        "answer": "Claro! Encorajamos potenciais alunos e pais a visitar as nossas instalações, conhecer os nossos instrutores e observar uma aula. Contacte-nos pelo (+351) 960 384 090 ou direcao@askksa.pt para marcar uma visita. Também pode começar com as nossas 3 aulas experimentais gratuitas para experimentar o treino em primeira mão."
+      },
+      "q12": {
+        "question": "Quanto tempo demora para obter o cinto negro no karaté?",
+        "answer": "Tipicamente 4-6 anos de treino consistente para adultos, embora isto varie conforme a dedicação individual e aptidão natural. Na ASKKSA, focamo-nos na técnica adequada, desenvolvimento de caráter e compreensão profunda em vez de apressar as graduações. O nosso sistema de graduação segue os padrões tradicionais japoneses, e temos orgulho de ter formado muitos cintos negros que exemplificam o verdadeiro espírito do karaté."
+      }
+    }
   }
 }

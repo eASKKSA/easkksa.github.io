@@ -25,7 +25,7 @@ export const mainPagePathnames = {
     "pt-PT": "/estilo-ski",
     en: "/style-ski",
   },
-};
+} as const;
 
 export const philosophyPagePathnames = {
   "/philosophy/bushido": {
@@ -70,6 +70,10 @@ export const routing = defineRouting({
     ...mainPagePathnames,
     ...philosophyPagePathnames,
     ...inDojoPagePathnames,
+    "/faq": {
+      "pt-PT": "/perguntas-frequentes",
+      en: "/faq",
+    },
     "/privacy-policy": {
       "pt-PT": "/politica-de-privacidade",
       en: "/privacy-policy",

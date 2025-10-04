@@ -46,7 +46,7 @@ export const jsonLd = async (
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
+    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -90,7 +90,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       canonical: pathname,
       languages: {
         [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/news", locale: "en" }),
+        "x-default": getPathname({ href: "/style-ski", locale: "en" }),
       },
     },
     openGraph: {
@@ -98,7 +98,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "article",
       images: [
         {
           url: topImage.src,
@@ -107,16 +108,16 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: "Shotokan Karate-Do International Federation",
         },
       ],
-      type: "article",
       section: "Técnica",
       tags: t("meta.keywords").split(", "),
+      publishedTime: "2024-01-01T00:00:00+00:00",
+      modifiedTime: new Date().toISOString(),
     },
     twitter: {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
       images: [topImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

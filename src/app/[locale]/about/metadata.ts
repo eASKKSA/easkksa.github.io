@@ -26,12 +26,28 @@ export const jsonLd = async (
         {
           "@type": "Organization",
           name: "FNK-P - Federação Nacional de Karate Portugal",
+          url: "https://www.fnkp.pt",
         },
         {
           "@type": "Organization",
           name: "AKRAM - Associação de Karate da Região Autónoma da Madeira",
+          url: "https://www.akram.pt",
         },
       ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Escola Horácio Bento de Gouveia, Estr. da Liberdade 1",
+        addressLocality: "Funchal",
+        addressRegion: "Madeira",
+        postalCode: "9004-524",
+        addressCountry: "PT",
+      },
+      telephone: "+351960384090",
+      email: "direcao@askksa.pt",
+      areaServed: {
+        "@type": "City",
+        name: "Funchal",
+      },
     },
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
@@ -59,37 +75,70 @@ export const jsonLd = async (
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
     datePublished: "2000-04-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
+    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: t("orgName"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "pt-PT" ? "Início" : "Home",
+          item: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: locale === "pt-PT" ? "Sobre" : "About",
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+        },
+      ],
+    },
     mentions: [
       {
         "@type": "Person",
         name: "Jorge Freitas",
         jobTitle: "Shihan - 6º DAN",
-        description: "Instrutor qualificado de Karaté Shotokan",
+        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        worksFor: {
+          "@type": "SportsOrganization",
+          name: "ASKKSA",
+        },
       },
       {
         "@type": "Person",
         name: "Rafael Jardim",
         jobTitle: "Sensei - 5º DAN",
-        description: "Instrutor qualificado de Karaté Shotokan",
+        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        worksFor: {
+          "@type": "SportsOrganization",
+          name: "ASKKSA",
+        },
       },
       {
         "@type": "Person",
         name: "Marisa Gomes",
         jobTitle: "Sensei - 5º DAN",
-        description: "Instrutora qualificada de Karaté Shotokan",
+        description: locale === "pt-PT" ? "Instrutora qualificada de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        worksFor: {
+          "@type": "SportsOrganization",
+          name: "ASKKSA",
+        },
       },
       {
         "@type": "Person",
         name: "Tito Velosa",
         jobTitle: "Sensei - 4º DAN",
-        description: "Instrutor qualificado de Karaté Shotokan",
+        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        worksFor: {
+          "@type": "SportsOrganization",
+          name: "ASKKSA",
+        },
       },
     ],
   };
@@ -118,7 +167,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
       locale: locale,
       description: t("meta.description"),
-      url: pathname,
+      url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+      type: "website",
       images: [
         {
           url: jorgeFreitas.src,
@@ -133,14 +183,12 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: t("meta.title"),
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
       images: [jorgeFreitas.src],
-      site: "@askksa_madeira",
     },
   };
 }

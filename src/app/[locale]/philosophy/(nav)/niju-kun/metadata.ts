@@ -67,7 +67,30 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
         description: "Os 20 princípios fundamentais do Karaté Shotokan",
       },
     ],
-  };
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "pt-PT" ? "Início" : "Home",
+          item: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: locale === "pt-PT" ? "Filosofia" : "Philosophy",
+          item: process.env.NEXT_PUBLIC_SITE_URL + getPathname({ href: "/philosophy", locale }),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Niju Kun",
+          item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
+        },
+      ],
+    },
+  } as any;
 };
 
 export async function metadata(): Promise<Metadata> {

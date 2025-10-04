@@ -6,7 +6,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
-import { jsonLd, metadata } from "./metadata";
+import { jsonLd, metadata, websiteSchema } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
 import FormTrial from "@/components/form-trial";
 import DojoMap from "@/components/dojo-map";
@@ -29,6 +29,7 @@ export default async function Page({
 }>) {
   const { locale } = await params;
   const t = await getTranslations("Home");
+  const orgT = await getTranslations("Organization");
 
   const icons = {
     tradition: <GiKimono className="text-5xl" />,
@@ -38,6 +39,11 @@ export default async function Page({
 
   const features = getFeatures(t, icons);
   const schedules = getSchedules(t);
+
+  // Get schemas
+  const organizationSchema = await jsonLd(orgT, locale);
+  const siteSchema = await websiteSchema(locale);
+
   return (
     <>
       <Container blur withBubbles className="text-center">
@@ -144,7 +150,8 @@ export default async function Page({
           />
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
+      <MetadataLDJSON jsonLd={organizationSchema} />
+      <MetadataLDJSON jsonLd={siteSchema} />
     </>
   );
 }

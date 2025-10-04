@@ -21,6 +21,7 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
     applicationName: "ASKKSA",
     authors: [{ name: "ASKKSA", url: siteUrl }],
     creator: "Nuno Fernandes & Lubélio Fernandes",
+    publisher: "ASKKSA - Associação Shotokan Kokusai Karate Santo António",
     category: "Artes Marciais",
 
     // --- Robots & Indexing ---
@@ -31,6 +32,8 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
         index: isProduction,
         follow: isProduction,
         "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
     },
 
@@ -39,6 +42,12 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
       title: "ASKKSA",
       capable: true,
       statusBarStyle: "default",
+      startupImage: [
+        {
+          url: "/icons/icon-512x512.png",
+          media: "(device-width: 768px) and (device-height: 1024px)",
+        },
+      ],
     },
 
     // --- Other ---
@@ -56,7 +65,7 @@ export async function MetadataLDJSON({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
     />
   );
 }

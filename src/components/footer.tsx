@@ -197,9 +197,27 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <small className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}.
-        </small>
+        <div className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="flex gap-6 text-sm">
+              <Link
+                href="/faq"
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              >
+                {t("faq")}
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              >
+                {t("privacy")}
+              </Link>
+            </div>
+            <small className="text-sm text-gray-500 dark:text-gray-400 text-center">
+              &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}.
+            </small>
+          </div>
+        </div>
       </div>
     </footer>
   );
