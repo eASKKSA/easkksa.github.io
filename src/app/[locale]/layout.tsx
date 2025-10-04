@@ -43,11 +43,9 @@ export default async function Layout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <head>
-        <GoogleTagManager
-          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
-        />
-      </head>
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
+      />
       <body>
         <NextIntlClientProvider>
           <Providers>

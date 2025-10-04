@@ -6,7 +6,7 @@ import {
   getInstructors,
   getAuxiliaryInstructors,
   getBlackBelts,
-  getDojos,
+  getDojos
 } from "./data";
 import InstructorCard from "@/components/instructor-card";
 import BBCard from "@/components/bb-card";
@@ -14,8 +14,8 @@ import DojoCard from "@/components/dojo-card";
 import { Metadata } from "next";
 
 export async function generateMetadata({
-  params,
-}: Readonly<{
+                                         params
+                                       }: Readonly<{
   params: Promise<{ locale: Locale }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
@@ -23,8 +23,8 @@ export async function generateMetadata({
 }
 
 export default async function QuemSomosPage({
-  params,
-}: Readonly<{
+                                              params
+                                            }: Readonly<{
   params: Promise<{ locale: Locale }>;
 }>) {
   const { locale } = await params;
@@ -95,11 +95,6 @@ export default async function QuemSomosPage({
         </div>
       </Container>
       <MetadataLDJSON jsonLd={await jsonLd(t, locale)} />
-      <link
-        rel="preconnect"
-        href="https://maps.googleapis.com"
-        crossOrigin="anonymous"
-      />
     </>
   );
 }
