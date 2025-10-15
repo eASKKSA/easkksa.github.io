@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/footer";
 import Script from "next/script";
+import { cookies } from "next/headers";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -38,6 +39,12 @@ export default async function Layout({
     notFound();
   }
 
+  // Read cookie consent on server-side
+  const cookieStore = await cookies();
+  const cookieConsent = cookieStore.get("cookie_consent");
+  const consentGiven = cookieConsent?.value === "true";
+  const hasConsent = cookieConsent !== undefined;
+
   return (
     <html
       lang={typedLocale}
@@ -51,6 +58,19 @@ export default async function Layout({
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            ${
+              hasConsent
+                ? `
+            gtag('consent', 'update', {
+              'ad_storage': '${consentGiven ? "granted" : "denied"}',
+              'ad_user_data': '${consentGiven ? "granted" : "denied"}',
+              'ad_personalization': '${consentGiven ? "granted" : "denied"}',
+              'analytics_storage': '${consentGiven ? "granted" : "denied"}',
+              'personalization_storage': '${consentGiven ? "granted" : "denied"}'
+            });
+            `
+                : ""
+            }
           `,
         }}
       />
