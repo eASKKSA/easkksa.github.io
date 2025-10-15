@@ -2,13 +2,14 @@ import { sendGTMEvent } from "@next/third-parties/google";
 
 /**
  * Update Google Consent Mode v2
- * Uses gtag to update consent - the GTM template automatically pushes events to dataLayer
+ * Pushes consent update directly to dataLayer - the GTM template handles the rest
  */
 export function updateConsent(consentGiven: boolean) {
-  // Use gtag to update consent
-  // The GTM template will automatically push gtm_consent_update event to dataLayer
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("consent", "update", {
+  // Push consent update directly to dataLayer
+  // The GTM template will intercept this and update consent accordingly
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "consent_update",
       ad_storage: consentGiven ? "granted" : "denied",
       ad_user_data: consentGiven ? "granted" : "denied",
       ad_personalization: consentGiven ? "granted" : "denied",
