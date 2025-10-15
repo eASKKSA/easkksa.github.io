@@ -44,6 +44,16 @@ export default async function Layout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+      <Script
+        id="gtag-init"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+          `,
+        }}
+      />
       <GoogleTagManager
         gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
       />
