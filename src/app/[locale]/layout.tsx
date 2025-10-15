@@ -48,26 +48,6 @@ export default async function Layout({
         gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
       />
       <body>
-      <Script
-        id="gtm-consent-default"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied',
-              'analytics_storage': 'denied',
-              'personalization_storage': 'denied',
-              'functionality_storage': 'granted',
-              'security_storage': 'granted',
-              'wait_for_update': 500
-            });
-          `,
-        }}
-      />
         <NextIntlClientProvider>
           <Providers>
             <Navbar />
