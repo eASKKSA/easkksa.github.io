@@ -2,13 +2,13 @@ import { sendGTMEvent } from "@next/third-parties/google";
 
 /**
  * Update Google Consent Mode v2
- * Uses gtag directly for consent (as per Google's specification)
+ * Uses gtag to update consent - the GTM template automatically pushes events to dataLayer
  */
 export function updateConsent(consentGiven: boolean) {
-  // IMPORTANT: Use gtag directly for consent updates
-  // The consent command is special and doesn't work as a regular event
-  if (typeof (globalThis as typeof window).gtag === "function") {
-    (globalThis as typeof window).gtag("consent", "update", {
+  // Use gtag to update consent
+  // The GTM template will automatically push gtm_consent_update event to dataLayer
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("consent", "update", {
       ad_storage: consentGiven ? "granted" : "denied",
       ad_user_data: consentGiven ? "granted" : "denied",
       ad_personalization: consentGiven ? "granted" : "denied",
@@ -17,9 +17,9 @@ export function updateConsent(consentGiven: boolean) {
     });
   }
 
-  // Send a regular event to track the consent action
+  // Track the consent action as a separate event for analytics
   sendGTMEvent({
-    event: "consent_updated",
-    consent_status: consentGiven ? "granted" : "denied",
+    event: "consent_action",
+    consent_status: consentGiven ? "all_granted" : "only_necessary",
   });
 }
