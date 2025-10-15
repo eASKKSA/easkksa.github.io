@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { setCookie, hasCookie } from "cookies-next";
+import { setCookie, getCookie } from "cookies-next";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { updateConsent } from "@/lib/gtm";
@@ -11,8 +11,16 @@ const CookieWarning = () => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    if (!hasCookie("cookie_consent")) {
+    const cookieConsent = getCookie("cookie_consent");
+
+    if (cookieConsent === undefined) {
+      // No cookie exists, show banner
       setShowBanner(true);
+    } else {
+      // Cookie exists, restore consent state
+      const consentGiven = cookieConsent === "true";
+      updateConsent(consentGiven);
+      setShowBanner(false);
     }
   }, []);
 
@@ -25,7 +33,7 @@ const CookieWarning = () => {
         path: "/",
       });
 
-      // Update Google Consent Mode v2 using the official library
+      // Update Google Consent Mode v2
       updateConsent(consentGiven);
 
       // Hide banner immediately for a snappy user experience.
