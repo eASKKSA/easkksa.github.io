@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { setCookie, hasCookie } from "cookies-next";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { updateConsent } from "@/lib/gtm";
 
 const CookieWarning = () => {
   const t = useTranslations("CookieWarning");
@@ -24,13 +25,8 @@ const CookieWarning = () => {
         path: "/",
       });
 
-      // Update Google Analytics consent if gtag is available
-      if (typeof window.gtag === "function") {
-        window.gtag("consent", "update", {
-          analytics_storage: consentGiven ? "granted" : "denied",
-          ad_storage: consentGiven ? "granted" : "denied",
-        });
-      }
+      // Update Google Consent Mode v2 using the official library
+      updateConsent(consentGiven);
 
       // Hide banner immediately for a snappy user experience.
       setShowBanner(false);
