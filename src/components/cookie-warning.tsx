@@ -38,6 +38,11 @@ const CookieWarning = () => {
 
       // Hide banner immediately for a snappy user experience.
       setShowBanner(false);
+
+      // Refresh the page when accepting all cookies to ensure tracking starts
+      if (consentGiven) {
+        globalThis.location.reload();
+      }
     } catch (error) {
       console.error("Error setting cookie consent:", error);
       // Still hide the banner on error to prevent it from getting stuck.

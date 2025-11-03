@@ -1,6 +1,5 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import Head from "next/head";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -45,6 +44,7 @@ export default async function Layout({
   const cookieConsent = cookieStore.get("cookie_consent");
   const consentGiven = cookieConsent?.value === "true";
   const hasConsent = cookieConsent !== undefined;
+  const consentStatus = consentGiven ? "granted" : "denied";
 
   return (
     <html
@@ -52,32 +52,25 @@ export default async function Layout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <Head>
-        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required for GTM consent initialization */}
-        <Script
-          id="gtag-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script id="gtag-init" strategy="beforeInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             ${
               hasConsent
                 ? `
             gtag('consent', 'update', {
-              'ad_storage': '${consentGiven ? "granted" : "denied"}',
-              'ad_user_data': '${consentGiven ? "granted" : "denied"}',
-              'ad_personalization': '${consentGiven ? "granted" : "denied"}',
-              'analytics_storage': '${consentGiven ? "granted" : "denied"}',
-              'personalization_storage': '${consentGiven ? "granted" : "denied"}'
+              'ad_storage': '${consentStatus}',
+              'ad_user_data': '${consentStatus}',
+              'ad_personalization': '${consentStatus}',
+              'analytics_storage': '${consentStatus}',
+              'personalization_storage': '${consentStatus}'
             });
             `
                 : ""
             }
-          `,
-          }}
-        />
-      </Head>
+          `}
+      </Script>
       {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
