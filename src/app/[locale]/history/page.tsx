@@ -1,11 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
+import { MetadataLDJSON } from "@/app/metadata";
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
 import Container from "@/components/container";
-import { getTranslations } from "next-intl/server";
 import { jsonLd, metadata } from "./metadata";
-import { MetadataLDJSON } from "@/app/metadata";
-import { Metadata } from "next";
 
 export async function generateMetadata({
   params,

@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { FaBook, FaMedal, FaPray, FaScroll } from "react-icons/fa";
 import { Link, usePathname } from "@/i18n/navigation";
-import { FaScroll, FaPray, FaBook, FaMedal } from "react-icons/fa";
 
 export default function InDojoNavigation() {
   const t = useTranslations("InDojo.navigation");

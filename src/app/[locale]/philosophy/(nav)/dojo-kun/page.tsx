@@ -1,20 +1,18 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import {
+  FaBrain,
+  FaFistRaised,
+  FaHeart,
+  FaPeopleArrows,
+  FaUserShield,
+} from "react-icons/fa";
+import { MetadataLDJSON } from "@/app/metadata";
+// --- ASSETS ---
+import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
 import { jsonLd, metadata } from "./metadata";
-import { MetadataLDJSON } from "@/app/metadata";
-
-import {
-  FaUserShield,
-  FaHeart,
-  FaFistRaised,
-  FaPeopleArrows,
-  FaBrain,
-} from "react-icons/fa";
-
-// --- ASSETS ---
-import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 
 export const generateMetadata = metadata;
 

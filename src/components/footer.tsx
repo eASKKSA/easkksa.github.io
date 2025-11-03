@@ -2,11 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import {
-  FaMapMarkerAlt,
-  FaPhone,
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
+  FaMapMarkerAlt,
+  FaPhone,
   FaYoutube,
 } from "react-icons/fa";
 import { Link } from "@/i18n/navigation";
@@ -63,6 +63,7 @@ const Footer = () => {
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
                     target="_blank"
                     href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
+                    rel="noopener"
                   >
                     {tOrg("dojo1.name")}
                   </a>
@@ -93,6 +94,7 @@ const Footer = () => {
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
                     target="_blank"
                     href="https://www.google.com/maps/place/Junta+de+Freguesia+de+Santo+António/@32.6639233,-16.9451558,17z/data=!3m1!4b1!4m6!3m5!1s0xc605f234ec15fc9:0x7c97dfaa734fe732!8m2!3d32.6639189!4d-16.9402849!16s%2Fg%2F11h4s4ccfx?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                    rel="noopener"
                   >
                     {tOrg("dojo2.name")}
                   </a>
@@ -123,6 +125,7 @@ const Footer = () => {
                     className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
                     target="_blank"
                     href="https://www.google.com/maps/place/R.+Frei+Pedro+da+Guarda+36,+9300-066+Câmara+de+Lobos/@32.6545326,-16.9752042,17z/data=!3m1!4b1!4m6!3m5!1s0xc605f121f097781:0x7b5a00bb7ea01d2a!8m2!3d32.6545281!4d-16.9726293!16s%2Fg%2F11mcxk01nt?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                    rel="noopener"
                   >
                     {tOrg("dojo3.name")}
                   </a>
@@ -214,7 +217,8 @@ const Footer = () => {
               </Link>
             </div>
             <small className="text-sm text-gray-500 dark:text-gray-400 text-center">
-              &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}.
+              &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}
+              .
             </small>
           </div>
         </div>

@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import { FaCog, FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 import dynamic from "next/dynamic";
-import { useLocale, type Locale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { type Locale, useLocale, useTranslations } from "next-intl";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
+import { FaBars, FaCog, FaGlobe, FaTimes } from "react-icons/fa";
+import mainLogo from "@/app/icon.svg";
 import { Link, usePathname } from "@/i18n/navigation";
 import { mainPagePathnames } from "@/i18n/routing";
-
-import mainLogo from "@/app/icon.svg";
 
 const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
   ssr: false,
@@ -36,6 +36,7 @@ const SettingsMenu: React.FC<{
   return (
     <div className="relative" ref={menuRef}>
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         aria-label="Open settings menu"
@@ -128,7 +129,7 @@ const Navbar: React.FC = () => {
       window.innerWidth >= 1024 && setIsMenuOpen(false);
     window.addEventListener("resize", closeMenuOnResize);
     return () => window.removeEventListener("resize", closeMenuOnResize);
-  }, [isMenuOpen]);
+  }, []);
 
   useEffect(() => {
     if (!isMobile) setIsMenuOpen(false);
@@ -136,7 +137,6 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      role="banner"
       className={`${
         isScrolled
           ? "bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm"
@@ -148,7 +148,6 @@ const Navbar: React.FC = () => {
           <div className="flex items-center mx-auto md:max-w-5xl xl:max-w-7xl">
             {/* The main grid container for all 7 items */}
             <nav
-              role="navigation"
               aria-label="Main Navigation"
               className="grid w-full grid-cols-7 items-center justify-items-center"
             >
@@ -223,6 +222,7 @@ const Navbar: React.FC = () => {
               />
             </Link>
             <button
+              type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-white/10"
               aria-label="Toggle menu"
@@ -235,7 +235,6 @@ const Navbar: React.FC = () => {
             className={`transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"} border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-[#1a1a1a]/90`}
           >
             <nav
-              role="navigation"
               aria-label="Main Mobile Navigation"
               className="flex flex-col gap-1 border-t p-4"
             >

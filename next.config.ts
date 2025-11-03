@@ -1,5 +1,5 @@
+import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import { NextConfig } from "next";
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   htmlLimitedBots: /.*/,
   async headers() {

@@ -1,17 +1,16 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import Image from "next/image";
-import Container from "@/components/container";
-import FeatureCard from "@/components/feature-card";
-import { jsonLd, metadata } from "./metadata";
+import { getTranslations } from "next-intl/server";
 import { MetadataLDJSON } from "@/app/metadata";
-
+import dachisImage from "@/assets/style-ski/dachis.gif";
+import maosPesImage from "@/assets/style-ski/maospes.gif";
+import tecnicasPernasImage from "@/assets/style-ski/TecnicasPernas2.jpg";
 // --- ASSETS ---
 import shotokanTopImage from "@/assets/style-ski/top.jpg";
-import dachisImage from "@/assets/style-ski/dachis.gif";
-import tecnicasPernasImage from "@/assets/style-ski/TecnicasPernas2.jpg";
-import maosPesImage from "@/assets/style-ski/maospes.gif";
-import { Metadata } from "next";
+import Container from "@/components/container";
+import FeatureCard from "@/components/feature-card";
 import { getShotokanKatas } from "./data";
+import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
   params,

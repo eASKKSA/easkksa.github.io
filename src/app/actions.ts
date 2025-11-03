@@ -1,9 +1,9 @@
 "use server";
 import "server-only";
-import { z } from "zod";
-import nodemailer from "nodemailer";
-import { getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
+import { getTranslations } from "next-intl/server";
+import nodemailer from "nodemailer";
+import { z } from "zod";
 
 //
 // 1) Schema Validation
@@ -22,7 +22,7 @@ const trialFormSchema = z.object({
   phone: z
     .string()
     .optional()
-    .refine((val) => !val || /^[+]?[\d\s\-\(\)]+$/.test(val), {
+    .refine((val) => !val || /^[+]?[\d\s\-()]+$/.test(val), {
       message: "Invalid phone number format.",
     }),
   experience: z.enum(["yes", "no"]),
@@ -63,12 +63,12 @@ function getTransporter(): nodemailer.Transporter {
   if (!transporter) {
     validateEnvironment();
     transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST!,
-      port: Number(process.env.SMTP_PORT!),
+      host: process.env.SMTP_HOST ?? "",
+      port: Number(process.env.SMTP_PORT ?? "587"),
       secure: process.env.SMTP_SECURE === "true",
       auth: {
-        user: process.env.SMTP_USER!,
-        pass: process.env.SMTP_PASSWORD!,
+        user: process.env.SMTP_USER ?? "",
+        pass: process.env.SMTP_PASSWORD ?? "",
       },
       tls: { rejectUnauthorized: false },
       pool: true,
@@ -172,7 +172,7 @@ function generateEmailTemplate(data: {
 // 6) Submission Handler
 //
 export async function submitTrialForm(
-  prevState: TrialFormState,
+  _prevState: TrialFormState,
   formData: FormData,
 ): Promise<TrialFormState> {
   const t = await getTranslations("TrialForm");

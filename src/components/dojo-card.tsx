@@ -1,5 +1,5 @@
-import DojoMap from "@/components/dojo-map";
 import { FaPhone, FaUser } from "react-icons/fa";
+import DojoMap from "@/components/dojo-map";
 
 const DojoCard = ({
   dojo,

@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import {
-  FaNewspaper,
-  FaExternalLinkAlt,
-  FaSearch,
   FaCalendarAlt,
+  FaExternalLinkAlt,
+  FaNewspaper,
+  FaSearch,
   FaSortAmountDown,
 } from "react-icons/fa";
-import { useTranslations } from "next-intl";
 import Container from "@/components/container";
 
 interface NewsItem {
@@ -90,7 +90,7 @@ export default function ASKKSANews({
           </div>
         </div>
         <div className="animate-pulse space-y-4">
-          {[...Array(3)].map((_, i) => (
+          {[new Array(3)].map((_, i) => (
             <div
               key={i}
               className="h-32 bg-gray-200 dark:bg-gray-700 rounded-lg"

@@ -1,5 +1,5 @@
-import { FaFacebook } from "react-icons/fa";
 import { getTranslations } from "next-intl/server";
+import { FaFacebook } from "react-icons/fa";
 
 export default async function FacebookEmbed() {
   const t = await getTranslations("News.sections.facebook");
@@ -51,7 +51,6 @@ export default async function FacebookEmbed() {
             <iframe
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FASKKSA.MADEIRA&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
               className="w-[500px] h-[600px]"
-              scrolling="no"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               title="Feed Facebook ASKKSA"
               loading="lazy"

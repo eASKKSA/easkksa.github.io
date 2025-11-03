@@ -1,5 +1,5 @@
-import { FaYoutube } from "react-icons/fa";
 import { getTranslations } from "next-intl/server";
+import { FaYoutube } from "react-icons/fa";
 
 export default async function YouTubeLink() {
   const t = await getTranslations("News.sections.youtube");
@@ -23,6 +23,7 @@ export default async function YouTubeLink() {
           href="https://www.youtube.com/results?search_query=ASKKSA+karate+shotokan"
           target="_blank"
           className="inline-flex items-center gap-2 rounded-full bg-red-600 px-6 py-3 font-semibold text-white shadow-xl shadow-red-600/30 transition-transform hover:scale-105 hover:bg-red-700 focus-visible:outline-none"
+          rel="noopener"
         >
           <FaYoutube />
           {t("cta.button")}

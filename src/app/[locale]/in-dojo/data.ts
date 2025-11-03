@@ -1,6 +1,6 @@
-import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
-import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
 import askksaThumb from "@/assets/askksa_thumb.svg";
+import gradesImage from "@/assets/in-dojo/graduacoes.jpg";
+import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 
 export const getInDojoSections = (t: TFunction): InDojoSection[] => [
   {

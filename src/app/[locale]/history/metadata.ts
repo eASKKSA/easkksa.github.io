@@ -1,10 +1,9 @@
+import type { Metadata } from "next";
+import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import { Article, WithContext } from "schema-dts";
-import { Metadata } from "next";
-
+import type { Article, WithContext } from "schema-dts";
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
 import { getPathname } from "@/i18n/navigation";
-import { Locale } from "next-intl";
 
 export const jsonLd = async (
   t: TFunction,
@@ -30,7 +29,7 @@ export const jsonLd = async (
       "@type": "Organization",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -38,7 +37,7 @@ export const jsonLd = async (
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {
@@ -82,7 +81,7 @@ export const jsonLd = async (
         },
       ],
     },
-  } as any;
+  } as WithContext<Article>;
 };
 
 export async function metadata(locale: Locale): Promise<Metadata> {

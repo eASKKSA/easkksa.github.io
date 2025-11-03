@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { WebPage, WithContext } from "schema-dts";
-import { Metadata } from "next";
+import type { WebPage, WithContext } from "schema-dts";
 
 import principlesImage from "@/assets/philosofy/principios.gif";
 import { getPathname } from "@/i18n/navigation";
@@ -28,7 +28,7 @@ export const jsonLd = async (
       "@type": "Organization",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -36,7 +36,7 @@ export const jsonLd = async (
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {

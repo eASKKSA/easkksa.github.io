@@ -1,21 +1,21 @@
-import Container from "@/components/container";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import BBCard from "@/components/bb-card";
+import Container from "@/components/container";
+import DojoCard from "@/components/dojo-card";
+import InstructorCard from "@/components/instructor-card";
 import {
-  getInstructors,
   getAuxiliaryInstructors,
   getBlackBelts,
-  getDojos
+  getDojos,
+  getInstructors,
 } from "./data";
-import InstructorCard from "@/components/instructor-card";
-import BBCard from "@/components/bb-card";
-import DojoCard from "@/components/dojo-card";
-import { Metadata } from "next";
+import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
-                                         params
-                                       }: Readonly<{
+  params,
+}: Readonly<{
   params: Promise<{ locale: Locale }>;
 }>): Promise<Metadata> {
   const { locale } = await params;
@@ -23,8 +23,8 @@ export async function generateMetadata({
 }
 
 export default async function QuemSomosPage({
-                                              params
-                                            }: Readonly<{
+  params,
+}: Readonly<{
   params: Promise<{ locale: Locale }>;
 }>) {
   const { locale } = await params;

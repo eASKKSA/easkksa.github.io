@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion } from "motion/react";
 import clsx from "clsx";
-import { Variants } from "motion";
+import type { Variants } from "motion";
+import { motion } from "motion/react";
+import type { ReactNode } from "react";
 
 type FadeInContainerProps = {
   children: ReactNode;

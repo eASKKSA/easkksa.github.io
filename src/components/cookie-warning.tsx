@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { setCookie, getCookie } from "cookies-next";
-import { Link } from "@/i18n/navigation";
+import { getCookie, setCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
+import { useCallback, useEffect, useState } from "react";
+import { Link } from "@/i18n/navigation";
 import { updateConsent } from "@/lib/gtm";
 
 const CookieWarning = () => {
@@ -16,8 +16,12 @@ const CookieWarning = () => {
     if (cookieConsent === undefined) {
       // No cookie exists, show banner
       setShowBanner(true);
+    } else {
+      // Cookie exists, restore consent state
+      const consentGiven = cookieConsent === "true";
+      updateConsent(consentGiven);
+      setShowBanner(false);
     }
-    // No need to call updateConsent here - already done server-side in layout.tsx
   }, []);
 
   const handleCookieAction = useCallback((consentGiven: boolean) => {

@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { Metadata } from "next";
-import Section from "@/components/container";
 import Background from "@/components/background";
+import Section from "@/components/container";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -61,6 +61,7 @@ export default async function NotFound() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
+                  <title>Home Icon</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

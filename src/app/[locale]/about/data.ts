@@ -1,9 +1,6 @@
 // --- Image Imports ---
-import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
-import titoVelosa from "@/assets/senseis/tito_velosa.webp";
-import marisaGomes from "@/assets/senseis/marisa_gomes.webp";
-import rafaelJardim from "@/assets/senseis/rafael_jardim.webp";
 
+import askksaThumbSquare from "@/assets/askksa_thumb_square.jpeg";
 import andrePestana from "@/assets/black-belts/andre_pestana.webp";
 import beatrizMartins from "@/assets/black-belts/beatriz_martins.webp";
 import bernardoLopes from "@/assets/black-belts/bernardo_lopes.webp";
@@ -26,8 +23,10 @@ import nunoFernandes from "@/assets/black-belts/nuno_fernandes.webp";
 import pedroRoxo from "@/assets/black-belts/pedro_roxo.webp";
 import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.webp";
 import tiagoFreitas from "@/assets/black-belts/tiago_freitas.webp";
-
-import askksaThumbSquare from "@/assets/askksa_thumb_square.jpeg";
+import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
+import marisaGomes from "@/assets/senseis/marisa_gomes.webp";
+import rafaelJardim from "@/assets/senseis/rafael_jardim.webp";
+import titoVelosa from "@/assets/senseis/tito_velosa.webp";
 
 // --- Data Functions ---
 export const getInstructors = (t: TFunction): Instructor[] => [

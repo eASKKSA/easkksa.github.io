@@ -1,8 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
-import { GiKimono, GiCrossedSwords } from "react-icons/gi";
 import { FaScroll } from "react-icons/fa";
+import { GiCrossedSwords, GiKimono } from "react-icons/gi";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export default function PhilosophyNavigation() {
   const t = useTranslations("Philosophy.navigation");

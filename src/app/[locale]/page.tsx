@@ -1,17 +1,17 @@
-import Container from "@/components/container";
-import FeatureCard from "@/components/feature-card";
-import { GiKimono } from "react-icons/gi";
-import { IoPeople, IoLocationSharp, IoMail } from "react-icons/io5";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
-import { ReactNode } from "react";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { jsonLd, metadata, websiteSchema } from "./metadata";
+import type { ReactNode } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiKimono } from "react-icons/gi";
+import { IoLocationSharp, IoMail, IoPeople } from "react-icons/io5";
 import { MetadataLDJSON } from "@/app/metadata";
-import FormTrial from "@/components/form-trial";
+import Container from "@/components/container";
 import DojoMap from "@/components/dojo-map";
+import FeatureCard from "@/components/feature-card";
+import FormTrial from "@/components/form-trial";
 import { getFeatures, getSchedules } from "./data";
-import { Metadata } from "next";
+import { jsonLd, metadata, websiteSchema } from "./metadata";
 
 export async function generateMetadata({
   params,

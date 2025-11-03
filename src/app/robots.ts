@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: isProduction ? "/" : "",
       disallow: isProduction ? "/private/" : "/",
     },
-    sitemap: siteUrl + "/sitemap.xml",
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }

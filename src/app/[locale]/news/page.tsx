@@ -1,12 +1,12 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
+import Container from "@/components/container";
+import ASKKSANews from "@/components/news/askksa-news";
 import FacebookEmbed from "@/components/news/facebook-section";
 import InstagramLink from "@/components/news/instagram-section";
 import YouTubeLink from "@/components/news/youtube-section";
-import ASKKSANews from "@/components/news/askksa-news";
-import { Metadata } from "next";
+import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
   params,

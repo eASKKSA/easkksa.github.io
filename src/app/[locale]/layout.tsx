@@ -1,16 +1,17 @@
-import Background from "@/components/background";
-import Providers from "@/components/providers";
-import Navbar from "@/components/navbar";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import CookieWarning from "@/components/cookie-warning";
-import { globalMetadata } from "@/app/metadata";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import Footer from "@/components/footer";
-import Script from "next/script";
+import type { Metadata } from "next";
+import Head from "next/head";
 import { cookies } from "next/headers";
+import { notFound } from "next/navigation";
+import Script from "next/script";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { globalMetadata } from "@/app/metadata";
+import Background from "@/components/background";
+import CookieWarning from "@/components/cookie-warning";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Providers from "@/components/providers";
+import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -51,11 +52,13 @@ export default async function Layout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <Script
-        id="gtag-init"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <Head>
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required for GTM consent initialization */}
+        <Script
+          id="gtag-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             ${
@@ -72,11 +75,14 @@ export default async function Layout({
                 : ""
             }
           `,
-        }}
-      />
-      <GoogleTagManager
-        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
-      />
+          }}
+        />
+      </Head>
+      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
+        />
+      )}
       <body>
         <NextIntlClientProvider>
           <Providers>

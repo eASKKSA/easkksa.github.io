@@ -1,11 +1,11 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
-import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
-import { MetadataLDJSON } from "@/app/metadata";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { getPhilosophySections } from "@/app/[locale]/philosophy/data";
+import { MetadataLDJSON } from "@/app/metadata";
+import Container from "@/components/container";
+import { Link } from "@/i18n/navigation";
+import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
   params,

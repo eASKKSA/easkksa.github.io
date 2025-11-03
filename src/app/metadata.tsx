@@ -1,8 +1,8 @@
-import { Metadata } from "next";
-import { hasLocale } from "next-intl";
-import { routing } from "@/i18n/routing";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Thing, WithContext } from "schema-dts";
+import { hasLocale } from "next-intl";
+import type { Thing, WithContext } from "schema-dts";
+import { routing } from "@/i18n/routing";
 
 export async function globalMetadata(locale: Locale): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) {
@@ -63,9 +63,12 @@ export async function MetadataLDJSON({
   jsonLd,
 }: Readonly<MetadataLDJSONProps>) {
   return (
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD structured data
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd).replaceAll("<", String.raw`\u003c`),
+      }}
     />
   );
 }

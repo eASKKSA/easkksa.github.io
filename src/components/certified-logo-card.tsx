@@ -1,7 +1,7 @@
 import Image from "next/image";
-import skifCanadaLogo from "@/assets/skif_canada.png";
-import skifLogo from "@/assets/skif.png";
 import askkmLogo from "@/assets/askkm.webp";
+import skifLogo from "@/assets/skif.png";
+import skifCanadaLogo from "@/assets/skif_canada.png";
 import venezuelaLogo from "@/assets/venezuela.webp";
 
 export default function CertifiedLogoCard({

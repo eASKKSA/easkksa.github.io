@@ -1,6 +1,6 @@
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
-import principlesImage from "@/assets/philosofy/principios.gif";
 import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
+import principlesImage from "@/assets/philosofy/principios.gif";
 
 export const getPhilosophySections = (t: TFunction): PhilosophySection[] => [
   {

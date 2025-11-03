@@ -1,5 +1,5 @@
-import { FaInstagram } from "react-icons/fa";
 import { getTranslations } from "next-intl/server";
+import { FaInstagram } from "react-icons/fa";
 
 export default async function InstagramLink() {
   const t = await getTranslations("News.sections.instagram");
@@ -24,6 +24,7 @@ export default async function InstagramLink() {
           href="https://www.instagram.com/askksa_madeira/"
           target="_blank"
           className="inline-flex items-center gap-2 rounded-full bg-pink-600 px-6 py-3 font-semibold text-white shadow-xl shadow-pink-600/30 transition-transform hover:scale-105 hover:bg-pink-700 focus-visible:outline-none"
+          rel="noopener"
         >
           <FaInstagram />
           {t("cta.button")}

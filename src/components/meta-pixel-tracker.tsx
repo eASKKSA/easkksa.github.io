@@ -1,8 +1,8 @@
 // components/meta-pixel-tracker.tsx
 "use client";
 
-import Script from "next/script";
 import Image from "next/image";
+import Script from "next/script";
 
 interface MetaPixelTrackerProps {
   pixelId: string;

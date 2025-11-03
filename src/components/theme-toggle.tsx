@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { CiLight, CiDark, CiMonitor } from "react-icons/ci";
+import { CiDark, CiLight, CiMonitor } from "react-icons/ci";
 
 const themeOptions = [
   { key: "light" as const, icon: <CiLight />, aria: "Light mode" },

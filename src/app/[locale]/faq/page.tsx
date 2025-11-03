@@ -1,8 +1,8 @@
-import Container from "@/components/container";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { jsonLd, metadata } from "./metadata";
 import { MetadataLDJSON } from "@/app/metadata";
-import { Metadata } from "next";
+import Container from "@/components/container";
+import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
   params,

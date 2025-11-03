@@ -1,6 +1,6 @@
-import { getTranslations, getLocale } from "next-intl/server";
-import { Article, WithContext } from "schema-dts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+import type { Article, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (): Promise<WithContext<Article>> => {
@@ -20,14 +20,14 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       caption: "ASKKSA - Vocabulário Japonês do Karaté",
     },
     author: {
       "@type": "Organization",
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -35,7 +35,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {
@@ -85,7 +85,9 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
           "@type": "ListItem",
           position: 2,
           name: locale === "pt-PT" ? "No Dojo" : "In Dojo",
-          item: process.env.NEXT_PUBLIC_SITE_URL + getPathname({ href: "/in-dojo", locale }),
+          item:
+            process.env.NEXT_PUBLIC_SITE_URL +
+            getPathname({ href: "/in-dojo", locale }),
         },
         {
           "@type": "ListItem",
@@ -95,7 +97,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
         },
       ],
     },
-  } as any;
+  } as WithContext<Article>;
 };
 
 export async function metadata(): Promise<Metadata> {

@@ -1,22 +1,20 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import {
+  FaBalanceScale,
+  FaCrown,
+  FaGem,
+  FaHandshake,
+  FaHeart,
+  FaPray,
+} from "react-icons/fa";
+import { GiLion, GiPrayer, GiSelfLove } from "react-icons/gi";
+import { MetadataLDJSON } from "@/app/metadata";
+// --- ASSETS ---
+import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
 import { jsonLd, metadata } from "./metadata";
-import { MetadataLDJSON } from "@/app/metadata";
-
-import {
-  FaCrown,
-  FaHandshake,
-  FaGem,
-  FaHeart,
-  FaBalanceScale,
-  FaPray,
-} from "react-icons/fa";
-import { GiLion, GiSelfLove, GiPrayer } from "react-icons/gi";
-
-// --- ASSETS ---
-import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 
 export const generateMetadata = metadata;
 

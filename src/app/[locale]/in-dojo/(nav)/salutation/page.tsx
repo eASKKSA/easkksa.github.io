@@ -1,11 +1,10 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
+import { getTranslations } from "next-intl/server";
 import { MetadataLDJSON } from "@/app/metadata";
-
 // --- ASSETS ---
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
+import Container from "@/components/container";
+import { jsonLd, metadata } from "./metadata";
 
 export const generateMetadata = metadata;
 

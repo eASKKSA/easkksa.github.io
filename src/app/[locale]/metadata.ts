@@ -1,12 +1,19 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SportsOrganization, WithContext, LocalBusiness, WebSite } from "schema-dts";
-import { Metadata } from "next";
+import type {
+  LocalBusiness,
+  SportsOrganization,
+  WebSite,
+  WithContext,
+} from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 // WebSite Schema - Removed SearchAction (no internal search on site)
-export const websiteSchema = async (locale: Locale): Promise<WithContext<WebSite>> => {
+export const websiteSchema = async (
+  locale: Locale,
+): Promise<WithContext<WebSite>> => {
   const t = await getTranslations("Organization");
 
   return {
@@ -20,7 +27,7 @@ export const websiteSchema = async (locale: Locale): Promise<WithContext<WebSite
       name: t("name"),
       logo: {
         "@type": "ImageObject",
-        url: siteUrl + "/icons/icon-512x512.png",
+        url: `${siteUrl}/icons/icon-512x512.png`,
       },
     },
   };
@@ -44,11 +51,11 @@ export const jsonLd = async (
     url: siteUrl + pathname,
     logo: {
       "@type": "ImageObject",
-      url: siteUrl + "/icons/icon-512x512.png",
+      url: `${siteUrl}/icons/icon-512x512.png`,
     },
     image: {
       "@type": "ImageObject",
-      url: siteUrl + "/icons/icon-512x512.png",
+      url: `${siteUrl}/icons/icon-512x512.png`,
       caption: t("name"),
     },
     foundingDate: "2000-04-01",
@@ -103,14 +110,23 @@ export const jsonLd = async (
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: locale === "pt-PT" ? "Aulas de Karaté Shotokan" : "Shotokan Karate Classes",
+      name:
+        locale === "pt-PT"
+          ? "Aulas de Karaté Shotokan"
+          : "Shotokan Karate Classes",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: locale === "pt-PT" ? "Aulas para Crianças (até 12 anos)" : "Children's Classes (up to 12 years)",
-            description: locale === "pt-PT" ? "Karaté Shotokan para crianças com metodologia adaptada" : "Shotokan Karate for children with adapted methodology",
+            name:
+              locale === "pt-PT"
+                ? "Aulas para Crianças (até 12 anos)"
+                : "Children's Classes (up to 12 years)",
+            description:
+              locale === "pt-PT"
+                ? "Karaté Shotokan para crianças com metodologia adaptada"
+                : "Shotokan Karate for children with adapted methodology",
             provider: {
               "@type": "SportsOrganization",
               name: t("name"),
@@ -133,8 +149,14 @@ export const jsonLd = async (
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: locale === "pt-PT" ? "Aulas para Adultos (12+ anos)" : "Adult Classes (12+ years)",
-            description: locale === "pt-PT" ? "Karaté Shotokan para jovens e adultos" : "Shotokan Karate for youth and adults",
+            name:
+              locale === "pt-PT"
+                ? "Aulas para Adultos (12+ anos)"
+                : "Adult Classes (12+ years)",
+            description:
+              locale === "pt-PT"
+                ? "Karaté Shotokan para jovens e adultos"
+                : "Shotokan Karate for youth and adults",
             provider: {
               "@type": "SportsOrganization",
               name: t("name"),
@@ -208,7 +230,7 @@ export const jsonLd = async (
       {
         "@type": "Organization",
         name: "AKRAM - Associação de Karate da Região Autónoma da Madeira",
-        url: "https://www.akram.pt"
+        url: "https://www.akram.pt",
       },
     ],
     areaServed: [
@@ -225,7 +247,7 @@ export const jsonLd = async (
         name: "Madeira",
       },
     ],
-  } as any;
+  } as unknown as WithContext<SportsOrganization & LocalBusiness>;
 };
 
 export async function metadata(locale: Locale): Promise<Metadata> {
@@ -241,6 +263,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       canonical: pathname,
       languages: {
         [otherLocale]: otherPathname,
+        [locale]: pathname,
+        "pt-BR": getPathname({ href: "/", locale: "pt-PT" }),
         "x-default": getPathname({ href: "/", locale: "en" }),
       },
     },
@@ -253,7 +277,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: siteUrl + "/icons/icon-512x512.png",
+          url: `${siteUrl}/icons/icon-512x512.png`,
           width: 512,
           height: 512,
           alt: t("meta.title"),
@@ -264,7 +288,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: [siteUrl + "/icons/icon-512x512.png"],
+      images: [`${siteUrl}/icons/icon-512x512.png`],
     },
   };
 }

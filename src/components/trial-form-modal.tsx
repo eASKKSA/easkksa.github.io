@@ -1,9 +1,9 @@
+import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { IoClose } from "react-icons/io5";
-import { submitTrialForm, TrialFormState } from "@/app/actions";
-import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { submitTrialForm, type TrialFormState } from "@/app/actions";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -60,6 +60,7 @@ export default function TrialFormModal({
         <div className="relative p-6 sm:p-8">
           {/* Close Button */}
           <button
+            type="button"
             onClick={onClose}
             aria-label="Close modal"
             className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 transition"

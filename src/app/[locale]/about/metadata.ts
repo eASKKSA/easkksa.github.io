@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { AboutPage, WithContext } from "schema-dts";
-import { Metadata } from "next";
+import type { AboutPage, WithContext } from "schema-dts";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
 import { getPathname } from "@/i18n/navigation";
@@ -52,14 +52,14 @@ export const jsonLd = async (
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       caption: "ASKKSA - Associação Shotokan Kokusai Karate Santo António",
     },
     author: {
       "@type": "Organization",
       name: t("orgName"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -67,7 +67,7 @@ export const jsonLd = async (
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {
@@ -104,7 +104,10 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Jorge Freitas",
         jobTitle: "Shihan - 6º DAN",
-        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        description:
+          locale === "pt-PT"
+            ? "Instrutor qualificado de Karaté Shotokan"
+            : "Qualified Shotokan Karate Instructor",
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -114,7 +117,10 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Rafael Jardim",
         jobTitle: "Sensei - 5º DAN",
-        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        description:
+          locale === "pt-PT"
+            ? "Instrutor qualificado de Karaté Shotokan"
+            : "Qualified Shotokan Karate Instructor",
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -124,7 +130,10 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Marisa Gomes",
         jobTitle: "Sensei - 5º DAN",
-        description: locale === "pt-PT" ? "Instrutora qualificada de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        description:
+          locale === "pt-PT"
+            ? "Instrutora qualificada de Karaté Shotokan"
+            : "Qualified Shotokan Karate Instructor",
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -134,7 +143,10 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Tito Velosa",
         jobTitle: "Sensei - 4º DAN",
-        description: locale === "pt-PT" ? "Instrutor qualificado de Karaté Shotokan" : "Qualified Shotokan Karate Instructor",
+        description:
+          locale === "pt-PT"
+            ? "Instrutor qualificado de Karaté Shotokan"
+            : "Qualified Shotokan Karate Instructor",
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",

@@ -1,33 +1,31 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import {
+  FaBalanceScale,
+  FaBrain,
+  FaExclamationTriangle,
+  FaEye,
+  FaFistRaised,
+  FaGraduationCap,
+  FaHandPaper,
+  FaHandshake,
+  FaHeart,
+  FaInfinity,
+  FaLightbulb,
+  FaRunning,
+  FaSeedling,
+  FaShieldAlt,
+  FaThinkPeaks,
+  FaUserCheck,
+  FaUsers,
+} from "react-icons/fa";
+import { GiCrossedSwords, GiMirrorMirror, GiWaterDrop } from "react-icons/gi";
+import { MetadataLDJSON } from "@/app/metadata";
+// --- ASSETS ---
+import nijuKunImage from "@/assets/philosofy/principios.gif";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
 import { jsonLd, metadata } from "./metadata";
-import { MetadataLDJSON } from "@/app/metadata";
-
-import {
-  FaHandshake,
-  FaShieldAlt,
-  FaBalanceScale,
-  FaHeart,
-  FaBrain,
-  FaExclamationTriangle,
-  FaInfinity,
-  FaHandPaper,
-  FaThinkPeaks,
-  FaEye,
-  FaRunning,
-  FaUsers,
-  FaSeedling,
-  FaLightbulb,
-  FaFistRaised,
-  FaGraduationCap,
-  FaUserCheck,
-} from "react-icons/fa";
-import { GiWaterDrop, GiMirrorMirror, GiCrossedSwords } from "react-icons/gi";
-
-// --- ASSETS ---
-import nijuKunImage from "@/assets/philosofy/principios.gif";
 
 export const generateMetadata = metadata;
 

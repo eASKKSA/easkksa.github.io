@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
   /* Define your custom theme colors */
@@ -44,16 +44,13 @@
     @apply text-4xl md:text-6xl xl:text-7xl font-bold mb-6 dark:text-white text-[#222];
   }
 
-  section, article {
+  section,
+  article {
     @apply mb-12 md:mb-16 lg:mb-20;
   }
 
   section > p {
-    @apply text-center
-  }
-
-  p {
-    @apply text-justify md:text-left;
+    @apply text-center } p { @apply text-justify md:text-left;
   }
 
   footer {
@@ -69,23 +66,23 @@
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms;
+      animation-iteration-count: 1;
+      transition-duration: 0.01ms;
     }
   }
 
   /* Print styles */
   @media print {
     * {
-      background: transparent !important;
-      color: #222 !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
+      background: transparent;
+      color: #222;
+      box-shadow: none;
+      text-shadow: none;
     }
 
     .no-print {
-      display: none !important;
+      display: none;
     }
   }
 

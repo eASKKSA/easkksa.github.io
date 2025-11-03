@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { WebPage, WithContext } from "schema-dts";
-import { Metadata } from "next";
+import type { WebPage, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
 
 export const jsonLd = async (
@@ -14,19 +14,22 @@ export const jsonLd = async (
     "@type": "CollectionPage",
     name: t("meta.title"),
     description: t("meta.description"),
-    about: locale === "pt-PT" ? "Notícias e Eventos ASKKSA" : "ASKKSA News and Events",
+    about:
+      locale === "pt-PT"
+        ? "Notícias e Eventos ASKKSA"
+        : "ASKKSA News and Events",
     keywords: t("meta.keywords"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       caption: "ASKKSA - Notícias e Eventos",
     },
     author: {
       "@type": "Organization",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -34,7 +37,7 @@ export const jsonLd = async (
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {
@@ -88,8 +91,11 @@ export const jsonLd = async (
       {
         "@type": "VideoObject",
         name: "ASKKSA YouTube Channel",
-        description: locale === "pt-PT" ? "Vídeos de katas, técnicas e eventos" : "Videos of katas, techniques and events",
-        thumbnailUrl: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        description:
+          locale === "pt-PT"
+            ? "Vídeos de katas, técnicas e eventos"
+            : "Videos of katas, techniques and events",
+        thumbnailUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
         uploadDate: "2024-01-01T00:00:00+00:00",
         contentUrl: "https://www.youtube.com/@manuelrafaelpitajard",
       },

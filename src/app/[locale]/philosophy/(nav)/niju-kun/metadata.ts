@@ -1,6 +1,6 @@
-import { getTranslations, getLocale } from "next-intl/server";
-import { Article, WithContext } from "schema-dts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+import type { Article, WithContext } from "schema-dts";
 
 import nijuKunImage from "@/assets/philosofy/principios.gif";
 import { getPathname } from "@/i18n/navigation";
@@ -32,7 +32,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       "@type": "Organization",
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      logo: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
     },
     publisher: {
       "@type": "Organization",
@@ -40,7 +40,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
       url: process.env.NEXT_PUBLIC_SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: process.env.NEXT_PUBLIC_SITE_URL + "/icons/icon-512x512.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
       },
     },
     mainEntityOfPage: {
@@ -80,7 +80,9 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
           "@type": "ListItem",
           position: 2,
           name: locale === "pt-PT" ? "Filosofia" : "Philosophy",
-          item: process.env.NEXT_PUBLIC_SITE_URL + getPathname({ href: "/philosophy", locale }),
+          item:
+            process.env.NEXT_PUBLIC_SITE_URL +
+            getPathname({ href: "/philosophy", locale }),
         },
         {
           "@type": "ListItem",
@@ -90,7 +92,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
         },
       ],
     },
-  } as any;
+  } as WithContext<Article>;
 };
 
 export async function metadata(): Promise<Metadata> {
