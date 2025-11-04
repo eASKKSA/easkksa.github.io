@@ -37,14 +37,17 @@ export default function PhilosophyNavigation() {
         <Link
           key={section.id}
           href={section.href}
+          aria-label={section.label}
+          aria-current={section.href === pathname ? "page" : undefined}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all whitespace-nowrap ${
             section.href === pathname
               ? "bg-primary text-white shadow-lg"
               : "text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-red-50 dark:hover:bg-red-900/20"
           }`}
         >
-          {section.icon}
+          <span aria-hidden="true">{section.icon}</span>
           <span className="hidden sm:block">{section.label}</span>
+          <span className="sr-only sm:hidden">{section.label}</span>
         </Link>
       ))}
     </nav>

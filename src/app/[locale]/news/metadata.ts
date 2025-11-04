@@ -69,37 +69,6 @@ export const jsonLd = async (
         },
       ],
     },
-    hasPart: [
-      {
-        "@type": "SocialMediaPosting",
-        headline: "Facebook ASKKSA",
-        url: "https://www.facebook.com/ASKKSA.MADEIRA",
-        author: {
-          "@type": "Organization",
-          name: "ASKKSA",
-        },
-      },
-      {
-        "@type": "SocialMediaPosting",
-        headline: "Instagram @askksa_madeira",
-        url: "https://www.instagram.com/askksa_madeira/",
-        author: {
-          "@type": "Organization",
-          name: "ASKKSA",
-        },
-      },
-      {
-        "@type": "VideoObject",
-        name: "ASKKSA YouTube Channel",
-        description:
-          locale === "pt-PT"
-            ? "Vídeos de katas, técnicas e eventos"
-            : "Videos of katas, techniques and events",
-        thumbnailUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
-        uploadDate: "2024-01-01T00:00:00+00:00",
-        contentUrl: "https://www.youtube.com/@manuelrafaelpitajard",
-      },
-    ],
   };
 };
 

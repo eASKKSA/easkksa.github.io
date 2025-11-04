@@ -39,7 +39,7 @@ export default async function PhilosophyPage({
 
       <Container>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {philosophySections.map((section) => (
+          {philosophySections.map((section, index) => (
             <Link key={section.id} href={section.href} className="group">
               <Container
                 as="article"
@@ -50,6 +50,8 @@ export default async function PhilosophyPage({
                     src={section.image}
                     alt={section.title}
                     fill
+                    priority={index === 0}
+                    fetchPriority={index === 0 ? "high" : undefined}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />

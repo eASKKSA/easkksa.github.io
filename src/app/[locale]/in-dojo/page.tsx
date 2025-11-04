@@ -39,7 +39,7 @@ export default async function InDojoPage({
 
       <Container>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
-          {inDojoSections.map((section) => (
+          {inDojoSections.map((section, index) => (
             <Link key={section.id} href={section.href} className="group">
               <Container
                 as="article"
@@ -50,7 +50,8 @@ export default async function InDojoPage({
                     src={section.image}
                     alt={section.title}
                     fill
-                    priority
+                    priority={index === 0}
+                    fetchPriority={index === 0 ? "high" : undefined}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />

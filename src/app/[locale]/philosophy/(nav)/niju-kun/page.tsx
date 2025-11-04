@@ -67,6 +67,7 @@ export default async function NijuKunPage() {
           alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
           height={500}
           className="object-contain rounded-xl shadow-lg mx-auto"
+          fetchPriority="high"
           priority
         />
         <p className="text-xl my-6">{t("introduction")}</p>

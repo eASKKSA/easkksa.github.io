@@ -39,6 +39,7 @@ export default async function DojoKunPage() {
             alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
             height={500}
             className="object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="text-left space-y-4">

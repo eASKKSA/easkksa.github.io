@@ -22,6 +22,7 @@ export default async function SalutationPage() {
             alt="Sensei em posição Seiza - Saudação no Karaté"
             height={500}
             className="object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="space-y-4">

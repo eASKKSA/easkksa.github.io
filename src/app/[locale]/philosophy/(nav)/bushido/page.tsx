@@ -45,6 +45,7 @@ export default async function BushidoPage() {
             alt="Código de Ética Bushido"
             height={500}
             className="object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="text-left space-y-4">

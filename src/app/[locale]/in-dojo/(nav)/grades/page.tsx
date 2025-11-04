@@ -22,6 +22,7 @@ export default async function GraduationsPage() {
             alt="Sistema de Graduações do Karaté - Kyu e Dan"
             height={500}
             className="object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="space-y-4">

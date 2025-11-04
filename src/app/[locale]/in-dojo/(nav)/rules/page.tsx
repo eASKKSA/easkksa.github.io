@@ -20,6 +20,7 @@ export default async function DojoRulesPage() {
             alt="ASKKSA - Regras do Dojo"
             height={500}
             className="object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="space-y-4">
