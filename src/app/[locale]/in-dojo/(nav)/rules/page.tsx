@@ -3,9 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { MetadataLDJSON } from "@/app/metadata";
 import askksaThumb from "@/assets/askksa_thumb.svg";
 import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
+import { jsonLd } from "./metadata";
 
-export const generateMetadata = metadata;
+export { generateMetadata } from "./metadata";
 
 export default async function DojoRulesPage() {
   const t = await getTranslations("DojoRules");

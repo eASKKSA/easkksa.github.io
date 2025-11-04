@@ -1,7 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import TrialFormModal from "@/components/trial-form-modal";
+
+const TrialFormModal = dynamic(() => import("@/components/trial-form-modal"), {
+  ssr: false,
+});
 
 export default function FormTrial({ trial }: Readonly<{ trial: string }>) {
   const [isOpen, setIsOpen] = useState(false);

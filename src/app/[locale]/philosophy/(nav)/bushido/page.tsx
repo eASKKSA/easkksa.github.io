@@ -14,9 +14,9 @@ import { MetadataLDJSON } from "@/app/metadata";
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 import Container from "@/components/container";
 import FeatureCard from "@/components/feature-card";
-import { jsonLd, metadata } from "./metadata";
+import { jsonLd } from "./metadata";
 
-export const generateMetadata = metadata;
+export { generateMetadata } from "./metadata";
 
 // --- DATA ---
 const principlesData = [

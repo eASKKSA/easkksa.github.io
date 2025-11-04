@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { getTranslations } from "next-intl/server";
 import { MetadataLDJSON } from "@/app/metadata";
 import Container from "@/components/container";
-import ASKKSANews from "@/components/news/askksa-news";
-import FacebookEmbed from "@/components/news/facebook-section";
-import InstagramLink from "@/components/news/instagram-section";
-import YouTubeLink from "@/components/news/youtube-section";
 import { jsonLd, metadata } from "./metadata";
+
+const ASKKSANews = dynamic(() => import("@/components/news/askksa-news"));
+const FacebookEmbed = dynamic(
+  () => import("@/components/news/facebook-section"),
+);
+const InstagramLink = dynamic(
+  () => import("@/components/news/instagram-section"),
+);
+const YouTubeLink = dynamic(() => import("@/components/news/youtube-section"));
 
 export async function generateMetadata({
   params,

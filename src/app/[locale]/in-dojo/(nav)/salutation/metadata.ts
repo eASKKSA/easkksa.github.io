@@ -78,7 +78,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
   };
 };
 
-export async function metadata(): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Salutation");
   const locale = await getLocale();
   const pathname = getPathname({ href: "/in-dojo/salutation", locale: locale });

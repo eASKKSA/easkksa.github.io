@@ -95,7 +95,7 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
   } as WithContext<Article>;
 };
 
-export async function metadata(): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NijuKun");
   const locale = await getLocale();
   const pathname = getPathname({

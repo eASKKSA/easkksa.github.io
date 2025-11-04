@@ -4,9 +4,9 @@ import { MetadataLDJSON } from "@/app/metadata";
 // --- ASSETS ---
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
+import { jsonLd } from "./metadata";
 
-export const generateMetadata = metadata;
+export { generateMetadata } from "./metadata";
 
 // --- MAIN PAGE COMPONENT ---
 export default async function SalutationPage() {

@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
+    optimizePackageImports: ["react-icons"],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",

@@ -4,9 +4,9 @@ import { MetadataLDJSON } from "@/app/metadata";
 // --- ASSETS ---
 import graduationsImage from "@/assets/in-dojo/graduacoes.jpg";
 import Container from "@/components/container";
-import { jsonLd, metadata } from "./metadata";
+import { jsonLd } from "./metadata";
 
-export const generateMetadata = metadata;
+export { generateMetadata } from "./metadata";
 
 // --- MAIN PAGE COMPONENT ---
 export default async function GraduationsPage() {

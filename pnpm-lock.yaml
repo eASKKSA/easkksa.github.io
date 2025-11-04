@@ -515,8 +515,8 @@ packages:
     resolution: {integrity: sha512-Z4DUr/AkgyFf1bOThW2HwzREagee0sB5ycl+hDiSZOfRLW8ZgrOjDi6g8mHH19yyU5E2A/64W3z6SMIf5XiUSQ==}
     engines: {node: '>=18.0.0'}
 
-  '@smithy/config-resolver@4.4.1':
-    resolution: {integrity: sha512-BciDJ5hkyYEGBBKMbjGB1A/Zq8bYZ41Zo9BMnGdKF6QD1fY4zIkYx6zui/0CHaVGnv6h0iy8y4rnPX9CPCAPyQ==}
+  '@smithy/config-resolver@4.4.2':
+    resolution: {integrity: sha512-4Jys0ni2tB2VZzgslbEgszZyMdTkPOFGA8g+So/NjR8oy6Qwaq4eSwsrRI+NMtb0Dq4kqCzGUu/nGUx7OM/xfw==}
     engines: {node: '>=18.0.0'}
 
   '@smithy/core@3.17.2':
@@ -643,8 +643,8 @@ packages:
     resolution: {integrity: sha512-GwaGjv/QLuL/QHQaqhf/maM7+MnRFQQs7Bsl6FlaeK6lm6U7mV5AAnVabw68cIoMl5FQFyKK62u7RWRzWL25OQ==}
     engines: {node: '>=18.0.0'}
 
-  '@smithy/util-defaults-mode-node@4.2.7':
-    resolution: {integrity: sha512-6hinjVqec0WYGsqN7h9hL/ywfULmJJNXGXnNZW7jrIn/cFuC/aVlVaiDfBIJEvKcOrmN8/EgsW69eY0gXABeHw==}
+  '@smithy/util-defaults-mode-node@4.2.8':
+    resolution: {integrity: sha512-gIoTf9V/nFSIZ0TtgDNLd+Ws59AJvijmMDYrOozoMHPJaG9cMRdqNO50jZTlbM6ydzQYY8L/mQ4tKSw/TB+s6g==}
     engines: {node: '>=18.0.0'}
 
   '@smithy/util-endpoints@3.2.4':
@@ -1184,7 +1184,7 @@ snapshots:
       '@aws-sdk/util-endpoints': 3.922.0
       '@aws-sdk/util-user-agent-browser': 3.922.0
       '@aws-sdk/util-user-agent-node': 3.922.0
-      '@smithy/config-resolver': 4.4.1
+      '@smithy/config-resolver': 4.4.2
       '@smithy/core': 3.17.2
       '@smithy/fetch-http-handler': 5.3.5
       '@smithy/hash-node': 4.2.4
@@ -1204,7 +1204,7 @@ snapshots:
       '@smithy/util-body-length-browser': 4.2.0
       '@smithy/util-body-length-node': 4.2.1
       '@smithy/util-defaults-mode-browser': 4.3.5
-      '@smithy/util-defaults-mode-node': 4.2.7
+      '@smithy/util-defaults-mode-node': 4.2.8
       '@smithy/util-endpoints': 3.2.4
       '@smithy/util-middleware': 4.2.4
       '@smithy/util-retry': 4.2.4
@@ -1227,7 +1227,7 @@ snapshots:
       '@aws-sdk/util-endpoints': 3.922.0
       '@aws-sdk/util-user-agent-browser': 3.922.0
       '@aws-sdk/util-user-agent-node': 3.922.0
-      '@smithy/config-resolver': 4.4.1
+      '@smithy/config-resolver': 4.4.2
       '@smithy/core': 3.17.2
       '@smithy/fetch-http-handler': 5.3.5
       '@smithy/hash-node': 4.2.4
@@ -1247,7 +1247,7 @@ snapshots:
       '@smithy/util-body-length-browser': 4.2.0
       '@smithy/util-body-length-node': 4.2.1
       '@smithy/util-defaults-mode-browser': 4.3.5
-      '@smithy/util-defaults-mode-node': 4.2.7
+      '@smithy/util-defaults-mode-node': 4.2.8
       '@smithy/util-endpoints': 3.2.4
       '@smithy/util-middleware': 4.2.4
       '@smithy/util-retry': 4.2.4
@@ -1424,7 +1424,7 @@ snapshots:
       '@aws-sdk/util-endpoints': 3.922.0
       '@aws-sdk/util-user-agent-browser': 3.922.0
       '@aws-sdk/util-user-agent-node': 3.922.0
-      '@smithy/config-resolver': 4.4.1
+      '@smithy/config-resolver': 4.4.2
       '@smithy/core': 3.17.2
       '@smithy/fetch-http-handler': 5.3.5
       '@smithy/hash-node': 4.2.4
@@ -1444,7 +1444,7 @@ snapshots:
       '@smithy/util-body-length-browser': 4.2.0
       '@smithy/util-body-length-node': 4.2.1
       '@smithy/util-defaults-mode-browser': 4.3.5
-      '@smithy/util-defaults-mode-node': 4.2.7
+      '@smithy/util-defaults-mode-node': 4.2.8
       '@smithy/util-endpoints': 3.2.4
       '@smithy/util-middleware': 4.2.4
       '@smithy/util-retry': 4.2.4
@@ -1456,7 +1456,7 @@ snapshots:
   '@aws-sdk/region-config-resolver@3.922.0':
     dependencies:
       '@aws-sdk/types': 3.922.0
-      '@smithy/config-resolver': 4.4.1
+      '@smithy/config-resolver': 4.4.2
       '@smithy/node-config-provider': 4.3.4
       '@smithy/types': 4.8.1
       tslib: 2.8.1
@@ -1748,7 +1748,7 @@ snapshots:
       '@smithy/types': 4.8.1
       tslib: 2.8.1
 
-  '@smithy/config-resolver@4.4.1':
+  '@smithy/config-resolver@4.4.2':
     dependencies:
       '@smithy/node-config-provider': 4.3.4
       '@smithy/types': 4.8.1
@@ -1957,9 +1957,9 @@ snapshots:
       '@smithy/types': 4.8.1
       tslib: 2.8.1
 
-  '@smithy/util-defaults-mode-node@4.2.7':
+  '@smithy/util-defaults-mode-node@4.2.8':
     dependencies:
-      '@smithy/config-resolver': 4.4.1
+      '@smithy/config-resolver': 4.4.2
       '@smithy/credential-provider-imds': 4.2.4
       '@smithy/node-config-provider': 4.3.4
       '@smithy/property-provider': 4.2.4
