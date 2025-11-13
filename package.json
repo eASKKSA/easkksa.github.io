@@ -16,15 +16,15 @@
   ],
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.2",
-    "@next/third-parties": "^16.0.1",
+    "@next/third-parties": "^16.0.2",
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.1",
     "fast-xml-parser": "^5.3.1",
     "html-to-text": "^9.0.5",
     "motion": "^12.23.24",
     "negotiator": "^1.0.0",
-    "next": "^16.0.1",
-    "next-intl": "^4.4.0",
+    "next": "^16.0.2",
+    "next-intl": "^4.5.2",
     "next-themes": "^0.4.6",
     "nodemailer": "^7.0.10",
     "postcss": "^8.5.6",
@@ -36,21 +36,25 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.3",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@biomejs/biome": "^2.3.5",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/html-to-text": "^9.0.4",
     "@types/negotiator": "^0.6.4",
-    "@types/node": "^24.10.0",
+    "@types/node": "^24.10.1",
     "@types/nodemailer": "^7.0.3",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-    "tailwindcss": "^4.1.16",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
   "pnpm": {
     "overrides": {
       "@types/react": "19.2.2",
       "@types/react-dom": "19.2.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "sharp"
+    ]
   }
 }

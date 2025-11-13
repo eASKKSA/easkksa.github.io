@@ -1202,7 +1202,7 @@
       "message": "The 26 Shotokan katas represent a complete universe of martial knowledge. Each kata has its own personality, history and lessons to teach, providing a lifetime path of learning."
     }
   },
-  "NotFound": {
+  "GlobalNotFound": {
     "meta": {
       "title": "Page Not Found | ASKKSA Shotokan Madeira",
       "description": "The page you are looking for does not exist."

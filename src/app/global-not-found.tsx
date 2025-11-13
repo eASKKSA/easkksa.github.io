@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import Background from "@/components/background";
 import Section from "@/components/container";
+import "@/app/globals.css";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,7 +10,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "NotFound" });
+  const t = await getTranslations({ locale, namespace: "GlobalNotFound" });
 
   return {
     title: t("meta.title"),
@@ -18,11 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function NotFound() {
-  const t = await getTranslations("NotFound");
+export default async function GlobalNotFound() {
+  const t = await getTranslations("GlobalNotFound");
+  const locale = t("lang");
 
   return (
-    <html lang={t("lang")}>
+    <html lang={locale}>
       <body>
         <Background />
         <main>
@@ -51,8 +52,8 @@ export default async function NotFound() {
 
             {/* Action Buttons */}
             <div className="space-y-4">
-              <Link
-                href="/"
+              <a
+                href={`/${locale}`}
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800"
               >
                 <svg
@@ -70,7 +71,7 @@ export default async function NotFound() {
                   />
                 </svg>
                 {t("actions.returnHome")}
-              </Link>
+              </a>
             </div>
           </Section>
         </main>
