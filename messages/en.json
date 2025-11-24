@@ -642,6 +642,7 @@
       "makikomi": "Judo technique consisting of throwing by rolling the opponent",
       "makiwara": "Traditionally straw-wrapped target for training Karate-do or Kyudo",
       "mawashi": "Circular movement",
+      "mawatte": "Turn",
       "midale": "Karate-do training method consisting of continued attacks and dodges",
       "migi": "Right",
       "mokuso": "Literally: not thinking. State of concentration during the opening and closing ceremony of Budo practice",
@@ -1259,49 +1260,45 @@
     "questions": {
       "q1": {
         "question": "Where can I learn karate in Funchal, Madeira?",
-        "answer": "ASKKSA has two main dojos in Funchal: our primary location at Escola Horácio Bento de Gouveia (Santo António) and at the Santo António Parish Council. We also provide technical support to Câmara de Lobos Sports Club. All our facilities are modern, safe, and equipped for traditional Shotokan Karate training."
+        "answer": "ASKKSA has two main dojos in Funchal: one at the Horácio Bento de Gouveia School (main location) and another at the Santo António Parish Council. We also support the Câmara de Lobos Sports Club. All spaces are modern, safe, and suitable for traditional Shotokan Karate training."
       },
       "q2": {
         "question": "Is the first karate class really free?",
-        "answer": "Yes! We offer 3 FREE trial classes so you can experience our teaching methodology, meet our qualified instructors, and see if Shotokan Karate is right for you or your child. No commitment required. Just contact us at (+351) 960 384 090 or direcao@askksa.pt to book your free trial."
+        "answer": "Yes! You can participate in 3 FREE trial classes to get to know our teaching method, the instructors, and Shotokan Karate. No commitment required. Contact us at (+351) 960 384 090 or direcao@askksa.pt to schedule your class."
       },
       "q3": {
-        "question": "How much does karate cost per month in Madeira?",
-        "answer": "Our monthly membership is €25, which includes all training sessions throughout the week. This is exceptional value for classes led by nationally certified instructors (up to Grade III coaches) with direct lineage from SKIF Canada. We believe quality martial arts training should be accessible to everyone."
+        "question": "What is the karate class schedule in Funchal?",
+        "answer": "We train from Monday to Friday. Children (up to 12 years old) train from 7:30 PM to 8:30 PM, and adults (12 years and older) from 8:30 PM to 9:30 PM. The schedule was designed for families and students to maximize the number of possible weekly training sessions."
       },
       "q4": {
-        "question": "What are the karate class schedules in Funchal?",
-        "answer": "We train Monday to Friday. Children (up to 12 years) train from 19:30 to 20:30, and adults (12+ years) train from 20:30 to 21:30. Our schedule is designed to accommodate families, students, and working professionals in the Funchal area."
+        "question": "Can my child start karate? What is the best age?",
+        "answer": "Yes! We accept children from age 5 onwards. Karate helps develop discipline, concentration, confidence, and physical fitness. Our children's classes use age-appropriate methods and promote character and respect. Many parents choose ASKKSA because of our experience in teaching children."
       },
       "q5": {
-        "question": "Can my child start karate? What age is best?",
-        "answer": "Absolutely! We welcome children from age 5 onwards. Karate is excellent for developing discipline, focus, confidence, and physical fitness in young people. Our specialized children's classes use age-appropriate teaching methods and focus on building character alongside martial arts skills. Many parents in Funchal choose ASKKSA specifically for our proven track record with children's development."
+        "question": "Do you have karate classes for adults and beginners?",
+        "answer": "Yes! All adults are welcome, even without experience or physical fitness. Adult classes, even for beginners, are taught from 8:30 PM to 9:30 PM and aim to teach authentic Shotokan Karate, helping to improve physical condition and self-confidence. It is never too late to start - we have students of all ages."
       },
       "q6": {
-        "question": "Do you offer karate classes for adults and beginners?",
-        "answer": "Yes! Adults of all fitness levels and experience are welcome, including complete beginners. Whether you're looking to learn self-defense, improve fitness, or explore traditional martial arts, our adult classes (20:30-21:30) provide structured training in authentic Shotokan Karate. You're never too old to start—we have students ranging from teenagers to seniors."
+        "question": "What is Shotokan Karate and how is it different?",
+        "answer": "SKIF Shotokan Karate is a traditional style of karate founded by Master Hirokazu Kanazawa in 1977. It is based on the teachings of Master Gichin Funakoshi, who introduced karate to Japan. SKIF (Shotokan Karate International Federation) is a major global organization that promotes the teaching of Shotokan in an authentic way, focusing on correct technique and character development.\nThis style values rigorous training, discipline, and respect, keeping the tradition of karate alive as a martial art and a way of life. SKIF has many practitioners in various countries and is recognized for its direct link to the original Shotokan masters."
       },
       "q7": {
-        "question": "What is Shotokan Karate and how is it different?",
-        "answer": "Shotokan is one of the most traditional and widely practiced styles of karate worldwide. It emphasizes powerful linear techniques, deep stances, and kata (formal patterns). ASKKSA follows the SKIF (Shotokan Karate International Federation) lineage, ensuring you learn authentic techniques directly from the Japanese tradition. Our instructors are internationally certified by SKIF Canada."
+        "question": "Are your karate instructors qualified and certified?",
+        "answer": "All ASKKSA instructors hold national certifications from the National Karate Federation – Portugal (FNK-P), ranging from Grade I to Grade III. Our chief instructor, Shihan Jorge Freitas, has over 40 years of experience. We also have 4th and 5th DAN instructors, graduated by SKIF Canada, ensuring high-quality instruction."
       },
       "q8": {
-        "question": "Are your karate instructors qualified and certified?",
-        "answer": "Absolutely. All ASKKSA instructors hold national coaching certifications from FNK-P (Portuguese National Karate Federation) ranging from Grade I to Grade III. Our head instructor, Shihan Jorge Freitas, holds 6th DAN and has over 40 years of experience. We also have several 4th and 5th DAN certified instructors. All are graduates of SKIF Canada and SKIF, ensuring world-class instruction."
-      },
-      "q9": {
         "question": "What do I need to bring to my first karate class?",
         "answer": "For your free trial classes, just wear comfortable athletic clothing (t-shirt and sweatpants or shorts). You'll train barefoot. If you decide to continue, you'll need a karate-gi (uniform), which we can help you obtain. We'll also provide guidance on proper care and etiquette."
       },
-      "q10": {
+      "q9": {
         "question": "Is ASKKSA affiliated with official karate organizations?",
         "answer": "Yes, ASKKSA is officially affiliated with FNK-P (Federação Nacional de Karate Portugal), AKRAM (Associação de Karate da Região Autónoma da Madeira), and recognized by DRJD (Regional Directorate of Youth and Sport). We are also members of SKIF (Shotokan Karate International Federation), connecting you to a global network of traditional karate practitioners."
       },
-      "q11": {
+      "q10": {
         "question": "Can I visit the dojo before signing up?",
         "answer": "Of course! We encourage prospective students and parents to visit our facilities, meet our instructors, and observe a class. Contact us at (+351) 960 384 090 or direcao@askksa.pt to arrange a visit. You can also start with our 3 free trial classes to experience training firsthand."
       },
-      "q12": {
+      "q11": {
         "question": "How long does it take to get a black belt in karate?",
         "answer": "Typically 4-6 years of consistent training for adults, though this varies by individual dedication and natural aptitude. At ASKKSA, we focus on proper technique, character development, and deep understanding rather than rushing through ranks. Our grading system follows traditional Japanese standards, and we're proud to have formed many black belts who exemplify the true spirit of karate."
       }

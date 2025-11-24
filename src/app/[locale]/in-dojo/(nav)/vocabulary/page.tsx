@@ -109,6 +109,7 @@ export default async function VocabularyPage() {
     "makikomi",
     "makiwara",
     "mawashi",
+    "mawatte",
     "midale",
     "migi",
     "mokuso",

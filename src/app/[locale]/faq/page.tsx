@@ -33,7 +33,6 @@ export default async function FAQPage({
     { id: "q9", ...t.raw("questions.q9") },
     { id: "q10", ...t.raw("questions.q10") },
     { id: "q11", ...t.raw("questions.q11") },
-    { id: "q12", ...t.raw("questions.q12") },
   ];
 
   return (

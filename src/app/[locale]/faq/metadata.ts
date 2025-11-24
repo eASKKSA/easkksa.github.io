@@ -68,11 +68,6 @@ export const jsonLd = async (
       question: t("questions.q11.question"),
       answer: t("questions.q11.answer"),
     },
-    {
-      id: "q12",
-      question: t("questions.q12.question"),
-      answer: t("questions.q12.answer"),
-    },
   ];
 
   return {
