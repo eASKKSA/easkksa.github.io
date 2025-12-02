@@ -6,7 +6,7 @@ settings:
 
 overrides:
   '@types/react': 19.2.2
-  '@types/react-dom': 19.2.2
+  '@types/react-dom': 19.2.3
 
 importers:
 
@@ -92,8 +92,8 @@ importers:
         specifier: 19.2.2
         version: 19.2.2
       '@types/react-dom':
-        specifier: 19.2.2
-        version: 19.2.2(@types/react@19.2.2)
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.2)
       tailwindcss:
         specifier: ^4.1.17
         version: 4.1.17
@@ -876,8 +876,8 @@ packages:
   '@types/nodemailer@7.0.4':
     resolution: {integrity: sha512-ee8fxWqOchH+Hv6MDDNNy028kwvVnLplrStm4Zf/3uHWw5zzo8FoYYeffpJtGs2wWysEumMH0ZIdMGMY1eMAow==}
 
-  '@types/react-dom@19.2.2':
-    resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
+  '@types/react-dom@19.2.3':
+    resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': 19.2.2
 
@@ -2275,7 +2275,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@types/react-dom@19.2.2(@types/react@19.2.2)':
+  '@types/react-dom@19.2.3(@types/react@19.2.2)':
     dependencies:
       '@types/react': 19.2.2
 
