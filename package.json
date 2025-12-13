@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.2",
-    "@next/third-parties": "^16.0.7",
+    "@next/third-parties": "^16.0.10",
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.1",
     "fast-xml-parser": "^5.3.2",
