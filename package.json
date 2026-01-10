@@ -15,7 +15,7 @@
     "defaults and not IE 11 and not op_mini all"
   ],
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.7.4",
+    "@formatjs/intl-localematcher": "^0.7.5",
     "@next/third-parties": "^16.1.1",
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.1",
