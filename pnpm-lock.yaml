@@ -13,13 +13,13 @@ importers:
         version: 0.8.0
       '@next/third-parties':
         specifier: ^16.1.4
-        version: 16.1.4(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)
+        version: 16.1.4(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
       cookies-next:
         specifier: ^6.1.1
-        version: 6.1.1(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)
+        version: 6.1.1(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)
       fast-xml-parser:
         specifier: ^5.3.4
         version: 5.3.4
@@ -28,19 +28,19 @@ importers:
         version: 9.0.5
       motion:
         specifier: ^12.29.2
-        version: 12.29.2(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
+        version: 12.29.2(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
       negotiator:
         specifier: ^1.0.0
         version: 1.0.0
       next:
         specifier: ^16.1.6
-        version: 16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
+        version: 16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
       next-intl:
         specifier: ^4.7.0
-        version: 4.7.0(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+        version: 4.7.0(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
       next-themes:
         specifier: ^0.4.6
-        version: 0.4.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
+        version: 0.4.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
       nodemailer:
         specifier: ^7.0.13
         version: 7.0.13
@@ -48,14 +48,14 @@ importers:
         specifier: ^8.5.6
         version: 8.5.6
       react:
-        specifier: ^19.2.3
-        version: 19.2.3
+        specifier: ^19.2.4
+        version: 19.2.4
       react-dom:
         specifier: ^19.2.1
-        version: 19.2.1(react@19.2.3)
+        version: 19.2.1(react@19.2.4)
       react-icons:
         specifier: ^5.5.0
-        version: 5.5.0(react@19.2.3)
+        version: 5.5.0(react@19.2.4)
       schema-dts:
         specifier: ^1.1.5
         version: 1.1.5
@@ -85,11 +85,11 @@ importers:
         specifier: ^7.0.9
         version: 7.0.9
       '@types/react':
-        specifier: 19.2.9
-        version: 19.2.9
+        specifier: 19.2.10
+        version: 19.2.10
       '@types/react-dom':
         specifier: 19.2.2
-        version: 19.2.2(@types/react@19.2.9)
+        version: 19.2.2(@types/react@19.2.10)
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -664,8 +664,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.9':
-    resolution: {integrity: sha512-Lpo8kgb/igvMIPeNV2rsYKTgaORYdO1XGVZ4Qz3akwOj0ySGYMPlQWa8BaLn0G63D1aSaAQ5ldR06wCpChQCjA==}
+  '@types/react@19.2.10':
+    resolution: {integrity: sha512-WPigyYuGhgZ/cTPRXB2EwUw+XvsRA3GqHlsP4qteqrnnjDrApbS7MxcGr/hke5iUoeB7E/gQtrs9I37zAJ0Vjw==}
 
   baseline-browser-mapping@2.9.19:
     resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
@@ -976,8 +976,8 @@ packages:
     peerDependencies:
       react: '*'
 
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
+  react@19.2.4:
+    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
   scheduler@0.27.0:
@@ -1279,10 +1279,10 @@ snapshots:
   '@next/swc-win32-x64-msvc@16.1.6':
     optional: true
 
-  '@next/third-parties@16.1.4(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)':
+  '@next/third-parties@16.1.4(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)':
     dependencies:
-      next: 16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
-      react: 19.2.3
+      next: 16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
       third-party-capital: 1.0.20
 
   '@parcel/watcher-android-arm64@2.5.1':
@@ -1489,11 +1489,11 @@ snapshots:
     dependencies:
       '@types/node': 25.1.0
 
-  '@types/react-dom@19.2.2(@types/react@19.2.9)':
+  '@types/react-dom@19.2.2(@types/react@19.2.10)':
     dependencies:
-      '@types/react': 19.2.9
+      '@types/react': 19.2.10
 
-  '@types/react@19.2.9':
+  '@types/react@19.2.10':
     dependencies:
       csstype: 3.2.3
 
@@ -1511,11 +1511,11 @@ snapshots:
 
   cookie@1.1.1: {}
 
-  cookies-next@6.1.1(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3):
+  cookies-next@6.1.1(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4):
     dependencies:
       cookie: 1.1.1
-      next: 16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
-      react: 19.2.3
+      next: 16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
 
   csstype@3.2.3: {}
 
@@ -1560,14 +1560,14 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  framer-motion@12.29.2(react-dom@19.2.1(react@19.2.3))(react@19.2.3):
+  framer-motion@12.29.2(react-dom@19.2.1(react@19.2.4))(react@19.2.4):
     dependencies:
       motion-dom: 12.29.2
       motion-utils: 12.29.2
       tslib: 2.8.1
     optionalDependencies:
-      react: 19.2.3
-      react-dom: 19.2.1(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.1(react@19.2.4)
 
   graceful-fs@4.2.11: {}
 
@@ -1669,13 +1669,13 @@ snapshots:
 
   motion-utils@12.29.2: {}
 
-  motion@12.29.2(react-dom@19.2.1(react@19.2.3))(react@19.2.3):
+  motion@12.29.2(react-dom@19.2.1(react@19.2.4))(react@19.2.4):
     dependencies:
-      framer-motion: 12.29.2(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
+      framer-motion: 12.29.2(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
       tslib: 2.8.1
     optionalDependencies:
-      react: 19.2.3
-      react-dom: 19.2.1(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.1(react@19.2.4)
 
   nanoid@3.3.11: {}
 
@@ -1683,37 +1683,37 @@ snapshots:
 
   next-intl-swc-plugin-extractor@4.7.0: {}
 
-  next-intl@4.7.0(next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)(typescript@5.9.3):
+  next-intl@4.7.0(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3):
     dependencies:
       '@formatjs/intl-localematcher': 0.5.10
       '@parcel/watcher': 2.5.1
       '@swc/core': 1.15.8
       negotiator: 1.0.0
-      next: 16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
+      next: 16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4)
       next-intl-swc-plugin-extractor: 4.7.0
       po-parser: 2.1.1
-      react: 19.2.3
-      use-intl: 4.7.0(react@19.2.3)
+      react: 19.2.4
+      use-intl: 4.7.0(react@19.2.4)
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  next-themes@0.4.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3):
+  next-themes@0.4.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4):
     dependencies:
-      react: 19.2.3
-      react-dom: 19.2.1(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.1(react@19.2.4)
 
-  next@16.1.6(react-dom@19.2.1(react@19.2.3))(react@19.2.3):
+  next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4):
     dependencies:
       '@next/env': 16.1.6
       '@swc/helpers': 0.5.15
       baseline-browser-mapping: 2.9.19
       caniuse-lite: 1.0.30001766
       postcss: 8.4.31
-      react: 19.2.3
-      react-dom: 19.2.1(react@19.2.3)
-      styled-jsx: 5.1.6(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.1(react@19.2.4)
+      styled-jsx: 5.1.6(react@19.2.4)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.1.6
       '@next/swc-darwin-x64': 16.1.6
@@ -1757,16 +1757,16 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  react-dom@19.2.1(react@19.2.3):
+  react-dom@19.2.1(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
       scheduler: 0.27.0
 
-  react-icons@5.5.0(react@19.2.3):
+  react-icons@5.5.0(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
-  react@19.2.3: {}
+  react@19.2.4: {}
 
   scheduler@0.27.0: {}
 
@@ -1817,10 +1817,10 @@ snapshots:
 
   strnum@2.1.2: {}
 
-  styled-jsx@5.1.6(react@19.2.3):
+  styled-jsx@5.1.6(react@19.2.4):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.3
+      react: 19.2.4
 
   tailwindcss@4.1.18: {}
 
@@ -1838,11 +1838,11 @@ snapshots:
 
   undici-types@7.16.0: {}
 
-  use-intl@4.7.0(react@19.2.3):
+  use-intl@4.7.0(react@19.2.4):
     dependencies:
       '@formatjs/fast-memoize': 2.2.7
       '@schummar/icu-type-parser': 1.21.5
       intl-messageformat: 10.7.18
-      react: 19.2.3
+      react: 19.2.4
 
   zod@4.3.6: {}
