@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@formatjs/intl-localematcher':
-        specifier: ^0.8.0
-        version: 0.8.0
+        specifier: ^0.8.1
+        version: 0.8.1
       '@next/third-parties':
         specifier: ^16.1.6
         version: 16.1.6(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -173,9 +173,6 @@ packages:
 
   '@formatjs/intl-localematcher@0.5.10':
     resolution: {integrity: sha512-af3qATX+m4Rnd9+wHcjJ4w2ijq+rAVP3CCinJQvFv1kgSu1W6jypUmvleJxcewdxmutM8dmIRZFxO/IQBZmP2Q==}
-
-  '@formatjs/intl-localematcher@0.8.0':
-    resolution: {integrity: sha512-zgMYWdUlmEZpX2Io+v3LHrfq9xZ6khpQVf9UAw2xYWhGerGgI9XgH1HvL/A34jWiruUJpYlP5pk4g8nIcaDrXQ==}
 
   '@formatjs/intl-localematcher@0.8.1':
     resolution: {integrity: sha512-xwEuwQFdtSq1UKtQnyTZWC+eHdv7Uygoa+H2k/9uzBVQjDyp9r20LNDNKedWXll7FssT3GRHvqsdJGYSUWqYFA==}
@@ -1097,11 +1094,6 @@ snapshots:
 
   '@formatjs/intl-localematcher@0.5.10':
     dependencies:
-      tslib: 2.8.1
-
-  '@formatjs/intl-localematcher@0.8.0':
-    dependencies:
-      '@formatjs/fast-memoize': 3.1.0
       tslib: 2.8.1
 
   '@formatjs/intl-localematcher@0.8.1':
