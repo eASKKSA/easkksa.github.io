@@ -85,11 +85,11 @@ importers:
         specifier: ^7.0.9
         version: 7.0.9
       '@types/react':
-        specifier: 19.2.10
-        version: 19.2.10
+        specifier: 19.2.14
+        version: 19.2.14
       '@types/react-dom':
         specifier: 19.2.2
-        version: 19.2.2(@types/react@19.2.10)
+        version: 19.2.2(@types/react@19.2.14)
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -658,8 +658,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.10':
-    resolution: {integrity: sha512-WPigyYuGhgZ/cTPRXB2EwUw+XvsRA3GqHlsP4qteqrnnjDrApbS7MxcGr/hke5iUoeB7E/gQtrs9I37zAJ0Vjw==}
+  '@types/react@19.2.14':
+    resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
 
   baseline-browser-mapping@2.9.19:
     resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
@@ -1453,11 +1453,11 @@ snapshots:
     dependencies:
       '@types/node': 25.2.1
 
-  '@types/react-dom@19.2.2(@types/react@19.2.10)':
+  '@types/react-dom@19.2.2(@types/react@19.2.14)':
     dependencies:
-      '@types/react': 19.2.10
+      '@types/react': 19.2.14
 
-  '@types/react@19.2.10':
+  '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
 
