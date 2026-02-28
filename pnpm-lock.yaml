@@ -21,8 +21,8 @@ importers:
         specifier: ^6.1.1
         version: 6.1.1(next@16.1.6(react-dom@19.2.1(react@19.2.4))(react@19.2.4))(react@19.2.4)
       fast-xml-parser:
-        specifier: ^5.3.8
-        version: 5.3.8
+        specifier: ^5.4.1
+        version: 5.4.1
       html-to-text:
         specifier: ^9.0.5
         version: 9.0.5
@@ -717,8 +717,11 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  fast-xml-parser@5.3.8:
-    resolution: {integrity: sha512-53jIF4N6u/pxvaL1eb/hEZts/cFLWZ92eCfLrNyCI0k38lettCG/Bs40W9pPwoPXyHQlKu2OUbQtiEIZK/J6Vw==}
+  fast-xml-builder@1.0.0:
+    resolution: {integrity: sha512-fpZuDogrAgnyt9oDDz+5DBz0zgPdPZz6D4IR7iESxRXElrlGTRkHJ9eEt+SACRJwT0FNFrt71DFQIUFBJfX/uQ==}
+
+  fast-xml-parser@5.4.1:
+    resolution: {integrity: sha512-BQ30U1mKkvXQXXkAGcuyUA/GA26oEB7NzOtsxCDtyu62sjGw5QraKFhx2Em3WQNjPw9PG6MQ9yuIIgkSDfGu5A==}
     hasBin: true
 
   framer-motion@12.34.3:
@@ -1506,8 +1509,11 @@ snapshots:
 
   entities@4.5.0: {}
 
-  fast-xml-parser@5.3.8:
+  fast-xml-builder@1.0.0: {}
+
+  fast-xml-parser@5.4.1:
     dependencies:
+      fast-xml-builder: 1.0.0
       strnum: 2.1.2
 
   framer-motion@12.34.3(react-dom@19.2.1(react@19.2.4))(react@19.2.4):
