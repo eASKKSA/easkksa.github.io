@@ -1,4 +1,5 @@
 import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
@@ -100,6 +101,7 @@ export default async function Layout({
         </NextIntlClientProvider>
         <AnalyticsWithConsent />
         <WebVitals />
+        <SpeedInsights />
       </body>
     </html>
   );
