@@ -13,7 +13,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
 import WebVitals from "@/components/web-vitals";
-import SpeedInsightsWithConsent from "@/components/speed-insights";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -103,8 +103,9 @@ export default async function Layout({
           </NextIntlClientProvider>
           <AnalyticsWithConsent />
           <WebVitals />
-          <SpeedInsightsWithConsent />
         </ConsentProvider>
+        {/* Speed Insights is anonymous — no consent required */}
+        <SpeedInsights />
       </body>
     </html>
   );

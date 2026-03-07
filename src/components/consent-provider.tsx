@@ -17,14 +17,16 @@ type ConsentContextValue = {
   denyConsent: () => void;
 };
 
-const ConsentContext = createContext<ConsentContextValue>({
-  consentGiven: false,
-  grantConsent: () => {},
-  denyConsent: () => {},
-});
+const ConsentContext = createContext<ConsentContextValue | undefined>(
+  undefined,
+);
 
-export function useConsent() {
-  return useContext(ConsentContext);
+export function useConsent(): ConsentContextValue {
+  const context = useContext(ConsentContext);
+  if (!context) {
+    throw new Error("useConsent must be used within a ConsentProvider");
+  }
+  return context;
 }
 
 const COOKIE_OPTIONS = {
