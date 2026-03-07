@@ -26,6 +26,14 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
   }
 
   body {
@@ -49,8 +57,12 @@
     @apply mb-12 md:mb-16 lg:mb-20;
   }
 
+  p {
+    @apply text-justify md:text-left;
+  }
+
   section > p {
-    @apply text-center } p { @apply text-justify md:text-left;
+    @apply text-center;
   }
 
   footer {
@@ -109,7 +121,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #8b1e23;
+    background: color-mix(in oklab, var(--color-primary) 75%, black);
   }
 }
 
@@ -121,10 +133,10 @@
   }
 
   .sr-only:focus {
-    @apply absolute w-auto h-auto overflow-hidden border-0 opacity-0 pointer-events-none;
+    @apply absolute w-auto h-auto overflow-visible whitespace-normal;
     clip: auto;
-    padding: inherit;
-    margin: inherit;
-    white-space: normal;
+    clip-path: none;
+    padding: 0;
+    margin: 0;
   }
 }

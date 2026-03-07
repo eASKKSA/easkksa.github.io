@@ -90,8 +90,9 @@ export default function ASKKSANews({
           </div>
         </div>
         <div className="animate-pulse space-y-4">
-          {[new Array(3)].map((_, i) => (
+          {Array.from({ length: 3 }).map((_, i) => (
             <div
+              // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton items with no identity
               key={i}
               className="h-32 bg-gray-200 dark:bg-gray-700 rounded-lg"
             ></div>
@@ -147,7 +148,7 @@ export default function ASKKSANews({
           {news.map((item, index) => (
             <Container
               as="article"
-              key={index}
+              key={item.link}
               className="p-4 sm:p-6 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
             >
               {/* Header do artigo - responsivo */}

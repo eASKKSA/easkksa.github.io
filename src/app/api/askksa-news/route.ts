@@ -5,9 +5,6 @@ export async function GET() {
   try {
     const news = await getASKKSANews();
 
-    // Log para debug (opcional)
-    console.log(`Retornando ${news.length} notícias ordenadas por data`);
-
     return NextResponse.json(news, {
       headers: {
         "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",

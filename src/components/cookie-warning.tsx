@@ -3,8 +3,8 @@
 import { getCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
-import { Link } from "@/i18n/navigation";
 import { useConsent } from "@/components/consent-provider";
+import { Link } from "@/i18n/navigation";
 
 const CookieWarning = () => {
   const t = useTranslations("CookieWarning");

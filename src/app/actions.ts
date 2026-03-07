@@ -99,6 +99,15 @@ function checkRateLimit(ip: string): boolean {
 //
 // 5) Email Template
 //
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 function generateEmailTemplate(data: {
   name: string;
   age: number;
@@ -106,7 +115,10 @@ function generateEmailTemplate(data: {
   phone?: string;
   experienceText: string;
 }): string {
-  const { name, age, email, phone, experienceText } = data;
+  const { age, experienceText } = data;
+  const name = escapeHtml(data.name);
+  const email = escapeHtml(data.email);
+  const phone = data.phone ? escapeHtml(data.phone) : undefined;
   return `
     <!DOCTYPE html>
     <html lang="pt-PT">

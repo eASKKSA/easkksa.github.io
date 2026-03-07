@@ -60,7 +60,10 @@ export default function TrialFormModal({
       }, 2500);
       return () => clearTimeout(timer);
     }
-    sendGTMEvent({ event: "trial_form_submit_error", error_message: state.message });
+    sendGTMEvent({
+      event: "trial_form_submit_error",
+      error_message: state.message,
+    });
   }, [state, onClose]);
 
   if (!isOpen) return null;

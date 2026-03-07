@@ -63,9 +63,9 @@ export async function MetadataLDJSON({
   jsonLd,
 }: Readonly<MetadataLDJSONProps>) {
   return (
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD structured data
     <script
       type="application/ld+json"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: required for JSON-LD structured data; content is sanitized via replaceAll
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(jsonLd).replaceAll("<", String.raw`\u003c`),
       }}

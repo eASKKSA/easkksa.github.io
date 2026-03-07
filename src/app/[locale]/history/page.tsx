@@ -35,6 +35,7 @@ export default async function HistoryPage({
             <div className="flex-1 lg:pr-4">
               <p
                 className="text-lg text-center! md:text-justify! leading-8 text-gray-600 dark:text-gray-300"
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
                 dangerouslySetInnerHTML={{ __html: t.raw("introduction.text") }}
               />
             </div>
@@ -63,16 +64,19 @@ export default async function HistoryPage({
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-200">
               <li
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
                 dangerouslySetInnerHTML={{
                   __html: `${t.raw("threePillars.kihon.title")} ${t("threePillars.kihon.description")}`,
                 }}
               />
               <li
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
                 dangerouslySetInnerHTML={{
                   __html: `${t.raw("threePillars.kumite.title")} ${t("threePillars.kumite.description")}`,
                 }}
               />
               <li
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
                 dangerouslySetInnerHTML={{
                   __html: `${t.raw("threePillars.kata.title")} ${t("threePillars.kata.description")}`,
                 }}
@@ -85,8 +89,10 @@ export default async function HistoryPage({
             {t("origins.title")}
           </h2>
           <div className="space-y-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files */}
             <p dangerouslySetInnerHTML={{ __html: t.raw("origins.content") }} />
             <p
+              // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
               dangerouslySetInnerHTML={{ __html: t.raw("origins.matsumura") }}
             />
           </div>
@@ -98,6 +104,7 @@ export default async function HistoryPage({
           <div className="space-y-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
             <p>{t("modernization.funakoshi")}</p>
             <p
+              // biome-ignore lint/security/noDangerouslySetInnerHtml: content from controlled i18n translation files
               dangerouslySetInnerHTML={{
                 __html: t.raw("modernization.transition"),
               }}
