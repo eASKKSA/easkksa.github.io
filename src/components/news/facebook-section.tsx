@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { FaFacebook } from "react-icons/fa";
+import TrackableLink from "@/components/trackable-link";
 
 export default async function FacebookEmbed() {
   const t = await getTranslations("News.sections.facebook");
@@ -22,15 +23,17 @@ export default async function FacebookEmbed() {
           </p>
 
           <div className="flex flex-col gap-3 pt-2">
-            <a
+            <TrackableLink
               href="https://www.facebook.com/ASKKSA.MADEIRA/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+              gtmEvent="social_click"
+              gtmParams={{ platform: "facebook" }}
             >
               <FaFacebook />
               {t("cta.button")}
-            </a>
+            </TrackableLink>
 
             <a
               href="https://www.facebook.com/ASKKSA.MADEIRA/posts"
@@ -74,15 +77,17 @@ export default async function FacebookEmbed() {
               </p>
 
               <div className="pt-2">
-                <a
+                <TrackableLink
                   href="https://www.facebook.com/ASKKSA.MADEIRA/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-xl shadow-blue-600/30 transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+                  gtmEvent="social_click"
+                  gtmParams={{ platform: "facebook" }}
                 >
                   <FaFacebook />
                   {t("viewMore")}
-                </a>
+                </TrackableLink>
               </div>
             </div>
           </div>

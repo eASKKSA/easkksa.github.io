@@ -5,11 +5,13 @@ import { notFound } from "next/navigation";
 import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { globalMetadata } from "@/app/metadata";
+import AnalyticsWithConsent from "@/components/analytics";
 import Background from "@/components/background";
 import CookieWarning from "@/components/cookie-warning";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
+import WebVitals from "@/components/web-vitals";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -57,6 +59,14 @@ export default async function Layout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied',
+              'personalization_storage': 'denied',
+              'wait_for_update': 500
+            });
             ${
               hasConsent
                 ? `
@@ -88,6 +98,8 @@ export default async function Layout({
             <CookieWarning />
           </Providers>
         </NextIntlClientProvider>
+        <AnalyticsWithConsent />
+        <WebVitals />
       </body>
     </html>
   );

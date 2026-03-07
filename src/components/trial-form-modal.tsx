@@ -1,3 +1,4 @@
+import { sendGTMEvent } from "@next/third-parties/google";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useActionState, useEffect, useRef } from "react";
@@ -41,15 +42,26 @@ export default function TrialFormModal({
   const [state, formAction] = useActionState(submitTrialForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
+  // Track modal open
   useEffect(() => {
+    if (isOpen) {
+      sendGTMEvent({ event: "trial_form_open" });
+    }
+  }, [isOpen]);
+
+  // Track submission outcome
+  useEffect(() => {
+    if (!state.message) return;
     if (state.success) {
+      sendGTMEvent({ event: "trial_form_submit_success" });
       const timer = setTimeout(() => {
         formRef.current?.reset();
         onClose();
       }, 2500);
       return () => clearTimeout(timer);
     }
-  }, [state.success, onClose]);
+    sendGTMEvent({ event: "trial_form_submit_error", error_message: state.message });
+  }, [state, onClose]);
 
   if (!isOpen) return null;
 

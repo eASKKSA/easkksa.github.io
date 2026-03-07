@@ -10,6 +10,7 @@ import Container from "@/components/container";
 import DojoMap from "@/components/dojo-map";
 import FeatureCard from "@/components/feature-card";
 import FormTrial from "@/components/form-trial";
+import TrackableLink from "@/components/trackable-link";
 import { getFeatures, getSchedules } from "./data";
 import { jsonLd, metadata, websiteSchema } from "./metadata";
 
@@ -60,16 +61,17 @@ export default async function Page({
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <FormTrial trial={t("buttons.trialClass")} />
-          <a
+          <TrackableLink
             href="https://search.google.com/local/writereview?placeid=ChIJt__ELtJfYAwRxph89pXRuYU"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg bg-white text-primary font-semibold shadow-md hover:bg-gray-100 transition"
+            gtmEvent="review_click"
           >
             {t("buttons.reviewUs", {
               defaultValue: "Already tried? Review us!",
             })}
-          </a>
+          </TrackableLink>
         </div>
       </Container>
 
@@ -126,18 +128,24 @@ export default async function Page({
               title={t("contact.location")}
               content={t("contact.address")}
               href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
+              gtmEvent="contact_click"
+              gtmParams={{ contact_method: "location" }}
             />
             <ContactItem
               icon={<FaPhoneAlt className="text-primary text-3xl" />}
               title={t("contact.phone")}
               content={t("contact.phoneNumber")}
               href={`tel:${t("contact.phoneNumber").replace(/[^+\d]/g, "")}`}
+              gtmEvent="contact_click"
+              gtmParams={{ contact_method: "phone" }}
             />
             <ContactItem
               icon={<IoMail className="text-primary text-3xl" />}
               title={t("contact.email")}
               content="direcao@askksa.pt"
               href="mailto:direcao@askksa.pt"
+              gtmEvent="contact_click"
+              gtmParams={{ contact_method: "email" }}
             />
           </div>
         </div>
@@ -145,7 +153,7 @@ export default async function Page({
         <div className="relative">
           <DojoMap
             name="Localização da ASKKSA - Escola Horácio Bento Gouveia"
-            mapUrl="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
+            mapUrl="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1spt-PT!2spt"
             className="rounded-xl h-80 w-full shadow-lg border-0"
           />
         </div>
@@ -161,6 +169,8 @@ type ContactItemProps = {
   title: string;
   content: string | ReactNode;
   href?: string;
+  gtmEvent?: string;
+  gtmParams?: Record<string, string>;
 };
 
 const ContactItem: React.FC<ContactItemProps> = ({
@@ -168,6 +178,8 @@ const ContactItem: React.FC<ContactItemProps> = ({
   title,
   content,
   href,
+  gtmEvent,
+  gtmParams,
 }) => {
   return (
     <div className="flex items-start space-x-3 p-4 transition-shadow">
@@ -176,13 +188,15 @@ const ContactItem: React.FC<ContactItemProps> = ({
         <h3 className="font-bold text-lg text-[#222] dark:text-white">
           {title}
         </h3>
-        <a
+        <TrackableLink
           href={href}
           target="_blank"
           className="hover:text-primary cursor-pointer"
+          gtmEvent={gtmEvent}
+          gtmParams={gtmParams}
         >
           {content}
-        </a>
+        </TrackableLink>
       </div>
     </div>
   );

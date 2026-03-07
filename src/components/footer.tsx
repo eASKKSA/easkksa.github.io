@@ -1,5 +1,6 @@
 "use client";
 
+import { sendGTMEvent } from "@next/third-parties/google";
 import { useTranslations } from "next-intl";
 import {
   FaEnvelope,
@@ -80,6 +81,7 @@ const Footer = () => {
                       <a
                         href="tel:+351960384090"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                        onClick={() => sendGTMEvent({ event: "contact_click", contact_method: "phone" })}
                       >
                         +351 960 384 090
                       </a>
@@ -111,6 +113,7 @@ const Footer = () => {
                       <a
                         href="tel:+351965713358"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                        onClick={() => sendGTMEvent({ event: "contact_click", contact_method: "phone" })}
                       >
                         +351 965 713 358
                       </a>
@@ -142,6 +145,7 @@ const Footer = () => {
                       <a
                         href="tel:+351965012299"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
+                        onClick={() => sendGTMEvent({ event: "contact_click", contact_method: "phone" })}
                       >
                         +351 965 012 299
                       </a>
@@ -163,6 +167,7 @@ const Footer = () => {
                 <a
                   href={`tel:+351960384090`}
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                  onClick={() => sendGTMEvent({ event: "contact_click", contact_method: "phone" })}
                 >
                   +351 960 384 090
                 </a>
@@ -172,6 +177,7 @@ const Footer = () => {
                 <a
                   href="mailto:direcao@askksa.pt"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                  onClick={() => sendGTMEvent({ event: "contact_click", contact_method: "email" })}
                 >
                   direcao@askksa.pt
                 </a>
@@ -190,6 +196,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                     aria-label={social.label}
+                    onClick={() => sendGTMEvent({ event: "social_click", platform: social.label.toLowerCase() })}
                   >
                     {social.icon}
                   </a>

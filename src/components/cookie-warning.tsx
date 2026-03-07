@@ -1,5 +1,6 @@
 "use client";
 
+import { sendGTMEvent } from "@next/third-parties/google";
 import { getCookie, setCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
@@ -17,9 +18,8 @@ const CookieWarning = () => {
       // No cookie exists, show banner
       setShowBanner(true);
     } else {
-      // Cookie exists, restore consent state
-      const consentGiven = cookieConsent === "true";
-      updateConsent(consentGiven);
+      // Cookie exists — consent state is already set by the SSR inline script
+      // in layout.tsx before GTM loads. No action needed here.
       setShowBanner(false);
     }
   }, []);
@@ -33,16 +33,19 @@ const CookieWarning = () => {
         path: "/",
       });
 
-      // Update Google Consent Mode v2
+      // Update Google Consent Mode v2 for immediate effect
       updateConsent(consentGiven);
 
-      // Hide banner immediately for a snappy user experience.
-      setShowBanner(false);
+      // Fire consent_action only on active user choice (not on page restore)
+      sendGTMEvent({
+        event: "consent_action",
+        consent_status: consentGiven ? "all_granted" : "only_necessary",
+      });
 
-      // Refresh the page when accepting all cookies to ensure tracking starts
-      if (consentGiven) {
-        globalThis.location.reload();
-      }
+      // Hide banner immediately for a snappy user experience.
+      // No page reload needed: gtag('consent', 'update') above is enough for
+      // Consent Mode v2 to retroactively fire consent-sensitive GTM tags.
+      setShowBanner(false);
     } catch (error) {
       console.error("Error setting cookie consent:", error);
       // Still hide the banner on error to prevent it from getting stuck.
