@@ -191,6 +191,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
         <TrackableLink
           href={href}
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-primary cursor-pointer"
           gtmEvent={gtmEvent}
           gtmParams={gtmParams}

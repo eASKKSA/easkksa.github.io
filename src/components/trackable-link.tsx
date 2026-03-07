@@ -22,7 +22,7 @@ export default function TrackableLink({
     <a
       {...props}
       onClick={(e) => {
-        if (gtmEvent) sendGTMEvent({ event: gtmEvent, ...gtmParams });
+        if (gtmEvent) sendGTMEvent({ ...gtmParams, event: gtmEvent });
         onClick?.(e);
       }}
     >
