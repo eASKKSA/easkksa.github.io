@@ -7,12 +7,13 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { globalMetadata } from "@/app/metadata";
 import AnalyticsWithConsent from "@/components/analytics";
 import Background from "@/components/background";
+import ConsentProvider from "@/components/consent-provider";
 import CookieWarning from "@/components/cookie-warning";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
 import WebVitals from "@/components/web-vitals";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import SpeedInsightsWithConsent from "@/components/speed-insights";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -90,18 +91,20 @@ export default async function Layout({
         />
       )}
       <body>
-        <NextIntlClientProvider>
-          <Providers>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-            <Background />
-            <CookieWarning />
-          </Providers>
-        </NextIntlClientProvider>
-        <AnalyticsWithConsent />
-        <WebVitals />
-        <SpeedInsights />
+        <ConsentProvider initialConsent={consentGiven}>
+          <NextIntlClientProvider>
+            <Providers>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+              <Background />
+              <CookieWarning />
+            </Providers>
+          </NextIntlClientProvider>
+          <AnalyticsWithConsent />
+          <WebVitals />
+          <SpeedInsightsWithConsent />
+        </ConsentProvider>
       </body>
     </html>
   );

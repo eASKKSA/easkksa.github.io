@@ -1,17 +1,18 @@
 "use client";
 import { Analytics } from "@vercel/analytics/next";
-
-function hasAnalyticsConsent(): boolean {
-  if (typeof document === "undefined") return false;
-  return document.cookie
-    .split(";")
-    .some((c) => c.trim() === "cookie_consent=true");
-}
+import { useEffect, useRef } from "react";
+import { useConsent } from "@/components/consent-provider";
 
 export default function AnalyticsWithConsent() {
+  const { consentGiven } = useConsent();
+  // useRef so the beforeSend closure always sees the latest value
+  // even though it's called outside React's render cycle.
+  const consentRef = useRef(consentGiven);
+  useEffect(() => {
+    consentRef.current = consentGiven;
+  }, [consentGiven]);
+
   return (
-    <Analytics
-      beforeSend={(event) => (hasAnalyticsConsent() ? event : null)}
-    />
+    <Analytics beforeSend={(event) => (consentRef.current ? event : null)} />
   );
 }

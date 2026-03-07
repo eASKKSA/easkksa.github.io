@@ -1,57 +1,33 @@
 "use client";
 
-import { sendGTMEvent } from "@next/third-parties/google";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
-import { updateConsent } from "@/lib/gtm";
+import { useConsent } from "@/components/consent-provider";
 
 const CookieWarning = () => {
   const t = useTranslations("CookieWarning");
   const [showBanner, setShowBanner] = useState(false);
+  const { grantConsent, denyConsent } = useConsent();
 
   useEffect(() => {
     const cookieConsent = getCookie("cookie_consent");
-
-    if (cookieConsent === undefined) {
-      // No cookie exists, show banner
-      setShowBanner(true);
-    } else {
-      // Cookie exists — consent state is already set by the SSR inline script
-      // in layout.tsx before GTM loads. No action needed here.
-      setShowBanner(false);
-    }
+    // Show banner only when the user hasn't made a choice yet.
+    setShowBanner(cookieConsent === undefined);
   }, []);
 
-  const handleCookieAction = useCallback((consentGiven: boolean) => {
-    try {
-      setCookie("cookie_consent", consentGiven.toString(), {
-        maxAge: 60 * 60 * 24 * 365, // 1 year
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "strict",
-        path: "/",
-      });
-
-      // Update Google Consent Mode v2 for immediate effect
-      updateConsent(consentGiven);
-
-      // Fire consent_action only on active user choice (not on page restore)
-      sendGTMEvent({
-        event: "consent_action",
-        consent_status: consentGiven ? "all_granted" : "only_necessary",
-      });
-
-      // Hide banner immediately for a snappy user experience.
-      // No page reload needed: gtag('consent', 'update') above is enough for
-      // Consent Mode v2 to retroactively fire consent-sensitive GTM tags.
+  const handleCookieAction = useCallback(
+    (given: boolean) => {
+      if (given) {
+        grantConsent();
+      } else {
+        denyConsent();
+      }
       setShowBanner(false);
-    } catch (error) {
-      console.error("Error setting cookie consent:", error);
-      // Still hide the banner on error to prevent it from getting stuck.
-      setShowBanner(false);
-    }
-  }, []);
+    },
+    [grantConsent, denyConsent],
+  );
 
   if (!showBanner) return null;
 
