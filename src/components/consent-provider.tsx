@@ -57,19 +57,19 @@ export default function ConsentProvider({
   const grantConsent = useCallback(() => {
     try {
       persistConsent(true);
+      setConsentGiven(true);
     } catch (error) {
       console.error("Error setting cookie consent:", error);
     }
-    setConsentGiven(true);
   }, []);
 
   const denyConsent = useCallback(() => {
     try {
       persistConsent(false);
+      setConsentGiven(false);
     } catch (error) {
       console.error("Error setting cookie consent:", error);
     }
-    setConsentGiven(false);
   }, []);
 
   const value = useMemo(

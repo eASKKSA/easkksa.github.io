@@ -1,14 +1,11 @@
 "use client";
 import { useReportWebVitals } from "next/web-vitals";
-import { useEffect, useRef } from "react";
 import { useConsent } from "@/components/consent-provider";
+import { useLatest } from "@/lib/use-latest";
 
 export default function WebVitals() {
   const { consentGiven } = useConsent();
-  const consentRef = useRef(consentGiven);
-  useEffect(() => {
-    consentRef.current = consentGiven;
-  }, [consentGiven]);
+  const consentRef = useLatest(consentGiven);
 
   useReportWebVitals((metric) => {
     if (!consentRef.current) return;
