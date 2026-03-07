@@ -36,7 +36,7 @@ const COOKIE_OPTIONS = {
   path: "/",
 };
 
-function persistConsent(given: boolean) {
+function recordConsentDecision(given: boolean) {
   setCookie("cookie_consent", given.toString(), COOKIE_OPTIONS);
   updateConsent(given);
   sendGTMEvent({
@@ -56,7 +56,7 @@ export default function ConsentProvider({
 
   const grantConsent = useCallback(() => {
     try {
-      persistConsent(true);
+      recordConsentDecision(true);
       setConsentGiven(true);
     } catch (error) {
       console.error("Error setting cookie consent:", error);
@@ -65,7 +65,7 @@ export default function ConsentProvider({
 
   const denyConsent = useCallback(() => {
     try {
-      persistConsent(false);
+      recordConsentDecision(false);
       setConsentGiven(false);
     } catch (error) {
       console.error("Error setting cookie consent:", error);
