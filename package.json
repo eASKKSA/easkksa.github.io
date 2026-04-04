@@ -42,7 +42,7 @@
     "@tailwindcss/postcss": "^4.2.2",
     "@types/html-to-text": "^9.0.4",
     "@types/negotiator": "^0.6.4",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.5.2",
     "@types/nodemailer": "^7.0.11",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.2",
