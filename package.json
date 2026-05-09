@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.1",
     "fast-xml-parser": "^5.7.2",
-    "html-to-text": "^9.0.5",
+    "html-to-text": "^10.0.0",
     "motion": "^12.38.0",
     "negotiator": "^1.0.0",
     "next": "^16.2.4",
