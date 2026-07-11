@@ -1,4 +1,7 @@
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@swc/core'
-  - sharp
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  sharp: true
+minimumReleaseAgeExclude:
+  - '@formatjs/fast-memoize@3.1.7'
+  - '@formatjs/intl-localematcher@0.8.12'
