@@ -21,7 +21,7 @@
     "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
     "cookies-next": "^6.1.1",
-    "fast-xml-parser": "^5.9.3",
+    "fast-xml-parser": "^5.10.1",
     "html-to-text": "^10.0.0",
     "motion": "^12.42.2",
     "negotiator": "^1.0.0",
