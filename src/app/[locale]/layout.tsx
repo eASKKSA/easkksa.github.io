@@ -1,4 +1,3 @@
-import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -11,6 +10,7 @@ import Background from "@/components/background";
 import ConsentProvider from "@/components/consent-provider";
 import CookieWarning from "@/components/cookie-warning";
 import Footer from "@/components/footer";
+import GoogleTagManagerWithConsent from "@/components/google-tag-manager-with-consent";
 import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
 import ViewportRevealObserver from "@/components/viewport-reveal";
@@ -99,13 +99,13 @@ export default async function Layout({
           `}
         </Script>
       </head>
-      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
-        <GoogleTagManager
-          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
-        />
-      )}
       <body>
         <ConsentProvider>
+          {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+            <GoogleTagManagerWithConsent
+              gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
+            />
+          )}
           <NextIntlClientProvider messages={null}>
             <Providers>
               <Navbar labels={navbarLabels} />

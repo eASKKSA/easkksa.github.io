@@ -4,6 +4,9 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  images: {
+    qualities: [60, 75],
+  },
   experimental: {
     inlineCss: true,
     optimizePackageImports: ["react-icons"],

@@ -68,8 +68,9 @@ export default async function NijuKunPage({
         <Image
           src={nijuKunImage}
           alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
-          height={500}
-          className="object-contain rounded-xl shadow-lg mx-auto"
+          sizes="(max-width: 768px) calc(100vw - 4rem), 640px"
+          quality={60}
+          className="w-full max-w-[640px] h-auto object-contain rounded-xl shadow-lg mx-auto"
           fetchPriority="high"
           priority
         />

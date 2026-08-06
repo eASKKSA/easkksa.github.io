@@ -23,8 +23,11 @@ export default async function SalutationPage({
           <Image
             src={senseiSeizaImage}
             alt="Sensei em posição Seiza - Saudação no Karaté"
+            width={500}
             height={500}
-            className="object-contain rounded-xl shadow-lg mx-auto"
+            sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
+            quality={60}
+            className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
             fetchPriority="high"
             priority
           />

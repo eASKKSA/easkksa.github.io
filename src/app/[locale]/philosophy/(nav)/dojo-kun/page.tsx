@@ -40,8 +40,9 @@ export default async function DojoKunPage({
           <Image
             src={dojoKunImage}
             alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
-            height={500}
-            className="object-contain rounded-xl shadow-lg mx-auto"
+            sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
+            quality={60}
+            className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
             fetchPriority="high"
             priority
           />

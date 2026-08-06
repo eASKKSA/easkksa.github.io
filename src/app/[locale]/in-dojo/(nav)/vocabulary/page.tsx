@@ -208,8 +208,9 @@ export default async function VocabularyPage({
           <Image
             src={askksaThumb}
             alt="ASKKSA - Vocabulário Japonês do Karaté"
-            height={500}
-            className="object-contain rounded-xl shadow-lg mx-auto"
+            sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
+            className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
+            fetchPriority="high"
             priority
           />
           <div className="space-y-4">

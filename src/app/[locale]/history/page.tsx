@@ -47,6 +47,7 @@ export default async function HistoryPage({
                 alt="Mestres Fundadores do Karate"
                 fill
                 sizes="(max-width: 767px) 256px, 384px"
+                quality={60}
                 className="rounded-xl object-cover shadow-lg"
                 fetchPriority="high"
                 priority

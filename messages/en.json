@@ -95,6 +95,7 @@
     },
     "contact": {
       "location": "Location",
+      "loadMap": "Loading interactive map…",
       "phone": "Phone",
       "email": "Email",
       "address": "Horacio Bento Gouveia School, 9004-524 Funchal",
@@ -192,6 +193,7 @@
     "dojos": {
       "title": "Our Dojos",
       "subtitle": "We currently offer two modern training spaces in Funchal, equipped with all necessary conditions for the practice of Shotokan Karate. Additionally, we provide specialised technical support to the Câmara de Lobos Sports Club.",
+      "loadMap": "Loading interactive map…",
       "dojo1": {
         "name": "Main ASKKSA Dojo - Horacio Bento Gouveia School",
         "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
@@ -229,6 +231,7 @@
         "title": "Facebook",
         "subtitle": "Official ASKKSA page",
         "viewMore": "See more on Facebook",
+        "loadEmbed": "Loading Facebook feed…",
         "description": "Keep up with our latest posts, events and news",
         "cta": {
           "title": "ASKKSA Shotokan Karate",

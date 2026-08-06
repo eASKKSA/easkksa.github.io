@@ -3,6 +3,7 @@ import DojoMap from "@/components/dojo-map";
 
 const DojoCard = ({
   dojo,
+  loadingMapLabel,
 }: {
   dojo: {
     id: string;
@@ -11,6 +12,7 @@ const DojoCard = ({
     responsible?: string;
     phone?: string;
   };
+  loadingMapLabel: string;
 }) => {
   const cardClasses = [
     "flex flex-col overflow-hidden rounded-2xl border backdrop-blur-sm shadow-lg",
@@ -33,6 +35,7 @@ const DojoCard = ({
         mapUrl={dojo.mapUrl}
         className={iframeClasses}
         name={dojo.name}
+        loadingLabel={loadingMapLabel}
       />
       <h3 className={titleClasses}>{dojo.name}</h3>
 

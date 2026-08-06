@@ -39,9 +39,10 @@ export default async function ShotokanKatasPage({
           <Image
             src={shotokanTopImage}
             alt="Shotokan Karate-Do International Federation"
-            className="rounded-lg shadow-lg mx-auto mb-6"
-            width={600}
-            height={200}
+            className="w-full max-w-[600px] h-auto rounded-lg shadow-lg mx-auto mb-6"
+            sizes="(max-width: 768px) calc(100vw - 4rem), 600px"
+            quality={60}
+            fetchPriority="high"
             priority
           />
         </div>
@@ -73,10 +74,9 @@ export default async function ShotokanKatasPage({
             <Image
               src={dachisImage}
               alt="Posições (Dachi) do Karaté Shotokan"
-              className="rounded-lg shadow-lg mx-auto mb-4"
-              width={400}
-              height={500}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
+              quality={60}
             />
             <h3 className="text-xl font-semibold">
               {t("techniques.positions.title")}
@@ -89,10 +89,9 @@ export default async function ShotokanKatasPage({
             <Image
               src={tecnicasPernasImage}
               alt="Técnicas de Pernas do Karaté Shotokan"
-              className="rounded-lg shadow-lg mx-auto mb-4"
-              width={400}
-              height={500}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
+              quality={60}
             />
             <h3 className="text-xl font-semibold">
               {t("techniques.legs.title")}
@@ -105,10 +104,9 @@ export default async function ShotokanKatasPage({
             <Image
               src={maosPesImage}
               alt="Técnicas de Mãos e Pés do Karaté Shotokan"
-              className="rounded-lg shadow-lg mx-auto mb-4"
-              width={400}
-              height={500}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
+              quality={60}
             />
             <h3 className="text-xl font-semibold">
               {t("techniques.handsFeet.title")}

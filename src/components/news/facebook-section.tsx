@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { FaFacebook } from "react-icons/fa";
+import FacebookPageEmbed from "@/components/news/facebook-page-embed";
 import TrackableLink from "@/components/trackable-link";
 
 export default async function FacebookEmbed() {
@@ -18,7 +19,7 @@ export default async function FacebookEmbed() {
             {t("cta.title")}
           </h4>
 
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-center! text-sm text-gray-700 dark:text-gray-300">
             {t("description")}
           </p>
 
@@ -51,13 +52,7 @@ export default async function FacebookEmbed() {
         <div className="hidden lg:flex gap-8">
           {/* Iframe Facebook */}
           <div className="flex overflow-hidden rounded-xl shadow-lg border bg-transparent border-gray-200 dark:border-gray-700">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FASKKSA.MADEIRA&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-              className="w-[500px] h-[600px]"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              title="Feed Facebook ASKKSA"
-              loading="lazy"
-            />
+            <FacebookPageEmbed loadingLabel={t("loadEmbed")} />
           </div>
 
           {/* Conteúdo lateral */}
@@ -72,7 +67,7 @@ export default async function FacebookEmbed() {
                 {t("cta.title")}
               </h4>
 
-              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-center! text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("description")}
               </p>
 

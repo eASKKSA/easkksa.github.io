@@ -77,7 +77,11 @@ export default async function QuemSomosPage({
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 md:mt-16">
           {dojos.map((dojo) => (
-            <DojoCard key={dojo.name} dojo={dojo} />
+            <DojoCard
+              key={dojo.name}
+              dojo={dojo}
+              loadingMapLabel={t("dojos.loadMap")}
+            />
           ))}
         </div>
       </Container>

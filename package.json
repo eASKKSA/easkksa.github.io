@@ -12,7 +12,10 @@
     "format:check": "biome format"
   },
   "browserslist": [
-    "defaults and not IE 11 and not op_mini all"
+    "chrome 111",
+    "edge 111",
+    "firefox 111",
+    "safari 16.4"
   ],
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.13",

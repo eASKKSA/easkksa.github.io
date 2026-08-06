@@ -21,8 +21,8 @@ export default async function DojoRulesPage({
           <Image
             src={askksaThumb}
             alt="ASKKSA - Regras do Dojo"
-            height={500}
-            className="object-contain rounded-xl shadow-lg mx-auto"
+            sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
+            className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
             fetchPriority="high"
             priority
           />
