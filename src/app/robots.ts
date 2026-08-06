@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: isProduction ? "/" : "",
-      disallow: isProduction ? ["/private/", "/_next/"] : "/",
+      disallow: isProduction ? "/private/" : "/",
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   };

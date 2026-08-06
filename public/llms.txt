@@ -1,0 +1,28 @@
+# ASKKSA
+
+> Official website of the Shotokan Karate Santo António Association, based in Santo António, Funchal, Madeira, Portugal. The website provides information about the association, its training, instructors, karate philosophy and dojo practices in Portuguese and English.
+
+## Portuguese
+
+- [Home — Portuguese](https://www.askksa.pt/): Introduction to ASKKSA, training and trial classes.
+- [About](https://www.askksa.pt/sobre): Information about the association, instructors and certifications.
+- [News](https://www.askksa.pt/noticias): Recent news and activities.
+- [History](https://www.askksa.pt/historia): History of ASKKSA and Shotokan karate.
+- [Philosophy](https://www.askksa.pt/filosofia): Karate philosophy, Bushido, Dojo Kun and Niju Kun.
+- [In the dojo](https://www.askksa.pt/no-dojo): Etiquette, rules, vocabulary and grades.
+- [SKI style](https://www.askksa.pt/estilo-ski): Information about the Shotokan Karate International style.
+- [Frequently asked questions](https://www.askksa.pt/perguntas-frequentes): Practical information for students and visitors.
+
+## English
+
+- [Home](https://www.askksa.pt/en): Introduction to ASKKSA, training and trial classes.
+- [About](https://www.askksa.pt/en/about): Information about the association, instructors and certifications.
+- [News](https://www.askksa.pt/en/news): Recent news and activities.
+- [Philosophy](https://www.askksa.pt/en/philosophy): Karate philosophy, Bushido, Dojo Kun and Niju Kun.
+- [In the dojo](https://www.askksa.pt/en/in-dojo): Etiquette, rules, vocabulary and grades.
+- [Frequently asked questions](https://www.askksa.pt/en/faq): Practical information for students and visitors.
+
+## Optional
+
+- [Sitemap](https://www.askksa.pt/sitemap.xml): Complete list of indexable pages and their language alternatives.
+- [Privacy policy](https://www.askksa.pt/politica-de-privacidade): Information about privacy, data processing and user rights.
