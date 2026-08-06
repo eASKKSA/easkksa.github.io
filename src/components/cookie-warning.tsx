@@ -1,18 +1,24 @@
 "use client";
 
-import { getCookie } from "cookies-next";
-import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
-import { useConsent } from "@/components/consent-provider";
+import { getConsentCookie, useConsent } from "@/components/consent-provider";
 import { Link } from "@/i18n/navigation";
 
-const CookieWarning = () => {
-  const t = useTranslations("CookieWarning");
-  const [showBanner, setShowBanner] = useState(false);
+type CookieWarningProps = {
+  labels: {
+    description: string;
+    linkText: string;
+    acceptAll: string;
+    acceptNecessary: string;
+  };
+};
+
+const CookieWarning = ({ labels }: Readonly<CookieWarningProps>) => {
+  const [showBanner, setShowBanner] = useState(true);
   const { grantConsent, denyConsent } = useConsent();
 
   useEffect(() => {
-    const cookieConsent = getCookie("cookie_consent");
+    const cookieConsent = getConsentCookie();
     // Show banner only when the user hasn't made a choice yet.
     setShowBanner(cookieConsent === undefined);
   }, []);
@@ -24,6 +30,7 @@ const CookieWarning = () => {
       } else {
         denyConsent();
       }
+      document.documentElement.dataset.cookieConsent = given.toString();
       setShowBanner(false);
     },
     [grantConsent, denyConsent],
@@ -33,17 +40,19 @@ const CookieWarning = () => {
 
   return (
     <aside
+      data-cookie-banner
       className="fixed bottom-0 w-full bg-gray-50 p-4 z-[10]"
       aria-label="Cookie consent"
     >
       <p className="text-xs md:text-sm text-black/90 text-center!">
-        {t("description")}{" "}
+        {labels.description}{" "}
         <Link
           href="/privacy-policy"
+          prefetch={false}
           className="underline font-semibold hover:opacity-80"
           title="Política de Privacidade."
         >
-          {t("linkText")}.
+          {labels.linkText}.
         </Link>
       </p>
       <div className="gap-4 flex justify-center mt-3">
@@ -51,9 +60,9 @@ const CookieWarning = () => {
           type="button"
           onClick={() => handleCookieAction(true)}
           className="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
-          aria-label={t("acceptAll")}
+          aria-label={labels.acceptAll}
         >
-          {t("acceptAll")}
+          {labels.acceptAll}
         </button>
         <button
           type="button"
@@ -61,7 +70,7 @@ const CookieWarning = () => {
           className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
           aria-label="Aceitar apenas cookies essenciais"
         >
-          {t("acceptNecessary")}
+          {labels.acceptNecessary}
         </button>
       </div>
     </aside>

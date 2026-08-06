@@ -1,11 +1,11 @@
 "use client";
 import { sendGTMEvent } from "@next/third-parties/google";
-import { setCookie } from "cookies-next";
 import type { ReactNode } from "react";
 import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -29,15 +29,24 @@ export function useConsent(): ConsentContextValue {
   return context;
 }
 
-const COOKIE_OPTIONS = {
-  maxAge: 60 * 60 * 24 * 365,
-  secure: process.env.NODE_ENV === "production",
-  sameSite: "strict" as const,
-  path: "/",
-};
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
+
+export function getConsentCookie(): string | undefined {
+  const prefix = "cookie_consent=";
+  const cookie = document.cookie
+    .split("; ")
+    .find((entry) => entry.startsWith(prefix));
+  return cookie ? decodeURIComponent(cookie.slice(prefix.length)) : undefined;
+}
+
+function setConsentCookie(given: boolean) {
+  const secure = process.env.NODE_ENV === "production" ? "; Secure" : "";
+  // biome-ignore lint/suspicious/noDocumentCookie: synchronous support is required across target browsers
+  document.cookie = `cookie_consent=${given}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=Strict${secure}`;
+}
 
 function recordConsentDecision(given: boolean) {
-  setCookie("cookie_consent", given.toString(), COOKIE_OPTIONS);
+  setConsentCookie(given);
   updateConsent(given);
   sendGTMEvent({
     event: "consent_action",
@@ -45,14 +54,15 @@ function recordConsentDecision(given: boolean) {
   });
 }
 
-export default function ConsentProvider({
-  initialConsent,
-  children,
-}: {
-  initialConsent: boolean;
-  children: ReactNode;
-}) {
-  const [consentGiven, setConsentGiven] = useState(initialConsent);
+export default function ConsentProvider({ children }: { children: ReactNode }) {
+  const [consentGiven, setConsentGiven] = useState(false);
+
+  useEffect(() => {
+    const storedConsent = getConsentCookie();
+    if (storedConsent === "true") {
+      setConsentGiven(true);
+    }
+  }, []);
 
   const grantConsent = useCallback(() => {
     try {

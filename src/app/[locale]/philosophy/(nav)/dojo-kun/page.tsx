@@ -26,12 +26,15 @@ const dojoKunMaxims = [
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function DojoKunPage() {
+export default async function DojoKunPage({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
+  const { locale } = await params;
   const t = await getTranslations("DojoKun");
 
   return (
     <>
-      <Container withBubbles blur as="article">
+      <Container withBubbles blur as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
           <Image
@@ -77,7 +80,7 @@ export default async function DojoKunPage() {
           </div>
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(locale)} />
     </>
   );
 }

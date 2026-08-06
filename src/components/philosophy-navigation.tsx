@@ -1,28 +1,37 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { FaScroll } from "react-icons/fa";
 import { GiCrossedSwords, GiKimono } from "react-icons/gi";
 import { Link, usePathname } from "@/i18n/navigation";
 
-export default function PhilosophyNavigation() {
-  const t = useTranslations("Philosophy.navigation");
+type PhilosophyNavigationProps = {
+  labels: {
+    title: string;
+    bushido: string;
+    nijuKun: string;
+    dojoKun: string;
+  };
+};
+
+export default function PhilosophyNavigation({
+  labels,
+}: Readonly<PhilosophyNavigationProps>) {
   const pathname = usePathname();
   const sections = [
     {
       id: "bushido",
-      label: t("bushido"),
+      label: labels.bushido,
       icon: <GiCrossedSwords className="text-lg" />,
       href: "/philosophy/bushido" as const,
     },
     {
       id: "niju-kun",
-      label: t("nijuKun"),
+      label: labels.nijuKun,
       icon: <FaScroll className="text-lg" />,
       href: "/philosophy/niju-kun" as const,
     },
     {
       id: "dojo-kun",
-      label: t("dojoKun"),
+      label: labels.dojoKun,
       icon: <GiKimono className="text-lg" />,
       href: "/philosophy/dojo-kun" as const,
     },
@@ -30,7 +39,7 @@ export default function PhilosophyNavigation() {
 
   return (
     <nav
-      aria-label={t("title")}
+      aria-label={labels.title}
       className="sticky top-[120px] lg:top-[150px] z-40 bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm flex justify-center space-x-2 md:space-x-8 py-2 lg:py-4 rounded-full mb-3! mt-0! md:mb-10!"
     >
       {sections.map((section) => (

@@ -11,19 +11,8 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-  htmlLimitedBots: /.*/,
   async headers() {
     return [
-      {
-        // Static assets have content hashes — safe to cache aggressively
-        source: "/_next/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
       {
         source: "/(.*)",
         headers: [

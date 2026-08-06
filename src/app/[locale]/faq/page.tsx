@@ -37,7 +37,7 @@ export default async function FAQPage({
 
   return (
     <>
-      <Container blur withBubbles className="text-center">
+      <Container blur withBubbles className="text-center" initialAnimation>
         <h1>{t("title")}</h1>
         <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
           {t("subtitle")}

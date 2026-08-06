@@ -167,7 +167,7 @@ export const getBlackBelts = (): BlackBelt[] => [
     id: "titoVelosa",
     name: "Tito Velosa",
     image: titoVelosa,
-    graduation: "4º Dan",
+    graduation: "5º Dan",
   },
   {
     id: "luisBarros",

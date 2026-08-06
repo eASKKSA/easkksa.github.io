@@ -1,14 +1,25 @@
 import { sendGTMEvent } from "@next/third-parties/google";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
 import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { submitTrialForm, type TrialFormState } from "@/app/actions";
 
-function SubmitButton() {
+export type TrialFormLabels = {
+  heading: string;
+  description: string;
+  fullName: string;
+  age: string;
+  email: string;
+  phone: string;
+  previousExperience: string;
+  yes: string;
+  no: string;
+  submit: { submitting: string; button: string };
+};
+
+function SubmitButton({ labels }: Readonly<{ labels: TrialFormLabels }>) {
   const { pending } = useFormStatus();
-  const t = useTranslations("TrialForm");
   return (
     <button
       type="submit"
@@ -19,7 +30,7 @@ function SubmitButton() {
         "disabled:bg-gray-400 disabled:cursor-not-allowed",
       )}
     >
-      {pending ? t("submit.submitting") : t("submit.button")}
+      {pending ? labels.submit.submitting : labels.submit.button}
     </button>
   );
 }
@@ -27,6 +38,7 @@ function SubmitButton() {
 type TrialFormModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  labels: TrialFormLabels;
 };
 
 const initialState: TrialFormState = {
@@ -37,8 +49,8 @@ const initialState: TrialFormState = {
 export default function TrialFormModal({
   isOpen,
   onClose,
+  labels,
 }: Readonly<TrialFormModalProps>) {
-  const t = useTranslations("TrialForm");
   const [state, formAction] = useActionState(submitTrialForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -85,10 +97,10 @@ export default function TrialFormModal({
 
           {/* Heading */}
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            {t("heading")}
+            {labels.heading}
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center! mb-6 text-sm sm:text-base">
-            {t("description")}
+            {labels.description}
           </p>
 
           {/* Form */}
@@ -101,7 +113,7 @@ export default function TrialFormModal({
               htmlFor="name"
               className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
             >
-              {t("fullName")}
+              {labels.fullName}
             </label>
             <input
               type="text"
@@ -119,7 +131,7 @@ export default function TrialFormModal({
               htmlFor="age"
               className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
             >
-              {t("age")}
+              {labels.age}
             </label>
             <input
               type="number"
@@ -135,7 +147,7 @@ export default function TrialFormModal({
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
             >
-              {t("email")}
+              {labels.email}
             </label>
             <input
               type="email"
@@ -153,7 +165,7 @@ export default function TrialFormModal({
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
             >
-              {t("phone")}
+              {labels.phone}
             </label>
             <input
               type="number"
@@ -170,10 +182,10 @@ export default function TrialFormModal({
             {/* Experience */}
             <div>
               <p className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                {t("previousExperience")}
+                {labels.previousExperience}
               </p>
               <div className="mt-2 flex flex-col sm:flex-row sm:gap-6 gap-2">
-                {["yes", "no"].map((value) => (
+                {(["yes", "no"] as const).map((value) => (
                   <label
                     key={value}
                     className="flex items-center text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
@@ -185,7 +197,7 @@ export default function TrialFormModal({
                       required
                       className="h-4 w-auto text-primary border-gray-300 focus:ring-primary"
                     />
-                    <span className="ml-2 capitalize">{t(value)}</span>
+                    <span className="ml-2 capitalize">{labels[value]}</span>
                   </label>
                 ))}
               </div>
@@ -198,7 +210,7 @@ export default function TrialFormModal({
 
             {/* Submit */}
             <div className="pt-2">
-              <SubmitButton />
+              <SubmitButton labels={labels} />
             </div>
 
             {/* Feedback */}

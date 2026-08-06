@@ -9,12 +9,15 @@ import { jsonLd } from "./metadata";
 export { generateMetadata } from "./metadata";
 
 // --- MAIN PAGE COMPONENT ---
-export default async function GraduationsPage() {
+export default async function GraduationsPage({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
+  const { locale } = await params;
   const t = await getTranslations("Graduations");
 
   return (
     <>
-      <Container blur withBubbles as="article">
+      <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
           <Image
@@ -220,7 +223,7 @@ export default async function GraduationsPage() {
           </div>
         </Container>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(locale)} />
     </>
   );
 }

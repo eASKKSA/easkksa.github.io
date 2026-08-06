@@ -10,7 +10,7 @@ const InstructorCard = ({ instructor }: { instructor: Instructor }) => {
         width={128}
         height={128}
         className="rounded-full object-cover border-4 dark:border-primary/50 border-gray-300 mb-4"
-        sizes="(max-width: 768px) 100vw, 128px"
+        sizes="128px"
       />
       <h3 className="text-xl font-bold mb-2 dark:text-white text-[#222]">
         {instructor.name}

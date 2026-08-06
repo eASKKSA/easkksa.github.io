@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { globalMetadata } from "@/app/metadata";
 import InDojoNavigation from "@/components/in-dojo-navigation";
 import { routing } from "@/i18n/routing";
@@ -18,12 +19,26 @@ export async function generateMetadata({
 
 export default async function Layout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
+  const t = await getTranslations("InDojo.navigation");
+
   return (
     <>
-      <InDojoNavigation />
+      <InDojoNavigation
+        labels={{
+          title: t("title"),
+          salutation: t("salutation"),
+          rules: t("rules"),
+          vocabulary: t("vocabulary"),
+          grades: t("grades"),
+        }}
+      />
       {children}
     </>
   );

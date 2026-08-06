@@ -54,12 +54,15 @@ const nijuKunPrinciples = [
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function NijuKunPage() {
+export default async function NijuKunPage({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
+  const { locale } = await params;
   const t = await getTranslations("NijuKun");
 
   return (
     <>
-      <Container withBubbles blur as="article">
+      <Container withBubbles blur as="article" initialAnimation>
         {/* Header Section */}
         <h1 className="text-center">{t("title")}</h1>
         <Image
@@ -98,7 +101,7 @@ export default async function NijuKunPage() {
           </div>
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(locale)} />
     </>
   );
 }

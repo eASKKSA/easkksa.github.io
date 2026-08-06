@@ -32,12 +32,15 @@ const principlesData = [
 ];
 
 // --- MAIN PAGE COMPONENT ---
-export default async function BushidoPage() {
+export default async function BushidoPage({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
+  const { locale } = await params;
   const t = await getTranslations("Bushido");
 
   return (
     <>
-      <Container blur withBubbles as="article">
+      <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center py-6">
           <Image
@@ -72,7 +75,7 @@ export default async function BushidoPage() {
           ))}
         </div>
       </Container>
-      <MetadataLDJSON jsonLd={await jsonLd()} />
+      <MetadataLDJSON jsonLd={await jsonLd(locale)} />
     </>
   );
 }

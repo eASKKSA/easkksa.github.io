@@ -142,7 +142,7 @@ export const jsonLd = async (
       {
         "@type": "Person",
         name: "Tito Velosa",
-        jobTitle: "Sensei - 4º DAN",
+        jobTitle: "Sensei - 5º DAN",
         description:
           locale === "pt-PT"
             ? "Instrutor qualificado de Karaté Shotokan"

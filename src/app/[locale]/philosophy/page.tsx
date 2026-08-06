@@ -28,7 +28,7 @@ export default async function PhilosophyPage({
   return (
     <>
       {/* Hero Section */}
-      <Container blur withBubbles>
+      <Container blur withBubbles initialAnimation>
         <h1 className="text-5xl font-bold mb-8 text-gray-900 dark:text-white text-center">
           {t("title")}
         </h1>

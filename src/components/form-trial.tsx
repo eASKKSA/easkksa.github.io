@@ -2,12 +2,16 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import type { TrialFormLabels } from "@/components/trial-form-modal";
 
 const TrialFormModal = dynamic(() => import("@/components/trial-form-modal"), {
   ssr: false,
 });
 
-export default function FormTrial({ trial }: Readonly<{ trial: string }>) {
+export default function FormTrial({
+  trial,
+  labels,
+}: Readonly<{ trial: string; labels: TrialFormLabels }>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +23,11 @@ export default function FormTrial({ trial }: Readonly<{ trial: string }>) {
       >
         {trial}
       </button>
-      <TrialFormModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <TrialFormModal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        labels={labels}
+      />
     </>
   );
 }

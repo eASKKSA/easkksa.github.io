@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 
 import graduationsImage from "@/assets/in-dojo/graduacoes.jpg";
 import { getPathname } from "@/i18n/navigation";
 
-export const jsonLd = async (): Promise<WithContext<Article>> => {
+export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Graduations");
   const orgT = await getTranslations("Organization");
-  const locale = await getLocale();
   const pathname = getPathname({ href: "/in-dojo/grades", locale: locale });
 
   return {
@@ -102,9 +101,11 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
   } as WithContext<Article>;
 };
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("Graduations");
-  const locale = await getLocale();
   const pathname = getPathname({ href: "/in-dojo/grades", locale: locale });
   const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
   const otherPathname = getPathname({

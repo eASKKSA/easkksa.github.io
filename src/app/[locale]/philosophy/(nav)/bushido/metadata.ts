@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 import { getPathname } from "@/i18n/navigation";
 
-export const jsonLd = async (): Promise<WithContext<Article>> => {
+export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Bushido");
   const orgT = await getTranslations("Organization");
-  const locale = await getLocale();
   const pathname = getPathname({
     href: "/philosophy/bushido",
     locale: locale,
@@ -130,9 +129,11 @@ export const jsonLd = async (): Promise<WithContext<Article>> => {
   } as WithContext<Article>;
 };
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: Readonly<{ params: Promise<{ locale: Locale }> }>): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("Bushido");
-  const locale = await getLocale();
   const pathname = getPathname({
     href: "/philosophy/bushido",
     locale: locale,

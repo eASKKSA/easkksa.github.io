@@ -38,6 +38,7 @@ export default function CertifiedLogoCard({
     <Image
       src={logo.src}
       alt={logo.alt}
+      sizes="32px"
       className="rounded-full w-8 h-8 object-cover"
     />
   );

@@ -1,7 +1,4 @@
-"use client";
-
-import { sendGTMEvent } from "@next/third-parties/google";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import {
   FaEnvelope,
   FaFacebookF,
@@ -10,6 +7,7 @@ import {
   FaPhone,
   FaYoutube,
 } from "react-icons/fa";
+import TrackableLink from "@/components/trackable-link";
 import { Link } from "@/i18n/navigation";
 
 // Social links now use react-icons
@@ -31,9 +29,9 @@ const socialLinks = [
   },
 ];
 
-const Footer = () => {
-  const t = useTranslations("Footer");
-  const tOrg = useTranslations("Organization");
+const Footer = async () => {
+  const t = await getTranslations("Footer");
+  const tOrg = await getTranslations("Organization");
 
   return (
     <footer>
@@ -41,7 +39,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Column 1: Brand & Mission */}
           <div className="space-y-4 col-span-2">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block" prefetch={false}>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 {tOrg("name")}
               </h2>
@@ -78,18 +76,14 @@ const Footer = () => {
                     </span>
                     <div className="flex items-center gap-1">
                       <FaPhone className="text-primary flex-shrink-0" />
-                      <a
+                      <TrackableLink
                         href="tel:+351960384090"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        onClick={() =>
-                          sendGTMEvent({
-                            event: "contact_click",
-                            contact_method: "phone",
-                          })
-                        }
+                        gtmEvent="contact_click"
+                        gtmParams={{ contact_method: "phone" }}
                       >
                         +351 960 384 090
-                      </a>
+                      </TrackableLink>
                     </div>
                   </div>
                 </div>
@@ -115,18 +109,14 @@ const Footer = () => {
                     </span>
                     <div className="flex items-center gap-1">
                       <FaPhone className="text-primary flex-shrink-0" />
-                      <a
+                      <TrackableLink
                         href="tel:+351965713358"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        onClick={() =>
-                          sendGTMEvent({
-                            event: "contact_click",
-                            contact_method: "phone",
-                          })
-                        }
+                        gtmEvent="contact_click"
+                        gtmParams={{ contact_method: "phone" }}
                       >
                         +351 965 713 358
-                      </a>
+                      </TrackableLink>
                     </div>
                   </div>
                 </div>
@@ -152,18 +142,14 @@ const Footer = () => {
                     </span>
                     <div className="flex items-center gap-1">
                       <FaPhone className="text-primary flex-shrink-0" />
-                      <a
+                      <TrackableLink
                         href="tel:+351965012299"
                         className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        onClick={() =>
-                          sendGTMEvent({
-                            event: "contact_click",
-                            contact_method: "phone",
-                          })
-                        }
+                        gtmEvent="contact_click"
+                        gtmParams={{ contact_method: "phone" }}
                       >
                         +351 965 012 299
-                      </a>
+                      </TrackableLink>
                     </div>
                   </div>
                 </div>
@@ -179,33 +165,25 @@ const Footer = () => {
             <ul className="mt-4 space-y-2 text-sm">
               <li className="flex items-center">
                 <FaPhone className="h-4 w-4 text-primary mr-3" />{" "}
-                <a
+                <TrackableLink
                   href={`tel:+351960384090`}
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-                  onClick={() =>
-                    sendGTMEvent({
-                      event: "contact_click",
-                      contact_method: "phone",
-                    })
-                  }
+                  gtmEvent="contact_click"
+                  gtmParams={{ contact_method: "phone" }}
                 >
                   +351 960 384 090
-                </a>
+                </TrackableLink>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="h-4 w-4 text-primary mr-3" />{" "}
-                <a
+                <TrackableLink
                   href="mailto:direcao@askksa.pt"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-                  onClick={() =>
-                    sendGTMEvent({
-                      event: "contact_click",
-                      contact_method: "email",
-                    })
-                  }
+                  gtmEvent="contact_click"
+                  gtmParams={{ contact_method: "email" }}
                 >
                   direcao@askksa.pt
-                </a>
+                </TrackableLink>
               </li>
             </ul>
             <div className="mt-6">
@@ -214,22 +192,18 @@ const Footer = () => {
               </h3>
               <div className="flex space-x-4 mt-4">
                 {socialLinks.map((social) => (
-                  <a
+                  <TrackableLink
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                     aria-label={social.label}
-                    onClick={() =>
-                      sendGTMEvent({
-                        event: "social_click",
-                        platform: social.label.toLowerCase(),
-                      })
-                    }
+                    gtmEvent="social_click"
+                    gtmParams={{ platform: social.label.toLowerCase() }}
                   >
                     {social.icon}
-                  </a>
+                  </TrackableLink>
                 ))}
               </div>
             </div>
@@ -242,12 +216,14 @@ const Footer = () => {
             <div className="flex gap-6 text-sm">
               <Link
                 href="/faq"
+                prefetch={false}
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
               >
                 {t("faq")}
               </Link>
               <Link
                 href="/privacy-policy"
+                prefetch={false}
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
               >
                 {t("privacy")}

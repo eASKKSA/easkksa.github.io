@@ -31,6 +31,22 @@ export default async function Page({
   const { locale } = await params;
   const t = await getTranslations("Home");
   const orgT = await getTranslations("Organization");
+  const trialT = await getTranslations("TrialForm");
+  const trialLabels = {
+    heading: trialT("heading"),
+    description: trialT("description"),
+    fullName: trialT("fullName"),
+    age: trialT("age"),
+    email: trialT("email"),
+    phone: trialT("phone"),
+    previousExperience: trialT("previousExperience"),
+    yes: trialT("yes"),
+    no: trialT("no"),
+    submit: {
+      submitting: trialT("submit.submitting"),
+      button: trialT("submit.button"),
+    },
+  };
 
   const icons = {
     tradition: <GiKimono className="text-5xl" />,
@@ -47,7 +63,7 @@ export default async function Page({
 
   return (
     <>
-      <Container blur withBubbles className="text-center">
+      <Container blur withBubbles className="text-center" initialAnimation>
         <h1>
           ASKKSA{" "}
           <span className="block text-primary text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -60,7 +76,7 @@ export default async function Page({
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <FormTrial trial={t("buttons.trialClass")} />
+          <FormTrial trial={t("buttons.trialClass")} labels={trialLabels} />
           <TrackableLink
             href="https://search.google.com/local/writereview?placeid=ChIJt__ELtJfYAwRxph89pXRuYU"
             target="_blank"

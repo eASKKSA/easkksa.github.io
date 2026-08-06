@@ -33,7 +33,7 @@ export default async function ShotokanKatasPage({
 
   return (
     <>
-      <Container withBubbles blur as="article">
+      <Container withBubbles blur as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
         <div className="max-w-3xl mx-auto mb-8">
           <Image

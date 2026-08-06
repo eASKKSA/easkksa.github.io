@@ -13,7 +13,11 @@ export async function getASKKSANews(): Promise<NewsItem[]> {
     "https://news.google.com/rss/search?q=ASKKSA%20karate&hl=pt-PT&gl=PT&ceid=PT:pt";
 
   /* 1.  Buscar RSS e converter para JSON */
-  const xml = await fetch(url).then((r) => r.text());
+  const response = await fetch(url, { next: { revalidate: 3600 } });
+  if (!response.ok) {
+    throw new Error(`Google News RSS returned ${response.status}`);
+  }
+  const xml = await response.text();
   const rss = new XMLParser({ ignoreAttributes: false }).parse(xml);
   const raw = Array.isArray(rss.rss.channel.item)
     ? rss.rss.channel.item

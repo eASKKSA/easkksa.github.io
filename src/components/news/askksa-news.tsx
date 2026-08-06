@@ -1,7 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { getTranslations } from "next-intl/server";
 import {
   FaCalendarAlt,
   FaExternalLinkAlt,
@@ -10,13 +7,13 @@ import {
   FaSortAmountDown,
 } from "react-icons/fa";
 import Container from "@/components/container";
+import { getASKKSANews } from "@/lib/free-news";
 
 interface NewsItem {
   title: string;
-  description: string;
   link: string;
   pubDate: string;
-  pubDateTimestamp: number;
+  pubDateTS: number;
   source: string;
 }
 
@@ -26,33 +23,20 @@ interface ASKKSANewsProps {
   readMore: string;
 }
 
-export default function ASKKSANews({
+export default async function ASKKSANews({
   title,
   subtitle,
   readMore,
 }: Readonly<ASKKSANewsProps>) {
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const t = useTranslations("News.sections.askksa");
-  const timeT = useTranslations("News.timeLabels");
+  const t = await getTranslations("News.sections.askksa");
+  const timeT = await getTranslations("News.timeLabels");
+  let news: NewsItem[] = [];
 
-  useEffect(() => {
-    async function fetchNews() {
-      try {
-        const response = await fetch("/api/askksa-news");
-        if (response.ok) {
-          const data = await response.json();
-          setNews(data);
-        }
-      } catch (error) {
-        console.error("Erro ao buscar notícias ASKKSA:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchNews();
-  }, []);
+  try {
+    news = await getASKKSANews();
+  } catch (error) {
+    console.error("Erro ao buscar notícias ASKKSA:", error);
+  }
 
   // Função para formatar data de forma mais amigável
   const formatDate = (dateString: string) => {
@@ -76,31 +60,6 @@ export default function ASKKSANews({
       });
     }
   };
-
-  if (loading) {
-    return (
-      <div>
-        <div className="flex items-center gap-3 mb-6">
-          <FaNewspaper className="text-primary text-2xl" />
-          <div>
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-              {t("title")}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">{t("subtitle")}</p>
-          </div>
-        </div>
-        <div className="animate-pulse space-y-4">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton items with no identity
-              key={i}
-              className="h-32 bg-gray-200 dark:bg-gray-700 rounded-lg"
-            ></div>
-          ))}
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>

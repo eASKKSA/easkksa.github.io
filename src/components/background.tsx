@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 const Background: React.FC = () => {
@@ -24,8 +22,6 @@ const Background: React.FC = () => {
         sizes="(max-width: 768px) 100vw"
         alt=""
         className="block md:hidden object-cover"
-        placeholder="blur"
-        blurDataURL="/askksa-background-tiger-mobile.webp"
       />
 
       {/* Theme-aware overlay for text readability */}

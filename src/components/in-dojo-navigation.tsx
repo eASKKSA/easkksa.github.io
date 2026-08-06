@@ -1,33 +1,43 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { FaBook, FaMedal, FaPray, FaScroll } from "react-icons/fa";
 import { Link, usePathname } from "@/i18n/navigation";
 
-export default function InDojoNavigation() {
-  const t = useTranslations("InDojo.navigation");
+type InDojoNavigationProps = {
+  labels: {
+    title: string;
+    salutation: string;
+    rules: string;
+    vocabulary: string;
+    grades: string;
+  };
+};
+
+export default function InDojoNavigation({
+  labels,
+}: Readonly<InDojoNavigationProps>) {
   const pathname = usePathname();
   const sections = [
     {
       id: "salutation",
-      label: t("salutation"),
+      label: labels.salutation,
       icon: <FaPray className="text-lg" />,
       href: "/in-dojo/salutation" as const,
     },
     {
       id: "rules",
-      label: t("rules"),
+      label: labels.rules,
       icon: <FaScroll className="text-lg" />,
       href: "/in-dojo/rules" as const,
     },
     {
       id: "vocabulary",
-      label: t("vocabulary"),
+      label: labels.vocabulary,
       icon: <FaBook className="text-lg" />,
       href: "/in-dojo/vocabulary" as const,
     },
     {
       id: "grades",
-      label: t("grades"),
+      label: labels.grades,
       icon: <FaMedal className="text-lg" />,
       href: "/in-dojo/grades" as const,
     },
@@ -35,7 +45,7 @@ export default function InDojoNavigation() {
 
   return (
     <nav
-      aria-label={t("title")}
+      aria-label={labels.title}
       className="sticky top-[120px] lg:top-[150px] z-40 bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm flex justify-center space-x-2 md:space-x-8 py-2 lg:py-4 rounded-full mb-3! mt-0! md:mb-10!"
     >
       {sections.map((section) => (

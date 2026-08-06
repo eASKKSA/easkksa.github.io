@@ -24,7 +24,7 @@ export default async function HistoryPage({
   const t = await getTranslations("History");
   return (
     <>
-      <Container as="article" blur withBubbles>
+      <Container as="article" blur withBubbles initialAnimation>
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
           <h1 className="text-center">{t("title")}</h1>
@@ -46,7 +46,7 @@ export default async function HistoryPage({
                 src={historyBannerUrl}
                 alt="Mestres Fundadores do Karate"
                 fill
-                sizes="(max-width: 768px) 100vw, 128px"
+                sizes="(max-width: 767px) 256px, 384px"
                 className="rounded-xl object-cover shadow-lg"
                 fetchPriority="high"
                 priority
