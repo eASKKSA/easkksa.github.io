@@ -204,10 +204,10 @@ export default async function VocabularyPage({
     <>
       <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={askksaThumb}
-            alt="ASKKSA - Vocabulário Japonês do Karaté"
+            alt={t("title")}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
             fetchPriority="high"
@@ -245,9 +245,9 @@ export default async function VocabularyPage({
             ].map((num) => (
               <div
                 key={num}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700"
+                className="flex items-center gap-3 rounded-xl border border-primary/15 bg-primary/5 px-4 py-3 dark:bg-primary/10"
               >
-                <span className="font-bold text-blue-600 dark:text-blue-400 w-8 text-center">
+                <span className="w-8 text-center font-bold text-primary">
                   {num}
                 </span>
                 <span className="text-gray-700 dark:text-gray-300 font-medium">
@@ -266,9 +266,9 @@ export default async function VocabularyPage({
             {["1", "2", "3", "4", "5"].map((num) => (
               <div
                 key={num}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700"
+                className="flex items-center gap-3 rounded-xl border border-gold/25 bg-gold/10 px-4 py-3 dark:bg-gold/10"
               >
-                <span className="font-bold text-green-600 dark:text-green-400 w-8 text-center">
+                <span className="w-8 text-center font-bold text-amber-800 dark:text-gold">
                   {num}
                 </span>
                 <span className="text-gray-700 dark:text-gray-300 font-medium">
@@ -290,9 +290,9 @@ export default async function VocabularyPage({
             {["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"].map((num) => (
               <div
                 key={num}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700"
+                className="flex items-center gap-3 rounded-xl border border-black/10 bg-black/[0.035] px-4 py-3 dark:border-white/10 dark:bg-white/5"
               >
-                <span className="font-bold text-orange-600 dark:text-orange-400 w-8 text-center">
+                <span className="w-8 text-center font-bold text-primary">
                   {num}
                 </span>
                 <span className="text-gray-700 dark:text-gray-300 font-medium">

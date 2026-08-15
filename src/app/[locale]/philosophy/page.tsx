@@ -29,23 +29,25 @@ export default async function PhilosophyPage({
     <>
       {/* Hero Section */}
       <Container blur withBubbles initialAnimation>
-        <h1 className="text-5xl font-bold mb-8 text-gray-900 dark:text-white text-center">
-          {t("title")}
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed text-center">
+        <h1 className="text-center">{t("title")}</h1>
+        <p className="page-intro-gap mx-auto max-w-3xl text-center text-xl leading-relaxed text-stone-600 dark:text-stone-300">
           {t("introduction")}
         </p>
       </Container>
 
       <Container>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
           {philosophySections.map((section, index) => (
-            <Link key={section.id} href={section.href} className="group">
+            <Link
+              key={section.id}
+              href={section.href}
+              className="group rounded-[1.5rem] focus-visible:outline-offset-4"
+            >
               <Container
                 as="article"
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl h-full border border-gray-200 dark:border-gray-700"
+                className="h-full overflow-hidden rounded-[1.5rem] border border-black/10 bg-white/78 shadow-[0_18px_55px_rgba(28,20,16,0.08)] backdrop-blur-md transition-all duration-200 group-hover:-translate-y-1 group-hover:border-primary/35 group-hover:shadow-[0_24px_70px_rgba(28,20,16,0.14)] dark:border-white/10 dark:bg-[#1b1b1b]/88"
               >
-                <div className="relative h-48">
+                <div className="relative h-52 overflow-hidden">
                   <Image
                     src={section.image}
                     alt={section.title}
@@ -53,21 +55,21 @@ export default async function PhilosophyPage({
                     priority={index === 0}
                     fetchPriority={index === 0 ? "high" : undefined}
                     quality={60}
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-sm font-bold text-white shadow-lg">
                     {section.principlesCount}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-gray-900 dark:text-white">
+                  <h2 className="mb-3 text-3xl font-bold transition-colors group-hover:text-primary dark:text-white">
                     {section.title}
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-4 leading-relaxed">
+                  <p className="mb-5 line-clamp-4 leading-relaxed text-stone-600 dark:text-stone-300">
                     {section.description}
                   </p>
-                  <span className="text-primary font-medium text-sm group-hover:underline">
+                  <span className="text-sm font-bold uppercase tracking-[0.12em] text-primary">
                     {t("explore")}
                   </span>
                 </div>
@@ -78,10 +80,10 @@ export default async function PhilosophyPage({
 
         {/* Additional Context */}
         <div className="mt-16 max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-white">
+          <h2 className="text-2xl font-bold mb-6 text-ink dark:text-white">
             {t("importance.title")}
           </h2>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
             {t("importance.description")}
           </p>
         </div>

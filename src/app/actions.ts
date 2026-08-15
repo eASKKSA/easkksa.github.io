@@ -8,25 +8,30 @@ import { z } from "zod";
 //
 // 1) Schema Validation
 //
-const trialFormSchema = z.object({
-  name: z
-    .string()
-    .min(2, { message: "Name must be at least 2 characters." })
-    .max(100, { message: "Name must not exceed 100 characters." })
-    .trim(),
-  age: z.coerce
-    .number()
-    .min(4, { message: "You must be at least 4 years old." })
-    .max(120, { message: "Please enter a valid age." }),
-  email: z.email({ message: "Invalid email address." }).toLowerCase().trim(),
-  phone: z
-    .string()
-    .optional()
-    .refine((val) => !val || /^[+]?[\d\s\-()]+$/.test(val), {
-      message: "Invalid phone number format.",
-    }),
-  experience: z.enum(["yes", "no"]),
-});
+function createTrialFormSchema(t: TFunction) {
+  return z.object({
+    name: z
+      .string()
+      .min(2, { message: t("validation.nameMin") })
+      .max(100, { message: t("validation.nameMax") })
+      .trim(),
+    age: z.coerce
+      .number()
+      .min(4, { message: t("validation.ageMin") })
+      .max(120, { message: t("validation.ageMax") }),
+    email: z
+      .email({ message: t("validation.email") })
+      .toLowerCase()
+      .trim(),
+    phone: z
+      .string()
+      .optional()
+      .refine((val) => !val || /^[+]?[\d\s\-()]+$/.test(val), {
+        message: t("validation.phone"),
+      }),
+    experience: z.enum(["yes", "no"]),
+  });
+}
 
 export type TrialFormState = {
   message: string;
@@ -199,7 +204,7 @@ export async function submitTrialForm(
   }
 
   // Validate payload
-  const parsed = trialFormSchema.safeParse({
+  const parsed = createTrialFormSchema(t).safeParse({
     name: formData.get("name"),
     age: formData.get("age"),
     email: formData.get("email"),
@@ -258,14 +263,14 @@ export async function submitTrialForm(
 
     if (err instanceof Error && err.message.includes("timeout")) {
       return {
-        message: "O pedido demorou muito tempo. Tente novamente.",
+        message: t("submit.timeout"),
         success: false,
       };
     }
 
     if (err instanceof Error && err.message.includes("authentication")) {
       return {
-        message: "Erro de configuração do servidor. Contacte o administrador.",
+        message: t("submit.serverConfiguration"),
         success: false,
       };
     }

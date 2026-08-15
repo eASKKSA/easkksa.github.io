@@ -15,9 +15,9 @@ export default async function FacebookEmbed() {
         <div className="relative z-10 text-center space-y-4">
           <FaFacebook className="text-blue-500 text-5xl mx-auto drop-shadow" />
 
-          <h4 className="text-lg font-bold text-gray-800 dark:text-white">
+          <h2 className="text-lg font-bold text-gray-800 dark:text-white">
             {t("cta.title")}
-          </h4>
+          </h2>
 
           <p className="text-center! text-sm text-gray-700 dark:text-gray-300">
             {t("description")}
@@ -52,7 +52,11 @@ export default async function FacebookEmbed() {
         <div className="hidden lg:flex gap-8">
           {/* Iframe Facebook */}
           <div className="flex overflow-hidden rounded-xl shadow-lg border bg-transparent border-gray-200 dark:border-gray-700">
-            <FacebookPageEmbed loadingLabel={t("loadEmbed")} />
+            <FacebookPageEmbed
+              loadingLabel={t("loadEmbed")}
+              consentLabel={t("embedConsent")}
+              openLabel={t("embedOpen")}
+            />
           </div>
 
           {/* Conteúdo lateral */}
@@ -63,9 +67,9 @@ export default async function FacebookEmbed() {
             <div className="relative z-10 text-center space-y-4">
               <FaFacebook className="text-blue-500 text-5xl mx-auto drop-shadow" />
 
-              <h4 className="text-xl font-bold text-gray-800 dark:text-white">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white">
                 {t("cta.title")}
-              </h4>
+              </h2>
 
               <p className="text-center! text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("description")}

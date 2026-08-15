@@ -10,7 +10,7 @@
   "Organization": {
     "name": "ASKKSA: Associação Shotokan Kokusai Karaté Santo António",
     "sport": "Karaté",
-    "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
+    "description": "Associação de Karaté Shotokan no Funchal, fundada em 2000 e orientada pelos valores do respeito e da disciplina.",
     "addressLocality": "Funchal",
     "addressRegion": "Madeira",
     "addressCountry": "PT",
@@ -46,19 +46,19 @@
   },
   "Home": {
     "meta": {
-      "title": "ASKKSA | Karaté Shotokan Santo António | Funchal, Madeira",
-      "description": "ASKKSA é uma associação de karaté no Funchal com dojos em Santo António e Horácio Bento. Promove Karaté Shotokan para crianças, jovens e adultos.",
+      "title": "Aulas de Karaté Shotokan no Funchal | ASKKSA",
+      "description": "Aulas de Karaté Shotokan no Funchal para crianças, jovens e adultos. Conheça a ASKKSA, os horários e os dojos. Três aulas experimentais gratuitas.",
       "keywords": "ASKKSA, Funchal, Madeira, Santo António, Dojo, Horácio Bento, Sensei, Karaté, Shotokan"
     },
     "title": "Associação Shotokan Kokusai Karaté Santo António",
     "hero": {
-      "title": "Tradição, disciplina e excelência no Karaté Shotokan. Descubra a força interior e o equilíbrio através da arte marcial milenar.",
-      "experience": "Mais de 30 anos a formar karatekas com os mais altos padrões de qualidade e respeito pela tradição",
+      "title": "Karaté Shotokan no Funchal para crianças, jovens e adultos. Desde 2000, ensinamos com rigor, acompanhamento próximo, respeito e disciplina.",
+      "experience": "Desde 2000 a ensinar Karaté Shotokan no Funchal com respeito pela tradição",
       "schedule": {
-        "title": "Encontre o horário ideal para sua jornada no Karaté"
+        "title": "Encontre o horário de treino mais adequado"
       },
       "cta": {
-        "text": "Venha conhecer a nossa estrutura e metodologia.",
+        "text": "Conheça o dojo, os instrutores e a forma como treinamos.",
         "trial": "As primeiras 3 aulas são ",
         "free": "gratuitas!"
       }
@@ -74,21 +74,21 @@
     },
     "features": {
       "tradition": {
-        "title": "Tradição Milenar",
-        "description": "Pratique o Karaté Shotokan autêntico com linhagem direta do Japão e técnicas tradicionais preservadas com rigor e dedicação."
+        "title": "Tradição Shotokan",
+        "description": "Treine Karaté Shotokan com uma abordagem técnica rigorosa e respeito pelos princípios da modalidade."
       },
       "instructors": {
-        "title": "Senseis Qualificados",
-        "description": "A nossa equipa é composta por instrutores graduados pela SKIF Canada e certificados até Grau III pela FNKP, garantindo ensino de excelência."
+        "title": "Instrutores Certificados",
+        "description": "Aprenda com instrutores graduados e com certificação de treinador da Federação Nacional de Karate - Portugal."
       },
       "community": {
         "title": "Todas as Idades",
-        "description": "Oferecemos turmas especializadas para crianças, jovens e adultos com metodologia adaptada para cada faixa etária e nível de experiência."
+        "description": "As turmas acolhem crianças, jovens e adultos, com treino adaptado à idade e à experiência de cada praticante."
       }
     },
     "schedule": {
       "weekdays": "Segunda a Sexta-feira",
-      "children": "Crianças até aos 12 anos",
+      "children": "Crianças com menos de 12 anos",
       "adults": "Adultos a partir dos 12 anos",
       "time1": "19h30 às 20h30",
       "time2": "20h30 às 21h30"
@@ -108,7 +108,7 @@
     },
     "name": "ASKKSA: Associação Shotokan Kokusai Karaté Santo António",
     "sport": "Karaté",
-    "description": "Uma associação de karaté no Funchal, Madeira, com dojos na Escola Horácio Bento de Gouveia e na Junta de Freguesia de Santo António.",
+    "description": "Associação de Karaté Shotokan no Funchal, fundada em 2000 e orientada pelos valores do respeito e da disciplina.",
     "addressLocality": "Funchal",
     "addressRegion": "Madeira",
     "addressCountry": "PT",
@@ -144,22 +144,22 @@
   },
   "About": {
     "meta": {
-      "title": "Quem Somos | Instrutores e Dojos | ASKKSA Shotokan Madeira",
-      "description": "Conheça a história da ASKKSA desde 2000, a nossa equipa de instrutores qualificados e os dojos onde praticamos Karaté Shotokan no Funchal, Madeira.",
+      "title": "Sobre a ASKKSA | Instrutores e Dojos no Funchal",
+      "description": "Conheça a ASKKSA, fundada no Funchal em 2000, os instrutores certificados, os cintos negros e os dojos de Karaté Shotokan na Madeira.",
       "keywords": "Quem Somos, História ASKKSA, Instrutores Karaté, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Dojos Funchal, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
     },
     "orgName": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
-    "orgDescription": "A ASKKSA é uma associação dedicada à prática e promoção do Karaté Shotokan, com foco na formação de karatekas de todas as idades. Desde a sua fundação em 2000, tem sido um pilar da comunidade de Karaté na Madeira.",
+    "orgDescription": "A ASKKSA ensina Karaté Shotokan no Funchal desde 2000, com turmas para diferentes idades e uma formação assente no respeito e na disciplina.",
     "orgSport": "Karaté Shotokan",
     "title": "Sobre a ASKKSA",
-    "description": "Foi em Abril do ano 2000 que se constituiu no Funchal a ASKKSA, Associação Shotokan Kokusai Karate de Santo António. O objectivo desta constituição era, além de relançar a modalidade a novos níveis, enquadrá-la no panorama legal e desportivo da Região Autónoma da Madeira. A Associação ASKKSA está filiada na FNK-P (Federação Nacional de Karate – Portugal) e na AKRAM (Associação de Karate da Região Autónoma da Madeira) e é reconhecida pela DRJD ( Direção Regional da Juventude e Desporto ).",
+    "description": "A ASKKSA foi fundada no Funchal em abril de 2000 para ensinar e desenvolver o Karaté Shotokan na Madeira. A associação está filiada na Federação Nacional de Karate - Portugal (FNK-P) e na Associação de Karate da Região Autónoma da Madeira (AKRAM), e é reconhecida pela Direção Regional de Desporto.",
     "instructors": {
-      "title": "A Nossa Equipa de Excelência",
-      "subtitle": "A ASKKSA orgulha-se de contar com uma equipa de instrutores de elite, altamente qualificada e com vasto percurso no Karaté Shotokan. Todos possuem formações nacionais e internacionais reconhecidas, garantindo ensino da mais alta qualidade.",
+      "title": "Os Nossos Instrutores",
+      "subtitle": "A equipa reúne instrutores com vários anos de prática, graduações reconhecidas e certificações nacionais de treinador. O acompanhamento é próximo e adequado ao nível de cada aluno.",
       "jorgeFreitas": {
         "name": "Shihan Jorge Freitas",
         "graduation": "6º DAN",
-        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
+        "credential1": "Pratica Karaté desde {startYear}",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau III (FNK-P)",
         "credential4": "Árbitro Nacional B (FNK-P)"
@@ -167,7 +167,7 @@
       "rafaelJardim": {
         "name": "Sensei Rafael Jardim",
         "graduation": "5º DAN",
-        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
+        "credential1": "Pratica Karaté desde {startYear}",
         "credential2": "Graduado pela SKIF Canada & ASKKM",
         "credential3": "Treinador de Karate Grau I (FNK-P)",
         "credential4": "Árbitro Nacional A (FNK-P)"
@@ -175,7 +175,7 @@
       "marisaGomes": {
         "name": "Sensei Marisa Gomes",
         "graduation": "5º DAN",
-        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
+        "credential1": "Pratica Karaté desde {startYear}",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau II (FNK-P)",
         "credential4": "Juiz Nacional de Karate (FNK-P)"
@@ -183,7 +183,7 @@
       "titoVelosa": {
         "name": "Sensei Tito Velosa",
         "graduation": "5º DAN",
-        "credential1": "Iniciou a prática em {startYear} (+{years} anos)",
+        "credential1": "Pratica Karaté desde {startYear}",
         "credential2": "Graduado pela SKIF Canada & SKIF",
         "credential3": "Treinador de Karate Grau II (FNK-P)",
         "credential4": "Árbitro Nacional B (FNK-P)"
@@ -192,7 +192,7 @@
     "auxiliaryInstructors": "Instrutores Auxiliares",
     "dojos": {
       "title": "Os Nossos Dojos",
-      "subtitle": "Atualmente, dispomos de dois modernos espaços de treino no Funchal, equipados com todas as condições necessárias para a prática do Karaté Shotokan. Adicionalmente, prestamos apoio técnico especializado ao Clube Desportivo de Câmara de Lobos.",
+      "subtitle": "A ASKKSA treina em dois espaços no Funchal: a Escola Horácio Bento de Gouveia e a Junta de Freguesia de Santo António. A equipa também presta apoio técnico ao Clube Desportivo de Câmara de Lobos.",
       "loadMap": "A carregar mapa interativo…",
       "dojo1": {
         "name": "Dojo Principal ASKKSA - Escola Horácio Bento Gouveia",
@@ -209,13 +209,13 @@
     },
     "hallBlackBelts": {
       "title": "Mural de Cintos Negros",
-      "subtitle": "A ASKKSA tem o orgulho de contar com um seleto grupo de praticantes que alcançaram o prestigiado grau de Cinto Negro. Estes karatekas exemplificam a dedicação, disciplina e excelência que caracterizam a nossa associação."
+      "subtitle": "Conheça os praticantes que alcançaram o cinto negro na ASKKSA. Cada graduação resulta de anos de treino, responsabilidade e compromisso com o dojo."
     }
   },
   "News": {
     "meta": {
-      "title": "Notícias e Eventos | ASKKSA Shotokan Madeira",
-      "description": "Acompanhe as últimas notícias, eventos e conquistas da ASKKSA. Instagram, Facebook e atualizações do mundo do Karaté Shotokan. ASKKSA Funchal, Madeira.",
+      "title": "Notícias da ASKKSA | Karaté Shotokan na Madeira",
+      "description": "Acompanhe as notícias, atividades, estágios e participações da ASKKSA no Funchal e na Madeira, além das atualizações nas redes sociais.",
       "keywords": "Notícias ASKKSA, Eventos Karaté, Competições, Instagram, Facebook, Atualizações, ASKKSA, Shotokan, Funchal, Madeira"
     },
     "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
@@ -232,6 +232,8 @@
         "subtitle": "Página oficial ASKKSA",
         "viewMore": "Ver mais no Facebook",
         "loadEmbed": "A carregar feed do Facebook…",
+        "embedConsent": "O feed externo do Facebook só é carregado depois de aceitar os cookies opcionais.",
+        "embedOpen": "Abrir no Facebook",
         "description": "Acompanhe as nossas últimas publicações, eventos e novidades",
         "cta": {
           "title": "ASKKSA Karate Shotokan",
@@ -284,38 +286,38 @@
   },
   "InDojo": {
     "meta": {
-      "title": "No Dojo | Etiqueta e Tradições | ASKKSA Karaté Madeira",
-      "description": "Descubra a vida no dojo de Karaté Shotokan. Saudação, regras, vocabulário japonês e graduações. Tradições e etiqueta milenares. ASKKSA Funchal.",
+      "title": "No Dojo | Regras, Saudação e Graduações de Karaté",
+      "description": "Conheça a saudação, as regras, o vocabulário japonês e o sistema de graduações usados no dojo de Karaté Shotokan da ASKKSA.",
       "keywords": "Dojo Karaté, Etiqueta Karaté, Regras Dojo, Saudação OSS, Vocabulário Japonês, Graduações Karaté, Tradições Japonesas, ASKKSA Madeira, Shotokan"
     },
     "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "No Dojo",
-    "introduction": "No Dojo, o coração do Karaté, praticamos e vivemos os princípios que nos guiam. Aqui, a tradição encontra a disciplina, e cada treino é uma oportunidade de crescimento pessoal.",
+    "introduction": "O dojo é um espaço de aprendizagem. A saudação, as regras e o treino ensinam-nos a praticar o lema da ASKKSA: Respeito e Disciplina.",
     "sections": {
       "salutation": {
         "title": "Saudação",
-        "description": "A saudação no Karaté é uma expressão da sinceridade (SEIJITSU) que faz parte do código ético da arte marcial. Ela é um sinal dum karateca que não oculta os seus ideais e sentimentos e consegue ser ele próprio.",
+        "description": "A saudação abre e encerra o treino. É uma forma simples de reconhecer o dojo, o instrutor e os colegas.",
         "href": "/in-dojo/salutation"
       },
       "rules": {
         "title": "Regras",
-        "description": "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam.",
+        "description": "As regras do dojo ajudam todos a treinar com segurança, atenção e respeito pelos colegas.",
         "href": "/in-dojo/rules"
       },
       "vocabulary": {
         "title": "Vocabulário",
-        "description": "Visto que o Karaté é uma arte marcial de origem japonesa é natural que muitos dos termos utilizados no Dojo, sejam japoneses.",
+        "description": "Aprenda os termos japoneses mais usados nas instruções, técnicas e rotinas do treino.",
         "href": "/in-dojo/vocabulary"
       },
       "grades": {
         "title": "Graduações",
-        "description": "As artes marciais provenientes do Japão e Okinawa, apresentam uma variedade de títulos e classes de graduações.",
+        "description": "Perceba como funcionam os graus Kyu e Dan e o significado das cores dos cintos.",
         "href": "/in-dojo/grades"
       }
     },
     "philosophy": {
       "title": "A Vida no Dojo",
-      "description": "O dojo não é apenas um local de treino físico, mas um espaço sagrado onde se cultiva o espírito, se aprende disciplina e se forja o carácter. Cada elemento - desde a saudação até às regras de etiqueta - contribui para criar um ambiente de respeito mútuo e crescimento pessoal."
+      "description": "No dojo, cada pessoa é responsável pelo ambiente de treino. Cumprir as regras, cuidar do espaço e respeitar os colegas permite aprender com segurança e concentração."
     },
     "navigation": {
       "title": "Navegação das páginas de No Dojo",
@@ -328,13 +330,13 @@
   },
   "Salutation": {
     "meta": {
-      "title": "Saudação no Karaté | OSS e Rituais | ASKKSA Shotokan Madeira",
-      "description": "Descubra o significado da saudação no Karaté Shotokan, a palavra OSS e os rituais de início e fim de treino. SEIJITSU, Mokuso, Seiza.",
+      "title": "Saudação no Karaté | Oss, Seiza, Mokuso e Rei",
+      "description": "Conheça o significado da saudação no Karaté Shotokan e os rituais usados no início e no fim do treino: Oss, Seiza, Mokuso e Rei.",
       "keywords": "Saudação Karaté, OSS, Rituais Dojo, Seijitsu, Mokuso, Seiza, Shomen ni Rei, Sensei ni Rei, Etiqueta Karaté, ASKKSA Madeira, Shotokan"
     },
     "title": "Saudação",
-    "introduction": "A saudação no Karaté é uma expressão da sinceridade (SEIJITSU) que faz parte do código ético da arte marcial. Ela é um sinal dum karateca que não oculta os seus ideais e sentimentos e consegue ser ele próprio. A saudação nas aulas, seja   o simples OSS , a saudação ao parceiro de treino ou mesmo o ritual de início ou de fim do treino, reveste-se de grande importância para todos aqueles que querem viver o Karaté na sua forma mais profunda e pura.",
-    "description": "Ao entrar no dojo, cumprimentamos o Sensei e os colegas, reconhecendo a importância do respeito mútuo e da disciplina.",
+    "introduction": "A saudação faz parte de todas as aulas de Karaté. Pode ser um simples Oss entre colegas ou o ritual formal que abre e encerra o treino. Em qualquer caso, expressa disponibilidade para aprender, respeito por quem treina connosco e cuidado com o dojo.",
+    "description": "Ao entrar no dojo, saudamos o espaço, o instrutor e os colegas. Este gesto recorda-nos que o treino começa com respeito e atenção.",
     "oss": {
       "title": "A palavra \"OSS\"",
       "origin": "Deriva da palavra japonesa Ossishinobu, equivalente ao nosso bom dia ou boa tarde, é uma saudação repleta de paciência, respeito e apreciação, podendo atingir diferentes significados de acordo com a sua entoação.",
@@ -443,13 +445,13 @@
   },
   "DojoRules": {
     "meta": {
-      "title": "Regras do Dojo | Etiqueta e Conduta | ASKKSA Shotokan Madeira",
-      "description": "Conheça as regras de conduta e etiqueta do dojo de Karaté Shotokan. Comportamento, respeito e tradições japonesas. ASKKSA Funchal.",
+      "title": "Regras do Dojo | Conduta no Treino de Karaté",
+      "description": "Consulte as regras de conduta, segurança e respeito aplicadas nos dojos de Karaté Shotokan da ASKKSA, no Funchal.",
       "keywords": "Regras Dojo, Etiqueta Karaté, Conduta Dojo, Respeito, Tradições Japonesas, Sensei, Disciplina Karaté, ASKKSA Madeira, Shotokan"
     },
     "title": "Regras do Dojo",
-    "introduction": "O Dojo é o local onde os ensinamentos da arte marcial são passados aos praticantes, como tal deve ser um local onde a seriedade e o respeito imperam. Nos dojos ASKKSA, seguem-se as regras tradicionais de boa conduta, características dos dojos japoneses, pontos de origem do Karaté.",
-    "description": "Portanto, é importante que cada karateca tenha noção que, dentro do local de treino (e preferencialmente em todas as outras situações do dia a dia), deverá comportar-se de acordo com a herança moral desta arte marcial. As regras abaixo devem ser compreendidas e respeitadas por todos os praticantes dos nossos dojos.",
+    "introduction": "O dojo é um espaço de aprendizagem partilhado. A pontualidade, a higiene, a atenção às instruções e o respeito pelos colegas permitem que todos treinem em segurança.",
+    "description": "Estas regras devem ser conhecidas e cumpridas por todos os praticantes. Servem para proteger os colegas, organizar a aula e preservar um ambiente de respeito e concentração.",
     "responsibility": {
       "title": "Cuidado e Respeito pelo Espaço de Treino",
       "rule1": "O DOJO é de responsabilidade de todos que usam seu espaço. Sinta-se em casa para dar informações a visitantes, arrumar o que estiver desarrumado, limpar o que estiver sujo.",
@@ -502,13 +504,13 @@
   },
   "Vocabulary": {
     "meta": {
-      "title": "Vocabulário Japonês Karaté | Termos Dojo | ASKKSA Shotokan Madeira",
-      "description": "Aprenda o vocabulário japonês essencial do Karaté Shotokan. Números, contadores e termos utilizados no dojo. Hiragana, Katakana, Kanji.",
+      "title": "Vocabulário Japonês do Karaté | Termos do Dojo",
+      "description": "Consulte os termos japoneses mais usados no Karaté Shotokan, incluindo comandos, técnicas, números, contadores e sistemas de escrita.",
       "keywords": "Vocabulário Japonês Karaté, Termos Dojo, Números Japonês, Linguagem Karaté, Hiragana Katakana Kanji, ASKKSA Madeira, Shotokan, Japonês Martial"
     },
     "title": "Vocabulário Japonês",
-    "introduction": "Sendo o Karaté uma arte marcial de origem japonesa, é natural que muitos dos termos utilizados no Dojo, sejam japoneses. Embora inicialmente possam causar alguma estranheza aos novos praticantes, com o acumular de treinos estas palavras tornam-se parte integrante do quotidiano de todos os karatecas.",
-    "description": "Saliente-se que os japoneses utilizam três sistemas de alfabetos (Hiragana, Katakana e Kanji) no seu dia a dia. Para facilitar a aprendizagem dos novos praticantes, apresentamos o vocabulário mais utilizado nos dojos de karaté de todo o mundo.",
+    "introduction": "Muitas instruções e técnicas do Karaté mantêm a designação japonesa. Com a prática, estes termos tornam-se familiares e ajudam os alunos a acompanhar o treino em qualquer dojo.",
+    "description": "A língua japonesa utiliza Hiragana, Katakana e Kanji. Nesta página usamos a romanização dos termos para facilitar a consulta durante a aprendizagem.",
     "numbers": {
       "1": "ichi",
       "2": "ni",
@@ -750,13 +752,13 @@
   },
   "Graduations": {
     "meta": {
-      "title": "Graduações Karaté | Sistema Kyu e Dan | ASKKSA Shotokan Madeira",
-      "description": "Descubra o sistema de graduações do Karaté Shotokan: Kyu, Dan, cores dos cintos e simbolismo. Sistema criado por Jigoro Kano. ASKKSA Funchal.",
+      "title": "Graduações no Karaté | Graus Kyu, Dan e Cintos",
+      "description": "Perceba o sistema de graduações do Karaté Shotokan, a progressão entre graus Kyu e Dan e o significado das cores dos cintos.",
       "keywords": "Graduações Karaté, Sistema Kyu Dan, Cintos Karaté, Jigoro Kano, Cores Cintos Karaté, Cinto Negro, Graus Karaté, ASKKSA Madeira, Shotokan"
     },
     "title": "Graduações",
-    "introduction": "As artes marciais provenientes do Japão e Okinawa, apresentam uma variedade de títulos e classes de graduações. O sistema atual de graduação de cintos coloridos é o mais aceite. Antes disso, muitos métodos distintos eram usados para marcar os vários níveis dos praticantes.",
-    "description": "O sistema atual que rege o Karaté usando o Kyu (classe) e Dan (grau), foi fundado por Jigoro Kano, fundador do Judo Kodokan. Kano era um educador e conhecia as pessoas, sabendo que são muitos os que necessitam de estímulos imediatamente após terem começado a praticar uma arte marcial. A ansiedade desse tipo de praticante não podia ser saciada por objetivos a longo prazo.",
+    "introduction": "No Karaté, as graduações indicam o percurso técnico do praticante. Os graus Kyu correspondem à fase anterior ao cinto negro; os graus Dan assinalam a progressão a partir desse nível.",
+    "description": "O sistema Kyu e Dan foi desenvolvido por Jigoro Kano no Judo e adotado posteriormente por outras artes marciais japonesas, incluindo o Karaté. Permite organizar a progressão técnica em etapas claras.",
     "system": {
       "title": "Sistema de Graduação Kyu e Dan",
       "founder": "Sistema fundado por Jigoro Kano, fundador do Judo Kodokan",
@@ -801,14 +803,14 @@
     "timeline": {
       "title": "Tempo de Dedicação",
       "description": "O sistema de graduações reconhece o tempo e dedicação necessários para o domínio do Karaté",
-      "journey": "Cada graduação representa uma etapa na jornada do karateka",
+      "journey": "Cada graduação assinala uma etapa da progressão do praticante",
       "mastery": "Os graus mais elevados são alcançáveis apenas por mestres que dedicaram toda a sua vida ao Karaté"
     }
   },
   "History": {
     "meta": {
       "title": "História do Karaté | ASKKSA Karaté Shotokan Madeira",
-      "description": "Descubra a rica história do Karaté, desde as origens em Okinawa com Sokon Matsumura até Gichin Funakoshi. Kihon, Kumite e Kata explicados.",
+      "description": "Conheça a história do Karaté, das raízes em Okinawa à divulgação no Japão por Gichin Funakoshi, e a evolução do estilo Shotokan.",
       "keywords": "História Karaté, Gichin Funakoshi, Sokon Matsumura, Okinawa, Kihon Kumite Kata, Karaté Shotokan, Budo, ASKKSA Madeira, Arte Marcial Japonesa"
     },
     "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
@@ -840,18 +842,18 @@
     "modernization": {
       "title": "A Modernização no Japão",
       "funakoshi": "Funakoshi foi o responsável pela mudança na escrita do nome para \"mão vazia\", uma forma estratégica de integrar a arte na cultura do budo japonês e distanciar-se das suas origens estrangeiras durante um período de forte nacionalismo. O Karaté foi popularizado e introduzido nas escolas secundárias antes da Segunda Guerra Mundial.",
-      "transition": "Como muitas artes marciais japonesas, o Karaté fez a sua transição para o <b>Karate-do</b> no início do século XX. O \"do\" (caminho) confere à prática elementos profundos do Zen Budismo, sendo por vezes chamado de \"Zen em movimento\". A modernização incluiu também a adoção do uniforme branco (<b>keikogi</b>) e das faixas coloridas para indicar a graduação, ambos popularizados por Jigoro Kano, o fundador do Judo."
+      "transition": "Como muitas artes marciais japonesas, o Karaté fez a sua transição para o <b>Karate-do</b> no início do século XX. O \"do\" (caminho) relaciona a prática com princípios do Zen Budismo, sendo por vezes chamado de \"Zen em movimento\". A modernização incluiu também a adoção do uniforme branco (<b>keikogi</b>) e das faixas coloridas para indicar a graduação, ambos popularizados por Jigoro Kano, o fundador do Judo."
     }
   },
   "Philosophy": {
     "meta": {
-      "title": "Filosofia do Karaté | Bushido, Niju, Dojo Kun | ASKKSA Shotokan Madeira",
-      "description": "Descubra a filosofia do Karaté Shotokan através do Bushido, Niju Kun e Dojo Kun. Princípios milenares de disciplina, respeito e autocontrolo.",
+      "title": "Filosofia do Karaté | Bushido, Niju Kun e Dojo Kun",
+      "description": "Conheça o Bushido, o Niju Kun e o Dojo Kun, princípios associados à ética, ao respeito e à disciplina no Karaté Shotokan.",
       "keywords": "Filosofia Karaté, Bushido, Niju Kun, Dojo Kun, Gichin Funakoshi, Código Samurai, Princípios Karaté, Ética Karaté, ASKKSA Madeira, Disciplina, Respeito"
     },
     "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "Filosofia do Karaté",
-    "introduction": "A filosofia do Karaté Shotokan assenta em princípios milenares que moldam não apenas a técnica, mas o caráter e a essência do praticante. Descubra os fundamentos éticos e morais que orientam cada karateka na sua jornada de autodescoberta.",
+    "introduction": "No Karaté Shotokan, a técnica e a conduta fazem parte do mesmo treino. O Bushido, o Niju Kun e o Dojo Kun ajudam a compreender os valores praticados dentro e fora do dojo.",
     "sections": {
       "bushido": {
         "title": "Bushido - Código de Ética",
@@ -865,13 +867,13 @@
       },
       "dojoKun": {
         "title": "Dojo Kun - 5 Máximas",
-        "description": "As cinco máximas fundamentais estabelecidas pelo Mestre Funakoshi para todos aqueles que entram num local sagrado de treino - o Dojo.",
+        "description": "As cinco máximas associadas ao Mestre Funakoshi sobre a conduta esperada dentro e fora do dojo.",
         "principlesCount": "5 Máximas"
       }
     },
     "importance": {
-      "title": "A Filosofia como Pilar do Karaté",
-      "description": "A filosofia do Karaté não se limita apenas às técnicas físicas, mas engloba um código moral e ético profundo que orienta o praticante tanto dentro como fora do dojo. Estes ensinamentos milenares formam a base sólida do desenvolvimento pessoal, espiritual e do crescimento interior de cada karateka."
+      "title": "Princípios para Dentro e Fora do Dojo",
+      "description": "Respeito, disciplina e autocontrolo aplicam-se ao treino e à vida quotidiana. Estes princípios ajudam o praticante a agir com atenção, responsabilidade e serenidade."
     },
     "explore": "Explorar →",
     "navigation": {
@@ -883,13 +885,13 @@
   },
   "Bushido": {
     "meta": {
-      "title": "Bushido | 9 Princípios Samurai | ASKKSA Karaté Madeira",
-      "description": "Descubra o código Bushido no Karaté Shotokan. Os 9 princípios samurai: honra, lealdade, coragem, justiça e autocontrolo. ASKKSA Funchal.",
+      "title": "Bushido | Princípios do Código de Conduta Samurai",
+      "description": "Conheça nove virtudes associadas ao Bushido e a sua relação com a conduta no Karaté: honra, lealdade, coragem, respeito e autocontrolo.",
       "keywords": "Bushido Karaté, Código Samurai, 9 Princípios, Honra, Lealdade, Coragem, Justiça, Autocontrolo, Filosofia Karaté, ASKKSA Madeira, Shotokan"
     },
     "title": "Código de Ética Bushido",
-    "introduction": "O Bushido, ou \"Caminho do Guerreiro\", é o código de conduta moral dos samurais que foi adaptado para o Karaté Shotokan. Este código representa os valores fundamentais que todo praticante deve cultivar.",
-    "description": "Os nove princípios do Bushido formam a base ética da nossa prática, orientando o desenvolvimento do carácter dentro e fora do dojo. Cada princípio representa uma virtude essencial para o crescimento pessoal e espiritual.",
+    "introduction": "Bushido significa \"caminho do guerreiro\" e designa o conjunto de valores associado à conduta dos samurais. Alguns desses valores também são usados para explicar a ética das artes marciais japonesas.",
+    "description": "Estas virtudes ajudam a refletir sobre a conduta no treino e nas relações com os outros. Na ASKKSA, o respeito e a disciplina são a referência diária.",
     "principles": {
       "honor": {
         "name": "Honra",
@@ -940,13 +942,13 @@
   },
   "NijuKun": {
     "meta": {
-      "title": "Niju Kun | 20 Princípios de Gichin Funakoshi | ASKKSA Madeira",
-      "description": "Conheça os 20 princípios fundamentais do Karaté Shotokan (Niju Kun) desenvolvidos pelo Mestre Gichin Funakoshi. Filosofia e ensinamentos atemporais.",
+      "title": "Niju Kun | 20 Princípios de Gichin Funakoshi",
+      "description": "Leia os vinte princípios do Niju Kun, atribuídos a Gichin Funakoshi, e conheça a sua aplicação à prática e à conduta no Karaté Shotokan.",
       "keywords": "Niju Kun, 20 Princípios Karaté, Gichin Funakoshi, Filosofia Karaté, Ensinamentos Funakoshi, Princípios Shotokan, ASKKSA Madeira, Karaté Tradicional"
     },
     "title": "Niju Kun - Os 20 Princípios",
     "introduction": "O Sensei Gichin Funakoshi desenvolveu e aperfeiçoou vinte princípios que deveriam ser a base filosófica de todos os praticantes de Karaté. Chamou a esses ensinamentos de Niju Kun.",
-    "description": "Estes princípios fundamentais guiam não apenas a prática do Karaté, mas também a forma como devemos viver nossas vidas com honor, respeito e disciplina.",
+    "description": "Os princípios relacionam a prática do Karaté com a atenção, a humildade, o respeito e a disciplina na vida quotidiana.",
     "principles": {
       "greeting": {
         "title": "1. Saudação",
@@ -1036,13 +1038,13 @@
   },
   "DojoKun": {
     "meta": {
-      "title": "Dojo Kun | 5 Máximas de Funakoshi | ASKKSA Shotokan Madeira",
-      "description": "Conheça as 5 máximas fundamentais do Dojo Kun desenvolvidas pelo Mestre Gichin Funakoshi. Princípios essenciais para todos os praticantes de Karaté.",
+      "title": "Dojo Kun | As 5 Máximas do Karaté Shotokan",
+      "description": "Conheça as cinco máximas do Dojo Kun e a forma como orientam o caráter, a sinceridade, o esforço, o respeito e o autocontrolo.",
       "keywords": "Dojo Kun, 5 Máximas Karaté, Gichin Funakoshi, Filosofia Dojo, Preceitos Dojo, Princípios Karaté, ASKKSA Madeira, Shotokan, Etiqueta Dojo"
     },
     "title": "Dojo Kun - As 5 Máximas",
-    "introduction": "O Mestre Gichin Funakoshi desenvolveu e aperfeiçoou cinco máximas sagradas que considerava essenciais para todos aqueles que entram num local de treino - o Dojo. Denominou esses mandamentos de Dojo Kun.",
-    "description": "Estas cinco máximas fundamentais estabelecem os princípios morais e éticos que devem guiar todos os praticantes dentro do dojo, criando um ambiente de respeito, disciplina e crescimento pessoal.",
+    "introduction": "O Dojo Kun reúne cinco máximas tradicionalmente recitadas no dojo. São orientações simples sobre caráter, sinceridade, esforço, respeito e autocontrolo.",
+    "description": "As cinco máximas recordam a conduta esperada durante o treino e ajudam a levar esses princípios para fora do dojo.",
     "maxims": {
       "character": {
         "title": "HITOTSU JINKAKU KANSEI NI TSUTOMURU KOTO",
@@ -1072,14 +1074,14 @@
   },
   "ShotokanKatas": {
     "meta": {
-      "title": "26 Katas Shotokan | Gichin Funakoshi | ASKKSA Shotokan Madeira",
-      "description": "Descubra os 26 katas do Karaté Shotokan de Gichin Funakoshi. Heian, Tekki, Bassai, Kanku - formas tradicionais preservadas há gerações.",
+      "title": "26 Kata do Karaté Shotokan | Guia ASKKSA",
+      "description": "Consulte os 26 kata praticados no Karaté Shotokan, incluindo as séries Heian e Tekki e formas como Bassai Dai, Kanku Dai e Enpi.",
       "keywords": "Katas Shotokan, 26 Katas, Heian Shodan, Tekki Bassai, Kanku, Gichin Funakoshi, Formas Karaté, ASKKSA Madeira, Kata Tradicional"
     },
     "name": "ASKKSA - Associação Shotokan Kokusai Karaté Santo António",
     "title": "Shotokan - 26 Katas",
-    "introduction": "O estilo Shotokan, fundado por Sensei Funakoshi, possui atualmente 26 katas que são estudadas ao longo de uma vida de treino.",
-    "description": "Cada kata representa uma forma única de combate imaginário, preservando técnicas ancestrais e filosofias do Karaté tradicional. Os katas são a essência do Karaté, combinando movimento, respiração e espírito.",
+    "introduction": "No Shotokan são estudados 26 kata ao longo das várias etapas de graduação. Cada forma apresenta desafios técnicos próprios e exige prática continuada.",
+    "description": "Cada kata organiza técnicas, deslocações e ritmos numa sequência definida. O estudo inclui a execução da forma e a compreensão das suas aplicações.",
     "katas": {
       "heian_shodan": {
         "name": "HEIAN SHODAN (平安初段)",
@@ -1220,7 +1222,7 @@
     "lang": "pt-PT"
   },
   "Footer": {
-    "mission": "Tradição, disciplina e excelência no Karaté Shotokan desde 2000. Descubra a sua força interior e o equilíbrio através da arte marcial milenar.",
+    "mission": "Respeito e Disciplina. Karaté Shotokan no Funchal desde 2000, para crianças, jovens e adultos.",
     "ourDojos": "Os Nossos Dojos",
     "contact": "Contacto",
     "followUs": "Siga-nos",
@@ -1228,7 +1230,34 @@
     "privacy": "Política de Privacidade",
     "copyright": "Todos os direitos reservados"
   },
+  "Privacy": {
+    "eyebrow": "Privacidade e transparência",
+    "title": "Política de Privacidade",
+    "intro": "Explicamos de forma clara que dados são tratados quando visita o site ou pede aulas experimentais, para que possa decidir com confiança.",
+    "updated": "Última atualização: 15 de agosto de 2026",
+    "summaryTitle": "Em resumo",
+    "summary": "Só pedimos os dados necessários para responder ao seu contacto. As estatísticas opcionais permanecem desligadas até dar consentimento.",
+    "controllerTitle": "1. Responsável pelo tratamento",
+    "controller": "A ASKKSA — Associação Shotokan Kokusai Karate Santo António é responsável pelo tratamento dos dados pessoais efetuado através deste site. Para questões de privacidade, contacte-nos através de direcao@askksa.pt.",
+    "dataTitle": "2. Dados que tratamos",
+    "data": "No formulário de aulas experimentais tratamos nome, idade, email, telefone opcional e informação sobre experiência anterior. O endereço IP é usado temporariamente para limitar envios abusivos e não é guardado numa base de dados pelo site.",
+    "purposeTitle": "3. Finalidades e fundamento",
+    "purpose": "Usamos os dados enviados para responder ao pedido, organizar as aulas experimentais e prevenir abuso do formulário. O tratamento do pedido é necessário para realizar diligências solicitadas por si; as estatísticas e tecnologias não essenciais dependem do seu consentimento.",
+    "cookiesTitle": "4. Cookies e medição",
+    "cookies": "Guardamos um cookie estritamente necessário com a sua escolha durante um ano. Se aceitar, podem ser ativados Google Tag Manager, métricas de desempenho e Vercel Web Analytics. A Vercel apresenta os dados de utilização de forma agregada e sem cookies de terceiros. Conteúdo externo, como o Facebook, só é carregado após consentimento.",
+    "sharingTitle": "5. Destinatários e conservação",
+    "sharing": "Os pedidos são enviados por email para a direção da ASKKSA através do fornecedor de correio configurado no servidor. Dados técnicos podem ser tratados pelos fornecedores de alojamento e análise. Conservamos os dados apenas durante o período necessário para responder, cumprir obrigações aplicáveis e proteger direitos legítimos.",
+    "rightsTitle": "6. Os seus direitos",
+    "rights": "Pode pedir acesso, correção, eliminação, limitação, portabilidade ou oposição ao tratamento dos seus dados e retirar o consentimento a qualquer momento. Pode também apresentar reclamação à Comissão Nacional de Proteção de Dados.",
+    "linksTitle": "Informação adicional",
+    "cnpd": "Comissão Nacional de Proteção de Dados",
+    "vercel": "Privacidade do Vercel Web Analytics",
+    "google": "Privacidade e termos da Google",
+    "contact": "Exercer os meus direitos"
+  },
   "CookieWarning": {
+    "ariaLabel": "Consentimento de cookies",
+    "privacyTitle": "Política de Privacidade",
     "description": "Este site utiliza cookies para facilitar a navegação e obter estatísticas de utilização. Poderá consultar a nossa Política de Privacidade",
     "linkText": "aqui",
     "acceptAll": "Aceitar Todos os Cookies",
@@ -1247,19 +1276,30 @@
       "button": "Pedir Aulas Experimentais",
       "success": "Pedido enviado com sucesso! Entraremos em contacto brevemente.",
       "error": "Ocorreu um erro ao enviar o seu pedido.",
-      "correctErrors": "Por favor, corrija os erros abaixo e tente novamente."
+      "correctErrors": "Por favor, corrija os erros abaixo e tente novamente.",
+      "rateLimited": "Foram enviados demasiados pedidos. Tente novamente mais tarde.",
+      "timeout": "O pedido demorou demasiado tempo. Tente novamente.",
+      "serverConfiguration": "Não foi possível enviar o pedido. Contacte-nos por telefone ou email."
+    },
+    "validation": {
+      "nameMin": "O nome deve ter pelo menos 2 caracteres.",
+      "nameMax": "O nome não pode exceder 100 caracteres.",
+      "ageMin": "A idade mínima é 4 anos.",
+      "ageMax": "Introduza uma idade válida.",
+      "email": "Introduza um endereço de email válido.",
+      "phone": "Introduza um número de telefone válido."
     },
     "yes": "sim",
     "no": "não"
   },
   "FAQ": {
     "meta": {
-      "title": "Perguntas Frequentes | Aulas de Karaté Funchal | ASKKSA Madeira",
-      "description": "Respostas sobre aulas de karaté no Funchal. Aula grátis, preços, horários, turmas infantis e adultos. Aprenda Karaté Shotokan na ASKKSA, principal dojo da Madeira.",
+      "title": "Aulas de Karaté no Funchal | Perguntas Frequentes",
+      "description": "Consulte os horários, idades, aulas experimentais e informações práticas para começar Karaté Shotokan na ASKKSA, no Funchal.",
       "keywords": "aulas karaté Funchal, preços karaté Madeira, karaté infantil Funchal, aulas karaté adultos, aula experimental gratuita, custos Karaté Shotokan, artes marciais Funchal, ASKKSA FAQ"
     },
     "title": "Perguntas Frequentes",
-    "subtitle": "Tudo o que precisa de saber para iniciar a sua jornada no Karaté Shotokan na ASKKSA, no Funchal, Madeira.",
+    "subtitle": "Informações práticas para começar a treinar Karaté Shotokan na ASKKSA, no Funchal.",
     "questions": {
       "q1": {
         "question": "Onde posso aprender karaté no Funchal, Madeira?",
@@ -1267,27 +1307,27 @@
       },
       "q2": {
         "question": "A primeira aula de karaté é mesmo gratuita?",
-        "answer": "Sim! Pode participar em 3 aulas experimentais GRATUITAS para conhecer o nosso método de ensino, os instrutores e o Karaté Shotokan. Sem compromisso. Contacte-nos pelo (+351) 960 384 090 ou direcao@askksa.pt para marcar a sua aula."
+        "answer": "Sim. Pode participar em três aulas experimentais gratuitas para conhecer o dojo, os instrutores e a forma como treinamos. Contacte-nos pelo (+351) 960 384 090 ou através de direcao@askksa.pt para marcar a primeira aula."
       },
       "q3": {
         "question": "Quais são os horários das aulas de karaté no Funchal?",
-        "answer": "Treinamos de segunda a sexta-feira. Crianças (até 12 anos) treinam das 19h30 às 20h30 e os adultos (a partir dos 12 anos) das 20h30 às 21h30. O horário foi pensado para as famílias e estudantes, por forma a potenciar o maior número possível de treinos semanais."
+        "answer": "No dojo principal, os treinos decorrem de segunda a sexta-feira. As crianças até aos 12 anos treinam das 19h30 às 20h30. A turma de jovens e adultos, a partir dos 12 anos, treina das 20h30 às 21h30."
       },
       "q4": {
         "question": "O meu filho pode começar karaté? Qual é a melhor idade?",
-        "answer": "Sim! Aceitamos crianças a partir dos 5 anos. O karaté ajuda a desenvolver disciplina, concentração, confiança e boa forma física. As nossas aulas infantis usam métodos adaptados à idade e promovem caráter e respeito. Muitos pais escolhem a ASKKSA pela nossa experiência no ensino a crianças."
+        "answer": "Sim. Aceitamos crianças a partir dos 5 anos. O treino é adaptado à idade e trabalha a coordenação, a concentração, o respeito e a disciplina num ambiente acompanhado pelos instrutores."
       },
       "q5": {
         "question": "Têm aulas de karaté para adultos e iniciantes?",
-        "answer": "Sim! Todos os adultos são bem-vindos, mesmo sem experiência ou boa forma física. As aulas para adultos, mesmo que iniciantes, são ministradas das 20h30-21h30 e visam ensinar Karaté Shotokan autêntico, ajudando a melhorar a condição física e a autoconfiança. Nunca é tarde para começar - temos alunos de todas as idades."
+        "answer": "Sim. Pode começar sem experiência prévia. A turma de jovens e adultos treina das 20h30 às 21h30, e os instrutores ajustam o trabalho técnico à condição física e ao nível de cada praticante."
       },
       "q6": {
         "question": "O que é o Karaté Shotokan e como é diferente?",
-        "answer": "O Karaté Shotokan SKIF é um estilo tradicional de karaté fundado pelo mestre Hirokazu Kanazawa em 1977. Baseia-se nos ensinamentos do mestre Gichin Funakoshi, que introduziu o karaté no Japão. A SKIF (Shotokan Karate International Federation) é uma grande organização mundial que promove o ensino do Shotokan de forma autêntica, focando na técnica correta e no desenvolvimento do caráter.\nEste estilo valoriza o treino rigoroso, a disciplina e o respeito, mantendo viva a tradição do karaté como arte marcial e caminho de vida. A SKIF tem muitos praticantes em vários países e é reconhecida pela sua ligação direta aos mestres originais do Shotokan."
+        "answer": "O Karaté Shotokan SKIF segue a linha técnica desenvolvida por Hirokazu Kanazawa, fundador da Shotokan Karate-do International Federation em 1977. Tem como referência os ensinamentos de Gichin Funakoshi e dá particular importância à técnica, à disciplina, ao respeito e ao desenvolvimento do caráter."
       },
       "q7": {
         "question": "Os vossos instrutores de karaté são qualificados e certificados?",
-        "answer": "Todos os instrutores da ASKKSA têm certificações nacionais da Federação Nacional de Karate – Portugal (FNK-P), entre o Grau I e o Grau III. O nosso principal instrutor, Shihan Jorge Freitas, tem mais de 40 anos de experiência. Temos também instrutores de 4º e 5º DAN, graduados pela SKIF Canada, assegurando um ensino de alta qualidade."
+        "answer": "A equipa inclui treinadores certificados pela Federação Nacional de Karate - Portugal (FNK-P), do Grau I ao Grau III, e instrutores graduados pela SKIF Canada. Na página Sobre pode consultar a graduação e as credenciais de cada instrutor."
       },
       "q8": {
         "question": "O que preciso de trazer para a minha primeira aula de karaté?",
@@ -1299,11 +1339,11 @@
       },
       "q10": {
         "question": "Posso visitar o dojo antes de me inscrever?",
-        "answer": "Claro! Encorajamos potenciais alunos e pais a visitar as nossas instalações, conhecer os nossos instrutores e observar uma aula. Contacte-nos pelo (+351) 960 384 090 ou direcao@askksa.pt para marcar uma visita. Também pode começar com as nossas 3 aulas experimentais gratuitas para experimentar o treino em primeira mão."
+        "answer": "Sim. Pode visitar o dojo, conhecer os instrutores e assistir a uma aula antes de decidir. Contacte-nos pelo (+351) 960 384 090 ou através de direcao@askksa.pt para combinar a visita."
       },
       "q11": {
         "question": "Quanto tempo demora para obter o cinto negro no karaté?",
-        "answer": "Tipicamente 4-6 anos de treino consistente para adultos, embora isto varie conforme a dedicação individual e aptidão natural. Na ASKKSA, focamo-nos na técnica adequada, desenvolvimento de caráter e compreensão profunda em vez de apressar as graduações. O nosso sistema de graduação segue os padrões tradicionais japoneses, e temos orgulho de ter formado muitos cintos negros que exemplificam o verdadeiro espírito do karaté."
+        "answer": "Não existe um prazo igual para todos. A progressão depende da assiduidade, da evolução técnica e do cumprimento dos critérios de graduação. O cinto negro representa uma nova etapa de aprendizagem, não o fim do percurso."
       }
     }
   }

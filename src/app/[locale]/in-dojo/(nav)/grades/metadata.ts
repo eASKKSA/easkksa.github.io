@@ -4,20 +4,21 @@ import type { Article, WithContext } from "schema-dts";
 
 import graduationsImage from "@/assets/in-dojo/graduacoes.jpg";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Graduations");
   const orgT = await getTranslations("Organization");
   const pathname = getPathname({ href: "/in-dojo/grades", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: t("meta.title"),
     description: t("meta.description"),
-    about: "Sistema de Graduações do Karaté Shotokan - Kyu e Dan",
-    articleSection: "Dojo",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
+    articleSection: t("title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
@@ -43,8 +44,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -79,13 +78,13 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "No Dojo" : "In Dojo",
+          name: labels.inDojo,
           item:
             process.env.NEXT_PUBLIC_SITE_URL +
             getPathname({ href: "/in-dojo", locale }),
@@ -93,7 +92,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
         {
           "@type": "ListItem",
           position: 3,
-          name: locale === "pt-PT" ? "Graduações" : "Grades",
+          name: labels.grades,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -107,23 +106,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations("Graduations");
   const pathname = getPathname({ href: "/in-dojo/grades", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({
-    href: "/in-dojo/grades",
-    locale: otherLocale,
-  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/in-dojo/grades", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/in-dojo/grades", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -145,7 +132,7 @@ export async function generateMetadata({
         },
       ],
       type: "article",
-      section: "Dojo",
+      section: t("title"),
       tags: t("meta.keywords").split(", "),
     },
     twitter: {

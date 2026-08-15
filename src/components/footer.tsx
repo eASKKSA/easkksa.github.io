@@ -1,243 +1,161 @@
 import { getTranslations } from "next-intl/server";
 import {
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaYoutube,
-} from "react-icons/fa";
+  LuArrowUpRight,
+  LuFacebook,
+  LuInstagram,
+  LuMail,
+  LuMapPin,
+  LuPhone,
+  LuYoutube,
+} from "react-icons/lu";
 import TrackableLink from "@/components/trackable-link";
 import { Link } from "@/i18n/navigation";
 
-// Social links now use react-icons
-const socialLinks = [
+const dojos = [
+  {
+    key: "dojo1" as const,
+    href: "https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6494094,-16.9254716,17z",
+  },
+  {
+    key: "dojo2" as const,
+    href: "https://www.google.com/maps/place/Junta+de+Freguesia+de+Santo+Ant%C3%B3nio/@32.6639189,-16.9402849,17z",
+  },
+  {
+    key: "dojo3" as const,
+    href: "https://www.google.com/maps/place/R.+Frei+Pedro+da+Guarda+36,+9300-066+C%C3%A2mara+de+Lobos/@32.6545281,-16.9726293,17z",
+  },
+];
+
+const socials = [
   {
     href: "https://www.facebook.com/ASKKSA.MADEIRA",
     label: "Facebook",
-    icon: <FaFacebookF size={20} />, // CHANGED
+    icon: LuFacebook,
   },
   {
     href: "https://www.instagram.com/askksa_madeira/",
     label: "Instagram",
-    icon: <FaInstagram size={20} />, // CHANGED
+    icon: LuInstagram,
   },
   {
     href: "https://www.youtube.com/@manuelrafaelpitajard",
     label: "YouTube",
-    icon: <FaYoutube size={20} />, // CHANGED
+    icon: LuYoutube,
   },
 ];
 
-const Footer = async () => {
+export default async function Footer() {
   const t = await getTranslations("Footer");
   const tOrg = await getTranslations("Organization");
 
   return (
     <footer>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Column 1: Brand & Mission */}
-          <div className="space-y-4 col-span-2">
-            <Link href="/" className="inline-block" prefetch={false}>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                {tOrg("name")}
-              </h2>
-            </Link>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {t("mission")}
-            </p>
-          </div>
-
-          {/* Column 3: Locations */}
+      <div className="mx-auto max-w-[1450px] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+        <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr_.65fr]">
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">
-              {t("ourDojos")}
-            </h3>
-            <div className="mt-4 space-y-4 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-start">
-                <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                <div>
-                  <a
-                    className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
-                    target="_blank"
-                    href="https://www.google.com/maps/place/ASKKSA+-+Associa%C3%A7%C3%A3o+Shotokan+Kokusai+Karate+Santo+Ant%C3%B3nio/@32.6497497,-16.9281768,17z/data=!4m14!1m7!3m6!1s0xc605fef4dcb28af:0xde88828dff1a2efd!2sEscola+Dr.+Hor%C3%A1cio+Bento+de+Gouveia!8m2!3d32.6497497!4d-16.9256019!16s%2Fg%2F12jblrwj6!3m5!1s0xc605fd22ec4ffb7:0x85b9d195f67c98c6!8m2!3d32.6494094!4d-16.9254716!16s%2Fg%2F11qn08q2zw?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
-                    rel="noopener"
-                  >
-                    {tOrg("dojo1.name")}
-                  </a>
-                  <address>
-                    <p>{tOrg("dojo1.address.name")}</p>
-                    <p>{`${tOrg("dojo1.address.addressLocality")}, ${tOrg("dojo1.address.addressRegion")}`}</p>
-                  </address>
-                  <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-800 dark:text-gray-200">
-                      Rafael Jardim
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <FaPhone className="text-primary flex-shrink-0" />
-                      <TrackableLink
-                        href="tel:+351960384090"
-                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        gtmEvent="contact_click"
-                        gtmParams={{ contact_method: "phone" }}
-                      >
-                        +351 960 384 090
-                      </TrackableLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                <div className="w-full">
-                  <a
-                    className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
-                    target="_blank"
-                    href="https://www.google.com/maps/place/Junta+de+Freguesia+de+Santo+António/@32.6639233,-16.9451558,17z/data=!3m1!4b1!4m6!3m5!1s0xc605f234ec15fc9:0x7c97dfaa734fe732!8m2!3d32.6639189!4d-16.9402849!16s%2Fg%2F11h4s4ccfx?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
-                    rel="noopener"
-                  >
-                    {tOrg("dojo2.name")}
-                  </a>
-                  <address>
-                    <p>{tOrg("dojo2.address.name")}</p>
-                    <p>{`${tOrg("dojo2.address.addressLocality")}, ${tOrg("dojo2.address.addressRegion")}`}</p>
-                  </address>
-                  <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-800 dark:text-gray-200">
-                      Marisa Gomes
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <FaPhone className="text-primary flex-shrink-0" />
-                      <TrackableLink
-                        href="tel:+351965713358"
-                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        gtmEvent="contact_click"
-                        gtmParams={{ contact_method: "phone" }}
-                      >
-                        +351 965 713 358
-                      </TrackableLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <FaMapMarkerAlt className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />{" "}
-                <div>
-                  <a
-                    className="font-semibold text-gray-800 dark:text-gray-200 hover:text-primary transition-colors"
-                    target="_blank"
-                    href="https://www.google.com/maps/place/R.+Frei+Pedro+da+Guarda+36,+9300-066+Câmara+de+Lobos/@32.6545326,-16.9752042,17z/data=!3m1!4b1!4m6!3m5!1s0xc605f121f097781:0x7b5a00bb7ea01d2a!8m2!3d32.6545281!4d-16.9726293!16s%2Fg%2F11mcxk01nt?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
-                    rel="noopener"
-                  >
-                    {tOrg("dojo3.name")}
-                  </a>
-                  <address>
-                    <p>{tOrg("dojo3.address.name")}</p>
-                    <p>{`${tOrg("dojo3.address.addressLocality")}, ${tOrg("dojo3.address.addressRegion")}`}</p>
-                  </address>
-                  <div className="flex items-center justify-between mt-2 text-xs">
-                    <span className="text-gray-800 dark:text-gray-200">
-                      Jorge Freitas
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <FaPhone className="text-primary flex-shrink-0" />
-                      <TrackableLink
-                        href="tel:+351965012299"
-                        className="text-gray-800 dark:text-gray-200 hover:text-red-700 transition-colors font-medium"
-                        gtmEvent="contact_click"
-                        gtmParams={{ contact_method: "phone" }}
-                      >
-                        +351 965 012 299
-                      </TrackableLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <Link href="/" className="inline-block" prefetch={false}>
+              <span className="font-display text-6xl font-bold leading-none tracking-[0.04em]">
+                ASKKSA
+              </span>
+            </Link>
+            <p className="mt-5 max-w-lg text-stone-400">{t("mission")}</p>
+            <div className="mt-7 flex gap-2">
+              {socials.map(({ href, label, icon: Icon }) => (
+                <TrackableLink
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid size-11 place-items-center rounded-full border border-white/15 text-stone-300 transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-white"
+                  gtmEvent="social_click"
+                  gtmParams={{ platform: label.toLowerCase() }}
+                >
+                  <Icon className="size-4" aria-hidden="true" />
+                </TrackableLink>
+              ))}
             </div>
           </div>
 
-          {/* Column 4: Contact & Social */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              {t("ourDojos")}
+            </h2>
+            <div className="mt-5 divide-y divide-white/10 border-y border-white/10">
+              {dojos.map((dojo) => (
+                <a
+                  key={dojo.key}
+                  href={dojo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group grid grid-cols-[auto_1fr_auto] items-start gap-3 py-4 text-sm transition-colors duration-200 hover:text-white"
+                >
+                  <LuMapPin
+                    className="mt-1 size-4 text-primary"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    <span className="block font-semibold text-stone-200">
+                      {tOrg(`${dojo.key}.name`)}
+                    </span>
+                    <span className="mt-1 block text-stone-500">
+                      {tOrg(`${dojo.key}.address.addressLocality`)},{" "}
+                      {tOrg(`${dojo.key}.address.addressRegion`)}
+                    </span>
+                  </span>
+                  <LuArrowUpRight
+                    className="mt-1 size-4 text-stone-600 transition-colors group-hover:text-primary"
+                    aria-hidden="true"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
               {t("contact")}
-            </h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li className="flex items-center">
-                <FaPhone className="h-4 w-4 text-primary mr-3" />{" "}
-                <TrackableLink
-                  href={`tel:+351960384090`}
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-                  gtmEvent="contact_click"
-                  gtmParams={{ contact_method: "phone" }}
-                >
-                  +351 960 384 090
-                </TrackableLink>
-              </li>
-              <li className="flex items-center">
-                <FaEnvelope className="h-4 w-4 text-primary mr-3" />{" "}
-                <TrackableLink
-                  href="mailto:direcao@askksa.pt"
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-                  gtmEvent="contact_click"
-                  gtmParams={{ contact_method: "email" }}
-                >
-                  direcao@askksa.pt
-                </TrackableLink>
-              </li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">
-                {t("followUs")}
-              </h3>
-              <div className="flex space-x-4 mt-4">
-                {socialLinks.map((social) => (
-                  <TrackableLink
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-                    aria-label={social.label}
-                    gtmEvent="social_click"
-                    gtmParams={{ platform: social.label.toLowerCase() }}
-                  >
-                    {social.icon}
-                  </TrackableLink>
-                ))}
-              </div>
+            </h2>
+            <div className="mt-5 space-y-4 text-sm text-stone-300">
+              <TrackableLink
+                href="tel:+351960384090"
+                className="flex items-center gap-3 transition-colors hover:text-white"
+                gtmEvent="contact_click"
+                gtmParams={{ contact_method: "phone" }}
+              >
+                <LuPhone className="size-4 text-primary" aria-hidden="true" />
+                +351 960 384 090
+              </TrackableLink>
+              <TrackableLink
+                href="mailto:direcao@askksa.pt"
+                className="flex items-center gap-3 transition-colors hover:text-white"
+                gtmEvent="contact_click"
+                gtmParams={{ contact_method: "email" }}
+              >
+                <LuMail className="size-4 text-primary" aria-hidden="true" />
+                direcao@askksa.pt
+              </TrackableLink>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex gap-6 text-sm">
-              <Link
-                href="/faq"
-                prefetch={false}
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                {t("faq")}
-              </Link>
-              <Link
-                href="/privacy-policy"
-                prefetch={false}
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                {t("privacy")}
-              </Link>
-            </div>
-            <small className="text-sm text-gray-500 dark:text-gray-400 text-center">
-              &copy; {new Date().getFullYear()} {tOrg("name")}. {t("copyright")}
-              .
-            </small>
+        <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-7 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex gap-6">
+            <Link href="/faq" className="transition-colors hover:text-white">
+              {t("faq")}
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="transition-colors hover:text-white"
+            >
+              {t("privacy")}
+            </Link>
           </div>
+          <small className="text-sm">
+            © {new Date().getFullYear()} ASKKSA. {t("copyright")}.
+          </small>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

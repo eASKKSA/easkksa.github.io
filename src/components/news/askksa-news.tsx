@@ -21,12 +21,14 @@ interface ASKKSANewsProps {
   title: string;
   subtitle: string;
   readMore: string;
+  locale: Locale;
 }
 
 export default async function ASKKSANews({
   title,
   subtitle,
   readMore,
+  locale,
 }: Readonly<ASKKSANewsProps>) {
   const t = await getTranslations("News.sections.askksa");
   const timeT = await getTranslations("News.timeLabels");
@@ -48,12 +50,14 @@ export default async function ASKKSANews({
 
     if (diffInHours < 1) {
       return timeT("fewMinutes");
+    } else if (diffInHours === 1) {
+      return timeT("oneHour");
     } else if (diffInHours < 24) {
-      return `Há ${diffInHours} hora${diffInHours > 1 ? "s" : ""}`;
+      return timeT("hours", { count: diffInHours });
     } else if (diffInHours < 48) {
       return timeT("yesterday");
     } else {
-      return date.toLocaleDateString("pt-PT", {
+      return date.toLocaleDateString(locale, {
         day: "numeric",
         month: "long",
         year: "numeric",
@@ -68,9 +72,9 @@ export default async function ASKKSANews({
         <div className="flex items-center gap-3">
           <FaSearch className="text-primary text-2xl" />
           <div>
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+            <h2 className="text-xl font-bold text-gray-800 dark:text-white">
               {title}
-            </h3>
+            </h2>
             <p className="text-gray-600 dark:text-gray-400">{subtitle}</p>
           </div>
         </div>
@@ -85,9 +89,9 @@ export default async function ASKKSANews({
       {news.length === 0 ? (
         <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg border border-primary/20">
           <FaNewspaper className="text-4xl text-primary/60 mx-auto mb-4" />
-          <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
+          <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
             {t("noNews.title")}
-          </h4>
+          </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             {t("noNews.message")}
           </p>
@@ -130,9 +134,9 @@ export default async function ASKKSANews({
               </div>
 
               {/* Descrição */}
-              <h4 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white leading-tight pb-3">
+              <h3 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white leading-tight pb-3">
                 {item.title}
-              </h4>
+              </h3>
 
               {/* Footer do artigo */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">

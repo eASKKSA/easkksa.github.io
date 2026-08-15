@@ -2,28 +2,26 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { WebPage, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<WebPage>> => {
   const pathname = getPathname({ href: "/news", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: t("meta.title"),
     description: t("meta.description"),
-    about:
-      locale === "pt-PT"
-        ? "Notícias e Eventos ASKKSA"
-        : "ASKKSA News and Events",
-    keywords: t("meta.keywords"),
+    about: labels.newsAndEvents,
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon-512x512.png`,
-      caption: "ASKKSA - Notícias e Eventos",
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -44,8 +42,6 @@ export const jsonLd = async (
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -58,13 +54,13 @@ export const jsonLd = async (
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "Notícias" : "News",
+          name: labels.news,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -75,20 +71,11 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("News");
   const pathname = getPathname({ href: "/news", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/news", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/news", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/news", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",

@@ -30,19 +30,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 type Href = Extract<Parameters<typeof getPathname>[0]["href"], string>;
 
 function getEntries(href: Href) {
-  const metadata = routeMeta[href] ?? {
-    changeFrequency: "monthly",
-    priority: 0.5,
-    lastModified: now,
-  };
-
   return routing.locales.map((locale) => ({
     url: getUrl(href, locale),
-    ...metadata,
     alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((cur) => [cur, getUrl(href, cur)]),
-      ),
+      languages: {
+        ...Object.fromEntries(
+          routing.locales.map((cur) => [cur, getUrl(href, cur)]),
+        ),
+        "x-default": getUrl(href, "pt-PT"),
+      },
     },
   }));
 }
@@ -51,90 +47,3 @@ function getUrl(href: Href, locale: Locale) {
   const pathname = getPathname({ locale, href });
   return host + pathname;
 }
-
-const now = new Date();
-
-const routeMeta: Partial<
-  Record<Href, Omit<MetadataRoute.Sitemap[0], "url" | "alternates">>
-> = {
-  "/": {
-    priority: 1.0,
-    changeFrequency: "weekly",
-    lastModified: now,
-  },
-  "/about": {
-    priority: 0.9,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/news": {
-    priority: 0.8,
-    changeFrequency: "weekly",
-    lastModified: now,
-  },
-  "/history": {
-    priority: 0.7,
-    changeFrequency: "yearly",
-    lastModified: now,
-  },
-  "/style-ski": {
-    priority: 0.7,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/philosophy": {
-    priority: 0.8,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/philosophy/bushido": {
-    priority: 0.7,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/philosophy/dojo-kun": {
-    priority: 0.7,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/philosophy/niju-kun": {
-    priority: 0.7,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/in-dojo": {
-    priority: 0.8,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/in-dojo/salutation": {
-    priority: 0.6,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/in-dojo/rules": {
-    priority: 0.6,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/in-dojo/vocabulary": {
-    priority: 0.6,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/in-dojo/grades": {
-    priority: 0.6,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-  "/privacy-policy": {
-    priority: 0.3,
-    changeFrequency: "yearly",
-    lastModified: now,
-  },
-  "/faq": {
-    priority: 0.4,
-    changeFrequency: "monthly",
-    lastModified: now,
-  },
-};

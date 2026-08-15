@@ -1,0 +1,1350 @@
+{
+  "Navbar": {
+    "about": "À propos",
+    "news": "Actualités",
+    "in-dojo": "Dans le Dojo",
+    "history": "Histoire",
+    "philosophy": "Philosophie",
+    "style-ski": "Style SKI"
+  },
+  "Organization": {
+    "name": "ASKKSA — Associação Shotokan Kokusai Karaté Santo António",
+    "sport": "Karaté",
+    "description": "Une association de karaté shotokan à Funchal, fondée en 2000 et guidée par le respect et la discipline.",
+    "addressLocality": "Funchal",
+    "addressRegion": "Madère",
+    "addressCountry": "PT",
+    "streetAddress": "École Horácio Bento de Gouveia",
+    "contactType": "Informations générales",
+    "dojo1": {
+      "name": "Dojo principal — École Horácio Bento de Gouveia",
+      "address": {
+        "name": "École Horácio Bento de Gouveia",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madère",
+        "addressCountry": "PT"
+      }
+    },
+    "dojo2": {
+      "name": "Dojo de la Junta de Freguesia de Santo António",
+      "address": {
+        "name": "Junta de Freguesia de Santo António",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madère",
+        "addressCountry": "PT"
+      }
+    },
+    "dojo3": {
+      "name": "Clube Desportivo de Câmara de Lobos (soutien technique)",
+      "address": {
+        "name": "Rua Frei Pedro da Guarda",
+        "addressLocality": "Câmara de Lobos",
+        "addressRegion": "Madère",
+        "addressCountry": "PT"
+      }
+    }
+  },
+  "Home": {
+    "meta": {
+      "title": "Cours de Karaté Shotokan à Funchal | ASKKSA",
+      "description": "Cours de Karaté Shotokan à Funchal pour enfants, adolescents et adultes. Consultez les horaires et les dojos de l’ASKKSA. Trois cours d’essai gratuits.",
+      "keywords": "ASKKSA, Funchal, Madère, Santo António, dojo, Horácio Bento, sensei, Karaté, Shotokan"
+    },
+    "title": "Association Internationale de Karaté Shotokan Santo Antoine",
+    "hero": {
+      "title": "Karaté Shotokan à Funchal pour les enfants, les adolescents et les adultes. Depuis 2000, nous enseignons avec rigueur, suivi personnalisé, respect et discipline.",
+      "experience": "Nous enseignons le Karaté Shotokan à Funchal depuis 2000, dans le respect de la tradition",
+      "schedule": {
+        "title": "Trouvez l’horaire d’entraînement qui vous convient"
+      },
+      "cta": {
+        "text": "Découvrez le dojo, rencontrez les instructeurs et voyez comment nous nous entraînons.",
+        "trial": "Les trois premiers cours sont ",
+        "free": "gratuits !"
+      }
+    },
+    "buttons": {
+      "trialClass": "3 cours d’essai gratuits",
+      "reviewUs": "Désormais essayé? Réévaluez-nous!"
+    },
+    "sections": {
+      "whyChoose": "Pourquoi choisir ASKKSA?",
+      "schedule": "Calendrier de séances",
+      "visitDojo": "Visitez notre Dojo"
+    },
+    "features": {
+      "tradition": {
+        "title": "Tradition Shotokan",
+        "description": "Pratiquez le Karaté Shotokan avec rigueur technique et dans le respect des principes de la discipline."
+      },
+      "instructors": {
+        "title": "Instructeurs Certifiés",
+        "description": "Apprenez auprès d’instructeurs gradés et titulaires de certifications d’entraîneur de la Fédération Nationale de Karaté — Portugal."
+      },
+      "community": {
+        "title": "Tous âges",
+        "description": "Les cours accueillent les enfants, les adolescents et les adultes, avec un entraînement adapté à l’âge et à l’expérience de chacun."
+      }
+    },
+    "schedule": {
+      "weekdays": "Lundi à vendredi",
+      "children": "Enfants de moins de 12 ans",
+      "adults": "Adults de 12 ans et plus",
+      "time1": "19h30 à 20h30",
+      "time2": "20h30 à 21h30"
+    },
+    "contact": {
+      "location": "Emplacement",
+      "loadMap": "Chargement de la carte interactive…",
+      "phone": "Téléphone",
+      "email": "Courriel",
+      "address": "École Horácio Bento de Gouveia, 9004-524 Funchal",
+      "phoneNumber": "(+351) 960 384 090",
+      "emailParts": {
+        "user": "direction",
+        "domain": "askksa",
+        "tld": "fr"
+      }
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Association Santo Antonio Association",
+    "sport": "Karate",
+    "description": "Une association de karaté shotokan à Funchal, fondée en 2000 et guidée par le respect et la discipline.",
+    "addressLocality": "Funchal",
+    "addressRegion": "Madère",
+    "addressCountry": "FR",
+    "streetAddress": "École Horácio Bento de Gouveia",
+    "contactType": "Informations générales",
+    "dojo1": {
+      "name": "Dojo principal — École Horácio Bento de Gouveia",
+      "address": {
+        "name": "École Horácio Bento de Gouveia",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madère",
+        "addressCountry": "FR"
+      }
+    },
+    "dojo2": {
+      "name": "Dojo du conseil du Parc Santo Antonio",
+      "address": {
+        "name": "Junta de Freguesia de Santo António",
+        "addressLocality": "Funchal",
+        "addressRegion": "Madère",
+        "addressCountry": "PT"
+      }
+    },
+    "dojo3": {
+      "name": "Dojo des Sports de Câmara de Lobos (Soutien Technique)",
+      "address": {
+        "name": " Rue Frei Pedro da Guarda",
+        "addressLocality": "Camara de Lobos",
+        "addressRegion": "Madère",
+        "addressCountry": "PT"
+      }
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "À propos de l’ASKKSA | Instructeurs et dojos à Funchal",
+      "description": "Découvrez l’ASKKSA, fondée à Funchal en 2000, ses instructeurs certifiés, ses ceintures noires et ses dojos de Karaté Shotokan à Madère.",
+      "keywords": "Qui sommes-nous, Histoire d'ASKKSA, Instructeurs de Karaté, Jorge Freitas, Rafael Jardim, Marisa Gomes, Tito Velosa, Dojos de Funchal, ASKKSA, Shotokan, FNK-P, AKRAM, Madeira"
+    },
+    "orgName": "ASKKSA - Association Internationale de Shotokan Karaté Santo Antonio",
+    "orgDescription": "L’ASKKSA enseigne le Karaté Shotokan à Funchal depuis 2000, avec des cours pour différents âges et un entraînement fondé sur le respect et la discipline.",
+    "orgSport": "Shotokan Karaté",
+    "title": "À propos de l’ASKKSA",
+    "description": "L’ASKKSA a été fondée à Funchal en avril 2000 pour enseigner et développer le Karaté Shotokan à Madère. L’association est affiliée à la Fédération Nationale de Karaté — Portugal (FNK-P) et à l’Association de Karaté de la Région Autonome de Madère (AKRAM). Elle est reconnue par la Direction régionale des sports.",
+    "instructors": {
+      "title": "Nos Instructeurs",
+      "subtitle": "L'équipe compte des instructeurs expérimentés, agréés et titrés au niveau national. Chaque élève reçoit une formation adaptée à son niveau.",
+      "jorgeFreitas": {
+        "name": "Shihan Jorge Freitas",
+        "graduation": "6e DAN",
+        "credential1": "Pratique le Karaté depuis {startYear}",
+        "credential2": "Diplômé de SKIF Canada et SKIF",
+        "credential3": "Maître de Karaté Grade III (FNK-P)",
+        "credential4": "Arbitre national B (FNK-P)"
+      },
+      "rafaelJardim": {
+        "name": "Sensei Rafael Jardim",
+        "graduation": "5e DAN",
+        "credential1": "Pratique le Karaté depuis {startYear}",
+        "credential2": "Diplômé de SKIF Canada & ASKKM",
+        "credential3": "Maître de Karaté Grade I (FNK-P)",
+        "credential4": "Arbitre national A (FNK-P)"
+      },
+      "marisaGomes": {
+        "name": "Sensei Marisa Gomes",
+        "graduation": "5e DAN",
+        "credential1": "Pratique le Karaté depuis {startYear}",
+        "credential2": "Diplômé de SKIF Canada & SKIF",
+        "credential3": "Maître de Karaté Grade II (FNK-P)",
+        "credential4": "Juge national de Karaté (FNK-P)"
+      },
+      "titoVelosa": {
+        "name": "Sensei Tito Velosa",
+        "graduation": "5e DAN",
+        "credential1": "Pratique le Karaté depuis {startYear}",
+        "credential2": "Diplômé de SKIF Canada & SKIF",
+        "credential3": "Maître de Karaté Grade II (FNK-P)",
+        "credential4": "Arbitre National B (AKRAM)"
+      }
+    },
+    "auxiliaryInstructors": "Instructeurs auxiliaires",
+    "dojos": {
+      "title": "Nos Dojos",
+      "subtitle": "L’ASKKSA dispose de deux dojos à Funchal : l’École Horácio Bento de Gouveia et la Junta de Freguesia de Santo António. L’équipe apporte aussi un soutien technique au Clube Desportivo de Câmara de Lobos.",
+      "loadMap": "Chargement carte interactive…",
+      "dojo1": {
+        "name": "Dojo principal ASKKSA — École Horácio Bento de Gouveia",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.6881340004275!2d-16.9258261!3d32.6494299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fd22ec4ffb7%3A0x85b9d195f67c98c6!2sASKKSA%20-%20Associa%C3%A7%C3%A3o%20Shotokan%20Kokusai%20Karate%20Santo%20Ant%C3%B3nio!5e0!3m2!1sen!2spt!4v1749741610154!5m2!1sen!2spt"
+      },
+      "dojo2": {
+        "name": "Dojo ASKKSA — Junta de Freguesia de Santo António",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839.7119896617946!2d-16.9409179!3d32.6634899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f234ec15fc9%3A0x7c97dfaa734fe732!2sJunta%20de%20Freguesia%20de%20Santo%20Ant%C3%B3nio!5e0!3m2!1spt-PT!2spt!4v1749741985599!5m2!1spt-PT!2spt"
+      },
+      "dojo3": {
+        "name": "Pavillon des Sports Dojo de Câmara de Lobos (Assistance Technique)",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.1845560384036!2d-16.975204222883683!3d32.6545325902329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605f121f097781%3A0x7b5a00bb7ea01d2a!2sR.%20Frei%20Pedro%20da%20Guarda%2036%2C%209300-066%20C%C3%A2mara%20de%20Lobos!5e0!3m2!1spt-PT!2spt!4v1752769852861!5m2!1spt-PT!2spt"
+      }
+    },
+    "hallBlackBelts": {
+      "title": "Salle des Belts Noirs",
+      "subtitle": "Rencontre les pratiquants qui ont obtenu leur ceinture noire chez ASKKSA. Chaque grade reflète des années d'entraînement, de responsabilité et de dévouement au dojo."
+    }
+  },
+  "News": {
+    "meta": {
+      "title": "Actualités de l’ASKKSA | Karaté Shotokan à Madère",
+      "description": "Suivez les actualités, activités, stages et événements de l’ASKKSA à Funchal et à Madère, ainsi que ses publications sur les réseaux sociaux.",
+      "keywords": "Actualités ASKKSA, Événements de Karaté, Concours, Instagram, Facebook, Mises à jour, ASKKSA, Shotokan, Funchal, Madeira"
+    },
+    "name": "ASKKSA: Association de Karaté Shotokan International Kokusai Santo Antonio",
+    "title": "Actualités et Événements",
+    "subtitle": "ASKKSA dans les médias",
+    "lastUpdate": "Mise à jour récente",
+    "readMore": "Lire plus",
+    "viewPost": "Voir le post",
+    "loading": "Chargement...",
+    "error": "Erreur de chargement du contenu",
+    "sections": {
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Page officielle ASKKSA",
+        "viewMore": "Voir plus sur Facebook",
+        "loadEmbed": "Chargement du flux Facebook…",
+        "embedConsent": "Le flux Facebook externe est uniquement chargé après que vous acceptiez des cookies facultatifs.",
+        "embedOpen": "Ouvrez sur Facebook",
+        "description": "Restez informés de nos dernières actualités, événements et nouvelles",
+        "cta": {
+          "title": "Karate Shotokan ASKKSA",
+          "button": "Suivre la page",
+          "link": "Voir les derniers articles"
+        }
+      },
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Follow us at @askksa_madeira",
+        "viewMore": "Voir plus sur Instagram",
+        "cta": {
+          "username": "@askksa_madeira",
+          "description": "Suivez nos entraînements, nos réalisations et les moments derrière les scènes de notre dojo!",
+          "button": "Suivre sur Instagram"
+        }
+      },
+      "youtube": {
+        "title": "YouTube",
+        "subtitle": "Vidéos et démonstrations",
+        "viewMore": "Voir plus sur YouTube",
+        "cta": {
+          "title": "Le canal ASKKSA",
+          "description": "Vidéos de kata, techniques et événements récents",
+          "button": "Regarder sur YouTube"
+        }
+      },
+      "askksa": {
+        "title": "Actualités ASKKSA",
+        "subtitle": "Mentions de notre association dans les médias",
+        "searchTerm": "Recherche: \"ASKKSA\"",
+        "sortLabel": "Plus récent",
+        "mostRecent": "Le plus récent",
+        "noNews": {
+          "title": "Aucune actualité trouvée",
+          "message": "Pas d'actualités récentes concernant ASKKSA ont été trouvées",
+          "button": "Rechercher sur Google News"
+        },
+        "seeMore": "Voir plus d'actualités ASKKSA",
+        "sortInfo": "Les actualités sont classées par ordre récent à ancien."
+      }
+    },
+    "timeLabels": {
+      "fewMinutes": "Il y a quelques minutes",
+      "oneHour": "Il y a une heure",
+      "hours": "{count} heures écoulées",
+      "yesterday": "Hier",
+      "daysAgo": "{count} jours écoulés"
+    }
+  },
+  "InDojo": {
+    "meta": {
+      "title": "Dans le dojo | Salut, règles et grades de Karaté",
+      "description": "Découvrez le salut, les règles du dojo, le vocabulaire japonais et le système de grades utilisés pendant les entraînements de Karaté Shotokan de l’ASKKSA.",
+      "keywords": "Dojo de Karaté, Etiquette de Karaté, Règles du Dojo, Salut OSS, Vocabulaire Japonais, Grades de Karaté, Traditions Japonaises, ASKKSA Madeira, Shotokan"
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
+    "title": "Dans le Dojo",
+    "introduction": "Le dojo est un lieu d'apprentissage. Les règles et les exercices de karaté nous enseignent à pratiquer la devise ASKKSA : Le Respect et la Discipline.",
+    "sections": {
+      "salutation": {
+        "title": "Salut",
+        "description": "Baisse est ouverte et fermée à chaque séance. C'est une façon simple de saluer le dojo, l'instructeur et ses camarades d'élèves.",
+        "href": "/in-dojo/salutation"
+      },
+      "rules": {
+        "title": "Règles",
+        "description": "Les règles du dojo aident tout élève à se former de manière sûre, attentive et avec respect envers ses camarades d'élèves.",
+        "href": "/in-dojo/rules"
+      },
+      "vocabulary": {
+        "title": "Vocabulaire",
+        "description": "Apprenez les termes japonais les plus souvent utilisés pour les instructions, les techniques et les séquences de formation.",
+        "href": "/in-dojo/vocabulary"
+      },
+      "grades": {
+        "title": "Étapes",
+        "description": "Comprenez comment fonctionnent les grades Kyu et Dan et ce que signifient les couleurs des ceintures.",
+        "href": "/in-dojo/grades"
+      }
+    },
+    "philosophy": {
+      "title": "La vie dans le dojo",
+      "description": "Chacun a la responsabilité de maintenir l'environnement de formation. Suivre les règles, prendre soin de l'espace et respecter les autres permet à la séance de se former de manière sûre et avec concentration."
+    },
+    "navigation": {
+      "title": "Navigation dans les pages du dojo",
+      "salutation": "Salutation",
+      "rules": "Règles",
+      "vocabulary": "Vocabulaire",
+      "grades": "Étapes"
+    },
+    "explore": "Explore →"
+  },
+  "Salutation": {
+    "meta": {
+      "title": "Baisse de Karate | Oss, Seiza, Mokuso et Réi",
+      "description": "Apprendre le sens de la baisse en Shotokan Karaté et les rituels utilisés au début et à la fin de l'entraînement : Oss, Seiza, Mokuso et Réi.",
+      "keywords": "Baisse de Karaté, OSS, Rituels du dojo, Seijitsu, Mokuso, Seiza, Shomen ni Réi, Sensei ni Réi, Etiquette de Karaté, ASKKSA Madeira, Shotokan"
+    },
+    "title": "Baisse de Karate",
+    "introduction": "La baisse fait partie de chaque classe de karaté. Elle peut être une simple Oss entre les étudiants ou le rituel formel qui ouvre et ferme l'entraînement. Dans tous les cas, elle exprime une volonté d'apprendre, un respect pour ceux qui entraînent avec nous et soin au dojo.",
+    "description": "Lorsque nous entrons dans le dojo, nous reconnaissons l'espace, l'instructeur et nos camarades de classe. Cette geste nous rappelle que la formation commence par le respect et l'attention.",
+    "oss": {
+      "title": "La parole \"OSS\"",
+      "origin": "Étudiée à partir du mot japonais Ossishinobu, équivalent à notre bonjour ou salut de la journée, elle est un salut plein d'attente, de respect et d'appréciation, et peut avoir des significations différentes en fonction de l'intonation.",
+      "creation": "L'expression OSS a été créée à l'Académie navale japonaise et est utilisée partout pour les expressions quotidiennes telles que \"oui\", « s'il vous plaît », « merci », « compris », « excusez-moi », etc., ainsi que dans le monde du Karaté pour presque toutes les situations où une réponse est requise.",
+      "importance": "Pour un karateka, OSS est la parole la plus importante. OSS signifie pousser oneself à la limite de sa capacité et endurer.",
+      "meaning": "OSS signifie, tout simplement, « persévérer sous pression ». C'est une parole qui en soi résume la philosophie du Karaté.",
+      "spirit": "Un bon pratiquant de Karaté est celui qui cultive le « spirit de OSS »."
+    },
+    "rituals": {
+      "title": "Rituels de salut",
+      "start": {
+        "title": "Cérémonie d'ouverture",
+        "steps": [
+          {
+            "number": 1,
+            "command": "SEIZA",
+            "meaning": "Assurer les rituels de salut.Étape 1 : Se tenir assis"
+          },
+          {
+            "number": 2,
+            "command": "MOKUSO",
+            "meaning": "Méditer"
+          },
+          {
+            "number": 3,
+            "command": "MOKUSO YAME",
+            "meaning": "Arrêter de méditer"
+          },
+          {
+            "number": 4,
+            "command": "SHOMEN NI REI",
+            "meaning": "Se bowser vers l'infini essence"
+          },
+          {
+            "number": 5,
+            "command": "SENSEI NI REI",
+            "meaning": "Se bowser devant le maître (enseignant)"
+          },
+          {
+            "number": 6,
+            "command": "KIRITSU",
+            "meaning": "Se lever"
+          }
+        ]
+      },
+      "end": {
+        "title": "Rituel de fermeture",
+        "steps": [
+          {
+            "number": 1,
+            "command": "SEIZA",
+            "meaning": "Se tenir"
+          },
+          {
+            "number": 2,
+            "command": "MOKUSO",
+            "meaning": "Méditer"
+          },
+          {
+            "number": 3,
+            "command": "MOKUSO YAME",
+            "meaning": "Arrêter de méditer"
+          },
+          {
+            "number": 4,
+            "command": "HEIJOSHIN KORE KARATE DO NARI",
+            "meaning": "Nous nous efforçons spirituellement dans cette forme de karaté"
+          },
+          {
+            "number": 5,
+            "command": "NICHI NICHI NO KOKORO",
+            "meaning": "Avec le cœur chaque jour"
+          },
+          {
+            "number": 6,
+            "command": "OKOTARU BEKARAZU",
+            "meaning": "Apprendre avec discipline"
+          },
+          {
+            "number": 7,
+            "command": "SHOMEN NI REI",
+            "meaning": "Se lever pour l'infini essence"
+          },
+          {
+            "number": 8,
+            "command": "SENSEI NI REI",
+            "meaning": "Se lever au Maître"
+          },
+          {
+            "number": 9,
+            "command": "DÔMÔ ARIGATO GOZAIMASU SENSEI",
+            "meaning": "Merci beaucoup pour la formation, Sensei."
+          },
+          {
+            "number": 10,
+            "command": "KIRITSU",
+            "meaning": "Se lever"
+          }
+        ]
+      }
+    },
+    "salutation": {
+      "title": "Formule de salut",
+      "text": "Les pratiquants devraient saluer le sensei et les étudiants lorsqu'ils entrent et sortent du dojo."
+    }
+  },
+  "DojoRules": {
+    "meta": {
+      "title": "Règles du dojo | Comportement pendant la formation de karaté",
+      "description": "Lisez les règles de comportement, de sécurité et de respect suivies dans les dojos ASKKSA Shotokan Karaté à Funchal.",
+      "keywords": "Règles du dojo, Etiquette de karaté, Comportement au dojo, Respect, Traditions japonaises, Sensei, Discipline de karaté, ASKKSA Madeira, Shotokan"
+    },
+    "title": "Règles du dojo",
+    "introduction": "Le dojo est un espace partagé d'apprentissage. La ponctualité, l'hygiène, l'attention aux instructions et le respect des étudiants permettent à tous de se former de manière sûre.",
+    "description": "Chaque élève est attendu pour connaître et suivre ces règles. Elles protègent les partenaires d'entraînement, maintiennent l'ordre du classement et préserver un environnement attentif et respectueux.",
+    "responsibility": {
+      "title": "Préoccupation et respect pour l'espace de formation",
+      "rule1": "Le DOJO est la responsabilité de tous qui utilisent son espace. N'hésitez pas à fournir des informations aux visiteurs, à nettoyer ce qui est sale et à faire le ménage de ce qui est sale.",
+      "rule2": "Contributez autant que possible à l'amélioration des installations du club."
+    },
+    "hygiene": {
+      "title": "Hygiène et présentation personnelle",
+      "rule1": "Entretenez votre hygiène personnelle et gardiez votre Karate-Gi (Kimono) propre.",
+      "rule2": "Entrer dans l'aire de formation avec les mains et les pieds propres et les ongles well-trimés.",
+      "rule3": "Ne portez pas de bijoux (colliers, oreillers, bracelets, montres), des parfums forts ou tout accessoire qui pourrait interférer avec votre entraînement ou celui de vos partenaires.",
+      "rule4": "Ne sortez du DOJO sans être pleinement vêtu."
+    },
+    "entrance": {
+      "title": "Entrer et sortir du DOJO",
+      "rule1": "Lorsque vous entrez et sortez de l'aire de formation, saluez toujours le espace.",
+      "rule2": "Si vous arrivez après la classe a eu commencé, entre silencieusement, assis dans SEIZA, et demandez autorisation au plus haut rangé instructeur pour rejoindre l'entraînement. Après leur accord, saluez et rejoignez le groupe.",
+      "rule3": "Si vous vraiment avez besoin de partir avant la fin de l'entraînement, toujours demandez autorisation à l'instructeur/moniteur. NE PAS partir pendant l'entraînement sans leur autorisation."
+    },
+    "behavior": {
+      "title": "Comportement Pendant les Classes",
+      "rule1": "Maintenir le silence et la concentration pendant l'entraînement.",
+      "rule2": "Lorsque l'instructeur/moniteur démontre une technique, restez assis, silencieux et attentif. Si vous ne comprenez pas bien, regardez les autres, essayez ce que vous avez compris un peu, et attendez la correction de l'instructeur.",
+      "rule3": "Si c'est absolument nécessaire de demander à l'instructeur/moniteur quelque chose, appelez-les silencieusement en levant votre bras droit. NE PAS crier pour les attirer l'attention.",
+      "rule4": "Toujours assis dans SEIZA ou croisé-légèrement. Ne vous asseyez pas contre le mur ni dans une autre position. Toujours maintenir une bonne posture dans toutes les situations.",
+      "rule5": "NE PAS utiliser votre téléphone portable à l'intérieur du dojo pendant les heures d'entraînement.",
+      "rule6": "Même en dehors de la zone de classe, maintenez le silence pendant l'entraînement et ne parlez pas aux personnes qui entraînent."
+    },
+    "instructors": {
+      "title": "Relation avec les Instructeurs",
+      "rule1": "Dans le dojo, NE PAS aborder les instructeurs par leur prénom, même si vous avez une relation étroite avec eux. Le plus approprié est de les appeler Sensei (Enseignant).",
+      "rule2": "Étudiez exactement comme indiqué par l'instructeur/moniteur. Si vous aviez voulu le faire votre façon, vous n'auriez pas besoin de venir au dojo.",
+      "rule3": "NE PAS discuter avec l'instructeur/moniteur, même si un autre instructeur a dit quelque chose de différent. Il existe différentes façons d'exécuter des techniques et les instructeurs ont eu des expériences de formation différentes, ce qui ne signifie pas que celles-ci sont incorrectes. Vous devez simplement suivre chaque instructeur, dans chaque leçon, à votre mieux."
+    },
+    "training": {
+      "title": "Formation et relation avec des partenaires",
+      "rule1": "NE REFUSER jamais de former avec tout partenaire lorsque dirigé par l'instructeur.",
+      "rule2": "Aider ceux qui en ont besoin, mais NE CORRIGER jamais votre partenaire sauf si vous êtes l'instructeur/moniteur de la classe et/or un noir ceinture.",
+      "rule3": "NE PENSER jamais que vous dérangeriez quelqu'un en ne sachant pas exécuter une technique. Nous sommes tous en apprentissage, nous nous aidons les uns les autres.",
+      "rule4": "RESPECTER les étudiants plus aînés (en particulier les noirs ceintures) et NE DISPUTER jamais si les techniques sont correctes ou incorrectes. Rappelez-vous que vous n'avez pas atteint votre grade par hasard.",
+      "rule5": "Entraînez-vous avec énergie, tout en respectant l’intégrité physique de votre partenaire. Le dojo accueille des personnes d’âges, de conditions physiques et d’objectifs différents. Adaptez l’intensité et respectez les limites de chacun.",
+      "rule6": "ÊTRE conscient de ce qui se passe autour de vous. Adjuster l'intensité de vos mouvements à votre condition physique. Prendre la responsabilité de soi-même.",
+      "rule7": "Ne pas manquer de technique (sauf en cas d'injury)."
+    },
+    "practical": {
+      "title": "Aspects pratiques et de santé",
+      "rule1": "Si vous avez une blessure ou une limitation physique, vous devez informer l'enseignant avant de commencer les séances.",
+      "rule2": "Évitez d'assister aux cours si vous avez une maladie contagieuse transmise par le contact ou la respiration aérienne.",
+      "rule3": "Ne soyez pas en retard ou ne payez pas vos frais. Si vous devez être absente pendant un certain temps en raison de voyage ou de maladie, informez l'enseignant. N'oubliez pas que votre contribution est nécessaire pour couvrir les dépenses de fonctionnement d'un dojo de karaté."
+    }
+  },
+  "Vocabulary": {
+    "meta": {
+      "title": "Vocabulaire japonais du Karaté | Termes du dojo",
+      "description": "Consultez les termes japonais les plus souvent utilisés dans le Shotokan Karaté, y compris les commandements, techniques, nombres, comptages et systèmes d'écriture.",
+      "keywords": "Vocabulaire japonais du Karaté, Termes du dojo, Nombres japonais, Langage de karaté, Hiragana Katakana Kanji, ASKKSA Madeira, Shotokan, Martial japonais"
+    },
+    "title": "Vocabulaire japonais",
+    "introduction": "De nombreux instructions et techniques de Karaté conservent leurs noms japonais. Avec la pratique, ces termes deviennent familiers et aident les étudiants à suivre les séances dans tout dojo.",
+    "description": "Le japonais utilise Hiragana, Katakana et Kanji. Cette page utilise des termes romanisés pour les rendre plus faciles à consulter pendant l'apprentissage.",
+    "numbers": {
+      "1": "ichi",
+      "2": "ni",
+      "3": "san",
+      "4": "quatre ou shi",
+      "5": "go",
+      "6": "roku",
+      "7": "quatre ou shichi",
+      "8": "hachi",
+      "9": "kyu ou ku",
+      "10": "ju",
+      "20": "niju",
+      "30": "sanju",
+      "100": "hyaku",
+      "title": "Nombres"
+    },
+    "counters": {
+      "1": "Hitotsu",
+      "2": "Futatsu",
+      "3": "Mittsu",
+      "4": "Yottsu",
+      "5": "Itsutsu",
+      "title": "Comptes (abstracte, \"chose\")"
+    },
+    "otherCounters": {
+      "1": "Ippon",
+      "2": "Nihon",
+      "3": "Sanbon",
+      "4": "Yohon",
+      "5": "Gohon",
+      "6": "Roppon",
+      "7": "Nanahon",
+      "8": "Happon",
+      "9": "Kyuhon",
+      "10": "Japon",
+      "title": "Comptes de base",
+      "subtitle": "hon (différents types d'objets, en particulier longs et fins, mais aussi des techniques ou des ensembles de techniques, séances de pratique, etc.)"
+    },
+    "vocabulary": {
+      "title": "Mots les plus courants",
+      "age": "Action de lever, de soulever",
+      "aihanmi": "Position relative de deux pratiquants avec la même jambe avant",
+      "aikido": "Littéralement : voie de harmonisation de l'énergie",
+      "ashi": "Jambes, pieds",
+      "ashibarai": "Écart de pied",
+      "atama": "Tête",
+      "atemi": "Coup",
+      "awase": "Combinaison, union, harmonisation",
+      "ayumi": "Marche",
+      "barai": "Éclairage",
+      "bo": "Bâton long",
+      "bojutsu": "Techniques de bâton",
+      "bokken": "Épée en bois",
+      "bu": "Guerrier",
+      "bushi": "Guerrier",
+      "budo": "Voie du guerrier, arts martiaux",
+      "chi": "Énergie vitale, identique à « Ki »",
+      "chudan": "Niveau moyen (de la nuque au bas du torse)",
+      "dachi": "Position",
+      "dai": "Grand",
+      "dan": "Niveau, degré (ceinture noire)",
+      "do": "Voie, chemin",
+      "dojo": "Lieu de formation au Budo",
+      "embusen": "Schéma d'un kata",
+      "empi": "Coude, identique à « hiji »",
+      "fumi": "Compresser",
+      "gasho": "Placer les mains ensemble devant le visage pour faire un salut (Zen, Mokuso, etc.)",
+      "gedan": "Niveau bas (de la taille au sol)",
+      "geri": "Talon",
+      "gi": "Conforme à la pratique du Budo, composé de Uwagi (veste), de Zubon (pantalon) et d'Obi (ceinture)",
+      "gonosen": "Tactique consistant à faire attaquer l'adversaire avant de contre-attaquer",
+      "gyaku": "Inverse, opposé",
+      "hajime": "Commencer, commencer",
+      "hakama": "Pants étroits portés sur le gi dans les arts martiaux traditionnels (Kyudo, Kendo, Iaido, Aikido, etc.)",
+      "happo": "Huit directions",
+      "hara": "Abdomen",
+      "heiko": "Parallèle",
+      "henka": "Changement de position",
+      "hidari": "Gauche",
+      "hiji": "Coude",
+      "hikite": "Retirer la main vers le bas du dos",
+      "hiza": "Genou",
+      "ho": "Direction, sens, méthode",
+      "horanokamae": "Position de départ de certains kata, avec une main couvrant le poing fermé",
+      "ippon": "Un (point, pas, attaque, etc.)",
+      "ipponkumite": "Exercices en partenariat avec 1 attaque et 1 défense",
+      "irimi": "Entrée de mouvement (dans le cercle de l'adversaire)",
+      "jitsu": "Technique",
+      "jiyu": "Libre",
+      "jiyuipponkumite": "Sparring libre avec une attaque unique",
+      "jiyukumite": "Exercices de partenaire contrôlés dans lesquels les combats sont libres",
+      "jo": "Élevé",
+      "jodan": "Niveau élevé (de la gorge jusqu'au sommet)",
+      "joseki": "Côté supérieur, lieu d'honneur (dans le dojo, la muraille sud, à droite de la muraille principale)",
+      "ju": "Douceur, douceur",
+      "judo": "Voie de douceur",
+      "jukumite": "Sparrage doux",
+      "kagi": "Le Hook",
+      "kake": "Crochet",
+      "kaishowaza": "Techniques de poing ouvert",
+      "kakato": "Pied",
+      "kamae": "Position défensive",
+      "kamaete": "Ordre de prendre position",
+      "kamiza": "Mur de fond du dojo, à l'est, où se trouve le Tokonoma",
+      "kara": "Vacant",
+      "karada": "Corps, synonyme de « tai »",
+      "karatedo": "La voie des mains vides",
+      "kata": "Forme de pratique, avec ou sans partenaire, avec séquences préalablement fixées de techniques",
+      "katana": "Épée",
+      "keage": "Déplacement rapide vers le haut",
+      "keiko": "Entraînement",
+      "kekomi": "Déplacement de poussée",
+      "ken": "Épée",
+      "kendo": "Art du fencing japonais",
+      "keri": "Pied",
+      "ki": "Énergie, force vitale, esprit",
+      "kiai": "Projection de l'énergie à travers un cri",
+      "kihon": "Techniques de base",
+      "kime": "Concentration de l'énergie physique et mentale, prise de décision",
+      "kiritsu": "Se tenir debout",
+      "ko": "Petit, postérieur",
+      "kohai": "Apprenti junior, contraire de Sempai",
+      "kokoro": "Âme, cœur",
+      "kokyu": "Pouvoir respiratoire",
+      "koshi": "Hanches",
+      "kote": "Mortier",
+      "kumite": "Bataille",
+      "kuzushi": "Inégalité",
+      "kyu": "Grade de l'élève",
+      "kyusho": "Points vitaux",
+      "maai": "Distance correcte",
+      "mae": "Avant",
+      "maki": "Tourner",
+      "makikomi": "Technique judo consistant en lancer par roulement de l'adversaire",
+      "makiwara": "Cible traditionnellement emballée dans du paille pour entraîner le Karaté-do ou Kyudo",
+      "mawashi": "Mouvement circulaire",
+      "mawatte": "Tour",
+      "midale": "Méthode de formation karaté-do consistant en attaques continues et échappes",
+      "migi": "Droite",
+      "mokuso": "Littéralement: non pensant. État de concentration pendant les cérémonies d'ouverture et de fermeture du pratique Budo",
+      "morote": "Deux mains",
+      "nagewaza": "Techniques de lancer",
+      "neko": "Chat",
+      "nobashi": "Extension, acte de étirement",
+      "nukite": "Attaque avec doigts ensemble et étendus",
+      "o": "Grand",
+      "okuri": "Glissade",
+      "osae": "Immobilisation",
+      "otagai": "Salut",
+      "otoshi": "Déplacement de haut en bas",
+      "randori": "Combat libre",
+      "rei": "Salut",
+      "reigi": "Etiquette, règles de conduite",
+      "ritsurei": "Salut debout",
+      "ryo": "Tout deux",
+      "ryu": "Style, école",
+      "sabaki": "Évasion",
+      "sai": "Arme tridentée de l'Okinawa",
+      "samurai": "Guerrier japonais",
+      "sanbonkumite": "Combat de trois attaques",
+      "sasae": "Soutien",
+      "seiza": "Position assise",
+      "sempai": "Étudiant senior",
+      "sennosen": "Prévision",
+      "sensei": "Maître",
+      "senseirei": "Salut au professeur",
+      "senseitaishi": "Saluer l'enseignant",
+      "shihan": "Maître de rang élevé",
+      "shiho": "Quatre directions",
+      "shikko": "Marcher à genoux",
+      "shimoza": "La muraille occidentale du dojo, opposée au Kamiza, où les étudiants s'assoient",
+      "shimoseki": "La muraille nord du dojo, où les assistants non pratiquants peuvent s'asseoir",
+      "shin": "Esprit",
+      "shinai": "Épée de bambou utilisée dans la pratique du Kendo",
+      "shisei": "Position, posture",
+      "shizentai": "Posture naturelle debout",
+      "sho": "Petit",
+      "shomen": "Face à l'avant",
+      "shomenrei": "Baissez-vous devant la muraille principale du dojo",
+      "shomentaishi": "Baisez-vous vers la muraille principale du dojo",
+      "shuto": "Bordure de la main (côté pouce petit",
+      "sokuto": "Bordure du pied, côté du petit orteil",
+      "soto": "À l'extérieur",
+      "sumo": "Lutte traditionnelle japonaise",
+      "sutemi": "Sacrifice; techniques dans lesquelles le praticien se jette pour faire tomber son adversaire",
+      "tai": "Corps, identique à « karada »",
+      "taisabaki": "Déplacement du corps/évasion",
+      "tanto": "Épée",
+      "tatami": "Matte japonaise recouverte de sol, utilisée dans le judo et l'aïkido",
+      "tate": "Vertical",
+      "te": "Main",
+      "tettsui": "Part extérieur du poing",
+      "to": "Lointain/décalé",
+      "tobi": "Sauter",
+      "tokui": "Le plus fort",
+      "tokuiwaza": "Le plus fort (technique préférée)",
+      "tomarite": "Techniques de combat d'origine Tomari - Okinawa",
+      "tomoe": "Cercle",
+      "tonfa": "Outillage agricole utilisé dans des techniques de combat populaires",
+      "tori": "Celui qui attaque, l'exécuteur",
+      "tsuki": "Punch",
+      "tsukuri": "Contact, phase secondaire d'exécution d'une technique judo",
+      "uchi": "Intérieur",
+      "ude": " bras, avant-bras",
+      "uke": "L'attaquant, dans une pratique à deux personnes; celui qui reçoit le coup de tête",
+      "ukemi": "Plongeon, roulement",
+      "ura": "Déplacement rotatoire; le dos de l&#39;adversaire",
+      "uraken": "Arrière du poignet",
+      "uramawashi": "Tousson circulaire arrière",
+      "ushiro": "Derrière, vers l&#39;arrière",
+      "wakizashi": "Épée plus courte",
+      "waza": "Technique",
+      "yakosoku": "Accordé, aucune résistance",
+      "yame": "Arrêt",
+      "yasume": "Ordre de relaxation",
+      "yoi": "Ordre d&#39;attention",
+      "yoko": "De côté, latéral",
+      "zanshin": "État de concentration",
+      "zarei": "Salut à genoux",
+      "zempo": "Vers la avant",
+      "zen1": "Avant",
+      "zen2": "Discipline japonaise, branche du bouddhisme"
+    },
+    "writingSystems": {
+      "title": "Systèmes d'écriture japonais",
+      "hiragana": {
+        "title": "Hiragana (ひらがな)",
+        "description": "Système syllabique utilisé pour les mots natifs et les particules grammaticales"
+      },
+      "katakana": {
+        "title": "Katakana (カタカナ)",
+        "description": "Script de syllabes utilisé pour les mots d'origine française et les onomatopéies"
+      },
+      "kanji": {
+        "title": "Kanji (chinois)",
+        "description": "Caractères chinois adaptés et intégrés dans l'écriture japonaise"
+      }
+    }
+  },
+  "Graduations": {
+    "meta": {
+      "title": "Degrés de karaté | Kyu, Dan et couleurs des ceintures",
+      "description": "Comprendre le système de grâde du karaté Shotokan, la progression des grades Kyu et Dan et les significations des couleurs des ceintures.",
+      "keywords": "Degrés de karaté, Système Kyu Dan, Ceintures de karaté, Jigoro Kano, Ceintures de karaté, Ceinture noire, Rang de karaté, ASKKSA Madeira, Shotokan"
+    },
+    "title": "Degrés",
+    "introduction": "Dans le karaté, les grades marquent la progression technique du étudiant. Les grades Kyu couvrent les stades avant la ceinture noire ; les grades Dan indiquent la progression de ce niveau et après.",
+    "description": "Jigoro Kano a développé le système Kyu et Dan dans Judo, et d'autres arts martiaux japonais, y compris le karaté, ont adopté ce système. Il organise la progression technique en stades clairs.",
+    "system": {
+      "title": "Système de grâde Kyu et Dan",
+      "founder": "Le système a été fondé par Jigoro Kano, fondateur du judo Kodokan",
+      "purpose": "Créé pour fournir un encouragement immédiat aux débutants en pratique des arts martiaux",
+      "motivation": "L'anxiété des pratiquants ne peut être satisfaite que par des objectifs à long terme"
+    },
+    "symbolism": {
+      "title": "Symbole des couleurs",
+      "description": "Dans cette classification de couleurs et sur un plan symbolique:",
+      "white": "La blanc signifie la pureté du débutant",
+      "black": "Le noir fait référence au savoir acquis après des années de formation"
+    },
+    "kyu": {
+      "title": "Grades de Kyu (Classe)",
+      "description": "Les grades de Kyu représentent les niveaux étudiants, généralement identifiés par des ceintures colorées",
+      "order": "Comptage vers le ceinture noire"
+    },
+    "dan": {
+      "1": "Premier Dan – Premier degré noir ceinture",
+      "2": "Deuxième Dan – Deuxième degré noir ceinture",
+      "3": "Troisième Dan – Troisième degré noir ceinture",
+      "4": "Quatrième Dan – Quatrième degré noir ceinture",
+      "5": "Cinquième Dan – Cinquième degré noir ceinture",
+      "6": "Sixième Dan – Sixième degré noir ceinture",
+      "7": "Septième Dan – Septième degré noir ceinture",
+      "8": "Huitième Dan – Huitième degré noir ceinture",
+      "9": "Neuvième Dan – Neuvième degré noir ceinture",
+      "10": "Dixième Dan – Dixième degré – Seul accessible aux maîtres exceptionnels",
+      "title": "Grades de Dan (Degré)",
+      "description": "Dans la classification du ceinture noire, le premier est appelé 1er Dan, le deuxième 2e Dan et ainsi de suite jusqu'au 10e Dan, accessible uniquement aux maîtres exemplaires qui ont consacré leur vie au Karaté."
+    },
+    "colors": {
+      "title": "Couleurs de ceinture par grade",
+      "white": "Blanc - débutant",
+      "yellow": "Jaune - Première connaissance",
+      "orange": "Orange – Développement de base",
+      "green": "Vert - Croissance technique",
+      "blue": "Bleu - Avancement",
+      "brown": "Brun - Préparation pour le ceinture noire",
+      "black": "Noir – Connaissance raffinée"
+    },
+    "timeline": {
+      "title": "Temps de dédiations",
+      "description": "Le système de grades reconnaît le temps et la détermination nécessaires pour maîtriser le Karaté",
+      "journey": "Chaque grade marque une étape dans le progrès du student",
+      "mastery": "Les grades les plus élevés sont accessibles uniquement aux maîtres qui ont consacré leur vie au Karaté"
+    }
+  },
+  "History": {
+    "meta": {
+      "title": "Histoire du Karaté | ASKKSA Shotokan à Madère",
+      "description": "Découvrez l’histoire du Karaté, de ses origines à Okinawa à son introduction au Japon par Gichin Funakoshi, puis au développement du Shotokan.",
+      "keywords": "Histoire du Karaté, Gichin Funakoshi, Sokon Matsumura, Okinawa, Kihon Kumite Kata, Shotokan Karate, Budo, ASKKSA Madeira, Art martial japonais"
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
+    "title": "Histoire du Karaté",
+    "introduction": {
+      "text": "<b>Karaté</b> ou <b>karaté-do</b> est une forme de budo (chemin de guerrier). C'est un art martial japonais qui a origine en Okinawa et a été introduit aux îles principales du Japon en 1922. Le Karaté met l'accent sur les techniques de frappe (comme des coups de poing et des coups de pied) plutôt que sur les techniques de grappling."
+    },
+    "threePillars": {
+      "title": "Les Trois Piliers de la Pratique",
+      "subtitle": "La pratique du karaté repose sur trois composants fondamentaux : ",
+      "kihon": {
+        "title": "<b>Kihon (basique) :</b>",
+        "description": "L'étude et la répétition des mouvements de base, le fondement de toutes les techniques."
+      },
+      "kumite": {
+        "title": "<b>Kumite (sparring) :</b>",
+        "description": "Signifie « sparring » et est la mise en œuvre pratique des techniques avec un partenaire, effectuée soit dans une forme fixe ou librement (randori)."
+      },
+      "kata": {
+        "title": "<b>Kata (forme) :</b>",
+        "description": "Signifie « forme » et est une séquence de mouvements simulant une lutte contre des adversaires imaginaires, essentielle au développement de la technique et de l'esprit."
+      }
+    },
+    "origins": {
+      "title": "Origines et Évolution",
+      "content": "D'origine, le mot « karaté » était écrit avec des caractères ideographiques signifiant « main chinoise » (唐手), reflétant l'influence de la dynastie Tang. Aujourd'hui, la signification la plus courante est « main vide » (空手), et <b>Karate-do</b> se traduit par « le chemin de la main vide ». Il est censé être une fusion des techniques de combat chinoises, apportées à Okinawa par les marchands, avec l'art de combat locaux connu sous le nom de <b>Te</b> (main).",
+      "matsumura": "Dans les années 1820, le maître <b>Sokon Matsumura</b> a mélangé les styles locaux (Shuri-te, Naha-te et Tomari-te), mais c'est ses propres étudiants qui ont perfectionné et adapté les techniques pour créer de nouvelles variations. C'était <b>Gichin Funakoshi</b>, un élève d'un des disciples de Matsumura, qui a introduit et popularisé le Karaté en Japon continental."
+    },
+    "modernization": {
+      "title": "Modernisation au Japon",
+      "funakoshi": "Funakoshi était responsable du changement du nom écrit à « main vide », une stratégie astucieuse pour intégrer l'art dans la culture budo japonaise et le distancer des origines étrangères pendant une période de forte nationalisme. Le Karaté a été popularisé et introduit dans les secondaires avant la Seconde Guerre mondiale.",
+      "transition": "Comme de nombreux arts martiaux japonais, le Karaté a fait sa transition à <b>Karate-do</b> au début du XXe siècle. Le « do » (la voie) apporte des éléments profonds du bouddhisme zen à la pratique, parfois appelés « zen en mouvement ». La modernisation a également inclus l'adoption de la tenue blanche (<b>keikogi</b>) et des ceintures colorées pour indiquer le grade, tous popularisés par Jigoro Kano, fondateur du Judo."
+    }
+  },
+  "Philosophy": {
+    "meta": {
+      "title": "Philosophie du Karaté | Bushido, Niju Kun et Dojo Kun",
+      "description": "Découvrez le Bushido, le Niju Kun et le Dojo Kun, ainsi que leur relation avec l’éthique, le respect et la discipline dans le Karaté Shotokan.",
+      "keywords": "Philosophie du Karaté, Bushido, Niju Kun, Dojo Kun, Gichin Funakoshi, Code samouraï, Principes du Karaté, Éthique du Karaté, ASKKSA Madeira, Discipline, Respect"
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
+    "title": "Philosophie du Karaté",
+    "introduction": "Dans le Shotokan Karaté, la technique et le comportement appartiennent à la même formation. Bushido, Niju Kun et Dojo Kun aident à expliquer les valeurs pratiquées à l'intérieur et à l'extérieur du dojo.",
+    "sections": {
+      "bushido": {
+        "title": "Bushido – Code de Théorie Éthique",
+        "description": "Les neuf principes éthiques fondamentaux inspirés du code samouraï : l'honneur, la loyauté, la sincérité, le courage, la bonté, la modeste, la justice, le respect et le contrôle de soi.",
+        "principlesCount": "9 Principes"
+      },
+      "nijuKun": {
+        "title": "Niju Kun – 20 Principes",
+        "description": "Les vingt principes développés par Maître Gichin Funakoshi qui forment la base philosophique et spirituelle de tous les pratiquants du Shotokan Karaté.",
+        "principlesCount": "20 Principes"
+      },
+      "dojoKun": {
+        "title": "Dojo Kun – 5 Maximes",
+        "description": "Cinq maximes associées à Maître Funakoshi sur le comportement attendu à l'intérieur et à l'extérieur du dojo.",
+        "principlesCount": "5 Maximes"
+      }
+    },
+    "importance": {
+      "title": "Principes à l'intérieur et à l'extérieur du dojo",
+      "description": "Le respect, la discipline et le contrôle de soi s'appliquent à l'entraînement et à la vie quotidienne. Ces principes aident les pratiquants à agir avec attention, responsabilité et maîtrise de soi."
+    },
+    "explore": "Explorer →",
+    "navigation": {
+      "title": "Navigation des pages philosophiques",
+      "bushido": "Bushido",
+      "nijuKun": "Niju Kun",
+      "dojoKun": "Dojo Kun"
+    }
+  },
+  "Bushido": {
+    "meta": {
+      "title": "Bushido | Code de conduite du code samouraï",
+      "description": "Apprenez sur neuf vertus associées au Bushido et leur lien avec le comportement en Karaté : honneur, loyauté, courage, respect et contrôle de soi.",
+      "keywords": "Bushido Karaté, Code samouraï, 9 Principes, Honneur, Loyauté, Courage, Justice, Contrôle de soi, Philosophie du Karaté, ASKKSA Madeira, Shotokan"
+    },
+    "title": "Code de conduite Bushido",
+    "introduction": "Le Bushido signifie « la voie du guerrier » et fait référence aux valeurs associées au comportement des samouraïs. Certaines de ces valeurs sont également utilisées pour expliquer les éthiques des arts martiaux japonais.",
+    "description": "Ces vertus offrent une manière pratique de réfléchir à l'attitude dans la formation et dans nos relations avec les autres. Au sein du FNK-P, le respect et la discipline sont notre référence quotidienne.",
+    "principles": {
+      "honor": {
+        "name": "Honneur",
+        "japanese": "Meiyo",
+        "description": "La dignité personnelle et l'intégrité morale qui guident toutes les actions du karatéka"
+      },
+      "loyalty": {
+        "name": "Loyauté",
+        "japanese": "Chugi",
+        "description": "Faithéauté aux principes, au dojo, aux instructeurs et aux partenaires de formation"
+      },
+      "sincerity": {
+        "name": "Sincérité",
+        "japanese": "Makoto",
+        "description": "Intégrité avec soi-même et les autres dans toutes les circonstances"
+      },
+      "courage": {
+        "name": "Courage",
+        "japanese": "Yu",
+        "description": "Corps de face aux défis et à la défense des principes justes"
+      },
+      "kindness": {
+        "name": "Amabilité",
+        "japanese": "Jin",
+        "description": "Compassion et bienveillance envers tous les êtres"
+      },
+      "modesty": {
+        "name": "Modestie",
+        "japanese": "Kenkyo",
+        "description": "Humilité et simplicité, toujours reconnaissant qu'il y a beaucoup à apprendre"
+      },
+      "justice": {
+        "name": "Justice",
+        "japanese": "Gi",
+        "description": "Droit moral et équité dans toutes les décisions et actions"
+      },
+      "respect": {
+        "name": "Respect",
+        "japanese": "Rei",
+        "description": "Préoccupation et révérence envers soi-même, les autres et les traditions"
+      },
+      "selfControl": {
+        "name": "Contrôle de soi",
+        "japanese": "Jisei",
+        "description": "Maitrise de ses propres émotions, impulsions et réactions"
+      }
+    }
+  },
+  "NijuKun": {
+    "meta": {
+      "title": "Niju Kun | 20 Principes de Gichin Funakoshi",
+      "description": "Lisez les vingt principes du Niju Kun attribués à Gichin Funakoshi et apprenez comment ils s'appliquent à la pratique et au comportement du Shotokan Karaté.",
+      "keywords": "Niju Kun, 20 Principes de Karaté, Gichin Funakoshi, Philosophie du Karaté, Leçons de Funakoshi, Principes du Shotokan, ASKKSA Madeira, Traditionnel Karaté"
+    },
+    "title": "Niju Kun – Les 20 Principes",
+    "introduction": "Le maître Gichin Funakoshi a développé et affiné vingt principes qui devraient former la base philosophique de tous les pratiquants de Karaté. Il a appelés ces enseignements Niju Kun.",
+    "description": "Les principes relient la pratique du Karaté à l'attention, à la modestie, au respect et à la discipline dans la vie quotidienne.",
+    "principles": {
+      "greeting": {
+        "title": "1. Salut",
+        "description": "Le Karaté commence par un salut et se termine par un salut."
+      },
+      "noOffense": {
+        "title": "2. Pas d'offense",
+        "description": "Dans le Karaté, il n'y a pas de comportement offensant."
+      },
+      "justice": {
+        "title": "3. Chemin de la justice",
+        "description": "Qui pratique le Karaté doit suivre la voie de la justice."
+      },
+      "selfKnowledge": {
+        "title": "4. Connaissance de soi",
+        "description": "Connaître soi-même avant de juger les autres."
+      },
+      "spiritDevelopment": {
+        "title": "5. Développement de l&#39;âme",
+        "description": "Le développement de l&#39;âme est le plus important ; la maîtrise technique est uniquement un moyen à cet effet."
+      },
+      "mentalControl": {
+        "title": "6. Contrôle mental",
+        "description": "Éviter la perte d'équilibre mental, contrôler son esprit."
+      },
+      "negligence": {
+        "title": "7. Negligence",
+        "description": "La malchance est causée par la négligence."
+      },
+      "lifeLongTraining": {
+        "title": "8. Formation de vie",
+        "description": "La formation de karaté dure toute la vie, et non seulement l'initiation."
+      },
+      "applyKarate": {
+        "title": "9. Appliquer le Karaté",
+        "description": "Utilisez le karaté dans tout ce que vous faites."
+      },
+      "hotWater": {
+        "title": "10. Eau chaude",
+        "description": "Le karaté est comme de l'eau chaude. Si vous ne la réchauffez pas constamment, elle devient froide."
+      },
+      "notBeDefeated": {
+        "title": "11. Ne pas être vaincu",
+        "description": "Ne pensez pas à gagner, pensez à ne pas être vaincu."
+      },
+      "strengthWeakness": {
+        "title": "12. Forces et faiblesses",
+        "description": "La victoire dépend de la capacité à distinguer les forces (JITSU) des faiblesses (KYO)."
+      },
+      "moveWithOpponent": {
+        "title": "13. Se mouvoir avec l'adversaire",
+        "description": "Déplacer selon votre adversaire."
+      },
+      "sharpSwords": {
+        "title": "14. Épées aiguisées",
+        "description": "Imaginez les membres de votre adversaire comme des épées aiguisées."
+      },
+      "millionOpponents": {
+        "title": "15. Millions d'adversaires",
+        "description": "Pour chaque homme qui quitte sa maison, millions d'adversaires attendent."
+      },
+      "artificialToNatural": {
+        "title": "16. Artificiel à naturel",
+        "description": "À l&#39;origine, les mouvements sont artificiels, mais avec la progression, ils deviennent naturels."
+      },
+      "correctPractice": {
+        "title": "17. Pratique correcte",
+        "description": "Pratiquez correctement ce que vous avez été enseigné; soyez conscient que dans l&#39;application, il devient différent."
+      },
+      "forceControl": {
+        "title": "18. Contrôle de la force",
+        "description": "Ne vous souvenez pas de mettre en œuvre correctement : 1) La force et la faiblesse dans le contrôle de votre force; 2) L'expansion et la contraction du corps; 3) Le contrôle des techniques à la vitesse lente et à la vitesse rapide."
+      },
+      "studyPractice": {
+        "title": "19. Étudier et Pratiquer",
+        "description": "Toujours étudiez, pratiquez et améliorez-vous."
+      },
+      "thinkCarefully": {
+        "title": "20. Penser Soigneusement",
+        "description": "Toujours pensez soigneusement."
+      }
+    },
+    "footer": {
+      "title": "Vivre les Principes",
+      "message": "Ces 20 principes du Niju Kun sont plus que des règles pour le dojo – ils sont une guide à la vie d'intégrité, de respect et de croissance continue."
+    }
+  },
+  "DojoKun": {
+    "meta": {
+      "title": "Dojo Kun | Les 5 Maximes du Karaté Shotokan",
+      "description": "Apprenez les cinq Dojo Kun maximes et comment elles guident le caractère, la sincérité, l'effort, le respect et le contrôle de soi.",
+      "keywords": "Dojo Kun, 5 Maximes du Karaté, Gichin Funakoshi, Philosophie du Dojo, Précédents du Dojo, Principes du Karaté, ASKKSA Madeira, Shotokan, Éthique du Dojo"
+    },
+    "title": "Le Dojo Kun – Les 5 Maximes",
+    "introduction": "Le Dojo Kun rassemble cinq maximes traditionnelles recitées dans le dojo. Elles offrent une guidance simple sur les caractéristiques, la sincérité, l'effort, le respect et le contrôle de soi.",
+    "description": "Les cinq maximes rappellent aux étudiants les comportements attendus en formation et aident à porter ces principes au-delà du dojo.",
+    "maxims": {
+      "character": {
+        "title": "HITOTSU JINKAKU KANSEI NI TSUTOMURU KOTO",
+        "description": "Caractère (Chercher à perfectionner son caractère)"
+      },
+      "sincerity": {
+        "title": "HITOTSU MAKOTO NO MICHI O MAMORU KOTO",
+        "description": "Sincérité (Être fidèle au chemin de la vérité)"
+      },
+      "effort": {
+        "title": "HITOTSU DORYOKU NO SEISHIN O YASHINAU KOTO",
+        "description": "Effort (Cultiver le goût de l’effort)"
+      },
+      "etiquette": {
+        "title": "HITOTSU REIGI O OMONZURU KOTO",
+        "description": "Étiquette (Respecter les autres avant tout)"
+      },
+      "selfControl": {
+        "title": "HITOTSU KEKKI NO YU O IMASHIMURU KOTO",
+        "description": "Maîtrise de soi (S’abstenir de tout comportement violent)"
+      }
+    },
+    "footer": {
+      "title": "L&#39;Âme du Dojo",
+      "message": "Ces cinq maximes du Dojo Kun sont activement suivies dans chaque séance de formation, nous rappelant les valeurs fondamentales qui devraient guider notre pratique et notre vie."
+    }
+  },
+  "ShotokanKatas": {
+    "meta": {
+      "title": "Les 26 kata du Karaté Shotokan | Guide ASKKSA",
+      "description": "Consultez les 26 kata pratiqués en Karaté Shotokan, notamment les séries Heian et Tekki ainsi que Bassai Dai, Kanku Dai et Enpi.",
+      "keywords": "Shotokan Katas, 26 Katas, Heian Shodan, Tekki Bassai, Kanku, Gichin Funakoshi, Formes de Karate, ASKKSA Madeira, Traditionnelles Kata"
+    },
+    "name": "ASKKSA: Shotokan Kokusai Karate Santo Antonio Association",
+    "title": "Shotokan – 26 Katas",
+    "introduction": "Les étudiants du Shotokan étudient 26 kata à travers les différentes étapes de grading. Chaque forme présente ses propres défis techniques et nécessite une pratique cohérente.",
+    "description": "Chaque kata organise des techniques, des mouvements et un rythme dans une séquence définie. L'étude inclut à la fois la performance de la forme et la compréhension de ses applications.",
+    "katas": {
+      "heian_shodan": {
+        "name": "HEIAN SHODAN (平安初段)",
+        "meaning": "PAIX(hei) et PAIX(tranquillité) – Première"
+      },
+      "heian_nidan": {
+        "name": "HEIAN NIDAN (平安二段)",
+        "meaning": "PAIX et TRANQUILLITÉ – Deuxième"
+      },
+      "heian_sandan": {
+        "name": "HEIAN SANDAN (平安三段)",
+        "meaning": "PAIX et TRANQUILLITÉ – Troisième"
+      },
+      "heian_yondan": {
+        "name": "HEIAN YONDAN (平安四段)",
+        "meaning": "PAIX et TRANQUILLITÉ – Quatrième"
+      },
+      "heian_godan": {
+        "name": "HEIAN GODAN (Paix et Tranquillité – Cinquième)",
+        "meaning": "PAIX et TRANQUILLITÉ – Cinquième"
+      },
+      "tekki_shodan": {
+        "name": "TEKKI SHODAN (Chevalier de Fer Premier)",
+        "meaning": "CHEVALIER DE FER PREMIER – Premier"
+      },
+      "tekki_nidan": {
+        "name": "TEKKI NIDAN (Chevalier de Fer Deuxième)",
+        "meaning": "CHEVALIER DE FER DEUXIÈME – Deuxième"
+      },
+      "tekki_sandan": {
+        "name": "TEKKI SANDAN (Chevalier de Fer Troisième)",
+        "meaning": "CHEVALIER DE FER TROISIÈME – Troisième"
+      },
+      "bassai_dai": {
+        "name": "BASSAI DAI (Percer le Fort - Long)",
+        "meaning": "PERCEZ LE FORT - LONG"
+      },
+      "kanku_dai": {
+        "name": "KANKU DAI (vue sur le ciel) (kan=regard, ku=absence, vide, ciel) – Long",
+        "meaning": "REGARDER LE CIEL (kan=regard, ku=absence, vide, ciel) – Long"
+      },
+      "jitte": {
+        "name": "JUTTE/JITTE (dix mains)",
+        "meaning": "DIX MAINS (ju=dix, te main)"
+      },
+      "hangetsu": {
+        "name": "HANGETSU (moi mois)",
+        "meaning": "MOI MOIS (han=moi, getsu=lune)"
+      },
+      "enpi": {
+        "name": "ENPI (vol de pigeon)",
+        "meaning": "VOL DE PIGEON"
+      },
+      "gankaku": {
+        "name": "GANKAKU (crane sur rocher)",
+        "meaning": "CRANE SUR ROCHER"
+      },
+      "jion": {
+        "name": "JION (慈恩)",
+        "meaning": "AMOUR ET GRÂTITUDE (ji=amour universel, tendre, doux; on=amour, bonté, gentillesse)"
+      },
+      "bassai_sho": {
+        "name": "BASSAI SHO (披塞小)",
+        "meaning": "PERCEVRER LA FORTESSE – Court"
+      },
+      "kanku_sho": {
+        "name": "KANKU SHO (観空小)",
+        "meaning": "REGARDER LE CIEL – Court"
+      },
+      "chinte": {
+        "name": "CHINTE (珍手)",
+        "meaning": "MAINES RARES/ÉTRANGES MAINES (chin=étrange, inhabituel, te=maine)"
+      },
+      "unsu": {
+        "name": "UNSU (雲手)",
+        "meaning": "MAINES CLOUDES (un=nuage, su=maine)}"
+      },
+      "sochin": {
+        "name": "SOCHIN (壯鎭)",
+        "meaning": "PAIX INCONQUÉABLE (so=robust, vigorous, energetic, chin=supprimer, rester calme)"
+      },
+      "nijushiho": {
+        "name": "NIJUSHIHO (二十四步)",
+        "meaning": "24 DEPISTES/MOUVENTES"
+      },
+      "gojushiho_dai": {
+        "name": "GOJUSHIHO DAI (五十四歩大)",
+        "meaning": "54 ÉTAPES – Long"
+      },
+      "gojushiho_sho": {
+        "name": "GOJUSHIHO SHO (五十四歩小)",
+        "meaning": "54 ÉTAPES – Court"
+      },
+      "meikyo": {
+        "name": "MEIKYO (明鏡)",
+        "meaning": "MIRROIR CLAIR (mei=clair, kyo=miroir)"
+      },
+      "jiin": {
+        "name": "JIIN (慈陰)",
+        "meaning": "AMOUR PROTECTEUR (ji=amour universel, tendre, doux, in=ombre)"
+      },
+      "wankan": {
+        "name": "WANKAN (王冠)",
+        "meaning": "Couronne du Roi (wan=roi, kan=croix)"
+      }
+    },
+    "techniques": {
+      "title": "Techniques Fondamentales",
+      "positions": {
+        "title": "Postures (Dachi)",
+        "description": "Fondements de Shotokan Karaté postures"
+      },
+      "legs": {
+        "title": "Techniques des Jambes",
+        "description": "Taps et techniques fondamentales des jambes"
+      },
+      "handsFeet": {
+        "title": "Main et Pieds",
+        "description": "Formes de main et techniques de pied"
+      }
+    },
+    "footer": {
+      "title": "Une vie de étude",
+      "message": "Les 26 katas Shotokan représentent une univers complète de connaissances martiales. Chaque kata a sa propre personnalité, son histoire et ses leçons à enseigner, offrant un chemin de vie d'apprentissage durable."
+    }
+  },
+  "GlobalNotFound": {
+    "meta": {
+      "title": "Page introuvable | ASKKSA Shotokan à Madère",
+      "description": "La page que vous cherchez n'existe pas."
+    },
+    "title": "Page pas trouvé",
+    "description": "Désolé(e), nous ne pouvons pas trouver la page que vous recherchez. Elle peut avoir été déplacée, supprimée ou que vous ayez entré une URL incorrecte.",
+    "actions": {
+      "returnHome": "Rentrer à la page d'accueil",
+      "goBack": "Aller en arrière"
+    },
+    "lang": "fr"
+  },
+  "Footer": {
+    "mission": "Respect et Discipline. Karaté Shotokan à Funchal depuis 2000, pour les enfants, les adolescents et les adultes.",
+    "ourDojos": "Nos Dojos",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "faq": "FAQ",
+    "privacy": "Politique de confidentialité",
+    "copyright": "Tous droits réservés"
+  },
+  "Privacy": {
+    "eyebrow": "Transparence et confidentialité",
+    "title": "Politique de confidentialité",
+    "intro": "Cette politique explique quelles données sont traitées lorsque vous consultez le site ou demandez des cours d’essai.",
+    "updated": "Dernière mise à jour : 15 août 2026",
+    "summaryTitle": "En bref",
+    "summary": "Nous demandons uniquement les données nécessaires pour répondre à votre demande. Les outils d’analyse facultatifs restent désactivés tant que vous n’avez pas donné votre accord.",
+    "controllerTitle": "1. Responsable du traitement",
+    "controller": "L’ASKKSA — Associação Shotokan Kokusai Karaté Santo António est responsable des données personnelles traitées par ce site. Pour toute question concernant la confidentialité, écrivez à direcao@askksa.pt.",
+    "dataTitle": "2. Données traitées",
+    "data": "Le formulaire de demande traite votre nom, votre âge, votre adresse e-mail, votre numéro de téléphone facultatif et votre éventuelle expérience du Karaté. Votre adresse IP est utilisée temporairement pour limiter les envois abusifs ; le site ne la conserve pas dans une base de données.",
+    "purposeTitle": "3. Finalités et bases juridiques",
+    "purpose": "Nous utilisons les données envoyées pour répondre à votre demande, organiser les cours d’essai et prévenir les abus du formulaire. Le traitement est nécessaire pour donner suite à votre demande. Les outils d’analyse et les technologies non essentielles dépendent de votre consentement.",
+    "cookiesTitle": "4. Cookies et mesure d’audience",
+    "cookies": "Nous conservons pendant un an un cookie strictement nécessaire contenant votre choix. Si vous donnez votre accord, Google Tag Manager, les mesures de performance et Vercel Web Analytics peuvent être activés. Vercel présente des données d’utilisation agrégées sans cookies tiers. Les contenus externes, comme Facebook, ne sont chargés qu’après votre consentement.",
+    "sharingTitle": "5. Destinataires et conservation",
+    "sharing": "Les demandes sont envoyées à la direction de l’ASKKSA par le service de messagerie configuré sur le serveur. Les prestataires d’hébergement et d’analyse peuvent traiter des données techniques. Nous conservons les données uniquement pendant la durée nécessaire pour répondre, respecter nos obligations légales et protéger nos droits légitimes.",
+    "rightsTitle": "6. Vos droits",
+    "rights": "Vous pouvez demander l’accès, la rectification, l’effacement, la limitation ou la portabilité de vos données, vous opposer à leur traitement et retirer votre consentement à tout moment. Vous pouvez également déposer une réclamation auprès de l’autorité portugaise de protection des données.",
+    "linksTitle": "Informations supplémentaires",
+    "cnpd": "Commission nationale de protection des données du Portugal",
+    "vercel": "Vercel Web Analytics - confidentialité",
+    "google": "Confidentialité et conditions Google",
+    "contact": "Exercer mes droits"
+  },
+  "CookieWarning": {
+    "ariaLabel": "Consentement cookie",
+    "privacyTitle": "Politique de confidentialité",
+    "description": "Ce site utilise des cookies pour faciliter la navigation et recueillir des statistiques d'utilisation. Vous pouvez consulter notre Politique de confidentialité",
+    "linkText": "ici",
+    "acceptAll": "Accepter tous les cookies",
+    "acceptNecessary": "Accepter uniquement les cookies essentiels"
+  },
+  "TrialForm": {
+    "heading": "Demander 3 cours d’essai gratuits",
+    "description": "Indiquez-nous qui participera à ces cours d’essai.",
+    "fullName": "Nom complet",
+    "age": "Âge",
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "previousExperience": "Avez-vous déjà pratiqué le Karaté ?",
+    "submit": {
+      "submitting": "Envoi...",
+      "button": "Demander les cours d’essai",
+      "success": "Votre demande a bien été envoyée. Nous vous contacterons prochainement.",
+      "error": "Une erreur s’est produite lors de l’envoi de votre demande.",
+      "correctErrors": "Corrigez les erreurs ci-dessous, puis réessayez.",
+      "rateLimited": "Trop de demandes ont été envoyées. Réessayez plus tard.",
+      "timeout": "L’envoi a pris trop de temps. Réessayez.",
+      "serverConfiguration": "Nous n’avons pas pu envoyer la demande. Contactez-nous par téléphone ou par e-mail."
+    },
+    "validation": {
+      "nameMin": "Le nom doit comporter au moins 2 caractères.",
+      "nameMax": "Le nom ne peut pas dépasser 100 caractères.",
+      "ageMin": "L’âge minimum est de 4 ans.",
+      "ageMax": "Saisissez un âge valide.",
+      "email": "Saisissez une adresse e-mail valide.",
+      "phone": "Veuillez saisir un numéro de téléphone valide."
+    },
+    "yes": "oui",
+    "no": "non"
+  },
+  "FAQ": {
+    "meta": {
+      "title": "Cours de Karaté à Funchal | Questions Fréquentes",
+      "description": "Consultez les horaires, les groupes d’âge, les cours d’essai et les informations pratiques pour commencer le Karaté Shotokan à l’ASKKSA, à Funchal.",
+      "keywords": "classes de karaté Funchal, prix du karaté à Madeira, classes de karaté pour enfants Funchal, classes de karaté pour adultes, essai gratuit de karaté, coûts du karaté ASKKSA, arts martiaux Funchal, FAQ du karaté ASKKSA"
+    },
+    "title": "Questions fréquentes",
+    "subtitle": "Informations pratiques pour commencer le Karaté Shotokan à l’ASKKSA, à Funchal.",
+    "questions": {
+      "q1": {
+        "question": "Où puis-je apprendre le Karaté à Funchal, à Madère ?",
+        "answer": "L’ASKKSA dispose de deux dojos à Funchal : le dojo principal à l’École Horácio Bento de Gouveia et un autre à la Junta de Freguesia de Santo António. Nous apportons également un soutien technique au Clube Desportivo de Câmara de Lobos."
+      },
+      "q2": {
+        "question": "Le premier cours de Karaté est-il vraiment gratuit ?",
+        "answer": "Oui. Vous pouvez participer à trois cours d’essai gratuits pour découvrir le dojo, rencontrer les instructeurs et voir comment nous nous entraînons. Contactez-nous au (+351) 960 384 090 ou à direcao@askksa.pt pour convenir du premier cours."
+      },
+      "q3": {
+        "question": "Quels sont les horaires des cours de Karaté à Funchal ?",
+        "answer": "Au dojo principal, les cours ont lieu du lundi au vendredi. Les enfants jusqu’à 12 ans s’entraînent de 19 h 30 à 20 h 30. Le groupe des adolescents et des adultes, à partir de 12 ans, s’entraîne de 20 h 30 à 21 h 30."
+      },
+      "q4": {
+        "question": "Mon enfant peut-il commencer le Karaté ? À partir de quel âge ?",
+        "answer": "Oui. Nous accueillons les enfants à partir de 5 ans. L’entraînement est adapté à leur âge et développe la coordination, la concentration, le respect et la discipline, sous la direction de nos instructeurs."
+      },
+      "q5": {
+        "question": "Proposez-vous des cours de Karaté pour adultes et débutants ?",
+        "answer": "Oui. Vous pouvez commencer sans expérience préalable. Le groupe des adolescents et des adultes s’entraîne de 20 h 30 à 21 h 30. Les instructeurs adaptent le travail technique à la condition physique et au niveau de chaque pratiquant."
+      },
+      "q6": {
+        "question": "Qu’est-ce que le Karaté Shotokan SKIF ?",
+        "answer": "Le Karaté Shotokan SKIF suit l’approche technique développée par Hirokazu Kanazawa, fondateur de la Shotokan Karate-do International Federation en 1977. Il s’appuie sur les enseignements de Gichin Funakoshi et accorde une importance particulière à la technique, à la discipline, au respect et au développement du caractère."
+      },
+      "q7": {
+        "question": "Vos instructeurs de Karaté sont-ils qualifiés et certifiés ?",
+        "answer": "L’équipe comprend des entraîneurs titulaires de certifications de niveau I à III délivrées par la Fédération Nationale de Karaté — Portugal (FNK-P), ainsi que des instructeurs gradés par SKIF Canada. La page « À propos » présente le grade et les qualifications de chaque instructeur."
+      },
+      "q8": {
+        "question": "Que dois-je apporter à mon premier cours de Karaté ?",
+        "answer": "Pour les cours d’essai, portez une tenue de sport confortable, comme un t-shirt avec un short ou un pantalon. L’entraînement se fait pieds nus. Si vous décidez de continuer, vous aurez besoin d’un karaté-gi ; nous pourrons vous conseiller pour le choisir et l’entretenir."
+      },
+      "q9": {
+        "question": "L’ASKKSA est-elle affiliée à des organisations officielles de Karaté ?",
+        "answer": "Oui. L’ASKKSA est affiliée à la Fédération Nationale de Karaté — Portugal (FNK-P) et à l’Association de Karaté de la Région Autonome de Madère (AKRAM). Elle est également reconnue par la Direction régionale des sports et liée à la Shotokan Karate-do International Federation (SKIF)."
+      },
+      "q10": {
+        "question": "Puis-je visiter le dojo avant de m’inscrire ?",
+        "answer": "Oui. Vous pouvez visiter le dojo, rencontrer les instructeurs et assister à un cours avant de prendre votre décision. Contactez-nous au (+351) 960 384 090 ou à direcao@askksa.pt pour convenir d’une visite."
+      },
+      "q11": {
+        "question": "Combien de temps faut-il pour obtenir la ceinture noire ?",
+        "answer": "Il n’existe pas de durée unique. La progression dépend de l’assiduité, du développement technique et des critères de passage de grade. La ceinture noire marque une nouvelle étape de l’apprentissage, et non la fin du parcours."
+      }
+    }
+  }
+}

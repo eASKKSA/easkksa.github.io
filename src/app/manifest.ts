@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ASKKSA - Associação Shotokan Kokusai Karate",
     short_name: "ASKKSA",
-    description: "Aprenda o autêntico Karaté Shotokan Santo António, Funchal.",
+    description:
+      "Karaté Shotokan no Funchal desde 2000. Respeito e Disciplina.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

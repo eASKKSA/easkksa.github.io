@@ -17,10 +17,10 @@ export default async function DojoRulesPage({
     <>
       <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={askksaThumb}
-            alt="ASKKSA - Regras do Dojo"
+            alt={t("title")}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
             fetchPriority="high"
@@ -41,18 +41,14 @@ export default async function DojoRulesPage({
             {t("responsibility.title")}
           </h2>
           <div className="space-y-4">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-              <span className="text-blue-600 dark:text-blue-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("responsibility.rule1")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-              <span className="text-blue-600 dark:text-blue-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("responsibility.rule2")}
               </p>
@@ -68,11 +64,9 @@ export default async function DojoRulesPage({
             {Array.from({ length: 4 }, (_, i) => i + 1).map((ruleNumber) => (
               <div
                 key={ruleNumber}
-                className="flex items-start gap-3 p-4 rounded-lg bg-green-50 dark:bg-green-900/20"
+                className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
               >
-                <span className="text-green-600 dark:text-green-400 text-xl">
-                  •
-                </span>
+                <span className="text-xl text-primary">•</span>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t(`hygiene.rule${ruleNumber}`)}
                 </p>
@@ -89,11 +83,9 @@ export default async function DojoRulesPage({
             {Array.from({ length: 3 }, (_, i) => i + 1).map((ruleNumber) => (
               <div
                 key={ruleNumber}
-                className="flex items-start gap-3 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20"
+                className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
               >
-                <span className="text-purple-600 dark:text-purple-400 text-xl">
-                  •
-                </span>
+                <span className="text-xl text-primary">•</span>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t(`entrance.rule${ruleNumber}`)}
                 </p>
@@ -110,11 +102,9 @@ export default async function DojoRulesPage({
             {Array.from({ length: 6 }, (_, i) => i + 1).map((ruleNumber) => (
               <div
                 key={ruleNumber}
-                className="flex items-start gap-3 p-4 rounded-lg bg-orange-50 dark:bg-orange-900/20"
+                className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
               >
-                <span className="text-orange-600 dark:text-orange-400 text-xl">
-                  •
-                </span>
+                <span className="text-xl text-primary">•</span>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t(`behavior.rule${ruleNumber}`)}
                 </p>
@@ -152,11 +142,9 @@ export default async function DojoRulesPage({
             {Array.from({ length: 7 }, (_, i) => i + 1).map((ruleNumber) => (
               <div
                 key={ruleNumber}
-                className="flex items-start gap-3 p-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/20"
+                className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10"
               >
-                <span className="text-indigo-600 dark:text-indigo-400 text-xl">
-                  •
-                </span>
+                <span className="text-xl text-primary">•</span>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t(`training.rule${ruleNumber}`)}
                 </p>

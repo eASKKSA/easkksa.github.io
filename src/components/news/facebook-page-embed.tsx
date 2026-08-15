@@ -1,6 +1,7 @@
 "use client";
 
 import { FaFacebook } from "react-icons/fa";
+import { useConsent } from "@/components/consent-provider";
 import { useDeferredEmbed } from "@/lib/use-deferred-embed";
 
 const facebookEmbedUrl =
@@ -8,16 +9,23 @@ const facebookEmbedUrl =
 
 export default function FacebookPageEmbed({
   loadingLabel,
-}: Readonly<{ loadingLabel: string }>) {
+  consentLabel,
+  openLabel,
+}: Readonly<{
+  loadingLabel: string;
+  consentLabel: string;
+  openLabel: string;
+}>) {
+  const { consentGiven } = useConsent();
   const { isLoaded, targetRef } = useDeferredEmbed<HTMLDivElement>();
 
-  if (isLoaded) {
+  if (consentGiven && isLoaded) {
     return (
       <iframe
         src={facebookEmbedUrl}
         className="h-[600px] w-[500px]"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        title="Feed Facebook ASKKSA"
+        title="ASKKSA Facebook"
         loading="lazy"
       />
     );
@@ -33,8 +41,18 @@ export default function FacebookPageEmbed({
         className="text-center! text-sm text-gray-600 dark:text-gray-300"
         role="status"
       >
-        {loadingLabel}
+        {consentGiven ? loadingLabel : consentLabel}
       </p>
+      {!consentGiven && (
+        <a
+          href="https://www.facebook.com/ASKKSA.MADEIRA/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          {openLabel}
+        </a>
+      )}
     </div>
   );
 }

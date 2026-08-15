@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { LuMail, LuPhone } from "react-icons/lu";
 import { MetadataLDJSON } from "@/app/metadata";
 import Container from "@/components/container";
+import { localizedText } from "@/lib/seo";
 import { jsonLd, metadata } from "./metadata";
 
 export async function generateMetadata({
@@ -39,7 +41,7 @@ export default async function FAQPage({
     <>
       <Container blur withBubbles className="text-center" initialAnimation>
         <h1>{t("title")}</h1>
-        <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
+        <p className="page-intro-gap mx-auto max-w-4xl text-lg leading-relaxed text-gray-700 md:text-xl dark:text-gray-200">
           {t("subtitle")}
         </p>
       </Container>
@@ -65,25 +67,36 @@ export default async function FAQPage({
 
       <Container className="text-center bg-gradient-to-br from-primary to-[#741b1f] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          {locale === "pt-PT" ? "Ainda tem dúvidas?" : "Still have questions?"}
+          {localizedText(locale, {
+            "pt-PT": "Ainda tem dúvidas?",
+            en: "Still have questions?",
+            fr: "Vous avez encore des questions ?",
+            ja: "ご不明な点はありますか？",
+          })}
         </h2>
         <p className="text-xl opacity-90 mb-6">
-          {locale === "pt-PT"
-            ? "Entre em contacto connosco. Teremos todo o prazer em ajudar!"
-            : "Get in touch with us. We'll be happy to help!"}
+          {localizedText(locale, {
+            "pt-PT":
+              "Entre em contacto connosco. Teremos todo o prazer em ajudar!",
+            en: "Get in touch with us. We'll be happy to help!",
+            fr: "Contactez-nous. Nous vous répondrons avec plaisir.",
+            ja: "お気軽にお問い合わせください。",
+          })}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+351960384090"
-            className="px-6 py-3 rounded-lg bg-white text-primary font-semibold shadow-md hover:bg-gray-100 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary shadow-md transition-colors hover:bg-stone-100"
           >
-            📞 (+351) 960 384 090
+            <LuPhone aria-hidden="true" className="size-4" />
+            (+351) 960 384 090
           </a>
           <a
             href="mailto:direcao@askksa.pt"
-            className="px-6 py-3 rounded-lg bg-white text-primary font-semibold shadow-md hover:bg-gray-100 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary shadow-md transition-colors hover:bg-stone-100"
           >
-            ✉️ direcao@askksa.pt
+            <LuMail aria-hidden="true" className="size-4" />
+            direcao@askksa.pt
           </a>
         </div>
       </Container>

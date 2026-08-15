@@ -7,7 +7,7 @@ export const config = {
   matcher: [
     // Your existing matcher config remains the same
     "/",
-    "/(pt-PT|en)/:path*",
+    "/(pt-PT|en|fr|ja)/:path*",
     "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 };

@@ -42,10 +42,10 @@ export default async function BushidoPage({
     <>
       <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={ethicalCodeImage}
-            alt="Código de Ética Bushido"
+            alt={t("title")}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
             quality={60}
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
@@ -66,6 +66,7 @@ export default async function BushidoPage({
           {principlesData.map((principle) => (
             <FeatureCard
               key={principle.key}
+              headingLevel="h2"
               feature={{
                 id: principle.key,
                 title: t(`principles.${principle.key}.name`),

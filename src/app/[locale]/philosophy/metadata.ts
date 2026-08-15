@@ -4,25 +4,26 @@ import type { WebPage, WithContext } from "schema-dts";
 
 import principlesImage from "@/assets/philosofy/principios.gif";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<WebPage>> => {
   const pathname = getPathname({ href: "/philosophy", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: t("meta.title"),
     description: t("meta.description"),
-    about: "Filosofia do Karaté Shotokan",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: principlesImage.src,
-      caption: "Filosofia do Karaté - Bushido, Niju Kun e Dojo Kun",
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -43,8 +44,6 @@ export const jsonLd = async (
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -79,13 +78,13 @@ export const jsonLd = async (
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "Filosofia" : "Philosophy",
+          name: labels.philosophy,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -96,23 +95,11 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("Philosophy");
   const pathname = getPathname({ href: "/philosophy", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({
-    href: "/philosophy",
-    locale: otherLocale,
-  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/philosophy", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/philosophy", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -125,7 +112,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           url: principlesImage.src,
           width: 800,
           height: 600,
-          alt: "Gichin Funakoshi - Fundador do Karaté Shotokan",
+          alt: t("title"),
         },
         {
           url: "/icons/icon-512x512.png",

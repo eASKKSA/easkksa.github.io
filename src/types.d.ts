@@ -1,4 +1,4 @@
-type Locale = "en" | "pt-PT";
+type Locale = "en" | "fr" | "ja" | "pt-PT";
 
 // Google Tag Manager and Consent Mode v2 types
 declare global {

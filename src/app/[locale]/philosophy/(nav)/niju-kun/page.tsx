@@ -67,10 +67,10 @@ export default async function NijuKunPage({
         <h1 className="text-center">{t("title")}</h1>
         <Image
           src={nijuKunImage}
-          alt="Niju Kun - 20 Princípios de Gichin Funakoshi"
+          alt={t("title")}
           sizes="(max-width: 768px) calc(100vw - 4rem), 640px"
           quality={60}
-          className="w-full max-w-[640px] h-auto object-contain rounded-xl shadow-lg mx-auto"
+          className="page-intro-gap mx-auto h-auto w-full max-w-[640px] rounded-xl object-contain shadow-lg"
           fetchPriority="high"
           priority
         />
@@ -79,7 +79,7 @@ export default async function NijuKunPage({
 
         {/* Principles Grid */}
         <h2 className="hidden">Princípios</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+        <div className="grid grid-cols-1 gap-6 pt-4 md:grid-cols-2">
           {nijuKunPrinciples.map((principle) => (
             <FeatureCard
               key={principle.key}

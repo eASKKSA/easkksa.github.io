@@ -4,6 +4,7 @@ import type { Article, WithContext } from "schema-dts";
 
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates } from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Salutation");
@@ -15,14 +16,13 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     "@type": "Article",
     headline: t("meta.title"),
     description: t("meta.description"),
-    about: "Saudação e Rituais no Karaté Shotokan",
-    articleSection: "Dojo",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
+    articleSection: t("title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: senseiSeizaImage.src,
-      caption: "Sensei em posição Seiza - Saudação no Karaté",
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -43,8 +43,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -83,23 +81,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations("Salutation");
   const pathname = getPathname({ href: "/in-dojo/salutation", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({
-    href: "/in-dojo/salutation",
-    locale: otherLocale,
-  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/in-dojo/salutation", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/in-dojo/salutation", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -121,7 +107,7 @@ export async function generateMetadata({
         },
       ],
       type: "article",
-      section: "Dojo",
+      section: t("title"),
       tags: t("meta.keywords").split(", "),
     },
     twitter: {

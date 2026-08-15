@@ -19,10 +19,10 @@ export default async function SalutationPage({
     <>
       <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={senseiSeizaImage}
-            alt="Sensei em posição Seiza - Saudação no Karaté"
+            alt={t("title")}
             width={500}
             height={500}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
@@ -79,13 +79,13 @@ export default async function SalutationPage({
             {Array.from({ length: 6 }, (_, i) => i + 1).map((step) => (
               <div
                 key={step}
-                className="flex items-start gap-3 px-4 py-3 rounded-lg bg-blue-50 dark:bg-blue-900/20"
+                className="flex items-start gap-3 rounded-xl bg-primary/5 px-4 py-3 dark:bg-primary/10"
               >
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-600 dark:bg-blue-500 text-white text-sm font-bold rounded-full flex items-center justify-center">
+                <span className="flex size-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                   {step}
                 </span>
                 <div className="flex-1">
-                  <p className="font-bold text-blue-800 dark:text-blue-200">
+                  <p className="font-bold text-primary">
                     {t(`rituals.start.steps.${step - 1}.command`)}
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -102,13 +102,13 @@ export default async function SalutationPage({
             {Array.from({ length: 10 }, (_, i) => i + 1).map((step) => (
               <div
                 key={step}
-                className="flex items-start gap-3 px-4 py-3 rounded-lg bg-green-50 dark:bg-green-900/20"
+                className="flex items-start gap-3 rounded-xl bg-gold/10 px-4 py-3 dark:bg-gold/10"
               >
-                <span className="flex-shrink-0 w-8 h-8 bg-green-600 dark:bg-green-500 text-white text-sm font-bold rounded-full flex items-center justify-center">
+                <span className="flex size-8 flex-shrink-0 items-center justify-center rounded-full bg-gold text-sm font-bold text-ink">
                   {step}
                 </span>
                 <div className="flex-1">
-                  <p className="font-bold text-green-800 dark:text-green-200">
+                  <p className="font-bold text-amber-800 dark:text-gold">
                     {t(`rituals.end.steps.${step - 1}.command`)}
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">

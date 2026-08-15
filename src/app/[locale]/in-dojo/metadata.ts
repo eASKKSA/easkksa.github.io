@@ -3,25 +3,26 @@ import { getTranslations } from "next-intl/server";
 import type { WebPage, WithContext } from "schema-dts";
 import askksaThumb from "@/assets/askksa_thumb.svg";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<WebPage>> => {
   const pathname = getPathname({ href: "/in-dojo", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: t("meta.title"),
     description: t("meta.description"),
-    about: "Vida no Dojo de Karaté Shotokan",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: askksaThumb.src,
-      caption: "Sensei no Dojo - Vida no Karaté",
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -42,8 +43,6 @@ export const jsonLd = async (
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -56,13 +55,13 @@ export const jsonLd = async (
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "No Dojo" : "In Dojo",
+          name: labels.inDojo,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -95,20 +94,11 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("InDojo");
   const pathname = getPathname({ href: "/in-dojo", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/in-dojo", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/in-dojo", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/in-dojo", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -121,7 +111,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           url: askksaThumb.src,
           width: 800,
           height: 600,
-          alt: "Sensei no Dojo - Vida no Karaté",
+          alt: t("title"),
         },
       ],
     },

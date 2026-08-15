@@ -19,10 +19,10 @@ export default async function GraduationsPage({
     <>
       <Container blur withBubbles as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={graduationsImage}
-            alt="Sistema de Graduações do Karaté - Kyu e Dan"
+            alt={t("title")}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
             quality={60}
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
@@ -44,26 +44,20 @@ export default async function GraduationsPage({
             {t("system.title")}
           </h2>
           <div className="space-y-4">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-              <span className="text-blue-600 dark:text-blue-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("system.founder")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-              <span className="text-blue-600 dark:text-blue-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("system.purpose")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-              <span className="text-blue-600 dark:text-blue-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("system.motivation")}
               </p>
@@ -149,18 +143,14 @@ export default async function GraduationsPage({
             {t("kyu.title")}
           </h2>
           <div className="space-y-4 max-w-3xl mx-auto">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20">
-              <span className="text-purple-600 dark:text-purple-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("kyu.description")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-purple-50 dark:bg-purple-900/20">
-              <span className="text-purple-600 dark:text-purple-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("kyu.order")}
               </p>
@@ -197,26 +187,20 @@ export default async function GraduationsPage({
             {t("timeline.title")}
           </h2>
           <div className="space-y-4 max-w-3xl mx-auto">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/20">
-              <span className="text-indigo-600 dark:text-indigo-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("timeline.description")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/20">
-              <span className="text-indigo-600 dark:text-indigo-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("timeline.journey")}
               </p>
             </div>
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/20">
-              <span className="text-indigo-600 dark:text-indigo-400 text-xl">
-                •
-              </span>
+            <div className="flex items-start gap-3 rounded-xl bg-primary/5 p-4 dark:bg-primary/10">
+              <span className="text-xl text-primary">•</span>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t("timeline.mastery")}
               </p>

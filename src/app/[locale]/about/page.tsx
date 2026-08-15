@@ -39,28 +39,28 @@ export default async function QuemSomosPage({
       {/* Hero Section */}
       <Container blur withBubbles className="text-center" initialAnimation>
         <h1>{t("title")}</h1>
-        <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed dark:text-gray-200 text-gray-700">
+        <p className="page-intro-gap mx-auto max-w-4xl text-left md:text-center text-lg leading-relaxed text-gray-700 md:text-xl dark:text-gray-200">
           {t("description")}
         </p>
       </Container>
 
       {/* Instructors Section */}
       <Container className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-ink dark:text-white">
           {t("instructors.title")}
         </h2>
-        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
+        <p className="text-xl max-w-3xl mx-auto text-stone-600 dark:text-stone-300 mb-12 md:mb-16">
           {t("instructors.subtitle")}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mb-8 lg:grid-cols-4 gap-8">
+        <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {instructors.map((instructor) => (
             <InstructorCard key={instructor.name} instructor={instructor} />
           ))}
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-white">
+        <h3 className="text-2xl md:text-3xl font-bold text-ink dark:text-white">
           {t("auxiliaryInstructors")}
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mt-4">
+        <div className="mt-4 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {auxiliaryInstructors.map((instructor) => (
             <BBCard key={instructor.name} blackBelt={instructor} />
           ))}
@@ -75,7 +75,7 @@ export default async function QuemSomosPage({
         <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
           {t("dojos.subtitle")}
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 md:mt-16">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 lg:grid-cols-3">
           {dojos.map((dojo) => (
             <DojoCard
               key={dojo.name}
@@ -86,10 +86,10 @@ export default async function QuemSomosPage({
         </div>
       </Container>
       <Container className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-ink dark:text-white">
           {t("hallBlackBelts.title")}
         </h2>
-        <p className="text-xl max-w-3xl mx-auto text-gray-100 drop-shadow-md mb-12 md:mb-16">
+        <p className="text-xl max-w-3xl mx-auto text-stone-600 dark:text-stone-300 mb-12 md:mb-16">
           {t("hallBlackBelts.subtitle")}
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">

@@ -4,6 +4,7 @@ import type { Article, WithContext } from "schema-dts";
 
 import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 import { getPathname } from "@/i18n/navigation";
+import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("DojoKun");
@@ -12,20 +13,20 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     href: "/philosophy/dojo-kun",
     locale: locale,
   });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: t("meta.title"),
     description: t("meta.description"),
-    about: "Dojo Kun - 5 Máximas do Karaté Shotokan",
-    articleSection: "Filosofia",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
+    articleSection: t("title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
       url: dojoKunImage.src,
-      caption: "Dojo Kun - 5 Máximas de Gichin Funakoshi",
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -46,8 +47,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: "2025-07-10T10:00:00+00:00",
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -72,13 +71,13 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "Filosofia" : "Philosophy",
+          name: labels.philosophy,
           item:
             process.env.NEXT_PUBLIC_SITE_URL +
             getPathname({ href: "/philosophy", locale }),
@@ -103,26 +102,11 @@ export async function generateMetadata({
     href: "/philosophy/dojo-kun",
     locale: locale,
   });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({
-    href: "/philosophy/dojo-kun",
-    locale: otherLocale,
-  });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({
-          href: "/philosophy/dojo-kun",
-          locale: "en",
-        }),
-      },
-    },
+    alternates: getLocalizedAlternates("/philosophy/dojo-kun", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -144,7 +128,7 @@ export async function generateMetadata({
         },
       ],
       type: "article",
-      section: "Filosofia",
+      section: t("title"),
       tags: t("meta.keywords").split(", "),
     },
     twitter: {

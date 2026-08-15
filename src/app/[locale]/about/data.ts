@@ -36,7 +36,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
     image: jorgeFreitas,
     graduation: t("instructors.jorgeFreitas.graduation"),
     credentials: [
-      t("instructors.jorgeFreitas.credential1", { startYear: 1987, years: 38 }),
+      t("instructors.jorgeFreitas.credential1", { startYear: 1987 }),
       t("instructors.jorgeFreitas.credential2"),
       t("instructors.jorgeFreitas.credential3"),
       t("instructors.jorgeFreitas.credential4"),
@@ -49,7 +49,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
     image: rafaelJardim,
     graduation: t("instructors.rafaelJardim.graduation"),
     credentials: [
-      t("instructors.rafaelJardim.credential1", { startYear: 1992, years: 33 }),
+      t("instructors.rafaelJardim.credential1", { startYear: 1992 }),
       t("instructors.rafaelJardim.credential2"),
       t("instructors.rafaelJardim.credential3"),
       t("instructors.rafaelJardim.credential4"),
@@ -62,7 +62,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
     image: marisaGomes,
     graduation: t("instructors.marisaGomes.graduation"),
     credentials: [
-      t("instructors.marisaGomes.credential1", { startYear: 2000, years: 25 }),
+      t("instructors.marisaGomes.credential1", { startYear: 2000 }),
       t("instructors.marisaGomes.credential2"),
       t("instructors.marisaGomes.credential3"),
       t("instructors.marisaGomes.credential4"),
@@ -75,7 +75,7 @@ export const getInstructors = (t: TFunction): Instructor[] => [
     image: titoVelosa,
     graduation: t("instructors.titoVelosa.graduation"),
     credentials: [
-      t("instructors.titoVelosa.credential1", { startYear: 1995, years: 30 }),
+      t("instructors.titoVelosa.credential1", { startYear: 1995 }),
       t("instructors.titoVelosa.credential2"),
       t("instructors.titoVelosa.credential3"),
       t("instructors.titoVelosa.credential4"),

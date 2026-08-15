@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 
 type CookieWarningProps = {
   labels: {
+    ariaLabel: string;
+    privacyTitle: string;
     description: string;
     linkText: string;
     acceptAll: string;
@@ -42,7 +44,7 @@ const CookieWarning = ({ labels }: Readonly<CookieWarningProps>) => {
     <aside
       data-cookie-banner
       className="fixed bottom-0 w-full bg-gray-50 p-4 z-[10]"
-      aria-label="Cookie consent"
+      aria-label={labels.ariaLabel}
     >
       <p className="text-xs md:text-sm text-black/90 text-center!">
         {labels.description}{" "}
@@ -50,7 +52,7 @@ const CookieWarning = ({ labels }: Readonly<CookieWarningProps>) => {
           href="/privacy-policy"
           prefetch={false}
           className="underline font-semibold hover:opacity-80"
-          title="Política de Privacidade."
+          title={labels.privacyTitle}
         >
           {labels.linkText}.
         </Link>
@@ -68,7 +70,7 @@ const CookieWarning = ({ labels }: Readonly<CookieWarningProps>) => {
           type="button"
           onClick={() => handleCookieAction(false)}
           className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded transition-colors cursor-pointer"
-          aria-label="Aceitar apenas cookies essenciais"
+          aria-label={labels.acceptNecessary}
         >
           {labels.acceptNecessary}
         </button>

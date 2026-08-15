@@ -30,7 +30,7 @@ export default async function HistoryPage({
           <h1 className="text-center">{t("title")}</h1>
 
           {/* Banner Image and Introduction - Side by Side */}
-          <div className="mb-12 flex flex-col lg:flex-row lg:items-start lg:gap-8">
+          <div className="page-intro-gap mb-12 flex flex-col lg:flex-row lg:items-start lg:gap-8">
             {/* Introduction Text - Left Side */}
             <div className="flex-1 lg:pr-4">
               <p
@@ -44,7 +44,7 @@ export default async function HistoryPage({
             <div className="h-52 w-64 md:w-96 relative mx-auto lg:m-0 mt-6">
               <Image
                 src={historyBannerUrl}
-                alt="Mestres Fundadores do Karate"
+                alt={t("title")}
                 fill
                 sizes="(max-width: 767px) 256px, 384px"
                 quality={60}

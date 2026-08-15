@@ -6,13 +6,16 @@ import type {
   WebSite,
   WithContext,
 } from "schema-dts";
+import heroImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import { getPathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { getLocalizedAlternates, localizedText } from "@/lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 // WebSite Schema - Removed SearchAction (no internal search on site)
 export const websiteSchema = async (
-  locale: Locale,
+  _locale: Locale,
 ): Promise<WithContext<WebSite>> => {
   const t = await getTranslations("Organization");
 
@@ -21,15 +24,8 @@ export const websiteSchema = async (
     "@type": "WebSite",
     name: t("name"),
     url: siteUrl,
-    inLanguage: [locale, locale === "pt-PT" ? "en" : "pt-PT"],
-    publisher: {
-      "@type": "Organization",
-      name: t("name"),
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/icons/icon-512x512.png`,
-      },
-    },
+    inLanguage: routing.locales,
+    publisher: { "@id": `${siteUrl}/#organization` },
   };
 };
 
@@ -39,13 +35,13 @@ export const jsonLd = async (
   locale: Locale,
 ): Promise<WithContext<SportsOrganization & LocalBusiness>> => {
   const pathname = getPathname({ href: "/", locale: locale });
-  const aboutPath = getPathname({ href: "/about", locale });
-
   return {
     "@context": "https://schema.org",
-    "@id": siteUrl + aboutPath,
+    "@id": `${siteUrl}/#organization`,
     "@type": ["SportsOrganization", "LocalBusiness"],
     name: t("name"),
+    legalName: t("name"),
+    alternateName: "ASKKSA",
     sport: t("sport"),
     description: t("description"),
     url: siteUrl + pathname,
@@ -55,14 +51,14 @@ export const jsonLd = async (
     },
     image: {
       "@type": "ImageObject",
-      url: `${siteUrl}/icons/icon-512x512.png`,
+      url: `${siteUrl}${heroImage.src}`,
+      width: heroImage.width,
+      height: heroImage.height,
       caption: t("name"),
     },
     foundingDate: "2000-04-01",
-    founder: {
-      "@type": "Person",
-      name: "Rafael Jardim",
-    },
+    telephone: "+351960384090",
+    email: "direcao@askksa.pt",
     sameAs: [
       "https://www.facebook.com/ASKKSA.MADEIRA",
       "https://www.instagram.com/askksa_madeira/",
@@ -82,7 +78,7 @@ export const jsonLd = async (
         contactType: t("contactType"),
         telephone: "+351960384090",
         email: "direcao@askksa.pt",
-        availableLanguage: ["Portuguese", "English"],
+        availableLanguage: ["Portuguese", "English", "French", "Japanese"],
       },
     ],
     // LocalBusiness specific properties
@@ -96,86 +92,10 @@ export const jsonLd = async (
         closes: "21:30",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "24",
-      bestRating: "5",
-      worstRating: "4",
-    },
     geo: {
       "@type": "GeoCoordinates",
       latitude: "32.64960322122704",
       longitude: "-16.925423720138244",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name:
-        locale === "pt-PT"
-          ? "Aulas de Karaté Shotokan"
-          : "Shotokan Karate Classes",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name:
-              locale === "pt-PT"
-                ? "Aulas para Crianças (até 12 anos)"
-                : "Children's Classes (up to 12 years)",
-            description:
-              locale === "pt-PT"
-                ? "Karaté Shotokan para crianças com metodologia adaptada"
-                : "Shotokan Karate for children with adapted methodology",
-            provider: {
-              "@type": "SportsOrganization",
-              name: t("name"),
-            },
-          },
-          price: "25",
-          priceCurrency: "EUR",
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "25",
-            priceCurrency: "EUR",
-            referenceQuantity: {
-              "@type": "QuantitativeValue",
-              value: "1",
-              unitText: "MONTH",
-            },
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name:
-              locale === "pt-PT"
-                ? "Aulas para Adultos (12+ anos)"
-                : "Adult Classes (12+ years)",
-            description:
-              locale === "pt-PT"
-                ? "Karaté Shotokan para jovens e adultos"
-                : "Shotokan Karate for youth and adults",
-            provider: {
-              "@type": "SportsOrganization",
-              name: t("name"),
-            },
-          },
-          price: "25",
-          priceCurrency: "EUR",
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "25",
-            priceCurrency: "EUR",
-            referenceQuantity: {
-              "@type": "QuantitativeValue",
-              value: "1",
-              unitText: "MONTH",
-            },
-          },
-        },
-      ],
     },
     location: [
       {
@@ -195,9 +115,8 @@ export const jsonLd = async (
           latitude: "32.64960322122704",
           longitude: "-16.925423720138244",
         },
-        image: "/icons/icon-512x512.png",
+        image: `${siteUrl}/icons/icon-512x512.png`,
         telephone: "+351960384090",
-        priceRange: "25€",
       },
       {
         "@type": "SportsActivityLocation",
@@ -216,9 +135,8 @@ export const jsonLd = async (
           latitude: "32.66403626393345",
           longitude: "-16.940252710073036",
         },
-        image: "/icons/icon-512x512.png",
+        image: `${siteUrl}/icons/icon-512x512.png`,
         telephone: "+351960384090",
-        priceRange: "25€",
       },
     ],
     memberOf: [
@@ -253,21 +171,10 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("Home");
   const pathname = getPathname({ href: "/", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/", locale: otherLocale });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        [locale]: pathname,
-        "pt-BR": getPathname({ href: "/", locale: "pt-PT" }),
-        "x-default": getPathname({ href: "/", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
@@ -277,10 +184,15 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: `${siteUrl}/icons/icon-512x512.png`,
-          width: 512,
-          height: 512,
-          alt: t("meta.title"),
+          url: `${siteUrl}${heroImage.src}`,
+          width: heroImage.width,
+          height: heroImage.height,
+          alt: localizedText(locale, {
+            "pt-PT": "Praticantes da ASKKSA em seiza no dojo",
+            en: "ASKKSA students in seiza at the dojo",
+            fr: "Pratiquants de l’ASKKSA en seiza dans le dojo",
+            ja: "道場で正座するASKKSAの稽古生",
+          }),
         },
       ],
     },
@@ -288,7 +200,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: [`${siteUrl}/icons/icon-512x512.png`],
+      images: [`${siteUrl}${heroImage.src}`],
     },
   };
 }

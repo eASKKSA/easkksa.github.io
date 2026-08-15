@@ -17,15 +17,17 @@ const FeatureCard: React.FC<{
       data-reveal-threshold={0.2}
       data-reveal-state="idle"
       style={animationStyle}
-      className={`rounded-xl p-8 text-center border shadow-lg dark:bg-[#2a2a2a]/60 dark:backdrop-blur-sm dark:hover:bg-[#363636]/60 dark:border-gray-700/50 bg-white/60 backdrop-blur-sm hover:bg-white/80 border-gray-200/50 ${className}`}
+      className={`rounded-[1.5rem] border border-black/10 bg-white/78 p-6 text-center shadow-[0_18px_55px_rgba(28,20,16,0.08)] backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_70px_rgba(28,20,16,0.13)] md:p-8 dark:border-white/10 dark:bg-[#1b1b1b]/88 dark:hover:border-primary/40 ${className}`}
     >
-      <div className="mb-6 flex justify-center">{feature.icon}</div>
+      <div className="mx-auto mb-6 grid size-12 place-items-center rounded-full bg-primary/10 font-display text-lg font-bold text-primary">
+        {feature.icon}
+      </div>
 
-      <HeadingTag className="text-xl md:text-2xl font-bold text-primary mb-4">
+      <HeadingTag className="mb-4 text-xl font-bold text-primary md:text-2xl">
         {feature.title}
       </HeadingTag>
 
-      <p className="leading-relaxed dark:text-gray-300 text-center text-gray-600 text-sm md:text-base">
+      <p className="text-center text-sm leading-relaxed text-stone-600 md:text-base dark:text-stone-300">
         {feature.description}
       </p>
     </div>
