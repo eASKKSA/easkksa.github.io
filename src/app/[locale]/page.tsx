@@ -48,7 +48,7 @@ export default async function Page({
       ages: "Todas as idades",
       agesDetail: "Crianças, jovens e adultos",
       certified: "Ensino certificado",
-      certifiedDetail: "FNK-P · SKIF",
+      certifiedDetail: "FNK-P · SKIF Canada",
       methodKicker: "O método ASKKSA",
       methodTitle: "O treino começa no respeito.",
       methodIntro:
@@ -74,7 +74,7 @@ export default async function Page({
       ages: "All ages",
       agesDetail: "Children, teens and adults",
       certified: "Certified teaching",
-      certifiedDetail: "FNK-P · SKIF",
+      certifiedDetail: "FNK-P · SKIF Canada",
       methodKicker: "The ASKKSA method",
       methodTitle: "Training begins with respect.",
       methodIntro:
@@ -100,7 +100,7 @@ export default async function Page({
       ages: "Tous les âges",
       agesDetail: "Enfants, adolescents et adultes",
       certified: "Enseignement certifié",
-      certifiedDetail: "FNK-P · SKIF",
+      certifiedDetail: "FNK-P · SKIF Canada",
       methodKicker: "La méthode ASKKSA",
       methodTitle: "L’entraînement commence par le respect.",
       methodIntro:
@@ -126,7 +126,7 @@ export default async function Page({
       ages: "幅広い年齢に対応",
       agesDetail: "子ども・青少年・成人",
       certified: "公認指導員による指導",
-      certifiedDetail: "FNK-P · SKIF",
+      certifiedDetail: "FNK-P · SKIF Canada",
       methodKicker: "ASKKSAの指導方針",
       methodTitle: "稽古は礼節から始まります。",
       methodIntro:
