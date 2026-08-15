@@ -6,10 +6,12 @@ import {
   LuMail,
   LuMapPin,
   LuPhone,
+  LuUserRound,
   LuYoutube,
 } from "react-icons/lu";
 import TrackableLink from "@/components/trackable-link";
 import { Link } from "@/i18n/navigation";
+import { MEMBERS_PORTAL_URL } from "@/lib/site-links";
 
 const dojos = [
   {
@@ -140,7 +142,16 @@ export default async function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-7 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            <TrackableLink
+              href={MEMBERS_PORTAL_URL}
+              className="flex items-center gap-2 transition-colors hover:text-white"
+              gtmEvent="portal_click"
+              gtmParams={{ placement: "footer" }}
+            >
+              <LuUserRound className="size-4" aria-hidden="true" />
+              {t("portal")}
+            </TrackableLink>
             <Link href="/faq" className="transition-colors hover:text-white">
               {t("faq")}
             </Link>

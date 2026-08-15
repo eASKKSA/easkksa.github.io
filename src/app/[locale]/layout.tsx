@@ -64,10 +64,11 @@ export default async function Layout({
   const navbarT = await getTranslations("Navbar");
   const cookieT = await getTranslations("CookieWarning");
   const navbarLabels = Object.fromEntries(
-    Object.keys(mainPagePathnames).map((pathname) => [
-      pathname.slice(1),
-      navbarT(pathname.slice(1)),
-    ]),
+    [
+      ...Object.keys(mainPagePathnames).map((pathname) => pathname.slice(1)),
+      "portal",
+      "portalFull",
+    ].map((key) => [key, navbarT(key)]),
   );
   const cookieLabels = {
     ariaLabel: cookieT("ariaLabel"),

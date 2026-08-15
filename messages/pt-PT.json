@@ -5,7 +5,9 @@
     "in-dojo": "No Dojo",
     "history": "História",
     "philosophy": "Filosofia",
-    "style-ski": "Estilo SKI"
+    "style-ski": "Estilo SKI",
+    "portal": "Associados",
+    "portalFull": "Portal dos Associados"
   },
   "Organization": {
     "name": "ASKKSA: Associação Shotokan Kokusai Karaté Santo António",
@@ -1227,6 +1229,7 @@
     "contact": "Contacto",
     "followUs": "Siga-nos",
     "faq": "Perguntas Frequentes",
+    "portal": "Portal dos Associados",
     "privacy": "Política de Privacidade",
     "copyright": "Todos os direitos reservados"
   },

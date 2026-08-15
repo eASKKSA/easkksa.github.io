@@ -10,11 +10,14 @@ import {
   LuGlobe,
   LuMenu,
   LuSunMoon,
+  LuUserRound,
   LuX,
 } from "react-icons/lu";
 import mainLogo from "@/app/icon.svg";
+import TrackableLink from "@/components/trackable-link";
 import { Link, usePathname } from "@/i18n/navigation";
 import { mainPagePathnames } from "@/i18n/routing";
+import { MEMBERS_PORTAL_URL } from "@/lib/site-links";
 
 const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
   ssr: false,
@@ -331,7 +334,7 @@ export default function Navbar({
   return (
     <header ref={headerRef} data-scrolled="false">
       <div className="relative mx-auto flex h-[76px] max-w-[1450px] items-center rounded-[1.35rem] border border-black/8 bg-[#fffdf8]/94 px-3 shadow-[0_12px_40px_rgba(22,18,15,0.08)] backdrop-blur-xl transition-all duration-300 data-[scrolled=true]:border-black/12 data-[scrolled=true]:shadow-[0_16px_48px_rgba(22,18,15,0.14)] dark:border-white/10 dark:bg-[#171717]/94 dark:data-[scrolled=true]:border-white/15">
-        <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center xl:hidden">
+        <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center min-[1360px]:hidden">
           <span aria-hidden="true" className="size-11" />
           <Link
             href="/"
@@ -366,37 +369,52 @@ export default function Navbar({
           </button>
         </div>
 
-        <div className="hidden w-full grid-cols-[1fr_116px_1fr] items-center xl:grid">
-          <nav
-            aria-label={ui.primaryFirst}
-            className="flex min-w-0 items-center justify-end gap-1 pr-7"
-          >
-            {leftNavigationItems.map((item) => {
-              const isActive = isNavigationItemActive(pathname, item.href);
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`group relative whitespace-nowrap px-3 py-3 font-display text-[15px] font-semibold uppercase tracking-[0.07em] transition-colors duration-200 ${
-                    isActive
-                      ? "text-primary"
-                      : "text-stone-600 hover:text-ink dark:text-stone-300 dark:hover:text-white"
-                  }`}
-                >
-                  {labels[item.labelKey]}
-                  <span
-                    aria-hidden="true"
-                    className={`absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-primary transition-opacity duration-200 ${
+        <div className="hidden w-full grid-cols-[1fr_116px_1fr] items-center min-[1360px]:grid">
+          <div className="flex min-w-0 items-center pr-7">
+            <div className="flex shrink-0 items-center border-r border-black/10 pr-3 dark:border-white/10">
+              <TrackableLink
+                href={MEMBERS_PORTAL_URL}
+                aria-label={labels.portalFull}
+                title={labels.portalFull}
+                className="flex h-11 items-center gap-2 rounded-full bg-ink px-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-primary dark:bg-white dark:text-ink dark:hover:bg-primary dark:hover:text-white"
+                gtmEvent="portal_click"
+                gtmParams={{ placement: "navbar_desktop" }}
+              >
+                <LuUserRound className="size-4" aria-hidden="true" />
+                <span>{labels.portal}</span>
+              </TrackableLink>
+            </div>
+            <nav
+              aria-label={ui.primaryFirst}
+              className="ml-auto flex min-w-0 items-center gap-1"
+            >
+              {leftNavigationItems.map((item) => {
+                const isActive = isNavigationItemActive(pathname, item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`group relative whitespace-nowrap px-3 py-3 font-display text-[15px] font-semibold uppercase tracking-[0.07em] transition-colors duration-200 ${
                       isActive
-                        ? "opacity-100"
-                        : "opacity-0 group-hover:opacity-50"
+                        ? "text-primary"
+                        : "text-stone-600 hover:text-ink dark:text-stone-300 dark:hover:text-white"
                     }`}
-                  />
-                </Link>
-              );
-            })}
-          </nav>
+                  >
+                    {labels[item.labelKey]}
+                    <span
+                      aria-hidden="true"
+                      className={`absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-primary transition-opacity duration-200 ${
+                        isActive
+                          ? "opacity-100"
+                          : "opacity-0 group-hover:opacity-50"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
 
           <Link
             href="/"
@@ -457,7 +475,7 @@ export default function Navbar({
 
       <div
         id="mobile-navigation"
-        className={`fixed inset-x-3 top-[104px] max-h-[calc(100dvh-116px)] overflow-y-auto rounded-[1.75rem] border border-black/10 bg-[#fffdf8] p-5 shadow-2xl transition-all duration-300 xl:hidden dark:border-white/10 dark:bg-[#171717] ${
+        className={`fixed inset-x-3 top-[104px] max-h-[calc(100dvh-116px)] overflow-y-auto rounded-[1.75rem] border border-black/10 bg-[#fffdf8] p-5 shadow-2xl transition-all duration-300 min-[1360px]:hidden dark:border-white/10 dark:bg-[#171717] ${
           isMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-4 opacity-0"
@@ -486,6 +504,16 @@ export default function Navbar({
             );
           })}
         </nav>
+        <TrackableLink
+          href={MEMBERS_PORTAL_URL}
+          onClick={() => setIsMenuOpen(false)}
+          className="mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-ink px-4 py-3 font-semibold text-white transition-colors duration-200 hover:bg-primary dark:bg-white dark:text-ink dark:hover:bg-primary dark:hover:text-white"
+          gtmEvent="portal_click"
+          gtmParams={{ placement: "navbar_mobile" }}
+        >
+          <LuUserRound className="size-5" aria-hidden="true" />
+          <span>{labels.portalFull}</span>
+        </TrackableLink>
         <div className="my-5 h-px bg-black/10 dark:bg-white/10" />
         <div>
           <div className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-stone-500 dark:text-stone-400">

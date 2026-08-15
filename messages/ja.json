@@ -5,7 +5,9 @@
     "in-dojo": "道場での心得",
     "history": "歴史",
     "philosophy": "哲学",
-    "style-ski": "SKI流派"
+    "style-ski": "SKI流派",
+    "portal": "会員",
+    "portalFull": "会員ポータル"
   },
   "Organization": {
     "name": "ASKKSA — Associação Shotokan Kokusai Karaté Santo António",
@@ -1227,6 +1229,7 @@
     "contact": "連絡",
     "followUs": "私たちをフォローしてください",
     "faq": "よくある質問",
+    "portal": "会員ポータル",
     "privacy": "プライバシーポリシー",
     "copyright": "無断転載禁止"
   },
