@@ -366,7 +366,7 @@ export default function Navbar({
           </button>
         </div>
 
-        <div className="hidden w-full grid-cols-[1fr_104px_1fr] items-center xl:grid">
+        <div className="hidden w-full grid-cols-[1fr_116px_1fr] items-center xl:grid">
           <nav
             aria-label={ui.primaryFirst}
             className="flex min-w-0 items-center justify-end gap-1 pr-7"
@@ -402,14 +402,14 @@ export default function Navbar({
             href="/"
             aria-label={ui.home}
             prefetch={false}
-            className="logo-pulse-trigger relative z-10 grid size-[88px] justify-self-center place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_10px_30px_rgba(22,18,15,0.16)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
+            className="logo-pulse-trigger relative z-10 grid size-[98px] justify-self-center place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_12px_34px_rgba(22,18,15,0.18)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
           >
             <Image
               src={mainLogo}
               alt=""
-              width={82}
-              height={82}
-              className="size-[82px] animate-logo-pulse-grow"
+              width={92}
+              height={92}
+              className="size-[92px] animate-logo-pulse-grow"
               priority
               fetchPriority="high"
               unoptimized
