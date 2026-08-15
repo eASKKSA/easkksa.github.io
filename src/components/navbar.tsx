@@ -333,7 +333,7 @@ export default function Navbar({
 
   return (
     <header ref={headerRef} data-scrolled="false">
-      <div className="relative mx-auto flex h-[68px] max-w-[1450px] items-center rounded-[1.35rem] border border-black/8 bg-[#fffdf8]/94 px-3 shadow-[0_12px_40px_rgba(22,18,15,0.08)] backdrop-blur-xl transition-all duration-300 data-[scrolled=true]:border-black/12 data-[scrolled=true]:shadow-[0_16px_48px_rgba(22,18,15,0.14)] min-[1360px]:h-[76px] dark:border-white/10 dark:bg-[#171717]/94 dark:data-[scrolled=true]:border-white/15">
+      <div className="relative mx-auto flex h-[68px] max-w-[1420px] items-center rounded-[1.35rem] border border-black/8 bg-[#fffdf8]/94 px-3 shadow-[0_12px_40px_rgba(22,18,15,0.08)] backdrop-blur-xl transition-all duration-300 group-data-[scrolled=true]:border-black/12 group-data-[scrolled=true]:bg-[#fffdf8] group-data-[scrolled=true]:shadow-[0_16px_48px_rgba(22,18,15,0.14)] min-[1360px]:h-[76px] dark:border-white/10 dark:bg-[#171717]/94 dark:group-data-[scrolled=true]:border-white/15 dark:group-data-[scrolled=true]:bg-[#171717]">
         <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center min-[1360px]:hidden">
           <TrackableLink
             href={MEMBERS_PORTAL_URL}
@@ -429,14 +429,14 @@ export default function Navbar({
             href="/"
             aria-label={ui.home}
             prefetch={false}
-            className="logo-pulse-trigger relative z-10 grid size-[106px] justify-self-center place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_12px_34px_rgba(22,18,15,0.18)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
+            className="logo-pulse-trigger relative z-10 grid size-[106px] justify-self-center place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_12px_34px_rgba(22,18,15,0.18)] transition-[width,height,border-color] duration-300 hover:border-primary min-[1360px]:group-data-[scrolled=true]:size-[92px] dark:border-white/15 dark:bg-[#171717]"
           >
             <Image
               src={mainLogo}
               alt=""
               width={100}
               height={100}
-              className="size-[100px] animate-logo-pulse-grow"
+              className="size-[100px] animate-logo-pulse-grow transition-[width,height] duration-300 min-[1360px]:group-data-[scrolled=true]:size-[86px]"
               priority
               fetchPriority="high"
               unoptimized
@@ -484,7 +484,7 @@ export default function Navbar({
 
       <div
         id="mobile-navigation"
-        className={`fixed inset-x-3 top-[100px] max-h-[calc(100dvh-112px)] overflow-y-auto rounded-[1.75rem] border border-black/10 bg-[#fffdf8] p-5 shadow-2xl transition-all duration-300 min-[1360px]:hidden dark:border-white/10 dark:bg-[#171717] ${
+        className={`fixed inset-x-4 top-[104px] max-h-[calc(100dvh-120px)] overflow-y-auto rounded-[1.75rem] border border-black/10 bg-[#fffdf8] p-5 shadow-2xl transition-all duration-300 min-[1360px]:hidden dark:border-white/10 dark:bg-[#171717] ${
           isMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-4 opacity-0"
