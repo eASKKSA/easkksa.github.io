@@ -91,7 +91,7 @@
     "schedule": {
       "weekdays": "Lundi à vendredi",
       "children": "Enfants de moins de 12 ans",
-      "adults": "Adults de 12 ans et plus",
+      "adults": "À partir de 12 ans",
       "time1": "19h30 à 20h30",
       "time2": "20h30 à 21h30"
     },
