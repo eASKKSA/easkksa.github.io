@@ -127,9 +127,7 @@
     opacity: 0;
     transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
   }
-  header[data-scrolled="true"] {
-    @apply top-2;
-  }
+  
   header[data-scrolled="true"]::before {
     opacity: 1;
   }
