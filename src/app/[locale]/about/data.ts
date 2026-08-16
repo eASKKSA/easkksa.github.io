@@ -92,15 +92,15 @@ export const getAuxiliaryInstructors = (): BlackBelt[] => [
     graduation: "3º Dan",
   },
   {
-    id: "jessicaBaptista",
-    name: "Jéssica Baptista",
-    image: jessicaBaptista,
-    graduation: "2º Dan",
-  },
-  {
     id: "marcioGouveia",
     name: "Márcio Gouveia",
     image: marcioGouveia,
+    graduation: "3º Dan",
+  },
+  {
+    id: "jessicaBaptista",
+    name: "Jéssica Baptista",
+    image: jessicaBaptista,
     graduation: "2º Dan",
   },
   {
@@ -176,15 +176,15 @@ export const getBlackBelts = (): BlackBelt[] => [
     graduation: "3º Dan",
   },
   {
-    id: "jessicaBaptista",
-    name: "Jéssica Baptista",
-    image: jessicaBaptista,
-    graduation: "2º Dan",
-  },
-  {
     id: "marcioGouveia",
     name: "Márcio Gouveia",
     image: marcioGouveia,
+    graduation: "3º Dan",
+  },
+  {
+    id: "jessicaBaptista",
+    name: "Jéssica Baptista",
+    image: jessicaBaptista,
     graduation: "2º Dan",
   },
   {
