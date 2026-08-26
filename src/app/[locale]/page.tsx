@@ -218,23 +218,24 @@ export default async function Page({
           </div>
         </div>
 
-        <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] border border-white/10 sm:min-h-[520px] lg:min-h-[650px]">
-          <Image
-            src={heroImage}
-            alt={localizedText(locale, {
-              "pt-PT": "Karateka em seiza",
-              en: "Karateka in seiza",
-              es: "Karateka en seiza",
-              fr: "Karatékas en seiza",
-              ja: "正座する空手家",
-            })}
-            fill
-            priority
-            fetchPriority="high"
-            sizes="(max-width: 1024px) 100vw, 48vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/15" />
+        <div className="relative min-h-[440px] sm:min-h-[560px] lg:-my-6 lg:-mr-8 lg:min-h-[700px] xl:-mr-14">
+          <div className="hero-image-fade absolute inset-0">
+            <Image
+              src={heroImage}
+              alt={localizedText(locale, {
+                "pt-PT": "Karateka em seiza",
+                en: "Karateka in seiza",
+                es: "Karateka en seiza",
+                fr: "Karatékas en seiza",
+                ja: "正座する空手家",
+              })}
+              fill
+              fetchPriority="high"
+              sizes="(max-width: 1024px) 100vw, 52vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 " />
+          </div>
           <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between border-t border-white/25 pt-4 text-xs font-bold uppercase tracking-[0.18em] text-stone-200 sm:bottom-7 sm:left-7 sm:right-7">
             <span>ASKKSA</span>
             <span>空手道</span>
