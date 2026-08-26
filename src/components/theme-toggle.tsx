@@ -19,6 +19,12 @@ const themeLabels: Record<
     system: "Use system preference",
     dark: "Dark mode",
   },
+  es: {
+    group: "Elegir apariencia",
+    light: "Modo claro",
+    system: "Usar la preferencia del sistema",
+    dark: "Modo oscuro",
+  },
   fr: {
     group: "Choisir l’apparence",
     light: "Mode clair",

@@ -61,6 +61,7 @@ const localeOptions: ReadonlyArray<{
 }> = [
   { code: "pt-PT", label: "PT", name: "Português" },
   { code: "en", label: "EN", name: "English" },
+  { code: "es", label: "ES", name: "Español" },
   { code: "fr", label: "FR", name: "Français" },
   { code: "ja", label: "日本語", name: "日本語" },
 ];
@@ -100,6 +101,17 @@ const navbarUi: Record<
     primaryFirst: "Main navigation, first section",
     primarySecond: "Main navigation, second section",
     mobileNavigation: "Main mobile navigation",
+  },
+  es: {
+    appearance: "Apariencia",
+    chooseLanguage: "Elegir idioma",
+    home: "Inicio",
+    language: "Idioma",
+    menu: "Abrir o cerrar el menú",
+    openAppearance: "Elegir apariencia",
+    primaryFirst: "Navegación principal, primera parte",
+    primarySecond: "Navegación principal, segunda parte",
+    mobileNavigation: "Navegación principal móvil",
   },
   fr: {
     appearance: "Apparence",

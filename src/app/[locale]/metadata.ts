@@ -78,7 +78,13 @@ export const jsonLd = async (
         contactType: t("contactType"),
         telephone: "+351960384090",
         email: "direcao@askksa.pt",
-        availableLanguage: ["Portuguese", "English", "French", "Japanese"],
+        availableLanguage: [
+          "Portuguese",
+          "English",
+          "Spanish",
+          "French",
+          "Japanese",
+        ],
       },
     ],
     // LocalBusiness specific properties
@@ -190,6 +196,7 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: localizedText(locale, {
             "pt-PT": "Praticantes da ASKKSA em seiza no dojo",
             en: "ASKKSA students in seiza at the dojo",
+            es: "Practicantes de la ASKKSA en seiza en el dojo",
             fr: "Pratiquants de l’ASKKSA en seiza dans le dojo",
             ja: "道場で正座するASKKSAの稽古生",
           }),

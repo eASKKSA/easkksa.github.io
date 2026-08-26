@@ -128,6 +128,7 @@ export default async function Layout({
             {localizedText(typedLocale, {
               "pt-PT": "Saltar para o conteúdo",
               en: "Skip to content",
+              es: "Saltar al contenido",
               fr: "Aller au contenu",
               ja: "本文へ移動",
             })}

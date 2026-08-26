@@ -70,6 +70,7 @@ export default async function FAQPage({
           {localizedText(locale, {
             "pt-PT": "Ainda tem dúvidas?",
             en: "Still have questions?",
+            es: "¿Aún tienes dudas?",
             fr: "Vous avez encore des questions ?",
             ja: "ご不明な点はありますか？",
           })}
@@ -79,6 +80,7 @@ export default async function FAQPage({
             "pt-PT":
               "Entre em contacto connosco. Teremos todo o prazer em ajudar!",
             en: "Get in touch with us. We'll be happy to help!",
+            es: "Ponte en contacto con nosotros. Estaremos encantados de ayudarte.",
             fr: "Contactez-nous. Nous vous répondrons avec plaisir.",
             ja: "お気軽にお問い合わせください。",
           })}

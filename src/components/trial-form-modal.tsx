@@ -40,6 +40,7 @@ const initialState: TrialFormState = { message: "", success: false };
 const modalUi: Record<Locale, { close: string; eyebrow: string }> = {
   "pt-PT": { close: "Fechar formulário", eyebrow: "ASKKSA · Experiência" },
   en: { close: "Close form", eyebrow: "ASKKSA · Trial" },
+  es: { close: "Cerrar formulario", eyebrow: "ASKKSA · Prueba" },
   fr: { close: "Fermer le formulaire", eyebrow: "ASKKSA · Essai" },
   ja: { close: "フォームを閉じる", eyebrow: "ASKKSA · 体験" },
 };

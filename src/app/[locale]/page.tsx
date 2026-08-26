@@ -89,6 +89,32 @@ export default async function Page({
         "Join three free classes, meet the instructors and discover how we train.",
       reviewLabel: "Already trained with us? Leave a review",
     },
+    es: {
+      eyebrow: "Kárate Shotokan · Funchal, Madeira",
+      headline: "Respeto y Disciplina.",
+      scheduleLink: "Ver horarios",
+      since: "Desde 2000",
+      sinceDetail: "Más de 25 años de práctica",
+      dojos: "3 dojos",
+      dojosDetail: "Funchal y Câmara de Lobos",
+      ages: "Todas las edades",
+      agesDetail: "Niños, jóvenes y adultos",
+      certified: "Enseñanza certificada",
+      certifiedDetail: "FNK-P · SKIF Canada",
+      methodKicker: "El método ASKKSA",
+      methodTitle: "El entrenamiento empieza por el respeto.",
+      methodIntro:
+        "Enseñamos con rigor, conservamos la tradición y acompañamos a cada alumno a su ritmo.",
+      scheduleKicker: "Entrenar esta semana",
+      scheduleNote: "De lunes a viernes · Dojo principal",
+      scheduleCta: "Elegir estas clases",
+      visitKicker: "El primer paso",
+      mapLabel: "Abrir en el mapa",
+      finalTitle: "Ven a conocer nuestro dojo.",
+      finalText:
+        "Participa en tres clases gratuitas, conoce a los instructores y descubre cómo entrenamos.",
+      reviewLabel: "¿Ya has entrenado con nosotros? Déjanos tu reseña",
+    },
     fr: {
       eyebrow: "Karaté Shotokan · Funchal, Madère",
       headline: "Respect et Discipline.",
@@ -198,6 +224,7 @@ export default async function Page({
             alt={localizedText(locale, {
               "pt-PT": "Karateka em seiza",
               en: "Karateka in seiza",
+              es: "Karateka en seiza",
               fr: "Karatékas en seiza",
               ja: "正座する空手家",
             })}
@@ -220,6 +247,7 @@ export default async function Page({
         aria-label={localizedText(locale, {
           "pt-PT": "Informação essencial sobre a ASKKSA",
           en: "Key facts about ASKKSA",
+          es: "Información esencial sobre la ASKKSA",
           fr: "Informations essentielles sur l’ASKKSA",
           ja: "ASKKSAの基本情報",
         })}
