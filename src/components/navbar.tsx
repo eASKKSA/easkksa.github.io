@@ -349,14 +349,14 @@ export default function Navbar({
             href="/"
             aria-label={ui.home}
             prefetch={false}
-            className="logo-pulse-trigger relative z-10 grid size-[76px] place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_8px_24px_rgba(22,18,15,0.14)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
+            className="logo-pulse-trigger relative z-10 grid size-[98px] place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_8px_24px_rgba(22,18,15,0.14)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
           >
             <Image
               src={mainLogo}
               alt=""
-              width={72}
-              height={72}
-              className="size-[72px] animate-logo-pulse-grow"
+              width={92}
+              height={92}
+              className="size-[92px] animate-logo-pulse-grow"
               priority
               fetchPriority="high"
               unoptimized
