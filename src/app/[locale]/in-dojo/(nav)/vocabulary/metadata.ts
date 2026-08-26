@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Vocabulary");
@@ -48,28 +53,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Thing",
-        name: "Hiragana",
-        description: "Sistema de escrita japonesa",
-      },
-      {
-        "@type": "Thing",
-        name: "Katakana",
-        description: "Sistema de escrita japonesa",
-      },
-      {
-        "@type": "Thing",
-        name: "Kanji",
-        description: "Sistema de escrita japonesa com caracteres chineses",
-      },
-      {
-        "@type": "Thing",
-        name: "Dojo",
-        description: "Local de treino de artes marciais",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -112,7 +95,8 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
@@ -132,7 +116,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: ["/icons/icon-512x512.png"],
-      site: "@askksa_madeira",
     },
   };
 }

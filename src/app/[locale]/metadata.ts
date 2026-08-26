@@ -9,9 +9,15 @@ import type {
 import heroImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getLocalizedAlternates, localizedText } from "@/lib/seo";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSiteUrl,
+  localizedText,
+} from "@/lib/seo";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = getSiteUrl();
 
 // WebSite Schema - Removed SearchAction (no internal search on site)
 export const websiteSchema = async (
@@ -32,9 +38,8 @@ export const websiteSchema = async (
 // Enhanced SportsOrganization + LocalBusiness combo for maximum SEO
 export const jsonLd = async (
   t: TFunction,
-  locale: Locale,
+  _locale: Locale,
 ): Promise<WithContext<SportsOrganization & LocalBusiness>> => {
-  const pathname = getPathname({ href: "/", locale: locale });
   return {
     "@context": "https://schema.org",
     "@id": `${siteUrl}/#organization`,
@@ -44,7 +49,7 @@ export const jsonLd = async (
     alternateName: "ASKKSA",
     sport: t("sport"),
     description: t("description"),
-    url: siteUrl + pathname,
+    url: siteUrl,
     logo: {
       "@type": "ImageObject",
       url: `${siteUrl}/icons/icon-512x512.png`,
@@ -87,9 +92,6 @@ export const jsonLd = async (
         ],
       },
     ],
-    // LocalBusiness specific properties
-    priceRange: "€€",
-    paymentAccepted: "Cash, Bank Transfer",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -184,7 +186,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: siteUrl + pathname,
       type: "website",

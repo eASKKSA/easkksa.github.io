@@ -4,7 +4,13 @@ import type { WebPage, WithContext } from "schema-dts";
 
 import principlesImage from "@/assets/philosofy/principios.gif";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
@@ -22,7 +28,7 @@ export const jsonLd = async (
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: principlesImage.src,
+      url: getAbsoluteUrl(principlesImage.src),
       caption: t("title"),
     },
     author: {
@@ -50,28 +56,6 @@ export const jsonLd = async (
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Gichin Funakoshi",
-        description: "Criador dos princípios Niju Kun e Dojo Kun",
-      },
-      {
-        "@type": "Thing",
-        name: "Bushido",
-        description: "Código de ética dos Samurais adaptado ao Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Niju Kun",
-        description: "Os 20 princípios filosóficos do Karaté Shotokan",
-      },
-      {
-        "@type": "Thing",
-        name: "Dojo Kun",
-        description: "As 5 máximas fundamentais do dojo",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -103,15 +87,16 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
       type: "website",
       images: [
         {
           url: principlesImage.src,
-          width: 800,
-          height: 600,
+          width: principlesImage.width,
+          height: principlesImage.height,
           alt: t("title"),
         },
         {

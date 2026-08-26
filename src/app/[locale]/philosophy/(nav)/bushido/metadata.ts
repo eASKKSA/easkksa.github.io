@@ -4,7 +4,13 @@ import type { Article, WithContext } from "schema-dts";
 
 import ethicalCodeImage from "@/assets/philosofy/codigo-etica-karate.jpg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Bushido");
@@ -25,7 +31,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: ethicalCodeImage.src,
+      url: getAbsoluteUrl(ethicalCodeImage.src),
       caption: t("title"),
     },
     author: {
@@ -53,53 +59,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Thing",
-        name: "Honra",
-        description: "Primeiro princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Lealdade",
-        description: "Segundo princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Sinceridade",
-        description: "Terceiro princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Coragem",
-        description: "Quarto princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Bondade",
-        description: "Quinto princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Modéstia",
-        description: "Sexto princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Justiça",
-        description: "Sétimo princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Respeito",
-        description: "Oitavo princípio do Bushido",
-      },
-      {
-        "@type": "Thing",
-        name: "Autocontrolo",
-        description: "Nono princípio do Bushido",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -145,14 +104,15 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
         {
           url: ethicalCodeImage.src,
-          width: 800,
-          height: 600,
+          width: ethicalCodeImage.width,
+          height: ethicalCodeImage.height,
           alt: t("meta.title"),
         },
         {
@@ -171,7 +131,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: [ethicalCodeImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

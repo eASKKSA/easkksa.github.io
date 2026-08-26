@@ -4,7 +4,13 @@ import type { Article, WithContext } from "schema-dts";
 
 import nijuKunImage from "@/assets/philosofy/principios.gif";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("NijuKun");
@@ -25,7 +31,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: nijuKunImage.src,
+      url: getAbsoluteUrl(nijuKunImage.src),
       caption: t("title"),
     },
     author: {
@@ -53,18 +59,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Gichin Funakoshi",
-        description: "Criador dos 20 princípios Niju Kun",
-      },
-      {
-        "@type": "Thing",
-        name: "Niju Kun",
-        description: "Os 20 princípios fundamentais do Karaté Shotokan",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -110,14 +104,15 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
         {
           url: nijuKunImage.src,
-          width: 600,
-          height: 400,
+          width: nijuKunImage.width,
+          height: nijuKunImage.height,
           alt: t("meta.title"),
         },
         {
@@ -136,7 +131,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: [nijuKunImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

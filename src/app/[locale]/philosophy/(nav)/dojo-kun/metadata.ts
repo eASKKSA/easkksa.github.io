@@ -4,7 +4,13 @@ import type { Article, WithContext } from "schema-dts";
 
 import dojoKunImage from "@/assets/philosofy/dojo-kun.jpg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("DojoKun");
@@ -25,7 +31,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: dojoKunImage.src,
+      url: getAbsoluteUrl(dojoKunImage.src),
       caption: t("title"),
     },
     author: {
@@ -53,18 +59,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Gichin Funakoshi",
-        description: "Criador das 5 máximas Dojo Kun",
-      },
-      {
-        "@type": "Thing",
-        name: "Dojo Kun",
-        description: "As 5 máximas fundamentais do dojo de Karaté",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -110,14 +104,15 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
         {
           url: dojoKunImage.src,
-          width: 800,
-          height: 600,
+          width: dojoKunImage.width,
+          height: dojoKunImage.height,
           alt: t("meta.title"),
         },
         {
@@ -136,7 +131,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: [dojoKunImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

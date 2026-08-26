@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("DojoRules");
@@ -48,23 +53,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Thing",
-        name: "Etiqueta do Dojo",
-        description: "Regras de comportamento no dojo de Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Sensei",
-        description: "Professor de Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Respeito",
-        description: "Valor fundamental no Karaté",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -107,7 +95,8 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
@@ -127,7 +116,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: ["/icons/icon-512x512.png"],
-      site: "@askksa_madeira",
     },
   };
 }

@@ -3,7 +3,11 @@ import { getTranslations } from "next-intl/server";
 import { LuArrowUpRight, LuMail, LuShieldCheck } from "react-icons/lu";
 import Container from "@/components/container";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates } from "@/lib/seo";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+} from "@/lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -22,7 +26,8 @@ export async function generateMetadata({
       title: `${t("title")} | ASKKSA`,
       description: t("intro"),
       siteName: "ASKKSA",
-      locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       type: "website",
       url: siteUrl + pathname,
     },

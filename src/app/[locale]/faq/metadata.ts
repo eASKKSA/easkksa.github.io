@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { FAQPage, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -132,7 +137,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: siteUrl + pathname,
       type: "website",

@@ -3,7 +3,13 @@ import { getTranslations } from "next-intl/server";
 import type { WebPage, WithContext } from "schema-dts";
 import askksaThumb from "@/assets/askksa_thumb.svg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
@@ -21,7 +27,7 @@ export const jsonLd = async (
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: askksaThumb.src,
+      url: getAbsoluteUrl(askksaThumb.src),
       caption: t("title"),
     },
     author: {
@@ -66,28 +72,6 @@ export const jsonLd = async (
         },
       ],
     },
-    mentions: [
-      {
-        "@type": "Thing",
-        name: "Dojo",
-        description: "Local de treino de artes marciais",
-      },
-      {
-        "@type": "Thing",
-        name: "Saudação",
-        description: "Ritual de respeito no Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Etiqueta",
-        description: "Regras de conduta no dojo",
-      },
-      {
-        "@type": "Thing",
-        name: "Graduações",
-        description: "Sistema de níveis no Karaté",
-      },
-    ],
   };
 };
 
@@ -102,15 +86,16 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
       type: "website",
       images: [
         {
           url: askksaThumb.src,
-          width: 800,
-          height: 600,
+          width: askksaThumb.width,
+          height: askksaThumb.height,
           alt: t("title"),
         },
       ],

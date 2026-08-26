@@ -4,7 +4,12 @@ import type { Article, WithContext } from "schema-dts";
 
 import senseiSeizaImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Salutation");
@@ -21,7 +26,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: senseiSeizaImage.src,
+      url: getAbsoluteUrl(senseiSeizaImage.src),
       caption: t("title"),
     },
     author: {
@@ -49,29 +54,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Thing",
-        name: "OSS",
-        description:
-          "Saudação universal do Karaté que significa perseverança sob pressão",
-      },
-      {
-        "@type": "Thing",
-        name: "SEIZA",
-        description: "Posição formal de sentar no Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "MOKUSO",
-        description: "Período de meditação no início e fim do treino",
-      },
-      {
-        "@type": "Thing",
-        name: "REI",
-        description: "Saudação formal no Karaté",
-      },
-    ],
   };
 };
 
@@ -89,14 +71,15 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
         {
           url: senseiSeizaImage.src,
-          width: 800,
-          height: 600,
+          width: senseiSeizaImage.width,
+          height: senseiSeizaImage.height,
           alt: t("meta.title"),
         },
         {
@@ -115,7 +98,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: [senseiSeizaImage.src],
-      site: "@askksa_madeira",
     },
   };
 }

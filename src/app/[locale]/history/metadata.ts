@@ -4,7 +4,13 @@ import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
@@ -23,7 +29,7 @@ export const jsonLd = async (
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: historyBannerUrl.src,
+      url: getAbsoluteUrl(historyBannerUrl.src),
       caption: t("title"),
     },
     author: {
@@ -51,18 +57,6 @@ export const jsonLd = async (
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Gichin Funakoshi",
-        description: "Fundador do Karaté Shotokan moderno",
-      },
-      {
-        "@type": "Person",
-        name: "Sokon Matsumura",
-        description: "Mestre histórico do Karaté de Okinawa",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -94,15 +88,16 @@ export async function metadata(locale: Locale): Promise<Metadata> {
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
       type: "article",
       images: [
         {
           url: historyBannerUrl.src,
-          width: 1200,
-          height: 600,
+          width: historyBannerUrl.width,
+          height: historyBannerUrl.height,
           alt: t("title"),
         },
         {

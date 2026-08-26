@@ -2,6 +2,14 @@ import type { Locale } from "next-intl";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
+const OPEN_GRAPH_LOCALES: Record<Locale, string> = {
+  "pt-PT": "pt_PT",
+  en: "en_GB",
+  es: "es_ES",
+  fr: "fr_FR",
+  ja: "ja_JP",
+};
+
 export type SeoHref = Extract<
   Parameters<typeof getPathname>[0]["href"],
   string
@@ -22,6 +30,35 @@ export function getLocalizedAlternates(href: SeoHref, locale: Locale) {
       "x-default": getPathname({ href, locale: routing.defaultLocale }),
     },
   };
+}
+
+export function getSiteUrl() {
+  const value = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!value) {
+    throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
+  }
+
+  return value.replace(/\/$/, "");
+}
+
+export function isProductionDeployment() {
+  return process.env.VERCEL_ENV
+    ? process.env.VERCEL_ENV === "production"
+    : process.env.NODE_ENV === "production";
+}
+
+export function getAbsoluteUrl(pathname: string) {
+  return new URL(pathname, `${getSiteUrl()}/`).toString();
+}
+
+export function getOpenGraphLocale(locale: Locale) {
+  return OPEN_GRAPH_LOCALES[locale];
+}
+
+export function getOpenGraphAlternateLocales(locale: Locale) {
+  return routing.locales
+    .filter((candidate) => candidate !== locale)
+    .map((candidate) => OPEN_GRAPH_LOCALES[candidate]);
 }
 
 export function localizedText<T>(locale: Locale, values: Record<Locale, T>): T {

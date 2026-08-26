@@ -4,7 +4,13 @@ import type { Article, WithContext } from "schema-dts";
 
 import graduationsImage from "@/assets/in-dojo/graduacoes.jpg";
 import { getPathname } from "@/i18n/navigation";
-import { getLocalizedAlternates, getSeoLabels } from "@/lib/seo";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
   const t = await getTranslations("Graduations");
@@ -22,7 +28,7 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: graduationsImage.src,
+      url: getAbsoluteUrl(graduationsImage.src),
       caption: t("meta.title"),
     },
     author: {
@@ -50,28 +56,6 @@ export const jsonLd = async (locale: Locale): Promise<WithContext<Article>> => {
       name: orgT("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Jigoro Kano",
-        description: "Fundador do sistema de graduações Kyu e Dan",
-      },
-      {
-        "@type": "Thing",
-        name: "Kyu",
-        description: "Sistema de graduações para alunos de Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Dan",
-        description: "Sistema de graduações para cintos negros de Karaté",
-      },
-      {
-        "@type": "Thing",
-        name: "Judo Kodokan",
-        description: "Escola onde foi criado o sistema de graduações",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -114,14 +98,15 @@ export async function generateMetadata({
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: pathname,
       images: [
         {
           url: graduationsImage.src,
-          width: 800,
-          height: 600,
+          width: graduationsImage.width,
+          height: graduationsImage.height,
           alt: t("meta.title"),
         },
         {
@@ -140,7 +125,6 @@ export async function generateMetadata({
       title: t("meta.title"),
       description: t("meta.description"),
       images: [graduationsImage.src],
-      site: "@askksa_madeira",
     },
   };
 }
