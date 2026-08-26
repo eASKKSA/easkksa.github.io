@@ -34,6 +34,26 @@ const middleIndex = Math.ceil(navigationItems.length / 2);
 const leftNavigationItems = navigationItems.slice(0, middleIndex);
 const rightNavigationItems = navigationItems.slice(middleIndex);
 
+function BeltDetails() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]"
+    >
+      <div className="absolute inset-x-0 top-2 bottom-2 bg-[linear-gradient(180deg,rgba(0,0,0,0.46)_0%,rgba(255,255,255,0.018)_26%,rgba(255,255,255,0.05)_50%,rgba(255,255,255,0.018)_74%,rgba(0,0,0,0.48)_100%)] shadow-[inset_0_8px_12px_-12px_rgba(255,255,255,0.2),inset_0_-10px_14px_-12px_rgba(0,0,0,0.9)]" />
+      <div className="absolute inset-0 bg-[repeating-linear-gradient(102deg,transparent_0,transparent_5px,rgba(255,255,255,0.018)_6px,transparent_7px)]" />
+      <div className="absolute inset-x-5 top-1.5 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.12)_8%,rgba(255,255,255,0.12)_92%,transparent_100%)]" />
+      <div className="absolute inset-x-5 top-2 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.72)_8%,rgba(0,0,0,0.72)_92%,transparent_100%)]" />
+      <div className="absolute inset-x-5 bottom-2 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.72)_8%,rgba(0,0,0,0.72)_92%,transparent_100%)]" />
+      <div className="absolute inset-x-5 bottom-1.5 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.1)_8%,rgba(255,255,255,0.1)_92%,transparent_100%)]" />
+      <div className="absolute left-1/2 top-1/2 h-[58px] w-[190px] -translate-x-1/2 -translate-y-1/2">
+        <span className="absolute inset-y-1 left-0 w-[56%] rounded-l-xl border-y border-l border-white/10 bg-[linear-gradient(105deg,#111_0%,#292929_72%,#171717_100%)] shadow-[inset_-10px_0_16px_rgba(0,0,0,0.4)] [clip-path:polygon(0_12%,100%_0,100%_100%,0_88%)]" />
+        <span className="absolute inset-y-1 right-0 w-[56%] rounded-r-xl border-y border-r border-white/10 bg-[linear-gradient(255deg,#111_0%,#292929_72%,#171717_100%)] shadow-[inset_10px_0_16px_rgba(0,0,0,0.4)] [clip-path:polygon(0_0,100%_12%,100%_88%,0_100%)]" />
+      </div>
+    </div>
+  );
+}
+
 const localeOptions: ReadonlyArray<{
   code: Locale;
   label: string;
@@ -201,7 +221,7 @@ function LanguageMenu({ currentLocale }: Readonly<{ currentLocale: Locale }>) {
         aria-label={ui.chooseLanguage}
         aria-expanded={isOpen}
         aria-controls="desktop-language-menu"
-        className="flex h-11 items-center gap-2 rounded-full border border-black/10 px-3 text-sm font-bold text-stone-700 transition-colors duration-200 hover:border-primary hover:text-primary dark:border-white/15 dark:text-stone-200"
+        className="flex h-11 items-center gap-2 rounded-full border border-white/15 px-3 text-sm font-bold text-stone-200 transition-colors duration-200 hover:border-primary hover:text-white"
       >
         <LuGlobe className="size-4" aria-hidden="true" />
         <span lang={currentLocale}>{currentOption?.label}</span>
@@ -274,7 +294,7 @@ function AppearanceMenu({
         aria-label={ui.openAppearance}
         aria-expanded={isOpen}
         aria-controls="desktop-appearance-menu"
-        className="grid size-11 place-items-center rounded-full border border-black/10 text-stone-600 transition-colors duration-200 hover:border-primary hover:text-primary dark:border-white/15 dark:text-stone-300"
+        className="grid size-11 place-items-center rounded-full border border-white/15 text-stone-300 transition-colors duration-200 hover:border-primary hover:text-white"
       >
         <LuSunMoon className="size-[18px]" aria-hidden="true" />
       </button>
@@ -333,13 +353,14 @@ export default function Navbar({
 
   return (
     <header ref={headerRef} data-scrolled="false">
-      <div className="relative mx-auto flex h-[68px] max-w-[1420px] items-center rounded-[1.35rem] border border-black/8 bg-[#fffdf8]/94 px-3 shadow-[0_12px_40px_rgba(22,18,15,0.08)] backdrop-blur-xl transition-all duration-300 group-data-[scrolled=true]:border-black/12 group-data-[scrolled=true]:bg-[#fffdf8] group-data-[scrolled=true]:shadow-[0_16px_48px_rgba(22,18,15,0.14)] min-[1360px]:h-[76px] dark:border-white/10 dark:bg-[#171717]/94 dark:group-data-[scrolled=true]:border-white/15 dark:group-data-[scrolled=true]:bg-[#171717]">
-        <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center min-[1360px]:hidden">
+      <div className="relative isolate mx-auto flex h-[68px] max-w-[1420px] items-center rounded-[1.35rem] border border-white/12 bg-[#171717]/96 px-3 shadow-[0_14px_42px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300 group-data-[scrolled=true]:border-white/18 group-data-[scrolled=true]:bg-[#171717] group-data-[scrolled=true]:shadow-[0_18px_52px_rgba(0,0,0,0.32)] min-[1360px]:h-[76px]">
+        <BeltDetails />
+        <div className="relative z-10 grid w-full grid-cols-[1fr_auto_1fr] items-center min-[1360px]:hidden">
           <TrackableLink
             href={MEMBERS_PORTAL_URL}
             aria-label={labels.portalFull}
             title={labels.portalFull}
-            className="grid size-11 place-items-center rounded-full bg-ink text-white transition-colors duration-200 hover:bg-primary dark:bg-white dark:text-ink dark:hover:bg-primary dark:hover:text-white"
+            className="grid size-11 place-items-center rounded-full border border-white/20 bg-white text-ink transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-white"
             gtmEvent="portal_click"
             gtmParams={{ placement: "navbar_mobile_quick" }}
           >
@@ -349,7 +370,7 @@ export default function Navbar({
             href="/"
             aria-label={ui.home}
             prefetch={false}
-            className="logo-pulse-trigger relative z-10 grid size-[98px] place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_8px_24px_rgba(22,18,15,0.14)] transition-colors duration-200 hover:border-primary dark:border-white/15 dark:bg-[#171717]"
+            className="logo-pulse-trigger relative z-10 grid size-[98px] place-items-center rounded-full border border-white/20 bg-[#111] shadow-[0_12px_30px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors duration-200 hover:border-primary"
           >
             <Image
               src={mainLogo}
@@ -368,7 +389,7 @@ export default function Navbar({
             aria-label={ui.menu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
-            className="grid size-11 justify-self-end place-items-center rounded-full bg-ink text-white transition-colors duration-200 hover:bg-primary dark:bg-white dark:text-ink dark:hover:bg-primary dark:hover:text-white"
+            className="grid size-11 justify-self-end place-items-center rounded-full border border-primary/70 bg-primary text-white transition-colors duration-200 hover:border-white/30 hover:bg-primary-dark"
           >
             {isMenuOpen ? (
               <LuX className="size-5" aria-hidden="true" />
@@ -378,14 +399,14 @@ export default function Navbar({
           </button>
         </div>
 
-        <div className="hidden w-full grid-cols-[1fr_124px_1fr] items-center min-[1360px]:grid">
+        <div className="relative z-10 hidden w-full grid-cols-[1fr_124px_1fr] items-center min-[1360px]:grid">
           <div className="flex min-w-0 items-center pr-7">
-            <div className="flex shrink-0 items-center border-r border-black/10 pr-3 dark:border-white/10">
+            <div className="flex shrink-0 items-center border-r border-white/10 pr-3">
               <TrackableLink
                 href={MEMBERS_PORTAL_URL}
                 aria-label={labels.portalFull}
                 title={labels.portalFull}
-                className="flex h-11 items-center gap-2 rounded-full bg-ink px-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-primary dark:bg-white dark:text-ink dark:hover:bg-primary dark:hover:text-white"
+                className="flex h-11 items-center gap-2 rounded-full bg-white px-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-primary hover:text-white"
                 gtmEvent="portal_click"
                 gtmParams={{ placement: "navbar_desktop" }}
               >
@@ -407,7 +428,7 @@ export default function Navbar({
                     className={`group relative whitespace-nowrap px-3 py-3 font-display text-[15px] font-semibold uppercase tracking-[0.07em] transition-colors duration-200 ${
                       isActive
                         ? "text-primary"
-                        : "text-stone-600 hover:text-ink dark:text-stone-300 dark:hover:text-white"
+                        : "text-stone-300 hover:text-white"
                     }`}
                   >
                     {labels[item.labelKey]}
@@ -429,7 +450,7 @@ export default function Navbar({
             href="/"
             aria-label={ui.home}
             prefetch={false}
-            className="logo-pulse-trigger relative z-10 grid size-[106px] justify-self-center place-items-center rounded-full border border-black/10 bg-[#fffdf8] shadow-[0_12px_34px_rgba(22,18,15,0.18)] transition-[width,height,border-color] duration-300 hover:border-primary min-[1360px]:group-data-[scrolled=true]:size-[92px] dark:border-white/15 dark:bg-[#171717]"
+            className="logo-pulse-trigger relative z-10 grid size-[106px] justify-self-center place-items-center rounded-full border border-white/20 bg-[#111] shadow-[0_14px_36px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] transition-[width,height,border-color] duration-300 hover:border-primary min-[1360px]:group-data-[scrolled=true]:size-[92px]"
           >
             <Image
               src={mainLogo}
@@ -458,7 +479,7 @@ export default function Navbar({
                     className={`group relative whitespace-nowrap px-3 py-3 font-display text-[15px] font-semibold uppercase tracking-[0.07em] transition-colors duration-200 ${
                       isActive
                         ? "text-primary"
-                        : "text-stone-600 hover:text-ink dark:text-stone-300 dark:hover:text-white"
+                        : "text-stone-300 hover:text-white"
                     }`}
                   >
                     {labels[item.labelKey]}
@@ -474,7 +495,7 @@ export default function Navbar({
                 );
               })}
             </nav>
-            <div className="ml-auto flex shrink-0 items-center gap-2 border-l border-black/10 pl-3 dark:border-white/10">
+            <div className="ml-auto flex shrink-0 items-center gap-2 border-l border-white/10 pl-3">
               <LanguageMenu currentLocale={currentLocale} />
               <AppearanceMenu currentLocale={currentLocale} />
             </div>
