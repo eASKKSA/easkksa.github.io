@@ -5,3 +5,11 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - '@formatjs/fast-memoize@3.1.7'
   - '@formatjs/intl-localematcher@0.8.12'
+  - fast-xml-parser@5.11.1
+  - '@eloqnt/config@0.0.2'
+  - '@eloqnt/format-json@0.0.3'
+  - '@eloqnt/format-po@0.0.3'
+  - icu-minify@4.14.0
+  - next-intl-swc-plugin-extractor@4.14.0
+  - next-intl@4.14.0
+  - use-intl@4.14.0
