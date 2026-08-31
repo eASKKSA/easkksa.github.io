@@ -28,7 +28,7 @@ const FadeInContainer: React.FC<FadeInContainerProps> = ({
 }) => {
   const containerClass = clsx(
     blur &&
-      "relative rounded-3xl p-8 md:p-16 overflow-hidden backdrop-blur-sm border dark:bg-gradient-to-r dark:from-[#222]/90 dark:via-[#2a2a2a]/80 dark:to-[#222]/90 dark:border-gray-700/50 bg-gradient-to-r from-white/90 via-gray-50/80 to-white/90 border-gray-200/50",
+      "relative overflow-hidden rounded-[2rem] border border-black/10 bg-white/78 p-7 shadow-[0_24px_80px_rgba(28,20,16,0.08)] backdrop-blur-md md:p-12 lg:p-16 dark:border-white/10 dark:bg-[#1b1b1b]/88",
     initialAnimation && !skipAnimation && "animate-content-enter",
     !skipAnimation && !initialAnimation && "viewport-reveal",
     className,

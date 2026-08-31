@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { FAQPage, WithContext } from "schema-dts";
 import { getPathname } from "@/i18n/navigation";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -10,6 +16,7 @@ export const jsonLd = async (
   locale: Locale,
 ): Promise<WithContext<FAQPage>> => {
   const pathname = getPathname({ href: "/faq", locale: locale });
+  const labels = getSeoLabels(locale);
 
   // Build FAQ schema from questions
   const questions = [
@@ -77,20 +84,19 @@ export const jsonLd = async (
     description: t("subtitle"),
     url: siteUrl + pathname,
     inLanguage: locale,
-    dateModified: new Date().toISOString(),
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: siteUrl,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "Perguntas Frequentes" : "FAQ",
+          name: labels.faq,
           item: siteUrl + pathname,
         },
       ],
@@ -123,24 +129,16 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("FAQ");
   const pathname = getPathname({ href: "/faq", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/faq", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/faq", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/faq", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: siteUrl + pathname,
       type: "website",

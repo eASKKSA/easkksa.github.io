@@ -33,16 +33,17 @@ export default async function NewsPage({
         <h1 className="text-center">{t("title")}</h1>
 
         {/* ASKKSA News */}
-        <Container>
+        <Container className="page-intro-gap">
           <ASKKSANews
-            title="Notícias ASKKSA"
-            subtitle="Menções da nossa associação na imprensa"
+            title={t("sections.askksa.title")}
+            subtitle={t("sections.askksa.subtitle")}
             readMore={t("readMore")}
+            locale={locale}
           />
         </Container>
 
         {/* Facebook Embed */}
-        <Container className="relative overflow-hidden rounded-2xl p-8 bg-gradient-to-tr from-blue-400/10 via-blue-500/10 to-blue-600/10 ring-1 ring-inset ring-blue-500/10 dark:ring-blue-500/30">
+        <Container className="relative overflow-hidden rounded-[1.5rem] border border-primary/15 bg-primary/5 p-8 dark:border-primary/25 dark:bg-primary/10">
           <FacebookEmbed />
         </Container>
 

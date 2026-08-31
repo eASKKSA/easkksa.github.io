@@ -1,5 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -16,6 +17,21 @@ import Providers from "@/components/providers";
 import ViewportRevealObserver from "@/components/viewport-reveal";
 import WebVitals from "@/components/web-vitals";
 import { mainPagePathnames, routing } from "@/i18n/routing";
+import { localizedText } from "@/lib/seo";
+
+const bodyFont = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const displayFont = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -48,12 +64,15 @@ export default async function Layout({
   const navbarT = await getTranslations("Navbar");
   const cookieT = await getTranslations("CookieWarning");
   const navbarLabels = Object.fromEntries(
-    Object.keys(mainPagePathnames).map((pathname) => [
-      pathname.slice(1),
-      navbarT(pathname.slice(1)),
-    ]),
+    [
+      ...Object.keys(mainPagePathnames).map((pathname) => pathname.slice(1)),
+      "portal",
+      "portalFull",
+    ].map((key) => [key, navbarT(key)]),
   );
   const cookieLabels = {
+    ariaLabel: cookieT("ariaLabel"),
+    privacyTitle: cookieT("privacyTitle"),
     description: cookieT("description"),
     linkText: cookieT("linkText"),
     acceptAll: cookieT("acceptAll"),
@@ -63,6 +82,7 @@ export default async function Layout({
   return (
     <html
       lang={typedLocale}
+      className={`${bodyFont.variable} ${displayFont.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
@@ -101,6 +121,18 @@ export default async function Layout({
       </head>
       <body>
         <ConsentProvider>
+          <a
+            href="#main-content"
+            className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold px-5 py-3 font-bold text-ink transition-transform focus:translate-y-0"
+          >
+            {localizedText(typedLocale, {
+              "pt-PT": "Saltar para o conteúdo",
+              en: "Skip to content",
+              es: "Saltar al contenido",
+              fr: "Aller au contenu",
+              ja: "本文へ移動",
+            })}
+          </a>
           {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
             <GoogleTagManagerWithConsent
               gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
@@ -109,7 +141,7 @@ export default async function Layout({
           <NextIntlClientProvider messages={null}>
             <Providers>
               <Navbar labels={navbarLabels} />
-              <main>{children}</main>
+              <main id="main-content">{children}</main>
               <Footer />
               <Background />
               <CookieWarning labels={cookieLabels} />

@@ -4,12 +4,19 @@ import type { AboutPage, WithContext } from "schema-dts";
 
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
 import { getPathname } from "@/i18n/navigation";
+import {
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<AboutPage>> => {
   const pathname = getPathname({ href: "/about", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
@@ -74,8 +81,6 @@ export const jsonLd = async (
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2000-04-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
@@ -88,13 +93,13 @@ export const jsonLd = async (
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "Sobre" : "About",
+          name: labels.about,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -104,10 +109,7 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Jorge Freitas",
         jobTitle: "Shihan - 6º DAN",
-        description:
-          locale === "pt-PT"
-            ? "Instrutor qualificado de Karaté Shotokan"
-            : "Qualified Shotokan Karate Instructor",
+        description: labels.qualifiedInstructor,
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -117,10 +119,7 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Rafael Jardim",
         jobTitle: "Sensei - 5º DAN",
-        description:
-          locale === "pt-PT"
-            ? "Instrutor qualificado de Karaté Shotokan"
-            : "Qualified Shotokan Karate Instructor",
+        description: labels.qualifiedInstructor,
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -130,10 +129,7 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Marisa Gomes",
         jobTitle: "Sensei - 5º DAN",
-        description:
-          locale === "pt-PT"
-            ? "Instrutora qualificada de Karaté Shotokan"
-            : "Qualified Shotokan Karate Instructor",
+        description: labels.qualifiedInstructorFemale,
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -143,10 +139,7 @@ export const jsonLd = async (
         "@type": "Person",
         name: "Tito Velosa",
         jobTitle: "Sensei - 5º DAN",
-        description:
-          locale === "pt-PT"
-            ? "Instrutor qualificado de Karaté Shotokan"
-            : "Qualified Shotokan Karate Instructor",
+        description: labels.qualifiedInstructor,
         worksFor: {
           "@type": "SportsOrganization",
           name: "ASKKSA",
@@ -159,25 +152,17 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("About");
   const pathname = getPathname({ href: "/about", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/about", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
     applicationName: "ASKKSA",
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/about", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/about", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
       type: "website",

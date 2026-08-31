@@ -34,12 +34,14 @@ export default async function ShotokanKatasPage({
   return (
     <>
       <Container withBubbles blur as="article" initialAnimation>
-        <h1 className="text-center">{t("title")}</h1>
-        <div className="max-w-3xl mx-auto mb-8">
+        <h1 className="mx-auto max-w-5xl text-balance text-center">
+          {t("title")}
+        </h1>
+        <div className="page-intro-gap mx-auto mb-8 max-w-3xl">
           <Image
             src={shotokanTopImage}
             alt="Shotokan Karate-Do International Federation"
-            className="w-full max-w-[600px] h-auto rounded-lg shadow-lg mx-auto mb-6"
+            className="mx-auto mb-6 h-auto w-full max-w-[600px] rounded-[1.5rem] border border-black/10 shadow-xl dark:border-white/10"
             sizes="(max-width: 768px) calc(100vw - 4rem), 600px"
             quality={60}
             fetchPriority="high"
@@ -50,16 +52,18 @@ export default async function ShotokanKatasPage({
         <p className="text-lg mb-6">{t("description")}</p>
 
         {/* Katas Grid */}
-        <h2 className="text-3xl font-bold text-center mb-8">Katas</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {shotokanKatas.map((kata) => (
+        <h2 className="text-3xl font-bold text-center mb-8">
+          {locale === "ja" ? "形" : "Katas"}
+        </h2>
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {shotokanKatas.map((kata, index) => (
             <FeatureCard
               key={kata}
               feature={{
                 id: kata,
                 title: t(`katas.${kata}.name`),
                 description: t(`katas.${kata}.meaning`),
-                icon: <span className="text-3xl">🥋</span>,
+                icon: <span>{String(index + 1).padStart(2, "0")}</span>,
               }}
             />
           ))}
@@ -69,12 +73,12 @@ export default async function ShotokanKatasPage({
         <h2 className="text-3xl font-bold text-center mb-8">
           {t("techniques.title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="rounded-[1.5rem] border border-black/10 bg-white/65 p-5 text-center backdrop-blur-sm dark:border-white/10 dark:bg-[#1b1b1b]/75">
             <Image
               src={dachisImage}
-              alt="Posições (Dachi) do Karaté Shotokan"
-              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              alt={t("techniques.positions.title")}
+              className="mx-auto mb-5 h-auto w-full max-w-[400px] rounded-xl shadow-lg"
               sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
               quality={60}
             />
@@ -85,11 +89,11 @@ export default async function ShotokanKatasPage({
               {t("techniques.positions.description")}
             </p>
           </div>
-          <div className="text-center">
+          <div className="rounded-[1.5rem] border border-black/10 bg-white/65 p-5 text-center backdrop-blur-sm dark:border-white/10 dark:bg-[#1b1b1b]/75">
             <Image
               src={tecnicasPernasImage}
-              alt="Técnicas de Pernas do Karaté Shotokan"
-              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              alt={t("techniques.legs.title")}
+              className="mx-auto mb-5 h-auto w-full max-w-[400px] rounded-xl shadow-lg"
               sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
               quality={60}
             />
@@ -100,11 +104,11 @@ export default async function ShotokanKatasPage({
               {t("techniques.legs.description")}
             </p>
           </div>
-          <div className="text-center md:col-span-2 lg:col-span-1">
+          <div className="rounded-[1.5rem] border border-black/10 bg-white/65 p-5 text-center backdrop-blur-sm md:col-span-2 lg:col-span-1 dark:border-white/10 dark:bg-[#1b1b1b]/75">
             <Image
               src={maosPesImage}
-              alt="Técnicas de Mãos e Pés do Karaté Shotokan"
-              className="w-full max-w-[400px] h-auto rounded-lg shadow-lg mx-auto mb-4"
+              alt={t("techniques.handsFeet.title")}
+              className="mx-auto mb-5 h-auto w-full max-w-[400px] rounded-xl shadow-lg"
               sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 50vw, 33vw"
               quality={60}
             />

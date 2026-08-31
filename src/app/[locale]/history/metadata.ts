@@ -4,26 +4,33 @@ import { getTranslations } from "next-intl/server";
 import type { Article, WithContext } from "schema-dts";
 import historyBannerUrl from "@/assets/masters-of-karate.jpg";
 import { getPathname } from "@/i18n/navigation";
+import {
+  getAbsoluteUrl,
+  getLocalizedAlternates,
+  getOpenGraphAlternateLocales,
+  getOpenGraphLocale,
+  getSeoLabels,
+} from "@/lib/seo";
 
 export const jsonLd = async (
   t: TFunction,
   locale: Locale,
 ): Promise<WithContext<Article>> => {
   const pathname = getPathname({ href: "/history", locale: locale });
+  const labels = getSeoLabels(locale);
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: t("meta.title"),
     description: t("meta.description"),
-    about: "História do Karaté Shotokan",
-    articleSection: "História",
-    keywords: t("meta.keywords"),
+    about: t("meta.title"),
+    articleSection: t("title"),
     url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
     image: {
       "@type": "ImageObject",
-      url: historyBannerUrl.src,
-      caption: "Mestres Fundadores do Karaté",
+      url: getAbsoluteUrl(historyBannerUrl.src),
+      caption: t("title"),
     },
     author: {
       "@type": "Organization",
@@ -44,39 +51,25 @@ export const jsonLd = async (
       "@type": "WebPage",
       "@id": process.env.NEXT_PUBLIC_SITE_URL + pathname,
     },
-    datePublished: "2024-01-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
     inLanguage: locale,
     isPartOf: {
       "@type": "WebSite",
       name: t("name"),
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
-    mentions: [
-      {
-        "@type": "Person",
-        name: "Gichin Funakoshi",
-        description: "Fundador do Karaté Shotokan moderno",
-      },
-      {
-        "@type": "Person",
-        name: "Sokon Matsumura",
-        description: "Mestre histórico do Karaté de Okinawa",
-      },
-    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "pt-PT" ? "Início" : "Home",
+          name: labels.home,
           item: process.env.NEXT_PUBLIC_SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: locale === "pt-PT" ? "História" : "History",
+          name: labels.history,
           item: process.env.NEXT_PUBLIC_SITE_URL + pathname,
         },
       ],
@@ -87,33 +80,25 @@ export const jsonLd = async (
 export async function metadata(locale: Locale): Promise<Metadata> {
   const t = await getTranslations("History");
   const pathname = getPathname({ href: "/history", locale: locale });
-  const otherLocale = locale === "pt-PT" ? "en" : "pt-PT";
-  const otherPathname = getPathname({ href: "/history", locale: otherLocale });
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    keywords: t("meta.keywords"),
-    alternates: {
-      canonical: pathname,
-      languages: {
-        [otherLocale]: otherPathname,
-        "x-default": getPathname({ href: "/history", locale: "en" }),
-      },
-    },
+    alternates: getLocalizedAlternates("/history", locale),
     openGraph: {
       title: t("meta.title"),
       siteName: "ASKKSA: Associação Shotokan Kokusai Karate Santo António",
-      locale: locale,
+      locale: getOpenGraphLocale(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale),
       description: t("meta.description"),
       url: process.env.NEXT_PUBLIC_SITE_URL + pathname,
       type: "article",
       images: [
         {
           url: historyBannerUrl.src,
-          width: 1200,
-          height: 600,
-          alt: "Mestres Fundadores do Karaté",
+          width: historyBannerUrl.width,
+          height: historyBannerUrl.height,
+          alt: t("title"),
         },
         {
           url: "/icons/icon-512x512.png",
@@ -122,10 +107,8 @@ export async function metadata(locale: Locale): Promise<Metadata> {
           alt: t("meta.title"),
         },
       ],
-      publishedTime: "2024-01-01T00:00:00+00:00",
-      modifiedTime: new Date().toISOString(),
       authors: ["ASKKSA"],
-      section: "História",
+      section: t("title"),
       tags: t("meta.keywords").split(", "),
     },
     twitter: {

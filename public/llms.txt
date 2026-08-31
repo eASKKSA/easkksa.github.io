@@ -1,6 +1,6 @@
 # ASKKSA
 
-> Official website of the Shotokan Karate Santo António Association, based in Santo António, Funchal, Madeira, Portugal. The website provides information about the association, its training, instructors, karate philosophy and dojo practices in Portuguese and English.
+> Official website of the Shotokan Karate Santo António Association, based in Funchal, Madeira, Portugal. Founded in 2000, ASKKSA teaches children, teenagers and adults under the motto “Respect and Discipline”. The website is available in Portuguese, English, French and Japanese.
 
 ## Portuguese
 
@@ -18,9 +18,31 @@
 - [Home](https://www.askksa.pt/en): Introduction to ASKKSA, training and trial classes.
 - [About](https://www.askksa.pt/en/about): Information about the association, instructors and certifications.
 - [News](https://www.askksa.pt/en/news): Recent news and activities.
+- [History](https://www.askksa.pt/en/history): History of karate, from Okinawa to Shotokan.
 - [Philosophy](https://www.askksa.pt/en/philosophy): Karate philosophy, Bushido, Dojo Kun and Niju Kun.
 - [In the dojo](https://www.askksa.pt/en/in-dojo): Etiquette, rules, vocabulary and grades.
+- [SKI style](https://www.askksa.pt/en/ski-style): Information about Shotokan Karate International.
 - [Frequently asked questions](https://www.askksa.pt/en/faq): Practical information for students and visitors.
+
+## Français
+
+- [Accueil](https://www.askksa.pt/fr): Présentation de l’ASKKSA, des entraînements et des cours d’essai.
+- [À propos](https://www.askksa.pt/fr/a-propos): Association, instructeurs et certifications.
+- [Actualités](https://www.askksa.pt/fr/actualites): Actualités et activités récentes.
+- [Histoire](https://www.askksa.pt/fr/histoire): Histoire du Karaté, d’Okinawa au Shotokan.
+- [Philosophie](https://www.askksa.pt/fr/philosophie): Bushido, Dojo Kun et Niju Kun.
+- [Dans le dojo](https://www.askksa.pt/fr/dans-le-dojo): Salut, règles, vocabulaire et grades.
+- [Questions fréquentes](https://www.askksa.pt/fr/questions-frequentes): Informations pratiques pour commencer.
+
+## 日本語
+
+- [ホーム](https://www.askksa.pt/ja): ASKKSA、稽古、無料体験について。
+- [ASKKSAについて](https://www.askksa.pt/ja/about): 協会、指導員、資格について。
+- [ニュース](https://www.askksa.pt/ja/news): 最近のニュースと活動。
+- [空手の歴史](https://www.askksa.pt/ja/history): 沖縄からショットカンまでの空手の歴史。
+- [空手の理念](https://www.askksa.pt/ja/philosophy): 武士道、道場訓、二十訓について。
+- [道場について](https://www.askksa.pt/ja/dojo): 礼、規則、用語、級・段位について。
+- [よくある質問](https://www.askksa.pt/ja/faq): 入会前の実用的な情報。
 
 ## Optional
 

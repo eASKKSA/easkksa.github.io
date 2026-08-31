@@ -13,9 +13,9 @@ export default async function InstagramLink() {
 
       <FaInstagram className="text-pink-500 text-5xl mx-auto mb-4 drop-shadow" />
 
-      <h4 className="text-center text-xl font-bold text-gray-800 dark:text-white">
+      <h2 className="text-center text-xl font-bold text-gray-800 dark:text-white">
         {t("cta.username")}
-      </h4>
+      </h2>
       <p className="mt-2 mb-6 text-center text-gray-700 dark:text-gray-300">
         {t("cta.description")}
       </p>

@@ -19,9 +19,8 @@ export async function getASKKSANews(): Promise<NewsItem[]> {
   }
   const xml = await response.text();
   const rss = new XMLParser({ ignoreAttributes: false }).parse(xml);
-  const raw = Array.isArray(rss.rss.channel.item)
-    ? rss.rss.channel.item
-    : [rss.rss.channel.item];
+  const items = rss?.rss?.channel?.item;
+  const raw = Array.isArray(items) ? items : items ? [items] : [];
 
   /* 2.  Mapear cada item */
   const mapped = raw.map((it: NewsItem) => {

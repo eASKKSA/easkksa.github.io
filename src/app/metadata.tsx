@@ -3,17 +3,23 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import type { Thing, WithContext } from "schema-dts";
 import { routing } from "@/i18n/routing";
+import { getSiteUrl, isProductionDeployment } from "@/lib/seo";
 
 export async function globalMetadata(locale: Locale): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
-  }
+  const siteUrl = getSiteUrl();
 
-  const isProduction = process.env.VERCEL_ENV === "production";
+  const isProduction = isProductionDeployment();
+  const otherVerification = Object.fromEntries(
+    [
+      ["msvalidate.01", process.env.BING_SITE_VERIFICATION],
+      ["baidu-site-verification", process.env.BAIDU_SITE_VERIFICATION],
+      ["naver-site-verification", process.env.NAVER_SITE_VERIFICATION],
+      ["y_key", process.env.YAHOO_SITE_VERIFICATION],
+    ].filter((entry): entry is [string, string] => Boolean(entry[1])),
+  );
 
   return {
     metadataBase: new URL(siteUrl),
@@ -23,6 +29,18 @@ export async function globalMetadata(locale: Locale): Promise<Metadata> {
     creator: "Nuno Fernandes & Lubélio Fernandes",
     publisher: "ASKKSA - Associação Shotokan Kokusai Karate Santo António",
     category: "Artes Marciais",
+
+    verification: {
+      ...(process.env.GOOGLE_SITE_VERIFICATION
+        ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+        : {}),
+      ...(process.env.YANDEX_SITE_VERIFICATION
+        ? { yandex: process.env.YANDEX_SITE_VERIFICATION }
+        : {}),
+      ...(Object.keys(otherVerification).length > 0
+        ? { other: otherVerification }
+        : {}),
+    },
 
     // --- Robots & Indexing ---
     robots: {

@@ -1,19 +1,22 @@
 import type { MetadataRoute } from "next";
+import { getSiteUrl, isProductionDeployment } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL is not defined");
-  }
-
-  const isProduction = process.env.VERCEL_ENV === "production";
+  const siteUrl = getSiteUrl();
+  const isProduction = isProductionDeployment();
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: isProduction ? "/" : "",
-      disallow: isProduction ? "/private/" : "/",
-    },
+    rules: isProduction
+      ? {
+          userAgent: "*",
+          allow: "/",
+          disallow: ["/api/", "/private/"],
+        }
+      : {
+          userAgent: "*",
+          disallow: "/",
+        },
     sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

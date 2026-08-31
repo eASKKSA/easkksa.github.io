@@ -1,5 +1,5 @@
 "use client";
-import { FaBook, FaMedal, FaPray, FaScroll } from "react-icons/fa";
+import { LuHand, LuLanguages, LuMedal, LuScrollText } from "react-icons/lu";
 import { Link, usePathname } from "@/i18n/navigation";
 
 type InDojoNavigationProps = {
@@ -20,25 +20,25 @@ export default function InDojoNavigation({
     {
       id: "salutation",
       label: labels.salutation,
-      icon: <FaPray className="text-lg" />,
+      icon: LuHand,
       href: "/in-dojo/salutation" as const,
     },
     {
       id: "rules",
       label: labels.rules,
-      icon: <FaScroll className="text-lg" />,
+      icon: LuScrollText,
       href: "/in-dojo/rules" as const,
     },
     {
       id: "vocabulary",
       label: labels.vocabulary,
-      icon: <FaBook className="text-lg" />,
+      icon: LuLanguages,
       href: "/in-dojo/vocabulary" as const,
     },
     {
       id: "grades",
       label: labels.grades,
-      icon: <FaMedal className="text-lg" />,
+      icon: LuMedal,
       href: "/in-dojo/grades" as const,
     },
   ];
@@ -46,25 +46,28 @@ export default function InDojoNavigation({
   return (
     <nav
       aria-label={labels.title}
-      className="sticky top-[120px] lg:top-[150px] z-40 bg-white/90 backdrop-blur-lg dark:bg-[#1a1a1a]/90 border-b border-gray-200/80 dark:border-gray-800/80 shadow-sm flex justify-center space-x-2 md:space-x-8 py-2 lg:py-4 rounded-full mb-3! mt-0! md:mb-10!"
+      className="sticky top-[96px] z-40 mb-5! mt-0! grid grid-cols-2 gap-2 rounded-[1.35rem] border border-black/10 bg-[#fffdf8]/95 p-2 shadow-[0_12px_32px_rgba(22,18,15,0.09)] backdrop-blur-xl sm:top-[110px] sm:flex sm:justify-center md:mb-10! md:gap-3 lg:top-[125px] lg:p-3 dark:border-white/10 dark:bg-[#171717]/95 dark:shadow-black/25"
     >
-      {sections.map((section) => (
-        <Link
-          key={section.id}
-          href={section.href}
-          aria-label={section.label}
-          aria-current={section.href === pathname ? "page" : undefined}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all whitespace-nowrap ${
-            section.href === pathname
-              ? "bg-primary text-white shadow-lg"
-              : "text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-red-50 dark:hover:bg-red-900/20"
-          }`}
-        >
-          <span aria-hidden="true">{section.icon}</span>
-          <span className="hidden sm:block">{section.label}</span>
-          <span className="sr-only sm:hidden">{section.label}</span>
-        </Link>
-      ))}
+      {sections.map((section) => {
+        const Icon = section.icon;
+        const isActive = section.href === pathname;
+
+        return (
+          <Link
+            key={section.id}
+            href={section.href}
+            aria-current={isActive ? "page" : undefined}
+            className={`flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors duration-200 sm:px-4 sm:text-base ${
+              isActive
+                ? "bg-primary text-white shadow-[0_6px_18px_rgba(181,34,43,0.2)]"
+                : "text-stone-600 hover:bg-black/5 hover:text-primary dark:text-stone-300 dark:hover:bg-white/8 dark:hover:text-white"
+            }`}
+          >
+            <Icon aria-hidden="true" className="size-4 shrink-0" />
+            <span className="truncate">{section.label}</span>
+          </Link>
+        );
+      })}
     </nav>
   );
 }

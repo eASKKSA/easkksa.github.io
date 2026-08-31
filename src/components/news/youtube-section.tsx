@@ -12,9 +12,9 @@ export default async function YouTubeLink() {
 
       <FaYoutube className="text-red-600 text-5xl mx-auto mb-4 drop-shadow" />
 
-      <h4 className="text-center text-xl font-bold text-gray-800 dark:text-white">
+      <h2 className="text-center text-xl font-bold text-gray-800 dark:text-white">
         {t("cta.title")}
-      </h4>
+      </h2>
       <p className="mt-2 mb-6 text-center text-gray-700 dark:text-gray-300">
         {t("cta.description")}
       </p>

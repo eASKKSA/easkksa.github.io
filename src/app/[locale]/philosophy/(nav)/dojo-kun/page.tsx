@@ -36,10 +36,10 @@ export default async function DojoKunPage({
     <>
       <Container withBubbles blur as="article" initialAnimation>
         <h1 className="text-center">{t("title")}</h1>
-        <div className="grid md:grid-cols-2 gap-8 items-center py-6">
+        <div className="my-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src={dojoKunImage}
-            alt="Dojo Kun - 5 Máximas de Gichin Funakoshi"
+            alt={t("title")}
             sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
             quality={60}
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
@@ -58,7 +58,7 @@ export default async function DojoKunPage({
 
         {/* Maxims Grid */}
         <h2 className="hidden">Máximas</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {dojoKunMaxims.map((maxim) => (
             <FeatureCard
               key={maxim.key}
