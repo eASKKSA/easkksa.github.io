@@ -37,7 +37,7 @@
     "react-icons": "^5.7.0",
     "schema-dts": "^2.0.0",
     "server-only": "^0.0.1",
-    "zod": "^4.4.3",
+    "zod": "^4.5.4",
     "typescript": "^7.0.2"
   },
   "devDependencies": {
