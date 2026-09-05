@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.13",
-    "@next/third-parties": "^16.3.3",
+    "@next/third-parties": "^16.3.4",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "@types/node": "^26.4.0",
