@@ -21,7 +21,6 @@ import marcoAnjo from "@/assets/black-belts/marco_anjo.webp";
 import nadjaPilco from "@/assets/black-belts/nadja_pilco.webp";
 import natachaSilva from "@/assets/black-belts/natacha_silva.webp";
 import nunoFernandes from "@/assets/black-belts/nuno_fernandes.webp";
-import pedroRoxo from "@/assets/black-belts/pedro_roxo.webp";
 import soraiaOliveira from "@/assets/black-belts/soraia_oliveira.webp";
 import tiagoFreitas from "@/assets/black-belts/tiago_freitas.webp";
 import jorgeFreitas from "@/assets/senseis/jorge_freitas.webp";
@@ -302,12 +301,6 @@ export const getBlackBelts = (): BlackBelt[] => [
     id: "nunoFernandes",
     name: "Nuno Fernandes",
     image: nunoFernandes,
-    graduation: "1º Dan",
-  },
-  {
-    id: "pedroRoxo",
-    name: "Pedro Roxo",
-    image: pedroRoxo,
     graduation: "1º Dan",
   },
   {
