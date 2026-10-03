@@ -39,7 +39,7 @@ export default function PhilosophyNavigation({
   return (
     <nav
       aria-label={labels.title}
-      className="sticky top-[96px] z-40 mb-5! mt-0! grid grid-cols-3 gap-2 rounded-[1.35rem] border border-black/10 bg-[#fffdf8]/95 p-2 shadow-[0_12px_32px_rgba(22,18,15,0.09)] backdrop-blur-xl sm:top-[110px] sm:flex sm:justify-center md:mb-10! md:gap-3 lg:top-[125px] lg:p-3 dark:border-white/10 dark:bg-[#171717]/95 dark:shadow-black/25"
+      className="sticky top-[84px] xl:top-[92px] z-40 mb-5! mt-0! grid grid-cols-3 gap-2 rounded-[1.35rem] border border-black/10 bg-[#fffdf8]/95 p-2 shadow-[0_12px_32px_rgba(22,18,15,0.09)] backdrop-blur-xl sm:flex sm:justify-center md:mb-10! md:gap-3 lg:p-3 dark:border-white/10 dark:bg-[#171717]/95 dark:shadow-black/25"
     >
       {sections.map((section) => {
         const Icon = section.icon;
