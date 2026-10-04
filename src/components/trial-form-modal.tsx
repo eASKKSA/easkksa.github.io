@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { type Locale, useLocale } from "next-intl";
 import { useActionState, useEffect, useId, useRef } from "react";
 import { createPortal, useFormStatus } from "react-dom";
-import { LuArrowRight, LuX } from "react-icons/lu";
+import { LuArrowRight, LuChevronDown, LuX } from "react-icons/lu";
 import { submitTrialForm, type TrialFormState } from "@/app/actions";
 
 export type TrialFormLabels = {
@@ -15,6 +15,8 @@ export type TrialFormLabels = {
   age: string;
   email: string;
   phone: string;
+  preferredDojo: string;
+  selectDojo: string;
   previousExperience: string;
   yes: string;
   no: string;
@@ -104,7 +106,7 @@ export default function TrialFormModal({
     }
     if (event.key !== "Tab") return;
     const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
-      'button:not([disabled]), input:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])',
+      'button:not([disabled]), input:not([disabled]), select:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])',
     );
     if (!focusable?.length) return;
     const first = focusable[0];
@@ -242,6 +244,39 @@ export default function TrialFormModal({
               {state.errors?.email && (
                 <p className="mt-1 text-sm text-red-600">
                   {state.errors.email[0]}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label htmlFor="dojo" className="text-sm font-semibold">
+                {labels.preferredDojo}
+              </label>
+              <div className="relative mt-2">
+                <select
+                  name="dojo"
+                  id="dojo"
+                  required
+                  defaultValue=""
+                  className={clsx(fieldClass, "mt-0 appearance-none pr-11")}
+                >
+                  <option value="" disabled>
+                    {labels.selectDojo}
+                  </option>
+                  {(["HBG", "JFSA", "CSDCL"] as const).map((dojo) => (
+                    <option key={dojo} value={dojo}>
+                      {dojo}
+                    </option>
+                  ))}
+                </select>
+                <LuChevronDown
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-stone-500 dark:text-stone-300"
+                />
+              </div>
+              {state.errors?.dojo && (
+                <p className="mt-1 text-sm text-red-600">
+                  {state.errors.dojo[0]}
                 </p>
               )}
             </div>

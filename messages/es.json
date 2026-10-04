@@ -1273,6 +1273,8 @@
     "age": "Edad",
     "email": "Correo electrónico",
     "phone": "Teléfono",
+    "preferredDojo": "Dojo de preferencia",
+    "selectDojo": "Selecciona un dojo",
     "previousExperience": "¿Tienes experiencia previa en kárate?",
     "submit": {
       "submitting": "Enviando...",
@@ -1290,7 +1292,8 @@
       "ageMin": "La edad mínima es 4.",
       "ageMax": "Por favor, introduce una edad válida.",
       "email": "Por favor, introduce un correo electrónico válido.",
-      "phone": "Por favor, introduce un número de teléfono válido."
+      "phone": "Por favor, introduce un número de teléfono válido.",
+      "dojo": "Selecciona un dojo válido."
     },
     "yes": "Sí",
     "no": "No"

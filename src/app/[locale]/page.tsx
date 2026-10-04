@@ -176,6 +176,8 @@ export default async function Page({
     age: trialT("age"),
     email: trialT("email"),
     phone: trialT("phone"),
+    preferredDojo: trialT("preferredDojo"),
+    selectDojo: trialT("selectDojo"),
     previousExperience: trialT("previousExperience"),
     yes: trialT("yes"),
     no: trialT("no"),

@@ -5,6 +5,23 @@ import { getTranslations } from "next-intl/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
+const dojoCodes = ["HBG", "JFSA", "CSDCL"] as const;
+type DojoCode = (typeof dojoCodes)[number];
+
+const dojoRecipientEnv = {
+  HBG: "DOJO_HBG_EMAIL",
+  JFSA: "DOJO_JFSA_EMAIL",
+  CSDCL: "DOJO_CSDCL_EMAIL",
+};
+
+function getDojoRecipient(dojo: DojoCode): string {
+  const recipient = process.env[dojoRecipientEnv[dojo]];
+  if (!recipient) {
+    throw new Error(`Missing recipient email for dojo ${dojo}`);
+  }
+  return recipient;
+}
+
 //
 // 1) Schema Validation
 //
@@ -29,6 +46,9 @@ function createTrialFormSchema(t: TFunction) {
       .refine((val) => !val || /^[+]?[\d\s\-()]+$/.test(val), {
         message: t("validation.phone"),
       }),
+    dojo: z.enum(dojoCodes, {
+      error: t("validation.dojo"),
+    }),
     experience: z.enum(["yes", "no"]),
   });
 }
@@ -49,6 +69,9 @@ const requiredEnvVars = [
   "SMTP_PASSWORD",
   "SMTP_FROM",
   "SMTP_FROM_NAME",
+  "DOJO_HBG_EMAIL",
+  "DOJO_JFSA_EMAIL",
+  "DOJO_CSDCL_EMAIL",
 ] as const;
 
 function validateEnvironment(): void {
@@ -118,12 +141,14 @@ function generateEmailTemplate(data: {
   age: number;
   email: string;
   phone?: string;
+  dojo: string;
   experienceText: string;
 }): string {
   const { age, experienceText } = data;
   const name = escapeHtml(data.name);
   const email = escapeHtml(data.email);
   const phone = data.phone ? escapeHtml(data.phone) : undefined;
+  const dojo = escapeHtml(data.dojo);
   return `
     <!DOCTYPE html>
     <html lang="pt-PT">
@@ -168,6 +193,10 @@ function generateEmailTemplate(data: {
               : ""
           }
           <tr>
+            <td style="background:#333;color:#fff;padding:12px;border-radius:5px;font-weight:bold;">Dojo preferencial:</td>
+            <td style="background:#fff;padding:12px;border-radius:5px;border:1px solid #e0e0e0;">${dojo}</td>
+          </tr>
+          <tr>
             <td style="background:#333;color:#fff;padding:12px;border-radius:5px;font-weight:bold;">Experiência:</td>
             <td style="background:#fff;padding:12px;border-radius:5px;border:1px solid #e0e0e0;">${experienceText}</td>
           </tr>
@@ -209,6 +238,7 @@ export async function submitTrialForm(
     age: formData.get("age"),
     email: formData.get("email"),
     phone: formData.get("phone") || undefined,
+    dojo: formData.get("dojo"),
     experience: formData.get("experience"),
   });
 
@@ -220,7 +250,7 @@ export async function submitTrialForm(
     };
   }
 
-  const { name, age, email, phone, experience } = parsed.data;
+  const { name, age, email, phone, dojo, experience } = parsed.data;
   const experienceText =
     experience === "yes" ? "Tem experiência anterior" : "É um iniciante";
 
@@ -230,9 +260,17 @@ export async function submitTrialForm(
 
     const mailOptions = {
       from: `"${process.env.SMTP_FROM_NAME}" <${process.env.SMTP_FROM}>`,
-      to: "direcao@askksa.pt",
-      subject: `🥋 Nova Experiência Karaté - ${name}`,
-      html: generateEmailTemplate({ name, age, email, phone, experienceText }),
+      to: getDojoRecipient(dojo),
+      cc: "direcao@askksa.pt",
+      subject: `🥋 Nova Experiência Karaté - ${name} - ${dojo}`,
+      html: generateEmailTemplate({
+        name,
+        age,
+        email,
+        phone,
+        dojo,
+        experienceText,
+      }),
       text: `
           Nova Experiência Karaté
           
@@ -240,6 +278,7 @@ export async function submitTrialForm(
           Idade: ${age}
           Email: ${email}
           ${phone ? `Telefone: ${phone}` : ""}
+          Dojo preferencial: ${dojo}
           Experiência: ${experienceText}
           
           Enviado em: ${new Date().toLocaleString("pt-PT")}

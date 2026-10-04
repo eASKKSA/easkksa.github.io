@@ -1273,6 +1273,8 @@
     "age": "Âge",
     "email": "Courriel",
     "phone": "Téléphone",
+    "preferredDojo": "Préférence de dojo",
+    "selectDojo": "Sélectionnez un dojo",
     "previousExperience": "Avez-vous déjà pratiqué le Karaté ?",
     "submit": {
       "submitting": "Envoi...",
@@ -1290,7 +1292,8 @@
       "ageMin": "L’âge minimum est de 4 ans.",
       "ageMax": "Saisissez un âge valide.",
       "email": "Saisissez une adresse e-mail valide.",
-      "phone": "Veuillez saisir un numéro de téléphone valide."
+      "phone": "Veuillez saisir un numéro de téléphone valide.",
+      "dojo": "Sélectionnez un dojo valide."
     },
     "yes": "oui",
     "no": "non"
