@@ -1278,6 +1278,7 @@
     "previousExperience": "Experiência Anterior em Karaté?",
     "submit": {
       "submitting": "A enviar...",
+      "reference": "Referência do pedido",
       "button": "Pedir Aulas Experimentais",
       "success": "Pedido enviado com sucesso! Entraremos em contacto brevemente.",
       "error": "Ocorreu um erro ao enviar o seu pedido.",

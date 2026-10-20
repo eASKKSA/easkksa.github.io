@@ -1278,6 +1278,7 @@
     "previousExperience": "¿Tienes experiencia previa en kárate?",
     "submit": {
       "submitting": "Enviando...",
+      "reference": "Referencia de la solicitud",
       "button": "Solicitar clases de prueba",
       "success": "Solicitud enviada con éxito. Nos pondremos en contacto con usted pronto.",
       "error": "Ocurrió un error al enviar su solicitud.",

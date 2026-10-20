@@ -184,6 +184,7 @@ export default async function Page({
     submit: {
       submitting: trialT("submit.submitting"),
       button: trialT("submit.button"),
+      reference: trialT("submit.reference"),
     },
   };
   const features = getFeatures(t, {

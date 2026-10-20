@@ -12,7 +12,10 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["react-icons"],
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? { exclude: ["error", "warn", "info"] }
+        : false,
   },
   async headers() {
     return [

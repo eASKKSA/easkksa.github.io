@@ -1,5 +1,6 @@
 "use server";
 import "server-only";
+import { randomUUID } from "node:crypto";
 import { headers } from "next/headers";
 import { getTranslations } from "next-intl/server";
 import nodemailer from "nodemailer";
@@ -57,6 +58,7 @@ export type TrialFormState = {
   message: string;
   errors?: Record<string, string[]>;
   success: boolean;
+  requestId?: string;
 };
 
 //
@@ -68,18 +70,33 @@ const requiredEnvVars = [
   "SMTP_USER",
   "SMTP_PASSWORD",
   "SMTP_FROM",
-  "SMTP_FROM_NAME",
-  "DOJO_HBG_EMAIL",
-  "DOJO_JFSA_EMAIL",
-  "DOJO_CSDCL_EMAIL",
 ] as const;
 
-function validateEnvironment(): void {
-  const missing = requiredEnvVars.filter((v) => !process.env[v]);
+class EmailConfigurationError extends Error {
+  readonly code = "ECONFIG";
+  readonly variables: string[];
+  constructor(variables: string[]) {
+    super("Invalid email configuration");
+    this.variables = variables;
+  }
+}
+
+function validateEnvironment(dojo: DojoCode): void {
+  const missing = [...requiredEnvVars, dojoRecipientEnv[dojo]].filter(
+    (v) => !process.env[v]?.trim(),
+  );
   if (missing.length) {
-    throw new Error(
-      `Missing required environment variables: ${missing.join(", ")}`,
-    );
+    throw new EmailConfigurationError(missing);
+  }
+  const port = Number(process.env.SMTP_PORT);
+  if (!Number.isInteger(port) || port < 1 || port > 65535) {
+    throw new EmailConfigurationError(["SMTP_PORT"]);
+  }
+  if (
+    process.env.SMTP_SECURE !== undefined &&
+    !["true", "false"].includes(process.env.SMTP_SECURE)
+  ) {
+    throw new EmailConfigurationError(["SMTP_SECURE"]);
   }
 }
 
@@ -89,19 +106,22 @@ function validateEnvironment(): void {
 let transporter: nodemailer.Transporter;
 function getTransporter(): nodemailer.Transporter {
   if (!transporter) {
-    validateEnvironment();
+    const port = Number(process.env.SMTP_PORT);
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST ?? "",
-      port: Number(process.env.SMTP_PORT ?? "587"),
-      secure: process.env.SMTP_SECURE === "true",
+      port,
+      secure:
+        process.env.SMTP_SECURE === undefined
+          ? port === 465
+          : process.env.SMTP_SECURE === "true",
       auth: {
         user: process.env.SMTP_USER ?? "",
         pass: process.env.SMTP_PASSWORD ?? "",
       },
-      tls: { rejectUnauthorized: false },
-      pool: true,
-      maxConnections: 5,
-      maxMessages: 10,
+      connectionTimeout: 10_000,
+      greetingTimeout: 10_000,
+      socketTimeout: 10_000,
+      dnsTimeout: 10_000,
     });
   }
   return transporter;
@@ -221,16 +241,10 @@ export async function submitTrialForm(
   _prevState: TrialFormState,
   formData: FormData,
 ): Promise<TrialFormState> {
+  const requestId = randomUUID();
+  const startedAt = Date.now();
+  console.info(JSON.stringify({ event: "trial_form_received", requestId }));
   const t = await getTranslations("TrialForm");
-
-  // Rate limiting
-  const ip = (await headers()).get("x-forwarded-for") ?? "unknown";
-  if (!checkRateLimit(ip)) {
-    return {
-      message: t("submit.rateLimited"),
-      success: false,
-    };
-  }
 
   // Validate payload
   const parsed = createTrialFormSchema(t).safeParse({
@@ -243,10 +257,33 @@ export async function submitTrialForm(
   });
 
   if (!parsed.success) {
+    const errors = parsed.error.flatten().fieldErrors;
+    console.warn(
+      JSON.stringify({
+        event: "trial_form_validation_failed",
+        requestId,
+        fields: Object.keys(errors),
+      }),
+    );
     return {
       message: t("submit.correctErrors"),
-      errors: parsed.error.flatten().fieldErrors,
+      errors,
       success: false,
+      requestId,
+    };
+  }
+
+  // Invalid fields should not consume the submission quota.
+  const ip =
+    (await headers()).get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  if (!checkRateLimit(ip)) {
+    console.warn(
+      JSON.stringify({ event: "trial_form_rate_limited", requestId }),
+    );
+    return {
+      message: t("submit.rateLimited"),
+      success: false,
+      requestId,
     };
   }
 
@@ -255,11 +292,14 @@ export async function submitTrialForm(
     experience === "yes" ? "Tem experiência anterior" : "É um iniciante";
 
   try {
+    validateEnvironment(dojo);
     const transporter = getTransporter();
-    await transporter.verify();
 
     const mailOptions = {
-      from: `"${process.env.SMTP_FROM_NAME}" <${process.env.SMTP_FROM}>`,
+      from: {
+        name: process.env.SMTP_FROM_NAME || "ASKKSA",
+        address: process.env.SMTP_FROM ?? "",
+      },
       to: getDojoRecipient(dojo),
       cc: "direcao@askksa.pt",
       subject: `🥋 Nova Experiência Karaté - ${name} - ${dojo}`,
@@ -285,38 +325,80 @@ export async function submitTrialForm(
                 `.trim(),
     };
 
-    // Timeout guard
-    await Promise.race([
-      transporter.sendMail(mailOptions),
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Email timeout")), 10000),
-      ),
-    ]);
+    console.info(
+      JSON.stringify({ event: "trial_form_sending", requestId, dojo }),
+    );
+    // SMTP timeouts terminate the connection; a Promise.race would leave the
+    // email sending in the background after telling the visitor it failed.
+    const result = await transporter.sendMail(mailOptions);
+    console.info(
+      JSON.stringify({
+        event: "trial_form_sent",
+        requestId,
+        dojo,
+        durationMs: Date.now() - startedAt,
+        acceptedCount: result.accepted?.length ?? 0,
+        rejectedCount: result.rejected?.length ?? 0,
+      }),
+    );
+    if (result.rejected?.length) {
+      console.warn(
+        JSON.stringify({
+          event: "trial_form_recipient_rejected",
+          requestId,
+          dojo,
+          rejectedCount: result.rejected.length,
+        }),
+      );
+    }
 
     return {
       message: t("submit.success"),
       success: true,
+      requestId,
     };
   } catch (err) {
-    console.error("Email send error:", err);
+    // Do not log the raw SMTP error: its message/response can contain addresses
+    // or credentials. Codes identify the cause without exposing form data.
+    const error = err as {
+      code?: string;
+      command?: string;
+      responseCode?: number;
+    } | null;
+    console.error(
+      JSON.stringify({
+        event: "trial_form_failed",
+        requestId,
+        dojo,
+        durationMs: Date.now() - startedAt,
+        code: error?.code ?? "UNKNOWN",
+        command: error?.command?.split(" ")[0],
+        responseCode: error?.responseCode,
+        configurationVariables:
+          err instanceof EmailConfigurationError ? err.variables : undefined,
+      }),
+    );
 
-    if (err instanceof Error && err.message.includes("timeout")) {
+    if (error?.code === "ETIMEDOUT") {
       return {
         message: t("submit.timeout"),
         success: false,
+        requestId,
       };
     }
 
-    if (err instanceof Error && err.message.includes("authentication")) {
+    if (error?.code === "EAUTH" || error?.code === "ECONFIG") {
       return {
         message: t("submit.serverConfiguration"),
         success: false,
+        requestId,
       };
     }
 
     return {
       message: t("submit.error"),
       success: false,
+      requestId,
     };
   }
 }

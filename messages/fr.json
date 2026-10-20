@@ -1278,6 +1278,7 @@
     "previousExperience": "Avez-vous déjà pratiqué le Karaté ?",
     "submit": {
       "submitting": "Envoi...",
+      "reference": "Référence de la demande",
       "button": "Demander les cours d’essai",
       "success": "Votre demande a bien été envoyée. Nous vous contacterons prochainement.",
       "error": "Une erreur s’est produite lors de l’envoi de votre demande.",

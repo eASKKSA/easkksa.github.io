@@ -1278,6 +1278,7 @@
     "previousExperience": "Previous Experience in Karate?",
     "submit": {
       "submitting": "Submitting...",
+      "reference": "Request reference",
       "button": "Request Trial Classes",
       "success": "Request sent successfully! We will contact you shortly.",
       "error": "An error occurred while sending your request.",

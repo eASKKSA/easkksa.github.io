@@ -20,7 +20,7 @@ export type TrialFormLabels = {
   previousExperience: string;
   yes: string;
   no: string;
-  submit: { submitting: string; button: string };
+  submit: { submitting: string; button: string; reference: string };
 };
 
 function SubmitButton({ labels }: Readonly<{ labels: TrialFormLabels }>) {
@@ -93,6 +93,7 @@ export default function TrialFormModal({
     sendGTMEvent({
       event: "trial_form_submit_error",
       error_message: state.message,
+      request_id: state.requestId,
     });
   }, [state, onClose]);
 
@@ -312,14 +313,21 @@ export default function TrialFormModal({
             <SubmitButton labels={labels} />
             <div aria-live="polite" aria-atomic="true">
               {state.message && (
-                <p
-                  className={clsx("text-center text-sm", {
-                    "text-green-700 dark:text-green-400": state.success,
-                    "text-red-600 dark:text-red-400": !state.success,
-                  })}
-                >
-                  {state.message}
-                </p>
+                <div>
+                  <p
+                    className={clsx("text-center text-sm", {
+                      "text-green-700 dark:text-green-400": state.success,
+                      "text-red-600 dark:text-red-400": !state.success,
+                    })}
+                  >
+                    {state.message}
+                  </p>
+                  {!state.success && state.requestId && (
+                    <p className="mt-2 break-words text-center text-xs text-stone-600 dark:text-stone-300">
+                      {labels.submit.reference}: {state.requestId}
+                    </p>
+                  )}
+                </div>
               )}
             </div>
           </form>
