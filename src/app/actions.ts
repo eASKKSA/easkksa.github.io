@@ -3,7 +3,11 @@ import "server-only";
 import { randomUUID } from "node:crypto";
 import { headers } from "next/headers";
 import { getTranslations } from "next-intl/server";
-import nodemailer from "nodemailer";
+import nodemailer, {
+  type NodemailerError,
+  type SMTPSentMessageInfo,
+  type Transporter,
+} from "nodemailer";
 import { z } from "zod";
 
 const dojoCodes = ["HBG", "JFSA", "CSDCL"] as const;
@@ -103,8 +107,8 @@ function validateEnvironment(dojo: DojoCode): void {
 //
 // 3) Singleton Transporter
 //
-let transporter: nodemailer.Transporter;
-function getTransporter(): nodemailer.Transporter {
+let transporter: Transporter<SMTPSentMessageInfo>;
+function getTransporter(): Transporter<SMTPSentMessageInfo> {
   if (!transporter) {
     const port = Number(process.env.SMTP_PORT);
     transporter = nodemailer.createTransport({
@@ -360,11 +364,7 @@ export async function submitTrialForm(
   } catch (err) {
     // Do not log the raw SMTP error: its message/response can contain addresses
     // or credentials. Codes identify the cause without exposing form data.
-    const error = err as {
-      code?: string;
-      command?: string;
-      responseCode?: number;
-    } | null;
+    const error = err as NodemailerError | null;
     console.error(
       JSON.stringify({
         event: "trial_form_failed",
@@ -372,6 +372,8 @@ export async function submitTrialForm(
         dojo,
         durationMs: Date.now() - startedAt,
         code: error?.code ?? "UNKNOWN",
+        originalCode: error?.originalCode,
+        timeoutType: error?.timeoutType,
         command: error?.command?.split(" ")[0],
         responseCode: error?.responseCode,
         configurationVariables:

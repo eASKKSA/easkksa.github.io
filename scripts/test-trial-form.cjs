@@ -3,9 +3,11 @@ const { registerHooks } = require("node:module");
 const { resolve } = require("node:path");
 const { test } = require("node:test");
 const { pathToFileURL } = require("node:url");
+const nodemailer = require("nodemailer");
 
 // Exercise the real Server Action with mocked request/SMTP boundaries. No
-// connection is opened and no email is sent. Requires Node.js 22.18+ or 24+.
+// connection is opened and no email is sent. The stream transport also checks
+// the real Nodemailer package. Requires Node.js 22.18+ or 24+.
 const dependencyKey = "__trialFormTestDependencies";
 const mocks = {
   "server-only": "export {};",
@@ -60,8 +62,14 @@ async function setup(t) {
   Object.assign(process.env, environment);
   const logs = [];
   for (const level of ["info", "warn", "error"]) {
+    const original = console[level].bind(console);
     t.mock.method(console, level, (line) => {
-      logs.push({ level, ...JSON.parse(line) });
+      // Node may emit module warnings asynchronously through console.error.
+      if (typeof line === "string" && line.startsWith("{")) {
+        logs.push({ level, ...JSON.parse(line) });
+      } else {
+        original(line);
+      }
     });
   }
   const calls = [];
@@ -70,6 +78,8 @@ async function setup(t) {
     ip: "192.0.2.1, 198.51.100.1",
     sendError: undefined,
     rejected: [],
+    mailer: undefined,
+    mailResult: undefined,
     createTransport(config) {
       options.push(config);
       return {
@@ -79,6 +89,10 @@ async function setup(t) {
         async sendMail(mail) {
           calls.push(mail);
           if (deps.sendError) throw deps.sendError;
+          if (deps.mailer) {
+            deps.mailResult = await deps.mailer.sendMail(mail);
+            return deps.mailResult;
+          }
           return { accepted: [mail.to], rejected: deps.rejected };
         },
       };
@@ -145,6 +159,35 @@ test("trial form server action", async (t) => {
     },
   );
 
+  await t.test(
+    "real Nodemailer composes the trial email for every dojo without SMTP",
+    async (t) => {
+      const { submit, deps, calls } = await setup(t);
+      deps.mailer = nodemailer.createTransport({
+        streamTransport: true,
+        buffer: true,
+        newline: "unix",
+      });
+      for (const dojo of ["HBG", "JFSA", "CSDCL"]) {
+        const result = await submit({ dojo });
+        assert.equal(result.success, true);
+        assert.equal(deps.mailResult.envelope.from, environment.SMTP_FROM);
+        assert.deepEqual(deps.mailResult.envelope.to, [
+          environment[`DOJO_${dojo}_EMAIL`],
+          "direcao@askksa.pt",
+        ]);
+        assert.ok(Buffer.isBuffer(deps.mailResult.message));
+        const message = deps.mailResult.message.toString("utf8");
+        assert.match(message, /MIME-Version: 1\.0/);
+        assert.match(message, /Content-Type: multipart\/alternative/);
+        assert.match(message, /Content-Type: text\/plain; charset=utf-8/);
+        assert.match(message, /Content-Type: text\/html; charset=utf-8/);
+        assert.equal(calls.at(-1).from.name, "ASKKSA");
+      }
+      assert.equal(calls.length, 3);
+    },
+  );
+
   await t.test("only the chosen dojo requires a recipient", async (t) => {
     const { submit } = await setup(t);
     delete process.env.DOJO_JFSA_EMAIL;
@@ -193,6 +236,8 @@ test("trial form server action", async (t) => {
         const { submit, logs, deps } = await setup(t);
         deps.sendError = Object.assign(new Error("private-test-password"), {
           code,
+          originalCode: "ECONNREFUSED",
+          timeoutType: "connection",
           command: "AUTH PLAIN private-test-password",
           responseCode: 535,
           response: "candidate@example.com rejected",
@@ -202,6 +247,8 @@ test("trial form server action", async (t) => {
         assert.equal(result.message, message);
         assert.ok(result.requestId);
         assert.equal(logs.at(-1).code, code);
+        assert.equal(logs.at(-1).originalCode, "ECONNREFUSED");
+        assert.equal(logs.at(-1).timeoutType, "connection");
         assert.equal(logs.at(-1).command, "AUTH");
         assert.equal(logs.at(-1).responseCode, 535);
         assert.doesNotMatch(

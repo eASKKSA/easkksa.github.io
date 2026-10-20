@@ -34,6 +34,9 @@ da mensagem ou credenciais.
 | `ECONNECTION` / `ESOCKET` | Ligação ao servidor e certificado TLS. |
 | `EENVELOPE` | Rejeição do remetente/destinatários pelo servidor SMTP. |
 
+O Nodemailer 10 acrescenta `originalCode` (código de erro do sistema, quando
+existir) e `timeoutType` (fase do timeout); os logs preservam também estes campos.
+
 Se não houver `trial_form_received`, o pedido não chegou à ação: verificar o
 pedido POST na aba Network do browser e os erros da plataforma no mesmo período.
 
@@ -41,6 +44,9 @@ As alterações aos logs exigem um novo deployment. A configuração do compilad
 preserva `console.info`, `console.warn` e `console.error` em produção.
 
 ## Configuração do ambiente
+
+O projeto usa Nodemailer 10, que requer Node.js 20 ou superior e já inclui os
+tipos TypeScript; não instalar `@types/nodemailer` em paralelo.
 
 Definir no ambiente que executa o servidor (na Vercel, confirmar também o âmbito
 Production/Preview e fazer redeploy depois de alterar):
@@ -52,10 +58,12 @@ Production/Preview e fazer redeploy depois de alterar):
 - `SMTP_SECURE`: opcional, `true` ou `false`. Por omissão usa TLS imediato na
   porta 465 e STARTTLS na porta 587.
 
-O envio usa uma única ligação, com limites de 10 segundos para DNS, ligação,
-saudação e inatividade do socket. Estes limites são por fase, não um limite total
-de 10 segundos. O certificado TLS é validado. Não se ativa debug SMTP, que pode
-expor o conteúdo dos emails.
+O envio usa uma única ligação. No Nodemailer 10.1, `connectionTimeout` limita a
+10 segundos o estabelecimento da sessão, incluindo DNS, TCP, TLS, saudação e
+STARTTLS. `greetingTimeout` limita também a saudação dentro desse prazo e
+`socketTimeout` limita a inatividade a 10 segundos. Não existe um prazo total de
+10 segundos para o envio completo. O certificado TLS é validado. Não se ativa
+debug SMTP, que pode expor o conteúdo dos emails.
 
 O limite por IP é em memória: reinicia com o processo e não é partilhado entre
 instâncias.
@@ -71,7 +79,9 @@ pnpm build
 
 Os testes do formulário requerem Node.js 22.18+ ou 24+ e simulam SMTP, sem enviar
 emails. Cobrem sucesso, validação, configuração, autenticação, timeouts, rejeição
-parcial e correlação dos logs sem dados pessoais.
+parcial e correlação dos logs sem dados pessoais. O transporte em memória da
+biblioteca real verifica também a composição MIME e os destinatários dos três
+dojos, sem abrir uma ligação SMTP.
 
 Referências: [SMTP no Nodemailer](https://nodemailer.com/smtp) e
 [configuração de remoção de console no Next.js](https://nextjs.org/docs/architecture/nextjs-compiler#remove-console).
