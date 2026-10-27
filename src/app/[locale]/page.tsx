@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 import {
@@ -14,9 +13,9 @@ import {
   LuUsers,
 } from "react-icons/lu";
 import { MetadataLDJSON } from "@/app/metadata";
-import heroImage from "@/assets/in-dojo/Sensei_Seiza.jpeg";
 import DojoMap from "@/components/dojo-map";
 import FormTrial from "@/components/form-trial";
+import HomeHeroImage from "@/components/home-hero-image";
 import TrackableLink from "@/components/trackable-link";
 import { localizedText } from "@/lib/seo";
 import { getFeatures, getSchedules } from "./data";
@@ -195,7 +194,7 @@ export default async function Page({
   const schedules = getSchedules(t);
   const currentYear = new Date().getFullYear();
   const organizationSchema = await jsonLd(orgT, locale);
-  const siteSchema = await websiteSchema(locale);
+  const siteSchema = await websiteSchema();
 
   return (
     <>
@@ -223,8 +222,7 @@ export default async function Page({
 
         <div className="relative min-h-[440px] sm:min-h-[560px] lg:-my-6 lg:-mr-8 lg:min-h-[700px] xl:-mr-14">
           <div className="hero-image-fade absolute inset-0">
-            <Image
-              src={heroImage}
+            <HomeHeroImage
               alt={localizedText(locale, {
                 "pt-PT": "Karateka em seiza",
                 en: "Karateka in seiza",
@@ -232,10 +230,6 @@ export default async function Page({
                 fr: "Karatékas en seiza",
                 ja: "正座する空手家",
               })}
-              fill
-              fetchPriority="high"
-              sizes="(max-width: 1024px) 100vw, 52vw"
-              className="object-cover"
             />
             <div className="absolute inset-0 " />
           </div>

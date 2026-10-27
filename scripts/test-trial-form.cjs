@@ -14,7 +14,11 @@ const mocks = {
   "next/headers": `export async function headers() {
     return new Headers({ "x-forwarded-for": globalThis.${dependencyKey}.ip });
   }`,
-  "next-intl/server": `export async function getTranslations() {
+  "next-intl/server": `export async function getTranslations(options) {
+    if (!options?.locale || options.namespace !== "TrialForm") {
+      throw new Error("Server Actions must provide an explicit locale");
+    }
+    globalThis.${dependencyKey}.translationCalls.push(options);
     return (key) => key;
   }`,
   nodemailer: `export default { createTransport(options) {
@@ -24,6 +28,12 @@ const mocks = {
 
 const hooks = registerHooks({
   resolve(specifier, context, nextResolve) {
+    if (specifier === "@/i18n/routing") {
+      return {
+        url: pathToFileURL(resolve(__dirname, "../src/i18n/routing.ts")).href,
+        shortCircuit: true,
+      };
+    }
     if (Object.hasOwn(mocks, specifier)) {
       return { url: `trial-test:${specifier}`, shortCircuit: true };
     }
@@ -75,6 +85,7 @@ async function setup(t) {
   const calls = [];
   const options = [];
   const deps = {
+    translationCalls: [],
     ip: "192.0.2.1, 198.51.100.1",
     sendError: undefined,
     rejected: [],
@@ -109,7 +120,7 @@ async function setup(t) {
   const url = pathToFileURL(resolve(__dirname, "../src/app/actions.ts"));
   url.searchParams.set("test", String(subjectId++));
   const { submitTrialForm } = await import(url.href);
-  const submit = (values = {}) => {
+  const submit = (values = {}, locale = "pt-PT") => {
     const form = new FormData();
     const data = {
       name: "Private Candidate",
@@ -121,13 +132,36 @@ async function setup(t) {
       ...values,
     };
     for (const [key, value] of Object.entries(data)) form.set(key, value);
-    return submitTrialForm({ message: "", success: false }, form);
+    return submitTrialForm(locale, { message: "", success: false }, form);
   };
   return { submit, logs, calls, options, deps };
 }
 
 test("trial form server action", async (t) => {
   t.after(() => hooks.deregister());
+
+  await t.test(
+    "uses explicit locales without reading route root params",
+    async (t) => {
+      const { submit, deps, calls } = await setup(t);
+      for (const locale of ["pt-PT", "en", "es", "fr", "ja"]) {
+        const result = await submit({ email: "invalid" }, locale);
+        assert.equal(result.success, false);
+        assert.equal(deps.translationCalls.at(-1).locale, locale);
+      }
+      assert.equal(calls.length, 0);
+    },
+  );
+
+  await t.test(
+    "validates the bound locale before loading translations",
+    async (t) => {
+      const { submit, deps, calls } = await setup(t);
+      await submit({ email: "invalid" }, "unsupported-locale");
+      assert.equal(deps.translationCalls[0].locale, "pt-PT");
+      assert.equal(calls.length, 0);
+    },
+  );
 
   await t.test(
     "sends once and correlates logs without candidate data",

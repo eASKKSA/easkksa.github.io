@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
     qualities: [60, 75],
   },
   experimental: {
-    inlineCss: true,
+    // A root layout under [locale] needs a standalone fallback for unmatched URLs.
+    globalNotFound: true,
     optimizePackageImports: ["react-icons"],
   },
   compiler: {

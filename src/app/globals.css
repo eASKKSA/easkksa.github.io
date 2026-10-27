@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
@@ -46,6 +46,12 @@
   .animate-content-enter {
     animation: content-enter var(--content-enter-duration, 450ms)
       cubic-bezier(0.22, 1, 0.36, 1) var(--content-enter-delay, 0ms) both;
+  }
+  /* Above-the-fold content must be visible at first paint on mobile. */
+  @media (width < 48rem) {
+    .animate-content-enter {
+      animation: none;
+    }
   }
   .animate-logo-pulse-grow {
     transform-origin: center;

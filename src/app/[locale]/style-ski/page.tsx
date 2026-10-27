@@ -42,10 +42,9 @@ export default async function ShotokanKatasPage({
             src={shotokanTopImage}
             alt="Shotokan Karate-Do International Federation"
             className="mx-auto mb-6 h-auto w-full max-w-[600px] rounded-[1.5rem] border border-black/10 shadow-xl dark:border-white/10"
-            sizes="(max-width: 768px) calc(100vw - 4rem), 600px"
+            sizes="(max-width: 767px) min(600px, calc(100vw - 90px)), 600px"
             quality={60}
-            fetchPriority="high"
-            priority
+            preload
           />
         </div>
         <p className="text-xl mb-6 text-center!">{t("introduction")}</p>

@@ -2,6 +2,7 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
 import { headers } from "next/headers";
+import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import nodemailer, {
   type NodemailerError,
@@ -9,6 +10,7 @@ import nodemailer, {
   type Transporter,
 } from "nodemailer";
 import { z } from "zod";
+import { routing } from "@/i18n/routing";
 
 const dojoCodes = ["HBG", "JFSA", "CSDCL"] as const;
 type DojoCode = (typeof dojoCodes)[number];
@@ -242,13 +244,17 @@ function generateEmailTemplate(data: {
 // 6) Submission Handler
 //
 export async function submitTrialForm(
+  requestedLocale: string,
   _prevState: TrialFormState,
   formData: FormData,
 ): Promise<TrialFormState> {
   const requestId = randomUUID();
   const startedAt = Date.now();
   console.info(JSON.stringify({ event: "trial_form_received", requestId }));
-  const t = await getTranslations("TrialForm");
+  const locale = hasLocale(routing.locales, requestedLocale)
+    ? requestedLocale
+    : routing.defaultLocale;
+  const t = await getTranslations({ locale, namespace: "TrialForm" });
 
   // Validate payload
   const parsed = createTrialFormSchema(t).safeParse({

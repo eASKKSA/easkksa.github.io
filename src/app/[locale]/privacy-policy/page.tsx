@@ -15,7 +15,7 @@ export async function generateMetadata({
   params,
 }: Readonly<{ params: Promise<{ locale: Locale }> }>): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Privacy" });
+  const t = await getTranslations("Privacy");
   const pathname = getPathname({ href: "/privacy-policy", locale });
 
   return {
@@ -48,11 +48,8 @@ const sections = [
   "rights",
 ] as const;
 
-export default async function Page({
-  params,
-}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Privacy" });
+export default async function Page() {
+  const t = await getTranslations("Privacy");
 
   return (
     <Container blur withBubbles skipAnimation>

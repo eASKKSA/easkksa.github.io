@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Background from "@/components/background";
 import Section from "@/components/container";
+import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "GlobalNotFound" });
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: routing.defaultLocale,
+    namespace: "GlobalNotFound",
+  });
 
   return {
     title: t("meta.title"),
@@ -19,8 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function GlobalNotFound() {
-  const t = await getTranslations("GlobalNotFound");
-  const locale = t("lang");
+  const locale = routing.defaultLocale;
+  const t = await getTranslations({ locale, namespace: "GlobalNotFound" });
 
   return (
     <html lang={locale}>
@@ -53,7 +52,7 @@ export default async function GlobalNotFound() {
             {/* Action Buttons */}
             <div className="space-y-4">
               <a
-                href={`/${locale}`}
+                href="/"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800"
               >
                 <svg

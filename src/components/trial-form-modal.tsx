@@ -56,8 +56,11 @@ export default function TrialFormModal({
   onClose: () => void;
   labels: TrialFormLabels;
 }>) {
-  const [state, formAction] = useActionState(submitTrialForm, initialState);
   const locale = useLocale();
+  const [state, formAction] = useActionState(
+    submitTrialForm.bind(null, locale),
+    initialState,
+  );
   const ui = modalUi[locale];
   const formRef = useRef<HTMLFormElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
