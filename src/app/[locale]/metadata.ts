@@ -20,9 +20,7 @@ import {
 const siteUrl = getSiteUrl();
 
 // WebSite Schema - Removed SearchAction (no internal search on site)
-export const websiteSchema = async (
-  _locale: Locale,
-): Promise<WithContext<WebSite>> => {
+export const websiteSchema = async (): Promise<WithContext<WebSite>> => {
   const t = await getTranslations("Organization");
 
   return {

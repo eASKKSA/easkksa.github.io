@@ -23,11 +23,10 @@ export default async function GraduationsPage({
           <Image
             src={graduationsImage}
             alt={t("title")}
-            sizes="(max-width: 768px) calc(100vw - 4rem), 500px"
+            sizes="(max-width: 767px) min(500px, calc(100vw - 90px)), (max-width: 1023px) calc((100vw - 194px) / 2), (max-width: 1241px) calc((100vw - 242px) / 2), 500px"
             quality={60}
             className="w-full max-w-[500px] h-auto object-contain rounded-xl shadow-lg mx-auto"
-            fetchPriority="high"
-            priority
+            preload
           />
           <div className="space-y-4">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">

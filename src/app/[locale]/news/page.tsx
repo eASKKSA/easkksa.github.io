@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { MetadataLDJSON } from "@/app/metadata";
 import Container from "@/components/container";
 import ASKKSANews from "@/components/news/askksa-news";
-import FacebookEmbed from "@/components/news/facebook-section";
+import FacebookLink from "@/components/news/facebook-section";
 import InstagramLink from "@/components/news/instagram-section";
 import YouTubeLink from "@/components/news/youtube-section";
 import { jsonLd, metadata } from "./metadata";
@@ -42,9 +42,9 @@ export default async function NewsPage({
           />
         </Container>
 
-        {/* Facebook Embed */}
-        <Container className="relative overflow-hidden rounded-[1.5rem] border border-primary/15 bg-primary/5 p-8 dark:border-primary/25 dark:bg-primary/10">
-          <FacebookEmbed />
+        {/* Facebook Link */}
+        <Container>
+          <FacebookLink />
         </Container>
 
         {/* Instagram Link */}

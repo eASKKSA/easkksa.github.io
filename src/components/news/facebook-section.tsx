@@ -1,97 +1,37 @@
 import { getTranslations } from "next-intl/server";
 import { FaFacebook } from "react-icons/fa";
-import FacebookPageEmbed from "@/components/news/facebook-page-embed";
 import TrackableLink from "@/components/trackable-link";
 
-export default async function FacebookEmbed() {
+export default async function FacebookLink() {
   const t = await getTranslations("News.sections.facebook");
+
   return (
-    <>
-      <div className="block lg:hidden">
-        {/* Versão Mobile - Só CTA */}
-        <span className="absolute top-4 left-4 h-16 w-16 rounded-full bg-blue-500/20 blur-2xl" />
-        <span className="absolute bottom-4 right-4 h-20 w-20 rounded-full bg-blue-500/20 blur-3xl" />
+    <div className="relative overflow-hidden rounded-2xl p-8 bg-gradient-to-tr from-blue-600/10 via-blue-400/10 to-blue-300/10 ring-1 ring-inset ring-blue-500/10 dark:ring-blue-500/30">
+      <span className="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-blue-400/20 blur-2xl" />
+      <span className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-blue-500/20 blur-3xl" />
 
-        <div className="relative z-10 text-center space-y-4">
-          <FaFacebook className="text-blue-500 text-5xl mx-auto drop-shadow" />
+      <FaFacebook className="text-blue-500 text-5xl mx-auto mb-4 drop-shadow" />
 
-          <h2 className="text-lg font-bold text-gray-800 dark:text-white">
-            {t("cta.title")}
-          </h2>
+      <h2 className="text-center text-xl font-bold text-gray-800 dark:text-white">
+        {t("cta.title")}
+      </h2>
+      <p className="mt-2 mb-6 text-center text-gray-700 dark:text-gray-300">
+        {t("description")}
+      </p>
 
-          <p className="text-center! text-sm text-gray-700 dark:text-gray-300">
-            {t("description")}
-          </p>
-
-          <div className="flex flex-col gap-3 pt-2">
-            <TrackableLink
-              href="https://www.facebook.com/ASKKSA.MADEIRA/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-700"
-              gtmEvent="social_click"
-              gtmParams={{ platform: "facebook" }}
-            >
-              <FaFacebook />
-              {t("cta.button")}
-            </TrackableLink>
-
-            <a
-              href="https://www.facebook.com/ASKKSA.MADEIRA/posts"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              {t("cta.link")} →
-            </a>
-          </div>
-        </div>
+      <div className="text-center">
+        <TrackableLink
+          href="https://www.facebook.com/ASKKSA.MADEIRA/"
+          target="_blank"
+          className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-xl shadow-blue-600/30 transition-transform hover:scale-105 hover:bg-blue-700 focus-visible:outline-none"
+          rel="noopener"
+          gtmEvent="social_click"
+          gtmParams={{ platform: "facebook" }}
+        >
+          <FaFacebook />
+          {t("cta.button")}
+        </TrackableLink>
       </div>
-      <div className="space-y-6 hidden lg:block">
-        {/* Versão Desktop - Com Embed */}
-        <div className="hidden lg:flex gap-8">
-          {/* Iframe Facebook */}
-          <div className="flex overflow-hidden rounded-xl shadow-lg border bg-transparent border-gray-200 dark:border-gray-700">
-            <FacebookPageEmbed
-              loadingLabel={t("loadEmbed")}
-              consentLabel={t("embedConsent")}
-              openLabel={t("embedOpen")}
-            />
-          </div>
-
-          {/* Conteúdo lateral */}
-          <div className="flex-[1] relative content-center">
-            <span className="absolute top-4 left-4 h-24 w-24 rounded-full bg-blue-500/20 blur-2xl" />
-            <span className="absolute bottom-4 right-4 h-32 w-32 rounded-full bg-blue-500/20 blur-3xl" />
-
-            <div className="relative z-10 text-center space-y-4">
-              <FaFacebook className="text-blue-500 text-5xl mx-auto drop-shadow" />
-
-              <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-                {t("cta.title")}
-              </h2>
-
-              <p className="text-center! text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                {t("description")}
-              </p>
-
-              <div className="pt-2">
-                <TrackableLink
-                  href="https://www.facebook.com/ASKKSA.MADEIRA/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-xl shadow-blue-600/30 transition-all duration-300 hover:scale-105 hover:bg-blue-700"
-                  gtmEvent="social_click"
-                  gtmParams={{ platform: "facebook" }}
-                >
-                  <FaFacebook />
-                  {t("viewMore")}
-                </TrackableLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }

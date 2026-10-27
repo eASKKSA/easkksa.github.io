@@ -1,10 +1,10 @@
+import "@/app/globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
-import { notFound } from "next/navigation";
 import Script from "next/script";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import { globalMetadata } from "@/app/metadata";
 import AnalyticsWithConsent from "@/components/analytics";
 import Background from "@/components/background";
@@ -24,6 +24,8 @@ const bodyFont = Barlow({
   weight: ["400", "500", "600", "700"],
   variable: "--font-body",
   display: "swap",
+  // Let CSS request only the weights used on this page instead of preloading all four.
+  preload: false,
 });
 
 const displayFont = Barlow_Condensed({
@@ -31,36 +33,23 @@ const displayFont = Barlow_Condensed({
   weight: ["500", "600", "700"],
   variable: "--font-display",
   display: "swap",
+  preload: false,
 });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params,
-}: Readonly<{
-  params: Promise<{ locale: string }>;
-}>): Promise<Metadata> {
-  const { locale } = await params;
-  return await globalMetadata(locale as Locale);
+export async function generateMetadata(): Promise<Metadata> {
+  return globalMetadata(await getLocale());
 }
 
 export default async function Layout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }>) {
-  const { locale } = await params;
-  const typedLocale = locale as Locale;
-
-  if (!hasLocale(routing.locales, typedLocale)) {
-    notFound();
-  }
-
-  setRequestLocale(typedLocale);
+  const typedLocale = await getLocale();
   const navbarT = await getTranslations("Navbar");
   const cookieT = await getTranslations("CookieWarning");
   const navbarLabels = Object.fromEntries(
@@ -87,6 +76,13 @@ export default async function Layout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/askksa-background-tiger-mobile-art.webp"
+          media="(width < 48rem)"
+          fetchPriority="high"
+        />
         <Script id="gtag-init" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -140,10 +136,10 @@ export default async function Layout({
           )}
           <NextIntlClientProvider messages={null}>
             <Providers>
+              <Background />
               <Navbar labels={navbarLabels} />
               <main id="main-content">{children}</main>
               <Footer />
-              <Background />
               <CookieWarning labels={cookieLabels} />
               <ViewportRevealObserver />
             </Providers>
