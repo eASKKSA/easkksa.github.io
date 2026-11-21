@@ -24,7 +24,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.1.0",
     "clsx": "^2.1.1",
-    "fast-xml-parser": "^5.12.0",
+    "fast-xml-parser": "^5.12.1",
     "html-to-text": "^10.0.1",
     "negotiator": "^1.1.0",
     "next": "^16.4.5",
