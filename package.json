@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.4",
-    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/html-to-text": "^9.0.4",
     "@types/negotiator": "^0.6.5",
     "@types/react": "^19.3.0",
